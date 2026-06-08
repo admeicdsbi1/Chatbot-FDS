@@ -1,0 +1,21 @@
+# Render Blueprint — free web service for the FastAPI backend.
+# Create the service via "New + > Blueprint" pointing at this repo, or set up
+# a Web Service manually with the build/start commands below.
+services:
+  - type: web
+    name: maintenance-bot-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: ALLOWED_ORIGINS
+        sync: false   # set to your Vercel URL, e.g. https://your-app.vercel.app
+      - key: PYTHON_VERSION
+        value: "3.11.9"

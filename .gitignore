@@ -1,0 +1,27 @@
+# ── Dependencies / build output ──
+node_modules/
+.next/
+out/
+build/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ── Secrets / local env ──
+.env
+.env.*
+!.env.example
+!.env.local.example
+
+# ── Editor / OS / local agent settings ──
+.claude/
+.vercel/
+.DS_Store
+*.tsbuildinfo
+
+# ── Excluded from this app-only repo (large/source material) ──
+Documents/
+gradio/
+presentation/
+*.pptx
