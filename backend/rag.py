@@ -1,13 +1,14 @@
 """
-rag.py — Retrieval brain. Loads the KB + FAISS index, embeds queries LOCALLY
-(no Hugging Face Inference dependency), and runs the hybrid semantic+keyword
-retrieval ported from the original app.py.
+rag.py — Retrieval brain. Loads the KB, embeds queries via the Gemini Embedding
+API (no local model → fits Render's 512MB free tier), and runs the hybrid
+semantic+keyword retrieval ported from the original app.py. Semantic search is a
+plain NumPy cosine over 257 normalized vectors — FAISS/torch are not needed.
 """
-import os, json, re, gc
+import os, json, re
 from collections import Counter
 import numpy as np
-import faiss
 
+import embed
 from voice_text import (
     ABBREVIATIONS, PROCEDURAL_SIGNALS, HINGLISH_TO_ENGLISH,
 )
@@ -16,22 +17,28 @@ from voice_text import (
 _DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 JSONL = os.path.join(_DATA_DIR, "chunks_merged.jsonl")
 EMB_CACHE = os.path.join(_DATA_DIR, "embeddings.npy")
-EMB_MODEL_NAME = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 
 TOP_K_SEMANTIC = 12
 TOP_K_FINAL = 4
 
 # ---- Module state (populated by init_kb) ----
 chunks = []
-faiss_index = None
+emb_matrix = None          # (N, D) normalized float32, or None if unavailable
 keyword_index = {}
-_emb_model = None
+
+
+def _normalize_rows(m):
+    m = np.asarray(m, dtype=np.float32)
+    norms = np.linalg.norm(m, axis=1, keepdims=True)
+    norms[norms == 0] = 1.0
+    return m / norms
 
 
 def init_kb():
-    """Load chunks, build/load embeddings + FAISS index, build keyword index.
-    Loads the SentenceTransformer model once for local query embedding."""
-    global chunks, faiss_index, keyword_index, _emb_model
+    """Load chunks + keyword index. Load embeddings.npy if it matches the current
+    Gemini embedding dimension; otherwise (missing / stale MiniLM file) rebuild it
+    via the Gemini API and cache to disk. Falls back to keyword-only if no key."""
+    global chunks, emb_matrix, keyword_index
 
     print("Loading knowledge base...")
     try:
@@ -42,26 +49,36 @@ def init_kb():
         chunks = []
         return
 
-    print(f"Loading embedding model ({EMB_MODEL_NAME})...")
-    from sentence_transformers import SentenceTransformer
-    _emb_model = SentenceTransformer(EMB_MODEL_NAME)
-
+    expected_dim = embed.probe_dim() if embed.available() else None
+    cached = None
     if os.path.exists(EMB_CACHE):
-        print("Loading cached embeddings...")
-        emb_matrix = np.load(EMB_CACHE)
-    else:
-        print("Computing embeddings for all chunks (one-time)...")
-        texts = [c.get("text", "") for c in chunks]
-        emb_matrix = _emb_model.encode(
-            texts, normalize_embeddings=True, show_progress_bar=True
-        )
-        np.save(EMB_CACHE, emb_matrix)
-    print(f"Embeddings: {emb_matrix.shape}")
+        try:
+            cached = np.load(EMB_CACHE)
+        except Exception as e:
+            print(f"Could not read {EMB_CACHE}: {e}")
 
-    faiss_index = faiss.IndexFlatIP(emb_matrix.shape[1])
-    faiss_index.add(emb_matrix.astype(np.float32))
-    del emb_matrix
-    gc.collect()
+    matches = (
+        cached is not None
+        and cached.shape[0] == len(chunks)
+        and (expected_dim is None or cached.shape[1] == expected_dim)
+    )
+
+    if matches:
+        emb_matrix = _normalize_rows(cached)
+        print(f"Loaded embeddings: {emb_matrix.shape}")
+    elif embed.available():
+        why = "missing" if cached is None else f"stale (shape {cached.shape}, dim≠{expected_dim})"
+        print(f"Embeddings {why} — rebuilding via Gemini API...")
+        texts = [c.get("text", "") for c in chunks]
+        emb_matrix = _normalize_rows(embed.embed_documents(texts))
+        try:
+            np.save(EMB_CACHE, emb_matrix)
+            print(f"Saved rebuilt embeddings: {emb_matrix.shape}")
+        except Exception as e:
+            print(f"Could not cache embeddings: {e}")
+    else:
+        emb_matrix = None
+        print("No GEMINI_API_KEY and no usable cache — keyword-only retrieval.")
 
     for i, c in enumerate(chunks):
         for tag in c.get("tags", []):
@@ -77,15 +94,8 @@ def init_kb():
 
 
 def embed_query(text):
-    """Embed a query locally with the cached SentenceTransformer model."""
-    if _emb_model is None:
-        return None
-    try:
-        vec = _emb_model.encode([text], normalize_embeddings=True)
-        return np.asarray(vec, dtype=np.float32).reshape(1, -1)
-    except Exception as e:
-        print(f"Embed error: {e}")
-        return None
+    """Embed a query via the Gemini API → normalized (D,) vector, or None."""
+    return embed.embed_query(text)
 
 
 # ================================================================
@@ -144,14 +154,14 @@ def detect_query_oem(query):
 
 
 def retrieve(query, k=TOP_K_FINAL):
-    if not chunks or faiss_index is None:
+    if not chunks:
         return []
     exp = expand_query(query)
     hinglish_exp = normalize_hinglish(query)
     full_exp = exp + " " + hinglish_exp
     proc = is_procedural(query)
     query_oem = detect_query_oem(query)
-    qv = embed_query(full_exp)
+    qv = embed_query(full_exp) if emb_matrix is not None else None
     if qv is None:
         qterms = set(re.findall(r'\b[a-zA-Z]{2,}\b', full_exp.lower()))
         hits = Counter()
@@ -177,12 +187,16 @@ def retrieve(query, k=TOP_K_FINAL):
         results.sort(key=lambda x: -x[0])
         return results[:k]
 
-    scores, ids = faiss_index.search(qv, TOP_K_SEMANTIC)
+    # Semantic search: cosine == dot product (both sides normalized).
+    sims = emb_matrix @ qv.astype(np.float32)
+    top_n = min(TOP_K_SEMANTIC, sims.shape[0])
+    top_ids = np.argpartition(-sims, top_n - 1)[:top_n]
+    top_ids = top_ids[np.argsort(-sims[top_ids])]
     cands = {}
-    mx = max(float(scores[0][0]), 0.01)
-    for sc, idx in zip(scores[0], ids[0]):
+    mx = max(float(sims[top_ids[0]]), 0.01)
+    for idx in top_ids:
         idx = int(idx)
-        cands[idx] = {"s": float(sc) / mx, "k": 0.0}
+        cands[idx] = {"s": float(sims[idx]) / mx, "k": 0.0}
     qterms = set(re.findall(r'\b[a-zA-Z]{2,}\b', full_exp.lower()))
     hits = Counter()
     for t in qterms:

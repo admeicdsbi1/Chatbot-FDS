@@ -17,7 +17,7 @@ chatbot/
 |---|---|
 | Hugging Face Inference Whisper (throttled, 503s) | **Groq Whisper** — free, fast, reliable |
 | HF Router open-model fallback chain | **Gemini 2.0 Flash** → **Groq Llama-3.3-70B** fallback |
-| Query embedded via HF Inference API | **Local MiniLM** embedding in the backend |
+| Query + chunks embedded via local MiniLM/torch (OOM on 512MB) | **Gemini Embedding API** (`text-embedding-004`) + NumPy cosine — no torch/faiss |
 | No conversation memory (follow-ups lost context) | Recent turns sent to the LLM |
 | Gradio fixed-height chat, autoplay hacks | React state, scrollable chat, browser TTS |
 | Single Gradio process | Stateless API + static PWA, deployable separately |
@@ -44,8 +44,8 @@ cd backend
 python -m venv .venv && .venv\Scripts\activate     # Windows
 pip install -r requirements.txt
 copy .env.example .env                              # then fill GEMINI_API_KEY / GROQ_API_KEY
-python generate_embeddings.py                       # one-time: builds data/embeddings.npy
-uvicorn main:app --reload --port 8000
+python generate_embeddings.py                       # OPTIONAL: prebuild data/embeddings.npy via Gemini
+uvicorn main:app --reload --port 8000               # if embeddings.npy is absent, it's built on boot
 ```
 Test: `GET http://localhost:8000/api/health` → `{"status":"ok","chunks":257}`
 
@@ -69,7 +69,8 @@ npm run dev                                          # http://localhost:3000
   - Start: `uvicorn main:app --host 0.0.0.0 --port $PORT`
   - Health check path: `/api/health`
 - Env vars: `GEMINI_API_KEY`, `GROQ_API_KEY`, and `ALLOWED_ORIGINS=https://<your-app>.vercel.app`
-- Commit `backend/data/embeddings.npy` first (run `generate_embeddings.py` locally) so boot is fast.
+- Embeddings: the backend builds `embeddings.npy` via the Gemini API on first boot (~a few seconds for 257 chunks). To skip that on every cold start, run `python generate_embeddings.py` locally and commit the file. The backend auto-rebuilds if the file is missing or its dimension doesn't match the embedding model.
+- Runs on Render's **free 512MB** tier (no torch/faiss — embeddings are an API call + NumPy cosine).
 
 ### 2. Frontend → Vercel
 - Vercel → **New Project** → import repo → set **Root Directory = `frontend`**.
@@ -86,8 +87,9 @@ npm run dev                                          # http://localhost:3000
 
 ## Updating the knowledge base
 1. Edit/replace `backend/data/chunks_merged.jsonl`.
-2. Run `python backend/generate_embeddings.py` to rebuild `embeddings.npy`.
-3. Commit both files and redeploy the backend.
+2. Either delete `backend/data/embeddings.npy` (it rebuilds on next boot), or run
+   `python backend/generate_embeddings.py` (needs `GEMINI_API_KEY`) to rebuild it now.
+3. Commit and redeploy the backend.
 
 ## Notes
 - Voice replies use the **browser's** speech engine by default (free, no server load).
