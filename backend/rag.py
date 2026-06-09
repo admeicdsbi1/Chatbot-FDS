@@ -4,7 +4,7 @@ API (no local model → fits Render's 512MB free tier), and runs the hybrid
 semantic+keyword retrieval ported from the original app.py. Semantic search is a
 plain NumPy cosine over 257 normalized vectors — FAISS/torch are not needed.
 """
-import os, json, re
+import os, json, re, threading
 from collections import Counter
 import numpy as np
 
@@ -34,10 +34,29 @@ def _normalize_rows(m):
     return m / norms
 
 
+def _build_embeddings_bg():
+    """Build embeddings via the Gemini API in the background, then swap them in.
+    Never raises into startup — on failure the app stays on keyword-only retrieval."""
+    global emb_matrix
+    try:
+        texts = [c.get("text", "") for c in chunks]
+        m = _normalize_rows(embed.embed_documents(texts))
+        emb_matrix = m
+        print(f"Semantic search ready: embeddings {m.shape}")
+        try:
+            np.save(EMB_CACHE, m)
+            print(f"Cached embeddings to {EMB_CACHE}")
+        except Exception as e:
+            print(f"Could not cache embeddings: {e}")
+    except Exception as e:
+        print(f"Background embedding build failed — staying keyword-only: {e}")
+
+
 def init_kb():
-    """Load chunks + keyword index. Load embeddings.npy if it matches the current
-    Gemini embedding dimension; otherwise (missing / stale MiniLM file) rebuild it
-    via the Gemini API and cache to disk. Falls back to keyword-only if no key."""
+    """Load chunks + keyword index (fast, never crashes). Load embeddings.npy if it
+    matches the current embedding dimension; otherwise build it via the Gemini API
+    in a BACKGROUND thread so startup is instant and serving begins immediately
+    (keyword-only until embeddings are ready)."""
     global chunks, emb_matrix, keyword_index
 
     print("Loading knowledge base...")
@@ -68,14 +87,8 @@ def init_kb():
         print(f"Loaded embeddings: {emb_matrix.shape}")
     elif embed.available():
         why = "missing" if cached is None else f"stale (shape {cached.shape}, dim≠{expected_dim})"
-        print(f"Embeddings {why} — rebuilding via Gemini API...")
-        texts = [c.get("text", "") for c in chunks]
-        emb_matrix = _normalize_rows(embed.embed_documents(texts))
-        try:
-            np.save(EMB_CACHE, emb_matrix)
-            print(f"Saved rebuilt embeddings: {emb_matrix.shape}")
-        except Exception as e:
-            print(f"Could not cache embeddings: {e}")
+        print(f"Embeddings {why} — building via Gemini API in background...")
+        threading.Thread(target=_build_embeddings_bg, daemon=True).start()
     else:
         emb_matrix = None
         print("No GEMINI_API_KEY and no usable cache — keyword-only retrieval.")

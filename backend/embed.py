@@ -27,8 +27,10 @@ _PREFERRED = [
 # Explicit override wins over discovery.
 _OVERRIDE = os.environ.get("GEMINI_EMBED_MODEL")
 
-# text-embedding-004 allows up to 100 inputs per batch request.
-BATCH_SIZE = 100
+# Keep batches small: gemini-embedding-001 has tight free-tier token-per-minute
+# limits; ~16 chunks/request stays well under them and avoids 429s.
+BATCH_SIZE = int(os.environ.get("GEMINI_EMBED_BATCH", "16"))
+INTER_BATCH_SLEEP = float(os.environ.get("GEMINI_EMBED_SLEEP", "1.0"))
 
 _resolved_model = None        # cached resolved model name (no "models/" prefix)
 _batch_supported = True       # flipped off if batchEmbedContents 404s
@@ -116,7 +118,7 @@ def _embed_batch_request(model, batch, task_type):
             for t in batch
         ]
     }
-    for attempt in range(4):
+    for attempt in range(7):
         r = requests.post(f"{_BASE}/{model}:batchEmbedContents",
                           params={"key": GEMINI_API_KEY}, json=payload, timeout=60)
         if r.status_code == 200:
@@ -124,11 +126,15 @@ def _embed_batch_request(model, batch, task_type):
         if r.status_code == 404:
             _batch_supported = False
             return None
-        if r.status_code in (429, 503):
-            time.sleep(2 * (attempt + 1))
+        if r.status_code in (429, 500, 503):
+            wait = min(2 ** attempt, 45)   # 1,2,4,8,16,32,45
+            print(f"batchEmbed {r.status_code}, retry in {wait}s ({attempt+1}/7)")
+            time.sleep(wait)
             continue
         raise RuntimeError(f"batchEmbed {r.status_code}: {r.text[:200]}")
-    raise RuntimeError("batchEmbed failed after retries")
+    # Persistent throttling on the batch endpoint → let caller fall back to sequential.
+    _batch_supported = False
+    return None
 
 
 def embed_documents(texts, task_type="RETRIEVAL_DOCUMENT"):
@@ -141,15 +147,17 @@ def embed_documents(texts, task_type="RETRIEVAL_DOCUMENT"):
     for start in range(0, len(texts), BATCH_SIZE):
         batch = texts[start:start + BATCH_SIZE]
         vecs = _embed_batch_request(model, batch, task_type) if _batch_supported else None
-        if vecs is None:  # batch unsupported → sequential
+        if vecs is None:  # batch unsupported/throttled → sequential per item
             vecs = []
             for t in batch:
                 v = embed_query(t, task_type=task_type)
                 if v is None:
                     raise RuntimeError("embedContent failed during document embedding")
                 vecs.append(v)
+                time.sleep(0.2)
         out.extend(vecs)
         print(f"  embedded {min(start + BATCH_SIZE, len(texts))}/{len(texts)}")
+        time.sleep(INTER_BATCH_SLEEP)
     return np.vstack(out).astype(np.float32)
 
 
