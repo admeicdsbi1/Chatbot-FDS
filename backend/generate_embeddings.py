@@ -23,7 +23,7 @@ if not embed.available():
 
 with open(JSONL, encoding="utf-8") as f:
     chunks = [json.loads(l) for l in f if l.strip()]
-print(f"Loaded {len(chunks)} chunks; embedding with {embed.EMBED_MODEL}...")
+print(f"Loaded {len(chunks)} chunks; embedding with {embed.current_model()}...")
 
 texts = [c.get("text", "") for c in chunks]
 emb = embed.embed_documents(texts)          # normalized (N, D)
