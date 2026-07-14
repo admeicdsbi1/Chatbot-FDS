@@ -14,7 +14,9 @@ import requests
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
+# NOTE: gemini-2.5-flash 404s ("no longer available to new users") on keys
+# created after its sunset — verify with ListModels before changing this.
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash")
 GROQ_MODEL = os.environ.get("GROQ_MODEL", "llama-3.3-70b-versatile")
 
 GEMINI_URL = (
@@ -23,7 +25,7 @@ GEMINI_URL = (
 )
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 
-MAX_TOKENS = 700
+MAX_TOKENS = int(os.environ.get("LLM_MAX_TOKENS", "1500"))
 TEMPERATURE = 0.1
 HISTORY_TURNS = 4  # how many prior turns to feed back for context
 
@@ -80,6 +82,10 @@ def _gemini(question, context, lang_code, history):
         "generationConfig": {
             "temperature": TEMPERATURE,
             "maxOutputTokens": MAX_TOKENS,
+            # 2.5 models spend the output budget on thinking tokens by default,
+            # which can consume ALL of MAX_TOKENS and return an empty candidate
+            # (silently degrading every request to the Groq fallback).
+            "thinkingConfig": {"thinkingBudget": 0},
         },
     }
     try:
@@ -96,6 +102,9 @@ def _gemini(question, context, lang_code, history):
             return None
         parts = cands[0].get("content", {}).get("parts", [])
         text = "".join(p.get("text", "") for p in parts).strip()
+        if not text and cands[0].get("finishReason") == "MAX_TOKENS":
+            print("Gemini returned empty text with finishReason=MAX_TOKENS "
+                  "(thinking consumed the budget?) — falling back")
         return text or None
     except Exception as e:
         print(f"Gemini error: {e}")

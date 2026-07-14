@@ -1,0 +1,57 @@
+भारत सरकार - रेल मंत्रालय
+Government of India - Ministry of Railways
+अनुसंधान अभिकल्प और मानक संगठन
+Research Designs & Standards Organisation
+लखनऊ - 226 011
+Lucknow - 226 011
+EPBX (0522) 2451200
+DID (0522) 2450115
+Fax (0522) 2458500
+DID (0522) 2465310
+
+No. MC/ACF/Fire Detection/AC
+Date: 06.06.2024
+
+Principal Chief Mechanical Engineers
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| 1. | मध्य रेलवे, छत्रपति शिवाजी टर्मिनस, मुम्बई - 400 001. | 12. | उत्तर मध्य रेलवे, हास्टिंग रोड, इलाहाबाद - 211 001. |
+| 2. | पूर्व रेलवे, फेयरली प्लेस, कोलकाता - 700 001. | 13. | उत्तर पश्चिम रेलवे, जयपुर - 302 006. |
+| 3. | उत्तर रेलवे, बड़ौदा हाउस, नई दिल्ली - 110 001. | 14. | दक्षिण पश्चिम रेलवे, हुबली - 580 023. |
+| 4. | दक्षिण रेलवे, पार्क टाउन, चेन्नई - 600 003. | 15. | पश्चिम मध्य रेलवे, जबलपुर - 482 001. |
+| 5. | दक्षिण मध्य रेलवे, रेल निलायम, सिकन्दराबाद-500 071. | 16. | दक्षिण पूर्व मध्य रेलवे, आर ई आफिस काम्प्लेक्स, बिलासपुर - 495 004. |
+| 6. | दक्षिण पूर्व रेलवे, गार्डन रीच, कोलकाता - 700 043. | 17. | इन्टीगरल कोच फैक्टरी, चेन्नई - 600 038. |
+| 7. | पूर्वोत्तर रेलवे, गोरखपुर - 273 012. | 18. | रेल कोच फैक्टरी, हुसैनपुर, कपूरथला - 144 602. |
+| 8. | पूर्वोत्तर सीमान्त रेलवे, मालीगाँव, गुवाहाटी - 781 011. | 19. | बी.ई.एम.एल., बेंगलूर काम्प्लेक्स, न्यू थिप्पासान्द्रा, पोस्ट बाक्स न. 7501, बेंगलूर-560 075. |
+| 9. | पश्चिम रेलवे, चर्चगेट, मुम्बई - 400 020. | 20. | कोंकण रेलवे कारपोरेशन लि., कारपोरेट आफिस, बेलापुर भवन, नवी मुम्बई - 400 614. |
+| 10. | पूर्व मध्य रेलवे, हाजीपुर - 844 101. | 21. | माडर्न कोच फैक्टरी रायबरेली -229206 |
+| 11. | पूर्व तटीय रेलवे, बीडीए रेंटल कालोनी, रेलवे काम्प्लेक्स, चन्द्रशेखरपुरा, भुवनेश्वर, उड़ीसा - 751 016. | | |
+
+Sub: Operationalisation of FSDS during dead attach movement of coaches.
+Ref: ECR letter no. ECR/MEC/CHG/62/2020 dated 29.05.2024.
+
+Vide reference above, ECR at its letter under reference, has pointed out issues for Operationalization of FSDS during dead attach movement of coaches. The matter has been examined and the precautions required to be followed are given as under:
+
+A. If the coaches are detached for sick-line attention, SS-I/SS-II/SS-III schedule or any dead attach movement for parent depot, following activities to be followed:
+(i) Coach to be moved as empty in a locked condition.
+(ii) MCB of FSDS is to be switched “OFF”.
+(iii) The connection of FSDS with its battery (Wago terminal no. 1) should be disconnected.
+(iv) Brake valve of FSDS is to be isolated.
+(v) A sticker is also to be pasted on FSDS panel. The sticker shall be as under:
+“MCB of FSDS is switched “OFF” and Wago (Terminal no. 1) connection is disconnected. Brake valve is also isolated”.
+
+B. Whenever coaches are fit to be attached again with rake, following needs to be ensured during attachment in rake:
+a) Brake valve to be in normal functioning position (Handle position to open).
+b) Cable to be connected to Wago terminal no. 1 and MCB of FSDS is to be Switched “ON”.
+c) Sticker pasted on FSDS panel etc. to be removed.
+
+The pictorial view along with work instruction of the above is enclosed herewith Annexure-1.
+
+The above guidelines, if required will be reviewed based upon Zonal Railways feedback.
+
+DA: As above
+
+(Anurag Malik)
+Jt. Director/SS /Carriage
+06.06.24

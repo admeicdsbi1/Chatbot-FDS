@@ -1,0 +1,32 @@
+Maintenance Manual for FSDS and FDSS (Volume – 2)
+
+### ASPIRATING SMOKE DETECTION ASD SYSTEM (MAKE QUARTAS)
+
+[Image showing an open control panel with numbered arrows pointing to components]
+
+| SN | ITEM DESCRIPTION | Qty (Nos.) |
+| :---: | :--- | :---: |
+| 1 | Aspirating Smoke Detection Panel | 01 |
+| 2 | Audio Card (Sound Card) | 01 |
+| 3 | Brake Valve Relay | 01 |
+| 4 | Timer Relay | 01 |
+| 5 | WAGO Connector | 01 |
+
+---
+
+### ASPIRATING SMOKE DETECTOR – FIRELINK-25 (MAKE HOCHIKI)
+
+[Two images showing the external and internal views of the Firelink-25 system with numbered arrows pointing to components]
+
+| SN | ITEM DESCRIPTION |
+| :---: | :--- |
+| 1 | Sampling Pipe |
+| 2 | Exhaust Pipe |
+| 3 | Fire Panel |
+| 4 | Control Panel |
+| 5 | Aspirating Smoke Detection Unit (HOCHIKI - FIRELINK 25) |
+
+---
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+Page 18 of 64

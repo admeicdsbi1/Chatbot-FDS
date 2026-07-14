@@ -1,0 +1,39 @@
+Maintenance Manual for FSDS and FDSS (Volume – 2)
+
+### LED Indication on HOCHIKI FIRELINK-25
+
+*   **Fire** - Illuminates when the alarm level has been reached and the appropriate time delays have expired.
+*   **Fault** - Illuminates when the unit has a fault and a fault signal is being sent to the fire panel.
+*   **OK** - Illuminates to show normal operation when there are no faults.
+*   **OK (Flashing)** - The OK lamp will flash during the period when the detector is first learning about its environment.
+
+---
+
+### TITANUS PRO-SENS AUTOMATIC SMOKE & FIRE DETECTION SYSTEM (MAKE WAGNER)
+
+#### Panel Indicators and Controls (Left Panel Image):
+*   **Action Alarm** (Red indicator lamp)
+*   **Alert Alarm** (Yellow indicator lamp)
+*   **Reset** (Push button)
+*   **LED ON: Break Applied** (Red indicator lamp)
+*   **LED ON: Brake Valve Health Ok** (Green indicator lamp)
+*   **TITANUS PRO SENS® WAGNER**
+*   **Automatic Smoke & Fire Detection System (RDSO/2008/CG-04)**
+    *   S.No: 4899
+    *   Date: 04/2022
+
+---
+
+#### Instruction Plate Details (Bilingual - Hindi & English):
+
+**THIS COACH IS FITTED WITH VERY EARLY SMOKE FIRE DETECTION WITH ALARM AND BRAKING SYSTEM**
+**यह कोच, समय पूर्व धुएँ अथवा अग्नि का पता लगाने तथा अलार्म एवं ब्रेकिंग प्रणाली से सुसज्जित है।**
+
+| Alert/action सतर्क / कार्यशील | Fire आग | Braking Isolation ब्रेक अलगाव |
+| :--- | :--- | :--- |
+| • Train attendant to become alert<br>• Look for any person smoking in passenger, toilets or gangway area.<br>• Press reset button for 5 second on fire panel if everything is ok<br><br>• ट्रेन परिचारक सक्रिय हो जाय।<br>• यात्री, शौचालय या गैंगवे क्षेत्र में धूम्रपान करने वाले किसी भी व्यक्ति को देखें।<br>• अगर सब कुछ ठीक है तो फायर पैनल पर 5 सेकेंड के लिए रीसेट बटन दबाएं। | • Brake will be applied automatically.<br>• Guide passengers to evacuate as per announcement by the system.<br>• Use fire extinguisher if safe and possible.<br><br>• ब्रेक स्वचालित रूप से लागू किया जाएगा।<br>• सिस्टम द्वारा घोषणा के अनुसार यात्रियों को बाहर निकलने के लिए गाईड करें।<br>• सुरक्षित और सम्भव हो तो अग्नि रोधक यंत्र का उपयोग करें। | • If brake applied due to any false reason, then isolate the ball valve by turning the handle from open to close position.<br><br>• यदि किसी अनुचित कारण से ब्रेक लगया गया है तो हैंडल को घुमाकर बॉल वाल्व को बंद करें।<br><br>**For any Queries please contact :**<br>किसी भी प्रकार की सहायता के लिए संपर्क करें:<br>**suport.jketim2@gmail.com** |
+
+---
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+Page 19 of 64

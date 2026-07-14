@@ -1,0 +1,56 @@
+Maintenance Manual for FSDS and FDSS (Volume – 1)
+4. Slide the replacement filter in so that the ‘Direction of flow’ arrow printed on the carton duplicates that on the ‘Direction of flow’ label beside the filter slot.
+5. Refit the front cover by cover-fixing screws.
+
+Caution:
+1. As dust contained in the dust separators may expose maintenance personnel to a ‘Nuisance Dust‘ hazard, it is strongly recommended that suitable masks and protective clothing be worn when changing filters.
+2. Used separators/filters are not intended for re-use and should be disposed of.
+
+4.1.2.5. Cleaning
+1. Control Panel / Detection Panel
+• Clean the outer side of the panel by using a lint-free cloth with Isopropyl alcohol.
+• The interior of the panel should be cleaned using vacuuming.
+
+2. Aspirating Smoke Detection Unit
+External cleaning of the unit should be performed using a damp (not wet) lint-free cloth with Isopropyl alcohol.
+
+Caution: Do not use solvents as these may mar the front panel label.
+
+4.1.2.6. Downloading Data Log from the Aspirating Smoke Detection Unit
+1. Connect the RS232 Serial Port of the Aspirating Smoke Detection Unit (HOCHIKI FIRELINK-25) with the computer using a USB-Serial RS232 cable.
+
+[Image Labels]
+HOCHIKI
+FIRE
+FAULT
+OK
+F R E Link. 25
+
+| No. | Description | No. | Description |
+| :--- | :--- | :--- | :--- |
+| 1 | RS232 Serial Port | 2 | USB-Serial RS232 cable |
+
+2. Open The Hochiki Fire link 25 Software (e.g. Fire link 25 configuration tool).
+
+The display appears as shown.
+
+Press the OK button to continue.
+
+[Software Interface Labels]
+Offline fn edit - [C:\Users\hellow\Desktop\FIRElink-25.DFS]
+Alarm actions | Alarm levels and delays | Time and date
+Power monitoring | Referencing | Miscellaneous
+Device information | Day/Night switching | Flow monitoring
+Device type: FIRElink-25
+Firmware version: 1.4
+Watchdog count: 00
+Run-time hours: 4
+Device text: Stratos-Micra
+Detector 001
+Save All
+Modified
+OK
+Cancel
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+Page 32 of 87

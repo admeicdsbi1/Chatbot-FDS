@@ -1,0 +1,52 @@
+Maintenance Manual for FSDS and FDSS (Volume – 2)
+### FIRE DETECTION PANEL
+
+![FIRE DETECTION PANEL - RDSO/2008/CG-04 Rev. 4 and Rev. 5](image_1.png)
+
+* **RDSO/2008/CG-04 Rev. 4**
+  * Panel Label: AUTOMATIC SMOKE AND HEAT DETECTION WITH ALARM SYSTEM (RDSO / 2008 / CG-04)
+  * Indicator Labels: INDICATION 1, INDICATION 2
+
+* **RDSO/2008/CG-04 Rev. 5**
+  * Panel Label: AUTOMATIC SMOKE AND HEAT DETECTION WITH ALARM SYSTEM (RDSO / 2008 / CG-04)
+
+---
+
+![Instruction Board - RDSO/2008/CG-04 Rev. 5](image_2.png)
+
+**RDSO/2008/CG-04 Rev. 5**
+
+#### English Instruction Panel (Left & Center-Left)
+
+| EVENT | INDICATION | ACTION |
+| :--- | :--- | :--- |
+| **ACTION** | SMOKE LEVEL IS RISING | • NO ACTION REQUIRED<br>• INFORM THE ATTENDANT |
+| **FIRE** | SMOKE LEVEL HIGH | • NO NEED TO PANIC<br>• INFORM THE ATTENDANT OR ANY RAILWAY PERSON<br>• USE FIRE EXTINGUISHER IF REQUIRED<br>• BRAKES WILL BE APPLIED AUTOMATICALLY<br>• FOLLOW INSTRUCTION MADE ON PUBLIC ANNOUNCEMENT SYSTEM |
+
+#### Hindi Instruction Panel (Center & Center-Right)
+
+यह कोच समय पूर्व धुएँ/अग्नि का पता लगाने तथा अलार्म प्रणाली से सुसज्जित है।
+किसी अलार्म की दशा में घबराएँ नहीं।
+
+| घटना | संकेत | कार्यवाही |
+| :--- | :--- | :--- |
+| **एक्शन ACTION** | धुएँ का स्तर बढ़ रहा है। | • कोई कार्यवाही की आवश्यकता नहीं है।<br>• रेलवे कर्मचारी को सूचित करें। |
+| **अग्नि FIRE** | धुएँ का स्तर ऊँचा है। | • कृपया घबराएं नहीं।<br>• रेलवे कर्मचारी को सूचित करें।<br>• अगर आवश्यकता है तो अग्निशमन यंत्र का उपयोग करें।<br>• ब्रेक अपने आप ही लग दी जायेगी।<br>• सार्वजनिक घोषणा पर दिए गए निर्देशों का पालन करें। |
+
+#### Right Panel Instructions
+
+THIS COACH IS FITTED WITH VERY EARLY SMOKE DETECTION AND ALARM SYSTEM WITH AUTOMATIC BRAKING
+
+* **LED INDICATION 1 (GREEN):** POWER SUPPLY TO BRAKE VALVE IS OK
+* **LED INDICATION 2 (GREEN):** BRAKE VALVE IS ACTIVE
+
+IN CASE ANY ONE OF THE INDICATIONS TURNS OFF AND THERE IS NO FIRE IN THE COACH PLEASE ISOLATE THE BRAKE VALVE FROM THE MANNUAL ISOLATION AS SHOWN IN THE BELOW FIGURE. THIS WILL ALLOW THE COACH TO BE HAULED.
+
+* **MANUAL ISOLATION Diagram Labels:**
+  * MANUAL ISOLATION
+  * ON
+  * OFF
+
+---
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+Page 14 of 64

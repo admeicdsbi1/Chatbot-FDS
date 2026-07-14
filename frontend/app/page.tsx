@@ -6,12 +6,30 @@ import Composer from "@/components/Composer";
 import ThinkingPipeline from "@/components/ThinkingPipeline";
 import Disambiguation from "@/components/Disambiguation";
 import QuickQuestions from "@/components/QuickQuestions";
-import { sendChat, transcribe } from "@/lib/api";
+import { ApiError, sendChat, transcribe } from "@/lib/api";
 import { speak, stopSpeaking, isTTSSupported } from "@/lib/tts";
 import type { Message, Stage } from "@/lib/types";
 
 function uid() {
   return Math.random().toString(36).slice(2) + Date.now().toString(36);
+}
+
+function chatErrorMessage(e: unknown): string {
+  if (e instanceof ApiError) {
+    switch (e.kind) {
+      case "timeout":
+        return "⚠️ Server took too long to respond — it may be waking up from sleep. Please try again in a minute.";
+      case "network":
+        return "⚠️ No connection to the server. Check your internet and try again.";
+      case "server":
+        return "⚠️ Server error while answering. Please try again.";
+      case "http":
+        return `⚠️ Request failed (${e.status ?? "error"}). Please try again.`;
+      case "cancelled":
+        return "Request stopped.";
+    }
+  }
+  return "⚠️ Could not reach the server. Check your connection and try again.";
 }
 
 interface Disamb {
@@ -28,6 +46,11 @@ export default function Page() {
   const busy = stage !== "idle";
   const messagesRef = useRef<Message[]>([]);
   messagesRef.current = messages;
+  const abortRef = useRef<AbortController | null>(null);
+
+  const stop = useCallback(() => {
+    abortRef.current?.abort();
+  }, []);
 
   const ask = useCallback(
     async (questionRaw: string) => {
@@ -40,21 +63,22 @@ export default function Page() {
       const userMsg: Message = { id: uid(), role: "user", content: question };
       setMessages((m) => [...m, userMsg]);
 
+      const ctrl = new AbortController();
+      abortRef.current = ctrl;
       try {
-        setStage("understanding");
-        await new Promise((r) => setTimeout(r, 120));
-        setStage("searching");
-        await new Promise((r) => setTimeout(r, 120));
-        setStage("reading");
-
         const history = messagesRef.current; // prior turns for context
+        setStage("searching");
+        const res = await sendChat(question, history, ctrl.signal);
         setStage("generating");
-        const res = await sendChat(question, history);
 
+        const degraded =
+          res.retrieval_mode === "keyword-only"
+            ? "\n\n_⚠️ Search is running in reduced mode right now — answers may be less accurate._"
+            : "";
         const botMsg: Message = {
           id: uid(),
           role: "assistant",
-          content: res.answer,
+          content: res.answer + degraded,
           sources: res.sources || undefined,
           lang: res.lang,
         };
@@ -64,17 +88,14 @@ export default function Page() {
           setStage("speaking");
           speak(res.answer, res.lang);
         }
-      } catch {
+      } catch (e) {
+        console.error("chat failed:", e);
         setMessages((m) => [
           ...m,
-          {
-            id: uid(),
-            role: "assistant",
-            content:
-              "⚠️ Could not reach the server. Check your connection and try again.",
-          },
+          { id: uid(), role: "assistant", content: chatErrorMessage(e) },
         ]);
       } finally {
+        abortRef.current = null;
         setStage("idle");
       }
     },
@@ -167,6 +188,7 @@ export default function Page() {
           onSubmit={() => ask(input)}
           onAudio={handleAudio}
           busy={busy}
+          onStop={stop}
         />
       </div>
     </div>

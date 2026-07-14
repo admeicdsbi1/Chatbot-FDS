@@ -13,7 +13,7 @@ export default function MessageBubble({
   msg: Message;
   onReplay?: (m: Message) => void;
 }) {
-  const [showSources, setShowSources] = useState(false);
+  const [showSources, setShowSources] = useState(true);
   const isUser = msg.role === "user";
 
   if (isUser) {

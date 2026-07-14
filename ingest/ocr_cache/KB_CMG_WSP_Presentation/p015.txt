@@ -1,0 +1,14 @@
+WSP system for LHB coaches
+
+Main components for WSP system
+
+WSP – system: components
+
+Speed sensor with pole wheel
+WSP-electronic control unit
+WSP valve
+electrics
+pneumatics
+
+Knorr-Bremse Group
+Dateiname hier eintragen | 15

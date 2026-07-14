@@ -1,0 +1,37 @@
+WSP system for LHB coaches
+
+ESRA - System Architecture
+
+19“ - Rack
+
+ESRA System Bus (CAN)
+
+MMI
+
+Service Board
+
+Main Board with application
+
+Extension Board dig. I/O
+
+Extension Board anal. I/O
+
+Bus Coupler Board with application
+
+RS232
+
+CAN
+
+Service Terminal
+
+sensors & valves
+
+digital signals
+
+analog signals
+
+Vehicle Bus
+
+Knorr-Bremse Group
+
+Dateiname hier eintragen | 28

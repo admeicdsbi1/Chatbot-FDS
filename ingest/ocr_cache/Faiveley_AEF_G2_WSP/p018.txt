@@ -1,0 +1,62 @@
+o Air quality: 2-2-2 NF F 11-100
+o Dump valve control states
+Charge (FILL = 0 ; VENT = 0)
+Hold (FILL = 1 ; VENT = 0)
+Exhaust (FILL = 1 ; VENT = 1)
+The FILL = 0 and VENT = 1 case is physically impossible, because of a hardware interlock device on WBI board
+
+4.4.2 Speed sensor
+Type: active in current information, two wires
+Fitted: on axle end (bearing box)
+Speed channel nr.: 1 information channels available for WSP functions
+
+[Diagram labels]
+CABEL & HOSE NOT SHOWN
+2xØ9 THRU
+29.1±0.1
+10
+SHIELD NOT CONNECTED TO SPEED SENSOR HOUSING
+2000±20
+Ø23
+Ø16
+HOSE (SAE-100 R6)
+SW 30
+SW 27
+HOLE Ø3x4.5 DP
+TO HOLE Ø26 H8
+Pg13.5 DIN 40430
+TO BE MOUNTED ON BODY OF THE VEHICLE
+YELLOW/GREEN EARTH WIRE 0.5mm²
+TO BE CONNECTED TO AN EARTH POINT
+350+10
+
+| ELECTRICAL FEATURES | |
+| :--- | :--- |
+| NOMINAL VOLTAGE | 15V ± 5% |
+| IL LOW LEVEL NOMINAL | 8.2 mA |
+| IH HIGH LEVEL NOMINAL | 15.2 mA |
+| EQUIVALENT LOAD RESISTOR OF THE INPUT BOARD | 512 Ω |
+| FREQUENCY RANGE | 0 - 3.5 KHz |
+| INSULATION RESISTANCE | ACCORDING TO EN 50155:2007 <br> - INSULATION RESISTANCE >20MΩ @ 500 Vdc <br> - VOLTAGE WITHSTAND TEST: 500 Vac FOR 1 min |
+| WORKING TEMPERATURE | -30°C +70°C |
+| EMI/EMC | ACCORDING TO EN 50121-3-2:2006 <br> - CONDUCTED EMISSIONS <br> - RADIATED EMISSIONS <br> - RADIATED RF FIELD IMMUNITY <br> - CONDUCTED RF IMMUNITY <br> - ELECTRICAL FAST TRANSIENT (BURST) IMMUNITY |
+
+Figure 5: Speed sensor
+
+Technical characteristics:
+o Nominal Voltage: 15V ± 5%
+o Current level of the signal:
+ILL: 8,2 mA
+IHL: 15,2 mA
+
+Figure 6: Speed sensor current signal characteristics
+
+FT0027800-003-E00MUM_A01.
+Date/Date: 26/02/19 - Issue/Revision: A01
+FAIVELEY TRANSPORT RAIL TECHNOLOGIES INDIA LTD.
+This document contains legally privileged, confidential, proprietary or
+otherwise private information. Any unauthorized use, reproduction, dissemination,
+distribution or other disclosure of the contents is strictly prohibited
+page 18/54
+Wabtec
+CORPORATION

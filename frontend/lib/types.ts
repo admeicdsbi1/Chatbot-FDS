@@ -22,6 +22,7 @@ export interface ChatResponse {
   sources: string;
   retrieval_count: number;
   lang: string;
+  retrieval_mode?: string;
 }
 
 export interface TranscribeResponse {

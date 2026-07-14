@@ -1,0 +1,67 @@
+No.IRCAMTECH/2011/Mech/WSP/1.0 12
+
+Schematic diagram for the Component overview
+
+Steuerung
+
+Microprocessor CPU
+
+serial bus
+
+Internal bus
+
++15V/+15V/+5V
+
++24V
+
+Power supply N1
+
+Powersupply N2
+
++15V
++15V
++5V
+
+8 opto coupler inputs
+
+6 relay outputs 2 semiconductor outputs
+
+4 dump valve outputs
+
+status display
+
+4 Impuls-geberein-gänge mit Filter
+
+display
+test
+dear
+door
+x
+
+ST NZ
+
+ST UP
+
+ST RE
+
+ST MV
+
+RS 232
+
+ST GE
+
+U_Batt 16-150V
+
+Druckschalter 16-150V
+
+Axle 1
+
+Axle 2
+
+Axle 3
+
+Axle 4
+
+Handbook on WSP System
+
+CAMTECH/GWL

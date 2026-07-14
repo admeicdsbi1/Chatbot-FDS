@@ -1,0 +1,42 @@
+Maintenance Manual for FSDS and FDSS (Volume – 1)
+
+**ANNEXURE - I**
+
+**LIST OF TOOLS AND EQUIPMENT FOR MAINTENANCE – N&S HOCHIKI**
+
+| LIST OF TOOLS AND MEASURING INSTRUMENTS FOR MAINTAINING NS-HOCHIKI NS1060.01 |
+| :--- |
+| ASPIRATING SMOKE DETECTION SYSTEM FOR VANDE BHARAT-TRAIN 18 TRAINSET TO RDSO SPEC- RDSO/2008/CG-04/REV-06 |
+| Model-NS-HOCHIKI-1060.01 ANNEXURE C | Rev.2 - 02/09/2024 |
+
+| SL NO | DESCRIPTION OF TOOL | SPECIFICATION | QTY |
+| :--- | :--- | :--- | :--- |
+| 1 | Rechargable LED Torch | Power-5v,1-2A and Wattage:1 Watt | 01 NO |
+| 2 | Portable Vaccuum Cleaner | Size:6mm(1/4 Inch) Input:5v-2A | 01 NO |
+| 3 | Nozzel cleaning pins | size:3mm&1.5mm | 02 NO's EACH |
+| 4 | USB-Serial RS 232 Convertor for data download | Supports RS232 serial interface (DB9) Automatic sense serial signal rate Small Volume,Easy installation | 01 NO |
+| 5 | Pickit programmer for programming | Input power supply:1.8-5 Flash memory(k bytes)-512 Length*width=95x40mm | 01 NO |
+| 6 | Multimeter-3 1/2digit | Dc voltage:200mv-600v ac voltage:600v-200v dc current:10A-2mA | 01 NO |
+| 7 | Flowmeter/Anemometer | A meter size of 15-200millimeters Velocity range:0.3-10meters/sec | 01 NO |
+| 8 | Soldering Gun | 200watt Fast heating,Convenient and usefull for normal to heavy duty soldering. Temperature range:160degreeF/70degreeC | 01 NO |
+| 9 | Soldering Led | Composition:20% lead ,80%tin.Gauge:18(1.22mm dia) | 01 NO (500gms) |
+| 10 | Wire Stripper | 130mm | 01 NO |
+| 11 | Crimping Tools | 8-10 sqmm crimps | 01 NO |
+| 12 | Nose plier | Size-150mm | 01 NO |
+| 13 | 46 pcs Socket Wrench Set | Size/dimension-46pcs tool kit Drive size:1/4 inch | 01 NO |
+| 14 | Screw Driver (Star) | Size:Ph1x100mm | 01 NO |
+| 15 | Screw Driver (Star) | Size:5x100mm 3/16"x4" | 01 NO |
+| 16 | Hand Held Programer ( Smoke Sensor ) | TCH-B200 | 01 NO |
+| 17 | Sensor Removal Tool | Tool-3 | 01 NO |
+| 18 | All In One Tester (Smoke & Heat) | TF 1000 | 01 NO |
+| 19 | Functional testing - Aspiration Smoke | SOLO 365 & Adapter | 01 NO |
+| 20 | Extention Universal Pole | 4.5 mtr Length | 01 NO |
+| 21 | Heat Activated wire Test Jig | Transformer 240 V to 6 V, 30 A. Insulating Board of Non-Combustible Material,600mm x 600mm. Stop Watch | 01 NO |
+
+| Document no: NSSPT/M&S/TRAIN 18/24-25/CONDITION BASED SPARE PARTS/001 | Date : 18.04.2024 |
+| :--- | :--- |
+| Prepared by:Production incharge | Checked By:Quality incharge | Approved By:Director |
+
+DISCLAIMER:ThisDrawing/ Document is the property of N&S SOLUTIONS PVTLTD.Drawing/document is loaned upon the express condition that it shall not be Reproduced or distributed in any manner & shall not be otherwise used nor disclosed to third party without the written permission of N&S SOLUTIONS PVT LTD
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0 | Page 61 of 87

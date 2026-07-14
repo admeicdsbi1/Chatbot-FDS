@@ -1,0 +1,46 @@
+No.IRCAMTECH/2011/Mech/WSP/1.0 7
+
+N 1 – Power supply:
+[Image: Panel layout showing modules N1, N2, OP, RE, MV, ST, CPU, RÜ, GE1, GE2]
+■ input voltage 16,8 - 150 V
+■ output voltage 24 V +/- 3%
+■ independent power supply for wheel lock detection
+■ independent supply voltage for dump valves
+
+1.3.1(b). N2 (Power pack 2):
+This unit supplies energy to all measurement & data processing units.
+• Input voltage ranging from 16.8 V to 150 Vdc
+• Output voltage 24 V ± 3% dc
+• EMC – Filter
+• Pressure switch input
+• Low-voltage shut-off
+
+N 2 – Power supply:
+[Image: Panel layout showing modules N2, OP, RE, MV, ST, CPU, RÜ, GE1, GE2]
+■ input voltage 16,8 - 150 V
+■ output voltage 5 V / 15 V
+■ EMC-Filter
+■ BP pressure switch input
+■ undervoltage recognizing
+
+Handbook on WSP System CAMTECH/GWL
+
+**Panel Component Labels (from images):**
+*   SWKP AS 20 R - System designation
+*   SAB WABCO - Manufacturer
+*   N 1 - Power supply module 1
+*   N 2 - Power supply module 2
+*   OP - Operating module
+*   RE - Relay module
+*   MV - Magnetic valve module
+*   ST - Status/Diagnostic module
+*   CPU - Central Processing Unit
+*   RÜ - Monitoring module
+*   GE 1 - Speed sensor module 1
+*   GE 2 - Speed sensor module 2
+*   8888 - Digital display
+*   Display - LED indicator
+*   Test - Test button
+*   Clear - Reset button
+*   Door test - Diagnostic function
+*   RS 232 - Communication port

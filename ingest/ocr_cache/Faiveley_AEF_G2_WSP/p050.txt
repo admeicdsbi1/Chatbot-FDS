@@ -1,0 +1,50 @@
+14. TRANSPORT INFORMATION
+ADG
+Not regulated as dangerous goods.
+IATA
+Not regulated as dangerous goods.
+IMDG
+Not regulated as dangerous goods.
+
+15. REGULATORY INFORMATION
+National regulations
+This Material Safety Data Sheet was prepared in accordance with the Australia National Code of Practice for the Preparation of Material Safety Data Sheets (NOHSC: 2011.) No poison schedule number allocated.
+
+Inventory status
+
+| Country(s) or region | Inventory name | On inventory (yes/no)* |
+| :--- | :--- | :--- |
+| Australia | Australian Inventory of Chemical Substances (AICS) | Yes |
+| Canada | Domestic Substances List (DSL) | No |
+| Canada | Non-Domestic Substances List (NDSL) | Yes |
+| China | Inventory of Existing Chemical Substances in China (IECSC) | Yes |
+| Europe | European Inventory of Existing Commercial Chemical Substances (EINECS) | No |
+| Europe | European List of Notified Chemical Substances (ELINCS) | No |
+| Japan | Inventory of Existing and New Chemical Substances (ENCS) | No |
+| Korea | Existing Chemicals List (ECL) | Yes |
+| New Zealand | New Zealand Inventory | Yes |
+| Philippines | Philippine Inventory of Chemicals and Chemical Substances (PICCS) | Yes |
+| United States & Puerto Rico | Toxic Substances Control Act (TSCA) Inventory | Yes |
+
+*A "Yes" indicates that all components of this product comply with the inventory requirements administered by the governing country(s)
+
+16. OTHER INFORMATION
+Disclaimer
+The information in the sheet was written based on the best knowledge and experience currently available.
+Prepared by
+Jason Galary
+Issue date
+November-29-2011
+This data sheet contains changes from the previous version in section(s):
+Product and Company Identification: Product and Company Identification
+Composition / Information on Ingredients: Ingredients
+
+FT0027800-003-E00MUM_A01.
+Date/Date: 26/02/19 - Issue/Revision: A01
+FAIVELEY TRANSPORT RAIL TECHNOLOGIES INDIA LTD.
+This document contains legally privileged, confidential, proprietary or
+otherwise private information. Any unauthorized use, reproduction, dissemination,
+distribution or other disclosure of the contents is strictly prohibited
+page 50/54
+Wabtec
+CORPORATION

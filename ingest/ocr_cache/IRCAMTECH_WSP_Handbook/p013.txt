@@ -1,0 +1,72 @@
+No.IRCAMTECH/2011/Mech/WSP/1.0 8
+
+1.3.1(c). OP (Optocoupler input): (Not in Use)
+* 8 Potential-free inputs from 16 V to 150 Vdc
+
+**OP – 8 potential free inputs:**
+
+[Panel Layout Components]
+* N1 - N1
+* N2 - N2
+* OP - OP
+* RE - RE
+* MV - MV
+* SWKP AS 20 R - SWKP AS 20 R
+* ST - ST
+* CPU - CPU
+* RÜ - RÜ
+* GE 1 - GE 1
+* GE 2 - GE 2
+* SAB WABCO - SAB WABCO
+* 8888 - 8888
+* Display - Display
+* Test - Test
+* Clear - Clear
+* Door test - Door test
+* RS 232 - RS 232
+
+[Legend/Labels]
+* potential free inputs from 16 - 150 V
+* external monitoring of the door signal v5 (5/3 km/h)
+* external monitoring of the door signal v45 (50/45 km/h)
+* external monitoring of the electro magnetic rail brake signal v45 (50/45 km/h)
+* electromagnetic rail brake input „On”
+* pressure switches input
+
+From these inputs, only 8th input is used for monitoring of pressure switch & remaining 1-6 inputs remain unused.
+
+1.3.1(d). RE (Relay output):
+* 6 potential-free outputs of 16 V to 150 Vdc
+
+**RE – 6 potential free relay outputs:**
+
+[Panel Layout Components]
+* N1 - N1
+* N2 - N2
+* RE - RE
+* MV - MV
+* SWKP AS 20 R - SWKP AS 20 R
+* ST - ST
+* CPU - CPU
+* RÜ - RÜ
+* GE 1 - GE 1
+* GE 2 - GE 2
+* SAB WABCO - SAB WABCO
+* 8888 - 8888
+* Display - Display
+* Test - Test
+* Clear - Clear
+* Door test - Door test
+* RS 232 - RS 232
+
+[Legend/Labels]
+* potential free outputs from 16 - 150 V
+* door signal v5 (5/3 km/h)
+* door signal v45 (50/45 km/h)
+* WSP o.k.
+* electromagnetic rail brake signal v45 (50/45 km/h)
+* v200 high-low braking (200/160 km/h)
+* reserve
+* two semi-conductor outputs for special function like km-counter and pulse train
+
+Handbook on WSP System CAMTECH/GWL

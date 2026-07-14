@@ -13,6 +13,8 @@ venv/
 .env.*
 !.env.example
 !.env.local.example
+Chatbot keys.txt
+backend/data/embeddings.partial.npy
 
 # ── Editor / OS / local agent settings ──
 .claude/

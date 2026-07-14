@@ -1,0 +1,22 @@
+Maintenance Manual for FSDS and FDSS (Volume – 1)
+
+Stage - 2 of Smoke / Fire Detection
+
+4. When the smoke reaches the threshold of Stage – 2, Fire (1.6 ± 0.05 % obs/m, Delay – 45 seconds) in the Automatic Smoke / Fire Detection System, the below-mentioned indications will be observed in the coach and Driver Console in DTC.
+
+a. LCD indication on the Fire Panel.
+
+b. LED indication on the Aspirating Smoke Detection Unit.
+
+[Image labels: HOCHIKI, FIRE, FAULT, OK, FIRElink]
+
+c. The TCMS Driver Display Unit in the Driver Console/Desk in DTC will display the fire detection indication symbol in Red Color and the corresponding coach diagnostic message will be displayed.
+
+[Table/Display labels: UNIT1, UNIT2, UNIT5, UNIT6, Cab, VCB, Loop, Em Stop, M1 LC, ACM1, TCMS, M2 LC, ACM2, ACC, Fire-2 Detected, U1, DTC, PCU, 4127, U1, CCU, Holding Brake Disabled from DDU, Acknowledge, Zero Force]
+
+d. MIN 1 FD lamp indication light will be illuminated in the MCP Unit Display Panel of the Driver Console/Desk in DTC.
+
+[Image labels: ON, MIN1 FD/ACK]
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+Page 28 of 87

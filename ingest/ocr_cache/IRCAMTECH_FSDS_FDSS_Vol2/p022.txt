@@ -1,0 +1,26 @@
+Maintenance Manual for FSDS and FDSS (Volume – 2)
+
+**Brake Valve Application:** During fire condition (stage-3), the brake valve application will be activated, causing the brakes to be applied within the coach. Additionally, the flasher lights and hooter in the passenger area will be activated to provide alerts to the passengers.
+
+After duration of 55 seconds, when the train comes to a complete stop, an announcement is made to inform passengers about the safe disembarkation from the coaches.
+
+**Brake Valve Sub System:** The brake valve subsystem plays a critical role in the braking system of trains, ensuring safe and controlled deceleration or stopping of the train.
+
+3
+2
+1 4
+
+| SN | Item Description |
+| :--- | :--- |
+| 1 | Brake Application Valve |
+| 2 | Stainless Steel Pipe |
+| 3 | Straight Connector |
+| 4 | Isolating Cock |
+
+* The isolation cock is positioned in such a way that it indicates the brake valve is in active condition and connected to the panel system
+
+**Brake Valve - Active Condition (Open)**
+
+---
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+Page 22 of 64

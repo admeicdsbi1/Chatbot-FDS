@@ -1,0 +1,28 @@
+Maintenance Manual for FSDS and FDSS (Volume – 1)
+
+ANNEXURE - X
+
+N&S HOCHIKI - PCB LED INDICATION INFORMATION FOR TRAINSETS
+
+NS-HOCHIKI NS1060.01 ASD SYSTEM -PCB LED INDICATION INFORMATION FOR TRAIN-18 & TRAINSETS
+
+| Sl No. | PCB Type | LEDs Color | LEDs Indication | LEDs Indication Definition/Meaning | Fault Indications | Fault Indication Definition/Meaning |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | FIRE PANEL PCB | Green | System ON | This indication shows system is Power ON | Healthy condition | 1) The fire panel is receiving power and it's operational 2)The system is fully functional and ready to detect and respond to fires or alarms 3)All necessary voltage and currents are within acceptable limits 4)The panel is communicating correctly with all connected device such as sensor, detector and notification appliances |
+| 2 | | Yellow | Battery Fault | When Battery Fault Occurs ,LED ON | Healthy condition | 1) insufficient battery power. |
+| 3 | | Yellow | Mains Fail | When Mains Fail Occurs ,LED ON | Healthy condition | 1) insufficient power supply. 2)Due to insufficient Wire soldering. |
+| 4 | | Yellow | System Fault | NA (Not Applicable*) | | |
+| 5 | | Yellow | NAC Fault | When NAC Fault occurs, NAC fault LED ON | Healthy condition | 1) The EOL resistor is disconnected or open 2) Wiring issues (e.g. loose connections, damaged cables) 3) Component failure (e.g. capacitors, resistors) 4) Environmental factors (e.g. extreme temperature, humidity) 5) Faulty or damage notification devices (e.g. siren, strobes) |
+| 6 | | Yellow | Earth Fault | When Earth Fault Occurs, LED ON | Healthy condition | 1) Insulation breakdown. 2) Poor grounding. 3) Wires can short circuit by touching another electrical circuit. |
+| 7 | | Yellow | Comm. Fail | When Modbus Communication Fails LED blinks. | Healthy condition | 1) Faulty or damaged communications modules (e.g. RS485 earthnet) 2) Wiring issues (e.g. loose connections,damaged cables ) 3)Incorrect configuration or settings. 4) Hardware failure. 5)Electromagnetic interference (EMI) |
+| 8 | | Yellow | Common Bypass | If anything is Bypassed, ON | Healthy condition | 1)A sensor , detector or Zone has been bypassed or disabled 2)A maintenance or testing mode has been activated 3)A trouble or fault condition exist in the system |
+| 9 | | Yellow | Test Mode | When in Test Mode, LED ON | Healthy condition | The technician to allow testing in the system and verify the testing functionality of sensor, detector and notification appliance |
+| 10 | | Yellow | Silence | System has been silenced, ON | Healthy condition | The system has been manually silenced or reset |
+| 11 | | Yellow | Acknowledge | NA (Not Applicable*) | | |
+| 12 | | Yellow | Delayed Mode | NA (Not Applicable*) | | |
+| 13 | | Yellow | Pre Alarm | NA (Not Applicable*) | | |
+| 14 | | Yellow | Common Fault | When any Fault Occurs, ON | Healthy condition | 1)Wiring issues (e.g. loose connections, damaged cables) 2)Over voltage or under voltage conditions this fault can trigger various indicators on the fire panel . Fault LEDs . Alarm sounds . Error message shown on the Fire panel PCB display. . Loss of functionality |
+| 15 | | Yellow | Supervisory | NA (Not Applicable*) | | |
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+Page 85 of 87

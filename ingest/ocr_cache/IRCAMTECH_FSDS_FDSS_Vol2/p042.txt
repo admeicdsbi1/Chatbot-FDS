@@ -1,0 +1,50 @@
+Maintenance Manual for FSDS and FDSS (Volume – 2)
+
+### Schematic for Fire/Smoke Detection System (For Power Car)
+
+[Schematic Diagram Labels]
+* **1**: Main Control Module (pointing to the FIRE DETECTION SYSTEM panel)
+* **2**: SD (Smoke Detector) - GENSET-1
+* **3**: HD (Heat Detector) - GENSET-1
+* **4**: Linear Heat Detection Cable (pointing to GENSET AREA and LUGGAGE AREA)
+
+Other labels in the schematic:
+* SOUNDER BEACON IN CREW AREA
+* SOUNDER BEACON IN GUARD AREA
+* GENSET-1: SD, HD
+* GENSET-2: SD, HD
+* CREW AREA: SD
+* GUARD AREA: SD
+* GENSET AREA (with Linear Heat Detection Cable)
+* LUGGAGE AREA (with Linear Heat Detection Cable)
+* SD - SMOKE DETECTOR
+* HD - HEAT DETECTOR
+
+| SN | Part Name | Qty |
+| :--- | :--- | :--- |
+| 1 | Main Control Module | 1 |
+| 2 | Smoke Detector | 04 |
+| 3 | Heat Detector | 02 |
+| 4 | Linear Heat Detection Cable | 50m Approx. |
+
+---
+
+* **Fire Detection System** (Front panel view showing "FIRE DETECTION SYSTEM" label, status LEDs, and sounder/beacon)
+* **Fire Detection System (Inside)** (Internal wiring and PCB view)
+
+---
+
+### Main Control Module
+
+[Main Control Module Component Labels]
+* **1**: Enclosure / Housing
+* **2**: Main PCB / Controller Board
+* **3**: Cooling Fan
+* **4**: Sounder Beacon (External)
+* **5**: Terminal Blocks / Power Supply Unit
+* **6**: Digital Display / Counter Module
+
+---
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0  
+Page 42 of 64

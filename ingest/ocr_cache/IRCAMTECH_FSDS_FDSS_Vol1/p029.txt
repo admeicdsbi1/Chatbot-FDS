@@ -1,0 +1,25 @@
+Maintenance Manual for FSDS and FDSS (Volume – 1)
+
+e. The FDS buzzer will be activated in the Hooter/Buzzer Panel of the Driver Console/Desk in DTC.
+
+[Image: Medha logo]
+ELECTRONIC HOOTER
+ON
+VENTAL
+FDS BUZZER
+
+f. The buzzer in the passenger area will not be activated unless it is enabled by the loco pilot.
+
+[Image: Fire alarm unit]
+FIRE
+
+g. The buzzer in the passenger area can be enabled by the loco pilot by Switching-On the FDS ENABLE switch at the MCP Unit Display Panel of the Driver Console/Desk in DTC.
+
+[Image: Control panel]
+ON OFF ON
+GHT FDS ENABLE MIN1
+
+Note: When an aspiration sampling point is cleared of obstruction due to vandalism or dust/dirt accumulation, check the smoke detection for the cleared sampling point to ensure its proper functioning.
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+Page 29 of 87

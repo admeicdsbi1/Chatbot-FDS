@@ -1,0 +1,47 @@
+WSP system for LHB coaches
+
+WSP Fault Codes
+
+| Display | Fault | Source | Connected with: |
+| :--- | :--- | :--- | :--- |
+| 02 | Digital I/Os | Board EB01A | - |
+| 03 | Central processing unit | Board MB04A | - |
+| 10 | Time-out | Board MB04A | Wheelset 1 |
+| 11 | Short-circuit/open circuit | Speed sensor 1/feeder | |
+| 12 | Signal error | Speed sensor 1 | |
+| 13 | Short-circuit | Valve 1/feeder | |
+| 14 | Open circuit | Valve 1/feeder | |
+| 15 | Safety monitor defective (test run) | Board MB04A | |
+| 20 | Time-out | Board MB04A | Wheelset 2 |
+| 21 | Short-circuit/open circuit | Speed sensor 2/feeder | |
+| 22 | Signal error | Speed sensor 2 | |
+| 23 | Short-circuit | Valve 2/feeder | |
+| 24 | Open circuit | Valve 2/feeder | |
+| 25 | Safety monitor defective (test run) | Board MB04A | |
+| 30 | Time-out | Board MB04A | Wheelset 3 |
+| 31 | Short-circuit/open circuit | Speed sensor 3/feeder | |
+| 32 | Signal error | Speed sensor 3 | |
+| 33 | Short-circuit | Valve 3/feeder | |
+| 34 | Open circuit | Valve 3/feeder | |
+| 35 | Safety monitor defective (test run) | Board MB04A | |
+| 40 | Time-out | Board MB04A | Wheelset 4 |
+| 41 | Short-circuit/open circuit | Speed sensor 4/feeder | |
+| 42 | Signal error | Speed sensor 4 | |
+| 43 | Short-circuit | Valve 4/feeder | |
+| 44 | Open circuit | Valve 4/feeder | |
+| 45 | Safety monitor defective (test run) | Board MB04A | |
+| 70 | Speed signal fault, door control | | |
+| 71 | Speed signal fault, electromag. track brake | Board EB01A | |
+| 72 | Fault at one wheelset | | |
+| 73 | Fault at several wheelsets | | |
+| 74 | Safety monitor fault | Board MB04A | |
+| C8 | Activation fault, cumulative fault signalling | Board EB01A | |
+| S2 | Connector defect, board EB01A | Board EB01A | |
+| S3 | Connector defect, board MB04A | Board MB04A | |
+| 8888 | Display test | | |
+| 89 | Test running | | |
+| 95 | Volatile faults | | |
+| 99 | System good | | |
+
+Knorr-Bremse Group
+Dateiname hier eintragen | 38

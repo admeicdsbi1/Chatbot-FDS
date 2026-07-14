@@ -1,0 +1,23 @@
+Maintenance Manual for FSDS and FDSS (Volume – 1)
+
+Outer Cover Removal Tool
+
+1. Turn over the device (Fig. 1).
+
+Fig.1
+
+2. Place the removal tool over the base of the device so that three of the cut-outs sit over the metal terminals (Fig. 2).
+
+Fig.2
+
+3. Push down on the handle of the Removal Tool to release all four clips (Fig. 3). Now you can pull the two halves of the device apart, exposing the smoke chamber cover (Fig. 4).
+
+Fig.3
+Fig.4
+
+4. By twisting the Removal Tool anti-clockwise (Fig. 5), the Removal Tool can be now carefully lifted off from the device.
+
+Fig.5
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+Page 35 of 87

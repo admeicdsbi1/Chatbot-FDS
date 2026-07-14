@@ -1,0 +1,45 @@
+SANROK ENTERPRISES
+ISO 9001:2015 ACCREDITED
+SE/FDS/RDSO/GK
+Date: 23.09.2024
+
+ED- Carrier -II
+RDSO
+Lucknow
+
+Sub : Suitability of Our make in Fire Detection System with 2A DC MCB.
+
+Reference : 1. Your office letter MC/ACF/Fire Detection/AC Dt 03.09.2024
+2. Our letter SE/FDS/RDSO/GK Dt 03.09.2024
+3. Your office letter MC/ACF/Fire Detection/AC Dt 10.09.2024
+4. Our letter SE/FDS/RDSO/Gk Dt 11.09.2024
+
+Dear Sir,
+
+This is with reference to the above, as stated in your previous communications regarding the subject, while MCB's provided with FDS systems supplied by us are adequate, however we have developed and tested a Limiter Module as desired, which will enable the use of our system with 2 A DC MCB.
+
+Please find below the Budgetary Quote for Making our system suitable for working with a 2 A DC MCB (C curve) is as below.
+
+### Budgetary Quote
+
+| Description | Price. |
+| :--- | :--- |
+| Conversion of FDS system to comply to Modified Clause 1.7 (a) of RDSO specifications RDSO/2008/CG-04 Rev-6 Amd -1 of the FDS systems procured by PU’s and Zonal Railways under previous revisions of RDSO/2008/CG-04 The above includes providing the following: - 1. Limiter Module 2. 2A 2Pole DC MCB (C Curve) | Rs. 6300.00 (Six thousand three hundred only) |
+
+**Terms and Conditions: -**
+
+1. GST – 18 % on the above quoted cost.
+
+The Higher Amperage MCB provided by is will be taken back by us.
+
+Yours faithfully,
+
+For SANROK ENTERPRISES,
+(Signature)
+Girish Kathuria
+(COO)
+
+Head Office : E-14, Greater Kailash Enclave-1, New Delhi-110 048, Telefax : +91-11-41731413
+Corporate Office : A-9/37, Ist Floor, Vasant Vihar, New Delhi - 110057. Telefax : +91-11-40562794
+Unit-I : FF-II, SCO-35, Distt. Shopping Centre, Sec.-16 Mkt., Faridabad-121002 (Hr.) Tel.: 0129-4071553, 4179075, Fax : 0129-4071554
+Unit-II : Behind Bharat Dharam Kanta, Krishna Colony, Ground Floor, Opp. Plot No. 81, Sec.-25, Faridabad-121004 (Hr.) Tel. : 0129-4315197

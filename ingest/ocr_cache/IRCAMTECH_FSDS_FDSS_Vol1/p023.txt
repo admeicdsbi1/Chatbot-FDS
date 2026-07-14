@@ -1,0 +1,38 @@
+N&S SOLUTIONS PVT LTD No:37-38 Reliable Residency, HSR Layout, Harlur, Bangalore-560102 Document number: NSSPT/PDE/21-22/QAP/IO/002 Date: 18-12-2021
+TITLE-ASPIRATING TYPE FIRE/SMOKE DETECTION WITH ALARM SYSTEM TO RDSO SPEC-RDSO/2008/CG-04/REV-05 Rev Date: 04.02.2023 Rev No: 05
+External Terminal Connection and Wiring Details Outside The Control Panel for DTC COACH (NO TRAINLINE INPUT)
+
+Maintenance Manual for FSDS and FDSS (Volume – 1)
+4.1.1.6. External Terminal Connection & Wiring Details Outside Control Panel – DTC
+
+| Sl. NO | Source | | | Destination | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| | Terminal Connection/Components | Terminal/Pin No | Signal Name | Terminal Connection/Components | Number on terminals | Signal Name | Wiring Details |
+| 1 | Control Panel to Flasher Hooter 1 | 21 | FH1(+) (RED) | Direct Termination through lugs | 43 | FH1(+) (RED) | 2C X 1.0 mm 2 Twisted Pair EBEAM Cable Length As Required |
+| | | 22 | FH1(-) (BLACK) | | 44 | FH1(-) (BLACK) | 2C X 1.0 mm 2 Twisted Pair EBEAM Cable Length As Required |
+| 2 | Control Panel to Flasher Hooter2 | 21 | FH2(+) (RED) | Direct Termination through lugs | 45 | FH2(+) (RED) | 2C X 1.0 mm 2 Twisted Pair EBEAM Cable Length As Required |
+| | | 22 | FH2(-) (BLACK) | | 46 | FH2(-) (BLACK) | 2C X 1.0 mm 2 Twisted Pair EBEAM Cable Length As Required |
+| 3 | Control Panel to Audio Announcement | 3 | SP(+) (Red) | Direct Termination through lugs | 47 | SP(+) (Red) | 2C X 1.0 mm 2 Twisted Pair EBEAM Cable Length As Required |
+| | | 4 | SP(-) (Yellow) | | 48 | SP(-) (Yellow) | 2C X 1.0 mm 2 Twisted Pair EBEAM Cable Length As Required |
+| 4 | Inlet power Supply from Coach | LNE | LNE | LNE of Panel | L | L(RED) | 2.5mm2 2C+1 Twisted Pair EBEAM Cable |
+| | | | | | N | N(BLACK) | 2.5mm2 2C+1 Twisted Pair EBEAM Cable |
+| | | | | | E | E(GREEN) | 2.5mm2 2C+1 Twisted Pair EBEAM Cable |
+| 5 | RS485 MODBUS | D+ | RS1 | TCMS | | | |
+| | | D- | RS2 | | | | |
+| | | GND | RS3 | | | | |
+| 6 | Control Panel Relay to TCMS | | | | | | |
+| 6A | RL1 | 35 | ALT 1 | | | | 2C X 1.0 mm2 Twisted Pair EBEAM Cable Length As Required |
+| 6B | RL2 | 36 | ALT2 | | | | 2C X 1.0 mm 2 Twisted Pair EBEAM Cable Length As Required |
+| 6C | RL3 | 37 | ACT1 | | | | 2C X 1.0 mm 2 Twisted Pair EBEAM Cable Length As Required |
+| | | 38 | ACT2 | | | | 2C X 1.0 mm 2 Twisted Pair EBEAM Cable Length As Required |
+| 6D | RL4 | 39 | FR1 | | | | 2C X 1.0 mm 2 Twisted Pair EBEAM Cable Length As Required |
+| | | 40 | FR2 | | | | 2C X 1.0 mm 2 Twisted Pair EBEAM Cable Length As Required |
+| | | 41 | FR3 | | | | 2C X 1.0 mm 2 Twisted Pair EBEAM Cable Length As Required |
+| | | 42 | FR4 | | | | 2C X 1.0 mm 2 Twisted Pair EBEAM Cable Length As Required |
+| 7 | SIL-2 Smoke Sensor For ECC Panel | 29 | SS1 | Direct Termination through lugs | 49 | SS1(RED) | 2C X 1.0 mm2 Twisted Pair EBEAM Cable Length As Required |
+| | | 30 | SS2 | | 50 | SS2(BLACK) | 2C X 1.0 mm2 Twisted Pair EBEAM Cable Length As Required |
+| 8 | SIL-2 Smoke Sensor for CRV Panel | 31 | SS3 | Direct Termination through lugs | 51 | SS3(RED) | 2C X 1.0 mm2 Twisted Pair EBEAM Cable Length As Required |
+| | | 32 | SS4 | | 52 | SS4(BLACK) | 2C X 1.0 mm2 Twisted Pair EBEAM Cable Length As Required |
+
+PREPARED BY: Projects & Design Engineer- CHECKED BY: K S S K
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0 Page 23 of 87

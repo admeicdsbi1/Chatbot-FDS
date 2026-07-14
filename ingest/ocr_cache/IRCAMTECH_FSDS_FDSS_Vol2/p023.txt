@@ -1,0 +1,29 @@
+Maintenance Manual for FSDS and FDSS (Volume – 2)
+
+* When the isolation cock is rotated 90 degrees, it will isolate the brake application with the coach. The following pictorial view illustrates this action
+
+![](https://i.imgur.com/example1.jpg)
+**Brake Valve - Isolated Condition**
+
+### 4.1.2. Location of the Sampling Points in the Coach
+
+| Table 3: Location of Sampling Points |
+| :---: | :--- |
+| **SN** | **Location** |
+| 1 | Lavatory (All AC Coaches) |
+| 2 | Doorway (All AC Coaches) |
+| 3 | Passenger Area (All AC Coaches) |
+| 4 | Electrical cabinet (LWSCZAC -AC CHAIR CAR & LWFCZAC - EXECUTIVE CHAIR CAR) |
+
+![](https://i.imgur.com/example2.jpg)
+Sampling Point in Lavatory
+
+![](https://i.imgur.com/example3.jpg)
+Sampling Point in Doorway
+
+![](https://i.imgur.com/example4.jpg)
+Sampling Point in Passenger Area
+
+---
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+Page 23 of 64

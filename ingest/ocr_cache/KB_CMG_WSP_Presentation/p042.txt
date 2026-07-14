@@ -1,0 +1,12 @@
+WSP system for LHB coaches
+
+Speed Sensor
+
+Plug to be opened to Check gap
+between phonic wheel and
+senor (Specified gap 0.9 mm to 1.4 mm)
+
+1-45
+
+Knorr-Bremse Group
+Dateiname hier eintragen | 42

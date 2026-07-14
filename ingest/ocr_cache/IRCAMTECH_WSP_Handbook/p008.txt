@@ -1,0 +1,12 @@
+No.IRCAMTECH/2011/Mech/WSP/1.0 3
+
+1.2.1 Speed Sensor:
+The speed sensors are fixed on one end of the axle box cover with the help of two bolts. During fitment the gap between sensor probe & phonic wheel plays vital role. The gap can be adjusted with the help of shims & measured through the peephole in axle box cover. The other end of the speed sensor i.e. cable is connected to junction box in car.
+The sensor system provided on coaches is based on non contact type of counting of RPM. This is ensured with the help of phonic wheel & sensor probe fitment with some air gap.
+The main function of speed sensor is to pickup the signals with the rotation of phonic wheel mounted on axle end & convey to microprocessor.
+
+The air gap between the rotating gear (Phonic wheel) & speed sensors probe should be
+Knorr Bremse = 0.4 to 1.4 mm
+Faiveley = 1.5 ± 0.5 mm
+
+Handbook on WSP System CAMTECH/GWL

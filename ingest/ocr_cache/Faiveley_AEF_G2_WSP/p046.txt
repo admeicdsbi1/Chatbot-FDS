@@ -1,0 +1,26 @@
+| Fault code | Code after automatic reset¹ | Acronyms | Severity | Priority | Fault Description | INFLUENCE | Action |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 0035 | 6035 | E_DV3_TOUT | MAJOR | 3 | | is inhibited till the reset. Risk of axle lock. | • there is not failure on the corresponding speed sensor; This fault is TEMPORARY: it is removed automatically in standstill or after maintenance operation. |
+| 0045 | 6045 | E_DV4_TOUT | MAJOR | 3 | | | |
+| 0016 | 6016 | E_DV1_FTOUT | MAJOR | 2 | Failure of dump valve hardware watchdog circuitry | The hardware watchdog is out of order. In case of slide the brake effort of the corresponding axle cannot be regulated. The control of the faulty channel is inhibited till the reset of the failure. Risk of axle lock. | Verify the following items: • there is not failure on the corresponding dump valve; • verify the corresponding WBI board. This fault is PERMANENT. It can be erased manually after maintenance intervention removing the fault cause. |
+| 0026 | 6026 | E_DV2_FTOUT | MAJOR | 2 | | | |
+| 0036 | 6036 | E_DV3_FTOUT | MAJOR | 2 | | | |
+| 0046 | 6046 | E_DV4_FTOUT | MAJOR | 2 | | | |
+| E017 | 6017 | E_DEVICE_ON | MINOR | 1 | Failure on the output DEVICE_ON | The information DEVICE_ON is not available: SC or internal failure. | Verify the following items: • the load is not in SC; • wiring connection of DO_1 board; • verify the DO_1 board. This fault is TEMPORARY: it is removed • automatically if the fault cause disappears • or after maintenance operation in standstill. |
+| E018 | 6018 | E_SPEED_5 | MINOR | 1 | Failure on the output V5 | The information V5 is not available: SC or internal failure. | |
+| E019 | 6019 | E_SPEED_30 | MINOR | 1 | Failure on the output V30 | The information V30 is not available: SC or internal failure. | |
+| E020 | 6020 | E_SPEED_45 | MINOR | 1 | Failure on the output V45 | The information V45 is not available: SC or internal failure. | |
+| E021 | 6021 | E_ZERO_SPEED | MINOR | 1 | Failure on the output ZERO SPEED | The information ZERO SPEED is not available: SC or internal failure. | |
+| E022 | 6022 | E_WSP_FAILURE | MINOR | 1 | Failure on the output WSP FAILURE | The information WSP FAILURE is not available: SC or internal failure. | |
+| E023 | 6023 | E_SPEED_5_1 | MINOR | 1 | Failure on the output V5_1 | The information V5_1 is not available: SC or internal failure. | |
+| E024 | 6024 | E_SPEED_5_2 | MINOR | 1 | Failure on the output V5_2 | The information V5_2 is not available: SC or internal failure. | |
+
+FT0027800-003-E00MUM_A01.
+Date/Date: 26/02/19 - Issue/Revision: A01
+FAIVELEY TRANSPORT RAIL TECHNOLOGIES INDIA LTD.
+This document contains legally privileged, confidential, proprietary or
+otherwise private information. Any unauthorized use, reproduction, dissemination,
+distribution or other disclosure of the contents is strictly prohibited
+page 46/54
+Wabtec
+CORPORATION

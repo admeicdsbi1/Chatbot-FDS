@@ -1,0 +1,19 @@
+Maintenance Manual for FSDS and FDSS (Volume – 1)
+
+[Images: Lavatory, SBC, HV Panel, LV Panel]
+
+II. Vande Bharat Express
+
+| Table 7 – Location of Aerosol Generator Installed in Vande Bharat Express |
+| :--- |
+| **S.N** | **Coach** | **Location** | **Aerosol Generator Capacity** | **Quantity** |
+| 1 | All Coaches | Lavatory | 500 gm | 1 |
+| 2 | DTC | CRW Panel | 100 gm | 2 |
+| 3 | RMPU Panel | 100 gm | 1 |
+| 4 | MC | ECC | 100 gm | 2 |
+| 5 | LTC | 100 gm | 4 ( Two in each LTC) |
+| 6 | NDTC | ECC | 100 gm | 2 |
+| 7 | TC | ECC | 100 gm | 2 |
+| 8 | ACU | 100 gm | 2 |
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0 Page 48 of 87

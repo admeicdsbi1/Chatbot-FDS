@@ -1,0 +1,34 @@
+Maintenance Manual for FSDS and FDSS (Volume – 2)
+
+### SCHEMATIC LAYOUT FOR AUTOMATIC FIRE DETECTION WITH ALARM FOR AC COACHES (STAND ALONE FORMATION)
+
+#### Diagram Labels & Components:
+
+*   **1** - [Control Unit / Panel]
+*   **2** - [Cable / Conduit to 110V DC]
+*   **3** - [Component near 24V DC input]
+*   **4** - [Sensor / Detector branch connection]
+*   **5** - [Sensor / Detector assembly]
+    *   **5.1**
+    *   **5.2**
+    *   **5.3**
+    *   **5.4**
+    *   **5.5**
+*   **7** - [Alarm / Flasher Unit (Red)]
+*   **8** - [Alarm / Flasher Unit (Red)]
+*   **10** - [End of line / termination component]
+*   **11** - [Filter / Inline component]
+*   **12** - [Valve / Actuator assembly connected to Exhaust line]
+*   **13** - [Pressure switch / Valve component connected to BP Line]
+
+#### Electrical Inputs:
+*   **24V DC**
+*   **110V DC**
+
+#### Pneumatic Lines:
+*   **BP Line** (Brake Pipe Line)
+*   **Exhaust line**
+
+---
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+Page 12 of 64

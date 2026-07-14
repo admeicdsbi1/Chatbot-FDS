@@ -1,0 +1,71 @@
+4.2 Architecture
+
+An overview of the AEF G2 WSP control system is shown in Figure 1
+
+[Diagram: WSP System Architecture]
+- WSPCU (Internal bus)
+- Power Supply
+- WBI 1
+- WBI 2
+- DO_1
+- AO
+- CPU
+- 110V
+- 24V
+- STAND-BY
+- Pressure switch on feed pipe
+- RS232
+- Reference speed
+- Tachimetry
+- Device on
+- WSP Failure
+- Speed threshold V5
+- Speed threshold V5_1
+- Speed threshold V5_2
+- Speed threshold V45
+- Speed threshold ZERO SPEED
+- Speed threshold V30
+- Dump valve
+- Speed sensor
+- Bogie 1
+- Dump valve
+- Speed sensor
+- Bogie 2
+- Dump valve
+- Speed sensor
+- Dump valve
+- Speed sensor
+
+Figure 1: WSP System Architecture
+
+4.3 Construction
+
+The AEF G2 WSP control unit is composed of a set of standard GEMINI2 electronic boards connected at the rear by a motherboard, and at the front to the customer low voltage side.
+
+The Electronics rack contains the electronic devices dedicated to wheel slide protection and additional functions. The link between the car wiring and the electronic unit is realized by six cable connectors which are located on the frontside of the case. A further plug, RS232, enables computer access for maintenance, service and system diagnosis.
+
+[Diagram: WSP Control Unit Configuration]
+- V1
+- V2
+- V3
+- POWER SUPPLY G2+VD
+- WBI 1
+- WBI 2
+- DO 1
+- AO 1
+- CPU2F
+- FT code
+- S/N XXXX
+- DATE MM/YYYY
+
+Figure 2 : WSP Control Unit Configuration
+
+FT0027800-003-E00MUM_A01.
+Date/Date: 26/02/19 - Issue/Revision: A01
+FAIVELEY TRANSPORT RAIL TECHNOLOGIES INDIA LTD.
+This document contains legally privileged, confidential, proprietary or
+otherwise private information. Any unauthorized use, reproduction, dissemination,
+distribution or other disclosure of the contents is strictly prohibited
+page 11/54
+Wabtec
+CORPORATION

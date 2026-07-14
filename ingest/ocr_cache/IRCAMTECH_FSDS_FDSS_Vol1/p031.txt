@@ -1,0 +1,32 @@
+Maintenance Manual for FSDS and FDSS (Volume – 1)
+4.1.2.4. Replacement of Dust Separator / Filter of Aspirating Smoke Detection Unit
+
+The dust separator condition can be checked using the Dust Separator Test in the Miscellaneous Tab of the remote software ‘Detector settings’ screen which gives a percentage reading of dust separator efficiency. When this level drops to 80% the detector will signal a fault and the dust separator will need replacing.
+
+Dust Separator / Filter Replacement
+1. Make sure that the power supply to the Automatic Smoke / Fire Detection System is off.
+2. To replace the filter, remove the front cover of Aspirating Smoke Detection Unit by removing the cover fixing screws.
+
+| No. | Description | No. | Description |
+| :--- | :--- | :--- | :--- |
+| 1 | Front Cover | 2 | Cover Fixing Screws |
+
+3. Pull the filter out from the main unit.
+
+[Image labels]
+- HOCHIKI
+- FIRE
+- FAULT
+- OK
+- FIRElink
+- Direction of flow
+- DIRECTION OF FLOW
+- LASER CLASS 1 PRODUCT
+
+| No. | Description | No. | Description |
+| :--- | :--- | :--- | :--- |
+| 1 | Sampling Pipe | 3 | Dust Separator / Filter |
+| 2 | Aspirating Smoke Detection Unit | | |
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+Page 31 of 87

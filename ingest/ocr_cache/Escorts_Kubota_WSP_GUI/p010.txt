@@ -1,0 +1,39 @@
+WSP GUI APPLICATION
+
+Escorts Kubota Limited
+
+* The Event/Fault History Data formatting.
+
+Event/fault description
+
+WSP LOG HISTORY
+
+| Report Date | 04-08-2024 | | | Report Time | 17:24 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| User Name | | | | Coach No. | 45678 |
+
+| ABBREVIATION | MONTH | DAY | HOUR | MINUTE | SECOND |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| H | | | | | |
+| Speed sensor1 (TG1) (broken/ Open) | 1 | 1 | 2 | 26 | 1 |
+| SL1 long (Dump Valve activity) | 1 | 1 | 2 | 20 | 1 |
+| SL1 long (Dump Valve activity) | 1 | 1 | 2 | 19 | 58 |
+| SL1 long (Dump Valve activity) | 1 | 1 | 2 | 19 | 51 |
+| SL1 long (Dump Valve activity) | 1 | 1 | 2 | 19 | 48 |
+| SL1 long (Dump Valve activity) | 1 | 1 | 2 | 19 | 41 |
+| SL1 long (Dump Valve activity) | 1 | 1 | 2 | 19 | 38 |
+| SL1 long (Dump Valve activity) | 1 | 1 | 2 | 19 | 31 |
+| SL1 long (Dump Valve activity) | 1 | 1 | 2 | 19 | 28 |
+| SL1 long (Dump Valve activity) | 1 | 1 | 2 | 19 | 21 |
+| SL1 long (Dump Valve activity) | 1 | 1 | 2 | 19 | 18 |
+| SL4 Long (Dump Valve activity) | 1 | 1 | 2 | 16 | 32 |
+| SL3 Long (Dump Valve activity) | 1 | 1 | 2 | 16 | 32 |
+| SL2 Long (Dump Valve activity) | 1 | 1 | 2 | 16 | 32 |
+| SL4 Long (Dump Valve activity) | 1 | 1 | 2 | 16 | 30 |
+| SL3 Long (Dump Valve activity) | 1 | 1 | 2 | 16 | 30 |
+| SL2 Long (Dump Valve activity) | 1 | 1 | 2 | 16 | 30 |
+| SL1 long (Dump Valve activity) | 1 | 1 | 2 | 16 | 28 |
+
+Classification | ESCORTS-CONFIDENTIAL
+Classification | ESCORTS KUBOTA-CONFIDENTIAL
+10

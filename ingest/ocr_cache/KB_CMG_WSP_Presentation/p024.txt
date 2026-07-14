@@ -1,0 +1,64 @@
+WSP system for LHB coaches
+
+Static and Dynamic Trials
+
+Graphs during dynamic trials on Power Car with Dump valve activity
+
+G_V1
+G_V2
+G_V3
+G_V4
+GPSspeed.
+
+[ m ]
+100
+90
+80
+70
+60
+50
+40
+30
+20
+10
+
+G_pAxle1
+G_pAxle2
+G_pAxle3
+G_pAxle4
+
+[ bar ]
+2.00
+
+G_BV1
+G_BV2
+G_BV3
+G_BV4
+G_EV1
+G_EV2
+G_EV3
+G_EV4
+
+bin.
+
+G_Brakepipe
+bar
+5.10
+-0.10
+
+100.0
+105.0
+110.0
+115.0
+120.0
+125.0
+130.0
+135.0
+140.0
+145.0
+150.0
+155.0
+time [s]
+
+Knorr-Bremse Group
+Dateiname hier eintragen | 24

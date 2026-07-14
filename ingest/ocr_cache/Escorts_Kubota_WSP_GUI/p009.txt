@@ -1,0 +1,48 @@
+WSP GUI APPLICATION
+
+* The Event/Fault log Data formatting.
+
+Start date and time of Event/fault occurring
+No. of Event/faults occurred
+Event/fault description
+
+e.g.- Reg axle 1 event occurred 75 times as per given start date to end date.
+
+WSP FAULT LOG
+
+| | |
+| :--- | :--- |
+| Report Date | 04-11-2024 |
+| User Name | |
+| Start Date | |
+| End Date | |
+| Total Distance Travelled(km) | |
+
+| Report Time | 16:50 |
+| :--- | :--- |
+| Coach No. | 1111 |
+| Start Time | |
+| End Time | |
+
+| Events/Faults Description | COUNTER | START DATE | START TIME | END DATE | END TIME |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Data valid | from/to | 04.01. | 02:11 | 11.04. | 16:52 |
+| Reg axle 1 (Dump Valve activity) | 75 | 11.04. | 16:39 | 11.04. | 16:49 |
+| Reg axle 2 (Dump Valve activity) | 369 | 11.04. | 16:39 | 11.04. | 16:49 |
+| Reg axle 3 (Dump Valve activity) | 369 | 11.04. | 16:39 | 11.04. | 16:49 |
+| Reg axle 4 (Dump Valve activity) | 389 | 11.04. | 16:38 | 11.04. | 16:49 |
+| SL1 long (Dump Valve activity) | 6 | 11.04. | 16:39 | 11.04. | 16:49 |
+| SL2 long (Dump Valve activity) | 35 | 11.04. | 16:39 | 11.04. | 16:49 |
+| SL3 long (Dump Valve activity) | 35 | 11.04. | 16:39 | 11.04. | 16:49 |
+| SL4 long (Dump Valve activity) | 49 | 11.04. | 16:43 | 11.04. | 16:49 |
+| Speed sensor1 (TG1) NO signal | 0 | | | | |
+| Speed sensor1 (TG1) short | 0 | | | | |
+| Speed sensor1 (TG1) (broken/ Open) | 0 | | | | |
+| Speed sensor2 (TG2) NO signal | 0 | | | | |
+| Speed sensor2 (TG2) short | 0 | | | | |
+| Speed sensor2 (TG2) (broken/ Open) | 0 | | | | |
+| Speed sensor3 (TG3) NO signal | 0 | | | | |
+
+Classification | ESCORTS-CONFIDENTIAL
+Classification | ESCORTS KUBOTA-CONFIDENTIAL
+9

@@ -1,0 +1,16 @@
+WSP system for LHB coaches
+
+WSP system on board the LHB coach
+
+Display
+MB 04 Card
+EB 01 Card
+PB 03 Card
+S1 Display Button
+S2 Test Button
+S3 Clear Button
+
+Control Unit
+
+Knorr-Bremse Group
+Dateiname hier eintragen | 25

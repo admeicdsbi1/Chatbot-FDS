@@ -1,0 +1,17 @@
+WSP system for LHB coaches
+
+Anti-skid valves
+
+The anti-skid valve works as an actuator in the wheel slide control loop, and is activated by the control unit.
+
+The anti-skid valve is designed to reduce the brake cylinder pressure step by step whenever required.
+
+Anti Skid Valve (Dump Valve)
+
+KNORR BREMSE
+GV12 - ESRA
+II 32819 / 024
+24VDC 7W
+
+Knorr-Bremse Group
+Dateiname hier eintragen | 32

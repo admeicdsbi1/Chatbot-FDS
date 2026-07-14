@@ -32,6 +32,13 @@ _OVERRIDE = os.environ.get("GEMINI_EMBED_MODEL")
 BATCH_SIZE = int(os.environ.get("GEMINI_EMBED_BATCH", "16"))
 INTER_BATCH_SLEEP = float(os.environ.get("GEMINI_EMBED_SLEEP", "1.0"))
 
+# Reduced output dimensionality (MRL truncation). 768 keeps the committed
+# embeddings.npy small and the RAM footprint tiny. MUST be identical for
+# document embedding (generate_embeddings.py) and query embedding at runtime,
+# or rag.init_kb's probe_dim() check will judge the committed cache stale and
+# trigger a quota-burning background rebuild on every Render cold start.
+EMBED_DIM = int(os.environ.get("GEMINI_EMBED_DIM", "768"))
+
 _resolved_model = None        # cached resolved model name (no "models/" prefix)
 _batch_supported = True       # flipped off if batchEmbedContents 404s
 
@@ -92,6 +99,8 @@ def embed_query(text, task_type="RETRIEVAL_QUERY"):
         "content": {"parts": [{"text": text}]},
         "taskType": task_type,
     }
+    if EMBED_DIM:
+        payload["outputDimensionality"] = EMBED_DIM
     try:
         r = requests.post(f"{_BASE}/{model}:embedContent",
                           params={"key": GEMINI_API_KEY}, json=payload, timeout=30)
@@ -108,12 +117,14 @@ def embed_query(text, task_type="RETRIEVAL_QUERY"):
 def _embed_batch_request(model, batch, task_type):
     """One batchEmbedContents call → list of normalized vectors. Returns None on 404."""
     global _batch_supported
+    req_extra = {"outputDimensionality": EMBED_DIM} if EMBED_DIM else {}
     payload = {
         "requests": [
             {
                 "model": f"models/{model}",
                 "content": {"parts": [{"text": t or " "}]},
                 "taskType": task_type,
+                **req_extra,
             }
             for t in batch
         ]

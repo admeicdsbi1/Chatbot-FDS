@@ -1,0 +1,98 @@
+WSP system for LHB coaches
+
+[Logo: UIC]
+
+UNION INTERNATIONALE DES CHEMINS DE FER
+INTERNATIONALER EISENBAHNVERBAND
+INTERNATIONAL UNION OF RAILWAYS
+
+UIC - CERTIFICATE
+Number / Nummer / Numéro: B-003/2009-02
+
+In accordance with UIC-conformity-assessment in December 2005 becomes for the vehicle component:
+Gemäß UIC-Konformitätsbewertung vom Dezember 2005 wird bestätigt, dass die Fahrzeugkomponente:
+Selon la procédure UIC de l'évaluation de la conformité de décembre 2005, il est confirmé que le composant de véhicule:
+
+Wheel slip protection device / Gleitschutzgerät / anti-enrayeur:
+Knorr MGS 2
+
+for application in coaches, locomotives and EMU/DMU up to a maximum speed of 405 km/h
+für Verwendung in Reisezugwagen, Lokomotiven und Triebzügen bis zur Höchstgeschwindigkeit von 405 km/h
+pour utilisation dans voitures, locomotives et automoteurs jusqu'au vitesse maximale de 405 km/h
+
+the company / der Firma / de la société
+KNORR-BREMSE Systeme für Schienenfahrzeuge GmbH
+Moosacher Str. 80
+D - 80809 München, Deutschland
+
+corresponds to the requests of the set of rules named in the appendix 1 point 1.
+den Anforderungen des in der Anlage 1, Punkt 1, genannten Regelwerkes entspricht.
+satisfait aux exigences définies dans l'Annexe 1 point 1.
+
+The technical documents current for this Certification are stated in Appendix 1 point 2.
+Die für diese Zertifizierung geltenden technischen Dokumente sind in der Anlage 1, Punkt 2 angegeben.
+Les documents techniques applicables à cette certification sont repris à l'Annexe 1 point 2.
+
+UIC
+General Directorate / Generaldirektion / Direction Générale
+Department Research & Technology
+Abteilung Technik & Forschung
+Sector Expert Team: 7
+16, rue Jean Rey
+F-75015 Paris
+
+Paris, 4 February 2009
+
+[Signature]
+Frank Minde
+Chairman SET 7
+
+[Signature]
+Gabriele Maffei
+Director Research & Technology
+
+***
+
+UIC-Certificate Nr: B-003/2009-02
+
+1.) UIC confirms that this vehicle component defined above corresponds to the requirements of the set of rules named: /
+Die UIC bestätigt, dass die umseitig zitierte Fahrzeugkomponente den Anforderungen der unten genannten Regelwerke
+entspricht: / L'UIC confirme que le composant de véhicule défini ci-dessus est conforme aux exigences définies dans la
+réglementation:
+* UIC Leaflet 541-05, 2nd edition August 2005
+UIC-Merkblatt 541-05, 2. Ausgabe, August 2005
+Fiche UIC 541-05, 2ème édition, août 2005
+
+2.) The technical documents applicable to this Certification are:
+Die für diese Zertifizierung geltenden technischen Dokumente sind:
+Les documents techniques applicables à cette certification sont les suivants:
+* Request of Knorr-Bremse from: / Antrag der Fa. Knorr-Bremse vom: / Demande de la société Knorr-Bremse du:
+07.04.2008
+* Functional description of the system/ Allgemeine Systembeschreibung-Nr.: / description générale du dispositif:
+S-IE21.21-de, 02/2001, Rev.02, Technische Beschreibung / Technical description/
+Notice technique
+* Test specifications / Prüfspezifikation / Spécifications d'essai
+UIC 541-05
+* Test reports / Prüfberichte: / Rapports d'essais:
+* Prüfbericht 66.09/99 von DB, „Gleitschutz-Untersuchung am IC-Steuerwagen
+Bpmbdzf 297.3“
+* Prüfbericht 66.30/00 von DB, „Gleitschutz-Prüfung ICE-TD, BR605, 2. Teilbericht“
+* Prüfbericht 831-PR-0500-06 von DB, „AVE S 103 Bremstechnische Prüfung“
+* Prüfbericht 23/07, IdentNr. 3EGH00031-5336, von BOMBARDIER, „Elektrische
+Lokomotive E 186 (TRAXX-Lokomotive), Prüfung des pneumatischen Gleitschutzes
+sowie des elektrischen Kraftschlussreglers“
+* Prüfbericht 08P5871-VTZ213-062145-PR01 von DB zur bremstechnischen Prüfung
+der Diesellok VOSSLOH EURO 4000
+* Prüfbericht UT SF RP 1820 von TRENITALIA, Prüfstandsversuche mit SKF Gebern
+* Prüfbericht UT SF RP 1551 von TRENITALIA, Prüfstandsversuche mit FS Gebern
+* Assessment of / Gutachten von: / Expertise de:
+R. Körber, Grillgasse 48, A-1100 Wien
+J. Eisenblätter, Weserglacis 2, D-32423 Minden
+W. Notten, Stationshal 17, NL - 3500 GA Utrecht
+document B 126 RP G4, November 2008
+* Conclusions of Sector Expert Team 7 “Braking”: / Schlußfolgerungen des Sector Expert Teams 7 „Bremswesen: /
+Conclusions du Sector Expert Teams 7 „Freinage“:
+SET 7 - Paris, 22-01-2009, TOP 3.3
+
+[Logo: Knorr-Bremse Group]
+Dateiname hier eintragen | 17

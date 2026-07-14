@@ -1,0 +1,41 @@
+Annexure-A
+
+Guidelines for upgradation of FSDS system as per Amendment-1 of RDSO specification no. RDSO/2008/CG-04(Rev-06) in existing IR AC coaches:
+
+A. Design requirement
+
+1. The supplier will carry out all required works and activities with regard to design, testing and commissioning of upgradation work for automatic fire and smoke detection system (FSDS) as per RDSO/2008/CG-04 for provision of additional functionalities as specified in Amendment-1 i.e. provision of common interface, standard Data format and error codes etc. The Amendment-1 of RDSO/2008/CG-04(Rev-06) shall be considered for guidance for upgradation work and will include following:
+
+a) Provision of common interface/screen for status monitoring & data downloading having provision for various indications. Schematic of the same is as under:
+
+| NAME OF FIRM | | | |
+| :--- | :--- | :--- | :--- |
+| 1 | 2 | 3 | 4 |
+| [Green LED] | [Red LED] | [Green LED] | [Red LED] |
+| 5 | 6 | 7 | 8 |
+| [Red LED] | [Red LED] | [Red LED] | [USB 2.0 Port] |
+
+1. POWER ON
+2. FAULT
+3. BRAKE VALVE ELECTRICALLY CONNECTED
+4. BRAKE VALVE PNEUMATICALLY ISOLATED
+5. ALERT
+6. ACTION
+7. FIRE
+8. DATA DOWNLOADING PORT
+
+The size of common interface panel should be within 300X250 for indications & data download panel. Indicators should be 22mm Panel mounted LED indicators (pilot light) and USB port should be covered with protective cover to avoid ingress of dust.
+
+b) Provision of mechanical clamp for isolating cock and proximity/limit sensor (or any other suitable mechanism) to prevent isolation of brake valve & in cases of isolation, to capture and display on common interface/screen.
+
+c) Lithium-ion battery having higher back-up i.e. in range of 10-12 hrs with in-built safety measures adopted globally including fire safety measures
+
+d) Modified audio message and all other works required for upgradation of FSDS system as specified in Amendment-1 of spec no. RDSO/2008/CG-04(Rev-06)
+
+2. Common interface/screen panel along with associated accessories for system operation shall be EN 50155 compliant.
+
+3. All softwares, hardwares etc. and any other material required to make the system fully functional without any constraints and for regular maintenance by railway staff is included in the scope of supply.
+
+4. Cables used in the system shall be fire survival cables according to EN 50200. Survival duration classification of PH30 (30min) or higher is desirable.
+
+[Signature]

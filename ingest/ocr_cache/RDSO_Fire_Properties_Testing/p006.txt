@@ -1,0 +1,32 @@
+Annexure I to letter no. MC/Testing dated 01.04.2019
+
+List of labs for testing of fire retardancy properties.
+
+1. Toxicity as per specification No. NCD-1409
+
+| S.No. | Name and Address of Lab |
+| :--- | :--- |
+| 1 | FRLS Laboratory, Central Power Research Institute (CPRI), P.B. 8066, Sadasivanagar Sub P.O., Prof. SIR C.V. Raman Road, Bangalore-560 080. |
+| 2 | Shriram Institute for Industrial Research (A Unit of Shriram Scientific & Industrial Research Foundation), 19, University road, Delhi-110 007. |
+| 3 | SPECTRO Analytical Labs (P) Ltd., E-41, Okhla Industrial Area, Phase-II, New Delhi 110020. |
+| 4 | Central Institute of Plastics Engineering & technology (CIPET), (Ministry of Chemicals & fertilizers, Govt. of India), CIDA Phase-II, Cherlapally, HCL Post Hyderabad-500051 |
+| 5 | Atharva Laboratories Pvt. Ltd., Plot No. 402, ECOTEK-III, Udyoug Kendra Extn. II, Greater Noida, Uttar Pradesh |
+| 6 | Laboratry for Advanced Research in Polymeric Material (LARPM), Central Institute of Plastics Engineering & technology (CIPET), B/25, C.N.I. Complex, Bhubaneswar- 751024. |
+| 7 | Central Institute of Plastics Engineering & technology (CIPET), (Ministry of Chemicals & fertilizers, Govt. of India), Guindy, Chennai -600032 |
+
+2. Limiting Oxygen Index:
+
+| A. | As per specification No. IS:13501 |
+| :--- | :--- |
+| 1 | Central Institute of Plastics Engineering & technology (CIPET), (Ministry of Chemicals & fertilizers, Govt. of India), Guindy, Chennai -600032 |
+| 2 | Central Institute of Plastics Engineering & technology (CIPET), (Ministry of Chemicals & fertilizers, Govt. of India), 437/A, Hebbal Industrial Area, Mysore 570016. |
+| 3 | SPECTRO Analytical Labs (P) Ltd., E-41, Okhla Industrial Area, Phase-II, New Delhi 110020. |
+| 4 | Central Institute of Plastics Engineering & technology (CIPET), (Ministry of Chemicals & fertilizers, Govt. of India), CIDA Phase-II, Cherlapally, HCL Post Hyderabad-500 051 |
+| 5 | Atharva Laboratories Pvt. Ltd., Plot No. 402, ECOTEK-III, Udyoug Kendra Extn. II, Greater Noida, Uttar Pradesh |
+| 6 | FRLS Laboratory, Central Power Research Institute (CPRI), P.B. 8066, Sadasivanagar Sub P.O., Prof. SIR C.V. Raman Road, Bangalore-560 080 |
+| **B.** | **As per specification No. IS:13360 part 6 & part 19** |
+| 1 | FRLS Laboratory, Central Power Research Institute (CPRI), P.B. 8066, Sadasivanagar Sub P.O., Prof. SIR C.V. Raman Road, Bangalore-560 080 |
+
+(Prepared by) SSE/M/SS 01/04/2019
+(Checked by) 1.4.19 JD/SS
+01.04.19 Dir/s

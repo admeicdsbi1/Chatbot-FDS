@@ -1,0 +1,25 @@
+Maintenance Manual for FSDS and FDSS (Volume – 1)
+4.1.2.7. Service and Maintenance Photoelectric Smoke Detectors (point-type smoke detectors)
+The "Maintenance Fault“ of analog smoke sensors, is generated when there is a fault relating to the analog value of the device. This usually happens when the device fails calibration. For calibration to fail it generally means that the device has become too contaminated to be compensated for and requires maintenance.
+
+The OEM recommends removing the device from its base and connecting it to the handheld programmer (TCH-B200), to determine the analog value. The analog value will be displayed and, if relatively clean, should be in the low 60's. If it is significantly higher, then it will require cleaning.
+
+Hand-held Programmer (TCH-B200)
+
+After cleaning and reassembling the device, once again connect it to the handheld programmer and read the analog value. If the value is now in the low 60's then it can be refitted and should operate fine. If not then it may indeed be faulty and need to be replaced.
+
+Removal of Outer Cover and Smoke Chamber for Maintenance
+If the wire mesh smoke chamber cover in a photoelectric smoke sensor gets heavily contaminated with large particles such as dust, soot, etc this could compromise the sensitivity of the device.
+
+The sensor is constructed as two halves, the device itself and its outer cover.
+
+2
+1
+
+| No. | Description | No. | Description |
+| :--- | :--- | :--- | :--- |
+| 1 | Outer Cover | 2 | Smoke Chamber |
+
+To access the smoke chamber, the outer cover needs to be separated from the device with the help of the Outer Cover Removal Tool.
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0 Page 34 of 87

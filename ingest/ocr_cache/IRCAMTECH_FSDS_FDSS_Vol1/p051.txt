@@ -1,0 +1,31 @@
+Maintenance Manual for FSDS and FDSS (Volume – 1)
+
+| S.N | Aerosol Generator Model | Aerosol Generator Capacity | Min. Clearance Distance | Max. Height |
+| :--- | :--- | :--- | :--- | :--- |
+| | | FIREPRO | | |
+| 1 | FP-20TH | 20 gm | 0.0 m | 1.0 m |
+| 2 | FP-100S | 100 gm | 0.30 m | 1.0 m |
+| 3 | FP-500S | 500 gm | 1.0 m | 3.0 m |
+| | | PYROGEN | | |
+| 1 | EXA - 1 | 100 gm | 0.40 m | 2.0 m |
+| 2 | EXA - 5 | 500 gm | 0.70 m | 3.0 m |
+| | | STAT-X | | |
+| 1 | 100T | 100 gm | 0.46 m | 1.8 m |
+| 2 | 500T | 500 gm | 1.27 m | 2.5 m |
+
+II. Aerosol Generator with BTA Activation (FIREPRO)
+* Before installation, inspect the integrity of the aerosol generator.
+* The installation parameters are to be observed according to the manufacturer's recommendations. (Please refer to Table-8 above for details)
+* Position the mounting bracket and securely fasten it to the cabinet or wall in a manner that ensures that the aerosol generator is not subjected to accidental damage or movement.
+* Fasten the fixing bracket on the body of the aerosol generator, around mid-height.
+
+Generator - 100 gm
+Generator - 500 gm
+
+* Ensure all components are installed correctly and firmly before fitting the BTA to the aerosol generator.
+
+Thermal Interface
+Electrical Interface
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+Page 51 of 87

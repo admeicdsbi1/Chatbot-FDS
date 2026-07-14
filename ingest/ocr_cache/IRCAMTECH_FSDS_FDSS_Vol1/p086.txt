@@ -1,0 +1,35 @@
+Maintenance Manual for FSDS and FDSS (Volume – 1)
+
+| | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 17 | FIRE PANEL PCB | Red | Zone Fire | If any zone is in fire condition, ON | Fire | Zone fire indicators in a fire panel PCB can active due to reasons, 1)Smoke detection by sensors or detectors in a specific zone a) Zone 1 (Alert): Condition obscuration when obscuration crosses -0.35% /m b) Zone 2(Action): Condition obscuration when obscuration crosses 0.6% /m c) Zone 3(Fire 1): Condition obscuration when obscuration crosses 1.6% /m d) Zone 4(Fire 2): Condition obscuration when obscuration crosses 3.0% /m 2)Electrical fault or short circuits in a zone's wiring |
+| 18 | | Yellow | Zone Fault | If any zone is in fault condition, ON | Faulty | 1) Hardware failure in zone circuits. 2) Wiring issue in particular zone (e.g. short circuits, open circuits) 3)loose connection or corroded occur in Zone wiring 4) Faulty or damaged sensors or detectors in a specific zone |
+
+**2. ZONE CONVERTER LED INDICATIONS**
+
+| | | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | SZFA CARD | RED LED | D4 | POWER ON | Healthy condition | Powering to the Board |
+| 2 | | Blue LED | D7 | If D7 LED 1 second ON and 1 second OFF continuously | Healthy condition | 4.7k connected across the input |
+| 3 | | Blue LED | D7 | If D7 LED 200 msec ON and 200 msec OFF continuously. | Faulty | 4.7k open |
+| 4 | | Blue LED | D7 | continues ON | Fire | Sensor detected |
+
+**3. TRAINLINE RELAY LED INDICATIONS**
+
+| | | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | RELAY CARD | Green LED | D10 | Fault Relay ON | Fault | If D10 LED ON ,Its indicating Faulty |
+| 2 | | Green LED | D11 | FIRE 1 Relay ON | Fire 1 | If D11 LED ON, Its indicating FIRE 1 |
+| 3 | | Green LED | D12 | FIRE 2 Relay ON | Fire 2 | If D12 LED ON, Its indicating FIRE 2 |
+| 4 | | Green LED | D13 | PRE ALARAM Relay ON | PRE-ALARM | If D13 LED ON, Its indicating PRE-ALARM |
+| 5 | | Green LED | D14 | AUX Relay ON | AUX | If D14 LED ON, Its indicating AUX |
+
+**4. HOCHIKI FIRELINK 25 LED INDICATIONS**
+
+| | | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | HOCHIKI FIRELINK 25 | GREEN | OK | SYSTEM OK | Healthy condition | Blinks /glow on power on Indicates system health Power On: Start after power on and INIT completed Fast Learn: OK LED blinks for 15 mint that it taken for the Fast Learn process and will then change demonstration mode to constant /stable mode. |
+| 2 | HOCHIKI FIRELINK 25 | RED | FIRE | When Smoke is detecting | Healthy condition | Analysis of FIRE LED Condition Alert: Condition obscuration when obscuration crosses -0.35% /m Action: Condition obscuration when obscuration crosses 0.65% /m Fire 1: Condition obscuration when obscuration crosses 1.6% /m Fire 2: Condition obscuration when obscuration crosses 3.0% /m |
+| 3 | HOCHIKI FIRELINK 25 | ORANGE | FAULT | Wire Connection loose/Variations in the temp | Healthy condition | 1) Glows on any fault occurring in the system Dust Detector: LED ON when dust detector efficiency falls below 80% Alarm Condition: LED ON when any alarm condition occurs Flow Fault: some fault has occurred due to flow rates Demo Mode: Detector pit in demo mode Day Night Switch: Normally should be Day / Night disable condition Alarm Factor: Alarm factor setting is wrong 2) If Hochiki FireLink-25 wires could not connect properly or loose connections. 3) If Relay card is fault |
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0 Page 86 of 87

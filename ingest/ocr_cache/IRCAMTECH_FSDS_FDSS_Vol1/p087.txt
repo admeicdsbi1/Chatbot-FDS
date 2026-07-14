@@ -1,0 +1,47 @@
+Maintenance Manual for FSDS and FDSS (Volume – 1)
+
+### 5. VOICE CARD LED INDICATIONS
+
+| | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | **VOICE CARD** | RED LED | D3 | POWER ON | Healthy condition | Power supply to the board |
+| 2 | | BLUE LED | D4 | mp3 will play | Healthy condition | when input detected D4 LED will be ON and mp3 also will be speak out |
+
+### 6. TCMS CONVERTER LED INDICATIONS
+
+**FDS COMMUNICATIONS LED**
+
+| | | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | **TCMS** | Green LED | D6 | while transmitting D6 green LED glows once in a second | Healthy condition | Power supply to the TCMS converter card |
+| 2 | | Blue LED | D7 | while receiving D7 blue LED glow, If D7 long indicates waiting for response if short indicates device communicating with TCMS. | Healthy condition | 1) If D7 long indicates waiting for response 2) if short indicates device communicating with TCMS. |
+
+**HOCHIKI COMMUNICATIONS LED**
+
+| | | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 3 | | Green LED | D8 | while transmitting D8 green LED glows once in a second | Healthy condition | |
+| 4 | | Blue LED | D9 | while receiving D9 blue LED glow If D9 long indicates waiting for response if short indicates device communicating with HOCHIKI. | Healthy condition | 1) If D9 long indicates waiting for response 2) if short indicates device communicating with HOCHIKI. |
+
+**TCMS COMMUNICATIONS LED**
+
+| | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 5 | | Green LED | D10 | while transmitting D11 green LED glow | Healthy condition | |
+| 6 | | Blue LED | D11 | while receiving D10 blue LED it will glow. | Healthy condition | |
+
+**PCB STATUS LED**
+
+| | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 7 | | Green | D5 | D5 green LED indicates CPU healthy. | Healthy condition | |
+
+Note:- In TCMS card any LEDs not working or all are ON conditions it means our TCMS cards having issues.
+
+PREPARED BY : CCM_FM_S.A.B | CHECKED BY : CCM__P.D | APPROVED BY : KSSK
+--- | --- | ---
+Document No : NNSPT/ QAP/24-25/LED/001 | Rev : 001 | DATE : 10/24/2024
+
+DISCLAIMER: This Drawing/ Document is the property of N&S SOLUTIONS PVTLTD.Drawing/document is loaned upon the express condition that it shall not be Reproduced or distributed in any manner & shall not be otherwise used nor disclosed to third party without the written permission of N & S SOLUTIONS PVT LTD
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0 | Page 87 of 87

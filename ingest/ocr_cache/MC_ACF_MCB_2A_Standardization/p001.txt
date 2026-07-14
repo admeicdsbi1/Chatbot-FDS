@@ -1,0 +1,58 @@
+भारत सरकार - रेल मंत्रालय
+अनुसंधान अभिकल्प और मानक संगठन
+लखनऊ - 226 011
+EPBX (0522) 2451200
+Fax (0522) 2458500
+
+Government of India - Ministry of Railways
+Research Designs & Standards Organisation
+Lucknow - 226 011
+DID (0522) 2450115
+DID (0522) 2465310
+
+MC/ACF/Fire Detection/AC
+Date- 01.10.2024
+
+Principal Chief Mechanical Engineer,
+1. मध्य रेलवे, छत्रपति शिवाजी टर्मिनस, मुम्बई - 400 001.
+2. पूर्व रेलवे, फेयरली प्लेस, कोलकाता - 700 001.
+3. उत्तर रेलवे, बड़ौदा हाउस, नई दिल्ली - 110 001.
+4. दक्षिण रेलवे, पार्क टाउन, चेन्नई - 600 003.
+5. दक्षिण मध्य रेलवे, रेल निलयम, सिकन्दराबाद-500 071.
+6. दक्षिण पूर्व रेलवे, गार्डन रीच, कोलकाता - 700 043.
+7. पूर्वोत्तर रेलवे, गोरखपुर - 273 012.
+8. पूर्वोत्तर सीमान्त रेलवे, मालीगांव, गुवाहाटी - 781 011.
+9. पश्चिम रेलवे, चर्चगेट, मुम्बई - 400 020.
+10. पूर्व मध्य रेलवे, हाजीपुर - 844 101.
+11. पूर्व तटीय रेलवे, बीडीए रेंटल कालोनी, रेलवे काम्प्लेक्स, चन्द्रशेखरपुरा, भुवनेश्वर, उड़ीसा - 751 016.
+12. उत्तर मध्य रेलवे, हास्टिंग रोड, इलाहाबाद - 211 001.
+13. उत्तर पश्चिम रेलवे, जयपुर - 302 006.
+14. दक्षिण पश्चिम रेलवे, हुबली - 580 023.
+15. पश्चिम मध्य रेलवे, जबलपुर - 482 001.
+16. दक्षिण पूर्व मध्य रेलवे, आर ई आफिस काम्प्लेक्स, बिलासपुर - 495 004.
+17. बी.ई.एम.एल., बेंगलूर काम्प्लेक्स, न्यू थिप्पासान्द्रा, पोस्ट बाक्स न. 7501, बेंगलूर - 560 075.
+18. कोंकण रेलवे कार्पोरेशन लि., कार्पोरेट आफिस, बेलापुर भवन, नवी मुम्बई - 400 614.
+
+Sub: Standardization of 2 Amp circuit breaker in FSDS system for IR AC coaches.
+Ref: (i) Railway Board's letter no. 76/M(C)/137/31 Vol. V dated 10.09.2024.
+(ii) This office letter of even no. dated: 23.09.24.
+(iii) This office letter of even no. dated: 12.08.24.
+
+On subject of provision of MCB in FSDS system, Railway Board vide reference (i) advised RDSO to examine the capacity issue of MCB in 110V FSDS/FDSS circuit of LHB coaches.
+In this regard, RDSO recommendations were submitted to the Railway Board via letter reference as (ii). Further, during the review meeting held on 25.09.24 and 26.09.24 at the Railway Board, the issue regarding the capacity of MCB in the 110V FSDS/FDSS circuit of LHB coaches was discussed. Based on the deliberations, Railway Board advised RDSO to re-iterate the instructions contained in letter at ref (ii) to Zonal Railways for compliance.
+
+Accordingly, the following actions are to be followed for Standardization of 2 Amp circuit breaker in FSDS system with immediate effect:
+(i) In coaches, where no MCB was fitted by the supplier during initial installation of the FSDS system in the coaches, 2 Amp MCB with limiter module has to be provided by the supplier free of cost.
+(ii) In coaches, wherein circuit breaker other than of 2 Amp rating has been fitted during initial installation of the FSDS system, 2 Amp MCB with limiter module to be procured by Zonal Railways through OEMs to replace the originally fitted MCB. A budgetary rate reference from one of the suppliers is attached for your reference
+
+Additionally, it is also requested that this work should be carried out in conjunction with the other works including segregation work for positive and negative wires associated with the FSDS system, as also advised in the RDSO letter referenced (iii). Following google sheet is prepared to monitor this work.
+https://docs.google.com/spreadsheets/d/1JXsEv500QYg8KnibypSA4YEWuy3lcg1QktcJGKsfw60/edit?usp=sharing
+
+Zonal Railways are requested to update the position on weekly basis without fail please.
+DA: As above
+
+(Anurag Malik)
+Jt. Director/SS/Carriage
+dirssrdso@gmail.com
+
+Copy to: JDME/Railway Board, New Delhi for kind information please

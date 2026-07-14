@@ -1,0 +1,20 @@
+4.1 Fault list and description
+
+| Fault code | Code after automatic reset¹ | Acronyms | Severity | Priority | Fault Description | INFLUENCE | Action |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 9999 | - | POWER_ON | Indication | - | This is not a fault but an indication to take trace of data and time of the power on. | It has not influence on WSP. | No action required |
+| 0001 | - | TRANS_ERR | MAJOR | 3 | Transient error: at least one of the following fault is present: <ul><li>Speed sensor failure: open/short circuit, gap/frequency</li><li>Dump valve failure: short/open circuit</li><li>Intervention of dump valve hardware watchdog</li><li>Failure of dump valve hardware circuitry</li></ul> | The WSP control of the faulty channels is inhibited till the reset of active faults. Risk of axle lock. | Intervene in function of the present error code. |
+| 0011 | 6011 | E_SS_SC_OC1 | MAJOR | 2 | Speed sensor failure: open/short circuit | The speed of the corresponding axle cannot be acquired. The control of the faulty channel is inhibited till the reset. Risk of axle lock. With 3 speed sensor failures the WSP is not more able to calculate the reference speed and the WSP function is lost on the whole car, in this case the priority is changed to 3. | Verify the following items: <ul><li>wiring connection from the speed sensor to the electronic control unit;</li><li>speed sensor;</li><li>corresponding WBI board.</li></ul> This fault is TEMPORARY: it is removed in standstill <ul><li>automatically if the fault cause disappears</li><li>or after maintenance operation.</li></ul> |
+| 0021 | 6021 | E_SS_SC_OC2 | MAJOR | 2 | | | |
+| 0031 | 6031 | E_SS_SC_OC3 | MAJOR | 2 | | | |
+| 0041 | 6041 | E_SS_SC_OC4 | MAJOR | 2 | | | |
+| 0012 | 6012 | E_SENS_FR1 | MAJOR | 3 | Speed sensor failure: gap/frequency | The speed of the corresponding axle cannot be acquired. The control of the faulty channel is inhibited till the reset. | Verify the following items: <ul><li>gap between speed sensor and phonic wheel;</li><li>speed sensor;</li></ul> |
+| 0022 | 6022 | E_SENS_FR2 | MAJOR | 3 | | | |
+
+FT0027800-003-E00MUM_A01.
+Date/Date: 26/02/19 - Issue/Revision: A01
+FAIVELEY TRANSPORT RAIL TECHNOLOGIES INDIA LTD.
+This document contains legally privileged, confidential, proprietary or
+otherwise private information. Any unauthorized use, reproduction, dissemination,
+distribution or other disclosure of the contents is strictly prohibited
+page 44/54

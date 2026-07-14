@@ -1,0 +1,63 @@
+Maintenance Manual for FSDS and FDSS (Volume – 2)
+
+ANNEXURE- A
+
+Power Supply Arrangement for LHB AC Coaches
+
+| MINIMAL VOLTAGE | TELEPHONE | DIAGNOSIS | POWER | AIR CONDITION UNIT | PUMP CONTROL | EXHAUST FAN | EMERGENCY LIGHT |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| RELAY ( DELETED) | first class only | | SUPPLY | | | | |
+| 320301.09 | 320301.10 | 320301.11 | 320301.12 | 320301.13 320301.14 | 320301.15 | 320301.16 | 320301.17 |
+
+**Wiring Diagram Components and Labels:**
+
+*   =32/03.8 +120: Power input
+*   +S1F31 =32-F12 6A: Fuse (320303.10)
+*   +S1F32 =32-F13 6A: Fuse (320305.01)
+*   +S1F33 =32-F14 10A: Fuse (320407.01)
+*   +S1F35 =32-F19 6A: Fuse (320505.01)
+*   +S1F36 =32-F20 6A: Fuse (320506.01)
+*   +S1F15 6A: Fuse (320302.14)
+*   GA S1F162: Fuse
+*   320403: Terminal/Node
+*   320: Terminal/Node
+*   320405.01: Terminal/Node
+*   42/01.4: Terminal/Node
+*   320407.01: Terminal/Node
+*   322: Terminal/Node
+*   320408.01: Terminal/Node
+*   323: Terminal/Node
+*   +19 =61/01.1: Terminal/Node
+*   -19 =61/01.1: Terminal/Node
+*   +16 =33/09.1: Terminal/Node
+*   -16 =33/08.1: Terminal/Node
+*   +S1: Terminal/Node
+*   -X1 24 +S1: Terminal/Node
+*   320505.01: Terminal/Node
+*   320506.01: Terminal/Node
+*   +15 =61/01: Terminal/Node
+*   -15 =61/01: Terminal/Node
+*   320302.14: Terminal/Node
+*   320302.15: Terminal/Node
+*   320302.16: Terminal/Node
+*   320302.17: Terminal/Node
+*   320301.01A: Terminal/Node
+*   320412.01: Terminal/Node
+*   PUSH BUTTON TO CHECK AEL: Component
+*   S1S09: Component
+*   306: Terminal/Node
+*   307: Terminal/Node
+*   ACCIDENT EMERGENCY LIGHT: Component
+*   308: Terminal/Node
+*   309: Terminal/Node
+*   MCB EXHAUST FAN 6A: Component
+
+**Footer Information:**
+*   REF.:- RCF DRG. NO. 911.0788.101-6R32-PGD4
+*   SCALE 1:1
+*   APPROVED BY:-(DSE TLAC FOR D.G.)
+*   GENERAL WIRING DIAGRAM FOR POWER & CONTROL CIRCUITS (FOR SBC S1 FOR LHB AC EOG / HOG AND GARIB RATH COACHES) BATTERY DISTRIBUTION
+*   RESEARCH DESIGNS AND STANDARDS ORGANISATION LUCKNOW
+*   DRG NO. RDSO/PE/SK/AC/0206-2019 (Rev. 0) SHEET 11 OF 48
+*   IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+*   Page 63 of 64

@@ -1,0 +1,30 @@
+Maintenance Manual for FSDS and FDSS (Volume – 1)
+
+ANNEXURE – III (B)
+LIST OF CONDITION BASED ITEMS FOR MIDDLE BASIC UNIT – N&S HOCHIKI
+
+MIDDLE BASIC UNIT (MCI-TC-MC2) NDTC/TC - MBU CONDTION BASED SPARE PART FOR FDS SYSTEM TRAIN 18 FOR DURING AMC PERIOD TITLE-ASPIRATING TYPE FIRE/SMOKE DETECTION WITH ALARM SYSTEM TO RDSO SPEC-RDSO/2008/CG-04/REV-06 for TRAIN 18
+Model-NS-HOCHIKI-1060.01 ANNEXURE A Rev. 4 - 23/09/2024
+
+| Sl.no | DESCRIPTION OF SPARES PART FOR NS-HOCHIKI NS1060.01 | PART NO | TECHNICAL SPECIFICATION | QTY RECOMMENDED FOR - MBU |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | Four zone Conventional Fire Alarm Panel with GSM. Batteries Excluded with Power wiring | NS-TRAIN18-CP-FIREPANELPCB | Operating voltage:24VDC ,3A Power consumption :stby<3W No of zones:04 LCD display/RS485/keypad program GPS/GPRS | 1 No |
+| 2 | TCMS Card with Sub-D wiring | NS-TRAIN18-CP-TCMSCARD | Operating voltage:24VDC Rx/Tx LEDs Supports RS485/TCMS Protocol | 1 No |
+| 3 | HOOTER WITH STROBE | NS-TRAIN18-CP-AUDIO-ALARM | Supply :24VDC ,Power:350mA max Operrating Temperature:+10-80degree C Sound:85-100db Air Humidity:, to 95%rh colour Red | 2 No |
+| 4 | RELAY CARD Assembly with Wiring | CP-FIRELINK-25/100RC INPUT RELAY CARD | MAX.SWITCHING CURRENT 400mA at 24VDC,Resistive load MAX.SWITCHINH POWER 24W OPERATING TEMPARATURE -10TO+60DEGREE C RELATIVE HUMIDITY 0 TO 90% | 1 No |
+| 5 | LAMP 24V DC YELLOW (Power Lamp)Assembly | CP-LED INDICATOR LAMP 16MM 24 VDC | Input voltage:24VDC Power indication Mounting Dia-15.7mm | 2 No |
+| 6 | HASP Element Assembly | NS-TRAIN18-CP HASP TEMP65E | Material Brass/coated Temperature rating 68 degree C Mounting type:Ceiling mounted Working pressure:15kg Al Holder , SS Cover | 2 No |
+| 7 | FIRELINK25 1 PIPE HSSD& DOCK STATION (AIR RFLOW SUCTION FAN) | NS-TRAIN18-CP-HOCHIKI FLNK 25-006 | Supply voltage:21.6-26.4VDC Current consumption:250mA @ 24VDC Relay Contact rating:500mA @ 30V Measurement range(obs/m):0303%25% (FDS) 0.0015% to 25%Sensitivity resolution | 1 No |
+| 8 | DC DC Converter (10V to 24 VDC)Assembly | NS-TRAIN18-CP-DCDC CONVERTER | I/P-70-300VDC ,O/P-24-27VDC=3AMPS LINE REGULATION<+/-0.5% LOAD REGULATION<+/-0.5% RIPPLE <1% | 2 No |
+| 9 | Door Key/Lock with Lever | CP-M-KEY LOCK FOR CONTROL PANEL | Keylock lever type Common Key | 2 No |
+| 10 | Indicator with Buzzer/ Flashers (Action Lamp | CP-E-FLASHER FOR ACTION 24V | Input voltage:24VDC Alarm based product Relay LED flasher Alarm Mounting dia:21.6mm | 2 No |
+| 11 | C- Nozzel Assembly | NS-TRAIN 18-SP-C NOZZELS-006 | Disc:Aluminium Plate:SS304 Mounting outer dia:15.79mm Air sampling point hole dia:2.21mm | 2 No |
+| 12 | Visible Nozzel Assembly | NS-TRAIN 18-SP-VISIBLE NOZZELS- 006 | Material :Aluminium Mounting outer dia:15.79mm Air sampling point hole dia:2.21mm | 1 No |
+| 16 | Intrinsically Safe Conventional Smoke Detector | SOC-E-IS | SOC-E-IS - Ivory / SOC-E-IS(WHT) - White YBN-R/4(IS) 12 - 30 VDC 35 µA A 120 µA 20 mA (max 10 °C to + 50 °C 30 °C to + 60 °C 95% RH - Non condensing (at 40 °C) IP42 Ivory or White / ABS 106 / Ø 100 x H 48 LPCB VdS Bassefa 19ATEX0143X IECEx BAS 19.0122X DNV-GL* SIL2* EAC* | 1 No |
+| 17 | Intrinsically Safe Conventional Mounting Base | YBN-R/4(IS) | 95% RH-Non considering (at 40° C) Ivory or White /ABS | 1 No |
+
+Document no: NSSPT/M&S/TRAIN 18/24-25/CONDTION BASED SPARE/002 Date : 02.09.2024
+Prepared By : Production Incharge | Checked By :Quality Incharge | Approved By : Director Delivery System | Signature :
+DISCLAIMER:ThisDrawing/ Document is the property of N&S SOLUTIONS PVTLTD.Drawing/document is loaned upon the express condition that it shall not be Reproduced or distributed in any manner & shall not be otherwise used nor disclosed to third party without the written permission of N&S SOLUTIONS PVT LTD
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0 Page 65 of 87

@@ -1,0 +1,34 @@
+Maintenance Manual for FSDS and FDSS (Volume – 1)
+
+3. Select the menu options View > Event Log or click on the Event log Symbol as indicated below:
+
+[Image: Remote control software toolbar with "View" and the Event log icon highlighted]
+
+4. A similar screen (as shown below) will be displayed in the software.
+
+| Date | Time | Device | Event |
+| :--- | :--- | :--- | :--- |
+| 09/08/2024 | 02:51 | 001 | Flow calibration Pipe: 1 Lo: 0000 Hi: 0000 |
+| 09/08/2024 | 02:51 | 001 | FastLearn start |
+| 09/08/2024 | 02:51 | 001 | Power-up |
+| 30/05/2029 | 88:192 | 001 | Power-off |
+| 09/08/2024 | 01:30 | 001 | Flow calibration Pipe: 1 Lo: 0000 Hi: 0000 |
+| 09/08/2024 | 01:30 | 001 | FastLearn start |
+| 09/08/2024 | 01:30 | 001 | Power-up |
+| 30/05/2029 | 88:192 | 001 | Power-off |
+| 09/08/2024 | 01:24 | 001 | Flow calibration Pipe: 1 Lo: 0000 Hi: 0000 |
+| 09/08/2024 | 01:24 | 001 | FastLearn start |
+| 09/08/2024 | 01:24 | 001 | Power-up |
+| 30/05/2029 | 88:202 | 001 | Power-off |
+| 01/08/2024 | 05:19 | 001 | Flow calibration Pipe: 1 Lo: 0000 Hi: 0000 |
+| 01/08/2024 | 05:19 | 001 | FastLearn start |
+| 01/08/2024 | 05:19 | 001 | Power-up |
+| 30/05/2029 | 88:136 | 001 | Power-off |
+
+This shows the time and date of each event stored in the log along with its general description.
+
+5. Press the Print... button and select the Microsoft Print to PDF option and press the OK button to save the data log file at your desired location in the computer.
+
+[Image: Print dialog box showing "Microsoft Print to PDF" selected]
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0 Page 33 of 87

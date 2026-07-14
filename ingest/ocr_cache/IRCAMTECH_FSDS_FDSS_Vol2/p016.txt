@@ -1,0 +1,29 @@
+Maintenance Manual for FSDS and FDSS (Volume – 2)
+
+**VLP-400: Automatic Smoke and Fire Detection with Alarm System (without Brake Module) (MAKE XTRAILIS)**
+
+![VLP-400 Diagram with labels 1, 2, 3 pointing to components inside an enclosure]
+
+| SN | ITEM DESCRIPTION | Qty (Nos.) |
+| :--- | :--- | :---: |
+| 1 | VESDA Compact Laser Detector | 01 |
+| 2 | Power And Signal Terminal | 01 |
+| 3 | Public Announcement Module | 01 |
+
+---
+
+**VLF-500: Automatic Smoke and Fire Detection with Alarm System (With Brake Module) (MAKE XTRAILIS)**
+
+![VLF-500 Diagram with labels 1, 2, 3, 4 pointing to components inside an enclosure]
+
+| SN | ITEM DESCRIPTION | Qty (Nos.) |
+| :--- | :--- | :---: |
+| 1 | VESDA Compact Laser Detector | 01 |
+| 2 | Power And Signal Terminal | 01 |
+| 3 | Public Announcement Module | 01 |
+| 4 | Brake Application Module | 01 |
+
+---
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+Page 16 of 64

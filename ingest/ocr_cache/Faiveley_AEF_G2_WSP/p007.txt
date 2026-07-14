@@ -1,0 +1,24 @@
+SYMBOLS
+
+Within this document, the risks are identified using specific warning notes and the following symbols.
+
+High voltage
+Rotating parts
+Pressurised vessel
+Flammable materials
+Handle with care
+Risk of crushing
+Generic risk
+Hot surface
+
+FT0027800-003-E00MUM_A01.
+Date/Date: 26/02/19 - Issue/Revision: A01
+FAIVELEY TRANSPORT RAIL TECHNOLOGIES INDIA LTD.
+This document contains legally privileged, confidential, proprietary or
+otherwise private information. Any unauthorized use, reproduction, dissemination,
+distribution or other disclosure of the contents is strictly prohibited
+
+page 7/54
+
+Wabtec
+CORPORATION

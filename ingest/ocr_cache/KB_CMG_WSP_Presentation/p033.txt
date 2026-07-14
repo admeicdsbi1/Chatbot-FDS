@@ -1,0 +1,14 @@
+WSP system for LHB coaches
+
+Speed sensors
+
+The speed sensor scans a ferromagnetic rotating gear (tooth module / Phonic wheel) that is centered over the axle. It works without physical contact and does not wear. The frequency of the digital current signal is directly proportional to the circumferential speed of the rotating gear. When the vehicle is at standstill, the output current from the sensor assumes the value ( low & High ).
+
+The control unit monitors the speed sensors for correct operation at both standstill and on the move. Open circuits and faults to ground are identified. The electronic part of the speed sensors withstands short-circuiting, prevents reversal of its polarity and resists EMC interference. Rotating gears with 80 teeth are used as standard.
+
+M8 X 35 bolt to be tightened by 21 N-m torque
+
+Plug to be opened to Check gap between phonic wheel and senor (Specified gap 0.9 mm to 1.4 mm)
+
+Knorr-Bremse Group
+Dateiname hier eintragen | 33

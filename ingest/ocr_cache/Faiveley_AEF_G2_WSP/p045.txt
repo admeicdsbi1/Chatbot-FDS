@@ -1,0 +1,24 @@
+| Fault code | Code after automatic reset¹ | Acronyms | Severity | Priority | Fault Description | INFLUENCE | Action |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 0032 | 6032 | E_SENS_FR3 | MAJOR | 3 | | Risk of axle lock. With 3 speed sensor failures the WSP is not more able to calculate the reference speed and the WSP function is lost on the whole car, in this case the priority is changed to 3. | • corresponding WBI board. This fault is PERMANENT. It can be erased manually after maintenance intervention removing the fault cause. Till the reset, the control of the faulty channel is inhibited. |
+| 0042 | 6042 | E_SENS_FR4 | MAJOR | 3 | | | |
+| 0013 | 6013 | E_DV_SC1 | MAJOR | 3 | Dump valve failure short circuit | In case of slide the brake effort of the corresponding axle cannot be regulated. The control of the faulty channel is inhibited till the reset. Risk of axle lock. | Verify the following items: • wiring connection from the dump valve to the electronic control unit; • dump valve; • corresponding WBI board. This fault is TEMPORARY: it is removed in standstill • automatically after the automatic test (ref. §6.8.1) if the fault cause disappears • or after maintenance operation. |
+| 0023 | 6023 | E_DV_SC2 | MAJOR | 3 | | | |
+| 0033 | 6033 | E_DV_SC3 | MAJOR | 3 | | | |
+| 0043 | 6043 | E_DV_SC4 | MAJOR | 3 | | | |
+| 0014 | 6014 | E_DV_OC1 | MAJOR | 3 | Dump valve failure open circuit | In case of slide the brake effort of the corresponding axle cannot be regulated. The control of the faulty channel is inhibited till the reset. Risk of axle lock. | Verify the following items: • wiring connection from the dump valve to the electronic control unit; • dump valve; • corresponding WBI board. This fault is TEMPORARY: it is removed in standstill • automatically after the automatic test (ref. §6.8.1) if the fault cause disappears • or after maintenance operation. |
+| 0024 | 6024 | E_DV_OC2 | MAJOR | 3 | | | |
+| 0034 | 6034 | E_DV_OC3 | MAJOR | 3 | | | |
+| 0044 | 6044 | E_DV_OC4 | MAJOR | 3 | | | |
+| 0015 | 6015 | E_DV1_TOUT | MAJOR | 3 | Intervention of dump valve hardware watchdog | The brake effort is reduced by dump valve action for more than 10 sec. The control of the faulty channel | Verify the following items: • when the dump valve is energized, the corresponding brake is released; |
+| 0025 | 6025 | E_DV2_TOUT | MAJOR | 3 | | | |
+
+FT0027800-003-E00MUM_A01.
+Date/Date: 26/02/19 - Issue/Revision: A01
+FAIVELEY TRANSPORT RAIL TECHNOLOGIES INDIA LTD.
+This document contains legally privileged, confidential, proprietary or
+otherwise private information. Any unauthorized use, reproduction, dissemination,
+distribution or other disclosure of the contents is strictly prohibited
+page 45/54
+Wabtec
+CORPORATION

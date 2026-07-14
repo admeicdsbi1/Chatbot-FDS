@@ -1,0 +1,57 @@
+Maintenance Manual for FSDS and FDSS (Volume – 2)
+### SMOKE ASPIRATING SYSTEM SAS 7532 CP (MAKE FOGTECH)
+
+![Smoke Aspirating System SAS 7532 CP Component Layout Diagram]
+
+| SN | ITEM DESCRIPTION | Qty (Nos.) |
+| :---: | :--- | :---: |
+| 1 | Smoke Aspirating System SAS 7532CP | 01 |
+| 2 | Public Announcement Module | 01 |
+| 3 | Power And Signal Terminal | 01 |
+| 4 | Inter Connecting Cables | - |
+| 5 | Brake Application Module | 01 |
+| 6 | Time Module | 01 |
+
+---
+
+![Control Panel]
+**Control Panel**
+
+*Label on Control Panel:*
+> AUTOMATIC SMOKE AND HEAT
+> DETECTION WITH ALARM SYSTEM
+> (RDSO/2008/CG-04)
+
+---
+
+![Power Supply Module]
+**Power Supply Module**
+
+*Label on Power Supply Module:*
+> POWER SUPPLY MODULE
+> 110V DC TO - 24V DC
+
+*Manufacturer Plate on Power Supply Module:*
+> FOGPRO INDIA
+> POWER SUPPLY MODULE
+> 110V DC TO - 24V DC
+> S.No. 2050 DOM 01/23
+> FOGPRO INDIA
+
+---
+
+![Component of Control Panel]
+**Component of Control Panel**
+
+---
+
+![Power Supply Module Component]
+**Power Supply Module Component**
+
+*Handwritten markings on internal components:*
+* Left battery: `SR 2050`
+* Right battery: `SR 7314`
+
+---
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+Page 17 of 64

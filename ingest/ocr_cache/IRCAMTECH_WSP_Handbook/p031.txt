@@ -1,0 +1,33 @@
+No.IRCAMTECH/2011/Mech/WSP/1.0 26
+
+1.6 Details of KNORR BREMSE WSP Systems:
+This electronic unit (MGS2 WSP System) is mounted in a rake case & housed in the electrical controlled panel. This system consists of following parts:
+
+1.6.1. Power board:
+The power boards are fitted in a closed box. Its front panel has two yellow LED’s indicating the operating state. This board supplies the voltage for powering the boards, actuators and speed sensors. For powering the anti-skid valve a 24 V source is used from MGS2 control unit. Input Supply voltage – 24V ± 30% DC to 110 ± 30% DC.
+
+[Image Labels]
+- A1 SY STDBY
+- A2 PWR ON
+- OK
+- Knorr-Bremse EB01B STN 31031 X.2
+- Knorr-Bremse MB04B STN 31032 X.1
+- PB03 A (Power board)
+
+1.6.2. Boards MB04
+[Image Labels]
+- A1 SY STDBY
+- A2 PWR ON
+- OK
+- Knorr-Bremse EB01B STN 31031 X.2
+- Knorr-Bremse MB04B STN 31032 X.1
+- S1
+- S2
+- S3
+- S4
+- PB03A
+- MB04 Board
+
+Wheel Slide Control (i.e. acceleration & slip control) is implemented entirely on board MB04.
+
+Handbook on WSP System CAMTECH/GWL

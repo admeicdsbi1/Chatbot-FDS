@@ -1,0 +1,27 @@
+केवल कार्यालयीन उपयोग हेतु
+(For Official Use Only)
+
+भारत सरकार GOVERNMENT OF INDIA
+रेल मंत्रालय MINISTRY OF RAILWAYS
+
+[Government of India Emblem]
+सत्यमेव जयते
+
+[Image collage showing:
+- Left diamond: An ICF-type railway coach on tracks.
+- Top diamond: Two blue pressurized water cylinders labeled "WATER".
+- Bottom diamond: An electronic control panel labeled "AUTOMATIC SMOKE AND HEAT DETECTION WITH ALARM SYSTEM".
+- Right diamond: A red and grey LHB-type railway coach.]
+
+# MAINTENANCE MANUAL FOR FIRE AND SMOKE DETECTION SYSTEM AND FIRE DETECTION AND SUPPRESSION SYSTEM
+
+## VOLUME-2 (LHB & ICF COACHES)
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+OCTOBER, 2024
+
+[Logo: An ISO 9001-2015 Certified Organisation
+उच्च अनुरक्षण प्रौद्योगिकी केंद्र
+EXCELLENCE IN MAINTENANCE
+Indian Railways
+Centre for Advanced Maintenance Technology]

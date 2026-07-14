@@ -1,0 +1,26 @@
+Maintenance Manual for FSDS and FDSS (Volume – 1)
+
+ECC
+
+5.1.1.4. Installation Instructions
+
+I. Installation Parameters
+
+Minimum Clearance: Due to the potential hazard of high temperatures of the aerosol generator at the discharge end, the minimum clearance distance from the discharge end for each type of generator should be observed during installation.
+
+Maximum Height: To ensure maximum distribution of aerosol throughout the hazard area, the maximum height of the aerosol generator placement from the floor must be limited.
+
+[Labels from top left image panel]
+MCU - 062-F02
+MCUIRI - 062-F03
+ECN1 - 041-F01
+ECN2 - 041-F02
+ETB - 041-F03
+PAN & VO - 011-F01
+
+[Labels from diagram]
+Minimum Clearance
+Maximum Height
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+Page 50 of 87

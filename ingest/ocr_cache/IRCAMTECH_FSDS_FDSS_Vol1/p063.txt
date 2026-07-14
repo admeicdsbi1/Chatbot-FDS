@@ -1,0 +1,33 @@
+Maintenance Manual for FSDS and FDSS (Volume – 1)
+
+ANNEXURE – II (B)
+LIST OF MUST CHANGE ITEMS FOR MIDDLE BASIC UNIT – N&S HOCHIKI
+
+MIDDLE BASIC UNIT (MCI- TC-MC2) NDTC/TC - MBU - MANDATORY SPARE PART WITH FREQUENCY FOR FDS SYSTEM TRAIN 18 DURING AMC PERIOD TITLE- ASPIRATING TYPE FIRE/SMOKE DETECTION WITH ALARM SYSTEM TO RDSO SPEC-RDSO/2008/CG-04/REV-06 FOR TRAIN 18
+Model-NS-HOCHIKI-1060.01 ANNEXURE B Rev.4 - 23/09/2024
+
+| Sl.no | Description | PART NO | TECHNICAL SPECIFICATION | QTY Recommended for - MBU | FREQUENCY OF REPLACEMENT (IN MONTHS) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | Cable tie | Cable tie-black -100mm | Length:100mm Polymide | 3 PKT | 36 |
+| 2 | Cable tie base | CP-Cable Mount Base-19mm | Size:19mm | 3 PKT | 36 |
+| 3 | Shorting Link for Power T.B | Wago -870-404 (push intype jumper tan 4 way) | push in type jumper tan 4 way Copper Contact | 10 NO | 18 |
+| 4 | Resistor Soldernd Wire | - | 4.7kohm/meta | 4 NO | 9 |
+| 5 | Cable Marker | CP-lable-ferule-0.5sqmm-0-9 | Number:0-9 marking size:0.5sqmm | 4 PKT | 36 |
+| 6 | Cable Marker | CP-lable-ferule-0.5sqmm-A-Z | Letters:A-Z marking Size:0.5sqmm | 3 PKT Each | 36 |
+| 7 | Insullated terminal pins | CP-e-cable crimp R/B pins | Colour Black:Size- 1.5sqmmx8mm Colour red:Size-1.0sqmmx8mm Material-E-Cu | 3 PKT Each | 36 |
+| 8 | Wago terminal (signal terminal block) | Wago-261-301 side entry (signal) | Cross section(sq mm):0.08- 2.5sqmm Measure Volttage EN:500v Measure Shock Voltage:6KV Pollution degree:3 Current intensity EN:24A | 30 NO | 36 |
+| 9 | Wago (power terminal block) | Wago -870-901 (2-condd T.8) | Cross section(sq mm):0.08- 2.5sqmm Measure Volttage EN:500v Measure Shock Voltage:6KV Pollution degree:3 Current intensity EN:24A | 20 NO | 36 |
+| 10 | Wago Connector (POWER-F) | Wago-231-103/037-00 (female connector) | 1-CONDUCTOR FEMALE CONNECTOR cage clamp 2.5sqmm Pin spacing 5mm 3pole,Clamping collar. | 8 NO | 36 |
+| 11 | Wago Connector (POWER-M) | Wago-231-603 ( male Connector) | 1-CONDUCTOR MALE CONNECTOR cage clamp 2.5sqmm Pin spacing 5mm 3pole. | 8 NO | 36 |
+| 12 | Hochiki Intet Filter | NS-TRAIN 18-CP-HOCHIKI INLET FILTER-006 | Size : 28.9mm To Suction of air /dust particle | 4 NO | 18 |
+| 13 | Disc Battery for fire panel PCB Mother Board | Panasonic/Maxeel Make 3VDC | Disc Type 3 VDC | 4 NO | 36 |
+| 14 | Nicad Battery for Hochiki Firelink25 Mother Board | Varata Make-3VDC | Varata Nicad Battery-3VDC | 4 NO | 36 |
+| 15 | FIRELINK25 1 Pipe Air Flow Suction Fan | NS-TRAIN 18-CP-HOCHIKI FLNK25-006-1109P0412D602 | Measurement range DC12V- 018A EP 052406P | 4 NO | 36 |
+| 16 | Intrinsically Safe Conventional Smoke Detector Chember | SOC-E-IS Chember | SOC-E-IS - Ivory / SOC-E- IS(WHT) - White YBN-R/4(IS) 12 - 30 VDC 35 µA A 120 µA 20 mA (max 10 °C to + 50 °C 30 °C to + 60 °C 95% RH - Non condensing (at 40 °C) IP42 Ivory or White / ABS 106 / Ø 100 x H 48 LPCB VdS Bassefa 19ATEX0143X IECEX BAS 19.0122X DNV-GL* SIL2* EAC* | 4 NO | 36 |
+
+Document no: NSSPT/M&S/TRAIN 18/24-25/MANDATORY SPARE PARTS/002 Date: 02.09.2024
+Prepared By : Production Incharge | Checked By :Quality Incharge | Approved By : Director Delivery System | Signature : [Signature Image]
+
+DISCLAIMER:ThisDrawing/ Document is the property of N&S SOLUTIONS PVTLTD.Drawing/document is loaned upon the express condition that it shall not be Reproduced or distributed in any manner & shall not be otherwise used or disclosed to third party without the written permission of N&S SOLUTIONS PVT LTD
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0 Page 63 of 87

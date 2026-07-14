@@ -1,0 +1,41 @@
+भारत सरकार - रेल मंत्रालय
+अनुसंधान अभिकल्प और मानक संगठन
+लखनऊ - 226 011
+EPBX (0522) 2451200
+Fax (0522) 2458500
+
+Government of India - Ministry of Railways
+Research Designs & Standards Organisation
+Lucknow - 226 011
+DID (0522) 2450115
+DID (0522) 2465310
+
+G20
+भारत 2023 INDIA
+
+MC/ACF/fire detection/AC
+Dated 05.09.2024
+
+PED/Mech. (EnHM & Proj.)
+Railway Board
+New Delhi - 110 001.
+
+Sub: Guidelines for upgradation of Automatic Fire and Smoke Detection System (FSDS) as specified in Amendment-1 as per RDSO/2008/CG-04(Rev-06) for existing Indian Railways AC Coaches.
+Ref: This office letter no. MC/ACF/Fire Detection/AC dated 27.07.2024.
+
+1. Based upon the feedback of Zonal Railways and detailed discussions with stakeholders, RDSO has amended the specification no. RDSO/2008/CG-04(Rev-06) duly addressing the issues pointed out by ZRs. Following main features have been incorporated in Amendment-1 of RDSO specification no. RDSO/2008/CG-04(Rev-06) issued on 01.8.24.
+a) Provision of Common interface/screen for status monitoring & standard format/error codes for data downloading through USB
+b) Provision of mechanical camp for isolating cock and proximity/limit sensor (or any other suitable mechanism) to prevent isolation of brake valve & in case of isolation, to capture & display on common screen.
+c) Reputed brands specified for MCB, Connectors & battery to improve reliability of FSDS system.
+d) Modified audio message announcement for passengers for evacuation during smoke/fire incidence.
+
+2. All the future procurement of FSDS system for IR AC coaches from now onwards will be with the amended specification however the upgradations incorporated in the amended specification are retrofittable. The features incorporated are for ease in system monitoring and maintenance as well as to improve reliability and thus, are recommended for being implemented in existing IR coaches also.
+
+3. Railway Board is requested to nominate any of the PU as nodal to carry out awarding of the work related with upgradation of FSDS systems in existing IR coaches. The system may or may not require relocation of FSDS system as per recommended standardized locations issued to PU's/ZR's vide letter under reference. It is accordingly advised that nominated PU may carryout census of coaches requiring relocation and work orders should be issued accordingly.
+
+4. Detailed guidelines are prepared for the same and are enclosed at Annexure-A.
+
+(Gaurav Kumar Singh)
+Exe. Director Carriage - II
+
+Cc: ED/ME(Safety), Railway Board, New Delhi - for information please

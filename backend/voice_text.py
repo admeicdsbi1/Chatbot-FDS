@@ -11,6 +11,10 @@ from difflib import SequenceMatcher
 # ABBREVIATIONS — expanded for retrieval
 # ================================================================
 ABBREVIATIONS = {
+    # K-designations from panel wiring schematics (IEC: K = relay). The manuals'
+    # parts lists name these by function, not designation — map the common ones
+    # staff search by so retrieval finds the functional entry.
+    "k05": "timer relay off delay brake module panel",
     "fsds": "fire smoke detection system aspiration",
     "fdss": "fire detection suppression system aerosol water mist",
     "fds": "fire detection system",

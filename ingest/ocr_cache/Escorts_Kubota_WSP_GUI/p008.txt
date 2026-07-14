@@ -1,0 +1,17 @@
+WSP GUI APPLICATION
+
+Escorts Kubota Limited
+
+* The report is available .txt and .xlsx formatting according to the coach number.
+
+Fault Log Report
+1111_Fault Data.txt 11-04-2024 16:50 Text Document 3 KB
+1111_Fault Data.xlsx 11-04-2024 16:50 Microsoft Excel W... 28 KB
+
+Fault History Report
+5678_Report_history.txt 04-04-2024 10:25 Text Document 71 KB
+5678_Report_history.xlsx 04-04-2024 10:25 Microsoft Excel W... 118 KB
+
+Classification | ESCORTS-CONFIDENTIAL
+Classification | ESCORTS KUBOTA-CONFIDENTIAL
+8

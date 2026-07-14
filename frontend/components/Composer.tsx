@@ -1,6 +1,6 @@
 "use client";
 import { useRef } from "react";
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, Square } from "lucide-react";
 import VoiceRecorder from "./VoiceRecorder";
 
 export default function Composer({
@@ -9,12 +9,14 @@ export default function Composer({
   onSubmit,
   onAudio,
   busy,
+  onStop,
 }: {
   value: string;
   onChange: (v: string) => void;
   onSubmit: () => void;
   onAudio: (blob: Blob) => Promise<void> | void;
   busy: boolean;
+  onStop?: () => void;
 }) {
   const taRef = useRef<HTMLTextAreaElement>(null);
 
@@ -42,14 +44,24 @@ export default function Composer({
           />
         </div>
 
-        <button
-          onClick={onSubmit}
-          disabled={busy || !value.trim()}
-          aria-label="Send"
-          className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-gradient-to-br from-accent to-accent-glow text-bg-base shadow-glow transition active:scale-95 disabled:opacity-40 disabled:shadow-none"
-        >
-          <ArrowUp size={22} strokeWidth={2.5} />
-        </button>
+        {busy && onStop ? (
+          <button
+            onClick={onStop}
+            aria-label="Stop"
+            className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-white/15 bg-bg-card text-ink shadow-card transition active:scale-95 hover:border-accent/60"
+          >
+            <Square size={18} strokeWidth={2.5} fill="currentColor" />
+          </button>
+        ) : (
+          <button
+            onClick={onSubmit}
+            disabled={busy || !value.trim()}
+            aria-label="Send"
+            className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-gradient-to-br from-accent to-accent-glow text-bg-base shadow-glow transition active:scale-95 disabled:opacity-40 disabled:shadow-none"
+          >
+            <ArrowUp size={22} strokeWidth={2.5} />
+          </button>
+        )}
       </div>
     </div>
   );

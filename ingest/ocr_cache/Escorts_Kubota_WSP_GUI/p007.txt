@@ -1,0 +1,19 @@
+WSP GUI APPLICATION
+
+REPORT FOLDERS AND FORMATS
+
+* To get the reports of Fault log & Fault History, Click on the Report Folder.
+
+| Name | Date modified | Type | Size |
+| :--- | :--- | :--- | :--- |
+| Confidential | 03-04-2024 16:59 | File folder | |
+| Online_Data | 04-04-2024 09:16 | File folder | |
+| Report | 04-04-2024 09:16 | File folder | |
+| WSP_APP_NEW040424 | 04-04-2024 09:23 | File folder | |
+| WSP_APP_NEW040424.aliases | 04-04-2024 09:22 | ALIASES File | 1 KB |
+| WSP_APP_NEW040424.exe | 04-04-2024 09:22 | Application | 4,515 KB |
+| WSP_APP_NEW040424.ini | 04-04-2024 09:22 | Configuration sett... | 1 KB |
+
+Classification | ESCORTS-CONFIDENTIAL
+Classification | ESCORTS KUBOTA-CONFIDENTIAL
+7

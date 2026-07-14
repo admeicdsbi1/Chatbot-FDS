@@ -78,7 +78,15 @@ class TTSRequest(BaseModel):
 # ================================================================
 @app.get("/api/health")
 def health():
-    return {"status": "ok", "chunks": len(rag.chunks)}
+    import embed
+    return {
+        "status": "ok",
+        "chunks": len(rag.chunks),
+        "retrieval_mode": rag.retrieval_mode(),
+        "embedding_shape": rag.embedding_shape(),
+        "embedding_model": embed.current_model() if embed.available() else None,
+        "gemini_model": llm.GEMINI_MODEL,
+    }
 
 
 @app.post("/api/chat")
@@ -94,9 +102,10 @@ def chat(req: ChatRequest):
         return {
             "answer": "No relevant content found. Rephrase or consult supervisor.",
             "sources": "", "retrieval_count": 0, "lang": lang,
+            "retrieval_mode": rag.retrieval_mode(),
         }
 
-    ctx = rag.build_context(excerpts[:4])
+    ctx = rag.build_context(excerpts)
     history = [t.model_dump() for t in req.history]
     answer = llm.generate_answer(question, ctx, lang, history)
     sources = rag.build_sources(excerpts)
@@ -109,6 +118,7 @@ def chat(req: ChatRequest):
         "sources": sources,
         "retrieval_count": len(excerpts),
         "lang": lang,
+        "retrieval_mode": rag.retrieval_mode(),
     }
 
 

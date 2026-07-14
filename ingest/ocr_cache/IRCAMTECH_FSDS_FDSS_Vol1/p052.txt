@@ -1,0 +1,11 @@
+Maintenance Manual for FSDS and FDSS (Volume – 1)
+● Assemble the two BTA parts by screwing the threads clockwise.
+
+● Connect the adapter to BTA by turning it clockwise.
+
+● Unscrew the thermo connector cover from the generator unit by turning it anticlockwise.
+
+● Connect the BTA to the thermal interface of the generator unit by turning it clockwise.
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+Page 52 of 87

@@ -1,0 +1,16 @@
+| 8. | IS/ISO7240-20: 2010/ EN 54-20 | Fire Detection and Alarm Systems |
+
+**C. Detailed Scope of Work**
+
+1. All components to comply with the contractual requirements mentioned under Design/General requirements and the relevant specification.
+2. For cutting of slots in coaches, location to be selected in consultation with Zonal Railways.
+3. Approval of Engineer in charge (Sr. DME of concerned maintenance depot) is to be taken for routing of cable. Cables required for the work should be secured properly with cable tie and additional sleeves to be provided wherever it is being routed near sharp edges. Suitable arrangements for segregating of positive and negative wires of 110 V DC supply shall be ensured.
+4. All the components/hardware/software etc. required for complete installation, testing & commissioning as well as the smooth operation & maintenance of the system to be provided by the contractor.
+5. The upgraded FSDS system shall fully meet the requirement of EMI/EMC for Railway application as per EN50155.
+6. The list of warranty spares to be maintained at site to provide support during warranty period to be furnished by the contractor in his technical offer.
+7. The contractor shall provide required training for operation and maintenance of upgraded FSDS System to Concerned staff at the site. After completion of the training, training aids and materials during training shall become Railway's property.
+8. The retrofitting works under these guidelines shall consists of, but not limited to, all material, labour, equipment, tools, and necessary machinery as required to completely execute shall works in-toto for commissioning of upgraded Fire and smoke detection system in trains.
+9. The supplier shall himself identify and formally document all design, manufacturing and operational interface between the equipment within the train.
+10. All other works deemed necessary for installation & commissioning of additional functionalities for FSDS system as per contractual conditions.
+11. It would be better on the part of supplier to visit and physically assess the existing coaches for better appreciation of the work contents.
+12. The system may or may not require relocation. Zonal Railways may ensure relocation of FSDS system as per Location of fitment of FSDS system in AC coaches issued vide this office letter no. MC/ACF/Fire Detection/AC dated 27.07.2024, during execution of work.

@@ -1,0 +1,31 @@
+Maintenance Manual for FSDS and FDSS (Volume – 2)
+**Heat Detector (Point Type)**
+
+They are installed in the Generator area of the Power car & pantry area of the pantry car.
+
+After pre alarm (smoke detection) manual activation of system is also possible through activation switch provided in control panel.
+
+On receiving fire alarm (through heat detector), the system sends the shut down single to DG set controller through potential free relay contacts and thereafter initiate automatic fire suppression system.
+
+In any case, automatic activation system should be initiated within 30 seconds of sending shut down command to DG set.
+
+**Smoke Detector (Point Type)**
+
+They are installed for detecting smoke in generator area, escorting staff compartment & guard compartment etc. of power car and for detecting smoke in store room, manager room & pantry staff area etc. for pantry car. Smoke detection in these area provides pre alarm at control panel.
+
+*   **Smoke Detector** (pointing to left detector in the central image, with a close-up inset on the left)
+*   **Heat Detector** (pointing to right detector in the central image, with a close-up inset on the right)
+
+**LHD CABLE –**
+
+**Linear Heat Detector** cable installed in the generator area as well as the luggage area of the Power car & in the pantry area of the Pantry car.
+
+LHD cable provides fire alarm as well as initiates actuation of fire suppression system.
+
+*   **LHD Cable** (pointing to cables in both images below)
+    *   Left image: **Power Car Luggage Compartment**
+    *   Right image: **Power Car Gen-Set Compartment**
+
+---
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+Page 44 of 64

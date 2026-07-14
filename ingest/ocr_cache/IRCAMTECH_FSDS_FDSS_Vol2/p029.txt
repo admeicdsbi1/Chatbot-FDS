@@ -1,0 +1,28 @@
+Maintenance Manual for FSDS and FDSS (Volume – 2)
+
+### Steps for Isolating the Battery of the Power panel (FDS)
+
+![Power panel interior showing Wago Terminal No 1 and MCB](image_0.png)
+
+* **Wago Terminal No 1** (indicated by red arrow pointing to the terminal block on the left)
+* **MCB** (indicated by red arrow pointing to the circuit breaker on the right)
+* **Battery Label visible:** CHLOR SAFEPO... Pb
+
+I. Drop the MCB to down position to switch off 110 V power supply
+II. Remove Cable form Wago terminal No 1 and apply insulation tape on the exposed end
+III. For reinstating the Battery re-join same cable at Wago terminal No 1 and switch on the MCB for reinstating 110 V DC power supply.
+
+---
+
+### Isolate the Brake Valve pneumatically situated on the under frame as shown in the figure Below:
+
+![Brake Valve in Open Position](image_1.png)
+**Open Position**
+
+![Brake Valve in Isolated Position](image_2.png)
+**Isolated Position**
+
+---
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+Page 29 of 64

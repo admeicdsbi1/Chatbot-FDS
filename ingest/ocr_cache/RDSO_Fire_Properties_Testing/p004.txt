@@ -1,0 +1,23 @@
+For testing of Heat Release Rate (HRR) with test method as per ISO-5660-1, the following Government Labs are further appended to the list under reference:
+
+| Heat Release Rate (MARHE, i.e. Maximum Average Rate of heat emission in kW / m2 as specified in EN 45545-2) with test method as per ISO-5660-1 |
+| :--- |
+| 1 Composite Testing Laboratory, Ahmedabad Textile Industry's Research Association (ATIRA), P.O. Ambawadi Vistar, Ahmedabad-380015 |
+| 2 FRLS Laboratory, Central Power Research Institute (CPRI), P.B. 8066, Sadasivanagar Sub P.O., Prof. SIR C.V. Raman Road, Bangalore-560 080. |
+| 3 Laboratory for Advanced Research in Polymeric Material (LARPM), Central Institute of Plastics Engineering & technology (CIPET), B/25, C.N.I Complex, Bhubaneswar-751024. |
+| 4 Central Institute of Plastics Engineering & Technology (CIPET), (Ministry of Chemicals & fertilizers, Govt. of India), Guindy, Chennai -600032 |
+
+Zonal Railways / Production Units may utilize facilities at these labs for independent quality audits of furnishing materials whenever required.
+
+DA: RDSO letter no. MC/Testing dated 01.04.2019.
+
+(Samir Lohani)
+Executive Director (Standards)/Carriage
+
+Copy to:
+
+1. ED/QA, RITES Ltd. , 6th Floor, Plot No. 1, Sector -29, Gurgaon- 122001 .
+2. EDME (Chg) Railway Board, Rail Bhawan, New Delhi-110001 .
+3. PED/QA (Mech), RDSO, Lucknow-225011.
+4. ED/M&C, RDSO, Lucknow – 226011
+5. ED / Safety, ED / E&R Railway Board for kind inf. pl.

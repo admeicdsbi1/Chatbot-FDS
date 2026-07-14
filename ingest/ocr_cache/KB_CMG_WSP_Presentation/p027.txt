@@ -1,0 +1,23 @@
+WSP system for LHB coaches
+
+ESRA Boards: Overview
+
+Power Boards
+* PB01: 24V, 36V, 48V
+* PB03: 72V, 110V
+
+Extension Boards
+* EB01: Binary I/O
+* EB02: Binary Input
+* EB03: Analog I/O
+* EB04: Brake Handle
+
+Main Boards with application
+* MB03/ MB04: For brake control, WSP and other functions
+  Main Controller C167 + fail safe Controller
+  Sensor-Inputs, Power-Outputs
+* MB04C: like MB03 / MB04 plus MMI, RTC, datalogger
+* MB07: Controller C167, for additional performance
+
+Knorr-Bremse Group
+Dateiname hier eintragen | 27

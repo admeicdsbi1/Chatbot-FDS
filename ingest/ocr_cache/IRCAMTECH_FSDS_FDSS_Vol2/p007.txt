@@ -1,0 +1,34 @@
+Maintenance Manual for FSDS and FDSS (Volume – 2)
+
+### Amendments and Revisions
+
+The correction slips to be issued in the future for this report will be numbered as follows:
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0# XX date .......
+
+Where “XX” is the serial number of the concerned correction slip (starting from 01 onwards).
+
+| Version | Date | Corrections | Remarks |
+| :---: | :---: | :---: | :---: |
+| 1.0 | October 2024 | -- | First Version |
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+
+---
+
+| ! | All rights reserved. This document or any portion thereof may not be reproduced or used in any manner whatsoever without authorization from Indian Railways.<br><br>All technical information and guidelines are latest at the time of publishing and are subjected to change due to technology updates and requirements. |
+| :---: | :--- |
+
+---
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+
+Page 7 of 64

@@ -18,8 +18,9 @@ _DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 JSONL = os.path.join(_DATA_DIR, "chunks_merged.jsonl")
 EMB_CACHE = os.path.join(_DATA_DIR, "embeddings.npy")
 
-TOP_K_SEMANTIC = 12
-TOP_K_FINAL = 4
+TOP_K_SEMANTIC = int(os.environ.get("TOP_K_SEMANTIC", "40"))
+TOP_K_FINAL = int(os.environ.get("TOP_K_FINAL", "8"))
+CTX_CHUNK_CHARS = int(os.environ.get("CTX_CHUNK_CHARS", "2500"))
 
 # ---- Module state (populated by init_kb) ----
 chunks = []
@@ -87,7 +88,9 @@ def init_kb():
         print(f"Loaded embeddings: {emb_matrix.shape}")
     elif embed.available():
         why = "missing" if cached is None else f"stale (shape {cached.shape}, dim≠{expected_dim})"
-        print(f"Embeddings {why} — building via Gemini API in background...")
+        print(f"WARNING: embeddings {why} — this should not happen with committed "
+              f"artifacts; check GEMINI_EMBED_DIM matches the .npy. "
+              f"Building via Gemini API in background...")
         threading.Thread(target=_build_embeddings_bg, daemon=True).start()
     else:
         emb_matrix = None
@@ -109,6 +112,15 @@ def init_kb():
 def embed_query(text):
     """Embed a query via the Gemini API → normalized (D,) vector, or None."""
     return embed.embed_query(text)
+
+
+def retrieval_mode():
+    """'semantic' when the embedding matrix is loaded, else 'keyword-only'."""
+    return "semantic" if emb_matrix is not None else "keyword-only"
+
+
+def embedding_shape():
+    return list(emb_matrix.shape) if emb_matrix is not None else None
 
 
 # ================================================================
@@ -256,9 +268,14 @@ def build_context(excerpts):
         doc = c.get("title", c.get("doc_id", ""))
         pg = c.get("page_num", "")
         oem = c.get("oem", "")
-        txt = re.sub(r"\s+", " ", c.get("text", "").strip())
-        if len(txt) > 1500:
-            txt = txt[:1500] + " …"
+        raw = c.get("text", "").strip()
+        if "|" in raw and "\n" in raw:
+            # markdown table chunk — collapsing newlines would destroy the rows
+            txt = re.sub(r"[ \t]+", " ", raw)
+        else:
+            txt = re.sub(r"\s+", " ", raw)
+        if len(txt) > CTX_CHUNK_CHARS:
+            txt = txt[:CTX_CHUNK_CHARS] + " …"
         h = f"[Source {i}: {doc}"
         if sec: h += f" | {sec[:60]}"
         if pg: h += f" | p.{pg}"
@@ -270,7 +287,7 @@ def build_context(excerpts):
 
 def build_sources(excerpts):
     parts, seen = [], set()
-    for _, c in excerpts[:3]:
+    for _, c in excerpts:
         doc = c.get("title", c.get("doc_id", ""))
         sec = c.get("section", "")[:50]
         pg = c.get("page_num", "")

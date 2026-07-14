@@ -1,0 +1,23 @@
+Maintenance Manual for FSDS and FDSS (Volume – 1)
+● Remove the safety pin from BTA after completing the installation.
+
+Caution
+● The safety pin on the upper part of the BTA must only be removed when the system installation is complete, not beforehand.
+
+Note
+● The safety pin will be needed for later circumstances or maintenance, so it is advisable to tie it on a wire strand and leave it hanging from the body of the BTA.
+● Insert the safety pin back into the BTA if the system is disassembled, moved, or adjusted for any reason.
+
+III. Aerosol Generator with Thermo Cable Activation (PYROGEN)
+● Before installation, inspect the integrity of the aerosol generator.
+● The installation parameters are to be observed according to the manufacturer's recommendations. (Please refer to Table-8 above for details)
+● Paste double-sided tape on the aerosol generator for clamps. Now tie clamps on double-sided tape.
+● Position the mounting clamps and securely fasten them to the cabinet or wall in a manner that ensures that the aerosol generator is not subjected to accidental damage or movement.
+
+| No. | Description | No. | Description |
+| :--- | :--- | :--- | :--- |
+| 1 | Clamps | 3 | Electrical Cabinet |
+| 2 | Aerosol Generator | | |
+
+IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+Page 53 of 87

@@ -1,0 +1,30 @@
+5. Power supply of 110 V DC is available. The system should work with this supply. However, the system should continue to work with voltage in range between 77V-137.5V DC
+
+6. MCB, Connector & battery make (Brand name) shall be ensured as specified in Amnendment-1 of RDSO/2008/CG-04(Rev-06).
+
+7. Supplier to provide all necessary drawings, reports, technical data and similar documents. The supplier to provide, but not limited to, the following design information of smoke/fire detection system:
+I. Detailed Documents and drawings for Control unit and other aggregates.
+II. Type test procedure & record sheet
+III. Routine test procedure & record sheet
+IV. Certificate of conformity
+V. Material certification
+VI. Spare parts catalogues
+VII. Training manuals
+VIII. Operation and maintenance information
+IX. Dismounting and mounting instruction
+
+B. General requirement
+1. The supplier will carry out all required work and activities with regard to design, testing and commissioning of additional functionalities for smoke/fire detection system in the coaches.
+2. Prototype approval of each supplier to ensure the compliance of the upgraded work vis-a-vis these guidelines will be carried out by RDSO. Once approved, the same will be applicable for reference of other Zonal Railways
+3. If specific instructions are issued by RDSO or/and Zonal Railways for undertaking modifications to circuit design/hardware/interfaces proposed etc. to meet the Railway's requirements, the supplier will abide with these instructions.
+4. Following standards (latest version) may be referred unless specified:
+
+| S. No. | Standards | Description |
+| :--- | :--- | :--- |
+| 1. | EN50155 - 2021 | European standard for compatibility of electronic equipment in rolling stock application |
+| 2. | IEC 61373 - 2010 | Railway applications – Rolling stock equipment – Shock and vibration tests |
+| 3. | EN 50153 - 2014 | Railway applications – Rolling stock – Protective provisions relating to electrical hazards |
+| 4. | EN 50200 - 2015 | Method of test for resistance to fire of unprotected small cables for use in emergency circuits |
+| 5. | EN45545 | Railway Applications - Fire protection of Railway vehicles |
+| 6. | ARGE Guideline Part 1 | Fire detection in railway vehicles |
+| 7. | EN 50125 – 1 2012 | Railway applications – Environmental conditions for equipment – Equipment on board rolling stock |
