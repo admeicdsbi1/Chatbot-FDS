@@ -1,0 +1,44 @@
+भारत सरकार - रेल मंत्रालय
+अनुसंधान अभिकल्प और मानक संगठन
+लखनऊ - 226 011
+EPBX (0522) 2451200
+Fax (0522) 2458500
+
+Government of India - Ministry of Railways
+Research Designs & Standards Organisation
+Lucknow - 226 011
+DID (0522) 2450115
+DID (0522) 2465310
+
+G20
+भारत 2023 INDIA
+
+MC/ACF/Fire Detection/AC
+Date-27.11.2024
+
+| S No. | Name of Firms | Email Address |
+| :--- | :--- | :--- |
+| 1. | M/s Sanrok Enterprises, E-14, Greater Kailash Enclave-1, New Delhi- 110 048 | snaveen20@yahoo.com |
+| 2. | M/s FOGTEC, Brandschutz GmbH & Co. (FOGTEC Fire Protection Kanara Bussiness Centre B Wing, 611, off Ghatkoper Andheri, Link Road Ghatkoper East Mumbai-75). | gaurish.sharma@fogtec.com |
+| 3. | M/s FOGPRO India Pvt. Ltd., Plot No. 54, Sector 58, HSIIDC, Industrial Estate, Bahadurgarh, Faridabad - 121004 | fogtec.asia@fogtec.com, fogproindia@gmail.com, fogprosupply@gmail.com |
+| 4. | M/s N & S Solutions Private Limited, No. 37-38 Reliable Residency, 1st main, 8th cross, Harlur, HSR Layout, Bangalore -560102 | sales@nssolutions.in |
+| 5. | M/s J. K. Exim, Pvt. Ltd., 267, Sector-10, First Floor, Ambala City, Haryana - 134003 | Jkexim.2019@gmail.com |
+| 6. | M/s Advance Hi-Tech, 1765 MIE, Part-B, Bahadurgarh, Jhajjar, Haryana - 124507. | jhadharmendra2@gmail.com |
+| 7. | M/s Tayal & amp; Co. D- 85, Phase VII, SAS Nagar, Mohali, Punjab. | info@tayalco.com |
+
+Sub: Compliance of RDSO specification no. RDSO/2008/CG-04 and Guidelines for FSDS system.
+Ref: This office letter of even no. dated: 12.08.2024 & 08.10.2024.
+
+Vide letter under reference, guidelines for provision of circuit breaker, segregation of +ve/-ve wire etc. were issued for earliest completion, however few Zonal Railways have informed that Suppliers are not carryingout these activities.
+
+In this regard, it is again reiterated that in reference to subject of supplier's responsibility for safety of passengers & equipments and provision of MCB, clauses are already specified in the RDSO specification no. RDSO/2008/CG-04 for FSDS system.
+
+As per Clause 8.1 of Section-A of RDSO specification no. RDSO/2008/CG-04:
+"The supplier/OEM shall be completely responsible for the execution of the contract strictly in accordance with the terms of this specification and the conditions of contract, not withstanding any approval which purchaser or the Inspecting Officer may have given".
+
+Additionally, as per Clause 8.4(Section-A) of RDSO specification no. RDSO/2008/CG-04:
+"For ensuring that the equipments/systems do not lead to unsafe or hazardous conditions for IR passengers & equipments".
+
+The specification clearly mandates that suppliers are bound to adhere to all requirements to ensure safety, reliability, and strict compliance of specification.
+
+Furthermore, as per Clause no. 1.7 (a) of Section-B of RDSO specification no. RDSO/2008/CG-04(Rev-5 onwards), it is categorically stated that, "The control supply to the Fire Detection System will be provided from Terminal Block (TB) X1 of the Switch Board Cabinet (SBC) for LHB AC coaches through DC MCB of adequate rating".

@@ -1,0 +1,48 @@
+भारत सरकार - रेल मंत्रालय
+Government of India-Ministry of Railways
+अनुसंधान अभिकल्प और मानक संगठन
+Research Designs & Standards Organisation
+लखनऊ - 226 011
+Lucknow - 226 011
+EPBX (0522) 2451200
+DID (0522) 2450115
+Fax (0522) 2458500
+DID (0522) 2465310
+
+No.MC/ACF/Fire Detection/AC
+Date-08.10.2024
+
+| S. No. | Name of Firms | Email Address |
+| :--- | :--- | :--- |
+| 1. | M/s Sanrok Enterprises, E-14, Greater Kailash, New Delhi- 110 048. | snaveen20@yahoo.com |
+| 2. | M/s FOGTEC, Brandschutz GmbH & Co. 611, off Ghatkoper Andheri, Link Road Ghatkoper East Mumbai-75). | gaurish.sharma@fogtec.com fogtec.asia@fogtec.com |
+| 3. | M/s FOGPRO India Pvt. Ltd., Plot No. 54, Sector 58, HSIIDC, Industrial Estate, Bahadurgarh, Faridabad - 121004 | fogproindia@gmail.com fogprosupply@gmail.com |
+| 4. | M/s N & S Solutions Private Limited, No. 37-38 Reliable Residency, 1st main, 8th cross, Harlur, HSR Layout, Bangalore -560102 | sales@nssolutions.in |
+| 5. | M/s J. K. Exim, Pvt. Ltd., 267, Sector-10, First Floor, Ambala City, Haryana - 134003 | Jkexim.2019@gmail.com |
+| 6. | M/s Advance Hi-Tech, , Bahadurgarh, Jhajjar, Haryana - 124507. | Aniljindal.sig@gmail.com |
+| 7. | M/s Tayal & amp; Co. D- 85, Phase VII, SAS Nagar, Mohali, Punjab. | info@tayalco.com |
+
+Sub: Provision of 2A MCB with limiter module and ensuring the Clause no. 1.7(Section-B) of specification no. RDSO/2008/CG-04(Rev-6) Amendment-1.
+Ref: This office letter of even no. dated 12.08.2024.
+
+Vide reference above, Suppliers/OEMs were already advised for ensuring separate conduits to improve reliability of FSDS system and provision 2A MCB as per RDSO letter no. EL/6.8.21 dated 15.07.2024. Accordingly, Zonal Railways were also advised to instruct the Suppliers/OEMs of FSDS system for ensuring the compliance.
+
+Further, for supply of 110 V DC to FSDS system, guidelines had already been issued by RDSO and informed to all concerned. The same are re-iterated for ready reference:
+
+(i) The control supply to the Fire Detection System will be provided from Terminal Block (TB) X1 of Switch Board Cabinet (SBC) for LHB AC coaches and TB-4 for ICF AC coaches as specified in RDSO letter no. MC/ACF/Fire Detection/AC dated 12.08.2024. In this regard, a decision has been taken to standardize 2Amp circuit breaker with limiter module across all supplier.
+
+(ii) Positive and negative wire of 110 V DC supply shall be segregated by placing them in separate conduits as specified in subject specification.
+
+(iii) Standardized location of FSDS system to be ensured as advised in RDSO letter no. MC/ACF/Fire Detection/AC dated 27.07.2024.
+
+In view of the above, Suppliers/OEMs are advised to ensure the above works at Zonal Railways and upgrade the FSDS system as mentioned above. In this regard a google sheet is prepared for status monitoring of above works at Zonal Railways. Suppliers/OEMs are advised to fill the shared google sheet weekly for submission of status to Railway Board. The above works are treated as urgent and important. The link of google sheet for status monitoring is as under:
+
+https://docs.google.com/spreadsheets/d/10uUPLW9NztW4fZbfeGibwsQFS0w21ARPdmGXse4Jn9w/edit?usp=sharing
+
+DA: Nil
+
+Anurag 08.10.2024
+(Anurag Malik)
+Jt. Director/SS/Carriage
+
+Copy to: JDME/Railway Board, New Delhi - for kind information please

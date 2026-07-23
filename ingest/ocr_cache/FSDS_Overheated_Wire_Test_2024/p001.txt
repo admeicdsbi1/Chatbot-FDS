@@ -1,0 +1,49 @@
+भारत सरकार – रेल मंत्रालय
+अनुसंधान अभिकल्प और मानक संगठन
+लखनऊ – 226 011
+EPBX (0522) 2451200
+Fax (0522) 2458500
+
+Government of India - Ministry of Railways
+Research Designs & Standards Organisation
+Lucknow – 226 011
+DID (0522) 2450115
+DID (0522) 2465310
+
+MC/ACF/Fire Detection/AC
+Date- 13.06.2024
+
+Principal Chief Mechanical Engineer,
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| 1. | मध्य रेलवे, छत्रपति शिवाजी टर्मिनस, मुम्बई - 400 001. | 12. | उत्तर मध्य रेलवे, हास्टिंग रोड, इलाहाबाद -211 001. |
+| 2. | पूर्व रेलवे, फेयरली प्लेस, कोलकाता - 700 001. | 13. | उत्तर पश्चिम रेलवे, जयपुर - 302 006. |
+| 3. | उत्तर रेलवे, बड़ौदा हाउस, नई दिल्ली - 110 001. | 14. | दक्षिण पश्चिम रेलवे, हुबली - 580 023. |
+| 4. | दक्षिण रेलवे, पार्क टाउन, चेन्नई - 600 003. | 15. | पश्चिम मध्य रेलवे, जबलपुर - 482 001. |
+| 5. | दक्षिण मध्य रेलवे, रेल निलयम, सिकन्दराबाद-500 071. | 16. | दक्षिण पूर्व मध्य रेलवे, आर ई आफिस काम्प्लेक्स, बिलासपुर - 495 004. |
+| 6. | दक्षिण पूर्व रेलवे, गार्डन रीच, कोलकाता - 700 043. | 17. | इन्टीगरल कोच फैक्टरी, चेन्नई - 600 038. |
+| 7. | पूर्वोत्तर रेलवे, गोरखपुर - 273 012. | 18. | रेल कोच फैक्टरी, हुसैनपुर, कपूरथला - 144 602. |
+| 8. | पूर्वोत्तर सीमान्त रेलवे, मालीगाँव, गुवाहाटी - 781 011. | 19. | बी.ई.एम.एल., बेंगलूर काम्प्लेक्स, न्यू थिप्पासान्द्रा, पोस्ट बाक्स न. 7501, बेंगलूर - 560 075. |
+| 9. | पश्चिम रेलवे, चर्चगेट, मुम्बई - 400 020. | 20. | कोंकण रेलवे कारपोरेशन लि., कारपोरेट आफिस, बेलापुर भवन, नवी मुम्बई - 400 614. |
+| 10. | पूर्व मध्य रेलवे, हाजीपुर - 844 101. | 21. | माडर्न कोच फैक्टरी रायबरेली -229206 |
+| 11. | पूर्व तटीय रेलवे, बीडीए रेंटल कालोनी, रेलवे काम्प्लेक्स, चन्द्रशेखरपुरा, भुवनेश्वर, उड़ीसा - 751 016. | | |
+
+Sub:- Over heated wire test for FSDS fitted in IR AC Coaches as per specification no. RDSO/2008/CG-04/(Rev-06).
+
+Clause 11.4 of RDSO specification no. RDSO/2008/CG-04/(Rev-06) contains the proforma for testing of automatic smoke/ fire detection system during installation and commissioning on a designated coach.
+
+The proforma contains following tests which are to be carried out during commissioning
+i. Smoke detection test for each sampling point.
+ii. Checking of the threshold value.
+iii. Airflow monitoring test.
+iv. Testing of Brake application.
+v. Hot wire test.
+
+During a recent fire incidence, the FSDS system was found not properly installed which indicates that installation & commissioning was carried out without completing all the tests as mentioned in the proforma.
+
+Further, Hot wire test is an important test for testing of the FSDS system by simulating electrical fire and accordingly Zonal Railways must ensure that all the test as per clause no 11.4 of RDSO spec no. RDSO/2008/CG-04/(Rev-06) including Hot wire test are carried out during installation & commissioning of FSDS system on designated coaches.
+
+In view of above, following corrective action should be taken with immediate effect for improving reliability of FSDS system:
+
+1. Zonal Railways to ensure complete testing of the system as per proforma at the time of installation & commissioning of FSDS system on a coach. Drive is already

@@ -1,0 +1,33 @@
+Annexure-A
+
+Guidelines for upgradation of FDSS system as per Amendment-1 of RDSO specification no. IS/RDSO/CG/S/22001 in existing Pantry car & Generator cum brake van of IR coaches (ICF and LHB design):
+
+A. Design requirement
+1. The supplier will carry out all required works and activities with regard to design, testing and commissioning of upgradation work for automatic fire detection cum suppression system (FDSS) as per IS/RDSO/CG/S/22001 for provision of additional functionalities as specified in Amendment-1 i.e. provision of common interface, standard Data format and error codes etc. The Amendment-1 of IS/RDSO/CG/S/22001 shall be considered for guidance for upgradation work and will include following:
+a) Provision of Common interface/screen for status monitoring & data downloading having provision for various indications. Schematic of the same is as under:
+
+| NAME OF FIRM |
+| :--- |
+| 1 | 2 | 3 |
+| [Green Light] | [Red Light] | [Red Light] |
+| 4 | 5 | 6 |
+| [Red Light] | [Red Light] | [USB Port] |
+
+150mmX100mm
+
+1. POWER ON
+2. ISOLATION OF NITROGEN CYLINDER
+3. SMOKE ALERT
+4. HEAT ALERT FROM DG AREA
+5. HEAT ALERT FROM LUGGAGE AREA
+6. USB 2.0 port
+
+The size of common interface panel should be within 150mmX100mm for indications & data download panel. Indicators should be 22mm Panel mounted LED indicators (pilot light) and USB port should be covered with protective cover to avoid ingress of dust.
+
+b) The luggage compartment of power car will be protected with Linear Heat Detector (LHD) cable. Activation of suppression system would take place automatically in luggage area whenever fire signal is received from luggage compartment. Provision of High pressure water mist based fire suppression system along with associated piping, solenoid valves, sectioning valves, nozzles etc. in luggage area of power car is included in scope of supply.
+
+c) Provision of High pressure water mist based fire suppression system along with associated piping, solenoid valves, sectioning valves, nozzles is also to be provided in escorting staff area/storage area of Pantry car.
+
+d) On activation of smoke alarm through smoke detector in escorting staff area/ storage area of Pantry car, the fire suppression is to be activated manually in the escorting staff area/ storage area of Pantry car only after shutting down of DG set/power supply. Thus the system should have the capability to differentiate the location of fire alarm and sectioning valves
+
+Page 1 of 4

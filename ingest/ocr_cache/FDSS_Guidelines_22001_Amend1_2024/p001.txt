@@ -1,0 +1,39 @@
+भारत सरकार - रेल मंत्रालय
+अनुसंधान अभिकल्प और मानक संगठन
+लखनऊ - 226 011
+EPBX (0522) 2451200
+Fax (0522) 2458500
+Government of India - Ministry of Railways
+Research Designs & Standards Organisation
+Lucknow - 226 011
+DID (0522) 2450115
+DID (0522) 2465310
+आज़ादी का अमृत महोत्सव
+G20
+भारत 2023 INDIA
+
+MC/ACF/fire supprn/PC
+Dated 29.11.2024
+
+PED/Mech. (EnHM & Proj.)
+Railway Board
+New Delhi – 110 001.
+
+Sub: Guidelines for upgradation of Automatic fire detection cum suppression system (FDSS) as specified in Amendment-1 as per IS/RDSO/CG/S/22001 for existing Pantry car & Generator cum brake van of IR coaches (ICF and LHB design).
+Ref: This office letter no. MC/ACF/Fire Supprn/PC dated 09.09.2024.
+
+1. Based upon the feedback of Zonal Railways and detailed discussions with stakeholders, RDSO has amended the specification no. IS/RDSO/CG/S/22001 duly addressing the issues pointed out by ZRs. Following main features have been incorporated in Amendment-1 of RDSO specification no. IS/RDSO/CG/S/22001 issued on 09.09.24.
+a) Provision of Common interface/screen for status monitoring & standard format/error codes for data downloading through USB.
+b) Audio indication along with capturing of isolation/disconnection of Nitrogen cylinder in data log.
+c) The extension of automatic fire suppression system in the luggage area of power car and manual suppression system in the escorting staff area of power car/ storage area of pantry cars of IR coaches.
+
+2. PUs have already been advised that all future procurement of FDSS system for IR Pantry car & Generator cum brake van of IR coaches will be with the amended specification however the upgradations incorporated in the amended specification are retrofittable & the features incorporated are for ease in system monitoring and maintenance as well as to improve reliability and thus, are recommended for being implemented in existing IR coaches also.
+
+3. Railway Board is requested to nominate any of the PU as nodal to carry out awarding of the work related with upgradation of FDSS systems through OEM/Suppliers in existing IR Pantry car & Generator cum brake van of IR coaches. It is accordingly advised that nominated PU may carryout supplier wise census of coaches and work orders should be issued accordingly. Approval of design documents as well as prototype approval will be carried out by RDSO.
+
+4. Detailed guidelines are prepared for the same and are enclosed at Annexure-A.
+
+(Gaurav Kumar Singh)
+Exe. Director Carriage – II
+
+Cc: EDME (Safety), Railway Board, New Delhi – for information please

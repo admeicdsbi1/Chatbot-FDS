@@ -1,0 +1,18 @@
+Annexure-1
+
+Steps to follow for Isolating the Battery of the Power panel ( FDS)
+
+[Image: A photograph of an electrical panel containing batteries, a Wago terminal block, and a Schneider MCB.]
+
+- Wago Terminal No 1
+- MCB
+
+Picture -1
+
+1. Isolate the Brake Valve pneumatically situated on the underframe. As shown in the Picture Below
+
+[Image: Two photos showing a valve handle. Left: "HANDLE POSITION TO OPEN" with a yellow arrow pointing right. Right: "HANDLE POSITION TO ISOLATE BRAKE VALVE" with a yellow arrow showing a clockwise rotation.]
+
+2. Drop the MCB to down Position to switch off 110 V power Supply
+3. Remove Cable form Wago terminal No 1 and apply insulation tape on the exposed end.
+4. For reinstating the Battery re join same cable at Wago terminal No 1 and switch on the MCB for reinstating 110 V DC power supply.
