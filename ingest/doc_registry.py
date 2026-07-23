@@ -1,14 +1,39 @@
 """
-doc_registry.py — hand-written registry of the 10 source PDFs.
+doc_registry.py — hand-written registry of the source PDFs.
 
 doc_id values for documents already in the old KB are kept identical so chunk
 provenance stays comparable across rebuilds. `system` drives the FSDS/FDSS/WSP
 tags; `default_oem` stamps single-OEM manuals so rag.py's OEM boost works.
 Nothing is inferred from filenames (some are WhatsApp exports).
+
+Routing + provenance fields (added for the multi-manual scale-up — used by
+retrieval routing, supersession/recency, and clause-level citation):
+  coach_type : list of applicable coaches — LHB / ICF / Vande Bharat /
+               Amrit Bharat / common. Drives cross-manual disambiguation.
+  subsystem  : finer than `system` (e.g. "fire detection", "wheel slide
+               protection", later "brakes", "bogie", "electrical", "HVAC").
+  issue_date : ISO 'YYYY-MM-DD' (or 'YYYY-MM') of issue/revision — reformatted
+               from `source`, NOT invented. Newest wins on a value conflict.
+  revision   : document revision label as printed.
+  letter_no  : circular / SMI / manual reference number, for citations.
+  supersedes : doc_ids whose values this document overrides. Leave [] unless the
+               supersession is explicit in the document — a mechanical engineer
+               should confirm before adding, as it changes which value is quoted.
 """
 import os
 
 DOCUMENTS_ROOT = os.path.join(os.path.dirname(__file__), "..", "Documents")
+
+# Applied by `full()` so every consumer sees the complete schema even for rows
+# that omit an optional routing/provenance field.
+_DEFAULTS = {
+    "coach_type": [],
+    "subsystem": "",
+    "issue_date": "",
+    "revision": "",
+    "letter_no": "",
+    "supersedes": [],
+}
 
 REGISTRY = [
     {
@@ -19,6 +44,11 @@ REGISTRY = [
         "source": "IRCAMTECH/GWL/M/FSDS/FDSS/1.0, October 2024",
         "system": "FSDS",
         "default_oem": None,
+        "coach_type": ["LHB", "ICF"],
+        "subsystem": "fire detection",
+        "issue_date": "2024-10",
+        "revision": "1.0",
+        "letter_no": "IRCAMTECH/GWL/M/FSDS/FDSS/1.0",
     },
     {
         "doc_id": "IRCAMTECH_FSDS_FDSS_Vol1",
@@ -28,6 +58,11 @@ REGISTRY = [
         "source": "IRCAMTECH/GWL/M/FSDS/FDSS/1.0, October 2024",
         "system": "FSDS",
         "default_oem": None,
+        "coach_type": ["Vande Bharat", "Amrit Bharat"],
+        "subsystem": "fire detection",
+        "issue_date": "2024-10",
+        "revision": "1.0",
+        "letter_no": "IRCAMTECH/GWL/M/FSDS/FDSS/1.0",
     },
     {
         "doc_id": "MC_ACF_MCB_2A_Standardization",
@@ -37,6 +72,12 @@ REGISTRY = [
         "source": "RDSO MC/ACF/Fire Detection/AC, 01.10.2024 & 12.08.2024",
         "system": "FSDS",
         "default_oem": None,
+        "coach_type": ["common"],
+        "subsystem": "fire detection",
+        "issue_date": "2024-10-01",
+        "revision": "",
+        "letter_no": "RDSO MC/ACF/Fire Detection/AC",
+        "supersedes": [],
     },
     {
         "doc_id": "MC_ACF_FSDS_Guideline",
@@ -46,6 +87,11 @@ REGISTRY = [
         "source": "RDSO MC/ACF/Fire Detection/AC",
         "system": "FSDS",
         "default_oem": None,
+        "coach_type": ["common"],
+        "subsystem": "fire detection",
+        "issue_date": "",
+        "revision": "",
+        "letter_no": "RDSO MC/ACF/Fire Detection/AC",
     },
     {
         "doc_id": "FSDS_Dead_Attach_Operationalisation",
@@ -55,6 +101,11 @@ REGISTRY = [
         "source": "Railway circular, 06.06.2024",
         "system": "FSDS",
         "default_oem": None,
+        "coach_type": ["common"],
+        "subsystem": "fire detection",
+        "issue_date": "2024-06-06",
+        "revision": "",
+        "letter_no": "",
     },
     {
         "doc_id": "RDSO_Fire_Properties_Testing",
@@ -64,6 +115,11 @@ REGISTRY = [
         "source": "RDSO Lucknow MC/Testing, 24.06.2022",
         "system": "FSDS",
         "default_oem": None,
+        "coach_type": ["common"],
+        "subsystem": "fire properties testing",
+        "issue_date": "2022-06-24",
+        "revision": "",
+        "letter_no": "RDSO Lucknow MC/Testing",
     },
     {
         "doc_id": "IRCAMTECH_WSP_Handbook",
@@ -73,6 +129,11 @@ REGISTRY = [
         "source": "IRCAMTECH/2011/Mech/WSP/1.0, August 2011",
         "system": "WSP",
         "default_oem": None,
+        "coach_type": ["LHB"],
+        "subsystem": "wheel slide protection",
+        "issue_date": "2011-08",
+        "revision": "1.0",
+        "letter_no": "IRCAMTECH/2011/Mech/WSP/1.0",
     },
     {
         "doc_id": "Faiveley_AEF_G2_WSP",
@@ -82,6 +143,11 @@ REGISTRY = [
         "source": "FT0027800-003 E00 MUM Rev A01, 26/02/2019, Faiveley/Wabtec",
         "system": "WSP",
         "default_oem": "FAIVELEY",
+        "coach_type": ["LHB"],
+        "subsystem": "wheel slide protection",
+        "issue_date": "2019-02-26",
+        "revision": "A01",
+        "letter_no": "FT0027800-003 E00 MUM",
     },
     {
         "doc_id": "KB_CMG_WSP_Presentation",
@@ -91,6 +157,11 @@ REGISTRY = [
         "source": "Knorr-Bremse Group, 14th CMG Meeting PURI, September 2014, Rajiv Agarwal",
         "system": "WSP",
         "default_oem": "KNORR BREMSE",
+        "coach_type": ["LHB"],
+        "subsystem": "wheel slide protection",
+        "issue_date": "2014-09",
+        "revision": "",
+        "letter_no": "",
     },
     {
         "doc_id": "Escorts_Kubota_WSP_GUI",
@@ -100,8 +171,18 @@ REGISTRY = [
         "source": "Escorts Kubota Limited (Railway Equipment Division), 2024",
         "system": "WSP",
         "default_oem": "ESCORTS KUBOTA",
+        "coach_type": ["LHB"],
+        "subsystem": "wheel slide protection",
+        "issue_date": "2024",
+        "revision": "4.1",
+        "letter_no": "",
     },
 ]
+
+
+def full(entry):
+    """Entry with all routing/provenance keys present (defaults applied)."""
+    return {**_DEFAULTS, **entry}
 
 
 def pdf_path(entry):

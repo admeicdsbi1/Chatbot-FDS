@@ -1,6 +1,9 @@
 """
-chunker.py — section-aware chunking that emits the exact 14-key schema the
-backend already consumes (see backend/data/chunks_merged.jsonl).
+chunker.py — section-aware chunking that emits the schema the backend consumes
+(see backend/data/chunks_merged.jsonl): the original 14 keys plus routing/
+provenance keys (coach_type, subsystem, issue_date, revision, letter_no) carried
+from the registry entry. All keys are read defensively in the backend, so older
+committed chunks that lack the new keys keep working.
 
 Text: packed into chunks of ~900-1200 chars (hard max 1600) with ~150-char
 sentence overlap inside a section. Tables: never split mid-row; the markdown
@@ -146,6 +149,13 @@ def chunk_document(sections, entry, tagger):
                 "total_chunks_in_section": total,
                 "tags": tags,
                 "oem": oem,
+                # routing + provenance (see doc_registry) — used by retrieval
+                # routing, supersession/recency, and clause-level citation
+                "coach_type": entry.get("coach_type", []),
+                "subsystem": entry.get("subsystem", ""),
+                "issue_date": entry.get("issue_date", ""),
+                "revision": entry.get("revision", ""),
+                "letter_no": entry.get("letter_no", ""),
                 "text": text,
                 "char_count": len(text),
             })
