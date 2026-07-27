@@ -21,9 +21,16 @@ _ENABLED = os.environ.get("RERANK_ENABLED", "0") == "1"
 SNIPPET_CHARS = int(os.environ.get("RERANK_SNIPPET_CHARS", "320"))
 URL = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent"
 
+# Groq fallback (separate free quota): when Gemini is throttled, rerank stays
+# alive here instead of silently dropping to plain hybrid order — so retrieval
+# precision does NOT degrade under Gemini quota pressure.
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
+GROQ_MODEL = os.environ.get("RERANK_GROQ_MODEL", "llama-3.3-70b-versatile")
+GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
+
 
 def enabled():
-    return _ENABLED and bool(API_KEY)
+    return _ENABLED and (bool(API_KEY) or bool(GROQ_API_KEY))
 
 
 def rerank(query, candidates, pool=30):
@@ -53,7 +60,25 @@ def rerank(query, candidates, pool=30):
     return reordered + tail
 
 
-def _ask(prompt, n):
+def _parse_order(txt, n):
+    """Extract a valid, unique, in-range index order from the model's reply."""
+    if not txt:
+        return None
+    m = re.search(r"\[[\d,\s]*\]", txt)
+    if not m:
+        return None
+    seen, out = set(), []
+    for x in re.findall(r"\d+", m.group(0)):
+        i = int(x)
+        if 0 <= i < n and i not in seen:
+            seen.add(i)
+            out.append(i)
+    return out or None
+
+
+def _ask_gemini(prompt, n):
+    if not API_KEY:
+        return None
     payload = {
         "contents": [{"role": "user", "parts": [{"text": prompt}]}],
         "generationConfig": {"temperature": 0.0, "maxOutputTokens": 200,
@@ -62,23 +87,40 @@ def _ask(prompt, n):
     try:
         r = requests.post(URL, params={"key": API_KEY}, json=payload, timeout=30)
         if r.status_code != 200:
-            print(f"rerank {r.status_code}: {r.text[:120]}")
+            print(f"rerank(gemini) {r.status_code}: {r.text[:120]}")
             return None
         cands = r.json().get("candidates", [])
-        if not cands:
-            return None
         txt = "".join(p.get("text", "")
-                      for p in cands[0].get("content", {}).get("parts", []))
-        m = re.search(r"\[[\d,\s]*\]", txt)
-        if not m:
-            return None
-        seen, out = set(), []
-        for x in re.findall(r"\d+", m.group(0)):
-            i = int(x)
-            if 0 <= i < n and i not in seen:
-                seen.add(i)
-                out.append(i)
-        return out or None
+                      for p in cands[0].get("content", {}).get("parts", [])) if cands else ""
+        return _parse_order(txt, n)
     except Exception as e:
-        print(f"rerank error: {e}")
+        print(f"rerank(gemini) error: {e}")
         return None
+
+
+def _ask_groq(prompt, n):
+    if not GROQ_API_KEY:
+        return None
+    payload = {
+        "model": GROQ_MODEL,
+        "messages": [{"role": "user", "content": prompt}],
+        "max_tokens": 200, "temperature": 0.0, "stream": False,
+    }
+    try:
+        r = requests.post(GROQ_URL, headers={
+            "Authorization": f"Bearer {GROQ_API_KEY}",
+            "Content-Type": "application/json"}, json=payload, timeout=30)
+        if r.status_code != 200:
+            print(f"rerank(groq) {r.status_code}: {r.text[:120]}")
+            return None
+        choices = r.json().get("choices", [])
+        txt = choices[0]["message"]["content"] if choices else ""
+        return _parse_order(txt, n)
+    except Exception as e:
+        print(f"rerank(groq) error: {e}")
+        return None
+
+
+def _ask(prompt, n):
+    """Gemini first, then Groq (separate quota) so rerank survives throttling."""
+    return _ask_gemini(prompt, n) or _ask_groq(prompt, n)

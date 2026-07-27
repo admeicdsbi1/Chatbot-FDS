@@ -12,18 +12,33 @@ import os
 import requests
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
-GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 
 # NOTE: gemini-2.5-flash 404s ("no longer available to new users") on keys
 # created after its sunset — verify with ListModels before changing this.
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash")
-GROQ_MODEL = os.environ.get("GROQ_MODEL", "llama-3.3-70b-versatile")
 
 GEMINI_URL = (
     f"https://generativelanguage.googleapis.com/v1beta/models/"
     f"{GEMINI_MODEL}:generateContent"
 )
-GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
+
+# OpenAI-compatible free fallback providers, tried in order AFTER Gemini. Each is
+# skipped unless its API key is set, so behaviour is unchanged until a key is
+# added — and every provider is a SEPARATE free-quota pool, so the chain both adds
+# resilience and multiplies effective free capacity. Answer text is provider-
+# agnostic, so this never affects retrieval accuracy.
+_OPENAI_PROVIDERS = [
+    {"name": "Groq", "key": os.environ.get("GROQ_API_KEY"),
+     "url": "https://api.groq.com/openai/v1/chat/completions",
+     "model": os.environ.get("GROQ_MODEL", "llama-3.3-70b-versatile")},
+    {"name": "OpenRouter", "key": os.environ.get("OPENROUTER_API_KEY"),
+     "url": "https://openrouter.ai/api/v1/chat/completions",
+     "model": os.environ.get("OPENROUTER_MODEL",
+                             "meta-llama/llama-3.3-70b-instruct:free")},
+    {"name": "Cerebras", "key": os.environ.get("CEREBRAS_API_KEY"),
+     "url": "https://api.cerebras.ai/v1/chat/completions",
+     "model": os.environ.get("CEREBRAS_MODEL", "llama-3.3-70b")},
+]
 
 MAX_TOKENS = int(os.environ.get("LLM_MAX_TOKENS", "1500"))
 TEMPERATURE = 0.1
@@ -113,8 +128,9 @@ def _gemini(question, context, lang_code, history):
         return None
 
 
-def _groq(question, context, lang_code, history):
-    if not GROQ_API_KEY:
+def _openai_chat(cfg, question, context, lang_code, history):
+    """Call any OpenAI-compatible chat endpoint (Groq / OpenRouter / Cerebras)."""
+    if not cfg["key"]:
         return None
     messages = [{"role": "system", "content": _system_prompt(lang_code)}]
     for m in _recent_history(history):
@@ -124,7 +140,7 @@ def _groq(question, context, lang_code, history):
         "content": f"CONTEXT:\n{context}\n\nQUESTION: {question}",
     })
     payload = {
-        "model": GROQ_MODEL,
+        "model": cfg["model"],
         "messages": messages,
         "max_tokens": MAX_TOKENS,
         "temperature": TEMPERATURE,
@@ -132,36 +148,40 @@ def _groq(question, context, lang_code, history):
     }
     try:
         r = requests.post(
-            GROQ_URL,
+            cfg["url"],
             headers={
-                "Authorization": f"Bearer {GROQ_API_KEY}",
+                "Authorization": f"Bearer {cfg['key']}",
                 "Content-Type": "application/json",
             },
             json=payload, timeout=60,
         )
         if r.status_code != 200:
-            print(f"Groq {r.status_code}: {r.text[:200]}")
+            print(f"{cfg['name']} {r.status_code}: {r.text[:200]}")
             return None
-        data = r.json()
-        choices = data.get("choices", [])
+        choices = r.json().get("choices", [])
         if not choices:
             return None
         return choices[0]["message"]["content"].strip() or None
     except Exception as e:
-        print(f"Groq error: {e}")
+        print(f"{cfg['name']} error: {e}")
         return None
 
 
 def generate_answer(question, context, lang_code="en", history=None):
-    """Generate an answer. Tries Gemini first, falls back to Groq."""
-    if not GEMINI_API_KEY and not GROQ_API_KEY:
-        return "⚠️ No LLM configured. Set GEMINI_API_KEY or GROQ_API_KEY."
+    """Generate an answer. Tries Gemini first, then each configured OpenAI-
+    compatible fallback provider (Groq → OpenRouter → Cerebras) in turn."""
+    if not GEMINI_API_KEY and not any(p["key"] for p in _OPENAI_PROVIDERS):
+        return ("⚠️ No LLM configured. Set GEMINI_API_KEY or a fallback provider "
+                "key (GROQ_API_KEY / OPENROUTER_API_KEY / CEREBRAS_API_KEY).")
 
     ans = _gemini(question, context, lang_code, history)
     if ans:
         return ans
-    print("Gemini unavailable — falling back to Groq")
-    ans = _groq(question, context, lang_code, history)
-    if ans:
-        return ans
+    for cfg in _OPENAI_PROVIDERS:
+        if not cfg["key"]:
+            continue
+        print(f"Gemini unavailable — falling back to {cfg['name']}")
+        ans = _openai_chat(cfg, question, context, lang_code, history)
+        if ans:
+            return ans
     return "⚠️ AI summary unavailable right now. Please rely on the source text below."

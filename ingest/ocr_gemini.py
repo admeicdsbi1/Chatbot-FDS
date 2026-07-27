@@ -36,6 +36,13 @@ MODEL = os.environ.get("GEMINI_OCR_MODEL", "gemini-3.1-flash-lite")
 URL = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent"
 SLEEP = float(os.environ.get("GEMINI_OCR_SLEEP", "5"))
 
+# Groq-vision fallback (separate free quota): used only when the Gemini OCR call
+# fails/throttles, so ingestion isn't blocked by one provider's daily limit. Same
+# transcription prompt, so OCR quality/handling is unchanged when it does run.
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
+GROQ_OCR_MODEL = os.environ.get("GROQ_OCR_MODEL", "meta-llama/llama-4-scout-17b-16e-instruct")
+GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
+
 PROMPT = """Transcribe ALL text visible in this scanned page from an Indian Railways maintenance manual (FSDS fire detection / WSP wheel slide protection).
 
 Rules:
@@ -70,11 +77,9 @@ def qualifying_pages(entry):
     return out
 
 
-def ocr_page(entry, page_no):
-    doc = fitz.open(pdf_path(entry))
-    pix = doc[page_no - 1].get_pixmap(matrix=fitz.Matrix(2, 2))
-    png = pix.tobytes("png")
-    doc.close()
+def _ocr_gemini(png):
+    if not GEMINI_API_KEY:
+        return None
     payload = {
         "contents": [{"role": "user", "parts": [
             {"inline_data": {"mime_type": "image/png",
@@ -94,12 +99,47 @@ def ocr_page(entry, page_no):
             return "".join(p.get("text", "") for p in parts).strip() or None
         if r.status_code in (429, 500, 503):
             wait = min(2 ** attempt * 5, 60)
-            print(f"    {r.status_code}, retrying in {wait}s")
+            print(f"    gemini {r.status_code}, retrying in {wait}s")
             time.sleep(wait)
             continue
-        print(f"    OCR failed {r.status_code}: {r.text[:160]}")
+        print(f"    gemini OCR failed {r.status_code}: {r.text[:160]}")
         return None
     return None
+
+
+def _ocr_groq(png):
+    if not GROQ_API_KEY:
+        return None
+    data_url = "data:image/png;base64," + base64.b64encode(png).decode()
+    payload = {
+        "model": GROQ_OCR_MODEL,
+        "messages": [{"role": "user", "content": [
+            {"type": "text", "text": PROMPT},
+            {"type": "image_url", "image_url": {"url": data_url}},
+        ]}],
+        "temperature": 0.0, "max_tokens": 4000, "stream": False,
+    }
+    try:
+        r = requests.post(GROQ_URL, headers={
+            "Authorization": f"Bearer {GROQ_API_KEY}",
+            "Content-Type": "application/json"}, json=payload, timeout=120)
+        if r.status_code != 200:
+            print(f"    groq OCR failed {r.status_code}: {r.text[:160]}")
+            return None
+        choices = r.json().get("choices", [])
+        return choices[0]["message"]["content"].strip() if choices else None
+    except Exception as e:
+        print(f"    groq OCR error: {e}")
+        return None
+
+
+def ocr_page(entry, page_no):
+    doc = fitz.open(pdf_path(entry))
+    pix = doc[page_no - 1].get_pixmap(matrix=fitz.Matrix(2, 2))
+    png = pix.tobytes("png")
+    doc.close()
+    # Gemini first; on failure/throttle fall back to Groq vision (separate quota).
+    return _ocr_gemini(png) or _ocr_groq(png)
 
 
 def main():
