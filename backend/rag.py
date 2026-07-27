@@ -9,6 +9,7 @@ from collections import Counter
 import numpy as np
 
 import embed
+import rerank
 from voice_text import (
     ABBREVIATIONS, PROCEDURAL_SIGNALS, HINGLISH_TO_ENGLISH,
 )
@@ -21,6 +22,7 @@ EMB_CACHE = os.path.join(_DATA_DIR, "embeddings.npy")
 TOP_K_SEMANTIC = int(os.environ.get("TOP_K_SEMANTIC", "40"))
 TOP_K_FINAL = int(os.environ.get("TOP_K_FINAL", "8"))
 CTX_CHUNK_CHARS = int(os.environ.get("CTX_CHUNK_CHARS", "2500"))
+RERANK_POOL = int(os.environ.get("RERANK_POOL", "30"))
 
 # ---- Module state (populated by init_kb) ----
 chunks = []
@@ -178,6 +180,111 @@ def detect_query_oem(query):
     return None
 
 
+def detect_query_coach(query):
+    """Detect if the query names a coach type."""
+    ql = query.lower()
+    coach_patterns = {
+        "LHB": [r'\blhb\b'],
+        "ICF": [r'\bicf\b'],
+        "Vande Bharat": [r'\bvande\s*bharat\b', r'\bt-?18\b'],
+        "Amrit Bharat": [r'\bamrit\s*bharat\b'],
+    }
+    for coach, patterns in coach_patterns.items():
+        for p in patterns:
+            if re.search(p, ql):
+                return coach
+    return None
+
+
+CLARIFY_ENABLED = os.environ.get("CLARIFY_ENABLED", "1") == "1"
+CLARIFY_TOPN = int(os.environ.get("CLARIFY_TOPN", "3"))
+
+
+def clarification_needed(query, excerpts):
+    """Return a short clarifying question when the query gives NO coach/OEM signal
+    yet the top excerpts genuinely span conflicting coach types or OEMs — otherwise
+    None. Users usually describe only a symptom; blending specs across coaches/OEMs
+    would be a safety issue, so asking is safer than guessing.
+
+    Kept deliberately conservative to avoid over-asking:
+      - only the top CLARIFY_TOPN results are considered;
+      - if any of them is an IR-wide ('common') source, that answers all coaches,
+        so we do NOT ask (e.g. a standardised-value circular resolves the query);
+      - the conflict must come from >=2 DISTINCT documents, so a single manual that
+        merely lists several coach types does not by itself trigger a question.
+
+    Inert until chunks carry coach_type/oem (i.e. after a KB rebuild), so it never
+    changes behaviour on the legacy committed KB."""
+    if not CLARIFY_ENABLED or not excerpts:
+        return None
+    if detect_query_oem(query) or detect_query_coach(query):
+        return None
+    top = [c for _, c in excerpts[:CLARIFY_TOPN]]
+    if any("common" in (c.get("coach_type") or []) for c in top):
+        return None
+
+    # coach types, but only when contributed by >=2 distinct documents (a lone
+    # multi-coach manual is not a cross-source conflict)
+    coach_docs = {}
+    for c in top:
+        for ct in (c.get("coach_type") or []):
+            if ct and ct != "common":
+                coach_docs.setdefault(ct, set()).add(c.get("doc_id"))
+    coaches = set(coach_docs)
+    oems = {c.get("oem") for c in top if c.get("oem")}
+    n_coach_docs = len({d for docs in coach_docs.values() for d in docs})
+
+    parts = []
+    if len(coaches) >= 2 and n_coach_docs >= 2:
+        parts.append("coach type (" + " / ".join(sorted(coaches)) + ")")
+    if len(oems) >= 2:
+        parts.append("OEM (" + " / ".join(sorted(oems)) + ")")
+    if not parts:
+        return None
+    return ("To give you the correct values, please tell me the "
+            + " and ".join(parts) + " for your equipment.")
+
+
+def _recency_factor(ch):
+    """Gentle boost so a newer instruction letter edges ahead of an older manual
+    on otherwise-similar matches (supersession: latest governs). Circulars/SMIs
+    get a touch more since they override manual values. Bounded (~1.0–1.11) so it
+    never overrides genuine semantic relevance."""
+    d = ch.get("issue_date", "") or ""
+    if not d[:4].isdigit():
+        return 1.0
+    year = int(d[:4])
+    factor = 1.0 + max(0, min(year - 2010, 20)) * 0.004
+    dt = ch.get("doc_type", "") or ""
+    if "circular" in dt or "instruction" in dt:
+        factor += 0.03
+    return factor
+
+
+def _pool_is_ambiguous(cands):
+    """True when the top candidates span >1 coach type, OEM, or subsystem — the
+    case where a rerank most helps separate the right manual from lookalikes."""
+    top = [c for _, c in cands[:15]]
+    coaches = {ct for c in top for ct in (c.get("coach_type") or [])
+               if ct and ct != "common"}
+    oems = {c.get("oem") for c in top if c.get("oem")}
+    subs = {c.get("subsystem") for c in top if c.get("subsystem")}
+    return len(coaches) >= 2 or len(oems) >= 2 or len(subs) >= 2
+
+
+def _coach_factor(ch, query_coach):
+    """Route to the queried coach type: boost matches, demote a different coach
+    (but never demote 'common' documents that apply to all coaches)."""
+    if not query_coach:
+        return 1.0
+    cts = ch.get("coach_type") or []
+    if query_coach in cts:
+        return 1.5
+    if cts and "common" not in cts:
+        return 0.4
+    return 1.0
+
+
 def retrieve(query, k=TOP_K_FINAL):
     if not chunks:
         return []
@@ -186,6 +293,7 @@ def retrieve(query, k=TOP_K_FINAL):
     full_exp = exp + " " + hinglish_exp
     proc = is_procedural(query)
     query_oem = detect_query_oem(query)
+    query_coach = detect_query_coach(query)
     qv = embed_query(full_exp) if emb_matrix is not None else None
     if qv is None:
         qterms = set(re.findall(r'\b[a-zA-Z]{2,}\b', full_exp.lower()))
@@ -208,6 +316,8 @@ def retrieve(query, k=TOP_K_FINAL):
                     score *= 1.8
                 elif ch_oem and ch_oem != query_oem:
                     score *= 0.3
+            score *= _coach_factor(ch, query_coach)
+            score *= _recency_factor(ch)
             results.append((score, ch))
         results.sort(key=lambda x: -x[0])
         return results[:k]
@@ -256,18 +366,48 @@ def retrieve(query, k=TOP_K_FINAL):
                 score *= 1.8
             elif ch_oem and ch_oem != query_oem:
                 score *= 0.3
+        score *= _coach_factor(ch, query_coach)
+        score *= _recency_factor(ch)
         res.append((score, ch))
     res.sort(key=lambda x: -x[0])
+    # Optional flash-lite rerank, only when the pool spans several manuals (gated
+    # by RERANK_ENABLED; fail-safe to hybrid order otherwise).
+    if rerank.enabled() and _pool_is_ambiguous(res):
+        res = rerank.rerank(query, res, pool=RERANK_POOL)
     return res[:k]
+
+
+def _fmt_date(iso):
+    """ISO issue_date -> railway-style citation date. 2024-10-01 -> 01.10.2024;
+    2024-10 -> 10.2024; 2024 -> 2024. Anything unexpected passes through."""
+    if not iso:
+        return ""
+    parts = iso.split("-")
+    if len(parts) == 3:
+        return f"{parts[2]}.{parts[1]}.{parts[0]}"
+    if len(parts) == 2:
+        return f"{parts[1]}.{parts[0]}"
+    return iso
+
+
+def _cite_ref(c):
+    """Circular/manual reference string for a chunk: 'LETTER, dt. DD.MM.YYYY'."""
+    letter = c.get("letter_no", "")
+    dt = _fmt_date(c.get("issue_date", ""))
+    if letter and dt:
+        return f"{letter}, dt. {dt}"
+    return letter or (f"dt. {dt}" if dt else "")
 
 
 def build_context(excerpts):
     lines = []
     for i, (sc, c) in enumerate(excerpts, 1):
         sec = c.get("section", "")
+        clause = c.get("section_num", "")
         doc = c.get("title", c.get("doc_id", ""))
         pg = c.get("page_num", "")
         oem = c.get("oem", "")
+        coach = c.get("coach_type", []) or []
         raw = c.get("text", "").strip()
         if "|" in raw and "\n" in raw:
             # markdown table chunk — collapsing newlines would destroy the rows
@@ -277,9 +417,13 @@ def build_context(excerpts):
         if len(txt) > CTX_CHUNK_CHARS:
             txt = txt[:CTX_CHUNK_CHARS] + " …"
         h = f"[Source {i}: {doc}"
-        if sec: h += f" | {sec[:60]}"
+        sec_label = (f"Clause {clause} " if clause else "") + sec
+        if sec_label.strip(): h += f" | {sec_label.strip()[:70]}"
         if pg: h += f" | p.{pg}"
+        if coach: h += f" | Coach: {', '.join(coach)}"
         if oem: h += f" | OEM: {oem}"
+        ref = _cite_ref(c)
+        if ref: h += f" | Ref: {ref}"
         h += "]"
         lines.append(f"{h}\n{txt}")
     return "\n\n".join(lines)
@@ -290,12 +434,18 @@ def build_sources(excerpts):
     for _, c in excerpts:
         doc = c.get("title", c.get("doc_id", ""))
         sec = c.get("section", "")[:50]
+        clause = c.get("section_num", "")
         pg = c.get("page_num", "")
-        key = f"{doc}|{sec}"
+        key = f"{doc}|{clause}|{sec}"
         if key not in seen:
             seen.add(key)
             s = f"**{doc}**"
-            if sec: s += f" → {sec}"
+            loc = []
+            if clause: loc.append(f"Clause {clause}")
+            if sec: loc.append(sec)
+            if loc: s += " → " + " ".join(loc)
             if pg: s += f" (p.{pg})"
+            ref = _cite_ref(c)
+            if ref: s += f" — {ref}"
             parts.append(s)
     return "\n".join(f"- {p}" for p in parts)

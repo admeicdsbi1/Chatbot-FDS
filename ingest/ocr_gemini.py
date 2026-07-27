@@ -30,7 +30,9 @@ from parse_pdf import OCR_CACHE_DIR, WEAK_TEXT_CHARS, BIG_IMAGE_WH
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
-MODEL = os.environ.get("GEMINI_OCR_MODEL", "gemini-3.5-flash")
+# flash-lite keeps heavy multi-hundred-page OCR runs inside the daily free vision
+# quota; override to a larger model per-run if a batch of pages transcribes poorly.
+MODEL = os.environ.get("GEMINI_OCR_MODEL", "gemini-3.1-flash-lite")
 URL = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent"
 SLEEP = float(os.environ.get("GEMINI_OCR_SLEEP", "5"))
 

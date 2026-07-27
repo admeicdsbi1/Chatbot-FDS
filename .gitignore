@@ -15,6 +15,12 @@ venv/
 !.env.local.example
 Chatbot keys.txt
 backend/data/embeddings.partial.npy
+# incremental-embedding vector cache / checkpoint (local only; the committed
+# pair is chunks_merged.jsonl + embeddings.npy)
+backend/data/embeddings_cache.npz
+backend/data/embeddings_cache.npz.tmp.npz
+# eval candidates are unreviewed flash-lite drafts, not ground truth
+ingest/eval/eval_candidates.jsonl
 
 # ── Editor / OS / local agent settings ──
 .claude/

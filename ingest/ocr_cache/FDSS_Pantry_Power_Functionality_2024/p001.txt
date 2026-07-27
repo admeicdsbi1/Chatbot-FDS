@@ -1,0 +1,47 @@
+588
+
+भारत सरकार - रेल मंत्रालय
+Government of India-Ministry of Railways
+अनुसंधान अभिकल्प और मानक संगठन
+Research Designs & Standards Organisation
+लखनऊ - 226 011
+Lucknow - 226 011
+EPBX (0522) 2451200
+DID (0522) 2450115
+Fax (0522) 2458500
+DID (0522) 2465310
+
+MC/ACF/Fire Supprn/PC
+Date- 06.06.2024
+
+Principal Chief Mechanical Engineers
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| 1. | मध्य रेलवे, छत्रपति शिवाजी टर्मिनस, मुम्बई - 400 001. | 12. | उत्तर मध्य रेलवे, हास्टिंग रोड, इलाहाबाद - 211 001. |
+| 2. | पूर्व रेलवे, फेयरली प्लेस, कोलकाता - 700 001. | 13. | उत्तर पश्चिम रेलवे, जयपुर - 302 006. |
+| 3. | उत्तर रेलवे, बड़ौदा हाउस, नई दिल्ली - 110 001. | 14. | दक्षिण पश्चिम रेलवे, हुबली - 580 023. |
+| 4. | दक्षिण रेलवे, पार्क टाउन, चेन्नई - 600 003. | 15. | पश्चिम मध्य रेलवे, जबलपुर - 482 001. |
+| 5. | दक्षिण मध्य रेलवे, रेल निलयम, सिकन्दराबाद - 500 071. | 16. | दक्षिण पूर्व मध्य रेलवे, आर ई आफिस काम्प्लेक्स, बिलासपुर - 495 004. |
+| 6. | दक्षिण पूर्व रेलवे, गार्डन रीच, कोलकाता - 700 043. | 17. | इन्टीगरल कोच फैक्टरी, चेन्नई - 600 038. |
+| 7. | पूर्वोत्तर रेलवे, गोरखपुर - 273 012. | 18. | रेल कोच फैक्टरी, हुसैनपुर, कपूरथला - 144 602. |
+| 8. | पूर्वोत्तर सीमान्त रेलवे, मालीगाँव, गुवाहाटी - 781 011. | 19. | बीईएमएल, बेंगलूर काम्प्लेक्स, न्यू थिप्पासान्द्रा, पोस्ट बाक्स न. 7501, बेंगलूर - 560 075. |
+| 9. | पश्चिम रेलवे, चर्चगेट, मुम्बई - 400 020. | 20. | कोकण रेलवे कार्पोरेशन लि., कार्पोरेट आफिस, बेलापुर भवन, नवी मुम्बई - 400 614. |
+| 10. | पूर्व मध्य रेलवे, हाजीपुर - 844 101. | 21. | माडर्न कोच फैक्टरी रायबरेली - 229206 |
+| 11. | पूर्व तटीय रेलवे, बीडीए रेंटल कालोनी, रेलवे काम्प्लेक्स, चन्द्रशेखरपुरा, भुवनेश्वर, उड़ीसा - 751 016. | | |
+
+Sub: Functionality of automatic fire detection cum suppression system fitted in Pantry/Power cars.
+
+A fire incidence has taken place recently in Pantry Car No. 213650 of train no. 22805/06 ANVT BBS Exp while the train was stabled in yard of ANVT station. During subsequent examination it was found that solenoid valve of FDSS system was disconnected due to which the automatic fire suppression system could not get activated. Disconnection of solenoid valve is required only during testing of system during SS-1 schedule. Other than it, any such disconnection is not permitted.
+
+In this regard, RDSO is amending the relevant specification for including provision of audio alert in case of disconnection of solenoid valve. However, as an interim measure, sealing of solenoid valve and its intactness to be checked during primary maintenance. The sealing shall be acknowledged especially by Pantry Manager in pantry cars before departure of train from originating stations. The photographs for sealing are given below for ready reference. Though the work of providing sealing arrangement in Pantry & Power car should be completed on urgent basis, however pantry cars should be completed on priority.
+
+Further, RCF/KXH has already issued a CAI for Retro fitment of locking arrangement for isolating cock of Aspiration type smoke/Fire detection with Alarm system in LHB AC Coaches vide letter no. MD 46111 dated 22.05.2024 (copy enclosed). This work is also to be completed at earliest.
+
+DA: As above
+
+(Anurag Malik)
+Jt. Director/SS/Carriage
+06.06.24
+
+Copy to: JDME/Chg. Railway Board, Rail Bhawan, New Delhi - for kind information please

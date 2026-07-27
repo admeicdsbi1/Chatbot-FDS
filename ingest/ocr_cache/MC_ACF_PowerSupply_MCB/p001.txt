@@ -1,0 +1,48 @@
+भारत सरकार - रेल मंत्रालय
+Government of India - Ministry of Railways
+अनुसंधान अभिकल्प और मानक संगठन
+Research Designs & Standards Organisation
+लखनऊ - 226 011
+Lucknow - 226 011
+EPBX (0522) 2451200
+DID (0522) 2450115
+Fax (0522) 2458500
+DID (0522) 2465310
+
+MC/ACF/Fire Detection/AC
+Date- 12.08.2024
+
+Principal Chief Mechanical Engineer,
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| 1. | मध्य रेलवे, छत्रपति शिवाजी टर्मिनस, मुम्बई- 400 001. | 12. | उत्तर मध्य रेलवे, हास्टिंग रोड, इलाहाबाद -211 001. |
+| 2. | पूर्व रेलवे, फेयरली प्लेस, कोलकाता - 700 001. | 13. | उत्तर पश्चिम रेलवे, जयपुर - 302 006. |
+| 3. | उत्तर रेलवे, बड़ौदा हाउस, नई दिल्ली - 110 001. | 14. | दक्षिण पश्चिम रेलवे, हुबली - 580 023. |
+| 4. | दक्षिण रेलवे, पार्क टाउन, चेन्नई - 600 003. | 15. | पश्चिम मध्य रेलवे, जबलपुर - 482 001. |
+| 5. | दक्षिण मध्य रेलवे, रेल निलयम, सिकन्दराबाद-500 071. | 16. | दक्षिण पूर्व मध्य रेलवे, आर ई आफिस काम्प्लेक्स, बिलासपुर - 495 004. |
+| 6. | दक्षिण पूर्व रेलवे, गार्डन रीच, कोलकाता - 700 043. | 17. | इन्टीग्रल कोच फैक्टरी, चेन्नई - 600 038. |
+| 7. | पूर्वोत्तर रेलवे, गोरखपुर - 273 012. | 18. | रेल कोच फैक्टरी, हुसैनपुर, कपूरथला - 144 602. |
+| 8. | पूर्वोत्तर सीमान्त रेलवे, मालीगाँव, गुवाहाटी - 781 011. | 19. | बी.ई.एम.एल., बैंगलूर काम्प्लेक्स, न्यू थिप्पासान्द्रा, पोस्ट बाक्स न. 7501, बैंगलूर - 560 075. |
+| 9. | पश्चिम रेलवे, चर्चगेट, मुम्बई - 400 020. | 20. | कोंकण रेलवे कार्पोरेशन लि., कार्पोरेट आफिस, बेलापुर भवन, नवी मुम्बई - 400 614. |
+| 10. | पूर्व मध्य रेलवे, हाजीपुर - 844 101. | 21. | माडर्न कोच फैक्टरी रायबरेली .229206 |
+| 11. | पूर्व तटीय रेलवे, बीडीए रेंटल कालोनी, रेलवे काम्प्लेक्स, चन्द्रशेखरपुरा, भुवनेश्वर, उड़ीसा - 751 016. | | |
+
+Sub: Power supply and MCB of FSDS System.
+Ref: PS & EMU Directorate letter no. EL/6.8.21 dated 15.07.2024 (copy enclosed).
+
+1. Various cases have been reported by Zonal Railways wherein provision of MCB from power supply point to FSDS and separate conduits of positive and negative wire have not been done during installation of FSDS system. In this regard, relevant clauses of RDSO specification are reproduced below:
+
+Clause 8 (Section-A) of RDSO specification no. RDSO/2008/CG-04 deals with Supplier/OEM's responsibility. As per Clause 8.4 Supplier/OEM is responsible "For ensuring that the equipments/systems do not lead to unsafe or hazardous conditions for IR passengers & equipments".
+
+Further, as per clause 8.1 (Section-A) "The Supplier/OEM shall be completely responsible for the execution of the contract strictly in accordance with the terms of this specification and the conditions of contract, notwithstanding any approval which purchaser or the Inspecting Officer may have given".
+
+Above makes it amply clear that Supplier/OEM must ensure availability of all safety precaution while installing the FSDS system.
+
+2. Additionally, as per Clause 1.7 (Section-B) of spec no. RDSO/2008/CG-04(Rev-5) following needs to be ensured:
+
+a) The control supply to the Fire Detection System will be provided from Terminal Block (TB) X1 of Switch Board Cabinet (SBC) for LHB AC coaches and TB-4 for ICF AC coaches through DC MCB of adequate rating. The MCB shall be always in 'on' position.
+
+b) Positive and negative wire of 110 V DC supply shall be segregated by placing them in separate conduits.
+
+3. PS & EMU Directorate of RDSO have also issued clarification for provision of power supply and MCB for FSDS system (copy enclosed).

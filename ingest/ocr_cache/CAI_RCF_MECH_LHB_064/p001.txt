@@ -1,0 +1,45 @@
+रेल डिब्बा कारखाना, कपूरथला
+Rail Coach Factory, Kapurthala
+
+(Coach Alteration Instruction No. CAI/RCF/MECH/LHB/064)
+
+No. MD46111 
+Date 22.05.2024
+
+1. Description: Retro fitment of locking arrangement of isolating cock of Aspiration type smoke/ Fire detection with Alarm system in LHB AC Coaches.
+
+2. Ref: As per instructions of DG/Safety, Railway Board during visit to RCF, Kapurthala on 10.04.24.
+
+3. Reason for alteration: To prevent the tampering of isolating cock of Aspiration type smoke/ Fire detection with Alarm system in LHB type Coaches.
+
+4. Coach type & Applicability of Drawing Number: All LHB AC coaches.
+
+5. To be carried out:
+
+| ✓ A | B |
+| :--- | :--- |
+| Tick A or B as applicable | |
+
+A. Modifications shall be implemented immediately by user Rlys.
+B. Modifications shall be implemented by user Rlys. as and when convenient.
+
+6. Special Instructions:
+i. Bracket should be properly clamped on brake pipe to prevent the unauthorized movement of lever of isolating cock.
+ii. All other required items already incorporated in the drawing as provided in MI008044.
+
+Enclosure: Drawing No's: MI008044 rev ‘Nil’
+
+(Signature)
+CDE/RCF - May kindly approve please.
+22/5
+
+(Signature)
+For General Manager (Mech.)
+25/5/24
+
+Copy to:
+All Principal Chief Mechanical Engineers of IR
+All Chief workshop Engineers of IR
+
+Principal Chief Mechanical Engineers :-
+1. Central Railway, Mumbai CST-400 001

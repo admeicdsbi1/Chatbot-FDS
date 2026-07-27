@@ -29,15 +29,23 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 DEFAULT_OUT = os.path.normpath(os.path.join(
     os.path.dirname(__file__), "..", "backend", "data", "chunks_merged.jsonl"))
 
-# Hard canaries fail the build; soft canaries only warn. "K05"/"off delay" are
-# soft: verified absent from all 10 source PDFs (text AND OCR'd diagrams) —
-# K-designations come from wiring schematics not included in Documents/.
-# Query-side aliasing (voice_text.ABBREVIATIONS) covers them instead.
-HARD_CANARIES = {
-    "failure/fault code": re.compile(r"\b(failure|fault)\s*codes?\b", re.I),
-    "data download": re.compile(r"\bdata\s+download\b", re.I),
-    "timer relay": re.compile(r"\btimer\s+relay\b", re.I),
+# Per-system HARD canaries — only enforced when a document of that `system` is
+# in the build, so adding a new manual family never fails on another system's
+# terms. Extend this dict when a new subsystem (brakes, bogie, electrical…) is
+# ingested so a silent extraction failure on that manual is caught early.
+SYSTEM_HARD_CANARIES = {
+    "FSDS": {
+        "failure/fault code": re.compile(r"\b(failure|fault)\s*codes?\b", re.I),
+        "data download": re.compile(r"\bdata\s+download\b", re.I),
+    },
+    "WSP": {
+        "timer relay": re.compile(r"\btimer\s+relay\b", re.I),
+        "dump/anti-skid valve": re.compile(r"\bdump\s+valve\b|\banti[- ]?skid\b", re.I),
+    },
 }
+# Soft canaries only warn. "K05"/"off delay" are soft: verified absent from all
+# source PDFs (text AND OCR'd diagrams) — K-designations come from wiring
+# schematics not in Documents/; query-side aliasing covers them instead.
 SOFT_CANARIES = {
     "K05": re.compile(r"\bK[\s\-]?05\b", re.I),
     "off delay": re.compile(r"\boff[\s\-]?delay\b", re.I),
@@ -92,7 +100,11 @@ def main():
     full_build = not args.only
     failures = []
     joined = "\n".join(c["text"] for c in all_chunks)
-    for name, pat in HARD_CANARIES.items():
+    systems_present = {e.get("system") for e in entries}
+    active_canaries = {}
+    for sysname in systems_present:
+        active_canaries.update(SYSTEM_HARD_CANARIES.get(sysname, {}))
+    for name, pat in active_canaries.items():
         n = len(pat.findall(joined))
         print(f"canary '{name}': {n} hits")
         if n == 0:

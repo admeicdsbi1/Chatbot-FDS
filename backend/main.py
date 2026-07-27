@@ -23,6 +23,7 @@ import rag
 import llm
 import stt
 import tts
+import verify
 from voice_text import detect_language
 
 # CORS: comma-separated origins via env, default allow-all for easy local dev.
@@ -105,14 +106,33 @@ def chat(req: ChatRequest):
             "retrieval_mode": rag.retrieval_mode(),
         }
 
+    # Symptoms-only query that would blend specs across coaches/OEMs → ask first.
+    clarify = rag.clarification_needed(question, excerpts)
+    if clarify:
+        log_usage(type="chat", question=question,
+                  retrieval_count=len(excerpts), lang=lang, clarify=True)
+        return {
+            "answer": clarify,
+            "sources": rag.build_sources(excerpts),
+            "retrieval_count": len(excerpts),
+            "lang": lang,
+            "retrieval_mode": rag.retrieval_mode(),
+            "clarify": True,
+        }
+
     ctx = rag.build_context(excerpts)
     history = [t.model_dump() for t in req.history]
     answer = llm.generate_answer(question, ctx, lang, history)
+    # Numeric-fidelity hard guard: suppress any technical value the answer states
+    # that is not present verbatim in the retrieved source (fail closed).
+    answer, suppressed = verify.guard_answer(answer, ctx)
     sources = rag.build_sources(excerpts)
 
     log_usage(type="chat", question=question,
               retrieval_count=len(excerpts), lang=lang,
-              response_length=len(answer))
+              response_length=len(answer),
+              values_suppressed=len(suppressed),
+              suppressed=[t for _, t in suppressed] or None)
     return {
         "answer": answer,
         "sources": sources,

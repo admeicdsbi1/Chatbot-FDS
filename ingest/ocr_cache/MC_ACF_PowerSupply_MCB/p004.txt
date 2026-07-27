@@ -1,0 +1,71 @@
+| MINIMAL VOLTAGE | TELEPHONE | DIOGNOSIS | POWER | AIR CONDITION UNIT | PUMP CONTROL | EXHAUST FAN | AEL(EMERGENCY LIGHT) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| RELAY ( DELETED) | first class only | | SUPPLY | | | | |
+
+**Wiring Diagram Components and Labels:**
+
+*   **320301.09** - Bus line
+*   **320301.10** - Bus line
+*   **320301.11** - Bus line
+*   **320301.12** - Bus line
+*   **320301.13** - Bus line
+*   **320301.14** - Bus line
+*   **320301.15** - Bus line
+*   **320301.16** - Bus line
+*   **320301.17** - Bus line
+*   **+S1F31 =32-F12 6A** - MCB
+*   **+S1F32 =32-F13 6A** - MCB
+*   **+S1F33 =32-F14 10A** - MCB
+*   **+S1F35 =32-F19 6A** - MCB
+*   **+S1F36 =32-F20 6A** - MCB
+*   **+S1F15 6A** - MCB
+*   **S1F162 6A** - MCB
+*   **320403** - Wire label
+*   **320405.01** - Wire label
+*   **320407.01** - Wire label
+*   **320505.01** - Wire label
+*   **320301.01A** - Wire label
+*   **320404.01** - Wire label
+*   **42/01.4** - Wire label
+*   **320406.01** - Wire label
+*   **320408.01** - Wire label
+*   **61/01.1** - Wire label
+*   **33/08.1** - Wire label
+*   **61/01** - Wire label
+*   **320302.01A** - Wire label
+*   **320412.01** - Wire label
+*   **320** - Terminal/Connection point
+*   **322** - Terminal/Connection point
+*   **321** - Terminal/Connection point
+*   **323** - Terminal/Connection point
+*   **+S1 -X1 23** - Terminal block connection
+*   **-X1 24 +S1** - Terminal block connection
+*   **PUSH BUTTON TO CHECK AEL** - Label
+*   **S1S09** - Push button
+*   **306** - Terminal/Connection point
+*   **307** - Terminal/Connection point
+*   **ACCIDENT EMERGENCY LIGHT** - Label
+*   **308** - Terminal/Connection point
+*   **309** - Terminal/Connection point
+*   **MCB EXHAUST FAN 6A** - Label
+*   **S1F102 6A** - MCB
+*   **=32/03.8 +120** - Power supply reference
+*   **=32/02.8 -120** - Power supply reference
+*   **320302.09** - Bus line
+*   **320302.10** - Bus line
+*   **320302.11** - Bus line
+*   **320302.012** - Bus line
+*   **320302.14** - Bus line
+*   **320302.15** - Bus line
+*   **320302.16** - Bus line
+*   **320302.17** - Bus line
+
+**Footer Information:**
+*   **REF:-** RCF DRG. NO.(3)11.0788.101-GR32-PG04
+*   **SCALE:** 1:1
+*   **APPROVED BY:** (DSE TLAC FOR D.G.)
+*   **GENERAL WIRING DIAGRAM FOR POWER & CONTROL CIRCUITS (FOR SBC S1 FOR LHB AC EOG / HOG AND GARIB RATH COACHES) BATTERY DISTRIBUTION**
+*   **RESEARCH DESIGN STANDARDS ORGANISATION LUCKNOW**
+*   **DRG NO. RDSO/PE/SK/AC/0206-2019 (Rev. 0) SHEET. 11 OF 48**
+*   **DT:** 16/09/2020
+*   **ANNEXURE A**
