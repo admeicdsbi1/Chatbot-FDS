@@ -47,13 +47,15 @@ def value_in_context(value, ctx):
 
 
 def guard_check(gold, wrong, ctx):
-    """Feed a synthetic answer with both values; guard must keep gold, strip wrong.
-    Returns (kept_gold, stripped_wrong)."""
+    """Feed a synthetic answer with both values; guard must keep gold and remove
+    the wrong one. Success = gold still present in the cleaned answer AND the wrong
+    value no longer appears (robust to the guard stripping a sub-token, e.g. it
+    strips '120kg' out of a '120kg/cm²' planted value)."""
     answer = f"The correct value is {gold}. An incorrect claim would be {wrong}."
-    clean, stripped = verify.guard_answer(answer, ctx)
+    clean, _ = verify.guard_answer(answer, ctx)
     kept_gold = verify._compact(gold) in verify._compact(clean)
-    stripped_wrong = any(verify._compact(wrong) == verify._compact(t) for _, t in stripped)
-    return kept_gold, stripped_wrong
+    removed_wrong = verify._compact(wrong) not in verify._compact(clean)
+    return kept_gold, removed_wrong
 
 
 def main():

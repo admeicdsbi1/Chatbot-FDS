@@ -197,13 +197,21 @@ def detect_query_coach(query):
 
 
 CLARIFY_ENABLED = os.environ.get("CLARIFY_ENABLED", "1") == "1"
+CLARIFY_TOPN = int(os.environ.get("CLARIFY_TOPN", "3"))
 
 
 def clarification_needed(query, excerpts):
     """Return a short clarifying question when the query gives NO coach/OEM signal
-    yet the top excerpts span conflicting coach types or OEMs — otherwise None.
-    Users usually describe only a symptom; answering across a mix of coaches/OEMs
-    would blend specs, which is a safety issue. Asking is safer than guessing.
+    yet the top excerpts genuinely span conflicting coach types or OEMs — otherwise
+    None. Users usually describe only a symptom; blending specs across coaches/OEMs
+    would be a safety issue, so asking is safer than guessing.
+
+    Kept deliberately conservative to avoid over-asking:
+      - only the top CLARIFY_TOPN results are considered;
+      - if any of them is an IR-wide ('common') source, that answers all coaches,
+        so we do NOT ask (e.g. a standardised-value circular resolves the query);
+      - the conflict must come from >=2 DISTINCT documents, so a single manual that
+        merely lists several coach types does not by itself trigger a question.
 
     Inert until chunks carry coach_type/oem (i.e. after a KB rebuild), so it never
     changes behaviour on the legacy committed KB."""
@@ -211,12 +219,23 @@ def clarification_needed(query, excerpts):
         return None
     if detect_query_oem(query) or detect_query_coach(query):
         return None
-    top = [c for _, c in excerpts[:5]]
-    coaches = {ct for c in top for ct in (c.get("coach_type") or [])
-               if ct and ct != "common"}
+    top = [c for _, c in excerpts[:CLARIFY_TOPN]]
+    if any("common" in (c.get("coach_type") or []) for c in top):
+        return None
+
+    # coach types, but only when contributed by >=2 distinct documents (a lone
+    # multi-coach manual is not a cross-source conflict)
+    coach_docs = {}
+    for c in top:
+        for ct in (c.get("coach_type") or []):
+            if ct and ct != "common":
+                coach_docs.setdefault(ct, set()).add(c.get("doc_id"))
+    coaches = set(coach_docs)
     oems = {c.get("oem") for c in top if c.get("oem")}
+    n_coach_docs = len({d for docs in coach_docs.values() for d in docs})
+
     parts = []
-    if len(coaches) >= 2:
+    if len(coaches) >= 2 and n_coach_docs >= 2:
         parts.append("coach type (" + " / ".join(sorted(coaches)) + ")")
     if len(oems) >= 2:
         parts.append("OEM (" + " / ".join(sorted(oems)) + ")")
