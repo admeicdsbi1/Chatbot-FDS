@@ -77,7 +77,33 @@ def _collect_repeated_lines(pages_lines, n_pages):
     return {t for t, c in counts.items() if c >= threshold}
 
 
+def _ocr_only(path, entry):
+    """Force-OCR path: for PDFs whose native text is corrupted (bad font
+    encoding), ignore the garbled native text and build one section per page from
+    the OCR cache. Falls back to native text only if a page has no OCR yet."""
+    doc = fitz.open(path)
+    sections, page_stats = [], []
+    for pno in range(len(doc)):
+        page_no = pno + 1
+        ocr = _ocr_text_for(entry["doc_id"], page_no)
+        used_ocr = bool(ocr)
+        text = ocr if used_ocr else re.sub(r"\s+", " ", doc[pno].get_text().strip())
+        if text:
+            first = next((l.strip() for l in text.splitlines()
+                          if 3 <= len(l.strip()) <= 80), None)
+            sections.append({"section": first or f"Page {page_no}", "section_num": "",
+                             "page_start": page_no,
+                             "blocks": [{"type": "text", "text": text, "page": page_no}]})
+        page_stats.append({"page": page_no, "chars": len(text), "tables": 0,
+                           "big_images": 0, "needs_ocr": not used_ocr and not text,
+                           "ocr_merged": used_ocr})
+    doc.close()
+    return sections, page_stats
+
+
 def extract(path, entry):
+    if entry.get("force_ocr"):
+        return _ocr_only(path, entry)
     doc_id = entry["doc_id"]
     doc = fitz.open(path)
     n_pages = len(doc)

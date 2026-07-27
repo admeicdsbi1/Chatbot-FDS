@@ -33,6 +33,9 @@ _DEFAULTS = {
     "revision": "",
     "letter_no": "",
     "supersedes": [],
+    # force_ocr: the PDF's native text is corrupted (bad font encoding), so ignore
+    # it and build the doc purely from OCR. Set True only for such docs.
+    "force_ocr": False,
 }
 
 REGISTRY = [
@@ -239,6 +242,8 @@ REGISTRY = [
         # newest FSDS instruction here — recency tie-break makes it govern on
         # value conflicts; add explicit supersedes[] once the change is confirmed.
         "supersedes": [],
+        # native text is corrupted-font mojibake (verified via KB audit) — OCR it
+        "force_ocr": True,
     },
     {
         "doc_id": "MC_ACF_PowerSupply_MCB",

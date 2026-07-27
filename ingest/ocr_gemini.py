@@ -53,6 +53,11 @@ def qualifying_pages(entry):
     (wiring-diagram pages whose captions extract fine but whose component
     labels — e.g. relay K05 — live inside the images)."""
     doc = fitz.open(pdf_path(entry))
+    # force_ocr docs (corrupted native text) get every page OCR'd
+    if entry.get("force_ocr"):
+        pages = list(range(1, len(doc) + 1))
+        doc.close()
+        return pages
     out = []
     for pno in range(len(doc)):
         page = doc[pno]
