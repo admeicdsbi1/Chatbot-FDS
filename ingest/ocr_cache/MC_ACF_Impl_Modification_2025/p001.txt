@@ -1,0 +1,50 @@
+भारत सरकार - रेल मंत्रालय
+Government of India-Ministry of Railways
+अनुसंधान अभिकल्प और मानक संगठन
+Research Designs & Standards Organisation
+लखनऊ - 226 011
+Lucknow - 226 011
+EPBX (0522) 2451200
+DID (0522) 2450115
+Fax (0522) 2458500
+DID (0522) 2465310
+अभासंRDSO
+रेल अग्रदूत Transforming Railways
+
+No.MC/ACF/Fire Detection/AC
+Date-04.02.2025
+
+Principal Chief Mechanical Engineer,
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| 1. | मध्य रेलवे, छत्रपति शिवाजी टर्मिनस, मुम्बई- 400 001. | 12. | पूर्व तटीय रेलवे, बीडीए रेंटल कालोनी, रेलवे काम्प्लेक्स, चन्द्रशेखरपुरा, भुवनेश्वर, उड़ीसा - 751 016 |
+| 2. | पूर्व रेलवे, फेयरली प्लेस, कोलकाता - 700 001. | 13. | उत्तर पश्चिम रेलवे, जयपुर - 302 006. |
+| 3. | उत्तर रेलवे, बड़ौदा हाउस, नई दिल्ली - 110 001. | 14. | दक्षिण पश्चिम रेलवे, हुबली - 580 023. |
+| 4. | दक्षिण रेलवे, पार्क टाउन, चेन्नई - 600 003. | 15. | पश्चिम मध्य रेलवे, जबलपुर - 482 001. |
+| 5. | दक्षिण मध्य रेलवे, रेल निलयम, सिकन्दराबाद-500 071. | 16. | दक्षिण पूर्व मध्य रेलवे, आर ई आफिस काम्प्लेक्स, बिलासपुर - 495 004. |
+| 6. | दक्षिण पूर्व रेलवे, गार्डन रीच, कोलकाता - 700 043. | 17. | इन्टीग्रल कोच फैक्टरी, चेन्नई - 600 038. |
+| 7. | पूर्वोत्तर रेलवे, गोरखपुर - 273 012. | 18. | रेल कोच फैक्टरी, हुसैनपुर, कपूरथला - 144 602. |
+| 8. | पूर्वोत्तर सीमान्त रेलवे, मालीगांव, गुवाहाटी - 781 011. | 19. | बी.ई.एम.एल., बेंगलूर काम्प्लेक्स, न्यू थिप्पासान्द्रा, पोस्ट बाक्स न. 7501, बेंगलूर - 560 075. |
+| 9. | पश्चिम रेलवे, चर्चगेट, मुम्बई - 400 020. | 20. | माडर्न कोच फैक्टरी रायबरेली -229206 |
+| 10. | पूर्व मध्य रेलवे, हाजीपुर - 844 101. | | |
+| 11. | उत्तर मध्य रेलवे, हारस्टिंग रोड, इलाहाबाद -211 001. | | |
+
+Sub: Implementation of modification works related to FSDS system.
+Ref: This office letter of even no. dated 27.11.2024 & 13.01.2025.
+
+Vide RDSO letters under reference, all the suppliers have already been advised to carry out the modification works of FSDS system as per guidelines/specifications issued by RDSO as detailed below:
+
+(i) The control supply to the Fire Detection System will be provided from Terminal Block (TB) X1 of Switch Board Cabinet (SBC) for LHB AC coaches and TB-4 for ICF AC coaches through DC MCB of 2 Amp rating along with limiter module.
+
+(ii) Positive and negative wire of 110 V DC supply shall be segregated by placing them in separate conduits as specified in specification.
+
+(iii) Provision of direct power supply from SBC panel for FSDS system.
+
+In regard to above safety related modifications, it was mentioned that all FSDS system installed with specification no. RDSO/2008/CG-04(Rev-05) and onwards, supplier is responsible for implementation of above requirements of specification on Free of Cost (FOC) basis in existing coaches if these clauses of specification have not been complied with.
+
+However, Zonal Railways have enquired about methodology for implementation of above for various revision of specification. So, it is once again reiterated that following methodology to be adopted for implementation of above safety related guidelines as per specification no. RDSO/2008/CG-04:
+
+1. For FSDS system fitted with Rev-05 or later version of specification no. RDSO/2008/CG-04, supplier is responsible for implementation of above safety related modification work on Free of Cost basis if these have not been complied during commissioning as per specification.
+
+2. For coaches fitted with FSDS system of Rev-04 or earlier version of specification no. RDSO/2008/CG-04, above safety related modification work to be carried out on payment basis as the above requirements were incorporated from Rev-05 onwards.
