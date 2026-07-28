@@ -31,6 +31,12 @@ _OPENAI_PROVIDERS = [
     {"name": "Groq", "key": os.environ.get("GROQ_API_KEY"),
      "url": "https://api.groq.com/openai/v1/chat/completions",
      "model": os.environ.get("GROQ_MODEL", "llama-3.3-70b-versatile")},
+    # Same Groq key, smaller model — its per-day token limit is far higher
+    # (~500k vs the 70b's 100k TPD) and is a SEPARATE per-model pool, so it keeps
+    # answering after the 70b pool 429s. Lower quality, but a good last resort.
+    {"name": "Groq-8b", "key": os.environ.get("GROQ_API_KEY"),
+     "url": "https://api.groq.com/openai/v1/chat/completions",
+     "model": os.environ.get("GROQ_FALLBACK_MODEL", "llama-3.1-8b-instant")},
     {"name": "OpenRouter", "key": os.environ.get("OPENROUTER_API_KEY"),
      "url": "https://openrouter.ai/api/v1/chat/completions",
      "model": os.environ.get("OPENROUTER_MODEL",
