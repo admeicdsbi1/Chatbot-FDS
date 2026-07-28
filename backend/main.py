@@ -90,6 +90,37 @@ def health():
     }
 
 
+# Marker that the previous assistant turn was our clarification prompt (see
+# rag.clarification_needed) — used to detect a coach/OEM follow-up answer.
+_CLARIFY_MARKER = "please tell me the"
+
+
+def _retrieval_query(question, history):
+    """Refold the original question into a terse clarify answer.
+
+    After the bot asks 'which coach type?', the user replies just 'LHB'. Run
+    verbatim, retrieval collapses onto the bare word 'LHB' and coach-boosts every
+    LHB doc (including all WSP manuals) — the cross-system contamination users
+    saw. When the previous turn was our clarify prompt, or the message is a short
+    bare coach/OEM answer, prepend the last real user question so retrieval keeps
+    the actual subject."""
+    if not history:
+        return question
+    prev = history[-1]
+    prev_clarify = (getattr(prev, "role", "") == "assistant"
+                    and _CLARIFY_MARKER in (prev.content or "").lower())
+    bare_answer = (len(question.split()) <= 4
+                   and bool(rag.detect_query_coach(question)
+                            or rag.detect_query_oem(question)))
+    if not (prev_clarify or bare_answer):
+        return question
+    prior_user = [t.content for t in history
+                  if getattr(t, "role", "") == "user" and (t.content or "").strip()]
+    if not prior_user:
+        return question
+    return f"{prior_user[-1]} {question}"
+
+
 @app.post("/api/chat")
 def chat(req: ChatRequest):
     question = (req.question or "").strip()
@@ -97,7 +128,8 @@ def chat(req: ChatRequest):
         return JSONResponse({"error": "empty question"}, status_code=400)
 
     lang = detect_language(question)
-    excerpts = rag.retrieve(question)
+    rquery = _retrieval_query(question, req.history)
+    excerpts = rag.retrieve(rquery)
     if not excerpts:
         log_usage(type="chat", question=question, retrieval_count=0, lang=lang)
         return {
@@ -107,7 +139,8 @@ def chat(req: ChatRequest):
         }
 
     # Symptoms-only query that would blend specs across coaches/OEMs → ask first.
-    clarify = rag.clarification_needed(question, excerpts)
+    # Use the refolded query so a just-answered clarify isn't asked again.
+    clarify = rag.clarification_needed(rquery, excerpts)
     if clarify:
         log_usage(type="chat", question=question,
                   retrieval_count=len(excerpts), lang=lang, clarify=True)
