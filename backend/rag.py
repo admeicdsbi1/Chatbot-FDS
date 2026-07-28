@@ -279,25 +279,39 @@ def clarification_needed(query, excerpts):
     if detect_query_oem(query) or detect_query_coach(query):
         return None
     top = [c for _, c in excerpts[:CLARIFY_TOPN]]
-    if any("common" in (c.get("coach_type") or []) for c in top):
-        return None
-
-    # coach types, but only when contributed by >=2 distinct documents (a lone
-    # multi-coach manual is not a cross-source conflict)
-    coach_docs = {}
-    for c in top:
-        for ct in (c.get("coach_type") or []):
-            if ct and ct != "common":
-                coach_docs.setdefault(ct, set()).add(c.get("doc_id"))
-    coaches = set(coach_docs)
-    oems = {c.get("oem") for c in top if c.get("oem")}
-    n_coach_docs = len({d for docs in coach_docs.values() for d in docs})
 
     parts = []
-    if len(coaches) >= 2 and n_coach_docs >= 2:
-        parts.append("coach type (" + " / ".join(sorted(coaches)) + ")")
-    if len(oems) >= 2:
-        parts.append("OEM (" + " / ".join(sorted(oems)) + ")")
+
+    # System spanning (FSDS fire-detection vs WSP wheel-slide) when the query
+    # names no system — these are unrelated systems, so blending their specs is
+    # unsafe. Checked before the 'common' short-circuit below, since an all-coach
+    # source resolves coach ambiguity but NOT which system the user means.
+    if not detect_query_system(query):
+        sys_docs = {}
+        for c in top:
+            s = _chunk_system(c)
+            if s:
+                sys_docs.setdefault(s, set()).add(c.get("doc_id"))
+        if len(sys_docs) >= 2 and len({d for ds in sys_docs.values() for d in ds}) >= 2:
+            parts.append("system (FSDS fire-detection / WSP wheel-slide)")
+
+    # Coach / OEM spanning, only when contributed by >=2 distinct documents (a
+    # lone multi-coach manual is not a cross-source conflict). An IR-wide
+    # ('common') source answers all coaches, so skip these when one is present.
+    if not any("common" in (c.get("coach_type") or []) for c in top):
+        coach_docs = {}
+        for c in top:
+            for ct in (c.get("coach_type") or []):
+                if ct and ct != "common":
+                    coach_docs.setdefault(ct, set()).add(c.get("doc_id"))
+        coaches = set(coach_docs)
+        oems = {c.get("oem") for c in top if c.get("oem")}
+        n_coach_docs = len({d for docs in coach_docs.values() for d in docs})
+        if len(coaches) >= 2 and n_coach_docs >= 2:
+            parts.append("coach type (" + " / ".join(sorted(coaches)) + ")")
+        if len(oems) >= 2:
+            parts.append("OEM (" + " / ".join(sorted(oems)) + ")")
+
     if not parts:
         return None
     return ("To give you the correct values, please tell me the "
