@@ -429,6 +429,21 @@ def build_context(excerpts):
     return "\n\n".join(lines)
 
 
+def _doc_label(c):
+    """Document title as a markdown link to its source PDF (deep-linked to the
+    cited page via #page=N) when the chunk carries a download_url; otherwise the
+    bare bold title. Titles have no brackets, but sanitize defensively so a stray
+    ']' can't break the markdown link."""
+    doc = c.get("title", c.get("doc_id", ""))
+    url = c.get("download_url", "")
+    if not url:
+        return f"**{doc}**"
+    text = doc.replace("[", "(").replace("]", ")")
+    pg = c.get("page_num", "")
+    href = f"{url}#page={pg}" if pg else url
+    return f"[**{text}**]({href})"
+
+
 def build_sources(excerpts):
     parts, seen = [], set()
     for _, c in excerpts:
@@ -439,7 +454,7 @@ def build_sources(excerpts):
         key = f"{doc}|{clause}|{sec}"
         if key not in seen:
             seen.add(key)
-            s = f"**{doc}**"
+            s = _doc_label(c)
             loc = []
             if clause: loc.append(f"Clause {clause}")
             if sec: loc.append(sec)

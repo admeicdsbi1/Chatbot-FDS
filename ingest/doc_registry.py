@@ -21,8 +21,15 @@ retrieval routing, supersession/recency, and clause-level citation):
                should confirm before adding, as it changes which value is quoted.
 """
 import os
+from urllib.parse import quote
 
 DOCUMENTS_ROOT = os.path.join(os.path.dirname(__file__), "..", "Documents")
+
+# Public base URL of the object-storage bucket (Cloudflare R2 / Supabase) that
+# holds the source PDFs — set at build time so `download_url()` can turn each
+# doc into a clickable citation. Empty (unset) => no links, citations stay text.
+# Trailing slash is stripped; the per-doc key is the URL-encoded PDF basename.
+PDF_BUCKET_BASE = os.environ.get("PDF_BUCKET_BASE", "").rstrip("/")
 
 # Applied by `full()` so every consumer sees the complete schema even for rows
 # that omit an optional routing/provenance field.
@@ -36,6 +43,9 @@ _DEFAULTS = {
     # force_ocr: the PDF's native text is corrupted (bad font encoding), so ignore
     # it and build the doc purely from OCR. Set True only for such docs.
     "force_ocr": False,
+    # download_url: filled by build_kb via download_url(entry) so each chunk
+    # carries a link to its source PDF. Empty when PDF_BUCKET_BASE is unset.
+    "download_url": "",
 }
 
 REGISTRY = [
@@ -325,6 +335,22 @@ def full(entry):
 
 def pdf_path(entry):
     return os.path.normpath(os.path.join(DOCUMENTS_ROOT, entry["path"]))
+
+
+def blob_key(entry):
+    """Object-storage key for a doc: its Documents-relative path with forward
+    slashes (preserves the subfolder structure and keeps keys unique across docs
+    that share a basename). Used both to build the URL and by upload_pdfs.py."""
+    return entry["path"].replace(os.sep, "/").replace("\\", "/")
+
+
+def download_url(entry):
+    """Public URL of the source PDF, or "" when PDF_BUCKET_BASE is unset. Each
+    path segment is URL-encoded (the PDFs have spaces), '/' preserved so the
+    bucket mirrors Documents/."""
+    if not PDF_BUCKET_BASE:
+        return ""
+    return f"{PDF_BUCKET_BASE}/{quote(blob_key(entry), safe='/')}"
 
 
 def by_id(doc_id):

@@ -3,8 +3,26 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { BookOpen, Volume2, ChevronDown } from "lucide-react";
+import { BookOpen, Volume2, ChevronDown, Download } from "lucide-react";
 import type { Message } from "@/lib/types";
+import type { Components } from "react-markdown";
+
+// Source citations are markdown links to the source PDF (deep-linked to the
+// cited page). Open them in a new tab and append a small download affordance.
+const sourceLinkComponents: Components = {
+  a: ({ href, children, node, ...props }) => (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-0.5 text-accent underline decoration-dotted underline-offset-2 hover:decoration-solid"
+      {...props}
+    >
+      {children}
+      <Download size={11} className="opacity-70" />
+    </a>
+  ),
+};
 
 export default function MessageBubble({
   msg,
@@ -70,7 +88,9 @@ export default function MessageBubble({
             animate={{ opacity: 1, height: "auto" }}
             className="answer-md mt-2 rounded-lg border border-white/8 bg-black/20 px-3 py-2 text-[0.78rem] text-ink-dim"
           >
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{msg.sources}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]} components={sourceLinkComponents}>
+              {msg.sources}
+            </ReactMarkdown>
           </motion.div>
         )}
       </div>

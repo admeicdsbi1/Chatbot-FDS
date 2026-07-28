@@ -19,7 +19,7 @@ import re
 import sys
 from collections import Counter
 
-from doc_registry import REGISTRY, pdf_path
+from doc_registry import REGISTRY, pdf_path, full, download_url
 from parse_pdf import extract
 from chunker import chunk_document
 from tagger import tag_chunk
@@ -69,6 +69,10 @@ def main():
     ocr_pending = {}
     print("=" * 72)
     for entry in entries:
+        # complete schema (defaults) + resolve the source-PDF download link so
+        # every chunk carries it (empty when PDF_BUCKET_BASE is unset).
+        entry = full(entry)
+        entry["download_url"] = download_url(entry)
         path = pdf_path(entry)
         if not os.path.exists(path):
             print(f"!! MISSING PDF: {path}")

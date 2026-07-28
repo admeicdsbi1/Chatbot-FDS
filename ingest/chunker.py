@@ -156,6 +156,9 @@ def chunk_document(sections, entry, tagger):
                 "issue_date": entry.get("issue_date", ""),
                 "revision": entry.get("revision", ""),
                 "letter_no": entry.get("letter_no", ""),
+                # link to the source PDF (empty when no bucket configured) — used
+                # by rag.build_sources to render clickable, page-deep citations
+                "download_url": entry.get("download_url", ""),
                 "text": text,
                 "char_count": len(text),
             })
