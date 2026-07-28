@@ -196,6 +196,65 @@ def detect_query_coach(query):
     return None
 
 
+# Query-side signals that a question is clearly about one safety system. FSDS
+# (fire detection/suppression) and WSP (wheel-slide protection) are unrelated
+# systems; a cross-system match is almost always generic keyword noise
+# ("test", "LHB", "coach", "procedure"), so we route the query to its system.
+_FSDS_QUERY_SIGNALS = [
+    r'\bfsds\b', r'\bfdss\b', r'\bfdas\b', r'\bfire\b', r'\bsmoke\b',
+    r'\baerosol\b', r'\bsuppression\b', r'\bextinguish', r'\bdetector',
+    r'\bdetection\b', r'\bflame\b', r'\blhd\b', r'\blinear\s+heat\b',
+    r'\bhooter\b',
+]
+_WSP_QUERY_SIGNALS = [
+    r'\bwsp\b', r'\bwheel\s+slide\b', r'\bwheel\s+slip\b', r'\banti[- ]?skid\b',
+    r'\bslide\s+protection\b', r'\bdump\s+valve\b', r'\bskid\b',
+    r'\bspeed\s+sensor\b', r'\bphonic\b', r'\bfaiveley\b', r'\bwabtec\b',
+    r'\bknorr\b', r'\bbremse\b', r'\bescorts?\b', r'\bkubota\b',
+]
+
+
+def detect_query_system(query):
+    """'FSDS' or 'WSP' when the query unambiguously targets one system, else None
+    (no signal, or signals for both — stay neutral rather than mis-route)."""
+    ql = query.lower()
+    fs = any(re.search(p, ql) for p in _FSDS_QUERY_SIGNALS)
+    ws = any(re.search(p, ql) for p in _WSP_QUERY_SIGNALS)
+    if fs and not ws:
+        return "FSDS"
+    if ws and not fs:
+        return "WSP"
+    return None
+
+
+def _chunk_system(ch):
+    """The safety system a chunk belongs to (FSDS / WSP / None), from its
+    registry-stamped subsystem, falling back to tags."""
+    sub = (ch.get("subsystem") or "").lower()
+    if "wheel slide" in sub or "wsp" in sub:
+        return "WSP"
+    if "fire" in sub:
+        return "FSDS"
+    tags = {t.upper() for t in ch.get("tags", [])}
+    if "WSP" in tags:
+        return "WSP"
+    if "FSDS" in tags or "FDSS" in tags:
+        return "FSDS"
+    return None
+
+
+def _system_factor(ch, query_system):
+    """Demote a chunk from the other safety system when the query clearly targets
+    one. Only demotes (never boosts), so ranking within the correct system — and
+    of system-neutral chunks — is untouched."""
+    if not query_system:
+        return 1.0
+    ch_sys = _chunk_system(ch)
+    if ch_sys and ch_sys != query_system:
+        return 0.3
+    return 1.0
+
+
 CLARIFY_ENABLED = os.environ.get("CLARIFY_ENABLED", "1") == "1"
 CLARIFY_TOPN = int(os.environ.get("CLARIFY_TOPN", "3"))
 
@@ -294,6 +353,7 @@ def retrieve(query, k=TOP_K_FINAL):
     proc = is_procedural(query)
     query_oem = detect_query_oem(query)
     query_coach = detect_query_coach(query)
+    query_system = detect_query_system(query)
     qv = embed_query(full_exp) if emb_matrix is not None else None
     if qv is None:
         qterms = set(re.findall(r'\b[a-zA-Z]{2,}\b', full_exp.lower()))
@@ -317,6 +377,7 @@ def retrieve(query, k=TOP_K_FINAL):
                 elif ch_oem and ch_oem != query_oem:
                     score *= 0.3
             score *= _coach_factor(ch, query_coach)
+            score *= _system_factor(ch, query_system)
             score *= _recency_factor(ch)
             results.append((score, ch))
         results.sort(key=lambda x: -x[0])
@@ -367,6 +428,7 @@ def retrieve(query, k=TOP_K_FINAL):
             elif ch_oem and ch_oem != query_oem:
                 score *= 0.3
         score *= _coach_factor(ch, query_coach)
+        score *= _system_factor(ch, query_system)
         score *= _recency_factor(ch)
         res.append((score, ch))
     res.sort(key=lambda x: -x[0])
