@@ -1,0 +1,22 @@
+### Document Metadata
+*   **Subject:** Issue of procurement of Speed Sensor FS01A M/s Knorr-Bremse make WSP system of LHB Coaches to Part No. of M/s Knorr-Bremse STN 31450/250A 18U.
+*   **Reference i:** Northern Railway letter no. MW/Carr./CG(LHB)/Policy/Pt.II dated 20.02.2020.
+*   **Reference ii:** Northern Railway letter no. MW/Carr./CG(LHB)/Policy/Pt.VIII dated 28.01.2020.
+*   **Date:** 04.03.2020
+
+### Technical Specifications and Designations
+*   **Component:** Speed Sensor
+    *   **Model/Designation:** FS01A
+    *   **Manufacturer:** M/s Knorr-Bremse
+    *   **Part Number:** STN 31450/250A 18U
+*   **System:** WSP (Wheel Slide Protection) system
+*   **Standard/Specification:**
+    *   **UIC 541-05:** Appendix-F (Page-1/3) - 'WSPs approved for International Traffic'
+    *   **RDSO/2011/CG-04:** (latest version) - RDSO specification for Axle Mounted Disc Brake system of LHB coaches
+*   **Other Designations:**
+    *   **'FS01x':** Speed Sensor type for 'MGS2' WSP of 'KNORR-Bremse SfS Gmbh'
+    *   **Dump Valve:** Associated component of WSP system
+
+### Referenced Entities
+*   **M/s ELIXIR:** Manufacturer of speed sensors (offered as equivalent)
+*   **M/s Knorr-Bremse SfS Gmbh:** Manufacturer of MGS2 WSP system

@@ -1,0 +1,36 @@
+WEBSITE: www.uic.org
+page: 5
+Braking components technically approved by UIC
+Appendix F to UIC Leaflet 541-05 [last update: 03.07.2019]
+
+**Appendix F3 (page 1/3) - WSPs accepted in international traffic for vehicles built after 01.01.2004 (Leaflet 541-05, 2nd edition)**
+
+| Manufacturer | Type designation | Control unit | Speed sensor | WSP valve | Vehicle category a) | Types of brakes b) | Maximum speed | Approved from: |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Alstom | µWUPAR | µWUPAR 4A4C-2H; 4A2C-2H; 4A4C-HS | ALSTOM GF-1PSV oder SKF LS 1639 | ALSTOM µEV-SR or Alstom OSR-SR | High speed trains, passenger coaches, multiple units | Disc brakes, magnetic brakes | 200 km/h (4A4C-2H; 4A2C-2H); 250 km/h (4A4C-HS) | 01.07.2004 |
+| KES | SWKP | ASM20R/C | MFIG 20 | MV 20 | Passenger coaches | Disc brakes, magnetic brakes | 200 km/h | 01.07.2007 |
+| | | | IG 20 FSG 20 | | Locomotives, multiple units, high speed trains | Friction brakes, dynamic brakes | 364 km/h | 01.01.2012 |
+| KNORR-Bremse SfS GmbH | MGS2 | ESRA | GI5 GID5 GI6 FS01x SKFxx-KB | GV 12 GV 21 GV 221 ASV1 | Passenger coaches, Locomotives, multiple units, high speed trains | Friction brakes, Dynamic brakes, Magnetic brakes | 405 km/h | 22.01.2009 01.07.2011 01.03.2017 |
+| KNORR-Bremse SfS GmbH | MGS EP Compact | ESRA: GU + CU0xy or GCU0xy | FSxx SKF-KB | GVxx ASV1 | Passenger coaches, Locomotives, multiple units, high speed trains | Friction brakes, Dynamic brakes, Magnetic brakes | 405 km/h | 01.02.2010 01.03.2017 |
+| KNORR-BREMSE SfS GmbH | MGS3¹ | ESRA: MB0x GU + CU0xy or GCU0xy | FSxx SKF-KB | ASV1 GV12 mit DG10-S | Passenger coaches | Friction brakes magnetic brakes | 200 km/h | 01.02.2018 |
+
+a) - Passenger coaches,
+- Freight wagons,
+- Locomotives / multiple units,
+- High speed trains
+
+b) - Disc brakes,
+- Block brakes,
+- Combined disc/block brakes,
+- Dynamic brakes,
+- Adhesion-independent brakes,
+- Magnetic brakes,
+- Friction brakes
+
+¹ Certification according to UIC Leaflet 541-05, 2nd Edition
+
+Body responsible: UIC SET7 “Braking”
+Contact: DB AG TT.TVP 2, Frank Minde, Pionierstraße 10, D-32423 Minden
+Tel: +49 (0) 571 393 5100
+File: e541x05_appendix_f_03_07_2019_abo.docx
+E-Mail: Frank.Minde@deutschebahn.com

@@ -1,0 +1,47 @@
+भारत सरकार - रेल मंत्रालय
+अनुसंधान अभिकल्प और मानक संगठन
+लखनऊ - 226 011
+EPBX (0522) 2451200
+Fax (0522) 2458500
+
+Government of India-Ministry of Railways
+Research Designs & Standards Organisation
+Lucknow - 226 011
+DID (0522) 2450115
+DID (0522) 2465310
+
+अअमान RDSO
+रेल अग्रदूत Transforming Railways
+
+Date: 27.09.2019
+
+No. MC/LHB/Brake
+
+Principal Chief Mechanical Engineers,
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| 1. | Central Railway, Chhatrapati Shivaji Terminus, Mumbai - 400 001 | 2. | East Coast Railway, Chandrasekharpur, Bhubaneswar - 751 016 |
+| 3. | Eastern Railway, Fairlie Place, Kolkata - 700 001 | 4. | North Central Railway, Allahabad - 211 001 |
+| 5. | Northern Railway, Baroda House, New Delhi - 110 001 | 6. | North Western Railway, Jaipur - 302 006 |
+| 7. | Southern Railway, Park Town, Chennai - 600 003 | 8. | West Central Railway, Jabalpur - 482 008 |
+| 9. | South Central Railway, Rail Nilayam, Secunderabad - 500 071 | 10. | South Western Railway, Hubli - 580 023 |
+| 11. | South Eastern Railway, Garden Reach, Kolkata - 700 043 | 12. | South East Central Railway, Bilaspur - 495 004 |
+| 13. | North Eastern Railway, Gorakhpur - 273 001 | 14. | Integral Coach Factory, Chennai - 600 038 |
+| 15. | Western Railway, Churchgate, Mumbai - 400 020 | 16. | Rail Coach Factory, Hussainpur, Kapurthala, Punjab - 144 602 |
+| 17. | Northeast Frontier Railway, Maligaon, Guwahati - 781 011 | 18. | Modern Coach Factory, Raebareli, Lalganj - 229206 |
+| 19. | East Central Railway, Hajipur - 844 101 | 20. | Konkan Railway Corp. Ltd. Corporate office, Belapur Bhawan, Nawi, Mumbai-400 614 |
+
+Sub: Ensuring Integrity of electrical connections of WSP System
+Ref: 1) RDSO Letter No. MC/LHB/Brake dt. 28-03-2018
+2) RDSO letter no. MC/LHB/Brake dated 27.09.2018
+3) RDSO letter no. MC/LHB/Brake dt. 15.04.2019
+
+RDSO vide letters at Ref (1) and (2) above had investigated wheel shelling in LHB coaches and issued recommendations to Zonal Railways / PUs to reduce wheel shelling. Consolidated instructions for addressing the problem of Wheel Shelling in LHB Coaches were also issued to Zonal Railways / PUs vide Ref (3).
+
+Improper / Loose electrical connections of WSP system have been identified as one of the major causes of wheel shelling. In this connection, extract of para 2.3.1 at Ref(1) [Carriage Research Report RDSO/CG/CRR-18001 dated 28.03.2018] is reproduced below:
+
+| | |
+| :--- | :--- |
+| 2.3.1a | A one-time drive needs to be carried out in coaching depots to ensure vibration resistant electrically tight connections in the WSP wiring system. |
+| 2.3.1b | Enquiries at several coaching depots bring out that the WSP wiring attention is carried out only by OEM under AMC. A feedback system needs to be formalized in maintenance depots whereby the SSE / JE in-charge of maintenance ensures that faults logged by the WSP processor of M/s FTIL and the fault counter readings for the WSP processor of M/s KBIL are acted upon and do not repeat in the next trip. The present practice of noting only the fault code of 95/99 in the WSP processor display (for eg. as brought out in Annexure A) is inadequate as these codes are displayed even when intermittent faults occur and are subsequently cleared, such as due to loose wiring. |

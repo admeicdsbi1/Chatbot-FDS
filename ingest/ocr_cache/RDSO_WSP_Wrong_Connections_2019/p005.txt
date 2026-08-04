@@ -1,0 +1,88 @@
+ANNEXURE-C
+
+| WSPCU | WIRE NO. | WAGO NO. | WIRE TAG |
+| :--- | :--- | :--- | :--- |
+| RE | 10 | 80 | 720105.01 |
+| | 9 | 79 | 720104.02 |
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| | 13 | 78 | 230315.02 |
+| | 8 | 77 | 230314.02 |
+| | 7 | 76 | 230313.02 |
+| | | 75 | 230316.02 |
+| | 12 | 74 | 230311.02 |
+| | 6 | 73 | 230310.02 |
+| | 5 | 72 | 230309.02 |
+| | | 71 | 230312.02 |
+| GE | | 70 | 230307.02 |
+| | 10 | 69 | 230306.02 |
+| | 4 | 68 | 230305.02 |
+| | 3 | 67 | 230308.02 |
+| | | 66 | 230303.02 |
+| | 9 | 65 | 230302.02 |
+| | 2 | 64 | 230301.02 |
+| | 1 | 63 | 230304.02 |
+| | | 62 | 230214.01 |
+| | 11 | 61 | 230215.01 |
+| | 12 | 60 | 230216.01 |
+| | 10 | 59 | 230205.01 |
+| | | 58 | 230210.01 |
+| | 8 | 57 | 230211.01 |
+| | 9 | 56 | 230212.01 |
+| | 7 | 55 | 230205.01 |
+| MV | | 54 | 230204.01 |
+| | 5 | 53 | 230207.01 |
+| | 6 | 52 | 230208.01 |
+| | 4 | 51 | 230205.00 |
+| | | 50 | 230201.01 |
+| | 2 | 49 | 230202.01 |
+| | 3 | 48 | 230203.01 |
+| | 1 | 47 | 230205.04 |
+| | | 46 | 230103.02 |
+| N2 | 7 | 45 | 230101.02 |
+| | 4 | 44 | 230101.01 |
+| | 3 | 43 | |
+| | 2 | 42 | |
+| | 1 | 41 | |
+| | | 40 | EARTH |
+
+**COMPONENTS:**
+*   JB6 - Junction Box
+*   JB5 - Junction Box
+*   JB4 - Junction Box
+*   JB3 - Junction Box
+*   JB2 - Junction Box
+*   JB1 - Junction Box
+*   SS4 - Speed Sensor
+*   SS3 - Speed Sensor
+*   SS2 - Speed Sensor
+*   SS1 - Speed Sensor
+*   DV4 - Dump Valve
+*   DV3 - Dump Valve
+*   DV2 - Dump Valve
+*   DV1 - Dump Valve
+*   PRESSURE SWITCH
+*   BRAKE PANEL
+*   AXLE1
+*   AXLE2
+*   AXLE3
+*   AXLE4
+
+**NOTE:**
+*   DV - DUMP VALVE
+*   SS - SPEED SENSOR
+*   JB - JUNCTION BOX
+*   WSPCU - WHEEL SLIDE PROTECTION CONTROL UNIT
+
+**TITLE BLOCK:**
+*   A00 - NEW RELEASE
+*   17.12.19/AMK BSH
+*   Faiveley Transport A Wabtec Company
+*   FT0052052-W02
+*   WSP WIRING DIAGRAM KES WSP
+*   A00 1/1
+
+**OTHER TEXT:**
+*   COACH LAYOUT
+*   +110V

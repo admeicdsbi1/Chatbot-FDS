@@ -1,0 +1,41 @@
+भारत सरकार - रेल मंत्रालय
+Government of India - Ministry of Railways
+अनुसंधान अभिकल्प और मानक संगठन
+Research Designs & Standards Organisation
+लखनऊ - 226 011
+Lucknow - 226 011
+EPBX (0522) 2451200
+DID (0522) 2450115
+Fax (0522) 2458500
+DID (0522) 2465310
+
+No. MC/LHB/Brake
+
+Date: 03.05.2024
+
+PCME,
+Integral Coach Factory
+Chennai,
+
+PCME,
+Rail Coach Factory
+Kapurthala,
+
+PCME,
+Modern Coach Factory
+Raebareli,
+
+Sub: Configuring of CB-12 card in M/s KBI make Wheel Slide Protection (WSP).
+
+In technical seminars held at Secunderabad and Guwahati it was reported that some of the new coaches received in coaching depots are found without configuring of the CB-12 card in M/s KBI Wheel Slide Protection (WSP) system, which results in error/event data not being logged.
+
+In this regard it is requested that the configuring of CB-12 card must be ensured by all Production Units at the time of installation of the system.
+
+Accordingly, a specific check sheet must be added in WSP test of coaches in PU for ensuring proper configuration of WSP of all makes as per OEM instructions.
+
+DA: Nil
+
+(Anil Kumar Singh)
+ED/Standard/Carriage
+
+Scanned with OKEN Scanner

@@ -1,0 +1,32 @@
+### Technical Index: LHB Coach WSP System Choke Specifications
+
+**Document Reference:**
+*   **Reference Number:** No. MC/LHB/Brake
+*   **Date:** 10.06.2019
+*   **Subject:** Choke sizes for AEFG2 model of WSP (M/s Faiveley Transport make) for LHB Coaches.
+*   **Reference Letter:** Office letter of even no. dated 15.04.2019.
+
+---
+
+### Component Designations & Models
+*   **WSP System (Knorr-Bremse):** Model MGS2
+*   **WSP System (Faiveley Transport):** Model SWKP AS20R
+*   **WSP System (Faiveley Transport - Upgraded):** Model AEFG2
+*   **Dump Valve Type:** DV12
+
+---
+
+### Technical Specifications Tables
+
+**Table 1: Optimized Choke Sizes for Dump Valves (KBIL & FTRTIL)**
+
+| Brake System Make/Model | Exhaust Choke Size | Charging Choke Size |
+| :--- | :--- | :--- |
+| KBIL (Model MGS2) | Remove existing 7mm choke | Replace existing 5mm choke with 9mm choke |
+| FTRTIL (Model SWKP AS20R) | Remove existing 9mm choke | Replace existing 6mm choke with 9mm choke |
+
+**Table 2: Optimized Choke Sizes for Dump Valves (Type DV12) - FTRTIL Model AEFG2**
+
+| Brake System Make/Model | Exhaust Choke Size | Charging Choke Size |
+| :--- | :--- | :--- |
+| FTRTIL (Model AEFG2) | 6 mm choke | 4mm choke |

@@ -1,0 +1,43 @@
+LHB COACH TYPE: ___________
+
+TOILET
+TOILET
+POWER PANEL
+
+SS 1
+SS 2
+SS 3
+SS 4
+
+AXLE 1
+AXLE 2
+AXLE 3
+AXLE 4
+
+J/B
+J/B
+J/B
+J/B
+
+DUMP VALVE 1
+DUMP VALVE 2
+DUMP VALVE 3
+DUMP VALVE 4
+
+Note: Position of Power Panel may vary as per coach type.
+
+| ITEM | DESCRIPTION | DIMENSION | No. | OFF | REF. | DRG | WT. | KG | MATL & SPEC | REMARKS |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| | | | | | | | | | | |
+
+SUPERSEDED BY: INDIAN RAILWAY STANDARDS
+SUPERSEDES: LHB TYPE COACHES
+SCALE: P
+WSP WIRING LAYOUT
+RDSO ASSEMBLY DRGS. REFERENCE
+CDIC No.:
+B.G. R.D.S.O [CG]
+CG-18246
+J.S. EAS/02/2010
+
+ALT. ITEM AUTH Y DESCRIPTION DATE

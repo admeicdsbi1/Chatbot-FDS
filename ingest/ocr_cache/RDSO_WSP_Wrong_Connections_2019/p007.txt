@@ -1,0 +1,60 @@
+ANNEXURE-E
+
+| WSPCU | PIN NO. | WAGO NO. | WIRE TAG |
+| :--- | :--- | :--- | :--- |
+| WBI_2 | X6-22z | 69 | 230316.02 |
+| | X6-22b | 68 | 230314.02 |
+| | X6-18z | 67 | 230313.02 |
+| | X6-18b | 66 | 230312.02 |
+| | | 65 | 230310.02 |
+| | | 63 | 230309.02 |
+| | | 62 | 230308.02 |
+| | | 61 | 230306.02 |
+| | | 60 | 230305.02 |
+| WBI_1 | X4-22z | 59 | 230304.02 |
+| | X4-22b | 58 | 230302.02 |
+| | X4-18b | 57 | 230301.02 |
+| | X6-10d | 56 | 230214.01 |
+| | X6-14d | 55 | 230215.01 |
+| | X6-12d | 54 | 230216.01 |
+| WBI_2 | X6-4d | 53 | 230210.01 |
+| | X6-8d | 52 | 230211.01 |
+| | X6-6d | 51 | 230212.01 |
+| | X4-10d | 50 | 230204.01 |
+| | X4-14d | 49 | 230207.01 |
+| | X4-12d | 48 | 230208.01 |
+| WBI_1 | X4-4d | 47 | 230201.01 |
+| | X4-8d | 46 | 230202.01 |
+| PSU | X1-8 | 45 | 230203.01 |
+| | X1-4 | 44 | |
+| | X1-3 | 43 | |
+| | | 42 | |
+| | | 41 | |
+| | | 40 | |
+
+**COACH LAYOUT**
+*   JB6: SHIELD, POWER(RED), SIGNAL(WHITE) -> SS4
+*   JB5: SHIELD, POWER(RED), SIGNAL(WHITE) -> SS3
+*   JB4: SHIELD, POWER(RED), SIGNAL(WHITE) -> SS2
+*   JB3: SHIELD, POWER(RED), SIGNAL(WHITE) -> SS1
+*   JB2: SHIELD, WSP+(BLACK), EV / VENT(WHITE), BV / FILL(RED) -> DV4, DV3, DV2, DV1
+*   JB1: SHIELD, WSP+(BLACK), EV / VENT(WHITE), BV / FILL(RED) -> DV2, DV1
+*   Pressure Switch
+
+**NOTE:**
+DV - DUMP VALVE
+SS - SPEED SENSOR
+JB - JUNCTION BOX
+WSPCU - WHEEL SLIDE PROTECTION CONTROL UNIT
+
+**DRAWING INFORMATION:**
+A00 NEW RELEASE
+17.12.19/AMK BSH
+Date: 17.12.2019
+Prepared: AMK
+Checked: GJN
+Approved: BSH
+Faiveley Transport A Wabtec Company
+Drawing identification number: FT0052052-W03
+Main title, subtitle: WSP WIRING DIAGRAM FT WSP
+Sheet: 1 / 1

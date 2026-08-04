@@ -1,0 +1,38 @@
+### Engineering Document Information
+*   **Drawing Number:** AAA11835
+*   **Reference Drawing Number:** 3 10113 0 03 095 151
+*   **Date of First Issue:** 21-06-2013
+*   **Date of Latest Alt:** 13-05-2024
+*   **Subject:** BRACKET
+*   **Group:** UNDERFRAME
+*   **Material Specification:** IRS M-41-1997
+*   **Surface Area:** 0.068 Sq.m.
+*   **Weight per Unit:** 1.022 Kgs
+*   **Scale:** 1:2
+*   **Sheet:** 1 OF 1
+
+### Component Table
+| Item No. | Description | Dimensions |
+| :--- | :--- | :--- |
+| 1 | BRACKET | 4x159x206 |
+
+### Technical Specifications & Dimensions
+*   **Hole Diameter:** Ø7 (4 holes)
+*   **Vertical Dimensions:** 206 mm (total height), 106 mm (spacing), 13 mm (edge distance)
+*   **Horizontal Dimensions:** 15 mm (edge distance), 82 mm (spacing), 122 mm (base length)
+*   **Thickness:** 4 mm
+*   **Bend Radius:** R8
+*   **Vertical Flange Height:** 45 mm
+
+### Revision History
+| Alt. | Zone | Description | Approved & Date |
+| :--- | :--- | :--- | :--- |
+| e | | ITEM REVISED. | [Signature] |
+
+### Surface Finish/Process Symbols
+*   **∇:** ROUGH MACHINED
+*   **W:** FINISH MACHINED
+*   **▽▽▽:** FINE FINISH MACHINED
+*   **01:** ROUGH CLEANED
+*   **01b:** BURRS REMOVED
+*   **16:** CHAMFERED

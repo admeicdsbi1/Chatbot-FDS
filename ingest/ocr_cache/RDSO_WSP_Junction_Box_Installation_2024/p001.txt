@@ -1,0 +1,56 @@
+भारत सरकार – रेल मंत्रालय
+अनुसंधान अभिकल्प और मानक संगठन
+लखनऊ – 226 011
+EPBX (0522) 2451200
+Fax (0522) 2458500
+
+Government of India - Ministry of Railways
+Research Designs & Standards Organisation
+Lucknow – 226 011
+DID (0522) 2450115
+DID (0522) 2465310
+
+No. MC/LHB/Brake
+Date: 21.05.2024
+
+Principal Chief Mechanical Engineer,
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| 1. | Modern Coach Factory, Raebareli, Lalganj - 229 206 | 2. | Rail Coach Factory, Hussainpur, Kapurthala, Punjab - 144 602 |
+| 3. | Integral Coach Factory, Chennai - 600 038 | 4. | North Central Railway, Allahabad - 211 001 |
+| 5. | Northern Railway, Baroda House, New Delhi - 110 001 | 6. | North Western Railway, Jaipur - 302 006 |
+| 7. | Southern Railway, Park Town, Chennai - 600 003 | 8. | West Central Railway, Jabalpur - 482 008 |
+| 9. | South Central Railway, Rail Nilayam, Secunderabad - 500 071 | 10. | South Western Railway, Hubli - 580 023 |
+| 11. | South Eastern Railway, Garden Reach, Kolkata - 700 043 | 12. | East Central Railway, Bilaspur - 495 004 |
+| 13. | North Eastern Railway, Gorakhpur - 273 001 | 14. | Western Railway, Churchgate, Mumbai - 400 020 |
+| 15. | Northeast Frontier Railway, Maligaon, Guwahati - 781 011 | 16. | East Central Railway, Hajipur - 844 101 |
+| 17. | Konkan Railway Corp. Ltd. Corporate office, Belapur Bhawan, Nawi, Mumbai - 400 614 | 18. | Central Railway, Chhatrapati Shivaji Terminus, Mumbai - 400 001 |
+| 19. | East Coast Railway, Chandrasekharpur, Bhubaneswar - 751 016 | 20. | Eastern Railway, Fairley Place, Kolkata - 700 001 |
+
+Sub: Standardised Installation of WSP Junction box & Sensor in LHB Coaches.
+Ref: (i) This office letter no. MC/LHB/Brake dated 27.02.2019 & 08.05.2024.
+(ii) Item 11 & 12 of MOM of Technical seminar held at Guwahati on 29.04.2024.
+
+Vide letter at reference above dated 27.02.2019, RDSO had issued an indicative modified drawing of Junction Box i.e. CG-19005, Alt.1 for implementation to overcome the problem of loosening of connections and water ingress in junction box.
+
+It has been observed that installation method of Junction box & speed sensor cable etc. are not uniform among PUs and also in the workshops where wiring modifications are being carried out. Modified junction box is IP 67 compliant and is provided with installation screw holes, where MCF & RCF and many workshops are getting junction box punctured in the middle with additional holes forfeiting the IP 67 properties which is not permissible at all.
+
+In view of the above a standardized fixing arrangement and orientation of WSP wiring connectors in Junction box has been developed and to be as per following:
+
+(i) For uniform installation practice and better service life, layout of speed sensor cable and Junction box mounting on under frame is being standardized. The cable layout of speed sensor will be as per ICF drawing no.-ICF/SK3-3-5-046.
+
+(ii) The mounting bracket from under frame for junction box to be as per ICF drawing no. AAD11918 and AAA11835.
+
+(iii) The orientation of the Junction Box is being standardized and the modified drawing no.- CG-19005, Alt.2 of junction box (copy enclosed) has already been issued. Junction Box should be installed in such a way that the connecting port of speed sensor cable should be on top of the Junction Box & connecting port to Dump Valve and WSP panel should be on vertical face towards inside the coach as indicated in the drawing.
+
+Accordingly, PUs and Railways are requested to follow above standardised installation drawings of WSP Junction box & Sensor cable fitment in LHB Coaches This should be implemented with immediate effect.
+
+DA: As above.
+
+ANIL KUMAR SINGH
+(Anil Kumar Singh)
+Executive Director/ Carriage
+
+C/-
+1. EDME/Coaching, Railway Board, New Delhi: For information please.

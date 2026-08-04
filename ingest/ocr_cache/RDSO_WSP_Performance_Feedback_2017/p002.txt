@@ -1,0 +1,7 @@
+Annexure-I
+
+PROFORMA FOR RECORDING THE FAILURE OBSERVED DURING MALFUNCTIONING OF WSP
+
+| S.No. | Place of failure detection (En-route/IOH/POH) | Date of Failure | Coach No./ Train No. | Name of WSP supplier | Type of Failure (Hardware/Software) | Reason of Failure |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| | | | | | | |

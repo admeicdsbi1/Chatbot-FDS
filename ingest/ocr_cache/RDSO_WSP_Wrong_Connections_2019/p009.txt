@@ -1,0 +1,95 @@
+ANNEXURE-G
+
+**RAILWAY SCOPE OF WIRES**
+
+| Component | Junction Box | Terminal | Wire Label |
+| :--- | :--- | :--- | :--- |
+| SENSOR 1 +VE | Junction Box 1 | 72 | 300.72.S1.SUP |
+| SENSOR 1 SIG | Junction Box 1 | 71 | 301.71.S1.SIG.JB |
+| SENSOR 1 -VE | Junction Box 1 | 70 | 302.70.S1.GND.JB |
+| SENSOR 1 SHIELD | Junction Box 1 | 69 | 303.69.S1.SH.JB |
+| SENSOR 2 +VE | Junction Box 2 | 68 | 304.68.S2.SUP.JB |
+| SENSOR 2 SIG | Junction Box 2 | 67 | 305.67.S2.SIG.JB |
+| SENSOR 2 -VE | Junction Box 2 | 66 | 306.66.S2.GND.JB |
+| SENSOR 2 SHIELD | Junction Box 2 | 65 | 307.65.S2.SH.JB |
+| SENSOR 3 +VE | Junction Box 3 | 64 | 308.64.S3.SUP.JB |
+| SENSOR 3 SIG | Junction Box 3 | 63 | 309.63.S3.SIG.JB |
+| SENSOR 3 -VE | Junction Box 3 | 62 | 310.62.S3.GND.JB |
+| SENSOR 3 SHIELD | Junction Box 3 | 61 | 311.61.S3.SH.JB |
+| SENSOR 4 +VE | Junction Box 4 | 60 | 312.60.S4.SUP.JB |
+| SENSOR 4 SIG | Junction Box 4 | 59 | 313.59.S4.SIG.JB |
+| SENSOR 4 -VE | Junction Box 4 | 58 | 314.58.S4.GND.JB |
+| SENSOR 4 SHIELD | Junction Box 4 | 57 | 315.57.S4.SH.JB |
+| Dump Valve1 COIL 1 | Junction Box 5 | 56 | 200.56.ZA1.JB |
+| Dump Valve1 COIL 2 | Junction Box 5 | 55 | 201.55.VY1.JB |
+| Dump Valve1 COM | Junction Box 5 | 54 | 202.54.CM1.JB |
+| Dump Valve2 COIL 1 | Junction Box 5 | 53 | 203.53.ZA2.JB |
+| Dump Valve2 COIL 2 | Junction Box 5 | 52 | 204.52.VY2.JB |
+| Dump Valve2 COM | Junction Box 5 | 51 | 205.51.CM2.JB |
+| Dump Valve3 COIL 1 | Junction Box 6 | 50 | 206.50.ZA3.JB |
+| Dump Valve3 COIL 2 | Junction Box 6 | 49 | 207.49.VY3.JB |
+| Dump Valve3 COM | Junction Box 6 | 48 | 208.48.CM3.JB |
+| Dump Valve4 COIL 1 | Junction Box 6 | 47 | 209.47.ZA4.JB |
+| Dump Valve4 COIL 2 | Junction Box 6 | 46 | 210.46.VY4.JB |
+| Dump Valve4 COM | Junction Box 6 | 45 | 211.45.CM4.JB |
+
+**RAILWAY TERMINALS / SWITCH BOARD CABINET 1**
+
+| Terminal | Wire Label | Destination |
+| :--- | :--- | :--- |
+| 74 | 500.74.CDTS.b2 | >>X2_b2 |
+| 73 | 501.73.CDTS.b4 | >>X2_b4 |
+| 72 | 300.72.S1.SUP | >>X1_b4 |
+| 71 | 301.71.S1.SIG | >>X1_b2 |
+| 70 | 302.70.S1.GND | >>X1_z26 |
+| 69 | 303.69.S1.SH | |
+| 68 | 304.68.S2.SUP | >>X1_b10 |
+| 67 | 305.67.S2.SIG | >>X1_b8 |
+| 66 | 306.66.S2.GND | >>X1_Z28 |
+| 65 | 307.65.S2.SH | |
+| 64 | 308.64.S3.SUP | >>X1_b16 |
+| 63 | 309.63.S3.SIG | >>X1_b14 |
+| 62 | 310.62.S3.GND | >>X1_Z30 |
+| 61 | 311.61.S3.SH | |
+| 60 | 312.60.S4.SUP | >>X1_b22 |
+| 59 | 313.59.S4.SIG | >>X1_b20 |
+| 58 | 314.58.S4.GND | >>X1_Z32 |
+| 57 | 315.57.S4.SH | |
+| 56 | 200.56.Z2.ZA1 | >>X1_z2 |
+| 55 | 201.55.Z6.VY1 | >>X1_z6 |
+| 54 | 202.54.Z4.CM1 | >>X1_z4 |
+| 53 | 203.53.Z8.ZA2 | >>X1_z8 |
+| 52 | 204.52.Z12.VY2 | >>X1_z12 |
+| 51 | 205.51.Z10.CM2 | >>X1_z10 |
+| 50 | 206.50.Z14.ZA3 | >>X1_z14 |
+| 49 | 207.49.Z18.VY3 | >>X1_z18 |
+| 48 | 208.48.Z16.CM3 | >>X1_z16 |
+| 47 | 209.47.Z20.ZA4 | >>X1_z20 |
+| 46 | 210.46.Z24.VY4 | >>X1_z24 |
+| 45 | 211.45.Z22.CM4 | >>X1_z22 |
+| 44 | 100.44.1.+110V | >>X3_1 |
+| 43 | 101.43.2.-110V | >>X3_2 |
+| | 401_43_Z4_-110VDC | >>X2_Z4 |
+| 42 | 400_42_Z2_FP | >>X2_Z2 |
+| 41 | +110V | |
+| 40 | 102.40.3.PE | >>X3_GND |
+
+**COACH LAYOUT**
+SS4: DUMP VALVE4 - Axle1
+SS3: DUMP VALVE3 - Axle2
+SS2: DUMP VALVE2 - Axle3
+SS1: DUMP VALVE1 - BP - Axle4
+
+**MISCELLANEOUS**
+- CDTS
+- WSP BODY
+- Connected By Railway
+- Pressure Switch
+- ESCORTS SCOPE OF WIRES
+- CONFIDENTIAL DOCUMENT, UNAUTHORIZED CIRCULATION IS STRICTLY PROHIBITED
+- ESCORTS LIMITED, R.E.D., FARIDABAD (INDIA)
+- Drawing No. Alt. EL01069 1
+- Date: 25.07.2016
+- Prepared By: Prince (19/12/19)
+- Checked By: Dushyant (19/12/19)
+- Approved By: S. Reddy (19/12/19)

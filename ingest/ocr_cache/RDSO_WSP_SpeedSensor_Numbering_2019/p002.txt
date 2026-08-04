@@ -1,0 +1,31 @@
+### Document Information
+**Subject:** AXLE & SPEED SENSORS NUMBERING PATTERN IN LHB COACHES
+**Reference:** Annexure-A
+
+---
+
+### Component Designations
+| Designation | Description |
+| :--- | :--- |
+| **SS** | Speed Sensor |
+| **AXLE - 1** | Axle 1 |
+| **AXLE - 2** | Axle 2 |
+| **AXLE - 3** | Axle 3 |
+| **AXLE - 4** | Axle 4 |
+| **SS-1** | Speed Sensor for Axle 1 |
+| **SS-2** | Speed Sensor for Axle 2 |
+| **SS-3** | Speed Sensor for Axle 3 |
+| **SS-4** | Speed Sensor for Axle 4 |
+| **BRAKE PANEL** | LHB Brake Panel |
+
+---
+
+### Numbering Method
+**Description of Method for Numbering:**
+Stand in front of the LHB Brake Panel, start counting from extreme right side till extreme left side from 1 to 4 as illustrated above.
+
+---
+
+### Notes
+*   SS stands for Speed Sensor.
+*   The locations of Brake Panel & Speed Sensors shown in above figure are indicative and may vary from coach to coach.

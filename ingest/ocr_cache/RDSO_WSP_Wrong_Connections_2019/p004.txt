@@ -1,0 +1,109 @@
+MODIFIED WIRING ARRANGEMENT WITH CONNECTOR SOLUTION
+
+ANNEXURE-B
+
+Coach Layout
+SS1 - Axle 1
+DV1 - Axle 1
+SS2 - Axle 2
+DV2 - Axle 2
+SS3 - Axle 3
+DV3 - Axle 3
+SS4 - Axle 4
+DV4 - Axle 4
+
+LEGEND
+| Abbreviation | Inference |
+| :--- | :--- |
+| SS | Speed Sensor |
+| JB | Junction Box |
+| EV | Exhaust Valve |
+| BV | Holding Valve |
+| MB | Main Board |
+| PB | Power Board |
+| DV | Dump Valve |
+| PP | Power Panel |
+
+Components and Wiring:
+- SS4: Speed Sensor 4
+- DV4: Dump Valve 4
+- JB 4: Junction Box 4
+- SS2: Speed Sensor 2
+- DV2: Dump Valve 2
+- JB 2: Junction Box 2
+- SS3: Speed Sensor 3
+- DV3: Dump Valve 3
+- JB 3: Junction Box 3
+- SS1: Speed Sensor 1
+- DV1: Dump Valve 1
+- JB 1: Junction Box 1
+- K05 Relay: K05 Relay
+- Fuse No - 63: 110 V DC
+- Fuse No - 65: 0 V DC
+- Pressure Switch: Cut In - 1.8 kg/cm2, Cut Out - 1.3 kg/cm2
+
+Terminal Block Connections (Left to Right):
+- 98: Brown (230311)
+- 74: White (230310)
+- 73: Yellow (230212)
+- 61: Green (230211)
+- 60: Grey (230210)
+- 71: Brown (230308)
+- 70: White (230307)
+- 57: Yellow (230209)
+- 56: Green (230208)
+- 55: Grey (230207)
+- 68: Brown (230305)
+- 67: White (230304)
+- 53: Yellow (230206)
+- 52: Green (230205)
+- 51: Grey (230204)
+- 65: Brown (230302)
+- 64: White (230301)
+- 49: Yellow (230203)
+- 48: Green (230202)
+- 47: Grey (230201)
+- 44: W10.1 - 1
+- 43: W2.1 - 1
+- 42: W10.1 - 2
+- 41: W2.1 - 2
+- 40: W10.1 - PE
+
+Wiring Specifications:
+- W2.1 - 19 (24 x 0.5 sq mm)
+- W1.1 - 8 (12 x 0.5 sq mm)
+- W1.1 - 7 (12 x 0.5 sq mm)
+- W1.2 - 12 (12 x 0.5 sq mm)
+- W1.2 - 11 (12 x 0.5 sq mm)
+- W1.2 - 10 (12 x 0.5 sq mm)
+- W1.1 - 6 (12 x 0.5 sq mm)
+- W1.1 - 5 (12 x 0.5 sq mm)
+- W1.2 - 9 (12 x 0.5 sq mm)
+- W1.2 - 8 (12 x 0.5 sq mm)
+- W1.2 - 7 (12 x 0.5 sq mm)
+- W1.1 - 4 (12 x 0.5 sq mm)
+- W1.1 - 3 (12 x 0.5 sq mm)
+- W1.2 - 6 (12 x 0.5 sq mm)
+- W1.2 - 5 (12 x 0.5 sq mm)
+- W1.2 - 4 (12 x 0.5 sq mm)
+- W1.1 - 2 (12 x 0.5 sq mm)
+- W1.1 - 1 (12 x 0.5 sq mm)
+- W1.2 - 3 (12 x 0.5 sq mm)
+- W1.2 - 2 (12 x 0.5 sq mm)
+- W1.2 - 1 (12 x 0.5 sq mm)
+- W10.1 - 1 (3 x 1.5 sq mm)
+- W2.1 - 1 (24 x 0.5 sq mm)
+- W10.1 - 2 (3 x 1.5 sq mm)
+- W2.1 - 2 (24 x 0.5 sq mm)
+- W2.1 - 17 (< 5 kmph)
+- W2.1 - 15 (> 5 kmph)
+- W10.1 - 3 (3 x 1.5 sq mm)
+- W2.1 - 24 (0.5 sq mm)
+
+Note:
+- ** Ground at car body.
+
+Document Info:
+- WSP WIRING 18 SERIES
+- KNORR-BREMSE
+- CAD-project-no: 121102

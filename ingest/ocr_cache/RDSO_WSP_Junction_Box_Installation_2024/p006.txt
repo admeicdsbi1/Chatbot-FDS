@@ -1,0 +1,47 @@
+### Engineering Document Index
+
+**Subject:** BRACKET
+
+**Reference Information:**
+*   **Drawing Number:** AAD11918
+*   **Reference Drawing Number:** 10113 0 03 095 151
+*   **Date of First Issue:** 13-10-2018
+*   **Date of Latest Alt:** 13-05-2024
+*   **Group:** UNDERFRAME
+*   **Sheet:** 1 OF 1
+*   **Scale:** 1:2
+
+**Component Details:**
+*   **Item No:** 1
+*   **Description:** BRACKET
+*   **Dimensions:** 4x159x206
+*   **Material Specification:** IRS M-41-1997
+*   **Weight/Unit:** 1.022 KGS
+
+**Technical Specifications & Dimensions:**
+*   **Hole Diameter:** Ø7, 4 HOLES
+*   **Vertical Hole Spacing:** 106 mm
+*   **Horizontal Hole Spacing:** 82 mm
+*   **Edge to Hole Distance (Horizontal):** 15 mm
+*   **Edge to Hole Distance (Vertical):** 13 mm
+*   **Total Height:** 206 mm
+*   **Total Width:** 122 mm
+*   **Thickness:** 4 mm
+*   **Bend Radius:** R8
+*   **Vertical Flange Height:** 45 mm
+
+**Manufacturing/Process Notes:**
+*   01: ROUGH CLEANED
+*   01b: BURRS REMOVED
+*   18: CHAMFERED
+
+**Revision Table:**
+| ALT. | ZONE | DESCRIPTION | APPROVED & DATE |
+| :--- | :--- | :--- | :--- |
+| d | | ITEM REVISED | |
+
+**Personnel/Authority:**
+*   **SSE/D:** P. Slongo
+*   **CHD:** CHINA SRINIVASA RAO
+*   **DRN:** CHINA SRINIVASA RAO
+*   **Organization:** INDIAN RAILWAY STANDARDS, INTEGRAL COACH FACTORY, CHENNAI - 600038

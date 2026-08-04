@@ -1,0 +1,82 @@
+ANNEXURE-H
+
+**WIRING DIAGRAM COMPONENTS AND TERMINALS**
+
+| Component/Terminal | Description |
+| :--- | :--- |
+| CDTS | CDTS |
+| Junction Box 1 | Junction Box 1 |
+| Junction Box 2 | Junction Box 2 |
+| Junction Box 3 | Junction Box 3 |
+| Junction Box 4 | Junction Box 4 |
+| WSP BODY | WSP BODY |
+| SWITCH BOARD CABINET | SWITCH BOARD CABINET |
+| Pressure Switch | Pressure Switch |
+
+**WIRING LIST**
+
+| Terminal/Wire ID | Description |
+| :--- | :--- |
+| 500.74.CDTS.b2 | CDTS |
+| 501.73.CDTS.b4 | CDTS |
+| 300.72.S1.SUP.JB | SENSOR 1 +VE |
+| 301.71.S1.SIG.JB | SENSOR 1 SIG |
+| 302.70.S1.GND.JB | SENSOR 1 -VE |
+| 303.69.S1.SH.JB | SENSOR 1 SHEILD |
+| 200.56.ZA1.JB | Dump Valve1 COIL 1 |
+| 201.55.VY1.JB | Dump Valve1 COIL 2 |
+| 202.54.CM1.JB | Dump Valve1 COM |
+| 304.68.S2.SUP.JB | SENSOR 2 +VE |
+| 305.67.S2.SIG.JB | SENSOR 2 SIG |
+| 306.66.S2.GND.JB | SENSOR 2 -VE |
+| 307.65.S2.SH.JB | SENSOR 2 SHEILD |
+| 203.53.ZA2.JB | Dump Valve2 COIL 1 |
+| 204.52.VY2.JB | Dump Valve2 COIL 2 |
+| 205.51.CM2.JB | Dump Valve2 COM |
+| 308.64.S3.SUP.JB | SENSOR 3 +VE |
+| 309.63.S3.SIG.JB | SENSOR 3 SIG |
+| 310.62.S3.GND.JB | SENSOR 3 -VE |
+| 311.61.S3.SH.JB | SENSOR 3 SHEILD |
+| 206.50.ZA3.JB | Dump Valve3 COIL 1 |
+| 207.49.VY3.JB | Dump Valve3 COIL 2 |
+| 208.48.CM3.JB | Dump Valve3 COM |
+| 312.60.S4.SUP.JB | SENSOR 4 +VE |
+| 313.59.S4.SIG.JB | SENSOR 4 SIG |
+| 314.58.S4.GND.JB | SENSOR 4 -VE |
+| 315.57.S4.SH.JB | SENSOR 4 SHEILD |
+| 209.47.ZA4.JB | Dump Valve4 COIL 1 |
+| 210.46.VY4.JB | Dump Valve4 COIL 2 |
+| 211.45.CM4.JB | Dump Valve4 COM |
+| 100.44.1.+110V | +110V |
+| 101.43.2.-110V | -110V |
+| 401_43_Z4_-110VDC | -110VDC |
+| 400_42_Z2_FP | FP |
+| 102.40.3.PE | PE |
+
+**COACH LAYOUT TABLE**
+
+| ID | Description | Axle |
+| :--- | :--- | :--- |
+| SS4 | DUMP VALVE4 | Axle1 |
+| SS3 | DUMP VALVE3 | Axle2 |
+| SS2 | DUMP VALVE2 | Axle3 |
+| SS1 | DUMP VALVE1 | Axle4 |
+
+**TEXT LABELS**
+*   ESCORTS SCOPE OF WIRES
+*   RAILWAY SCOPE OF WIRES
+*   Connected By Railway
+*   RAILWAY TERMINALS
+*   CONFIDENTIAL DOCUMENT, UNAUTHORIZED CIRCULATION IS STRICTLY PROHIBITED
+
+**REVISION TABLE**
+*   02: Junction box reduced to 4 from 6 numbers as per new design | Dushyant | 18.12.19
+*   01: PRESSURE SWITCH TO WSP CONNECTION ADDED | ARVIND | 25.07.2016
+
+**SIGNATURE BLOCK**
+*   Project: Axle Mounted Disc Brake System
+*   Prepared By: Prince | 19/12/19
+*   Checked By: Dushyant | 19/12/19
+*   Approved By: S.Reddy | 19/12/19
+*   ESCORTS LIMITED RAILWAY EQUIPMENT DIVISION 115/24, FARIDABAD (INDIA)
+*   Drawing No. Alt.: EL01069 2

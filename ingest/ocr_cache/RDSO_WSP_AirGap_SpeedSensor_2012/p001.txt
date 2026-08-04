@@ -1,0 +1,51 @@
+(867)
+(10) 16/2/2012
+
+भारत सरकार रेल मंत्रालय
+अनुसंधान अभिकल्प और मानक संगठन
+लखनऊ - 226 011
+EPBX (0522) 2451200
+Fax (0522) 2458500
+
+Government of India-Ministry of Railways
+Research Designs & Standards Organisation
+Lucknow - 226 011
+DID (0522) 2450115
+DID (0522) 2465310
+
+अअमा RDSO
+रेल अग्रदूत Transforming Railways
+
+पत्र सं. एमसी/एलएचबी/ब्रेक
+दिनांक 15.2.2012
+
+मुख्य यांत्रिक अभियन्ता,
+1. पूर्व रेलवे, फेयरली प्लेस, कोलकाता - 700 001.
+2. उत्तर रेलवे, बड़ौदा हाउस, नई दिल्ली - 110 001.
+3. दक्षिण रेलवे, पार्क टाउन, चेन्नई - 600 003
+4. पूर्वोत्तर सीमान्त रेलवे, मालीगाँव, गुवाहाटी - 781 011.
+5. पश्चिम रेलवे, चर्चगेट, मुम्बई - 400 020.
+6. पूर्व मध्य रेलवे, हाजीपुर - 844 101.
+7. पूर्व तटीय रेलवे, बीडीए रेंटल कालोनी, रेलवे काम्प्लेक्स, चन्द्रशेखरपुरा, भुवनेश्वर - 751 016.
+8. दक्षिण पश्चिम रेलवे, हुबली - 580 023.
+9. रेल कोच फैक्टरी, हुसैनपुर, कपूरथला - 144 602.
+
+विषय: Air Gap setting between phonic wheel and WSP speed sensor
+सन्दर्भ: Performance Review of LHB coaches held at Rly Board on 08.11.11 & 12.12.11.
+
+At present, the air gap between phonic wheel and speed sensor for WSP system recommended by M/s Knorr Bremse is 0.9 to 1.4mm and by M/s Faiveley Transport is 1.0mm to 2.0mm. Railways have been facing difficulty in maintaining the gap between two different systems. The subject matter has been discussed with the OEMs to standardize the common gap between phonic wheel and speed sensor for their WSP system. M/s Faiveley Transport vide their letter No.FTRIL/Engg/RCF-WSP/2011-12 (copy enclosed) has confirmed that the gap in FTIL equipment also can be reduced to 0.9 to 1.4 mm with out any effect on the performance of the system.
+
+In view of the above, the air gap between phonic wheel and speed sensor for WSP system is standardized as 0.9 to 1.4mm for both the system. Railways are advised to maintain air gap between phonic wheel and speed sensor accordingly.
+
+संलग्नक: उपरोक्त।
+
+(राजेश अवस्थी)
+निदेशक / सवारी डिब्बा
+कृते महानिदेशक / सवारी डिब्बा
+
+प्रतिलिपी सूचनार्थ:
+1. कार्यकारी निदेशक यांत्रिक इंजीनियरिंग (कोचिंग), रेलवे बोर्ड, रेल भवन, नई दिल्ली - 110 001
+2. मेसर्स कन्नौर ब्रेमसे इण्डिया प्रा. लि., 14/6 मथुरा रोड, फरीदाबाद (हरियाणा) - 122 003
+3. मेसर्स फेवली ट्रान्सपोर्ट इण्डिया लि., पोस्ट बाक्स सं. 39, हरित, होसूर (तमिलनाडु) - 635 109
+
+o/c

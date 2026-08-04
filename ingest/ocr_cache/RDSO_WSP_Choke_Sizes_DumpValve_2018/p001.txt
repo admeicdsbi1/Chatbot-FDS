@@ -1,0 +1,70 @@
+### Document Metadata
+*   **Document Reference:** No. MC/LHB/Brake
+*   **Date:** 19.11.2018
+*   **Subject:** Modification in choke sizes of Dump Valves of WSP system in LHB Coaches.
+*   **Reference:** i). Item No. 4 of minutes of ‘Agenda Item of 17th CMG’
+
+### Distribution List
+| S.No. | Chief Rolling Stock Engineer | S.No. | Chief Rolling Stock Engineer |
+| :--- | :--- | :--- | :--- |
+| 1. | Central Railway, Chhatrapati Shivaji Terminus, Mumbai - 400 001 | 2. | East Coast Railway, Chandrasekharpur, Bhubaneswar - 751 016 |
+| 3. | Eastern Railway, Fairlie Place, Kolkata - 700 001 | 4. | North Central Railway, Allahabad - 211 001 |
+| 5. | Northern Railway, Baroda House, New Delhi - 110 001 | 6. | North Western Railway, Jaipur - 302 006 |
+| 7. | Southern Railway, Park Town, Chennai - 600 003 | 8. | West Central Railway, Jabalpur - 482 008 |
+| 9. | South Central Railway, Rail Nilayam, Secunderabad - 500 071 | 10. | South Western Railway, Hubli - 580 023 |
+| 11. | South Eastern Railway, Garden Reach, Kolkata - 700 043 | 12. | South East Central Railway, Bilaspur - 495 004 |
+| 13. | North Eastern Railway, Gorakhpur - 273 001 | 14. | Integral Coach Factory, Chennai - 600 038 |
+| 15. | Western Railway, Churchgate, Mumbai - 400 020 | 16. | Rail Coach Factory, Hussainpur, Kapurthala, Punjab - 144 602 |
+| 17. | Northeast Frontier Railway, Maligaon, Guwahati - 781 011 | 18. | Modern Coach Factory, Raebareli, Lalganj - 229206 |
+| 19. | East Central Railway, Hajipur - 844 101 | 20. | Konkan Railway Corp. Ltd. Corporate office, Belapur Bhawan, Navi, Mumbai-400 614 |
+
+### Technical Components
+*   **System:** WSP (Wheel Slide Protection) system
+*   **Component:** Dump Valves
+
+### Document Metadata
+**Subject:** Modification in choke sizes of Dump Valves of WSP system in LHB Coaches.
+**Reference i):** Item No. 4 of minutes of ‘Agenda Item of 17th CMG’.
+**Reference ii):** RDSO letter of even no. dated 27.09.2018.
+
+---
+
+### Technical Specifications
+*   **System:** WSP (Wheel Slide Protection) system
+*   **Component:** Dump Valves
+*   **Charging Choke Size:** 09 mm
+*   **Exhaust Choke Size:** No Choke
+*   **Report Designation:** RDSO/CG/CRR-18002
+*   **Application:** LHB Coaches
+
+---
+
+### Distribution List
+| S.No. | Railway / Production Unit |
+| :--- | :--- |
+| 11 | South Eastern Railway, Garden Reach, Kolkata - 700 043 |
+| 12 | South East Central Railway, Bilaspur - 495 004 |
+| 13 | North Eastern Railway, Gorakhpur - 273 001 |
+| 14 | Integral Coach Factory, Chennai - 600 038 |
+| 15 | Western Railway, Churchgate, Mumbai - 400 020 |
+| 16 | Rail Coach Factory, Hussainpur, Kapurthala, Punjab - 144 602 |
+| 17 | Northeast Frontier Railway, Maligaon, Guwahati - 781 011 |
+| 18 | Modern Coach Factory, Raebareli, Lalganj - 229206 |
+| 19 | East Central Railway, Hajipur - 844 101 |
+| 20 | Konkan Railway Corp. Ltd. Corporate office, Belapur Bhawan, Navi, Mumbai-400 614 |
+
+Based on the document provided, here is the extracted technical information:
+
+### Document Metadata
+*   **Subject:** Modification of WSP (Wheel Slide Protection) system choke sizes.
+*   **Date:** 19.11.18
+*   **Issuing Authority:** Director/Carriage, for Director General/Carriage (RDSO)
+*   **Recipient/Copy to:** DME (Coaching), Rail Bhawan, Railway Board, New Delhi- 110 001.
+
+### Technical Content
+*   **System:** WSP (Wheel Slide Protection) system
+*   **Component:** Choke
+*   **Action:** Modification of choke sizes
+*   **Applicability:** All LHB Coaches
+
+*(Note: No specific numerical values, part numbers, or tables are present in this excerpt.)*

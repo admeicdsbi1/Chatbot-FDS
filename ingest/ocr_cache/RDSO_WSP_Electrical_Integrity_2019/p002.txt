@@ -1,0 +1,12 @@
+Ensuring integrity of Electrical connections of WSP system was also reiterated in RDSO letters at Ref (2) and (3).
+
+It is noted from the WSP fault / event data downloaded by Zonal Railways that several faults indicating short circuit / broken cable are repeatedly being set and cleared in the error logs. These intermittent faults arise mainly due to loose / damaged electrical connections in the WSP system. In many cases, the same faults are repeating in subsequent journeys even after maintenance. As such, Zonal Railways may ensure that:
+
+1. Proper troubleshooting is carried out to arrive at the root cause of the recorded fault and any loose / damaged electrical connections are identified and attended to. It may be ensured that the same faults do not repeat after maintenance.
+
+2. A one-time drive may be carried out in coaching depots to ensure vibration resistant electrically tight connections in the WSP wiring system.
+
+(Samir Lohani)
+Executive Director (Stds.)/Carriage
+
+Copy to: EDME (Chg.)/Rail Bhawan, Railway Board New Delhi- 110 001 for kind information please.

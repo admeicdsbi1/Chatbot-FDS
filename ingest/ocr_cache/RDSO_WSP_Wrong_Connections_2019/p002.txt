@@ -1,0 +1,12 @@
+# ANNEXURES
+
+| Annexure No. | Details of Annexure | Supplier Name- WSP Model |
+| :--- | :--- | :--- |
+| Annexure-A | WSP electrical wiring diagram for existing arrangement (6 nos. of Junction Boxes) | M/s Knorr Bremse - **MGS2** |
+| Annexure-B | WSP electrical wiring diagram for modified arrangement (4 nos. of Junction Boxes) | M/s Knorr Bremse - **MGS2** |
+| Annexure-C | WSP electrical wiring diagram for existing arrangement (6 nos. of Junction Boxes) | M/s Faiveley Transport - **SWKP** |
+| Annexure-D | WSP electrical wiring diagram for modified arrangement (4 nos. of Junction Boxes) | M/s Faiveley Transport - **SWKP** |
+| Annexure-E | WSP electrical wiring diagram for existing arrangement (6 nos. of Junction Boxes) | M/s Faiveley Transport - **AEFG2** |
+| Annexure-F | WSP electrical wiring diagram for modified arrangement (4 nos. of Junction Boxes) | M/s Faiveley Transport – **AEFG2** |
+| Annexure-G | WSP electrical wiring diagram for existing arrangement (6 nos. of Junction Boxes) | M/s Escorts – **PE94 MSV** |
+| Annexure-H | WSP electrical wiring diagram for modified arrangement (4 nos. of Junction Boxes) | M/s Escorts – **PE94 MSV** |

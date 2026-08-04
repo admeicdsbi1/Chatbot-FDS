@@ -1,0 +1,55 @@
+भारत सरकार - रेल मंत्रालय
+अनुसंधान अभिकल्प और मानक संगठन
+लखनऊ - 226 011
+EPBX (0522) 2451200
+Fax (0522) 2458500
+
+Government of India-Ministry of Railways
+Research Designs & Standards Organisation
+Lucknow - 226 011
+DID (0522) 2450115
+DID (0522) 2465310
+
+अमृअसं RDSO
+रेल अग्रदूत Transforming Railways
+
+No. MC/LHB/Brake
+Date: 17.12.2019
+
+Principal Chief Mechanical Engineers,
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| 1. | Central Railway, Chhatrapati Shivaji Terminus, Mumbai - 400 001 | 2. | East Coast Railway, Chandrasekharpur, Bhubaneswar - 751 016 |
+| 3. | Eastern Railway, Fairlie Place, Kolkata - 700 001 | 4. | North Central Railway, Allahabad - 211 001 |
+| 5. | Northern Railway, Baroda House, New Delhi - 110 001 | 6. | North Western Railway, Jaipur - 302 006 |
+| 7. | Southern Railway, Park Town, Chennai - 600 003 | 8. | West Central Railway, Jabalpur - 482 008 |
+| 9. | South Central Railway, Rail Nilayam, Secunderabad - 500 071 | 10. | South Western Railway, Hubli - 580 023 |
+| 11. | South Eastern Railway, Garden Reach, Kolkata - 700 043 | 12. | South East Central Railway, Bilaspur - 495 004 |
+| 13. | North Eastern Railway, Gorakhpur - 273 001 | 14. | Integral Coach Factory, Chennai - 600 038 |
+| 15. | Western Railway, Churchgate, Mumbai - 400 020 | 16. | Rail Coach Factory, Hussainpur, Kapurthala, Punjab - 144 602 |
+| 17. | Northeast Frontier Railway, Maligaon, Guwahati - 781 011 | 18. | Modern Coach Factory, Raebareli, Lalganj - 229206 |
+| 19. | East Central Railway, Hajipur - 844 101 | 20. | Konkan Railway Corp. Ltd. Corporate office, Belapur Bhawan, Nawi, Mumbai-400 614 |
+
+Sub: Wheel Shelling - Wrong electrical connections in WSP system of LHB Coaches.
+
+During the recent 19th CMG, it was come to notice of RDSO that in the new LHB Coaches turned out from PUs, WSP system was automatically going in Sleep Mode after 15-20 minutes of system ON and Wheel Shelling within two-three months since their commissioning in ZRs. The problem was examined in detail with OEMs and it is learnt that these coaches were found with wrong electrical connections (at the WAGO end & in Junction Boxes at coach under frame) in Wheel Slide Protection system.
+
+In connection to this, please find enclosed the electrical wiring scheme of WSP system (with exiting & modified arrangement) of LHB brake system suppliers (for the respective OEMs brake systems of LHB Coaches) for taking following action in order to ensure 100% effective working of WSP system to tackle Wheel Shelling problem:
+
+PUs: To ensure that all new LHB to be turned out with the aforesaid enclosed respective wiring scheme.
+
+ZRs: Checking & ensuring wiring connections during shop schedules (SS-1, SS-2 & SS-3) of LHB Coaches on 100% basis and depots for LHB coaches having problem of WSP going in automatic sleeping mode or suffering with Wheel Shelling.
+
+This is for kind information and necessary action please.
+
+DA: A/a.
+
+(Vivek Acharya) 17/12/19
+Director/Carriage
+for Director General/Carriage
+
+Copy to: For information & compliance of above during AMCs of LHB Coaches,
+i. M/s Knorr-Bremse India Pvt. Ltd., 51/4 KM Stone, Vill. & P.O. Baghola, Delhi Mathura Road (NH-2), Palwal-121102, Haryana
+ii. M/s Faiveley Transport Rail Technologies India Ltd. 3A, Apparel Park cum Industrial Area, Bhatoli, Baddi, Distt-Solan (H.P)
+iii. M/s Escorts Limited, Plot No.115, Sector-24, Faridabad-121005 (Haryana)
