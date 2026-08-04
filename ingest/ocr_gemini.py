@@ -15,6 +15,8 @@ cached pages, so the API is only hit once per page, ever.
     python ingest/ocr_gemini.py            # all qualifying pages, all docs
     python ingest/ocr_gemini.py --doc KB_CMG_WSP_Presentation
 """
+import load_env  # noqa: F401  — must precede the GEMINI_API_KEY read below
+
 import argparse
 import base64
 import os

@@ -22,6 +22,8 @@ resumes because already-embedded texts are simply found in the cache and skipped
 Commit the regenerated embeddings.npy TOGETHER with chunks_merged.jsonl — rag.init_kb
 requires their row counts to match, so they must always move as a pair.
 """
+import load_env  # noqa: F401  — must precede `import embed` (reads env at import time)
+
 import argparse
 import hashlib
 import os

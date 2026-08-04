@@ -5,3 +5,4 @@ python-multipart==0.0.20
 numpy==2.2.1
 requests==2.32.3
 gTTS==2.5.4
+python-dotenv==1.0.1

@@ -12,6 +12,8 @@ diagram-only pages are included via the OCR cache; the build report lists any
 pages still lacking OCR. After a full build, regenerate embeddings
 (backend/generate_embeddings.py) and commit BOTH artifacts together.
 """
+import load_env  # noqa: F401  — must precede doc_registry (reads PDF_BUCKET_BASE at import)
+
 import argparse
 import json
 import os

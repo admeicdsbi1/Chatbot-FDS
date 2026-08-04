@@ -26,6 +26,8 @@ Cloudflare R2 is the same with its endpoint and S3_REGION=auto.
     python ingest/upload_pdfs.py --only <doc_id>
     python ingest/upload_pdfs.py --overwrite   # re-put even if key exists
 """
+import load_env  # noqa: F401  — must precede the S3_*/R2_* reads below
+
 import argparse
 import os
 import sys

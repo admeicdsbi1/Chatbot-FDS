@@ -10,6 +10,8 @@ Endpoints:
 The RAG brain lives in rag.py / voice_text.py (ported from the original Gradio
 app). I/O edges (LLM, STT, TTS) are reliable free providers — see llm.py / stt.py.
 """
+import load_env  # noqa: F401  — must precede the imports below (env read at import time)
+
 import os, json
 from datetime import datetime
 from contextlib import asynccontextmanager

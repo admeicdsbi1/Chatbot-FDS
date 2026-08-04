@@ -30,6 +30,7 @@ _BACKEND = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", "..", 
 sys.path.insert(0, _BACKEND)
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
+import load_env     # noqa: E402,F401  — must precede rag (embed.py reads env at import)
 import rag          # noqa: E402
 import verify       # noqa: E402
 
