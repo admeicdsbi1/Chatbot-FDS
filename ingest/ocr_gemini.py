@@ -53,6 +53,30 @@ Rules:
 - If the page is bilingual, transcribe both Hindi and English text.
 - If truly nothing is readable, output exactly: [UNREADABLE]"""
 
+# Fallback prompt for pages Gemini refuses with finishReason RECITATION.
+# Verbatim-transcription framing over a *published* circular (the RDSO WSP
+# instruction letters are public documents the model has memorised) trips the
+# recitation filter and returns zero parts — silently, since the HTTP status is
+# still 200. Re-asking for the same content as a structured technical extraction
+# clears the filter and, as a side effect, recovers table column headers that the
+# scanned text layer had detached from their values. Values are still required
+# verbatim, so numeric fidelity is unchanged.
+EXTRACT_PROMPT = """You are reading a page from an Indian Railways engineering maintenance document, to build an internal technical index for depot maintenance staff.
+
+Extract, as structured markdown, the engineering content of this image:
+- every table, as a markdown table with its header row and all cell values
+- every technical value: sizes, part numbers, model designations, voltages, pressures, timings, tolerances, fault codes
+- every component designation and its description (e.g. "K05 - off delay timer relay")
+- the subject line, and any reference letter numbers and dates
+
+Report all values exactly as printed — they are safety-critical. Do not add commentary or interpretation. If nothing technical is visible, output exactly: [UNREADABLE]"""
+
+# Horizontal bands (with overlap) used as a last resort when a whole page is
+# refused: a band carrying only part of the document is usually not recognised as
+# recitation, so the technical content still gets through.
+BAND_COUNT = 3
+BAND_OVERLAP = 0.08
+
 
 def qualifying_pages(entry):
     """Pages worth OCR: weak/moderate native text with a big embedded image
@@ -77,14 +101,17 @@ def qualifying_pages(entry):
     return out
 
 
-def _ocr_gemini(png):
+def _ocr_gemini(png, prompt=PROMPT):
+    """-> (text|None, finish_reason|None). A 200 response with no parts is NOT a
+    generic failure: finishReason tells us whether to give up (SAFETY) or retry
+    under different framing (RECITATION), so it is returned to the caller."""
     if not GEMINI_API_KEY:
-        return None
+        return None, None
     payload = {
         "contents": [{"role": "user", "parts": [
             {"inline_data": {"mime_type": "image/png",
                              "data": base64.b64encode(png).decode()}},
-            {"text": PROMPT},
+            {"text": prompt},
         ]}],
         "generationConfig": {"temperature": 0.0, "maxOutputTokens": 4000,
                              "thinkingConfig": {"thinkingBudget": 0}},
@@ -94,17 +121,57 @@ def _ocr_gemini(png):
         if r.status_code == 200:
             cands = r.json().get("candidates", [])
             if not cands:
-                return None
+                return None, None
+            finish = cands[0].get("finishReason")
             parts = cands[0].get("content", {}).get("parts", [])
-            return "".join(p.get("text", "") for p in parts).strip() or None
+            text = "".join(p.get("text", "") for p in parts).strip()
+            if not text:
+                print(f"    gemini returned no text (finishReason={finish})")
+            return (text or None), finish
         if r.status_code in (429, 500, 503):
             wait = min(2 ** attempt * 5, 60)
             print(f"    gemini {r.status_code}, retrying in {wait}s")
             time.sleep(wait)
             continue
         print(f"    gemini OCR failed {r.status_code}: {r.text[:160]}")
-        return None
-    return None
+        return None, None
+    return None, None
+
+
+def _render(entry, page_no, clip=None, zoom=2.0):
+    doc = fitz.open(pdf_path(entry))
+    page = doc[page_no - 1]
+    rect = page.rect
+    if clip is not None:
+        clip = fitz.Rect(rect.x0, clip[0], rect.x1, clip[1])
+    png = page.get_pixmap(matrix=fitz.Matrix(zoom, zoom), clip=clip).tobytes("png")
+    height = rect.height
+    y0 = rect.y0
+    doc.close()
+    return png, y0, height
+
+
+def _ocr_banded(entry, page_no):
+    """Split the page into overlapping horizontal bands and OCR each separately.
+    Used only when the full page is refused as recitation; partial bands usually
+    are not. Bands still refused are skipped rather than failing the page, so we
+    keep whatever content did come through."""
+    _, y0, height = _render(entry, page_no)
+    out, refused = [], 0
+    for i in range(BAND_COUNT):
+        top = max(y0, y0 + height * (i / BAND_COUNT) - height * BAND_OVERLAP)
+        bot = min(y0 + height,
+                  y0 + height * ((i + 1) / BAND_COUNT) + height * BAND_OVERLAP)
+        png, _, _ = _render(entry, page_no, clip=(top, bot), zoom=2.5)
+        text, finish = _ocr_gemini(png, EXTRACT_PROMPT)
+        if text and text != "[UNREADABLE]":
+            out.append(text)
+        else:
+            refused += 1
+        time.sleep(SLEEP)
+    if refused:
+        print(f"    banded: {BAND_COUNT - refused}/{BAND_COUNT} bands recovered")
+    return "\n\n".join(out) or None
 
 
 def _ocr_groq(png):
@@ -134,12 +201,24 @@ def _ocr_groq(png):
 
 
 def ocr_page(entry, page_no):
-    doc = fitz.open(pdf_path(entry))
-    pix = doc[page_no - 1].get_pixmap(matrix=fitz.Matrix(2, 2))
-    png = pix.tobytes("png")
-    doc.close()
-    # Gemini first; on failure/throttle fall back to Groq vision (separate quota).
-    return _ocr_gemini(png) or _ocr_groq(png)
+    """Fallback ladder: verbatim prompt -> extraction prompt (clears RECITATION)
+    -> per-band extraction -> Groq vision (separate quota)."""
+    png, _, _ = _render(entry, page_no)
+    text, finish = _ocr_gemini(png)
+    if text:
+        return text
+    if finish == "RECITATION":
+        # published circular the model won't recite back; re-ask as extraction
+        print("    recitation-blocked, retrying as structured extraction")
+        time.sleep(SLEEP)
+        text, _ = _ocr_gemini(png, EXTRACT_PROMPT)
+        if text:
+            return text
+        print("    still blocked, retrying per-band")
+        text = _ocr_banded(entry, page_no)
+        if text:
+            return text
+    return _ocr_groq(png)
 
 
 def main():

@@ -77,10 +77,40 @@ def _collect_repeated_lines(pages_lines, n_pages):
     return {t for t, c in counts.items() if c >= threshold}
 
 
+_SUBJECT_RE = re.compile(
+    r"^[\s*#>|-]*(?:\*\*)?\s*(?:sub|subject|विषय)\s*(?:\*\*)?\s*[:\-]\s*(?:\*\*)?\s*(.+)",
+    re.I | re.M)
+
+
+def _ocr_section_title(text, entry, page_no):
+    """Section title for a force-OCR page.
+
+    The obvious choice — the page's first short line — lands on the letterhead
+    ("भारत सरकार - रेल मंत्रालय") or a markdown artifact ("### Document Metadata")
+    for every scanned RDSO circular. That is not just an ugly citation: rag.py
+    multiplies a chunk's score by the overlap between its section title and the
+    query (~1.15-1.6x), so a boilerplate title silently costs these documents the
+    boost that every OEM manual's "Speed sensors" heading receives. Prefer the
+    letter's Subject line, then the registry title, and only then a short line.
+    """
+    m = _SUBJECT_RE.search(text)
+    if m:
+        subj = re.sub(r"[*_`]", "", m.group(1)).strip(" .:-")
+        if 3 <= len(subj) <= 120:
+            return subj
+    title = (entry.get("title") or "").strip()
+    if title:
+        return title[:120]
+    first = next((l.strip() for l in text.splitlines()
+                  if 3 <= len(l.strip()) <= 80), None)
+    return first or f"Page {page_no}"
+
+
 def _ocr_only(path, entry):
     """Force-OCR path: for PDFs whose native text is corrupted (bad font
-    encoding), ignore the garbled native text and build one section per page from
-    the OCR cache. Falls back to native text only if a page has no OCR yet."""
+    encoding) or is a lossy scanner-OCR layer, ignore the native text and build
+    one section per page from the OCR cache. Falls back to native text only if a
+    page has no OCR yet."""
     doc = fitz.open(path)
     sections, page_stats = [], []
     for pno in range(len(doc)):
@@ -89,10 +119,8 @@ def _ocr_only(path, entry):
         used_ocr = bool(ocr)
         text = ocr if used_ocr else re.sub(r"\s+", " ", doc[pno].get_text().strip())
         if text:
-            first = next((l.strip() for l in text.splitlines()
-                          if 3 <= len(l.strip()) <= 80), None)
-            sections.append({"section": first or f"Page {page_no}", "section_num": "",
-                             "page_start": page_no,
+            sections.append({"section": _ocr_section_title(text, entry, page_no),
+                             "section_num": "", "page_start": page_no,
                              "blocks": [{"type": "text", "text": text, "page": page_no}]})
         page_stats.append({"page": page_no, "chars": len(text), "tables": 0,
                            "big_images": 0, "needs_ocr": not used_ocr and not text,
