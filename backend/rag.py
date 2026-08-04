@@ -334,6 +334,38 @@ def _recency_factor(ch):
     return factor
 
 
+PER_DOC_CAP = 3
+
+
+def _diversify(res, k, cap=PER_DOC_CAP):
+    """Take the top-k in score order, but let no single document occupy more than
+    `cap` slots; the rest of that document's chunks are held back and used only to
+    backfill if there aren't enough other candidates.
+
+    Without this, chunk-count decides representation: the bulky OEM manuals
+    (Faiveley 116 chunks, Knorr presentation 53, WSP handbook 55) repeat a topic's
+    vocabulary far more often than a 1-3 chunk RDSO instruction letter can, so
+    they took 5 of 8 slots and pushed the *authoritative* letter out of context
+    entirely — even though it is the document that governs the value. Capping is
+    deliberately preferred over a bigger authority boost: it changes only how many
+    near-duplicate chunks one document may contribute, never the relative order of
+    genuine relevance.
+    """
+    kept, overflow, seen = [], [], Counter()
+    for item in res:
+        doc = item[1].get("doc_id")
+        if seen[doc] < cap:
+            seen[doc] += 1
+            kept.append(item)
+            if len(kept) == k:
+                return kept
+        else:
+            overflow.append(item)
+    # too few distinct documents to fill k — backfill in score order
+    kept.extend(overflow[:k - len(kept)])
+    return kept[:k]
+
+
 def _pool_is_ambiguous(cands):
     """True when the top candidates span >1 coach type, OEM, or subsystem — the
     case where a rerank most helps separate the right manual from lookalikes."""
@@ -395,7 +427,7 @@ def retrieve(query, k=TOP_K_FINAL):
             score *= _recency_factor(ch)
             results.append((score, ch))
         results.sort(key=lambda x: -x[0])
-        return results[:k]
+        return _diversify(results, k)
 
     # Semantic search: cosine == dot product (both sides normalized).
     sims = emb_matrix @ qv.astype(np.float32)
@@ -450,7 +482,7 @@ def retrieve(query, k=TOP_K_FINAL):
     # by RERANK_ENABLED; fail-safe to hybrid order otherwise).
     if rerank.enabled() and _pool_is_ambiguous(res):
         res = rerank.rerank(query, res, pool=RERANK_POOL)
-    return res[:k]
+    return _diversify(res, k)
 
 
 def _fmt_date(iso):
