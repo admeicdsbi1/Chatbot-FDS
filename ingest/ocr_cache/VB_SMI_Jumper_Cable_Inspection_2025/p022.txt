@@ -1,0 +1,29 @@
+5375 (08/13)
+411-103066
+Installation and Maintenance Manual
+TE
+connectivity
+
+CLASS 2 - CONFIDENTIAL
+
+7.4.6. Engage the boot stem along the jumper as shown in Figure 24.
+
+Figure 24
+
+7.4.7. To prevent ingress of moisture, apply a thin film of a contact grease (TE Simel ENERTAL 1856378-1 or equivalent) onto a termination end contact surface.
+
+WARNING Do not apply the contact grease onto the boot washer (which is supplied in the boot kit).
+
+Apply ENERTAL grease
+onto this surface
+
+Figure 25
+
+©2021 TE Connectivity Ltd
+family of companies
+All Rights Reserved
+TE Proprietary & Confidential Information
+Class II Data Classification - See Policy TEC-02-04
+20 of 26
+Rev J
+01 June 2022

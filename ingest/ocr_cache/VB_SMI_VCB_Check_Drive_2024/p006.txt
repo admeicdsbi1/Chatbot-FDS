@@ -1,0 +1,28 @@
+Page 5 of 8
+
+| Time | Description |
+| :--- | :--- |
+| 13:45 to 14:00 | Contactor in LTC-2 of MC-2 was replaced with new contactor |
+| 14:00 to 14:15 | Connections provided and supply given to LTC unit. |
+| 14:15 to 14:30 | The panto was raised and VCB was found to be holding and working normally. |
+| 17:00 | M/S Medha identified through HQ team regarding a train line wire connection between BU2 and BU5 due to which the fault of BU5 was also being displayed in BU2. The wire was removed and the fault indication symbol in BU2 stopped displaying in the DDU screen. Similarly, the wire connections were removed from the concerned locations in all the BU s. (The photo of the wire connection is provided in Annexure 1) |
+
+**Wiring Diagram Labels:**
+*   +483
+*   70-X34
+*   45
+*   032050.099
+*   2.50 mm² Black
+*   SPARE: VCB 198 (9)
+*   =15/1+400/6.C4
+
+| S. No. | Name | Designation | Signature |
+| :--- | :--- | :--- | :--- |
+| 1. | Sri K P Yadav | CRSE/Chg./ECoR | [Signature] 08/03/2024 |
+| 2. | Sri Suratha Jani | CEE/PLG/BBS | [Signature] 8.3.24 |
+| 3. | Sri R B Parashar | Dy. CEE/ICF | [Signature] 8/3/24 |
+| 4. | Sri P Bharath Krishna | CDO/VSKP | [Signature] 8/3/24 |
+| 5. | Sri D C Jena | ADEE/Chg. | [Signature] 8/3/24 |
+| 6. | Sri D Narsimha Naidu | SSE/ELS/WAT | [Signature] |
+| 7. | Sri B Ravi Sekhar Patnaik | Asst. Manager, M/S Medha | [Signature] |
+| 8. | Sri T Anil | M/S Medha Service Engineer / VSKP | [Signature] |

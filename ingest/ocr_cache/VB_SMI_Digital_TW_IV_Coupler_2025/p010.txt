@@ -1,0 +1,57 @@
+Annexure-A
+
+Peak Hold Mode Recorded Value Review
+
+25.00 Nm *Note 1
+Peak Hold/Track Mode
+Long Press (U/S)
+nodE *Note 2
+Set Peak/Track Mode
+Press (U/S)
+(Up/Down Arrows) n005 Record No. Auto Change 18.00 Nm *Note 3 Record Value
+Press (U/S)
+CLrA Clear Record (C)
+Press (U/S) no?
+(U/S) (Give up) -- No -- Yes (C) (Clear)
+Deleted dEL
+COnU (Up Arrow) *Note 4, 5, 6
+Communication
+Press (U/S) SEnd Communication
+(U/S) (Exit)
+25.00 Nm
+Peak Hold /Track Mode
+
+Note:
+1. The "Peak Hold" mode recorded value review also can be operated form "Track" mode operation.
+2. If you operate in the "Peak Hold" mode, the display will show nodE and please go to next step.
+3. If the record is empty, it will show nonE.
+4. This function is not supported on all type of models.
+5. Communication mode is for uploading record data to PC.
+6. Communication mode is also for calibration of torque wrench. Please contact your local dealer for more information.
+
+COMMUNICATION
+
+Precaution:
+1. Communication function is only supported on some models. Check the model no. and its specification before using communication function.
+2. Do not insert the plug of communication cable into torque wrench that does not support communication function.
+
+CONNECTING COMMUNICATION CABLE
+
+* Turn off power and then connect the accessory cable between the COM port of PC and torque wrench.
+
+UPLOADING RECORD DATA
+
+* Make sure the connection between PC and wrench is normal.
+* Change the wrench operation mode to "SEnd". (Please refer to "Peak Hold Mode Recorded Value Review" section)
+* Use PC to start the uploader program.
+* In uploader program, first select the correct COM port No.
+* Next, select the file path to save the uploaded data.
+* Finally, press "upload" button to transmit the torque records to PC.
+* The uploaded data is then shown on the column and saved in the *.csv file. Use Microsoft Excel to view *.csv file.
+
+CAUTIONS:
+Refer to the uploader program user guide for the detail operations.
+
+14
+15
+9

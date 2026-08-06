@@ -1,0 +1,28 @@
+➤ In this case a pop up will be appeared and
+
+➤ **Motor man should ensure the door close condition physically**
+
+➤ In addition to that there is a door status screen available to see the individual door open and close status.
+➤ Verify All door status in Door over view ,
+➤ All doors should be Closed
+
+| Train: 4567 | Door Overview | 01/01/37 | 07:19:11 |
+| :--- | :--- | :--- | :--- |
+| | | Door Summary | RAKE |
+
+| UNIT1 | UNIT2 | UNIT3 |
+| :--- | :--- | :--- |
+| DTC | MC1 | TC | MC2 | NDTC | MC2 | TC | MC1 | MC1 | TC | MC2 | NDTC |
+
+| UNIT4 | UNIT5 | UNIT6 |
+| :--- | :--- | :--- |
+| MC1 | TC | MC2 | NDTC | NDTC | MC2 | TC | MC1 | MC2 | TC | MC1 | DTC |
+
+| U5 | Transformer Oil Level Low - Warning | Acknowledge |
+| :--- | :--- | :--- |
+| U5 | TC | MCU | Transformer Oil Level Low - Warning | 1115 | | |
+| U1 | CCU | CCCR - Active Slave | TR_FAIL_NO:32 |
+
+➤ After ensuring that doors are closed user should press the pop up acknowledgement. Along with this user has to operate that ADCR bypass switch to make the ADCR status at high.
+
+➤ After motor man acknowledgement and ADCR bypass then traction is allowed.

@@ -1,0 +1,23 @@
+Maintenance Manual
+19-017 MM
+Rev. 1
+STER
+Train 18
+03/082022
+
+8.11 Exchange of the footrest
+
+8.11.1 Footrest executive class
+
+| | |
+| :--- | :--- |
+| 1 | Remove bolts M8x25 DIN 7984 |
+| 2 | Exchange footrest |
+| 3 | Add medium thread locker on tip of screws |
+| 4 | Tighten the 4 screws M8x25 DIN 7984 with washer DIN 125 and nut M8 DIN 985 |
+
+Nut M8 DIN 985
+DIN 125 A8.4
+M8x25
+
+36/43

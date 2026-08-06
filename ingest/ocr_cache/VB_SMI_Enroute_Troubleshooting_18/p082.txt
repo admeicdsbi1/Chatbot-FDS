@@ -1,0 +1,20 @@
+Train: 235753
+MCH Validation Test
+28/01/25
+14:49:58
+Exit
+MCH Validation Test
+
+| MCH Position | CCC1 | CCC2 |
+| :--- | :--- | :--- |
+| Drive | Test Pending | Test Pending |
+| Coast | Test Pending | Test Pending |
+| Brake | Test Pending | Test Pending |
+
+Current Instruction : Move the Master controller into Drive and Press ACK
+Acknowledge
+
+➤ Below Screen will be appeared
+➤ Keep the MCH in Driver position and press the Acknowledge , then Drive mode status will be updated in DDU as per below screen
+
+Page 77 of 85

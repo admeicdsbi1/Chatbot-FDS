@@ -1,0 +1,39 @@
+8) Isolation procedure DOOR OPEN detection :
+
+➢ If ADCR input low (which is generated through All door closed Hardware train line) and along with this All door close status is not received through software .
+
+➢ Then the System will declare the Faults of “All Door Not Closed”
+
+➢ To get the help screen go to “LEGENDS HELP SCREEN” and select the “DOOR OPEN”
+(or)
+Select the “DOOR OPEN” at Main Screen Bottom right .
+
+| | | | | | | | | Acknowledge |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| | | | | - | | | | ▼ ▲ |
+| | | | | | | | | Door Open |
+
+| Train: 4567 | | | | | | | 01/01/37 | 07:19:07 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| | | | | | | | Rake | |
+
+**Doors in Open Condition**
+
+****************************************************************************************************
+**********************************FAULT REASON******************************************************
+****************************************************************************************************
+
+Door open based traction will be prohibited in following cases.
+1. ADCR input is low(HW TL Status) and
+2. All door close status not received through software.
+
+****************************************************************************************************
+**********************************ISOLATION PROCEDURE***********************************************
+****************************************************************************************************
+
+Motor man Can do the ADCR bypass from any of the cab,and continue the
+traction.
+CAUTION : It is the responsibility of the motorman to ensure the safety.
+
+| Door | Door TL | Door Settings |
+| :--- | :--- | :--- |

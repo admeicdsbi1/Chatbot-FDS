@@ -1,0 +1,25 @@
+Train: 4567
+Parking Brake
+01/01/37
+07:16:25
+
+| BU-1 | BU-2 | BU-3 | BU-4 | BU-5 | BU-6 | Exit |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+DTC
+- Parking Brake Override
+- Parking Brake Normal
+
+MC1
+- Parking Brake Override
+- Parking Brake Normal
+
+TC
+- Parking Brake Override
+- Parking Brake Normal
+
+MC2
+- Parking Brake Override
+- Parking Brake Normal
+
+Page 18 of 85

@@ -1,0 +1,7 @@
+| Step | Description | Images | Notes |
+| :--- | :--- | :--- | :--- |
+| Step 4 | The gap between FRP nosecone outer body and side bracket on the front side shall be closed with insulation foam(Item-1) with proper sealant.(Item-2) | [Image of bracket area with green arrow] | |
+| Step 5 | Gap/opening below the marker cum tail light mounting area on either sides of nosecone shall be covered with Aluminium/SS closing sheet (Item-6 & 7). It shall be fixed with the wiper fixing bottom bracket with M6 screws. (Item-11) The other end of the sheet to be placed resting on side transition bracket opening. | [Images of mounting area and installation process] | If Stainless steel sheet is used, 1 mm thickness is adequate. Washers are to be provided on all screws while installing, to prevent loosening of the nut during service (Item No 12&13). |
+| Step-6 | The gap/opening between already provided sheet at the bottom, vide step 5, and the FRP cover at the top, near to the marker cum tail light shall be covered with an angle (Items 8 & 9), as shown in the figure. It shall be screwed with the bottom plate mounted in step 5. | [Images of angle installation] | Angle LH & RH may be used on either sides of the nosecone. Blind riveting may also be used for securing both the sheets together. |
+
+3

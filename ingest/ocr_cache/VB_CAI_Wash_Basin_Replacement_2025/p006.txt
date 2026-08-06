@@ -1,0 +1,39 @@
+### Engineering Document Data
+
+**Subject:** VENT CASING ASSEMBLY FOR WASH BASIN
+**Drawing Number:** 32963366
+**Date of First Issue:** 18-07-25
+
+#### Bill of Materials / Parts List
+| QTY. | DESCRIPTION | DIMENSIONS | ITEM NO. | REF.DRGS. | MATL | WT/UNIT IN KGS | REMARKS |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | TOP PART | | 4 | AAB63920 | | | |
+| 1 | RUBBER | | 3 | AAB63922 | | | |
+| 1 | LOCKNUT | | 2 | AAB63921 | | | |
+| 1 | VENT CASING | | 1 | AAB63919 | | 0.30 | |
+
+#### Technical Values & Specifications
+*   **Diameter:** Ø74
+*   **Height:** 57
+*   **Scale:** 1:1
+*   **Surface Finish Symbols:**
+    *   ▽: ROUGH MACHINED
+    *   ▽▽: FINISH MACHINED
+    *   ▽▽▽: FINE FINISH MACHINED
+*   **Process Symbols:**
+    *   (01): ROUGH CLEANED
+    *   (11b): BURRS REMOVED
+    *   (18): CHAMFERED
+
+#### Component Designations
+*   **Item 1:** VENT CASING
+*   **Item 2:** LOCKNUT
+*   **Item 3:** RUBBER
+*   **Item 4:** TOP PART
+
+#### Administrative Data
+*   **Group:** [BLANK]
+*   **Surface Area in Sq.m.:** [BLANK]
+*   **WT/ASSY in Kgs:** [BLANK]
+*   **Drawing Reference:** ICF/STD-9-0-001
+*   **Organization:** INDIAN RAILWAY STANDARDS / INTEGRAL COACH FACTORY, CHENNAI - 600038

@@ -1,0 +1,9 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 20. | Air Spring Ejection From Carbody Fixture | SPMAET18BOGIE1142 Ref: Jigs & Fixture List by Medha Bogie Private Limited | |
+| 21. | Air Spring Ejection From Bogie Fixture | SPMAET18BOGIE1145 Ref: Jigs & Fixture List by Medha Bogie Private Limited | |
+| 22. | High-Pressurized Grease Gun | Pneumatic or Electrically Operated | Greasing for Stabiliser Assembly (Anti-Roll Bar), Traction Motor, |
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 112 of 359

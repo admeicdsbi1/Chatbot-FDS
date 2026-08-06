@@ -1,0 +1,51 @@
+ANNEXURE-A
+
+Following are the modalities to be followed by user railway based on the conditions as detailed below:
+
+I. IF THE TRAIN IS HALT FOR ONE DAY WITHOUT OHE SUPPLY :
+
+a) Measure the voltmeter (BN voltage) reading in the voltmeter provided in driver desk by operating Battery test push button and record the reading in the log book.
+
+PUSH BUTTON
+DRIVER DESK
+VOLTMETER
+WIPER CONTROL
+OFF BR DIM
+FAST SLOW
+HL MAIN
+
+b) Switched OFF “BATTERY SUPPLY ROTARY SWITCH” located in CRW panel of DTC
+
+CRW PANEL IN DTC
+DRIVER AUTHENTICATION
+UV ISO
+BAL ISO
+CAR SELECTOR
+DUMMY
+SINGLE UNIT OPERATION
+EBL BYPASS
+EB SW BYPASS
+VCD BYPASS
+ADCR BYPASS
+TRACTION SELECTION
+EMERGENCY OFF BYPASS
+DUMMY
+MAC
+BN LTS CNTRL
+START ALL MAC
+PB RELEASE SW
+PB APPL SW
+BATTERY SUPPLY
+DUMMY
+DUMMY
+DUMMY
+DUMMY
+DUMMY
+DUMMY
+DUMMY
+DUMMY
+
+BATTERY SUPPLY ROTARY SWITCH
+ON 0 OFF
+
+1

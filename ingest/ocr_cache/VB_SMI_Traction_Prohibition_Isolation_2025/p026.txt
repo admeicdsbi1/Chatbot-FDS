@@ -1,0 +1,40 @@
+11)Isolation procedure Majority EP Cock Isolation detection :
+
+➢ The System will declare the Faults of
+More than Half EP cocks are isolated, Traction prohibited in
+Rake
+
+➢ To get the help screen go to “LEGENDS HELP SCREEN” and
+select the “ MAJ EP COCK ISO ”
+(or)
+Select the “MAJ EP COCK ISO ” at Main Screen Bottom
+right .
+
+| | | | | | | | | Acknowledge |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| | | | - | | | | ▼ | ▲ |
+| | | | | | | | | MajEPCockIso |
+
+| Train: 4567 | | | | | | | | 01/01/37 | 07:19:41 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| | | | | | | | | Rake | |
+
+Majority EP Cock Isolation Detected
+
+****************************************************************************************************
+**********************************FAULT REASON******************************************************
+****************************************************************************************************
+Traction is prohibited if more than half of the coaches braking is not available due
+to EP cock isolation.
+
+****************************************************************************************************
+**********************************ISOLATION PROCEDURE***********************************************
+****************************************************************************************************
+1. EP cocks should be healthy more than half of the coaches.
+   For Example: If the total coaches available are 16, at least 9 coaches
+   braking should be in healthy condition.
+2. Check the EP cock isolation status screen for additional information.
+
+| EP Cock |
+| :--- |
+| Isolation |

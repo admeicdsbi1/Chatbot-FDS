@@ -1,0 +1,19 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+| SN | System/Sub System/Component | Proposed Maintenance during Warranty Period | Proposed Maintenance post Warranty Period | Proposed related actions |
+| :--- | :--- | :--- | :--- | :--- |
+| 9. | Passenger Information System and related items | Preventive Maintenance Contracts | Comprehensive Annual Maintenance Contracts | Consolidated contract for PMC and CAMC to be done by ICF |
+| 10. | CCTV System and related items | Preventive Maintenance Contracts | Comprehensive Annual Maintenance Contracts | Consolidated contract for PMC and CAMC to be done by ICF |
+| 11. | Mini Pantry Items | | | |
+| 12. | Water Supply System and related items | In-house Maintenance with adequate UTEX | In-house Maintenance with RC | Consolidated Rate contract for supply of the item/items to be done by ICF |
+| 13. | Lavatory items | In-house Maintenance with RC | In-house Maintenance with RC | |
+| v. | **Bio-Vacuum Toilet System** | | | |
+| 1. | Vacuum Evacuation System and related items | Preventive Maintenance Contracts | Comprehensive Annual Maintenance Contracts | Consolidated contract for PMC and CAMC to be done by ICF |
+| 2. | Bio-Toilet and related items | Preventive Maintenance Contracts | Comprehensive Annual Maintenance Contracts | AMOC will be done by ZR |
+| vi. | **HVAC** | | | |
+| 1. | Roof Mounted AC Package Unit and related Systems | Preventive Maintenance Contracts | Comprehensive Annual Maintenance Contracts | Consolidated contract for PMC and CAMC to be done by ICF |
+| 2. | Driver Cab Air Conditioning Unit and related systems | Preventive Maintenance Contracts | Comprehensive Annual Maintenance Contracts | |
+
+Page 7 of 10
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 141 of 359

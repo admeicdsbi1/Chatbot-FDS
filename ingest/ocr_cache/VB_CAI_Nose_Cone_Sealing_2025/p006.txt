@@ -1,0 +1,8 @@
+| Step | Description | Image | Instruction |
+| :--- | :--- | :--- | :--- |
+| Step 7 | The gap still available between the provided sheets with metal parts/FRP to be closed by using insulation foam(Item-1) with adhesive(Item-2), ensuring proper air sealing | ![Image](https://i.imgur.com/5111111.jpg) | Slices of insulation foam shall be used with adhesive for closing |
+| Step 8 | Front side of FRP nosecone, below the wiper cover area, shall be sealed with insulation foam, covering the whole area up to already provided sheets on either sides, ensuring proper sealing. | ![Image](https://i.imgur.com/5111111.jpg) | The gap surrounding FRP mounting bracket to be fully covered. |
+| Step 9 | On the corner portions between metal structure & FRP, all gaps shall be closed to prevent air entry from outside. Care should be taken to close the triangular shaped opening on the side bracket above the end portion of the already provided closing sheet in step 2 | ![Image](https://i.imgur.com/5111111.jpg) | Insulation foam of suitable size to be inserted in between FRP cover and side transition bracket in such a way that all the possible air entry points are sealed. |
+| Step 10 | Final sealing to be done to ensure proper closing of all minute gaps, by using 3M extreme sealing tape, in adequate quantity. | ![Image](https://i.imgur.com/5111111.jpg) | Care should be taken to properly clean the surface wherever sealing tape is applied beforehand, to ensure proper adhesion |
+
+4

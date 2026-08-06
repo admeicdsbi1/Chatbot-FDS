@@ -1,0 +1,10 @@
+Train: 4567
+01/01/37
+07:56:37
+Rake
+
+AXLE Lock Detected
+
+Axle lock detected , Please check the fault messages for info regarding the locked axle,Ensue the track safety before proceeding further.
+
+Page 58 of 85

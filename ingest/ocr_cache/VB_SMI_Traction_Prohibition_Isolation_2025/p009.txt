@@ -1,0 +1,40 @@
+Train: 4567 01/01/37 07:16:14
+Rake
+
+Atleast One Parking Brake Applied in Rake
+2.Check if all the parking brakes are released and fault is recovering.
+3.If fault is not recovering Go to Min1 PB train line screen, identify the coach in which parking brake applied feedback is coming.
+
+CASE 1:
+If the parking brake applied input is coming because of the MCB tripping then do the following.
+1. Normalise the MCB.
+2. Give parking brake release command.
+
+CASE 2:
+If the parking brake applied is genuine and we want to release then following should be done.
+1. Mechanically release the respective coach parking brake and
+2. Isolate respective coach parking brake through isolation switch and
+3. Isolate PB applied loop through PB isolation switch and
+4. Isolate respective coach parking brake through DDU PB override settings.
+
+Min1 PB Applied Loop | PB Override Settings
+
+➢ Ensure MR pressure should be > 7.5 bar.
+➢ Give parking brake release from occupied Cab .
+➢ Verify all parking brake should be released and fault should be recovered .
+➢ If fault is not recovered .
+➢ Go to “Min1 PB Applied Loop” Screen and identify the Coach in Parking brake apply feed back is coming .
+➢ Note : If applied relay is in closed condition means parking brake is applied in that particular coach.
+
+Train: 4567 | Min1 PB Loop Status Screen | 01/01/37 07:16:17
+Exit
+
+CAB 1 | CAB 2
+Last Cab Occ | Last Cab Occ
+Min 1 PB Iso | Min 1 PB Iso
+
+BASIC UNIT 1 | BASIC UNIT 2 | BASIC UNIT 3 | BASIC UNIT 4 | BASIC UNIT 5 | BASIC UNIT 6
+DTC | MC1 | TC | MC2 | NDTC | MC1 | TC | MC2 | NDTC | MC1 | TC | MC2 | NDTC | MC1 | TC | MC2 | NDTC | MC1 | TC | MC2 | DTC | MC1 | TC | MC2
+
+PB APPLIED HRFB
+Min 1 PB TI status | Min 1 PB TI status

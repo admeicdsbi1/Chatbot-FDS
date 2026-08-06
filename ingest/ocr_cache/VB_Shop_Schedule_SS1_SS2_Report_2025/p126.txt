@@ -1,0 +1,9 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 63. | Static Baking Oven | Three phase of suitable size, Max temperature 200 degree C | For drying traction motors and other equipment |
+| 64. | Electric oven, small | three-phase, 415 V, 50 Hz, Max temperature 200 degree | For heating silica gel, welding rods, etc. |
+| 65. | Shock Pulse Meter with software | BVT-111 or similar | For TM Bogie Run Test |
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 124 of 359

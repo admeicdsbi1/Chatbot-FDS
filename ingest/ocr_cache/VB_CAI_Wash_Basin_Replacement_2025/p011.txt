@@ -1,0 +1,28 @@
+### Engineering Document Data
+
+**Subject:** Rubber Washer / Gasket
+**Drawing Number:** AAB63922
+**Date of First Issue:** 18-2-25
+
+#### Technical Specifications
+*   **Outer Diameter:** Ø 72 mm
+*   **Inner Diameter:** Ø 50 mm
+*   **Thickness:** 3 mm
+*   **Material Specification:** NATURAL RUBBER
+
+#### Parts Table
+| QTY | DESCRIPTION | DIMENSIONS | ITEM NO. | MATL.SPEC. |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | RUBBER | Ø 72 X 3 MM THICK | 1 | NATURAL RUBBER |
+
+#### Revision/Process Codes
+*   **01:** ROUGH CLEANED
+*   **11b:** BURRS REMOVED
+*   **18:** CHAMFERED
+
+#### Administrative Information
+*   **Organization:** INDIAN RAILWAY STANDARDS, INTEGRAL COACH FACTORY, CHENNAI - 600038
+*   **Scale:** 2:1
+*   **Sheet:** 1 OF 1
+*   **Drawn By:** MATHANKUMAR J
+*   **Drawing Format:** A3

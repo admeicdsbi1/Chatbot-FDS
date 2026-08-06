@@ -1,0 +1,18 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+-2-
+
+| | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **6** | **31540715** | **S & I of Window TCMC/NDTC** | 1. Double sealed non openable window glass unit (item-1)-2 nos. 2. Emergency window (item-10)-2 nos. 3. Small non openable window (item-2)-3 no. 4. Pillar glass small(item-6)-7 nos. 5. Pillar glass big(item-5)-3 nos. 6. Destination board glass arrgt(TSMC-5-4-001, alt-b, item-9)-1 no. and 7. One coach set of VB/DTC window glass | 1. Double sealed non openable window glass unit (item-1)-1 nos. 2. Emergency window (item-10)-1 nos. 3. Small non openable window (item-2)-2 no. 4. Pillar glass small (item-6)-4 nos. 5. Pillar glass big (item-5)-2 nos. 6. Destination board glass arrgt (TSMC-5-4-001, alt-b, item-9)-1 no. and 7. One coach set of VB/DTC window glass | 1. Double sealed non openable window glass unit (item-1)-1 nos. 2. Emergency window (item-10)-1 nos. 3. Small non openable window (item-2)-2 no. 4. Pillar glass small (item-6)-4 nos. 5. Pillar glass big(item-5)-2 nos. 6. Destination board glass arrgt (TSMC-5-4-001, alt-b, item-9)-1 no. and 7. One coach set of VB/DTC window glass |
+| **7** | **31560271** | **S & I of IC door** | 1 | 1 Coach Set | 1 Coach Set | 1 Coach Set |
+| **8** | **31257264** | **S & I of Sealed gangway** | 15 | 1 Coach Set | 1 Coach Set | 1 Coach Set |
+| **9** | **31620802** | **S & I of one rake set of luggage rack** | 1 | 1 Coach Set | 1 Coach Set | 1 Coach Set |
+| **10** | **33566264** | **S & I of Pantry sets** | 1 | 1. Hot water boiler-1 No.(PL No. 31904294). 2. Hot case-3 Nos-(PL No. 31904312). 3. Refrigerator unit-1 Nos-(PL No. 31904300) | 1. Hot water boiler-1 No. (PL No. 31904294). 2. Hot case-1 Nos-(PL No. 31904312). 3. Refrigerator unit-1 Nos-(PL No.31904300) | 1. Hot water boiler-1 No.(PL No. 31904294). 2. Hot case-1 Nos-(PL No. 31904312). 3. Refrigerator unit-1 Nos-(PL No. 31904300) |
+| **11** | **31356758** | **S & I rake set of brake system** | 1 | One End Basic unit to each zonal railway (Total 16) | - | - |
+| **12** | **-** | **Bogie for MC coach** | 2 | Two MC bogies | One MC bogie | One MC bogie |
+| **13** | **-** | **Bogie for TC coach** | 2 | Two TC bogies | One TC bogie | One TC bogie |
+| **14** | **31222730** | **Semi-permanent coupler** | 1 | One set of semi-permanent coupler | One set of semi-permanent coupler | One set of semi-permanent coupler |
+| **15** | **31247180** | **Emergency Foot step** | 4 | 4 nos. foot steps | 2 nos. Foot steps | 2 nos. Foot steps |
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 151 of 359

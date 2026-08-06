@@ -1,0 +1,33 @@
+and verify BP pressure switch input status (Channel 25) in DIO
+Screen of MCC and PCC_DTC coaches .
+➢ Verify the BP pressure switch status should be high in all coaches .
+➢ If any of the BP pressure switch status is low in MCC and PCC_DTC
+coaches , check for any leakages in BP line in respective coach.
+➢ If the BP leakage observed in any coach , Isolate the BP through
+isolation cock and release the EP brake .
+➢ Then go to “BP override Setting” Screen and do the BP override in
+that particular coach .
+➢ If BP leakage is not found , then directly Go to BP override setting
+screen and do the BP override in that particular coach .
+
+| Train: 4567 | BP Override Settings | 01/01/37 | 07:16:52 |
+| :--- | :--- | :--- | :--- |
+| BU-1 | BU-2 | BU-3 | BU-4 | BU-5 | BU-6 | | | Exit |
+
+DTC
+OVERRIDE
+ACTIVATE
+
+MC1
+OVERRIDE
+ACTIVATE
+
+TC
+OVERRIDE
+ACTIVATE
+
+MC2
+OVERRIDE
+ACTIVATE
+
+➢ Then TCMS system will allow the Traction .

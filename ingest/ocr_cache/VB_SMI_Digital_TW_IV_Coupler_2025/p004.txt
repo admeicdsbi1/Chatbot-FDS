@@ -1,0 +1,37 @@
+Annexure-A
+
+eclatorq Mini Torque Wrench
+
+DM2-006CN
+Mini Digital Torque Wrench
+
+Buzzer | Water Indicator | c-Nm in-lb kg-cm | Bright LEDs | Anti-Slip Grip Handle | AAA x 1 Rechargeable Battery Compatible
+
+| | |
+| :--- | :--- |
+| **Code** | 3TEQDM2006CN |
+| **Accuracy** | CW : ±3% CCW : ±4% |
+| **Bit End Fitting (inch)** | 1/4 |
+| **Length (mm)** | 207 / 216 |
+| **Max Operation Range** | 6 N-m / 4.424 ft-lb / 53.09 in-lb / 61.22 kg-cm |
+| **Measured Torque** | 0.3 - 6 N-m / 0.221 - 4.424 ft-lb / 2.65 - 53.09 in-lb / 3.06 - 61.22 kg-cm |
+| **Resolution** | 0.001 N-m / 0.01 ft-lb / 0.01 in-lb / 0.01 kg-cm |
+| **Data Memory Size** | 50 |
+| **PC Connectivity** | No |
+| **Button** | 5 |
+| **Number of Presets** | 9 |
+| **Bright LEDs** | 2 LED (1 Red + 1 Green) |
+| **Operation Mode** | Peak Hold / Track |
+| **Unit Selection** | N-m, ft-lb, in-lb, kg-cm |
+| **Head Type** | Lever Type Ratchet (60 Gear Teeth) |
+| **Battery** | AAA x 1 |
+| **Battery Life** | 12 hours (Continous Operations) / 1 year (Standby) |
+| **Temperature** | -10°C - 60°C (Operation Temp) / -20°C - 70°C (Storage Temp) |
+| **Humidity** | Up to 90% non-condensing |
+| **Drop Test** | 1M |
+| **Vibration Test** | 10G |
+| **Life Time** | 10,000 cycle |
+
+Environmental Test / Electromagnetic Compability Test : Pass
+
+3

@@ -1,0 +1,28 @@
+Train: 4567
+01/01/37
+07:19:51
+Rake
+
+All Doors Closed Relay Mismatch With Software
+
+Door open based traction will be prohibited in following cases.
+1. ADCR input is HIGH(HW TL Status) and all door close status not received through software.
+
+****************************************************************************************************
+**************************************************ISOLATION PROCEDURE**************************************************
+****************************************************************************************************
+
+If the ADCR is high (That means all doors closed hardware information is
+okay), and all door close software information is not okay
+1. In this case a pop up will be appeared and motor man should ensure the
+door close status physically, in addition to that there is a status screen
+available to see the individual door open and close status.
+2. After ensuring that doors are closed user should press the pop up
+acknowledgement.
+3. Up on the confirmation from the motor man traction is allowed.
+
+Door
+Door TL
+Door Settings
+
+Page 45 of 85

@@ -1,0 +1,37 @@
+File No.RDSO-PE0TLAC(RMPU)/5/2024-PED/PSEMU/RDSO
+
+A1
+BLR - R PH
+COMP-1 - R PH
+COMP-2 - R PH
+COMP-1 - Y PH
+COMP-2 - Y PH
+BLR - Y PH
+COND-2 - B PH
+COND-1 - B PH
+BLR - B PH
+UV LAMP 230V PH
+R PH - HEATER
+R PH - COND-1
+R PH - COND-2
+Y PH - COND-1
+Y PH - COND-2
+B PH - HEATER
+B PH - HEATER
+B PH - COND-2
+B PH - COND-1
+NEUTRAL - UV LAMP
+
+g. The cable glands between female hood of M/s Harting type of connectors and flexible poly-amide conduit to be ensured for proper tightening and securing with silicon sealant.
+
+To be ensured with tightening and proper sealing with silicon sealant
+
+h. The dust covers for protection of male connector to be provided in line with M/s Amit Make RMPU to avoid dust deposition and tarnishing of pins.
+
+No provision of Dust covers (M/s Sidwal)
+Dust Covers provided (M/s Amit)
+
+i. Railway production unit to check for milli-volt drop / Contact resistance after the installation of connectors. This will help to understand if any contact resistance disturbance caused by prolonged exposure of silver contacts or bad crimping.
+j. Routing of cable assembly to be done to avoid strain relief on connector which is one the potential failure mode for water ingress.
+k. Design of RMPU unit fitment to be reviewed in order to avoid continuous flow of water and water accumulation over the connector.
+l. M/s Harting also suggested considering Panel feed through type housing (as shown below) which limits the exposure of connector rear end with cable gland/conduit gland for IP protection. This will help to have connector protected from both sides i.e., cable and RMPU side. These connectors may also be put to trial.

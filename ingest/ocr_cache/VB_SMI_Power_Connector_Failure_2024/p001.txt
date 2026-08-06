@@ -1,0 +1,39 @@
+VB/SMI/E/03
+13.06.2024
+
+File No.RDSO-PE0TLAC(RMPU)/5/2024-PED/PSEMU/RDSO
+
+Fax : 91-0522-2465717
+Telephone: 0522-2465738
+Telephone: 451200(Extn. 42502)
+Telegram : ‘RAILMANAK’, Lucknow
+E-mail : dsesystem@gmail.com
+
+भारत सरकार-रेल मंत्रालय
+अनुसंधान अभिकल्प और मानक संगठन
+लखनऊ- 226011
+Government of India - Ministry of Railways
+Research, Designs & Standards Organization,
+LUCKNOW - 226011
+
+EL/7.2.2/Trainset
+Dated As signed
+
+PCMEs/PCEEs
+All Zonal Railways & RCF, ICF, MCF
+
+Sub: Incidence of failure of Power Connectors in Vande Bharat Trains.
+
+1. On 02.06.2024, in RMPU-1 of coach no. 233013/TSMC/NR (C4) working in Train no. 22415/16, a case of inter-pin shorting of M/s Harting type power connector (A1) was reported by Northern Railway.
+2. M/s Harting, M/s Medha and Varanasi Coaching depot officials jointly investigated the incidence and submitted the Joint report, copy placed as Annexure-A. Further, RDSO official was also deputed to study the probable causes of failure on date 09.04.2024 at Varanasi Coaching Depot. ICF also investigated the case regarding the cause of failure of M/s Harting type of connectors in Vande Bharat Rakes. Further, M/s Harting have also studied the cause of failures and M/s Harting vide their firm’s letter no. RDSO/VB/RMPU connectors/01 dated 12.06.2024 have listed out the various probable cause of failures and suggested system improvements needed to minimise the failure of Harting Type connectors.
+3. In view of the above, the suggestions and remarks have been examined by RDSO and observations regarding modification required in existing & under manufacture rakes of Vande Bharat Trains and special maintenance practices to be followed by Zonal Railways during maintenance in Vande Bharat rakes have been furnished below:
+i. Modification to be done in existing Vande Bharat Rakes:
+a. One round checking for dust and moisture entry at all RMPU connectors, its flexible polyamide conduit from roof through box (ECC box), cable glands and the connectors to be carried out and same to be cleaned and sealed through silicon sealant.
+
+[Image 1: Unsealed Cable Glands]
+[Image 2: Sealed Cable Glands]
+
+b. All the female connectors are to be provided with dummy pins (Part no. 09 33 000 9954 of M/s Harting or equivalent approved) in the spare sockets to prevent dust and moisture entry.
+
+[Image 3: Holes of spare pins are unplugged]
+[Image 4: Dummy Pin]

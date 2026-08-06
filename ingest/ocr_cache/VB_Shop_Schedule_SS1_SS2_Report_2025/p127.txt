@@ -1,0 +1,9 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 66. | Infrared Thermometer | -50°C to 550°C | For Temp recording in TM testing |
+| 67. | Digital Clamp Meter | 400 A 600 V | For ETL work |
+| 68. | Digital Multimeter | 1000 Volt | For ETL work |
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 125 of 359

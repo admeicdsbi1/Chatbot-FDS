@@ -1,0 +1,16 @@
+| Item | Description |
+| :--- | :--- |
+| 2 | ![Fig.1](https://files.oaiusercontent.com/file-5y1555555555555555555555?se=2025-02-07T10%3A00%3A00Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D55555555-5555-5555-5555-555555555555.png&sig=5555555555555555555555555555555555555555555555555555555555555555) <br> Fig.1 | The cables removed from the VCD foot operated switch shall be properly insulated with transparent heat shrinkable insulation sleeve and tied up with cable stiffeners. (refer fig.1) |
+| 3 | ![Fig.2](https://files.oaiusercontent.com/file-5y1555555555555555555555?se=2025-02-07T10%3A00%3A00Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D55555555-5555-5555-5555-555555555555.png&sig=5555555555555555555555555555555555555555555555555555555555555555) <br> Fig.2 | The cables removed from the TB inside driver desk shall be properly insulated with transparent heat shrinkable insulation sleeve and tied up with cable stiffeners. (refer fig.2) |
+
+Regards
+(R.FARID BABU)
+For DY.CEE/DII
+24/3/25
+
+Copy to:
+CDE/Elec., CEE/QA : for kind information please.
+Dy.CEE/QA Dy.CEE/F1 : for kind information please.
+
+Visible labels in Fig.2:
+- TIMEX BOND (on the box)

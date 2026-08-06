@@ -1,0 +1,34 @@
+Train: 4567
+Min1 Brake Applied Loop Status Screen
+01/01/37
+07:20:31
+Exit
+
+CAB 1
+Last Cab Occ
+BAL iso
+
+| BASIC UNIT 1 | BASIC UNIT 2 | BASIC UNIT 3 | BASIC UNIT 4 | BASIC UNIT 5 | BASIC UNIT 6 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| DTC | MC2 | NDTC | NDTC | NDTC | DTC |
+| MC1 | TC | MC1 | MC1 | MC1 | MC1 |
+| TC | MC1 | TC | TC | TC | TC |
+| MC2 | MC2 | MC2 | MC2 | MC2 | MC2 |
+
+RL RL RL | RL RL RL | RL RL RL | RL RL RL | RL RL RL | RL RL RL
+
+Min 1 Brk TL status
+
+CAB 2
+Last Cab Occ
+BAL iso
+Min 1 Brk TL status
+
+RL → Released state
+B1 → BG1 fb active
+EP → EP fb active
+B2 → BG2 Fb active
+
+In this screen, we can see the BC pressure switch status of all coaches.
+
+Page 10 of 85

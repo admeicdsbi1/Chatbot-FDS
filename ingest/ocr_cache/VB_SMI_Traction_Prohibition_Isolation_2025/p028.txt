@@ -1,0 +1,22 @@
+12)Isolation procedure AXLE LOCK Detection :
+
+➢ To get the help screen go to “LEGENDS HELP SCREEN” and select the “ AXLE LOCK DET ”
+(or)
+Select the “ AXLE LOCK DET ” at Main Screen Bottom right .
+
+➢ The System will declare the Faults of
+➢ AXLE LOCK DETECTED
+➢ AXLE MAY LOCK , Please ensure Physical condition of the axle
+
+| | | | Acknowledge |
+| :--- | :--- | :--- | :--- |
+| | | - | ▼ | ▲ |
+| | | | Axle Lock Det |
+
+| Train: 4567 | | | | | | | 01/01/37 | 07:56:37 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| | | | | | | | Rake | |
+
+AXLE Lock Detected
+
+Axle lock detected , Please check the fault messages for info regarding the locked axle,Ensue the track safety before proceeding further.

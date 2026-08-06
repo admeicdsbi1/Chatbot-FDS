@@ -1,0 +1,53 @@
+Doc. No. CPA- MAE675UV2 -126 Page: 2 of 4
+Product Code MAE675UV2 & MAE675SL Rev. No.:
+Title: CPA FOR REMOVAL OF VCD FOOT OPERATED SWITCH
+Prepared By Checked By Approved By Initiated Date
+P DURGA BHAVANI PRAMOD KUMAR D RANJEET SINGH 10.03.2025
+
+ANNEXURE - 1
+
+Below connections to be removed from DTC -DD (MAE675UV2):
+
+| FROM | TO | WIRE MARKER | LOCATION |
+| :--- | :--- | :--- | :--- |
+| 092-S07#1 | 70-X01#18 | ‘061001.028 | ‘111.20 |
+| 092-S07#2 | 70-X01#40 | ‘092040.015 | ‘111.20 |
+
+Below connections to be removed from DTC – DD (MAE675SL):
+
+| FROM | TO | WIRE MARKER | LOCATION |
+| :--- | :--- | :--- | :--- |
+| 092-S07#1 | 70-X01#17 | ‘061001.028 | ‘111.20 |
+| 092-S07#2 | 70-X01#36 | ‘092040.015 | ‘111.20 |
+
+OLD SCHEME: (DTC)
+
+Labels and Components:
+- 1.0_750V_Grey (Wire label)
+- 061001.028 (Wire marker)
+- 061003.083 (Wire marker)
+- 061003.077 (Wire marker)
+- CD ACK D (Component label)
+- 092-S04 (Component designation)
+- 111.10 (Location)
+- 13 (Terminal/Pin)
+- 14 (Terminal/Pin)
+- 092040.001 (Wire marker)
+- VCD FOOT OPERATED (Component description)
+- =092-S07 (Component designation)
+- +111 (Location)
+- 1 (Terminal/Pin)
+- 2 (Terminal/Pin)
+- 092040.015 (Wire marker)
+- +111.20 (Location)
+- =70-X01 (Component designation)
+- 36 (Terminal/Pin)
+- 37 (Terminal/Pin)
+- VCD ACK D (Component label)
+- =092-S04 (Component designation)
+- +111.10 (Location)
+- 23 (Terminal/Pin)
+- 24 (Terminal/Pin)
+- 092040.011 (Wire marker)
+
+Reference Template number SF-0967 (17) 1/1

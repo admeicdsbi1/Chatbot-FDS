@@ -1,0 +1,18 @@
+File No.RDSO-PE0TLAC(RMPU)/5/2024-PED/PSEMU/RDSO
+
+b. All the rakes will be provided with guide pins for all connectors.
+Connectors with guide pins.
+Connectors without guide pins (blocked by screws)
+
+c. Open points through the cable entry grommets of cable junction box inside the evaporator section of the RMPU to be properly sealed using silicon sealant.
+Unsealed Cable Glands
+Sealed Cable Glands
+
+d. The cover of cable junction box inside the evaporator section of the RMPU to be properly sealed with gasket in line with M/s Amit Make RMPU.
+No provision of gasket (M/s Sidwal)
+Provision of gasket (M/s Amit)
+
+e. Fresh air filter cassette arrangement shall be provided with rubber beading / EPDM gasket (HL-2 compliant) for rigid fitment and effective fresh air filtering to avoid dust entry through gaps into the mixing chamber.
+Fresh air filter cassette arrangement
+
+f. The positions of pins for different connections at connector module level to be standardised by propulsion manufacturer and incorporate in as part of design. The standardised pin arrangement is as under:

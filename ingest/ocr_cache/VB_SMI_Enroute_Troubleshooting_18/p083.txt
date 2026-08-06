@@ -1,0 +1,20 @@
+Page 78 of 85
+
+Train: 235753
+MCH Validation Test
+28/01/25
+14:50:08
+Exit
+
+MCH Validation Test
+
+| MCH Position | CCC1 | CCC2 |
+| :--- | :--- | :--- |
+| Drive | Drive | Drive |
+| Coast | Test Pending | Test Pending |
+| Brake | Test Pending | Test Pending |
+
+Current Instruction : Move the Master controller into Coast and Press ACK
+Acknowledge
+
+Keep the MCH in Coast position and press the Acknowledge, Coast mode status will be updated in DDU as per next screen

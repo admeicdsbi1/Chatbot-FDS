@@ -1,0 +1,25 @@
+➤ Keep the MCH in Brake position and press the Acknowledge ,
+Brake mode status will be updated in DDU as per below screen
+
+➤ After MCH validation Test Completed Press “ Exit ”.
+
+| Train: 235753 | MCH Validation Test | 28/01/25 | 14:50:23 |
+| :--- | :--- | :--- | :--- |
+| | | | Exit |
+
+**MCH Validation Test**
+
+| MCH Position | CCC1 | CCC2 |
+| :--- | :--- | :--- |
+| Drive | Drive | Drive |
+| Coast | Coast | Coast |
+| Brake | Brake | Brake |
+
+Current Instruction : MCH Validation Test Completed, Press EXIT | Acknowledge
+
+➤ If Any Mode ( Drive / Coast / Brake ) failure,
+➤ Then Switch Off the CCU MCB (061-F02) at CRW Panel from
+occupied cab .
+➤ then CCUR will be Master .
+
+➤ Then TCMS system will allow the Traction

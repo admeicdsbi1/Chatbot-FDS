@@ -1,0 +1,12 @@
+**Operation of Direct Light in Coach Level:**
+
+1. Normally the local control switch for “DIRECT LIGHT” shall be kept always in AUTO mode so that the compartment lights can be switched ON/OFF from driver desk.
+2. During 50% light selection from driver desk, only IDL is ON in compartment i.e. lights in dimming mode. If light is not sufficient to serve the food, the pantry staff can switch ON Direct Light in any of the coaches, by operating “DIRECT LIGHT” switch in that coach to MANUAL position.
+3. As soon as completion of catering service the “DIRECT LIGHT” switch shall be kept in AUTO mode.
+4. It is important to note that the local control switch for “DIRECT LIGHT” should be kept in AUTO mode whenever direct light is not required so that the direct light can be centrally switched ON/OFF from driver desk.
+
+**Labels on Panel:**
+*   AUTO
+*   MAN
+*   DIRECT LIGHT
+*   MEDHA

@@ -1,0 +1,28 @@
+Page 7 of 8
+
+[Top Image]
+SOCKET-F1-MC2 AE
+44-032050.099
+45-032051.099
+45-032052.099
+SOCKET-F2-MC2 AE
+44-032050.099
+032050.099
+
+Train line wire connection that was removed between BU2 and BU5 (between NDTC 1 & NDTC 2). Similar connections were removed between C4& C5 and C10& C11.
+
+[Bottom Left Image]
+Limit switch of C-7 in BU-5
+
+[Bottom Right Image]
+Digital input card of C-7 in BU-5
+
+[Labels on Digital Input Card]
+MPSIT
+MSLDIPI-1
+MSLDIPI-2
+MSLDIPI-3
+MSLDIPI-4
+MSLDIPI-5
+MSLDIPI-6
+MCC

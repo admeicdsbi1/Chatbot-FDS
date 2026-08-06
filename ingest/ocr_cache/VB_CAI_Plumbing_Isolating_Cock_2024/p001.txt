@@ -1,0 +1,38 @@
+ICF/MDM/F/006
+
+INTEGRAL COACH FACTORY, CHENNAI-600 038
+
+No. ICF/QMS/MDM/File/F015
+
+Office of the GM/ Mech. Designs
+Date: 02.04.2024
+
+Coach Alteration Instruction
+
+| | | |
+| :--- | :--- | :--- |
+| 1 | CAI No. | : | A-2024/04 |
+| 2 | Group | : | 6-3 |
+| 3 | Description | : | Provision of isolation cock in plumbing lines of FRP modular toilet. |
+| 4 | Drawing No. | : | ICF/SK3-6-3-308 |
+| 5 | Modification | : | Provision of isolation cock in plumbing lines of FRP modular toilet. |
+| 6 | Reason for Modification | : | During replacement of taps isolation of water Pipe lines is required. Hence the isolation cock Is introduced in the entry side of pipe lines. |
+| 7 | Coaches concerned | : | Vande Bharat all coaches |
+| 8 | Implementation stage | : | Modification shall be implemented immediately by user Rlys. |
+| 9 | Category of CAI | : | [✓] A [ ] B |
+
+Tick A or B as applicable
+A- Modifications shall be implemented : immediately by user Rlys.
+B- Modifications shall be implemented : by user Rlys as and when convenient
+
+[Signature]
+For General Manager (Mech.)/ Design
+
+Annexure :
+Schematic drawing enclosed
+Copy to
+
+Revision Status: 01
+January, 2007
+Format Approved by: Dy.CME/D
+Date: 02.01.2007

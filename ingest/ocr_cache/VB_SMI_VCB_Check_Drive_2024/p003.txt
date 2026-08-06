@@ -1,0 +1,38 @@
+Page 2 of 8
+
+started working but the contactor was not changed in C-8 of BU-2.
+
+4. If wiring was the cause for non-functioning of VCB in BU-2, it is to be investigated as to why the same issue did not occur in BU-1 & BU-6.
+
+5. Sufficient spares of line contactors to be provided to Coaching depot.
+
+Recommendations:
+1. Mechanism to check power coupler limit switch healthiness is required. Thers is no existing schedule in manual and the same to be reviewed by M/S Medha.
+
+2. ICF is requested to instruct M/S Medha to impart necessary training to nominated officers for VB maintenance and all the concerned staff and supervisors regarding the different circuitry and components provided in the system. This must also cover all aspects of trouble shooting and fault identification.
+
+3. The fault identification and trouble-shooting mechanism may be reviewed by M/S Medha to ensure faster identification of faults. If necessary, additional sensors for identification of faults in LTC and changes in software may be looked into.
+
+4. The team involved in VB rake maintenance at VSKP comprises of staff and supervisors from ELS/WAT and DLS/WAT who are constantly being changed by respective sheds. A dedicated gang to be provided to ensure proper maintenance of Vande Bharat rake.
+
+Rake composition:
+
+| BU-6 | C-1 | DTC | BU-2 | E-2 | NDTC-1 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| | C-2 | MC-1 | | C-8 | MC-2 |
+| | C-3 | TC | | C-9 | TC |
+| | C-4 | MC-2 | | C-10 | MC-1 |
+
+| BU-5 | C-5 | MC-1 | BU-1 | C-11 | MC-2 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| | C-6 | TC | | C-12 | TC |
+| | C-7 | MC-2 | | C-13 | MC-1 |
+| | E-1 | NDTC-2 | | C-14 | DTC |
+
+The following Annexures are attached:
+
+Annexure 1: Photos of the LTC unit in BU-5 , LTC-2 of C-7, train line wire connection between BU-2 & BU-5, limit switch and digital input card of C-7 in BU-5
+
+Annexure 2: Safety schedule examination by SSE/ELS on 08.03.24.
+
+Annexure 3: Fault data pack of VB rake during examination 08.03.24

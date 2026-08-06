@@ -1,0 +1,23 @@
+Train: 4567
+01/01/37
+07:16:44
+Rake
+
+Majority BP Drop detected
+
+****************************************************************************************************
+************************************ISOLATION PROCEDURE*********************************************
+****************************************************************************************************
+
+1. Ensure that auto brake handle is in "Charge" position and MR is healthy in the rake (>7.5Bar)
+2. If the auto brake handle is in "Charge" position, Verify the BP pressure switch input status(Channel 25) in DIO screen of MCC and PCC_DTC coaches.
+3. Identify the coaches in which the BP pressure switch status is low. Check for any leakages in BP line, in that coach.
+4. If the BP is leaking, Isolate the BP for the coach through isolation cock and release the EP brake using isolation cocks
+5. Then go to BP override settings screen and do the BP override in that particular coach.
+6. If no leakage is found, then direclty Go to BP override settings screen and do the BP override in that particular coach.
+
+BP Override Settings
+Air Spring
+DIO Screens
+
+Page 21 of 85

@@ -1,0 +1,15 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+| Assy./ Sub. Assy | Activities | Remarks |
+| :--- | :--- | :--- |
+| | **SS1 Schedule** | **SS2 Schedule** | **SS3 Schedule** | |
+| **Dampers** | All activities of 9-Monthly schedule<br><br>and<br><br>● Damper testing for functionality.<br>● Examine the bogie frame for corrosion at damper bracket and surrounding area.<br>● Mounting fasteners should be renewed when dampers are removed/ replaced/ dismantled. | * Replacement | * Replacement | ● * - M/s Koni has recommended replacement at 14,00,000 km or 6 years.<br><br>● Based on mileage, the committee recommends replacement of dampers in SS2 schedule. |
+
+Primary Vertical damper
+Secondary Vertical damper
+Yaw Damper
+Lateral Damper
+
+**Dampers**
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 28 of 359

@@ -1,0 +1,38 @@
+### Engineering Document Data
+
+**Subject:** ANGLE
+**Drawing Number:** AAJ10106
+**Date:** 11-04-2025
+**Group:** 1-0 Body Shell
+
+#### Technical Values & Dimensions
+*   **Material Specification:** SS 304 (Alternate material: IS 737-86 31000-H2)
+*   **Overall Dimensions:** 220 x 205 x 50 mm
+*   **Thickness:** 2 mm
+*   **Hole Diameter:** Φ6
+*   **Hole Spacing:** 50 mm, 100 mm, 70 mm
+*   **Vertical Cutout Height:** 140 mm
+*   **Horizontal Cutout Length:** 155 mm
+*   **Bend Radius:** R2
+*   **Scale:** 1:5
+
+#### Component Table
+| QTY | DESCRIPTION | DIMENSIONS | ITEM NO. | MATL.SPEC. |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | ANGLE | 2x220x251 | 1 | SS 304 |
+
+#### Surface Finish/Process Legend
+*   **∇:** ROUGH MACHINED
+*   **▽▽:** FINISH MACHINED
+*   **▽▽▽:** FINE FINISH MACHINED
+*   **01:** ROUGH CLEANED
+*   **01b:** BURRS REMOVED
+*   **18:** CHAMFERED
+
+#### Notes
+1. ALTERNATE MATERIAL TO IS 737-86 31000-H2 SHALL ALSO BE USED.
+
+#### Administrative Information
+*   **Organization:** INDIAN RAILWAY STANDARDS (INTEGRAL COACH FACTORY, CHENNAI - 600038)
+*   **Drawn By:** SARATHKUMAR.S
+*   **Sheet:** 1 OF 1

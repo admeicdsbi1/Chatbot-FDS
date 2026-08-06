@@ -1,0 +1,45 @@
+7
+
+i) Select ResetID
+
+| Train: 912345 | Login User ID | 02/01/20 | 15:09:50 |
+| :--- | :--- | :--- | :--- |
+| | | ResetID | Back | RAKE |
+
+| | Entry | ****** |
+| :--- | :--- | :--- |
+| User ID | Valid | Sudheer |
+
+| | Actual | 912345 |
+| :--- | :--- | :--- |
+| Train ID | New | |
+
+| 1 | 2 | 3 |
+| :--- | :--- | :--- |
+| 4 | 5 | 6 |
+| 7 | 8 | 9 |
+| Back space | 0 | Enter |
+
+ResetID
+
+j) Select RAKE for “RAKE INFORMATION” screen
+
+| Train: 912345 | Login User ID | 02/01/20 | 15:09:50 |
+| :--- | :--- | :--- | :--- |
+| | | ResetID | Back | RAKE |
+
+| | Entry | ****** |
+| :--- | :--- | :--- |
+| User ID | Valid | Sudheer |
+
+| | Actual | 912345 |
+| :--- | :--- | :--- |
+| Train ID | New | |
+
+| 1 | 2 | 3 |
+| :--- | :--- | :--- |
+| 4 | 5 | 6 |
+| 7 | 8 | 9 |
+| Back space | 0 | Enter |
+
+RAKE

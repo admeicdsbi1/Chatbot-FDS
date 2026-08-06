@@ -1,0 +1,35 @@
+ICF/MDM/F/006
+
+**INTEGRAL COACH FACTORY, CHENNAI-600 038**
+
+No. ICF/QMS/MDM/File/F015
+Office of the GM/ Mech. Designs
+Date: 17-07-2024
+
+**Coach Alteration Instruction**
+
+| | | |
+| :--- | :--- | :--- |
+| 1 | CAI No. | : B-2024/11 |
+| 2 | Group | : 6-1 |
+| 3 | Description | : Modified fixing arrangement of Driver seat (For Retro fitment) |
+| 4 | Drawing No. | : 329-6-1-144 |
+| 5 | Modification | : Relocation of Driver’s seats baseframe for 100 mm towards drivers desk |
+| 6 | Reason for Modification | : To avoid drivers discomfortness and for easy access to driver’s desk while driving. |
+| 7 | Coaches concerned | : Vande Bharat DTC coaches |
+| 8 | Implementation stage | : During maintenance. (The material will be supplied by ICF) |
+| 9 | Category of CAI | : | A | B ✓ | Tick A or B as applicable |
+
+A- Modifications shall be implemented :
+immediately by user Rlys.
+
+Modifications shall be implemented : ✓
+B- by user Rlys as and when convenient
+
+[Signature] 17/7.
+For General Manager (Mech.)/ Design
+
+Copy to: Annexure enclosed.
+
+Revision Status: 01
+Format Approved by: Dy.CME/D

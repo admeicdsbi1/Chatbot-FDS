@@ -1,0 +1,20 @@
+Date : 08.02.2025
+Rev-01
+
+Isolation procedure for Traction Prohibition
+
+1)Isolation procedure for EP Brake Stuck detection:
+
+➢ In case of stuck brake , TCMS will declare the following Faults
+EP Brake stuck detected in Coach
+EP Brake stuck detected in Rake
+EP Brake stuck detected in Rake Through BC pressure switch .
+
+➢ Traction will be Prohibited by the TCMS and brake will be applied by TCMS till the train speed reaches zero kmph , along with this Pneumatic Brake Legend will be updated in display as
+
+➢ In Driver desk “MIN 1 BRK APPLIED” Lamp will be glow.
+
+➢ Select the “Stuck brake” at Main Screen Bottom Right .
+
+(or)
+➢ To get the help screen go to “LEGENDS-->HELP SCREEN” and select the “Stuck brake”

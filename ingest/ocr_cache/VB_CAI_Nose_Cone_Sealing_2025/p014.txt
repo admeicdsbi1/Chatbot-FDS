@@ -1,0 +1,39 @@
+### Engineering Document Index
+
+**Subject:** SIDE CLOSING SHEET
+**Drawing Number:** AAJ10172
+**Date of First Issue:** 16-06-2025
+**Sheet:** 1 OF 1
+
+---
+
+### Technical Values
+*   **Overall Height:** 170 mm
+*   **Overall Width:** 125 mm
+*   **Thickness:** 2 mm
+*   **Corner Radii:** R15
+*   **Angle:** 63°
+*   **Material Specification:** IS 740 19000
+*   **Scale:** 1:1
+
+---
+
+### Component Table
+| QTY | DESCRIPTION | DIMENSIONS | ITEM NO. | MATL.SPEC. |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | SIDE CLOSING SHEET | 2x125x170 | 1 | IS 740 19000 |
+
+---
+
+### Surface Finish / Process Symbols
+*   **∇:** ROUGH MACHINED
+*   **∇∇:** FINISH MACHINED
+*   **∇∇∇:** FINE FINISH MACHINED
+*   **01:** ROUGH CLEANED
+*   **11b:** BURRS REMOVED
+*   **18:** CHAMFERED
+
+---
+
+### Notes
+1. ALTERNATE MATERIAL TO SS 304 & ACP SHALL ALSO BE USED.

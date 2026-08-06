@@ -1,0 +1,12 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 36. | Dew point meter | | Dew point measurement in air dryer |
+| 37. | USB Serial RS232 converter | | For data download from aspiration smoke detection unit |
+| 38. | Flowmeter/Anemometer | | Flow rate measurement for FSDS |
+| 39. | Handheld programmer | | For checking point-type smoke detector |
+
+**Handheld Programmer**
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 117 of 359

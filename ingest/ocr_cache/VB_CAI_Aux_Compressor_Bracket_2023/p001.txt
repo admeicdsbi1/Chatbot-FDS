@@ -1,0 +1,39 @@
+ICF/MDM/F/006
+
+INTEGRAL COACH FACTORY, CHENNAI-600 038
+No. ICF/QMS/MDM/File/F015
+Office of the GM/ Mech. Designs
+Date: 10-04-2023
+
+Coach Alteration Instruction
+
+1. CAI No. : B/2023-05
+2. Group : Brakes – Vande Bharat Trainset
+3. Description : Modification of Aux. Compressor Mounting Bracket
+for Rakes as per Annexure-A only
+4. Drawing No. : Sketch enclosed
+5. Modification : As per sketch
+6. Reason for Modification : To facilitate removal of Aux. Compressor Filter Cap
+7. Coaches concerned : TrainSet/TC coaches
+8. Implementation stage :
+9. Category of CAI :
+| A | B | Tick A or B as applicable
+[✓]
+
+A- Modifications shall be implemented immediately by user Rlys.
+B- Modifications shall be implemented by user Rlys as and when convenient.
+
+Special Instructions :-
+Keep all Electrical Cables of Aux. Supply unit protected with suitable metal sheet cover.
+Marked area to be cut removed with suitable marking device.
+Cut remove the portion by using metal cutting tool.
+Grind the cut surface to remove burrs and sharp edges.
+Paint the surface
+
+Caution :-
+Do not use welding rod or flame for cutting the bracket.
+
+(Signature)
+For General Manager (Mech.)/ Design
+
+Copy to: Annexure enclosed.

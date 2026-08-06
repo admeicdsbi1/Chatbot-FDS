@@ -1,0 +1,35 @@
+ELECTRIC LOCO SHED, VSKP
+
+| INSP | CHECK SHEET FOR VB INSPECTION (Daily) | Doc No. ELS/VSKP/INSP/VB/Daily Rev'0 |
+| :--- | :--- | :--- |
+| Daily | | Dt. 12-07-2023 |
+| | | Date: 8/3/24 | Train No: 20833 | Page 2 of 2 |
+| | | Time: 04:45 | | |
+
+| | | Check following visually for any abnormality/ damage: | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| | | • Silica gel breather and silica gel condition. | O, G | O, G | O, G | O, G | O-orange G-green |
+| 6 | Transformer | • H.T. cable (main bushing) and connection. | ✓ | ✓ | ✓ | ✓ | |
+| | | • Transformer for any oil leakage from any point, coupling, joints etc. | ✓ | ✓ | ✓ | ✓ | 🗲 |
+| | | • Transformer oil level. | 28° | 35° | 30° | 38° | |
+| | | • Air blowing of all 4nos BUs TFP out side filters is to be done" | All | BU | TFP | out side | filter cleared |
+| | | Check insulators for crack & flash marks. | ✓ | ✓ | ✓ | ✓ | |
+| 7 | VCB | Check for any air leakage in VCB. | ✓ | ✓ | ✓ | ✓ | |
+| | | Check the sealing of connectors, flexible pipe, regulator, air tank etc. | ✓ | ✓ | ✓ | ✓ | |
+| | | Check contact spring visually. | ✓ | ✓ | ✓ | ✓ | |
+
+Remarks:-
+① BU-2 & BU-5 EOL fault
+After raising panto both BU-2, BU-5 measure fault indication glowing & VCB not closing. Same was informed to Medha firm. Service at 1:20 ! after OHE Normalised: Low checked by firm staff.
+at 4:40: power coupler pressure switch problem occurred: Same was rectified. But BU-2, BU-5 x trouble not rectified: In BU-2, BU-5 motor coach LC/2 isolated: and panto raised: trouble was rectified: But as a precaution
+Measure LTC/2 in BU-2 & BU-5 to be changed as a precautionary measure after that testing to do.
+
+SSE/E2
+8/3/24
+
+| Name Of Staff & Token No. | Signature Of Staff | Name & Signature Of Supervisor With Remarks If Any | Signature of Section In charge for sample checking | Signature of officer for sample checking |
+| :--- | :--- | :--- | :--- | :--- |
+| ① Manoj Kumar 1103 | [Signature] | [Signature] SSE/E2 D.L.N. Naidu. | | |
+| ② Niven 825 | [Signature] | | | |
+| ③ P. Raja Sekhar 650 | [Signature] | | | |
+| ④ K.S. Rao-4 | [Signature] | | | |

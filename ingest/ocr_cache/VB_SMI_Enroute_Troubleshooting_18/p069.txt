@@ -1,0 +1,21 @@
+➤ Then TCMS system will allow the Traction.
+
+| Train: 4567 | MR Override Settings | BU-1 | BU-2 | BU-3 | BU-4 | BU-5 | BU-6 | Exit | 01/01/37 | 08:01:29 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+**Panel Layout Components:**
+
+*   **DTC**
+    *   OVERRIDE
+    *   ACTIVATE
+*   **MC1**
+    *   OVERRIDE
+    *   ACTIVATE
+*   **TC**
+    *   OVERRIDE
+    *   ACTIVATE
+*   **MC2**
+    *   OVERRIDE
+    *   ACTIVATE
+
+Page 64 of 85

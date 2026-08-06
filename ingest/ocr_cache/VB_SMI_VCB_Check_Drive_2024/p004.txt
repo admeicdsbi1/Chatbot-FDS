@@ -1,0 +1,25 @@
+Page 3 of 8
+
+| Time: | Chronology of events |
+| :--- | :--- |
+| 01:00 to 02:15 | Test check of VCB was performed by SSE/ELS on driver display unit for working condition in C-1. During the check, the VCBs of all the Basic units were observed to be working normally. However, on request of SSE/C&W to reenergise BU1 for power supply to pressurized flush systems, BU1 was re-energised by SSE/ELS. At this time (approx. 01:20 hrs, major fault was indicated in BU2 & BU5. SSE/ELS again tried to lower the panto and raise it again to check if the issue could be resolved but the fault continued to be displayed when the panto was raised. <ul><li>Fault reset was tried by SSE/ELS, battery was also rebooted and the cab was changed from BU6 to BU1 (i.e. C-14).</li><li>Panto circuit position was changed to position 1 (BU 1& BU6 panto energised) and test check of in-house systems like flush systems, lighting and under slung equipment such as air compressors was conducted by concerned supervisors.</li></ul> |
+| 02:15 | M/S Medha Service Engineer/VSKP was informed to attend the issue and WhatsApp message was also sent. <br><br> [Image of Driver Display screen showing various icons and status indicators] <br><br> Fault symbols in red displaying in Driver Display screen. |
+| 02:50- 03:30 | M/S Medha Service Engineer reached C-14 in BU-1 and began test checks. <ul><li>Step 1: Panto was brought and fault reset button was pressed. After reset, in panto down position, system is healthy and no faults are displayed. But when panto was raised, same major fault was displaying in BU2 & BU5.</li><li>Step 2: Battery supply of all Basic Units was discontinued and restarted after 5 minutes. Test check was again performed as mentioned above but the same major fault continued to be displayed.</li><li>Step-3: Cab unit was changed from BU1 (C14) to BU6 (C1) and again test check was conducted but the same fault continued to be displayed.</li></ul> |
+| 03:15- 04:40 | Panto was brought down for roof checking, body wash and undergear maintenance. (In regular practice, power supply is discontinued from 0200 hrs to 0400 hrs.) |
+| 04:40 to 07:30 | Panto was raised in BU1 and test check started. The ERROR code displayed in REMLOT was: 807 Interpretation of fault code 807: ROOF VCB INCONSIST |
+
+**Labels visible on the Driver Display screen image:**
+*   MEDHA
+*   RAKE INFORMATION
+*   18/05/24 12:39:40
+*   VCB Count
+*   Mode
+*   Speed (kmph)
+*   0
+*   Coast
+*   UNIT 1
+*   UNIT 2
+*   UNIT 3
+*   UNIT 4
+*   13427
+*   Zero Force

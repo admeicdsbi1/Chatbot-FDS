@@ -1,0 +1,16 @@
+J. General checks:
+1. Ensure tightness of all power connections in junction boxed viz., TM, Transformer, MCP etc as per schedule. Thermal imagers (if available) can be deployed to identify hotspots.
+2. Availability and intactness of junction box covers viz., TM, Transformer, MCP etc shall be ensured.
+3. Ensure proper working of main compressor and Auxiliary compressor.
+4. Healthy rubber gasket condition of all Electrical /Electronic cubicles.
+5. Ensure Ventilation blowers are working & all filters are clean in Auxiliary and Traction converter cubicles.
+6. Sealing of unwanted openings in Underframe shall be ensured and shall be attended for any air ingress
+7. Proper sealing of plug door with car body shall be ensured along with the OEMs available in the depots/ Zonal Railways, for arresting hot air ingress.
+
+(P.K. CHAUHAN)
+CDE/Elec/ICF
+
+Copy to:
+Secy to GM/ICF : for kind information of GM please.
+PCME/ICF , PCEE/ICF : for kind information please
+CME/QA, CEE/QA ,CDE/Mech : for kind information please

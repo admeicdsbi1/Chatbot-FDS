@@ -1,0 +1,34 @@
+Train: 4567
+Air spring / EP Overview Screen
+01/01/37
+07:17:30
+
+BU-1Susp | BU-2Susp | BU-3Susp | BU-4Susp | BU-5Susp | BU-6Susp | RAKE
+
+Basic Unit 1
+
+| DTC | | |
+| :--- | :--- | :--- |
+| Airspr Bogie 1A: 4.1 | Airspr Bogie 1B: 2.9 | Airspr Bogie 2A: 5.2 |
+| Airspr Bogie 2B: 5.2 | MR Press: 7.8 | BP Press: 4.9 |
+
+| MC1 | | |
+| :--- | :--- | :--- |
+| Airspr Bogie 1A: 9.5 | Airspr Bogie 1B: 3.2 | Airspr Bogie 2A: 2.3 |
+| Airspr Bogie 2B: X | SPARE | SPARE |
+
+| TC | | |
+| :--- | :--- | :--- |
+| Airspr Bogie 1A: X | Airspr Bogie 1B: X | Airspr Bogie 2A: X |
+| Airspr Bogie 2B: X | SPARE | SPARE |
+
+| MC2 | | |
+| :--- | :--- | :--- |
+| Airspr Bogie 1A: X | Airspr Bogie 1B: X | Airspr Bogie 2A: X |
+| Airspr Bogie 2B: X | SPARE | SPARE |
+
+U5 | Transformer Oil Level Low - Warning | Acknowledge
+U5 | TC | MCU | Transformer Oil Level Low - Warning | 1115 | ▲
+U1 | CCU | CCCR - Active Slave | ▼ | TR_FAIL_NO:32
+
+Page 62 of 85

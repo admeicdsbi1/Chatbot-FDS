@@ -1,0 +1,49 @@
+➤ Then TCMS system will allow the Traction.
+
+| Train: 4567 | EBL Loop1 Screen | 01/01/37 | 07:15:48 |
+| :--- | :--- | :--- | :--- |
+| EBL1 | EBL2 | | Exit |
+
+**EBL Loop1 Screen**
+
+**Basic Unit 1**
+
+*   EBL1 SUPPLY
+*   VCD2/ Local EBL1
+*   LOCAL EBL1 Relay
+*   VCD1 Relay
+*   VCD By pass Sw
+*   TPWS EMY Relay
+*   TPWS Bypass Sw
+*   CAB1
+*   Cab Occupy (M)
+*   Cab Occupy (R)
+*   Single Unit Sw
+*   EB Switch Driver
+*   EB Switch Guard
+*   EB By pass Sw
+*   Cab Occupy (M)
+*   Cab Occupy (R)
+*   EMY Stop
+*   EBL2
+*   Local EB1
+
+**Basic Unit 6**
+
+*   EBL2 SUPPLY
+*   VCD2/ Local EBL2
+*   VCD1 Relay
+*   VCD By pass Sw
+*   CAB2
+*   EBL1 Supply TL
+*   LOCAL EBL2 RELAY
+*   EB Switch Driver
+*   EB Switch Guard
+*   EB By pass Sw
+*   EMY Stop
+*   Cab Occupy (M)
+*   Cab Occupy (R)
+*   EBL1 Status TL
+*   Local EB2
+
+Page 69 of 85

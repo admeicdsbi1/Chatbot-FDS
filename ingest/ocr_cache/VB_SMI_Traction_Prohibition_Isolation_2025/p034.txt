@@ -1,0 +1,41 @@
+15)Isolation procedure Emergency OFF Loop Triggered
+Detection :
+➢ Emergency off loop will be triggered in below conditions
+Emergency off switch may be operated from
+Driver / Guard / other cab (or)
+EOL MCB tripped in Occupied cab.
+➢ The System will declare the Faults of
+EOL123 Triggered
+EOL 1 Triggered
+EOL 2 Triggered
+EOL 3 Triggered
+➢ To get the help screen go to “LEGENDS HELP SCREEN” and
+select the “EOL Triggrd”
+(or)
+Select the “ EOL Triggrd ” at Main Screen Bottom right .
+
+| | | | | | | | | Acknowledge |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| | | | | - | | | ▼ | ▲ |
+| | | | | | | | | EOL Triggrd |
+
+Train: 4567 | 01/01/37 | 07:15:55
+--- | --- | ---
+Rake | | | | | | | | |
+**Emergency OFF loop triggered**
+****************************************************************************************************
+************************************FAULT REASON****************************************************
+****************************************************************************************************
+Following conditions may lead to EOL triggering.
+1. EOL switch operated by Motor man/Guard/From other cab.
+2. Any coach EOL MCB tripping might have happened.
+****************************************************************************************************
+************************************ISOLATION PROCEDURE*********************************************
+****************************************************************************************************
+If the EOL triggering is not an intentional action, Then check the MCBs of EOL
+loop in TC coach.
+
+➢ If the Emergency off switch is operated in any one of the cabs,
+normalize the Emergency off switch to recover the EOL loop
+➢ If the EOL triggering is not an intentional action, then check the
+MCB s of EOL loop in TC coach.

@@ -1,0 +1,11 @@
+Annexure A 3/3
+
+REFERENCE PICTURE
+
+| Pic-A( Door Overview) | Pic-C( Door Summary Screen) |
+| :--- | :--- |
+| Train: 235293 | Door Overview | 04/07/23 | 10:17:08 | Door Summary RAKE | UNIT1 | UNIT2 | DTC | MC1 | TC | MC2 | MC1 | TC | MC2 | NDTC | UNITS | UNITS | NDTC | MC2 | TC | MC1 | MC2 | TC | MC1 | DTC | All Doors Close Push Button Operated | 13423 | | Train: 235293 | Door Summary Screen | 04/07/23 | 10:18:48 | Exit | Door Summary Screen | Basic Unit 1 | Basic Unit 2 | Basic Unit 5 | Basic Unit 6 | RIGHT SIDE DOORS SUMMARY RELAY STATUS | DTC | MC1 | TC | MC2 | MC1 | TC | MC2 | NDTC | NDTC | MC2 | TC | MC1 | MC2 | TC | MC1 | DTC | ADCR OVERRIDE | ADCR OVERRIDE | LEFT SIDE DOORS SUMMARY RELAY STATUS | DPR STATUS LINE | ADCR | ADCR |
+
+| Pic-B | Pic-D |
+| :--- | :--- |
+| Train: 235293 | Legends Screen | Obstacle Detected During door closing operation. | All Doors are closed | At least one Door is open state | At least one Door is Isolated | Critical Failure indication from Door | Door communication failure. | AUTO ON ADCR BYPASS |

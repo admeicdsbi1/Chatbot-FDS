@@ -1,0 +1,32 @@
+INTEGRAL COACH FACTORY, CHENNAI - 600 038
+
+Mobile no.9003141328
+Mail id: dyceedicf@gmail.com
+Office of CDE/Elec.
+Dt: 22.03.2025
+
+No. MD/D/Trainset/RB Contract/186 G
+
+M/s.Medha servo Drives Pvt Ltd
+P-4/5B, Industrial Park, Nacharam,
+Hyderabad -500 076
+
+Sub: Deactivation of VCD foot operated switch in Driver desk
+Ref: (i) Medha letter. no.MAE675UV2: ICF: 1326: 2025 dt.21.03.2025
+(ii) RDSO lt.no. EL/1.3.17.1/Trainset dt.14.02.2025
+
+RDSO vide letter under reference has directed to carry out modifications in driver desk to deactivate the vigilance foot operated VCD switch provided for acknowledgement of VCD, which is located below the driver desk in all variants of Vande Bharat Train set rakes (Chair car, sleeper) to eliminate the possibility of rhythmic operation during momentarily micro sleep of driver for safety point of view during operation. It is further advised by RDSO that Resetting logic through other existing means shall continue to be same.
+
+M/s.Medha vide letter under reference has submitted the modification to be carried out for deactivation of foot operated VCD in driver desk. A prototype modification was carried out in driver desk of DTC.no. 64 of Rake no.86 at ICF on 22.03.2025.
+Based on the prototype inspection it is hereby advised to M/s.Medha to carry out the following improvement with respect to the subject item.
+
+| S.N | Observation | ICF Remarks |
+| :--- | :--- | :--- |
+| 1 | [Image of driver desk panel] | • The name plate description has to be provided as “Vigilance Foot operated VCD switch De-activated” as directed by RDSO.<br>• As directed by RDSO, the name plate has to be sticker arrangement instead of paper. ICF suggested to provide ABS plastic sticker or aluminium name plate. |
+
+**Labels visible in the image:**
+*   COMMON HEALTH
+*   FOOT OPERATED VCD SWITCH DE-ACTIVATED
+*   FAULT RESET
+*   EMR OFF
+*   VCD

@@ -1,0 +1,33 @@
+Train: 4567
+01/01/37
+07:16:08
+Rake
+
+Atleast One Parking Brake Applied in Rake
+
+****************************************************************************************************
+************************************ISOLATION PROCEDURE*********************************************
+****************************************************************************************************
+
+1. Ensure MR pressure is above 7.5 bar and Give parking brake release
+command from occupied cab.
+2. Check if all the parking brakes are released and fault is recovering.
+3. If fault is not recovering Go to Min1 PB train line screen, identify the coach
+in which parking brake applied feedback is coming.
+
+CASE 1:
+If the parking brake applied input is coming because of the MCB tripping then
+do the following.
+1. Normalise the MCB.
+2. Give parking brake release command.
+CASE 2:
+If the parking brake applied is genuine and we want to release then following
+should he done
+
+Min1 PB
+Applied Loop
+
+PB Override
+Settings
+
+Page 13 of 85

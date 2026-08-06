@@ -1,0 +1,25 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+ANNEXURE - D
+
+STANDARD TEST PROTOCOL FOR VANDE BHARAT COACHES
+(Automatic Smoke / Fire Detection with Alarm System)
+
+Smoke threshold setting for display on TCMS DDU are as under:
+
+| Stage | Alarm | Threshold (%obs/m) | Delay period (sec) |
+| :--- | :--- | :--- | :--- |
+| 1. | Action | 0.6 ± 0.05 | 30 |
+| 2. | Fire | 1.6 ± 0.05 | 45 |
+
+| S. No. | Description | Indications | Observations (Passed (Ok) /Failed) | Remarks (if any) |
+| :--- | :--- | :--- | :--- | :--- |
+| 1. | Checking of fire detection system in passenger area, toilet and electrical cabinet/panel | Stage 1(Action): 1. LED and Flasher light should get activated on fire detection panel of affected coach. 2. Yellow symbol on TCMS DDU. 3. Corresponding coach diagnostic message on DDU. Stage 2(Fire): 1. Red lamp 'ON' on driver desk. 2. Red symbol on TCMS DDU. 3. Corresponding coach diagnostic message on TCMS DDU | | |
+| 2. | Checking of Smoke detector in electrical cabinet/panel | Stage (Fire): 1. Red lamp 'ON' on driver desk. 2. Red symbol on TCMS DDU. 3. Corresponding coach diagnostic message on TCMS DDU | | |
+| 3. | Indication of self-diagnostics | | | |
+| | (i) Electrical discontinuity in the system | Indication on detection panel of affected coach | | |
+| | (ii) Obstruction in air flow (blockage in sampling pipe or breaking/ opening of sampling pipe) | Fault on detection panel of affected coach | | |
+| | (iii) System disability (switch off fire detection panel) | Communication failure fault on TCMS DDU | | |
+| 4. | Buzzer in passenger area | Driver to manually activate buzzer of passenger area after detection of stage-2(fire) on DDU and stopping of the train. | | |
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 227 of 359

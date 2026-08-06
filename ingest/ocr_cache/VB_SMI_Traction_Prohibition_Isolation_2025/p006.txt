@@ -1,0 +1,62 @@
+Train: 4567 | 01/01/37 | 07:20:23
+Rake
+
+Stuck Brake Detected through Min1 brake TL
+3. Min 1 brake applied IL feedback is high.
+****************************************************************************************************
+**********************************ISOLATION PROCEDURE***********************************************
+****************************************************************************************************
+
+1. Go to brake screen, release the holding brake(Ensure parking brake is applied in this state for safety)
+2. In case After releasing the holding brake, if all pressure is becoming 0. then go to Min1 brake applied loop screen.
+3. In this screen, we can see the BC pressure switch status of all coaches.
+4. if any BC pressure switch is not showing as released, then it is an indication that brake is applied.
+5. EP cock should be isolated in that particular coach.
+6. BAL should also be isolated in occupied cab.
+
+Brake | Min1 Brake Applied Loop
+
+➤ Go to brake screen, release the holding brake
+
+Train: 4567 | Brake Screen | 01/01/37 | 07:20:25
+Rake
+
+BC Pressure [in Bar]
+
+| Coach | DTC | MC1 | TC | MC2 |
+| :--- | :--- | :--- | :--- | :--- |
+| Bogie1 | 2.5 | 2.5 | 2.5 | 2.5 |
+| Bogie2 | 2.5 | 2.5 | 2.5 | 2.5 |
+
+| Coach | MC1 | TC | MC2 | NDTC |
+| :--- | :--- | :--- | :--- | :--- |
+| Bogie1 | 0.0 | 0.0 | 0.0 | 0.0 |
+| Bogie2 | 0.0 | 0.0 | 0.0 | 0.0 |
+
+| Coach | MC1 | TC | MC2 | NDTC |
+| :--- | :--- | :--- | :--- | :--- |
+| Bogie1 | 0.0 | 0.0 | 0.0 | 0.0 |
+| Bogie2 | 0.0 | 0.0 | 0.0 | 0.0 |
+
+| Coach | MC1 | TC | MC2 | NDTC |
+| :--- | :--- | :--- | :--- | :--- |
+| Bogie1 | 0.0 | 0.0 | 0.0 | 0.0 |
+| Bogie2 | 0.0 | 0.0 | 0.0 | 0.0 |
+
+| Coach | NDTC | MC2 | TC | MC1 |
+| :--- | :--- | :--- | :--- | :--- |
+| Bogie1 | 0.0 | 0.0 | 0.0 | 0.0 |
+| Bogie2 | 0.0 | 0.0 | 0.0 | 0.0 |
+
+| Coach | MC2 | TC | MC1 | DTC |
+| :--- | :--- | :--- | :--- | :--- |
+| Bogie1 | 0.0 | 0.0 | 0.0 | 0.0 |
+| Bogie2 | 0.0 | 0.0 | 0.0 | 0.0 |
+
+CAB1 BP | 4.9
+CAB2 BP | X
+
+Holding Brake Command
+Activate Hold.Brake | Release Hold.Brake
+
+➤ Note Ensure parking brake is applied in this state for safety

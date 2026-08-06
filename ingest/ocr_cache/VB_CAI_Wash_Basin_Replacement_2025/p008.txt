@@ -1,0 +1,80 @@
+### Engineering Document Data
+
+**Subject/Reference:**
+*   **Drawing Number:** AAB63919
+
+**Tables:**
+
+| Symbol | Description |
+| :--- | :--- |
+| ▽ | ROUGH MACHINED |
+| ∇∇ | FINISH MACHINED |
+| ∇∇∇ | FINE FINISH MACHINED |
+| 01 | ROUGH CLEANED |
+| 01b | BURRS REMOVED |
+| 18 | CHAMFERED |
+
+**Technical Values:**
+*   **Diameter (Flange):** Ø74
+*   **Diameter (Internal/Threaded):** Ø41
+*   **Diameter (Pipe End):** Ø32
+*   **Thread Specification:** 1 1/2 BSPP THRED
+*   **Vertical Dimension (Flange to Pipe Centerline):** 55
+*   **Vertical Dimension (Flange to Thread Start):** 29
+*   **Vertical Dimension (Thread Depth):** 16
+*   **Wall Thickness (Indicated):** 1.5
+*   **Horizontal Dimension (Pipe Length):** 120
+
+**Component Designations:**
+*   **Item 1:** Pipe/Elbow assembly (as indicated by callout)
+
+Based on the provided engineering drawing, here is the extracted technical information:
+
+### Technical Values and Dimensions
+*   **Thread Specification:** 1 1/2 BSPP
+*   **Diameter (Outer Flange):** Ø74
+*   **Diameter (Inner/Intermediate):** Ø47
+*   **Diameter (Inner/Central):** Ø41
+*   **Diameter (Outlet Pipe):** Ø32
+*   **Wall Thickness:** 1.5
+*   **Length (Outlet Pipe):** 120
+*   **Internal Dimension (Symmetrical):** 20.5 (left) and 20.5 (right)
+
+### Document References
+*   **Drawing Number:** ICF/STD-9-0-001
+*   **Standard Reference:** ISO 2553 (Welding symbols)
+
+### Notes
+*   "FOR UNTOLERANCED DIMENSIONS AND ROUGHNESS VALUES, REFER DRAWING NO ICF/STD-9-0-001."
+*   "THIS DRAWING INVALID. WELDING SYMBOLS ARE AS PER EN ISO 2553. WEIGHT GIVEN IN DRAWING IS FOR INDICATIVE PURPOSE ONLY."
+
+### Views Provided
+*   **Section A-A:** Cross-sectional view of the assembly.
+*   **Section B-B:** Cross-sectional view of the flange/inlet area.
+*   **Isometric View:** 3D representation of the component.
+
+### Engineering Document Data
+
+**Subject:** VENT CASING
+**Reference Number:** AAB63919
+**Date of First Issue:** 18-7-25
+
+#### Technical Values
+*   **Dimensions:**
+    *   20.5 mm (Radius/Offset)
+    *   40 mm (Height)
+    *   9 mm (Internal feature height)
+    *   M5 (Thread size)
+*   **Material Specification:** AISI-304
+*   **Weight per Unit:** 0.30 Kgs
+*   **Scale:** 1:1
+
+#### Component Table
+| QTY | DESCRIPTION | DIMENSIONS | ITEM NO. | REF. DRGS | MATL. SPEC. | WT/UNIT IN KGS | REMARKS |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | VENT CASING | - | 1 | - | AISI-304 | 0.30 | - |
+
+#### Additional Information
+*   **Group:** 6-3 Lavatory and Fittings
+*   **Organization:** INDIAN RAILWAY STANDARDS, INTEGRAL COACH FACTORY, CHENNAI - 600038
+*   **Drawn By:** Mathankumar J

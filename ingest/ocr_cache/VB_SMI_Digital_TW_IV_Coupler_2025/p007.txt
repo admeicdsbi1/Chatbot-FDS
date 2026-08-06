@@ -1,0 +1,60 @@
+Annexure-A
+
+USER MANUAL FOR THE DIGITAL TORQUE WRENCH
+
+BEFORE USING THE WRENCH
+
+BATTERY INSTALLATION
+* Remove the battery cap.
+* Insert one AAA batteries matching the -/+ polarities of the battery to the battery compartment.
+* Put on the battery cap and fasten it tightly according to the following figures.
+
+POWER ON AND RESETTING THE WRENCH
+* Press (C) to power on the digital torque wrench.
+* Usually press (C) to reset the digital torque wrench before using it.
+
+ATTENTION:
+If an external force is applied to the torque wrench during power-on period, an initial torque offset will be recorded in the memory.
+
+AUTO POWER OFF
+* The wrench will auto power off after about 5 minutes idle for power saving. Press (C) to power on the wrench again.
+
+CAUTIONS:
+During communication period (Send appears), the auto power off function is disabled.
+
+RESETTING THE WRENCH
+* If the wrench does not function normally, loosen the battery cap then tighten it to re-start.
+
+SETUP
+(C) (U/S) (M) (A) (V)
+1 2 3 4
+(U/S) (A)
+(M) (V)
+
+1 Power On/Clear
+2 Unit Selection/Setting
+3 Pre-setting No.
+4 Adjust Torque Value
+
+STEP 1: PRE-SETTING NO.
+25.00 N-m
+Pre-setting No.: M1
+Press (M)
+25.00 N-m
+Pre-setting No.: M2
+Press (M)
+Pre-setting No.: M2
+.
+.
+.
+25.00 N-m
+Pre-setting No.: M9 *Note1, 2, 3
+
+Note:
+2. If Er0 is appeared, that means this wrench has ever been applied over than 110% of torque of the spec.
+3. The maximum capacity for "Pre-setting No." is 9 sets.
+4. The "Pre-setting No." is in cyclic.
+
+8
+9
+6

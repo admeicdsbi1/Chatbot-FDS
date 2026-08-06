@@ -179,8 +179,17 @@ LETTER_DOC_TYPES = {"circular", "instruction_letter",
                     "special_maintenance_instruction",
                     "coach_alteration_instruction"}
 
+# ...but only short ones. doc_type does not separate a 2-page SMI letter from the
+# 90-page En-route Trouble Shooting manual (VB/SMI/E/18), which carries the same
+# type. That manual's heading detection finds 75 real sections — "Isolation
+# procedure for Parking Brake", "…for Majority BP drop", "…for BP Low pressure" —
+# and those are precisely the titles a technician's query overlaps with. Page
+# count is what actually separates the two shapes: RDSO/ICF letters run 1-10
+# pages, the manual-like SMIs 28/41/90.
+LETTER_MAX_PAGES = 12
 
-def _retitle_letter_sections(sections, entry):
+
+def _retitle_letter_sections(sections, entry, n_pages):
     """Give every section of a letter-shaped document its subject line as title.
 
     Heading detection has nothing real to latch onto in these documents, so it
@@ -192,7 +201,8 @@ def _retitle_letter_sections(sections, entry):
     the Sub: line IS the section title — which is what the force-OCR path already
     assumes; this extends the same rule to born-digital letters.
     """
-    if entry.get("doc_type") not in LETTER_DOC_TYPES or not sections:
+    if (entry.get("doc_type") not in LETTER_DOC_TYPES
+            or not sections or n_pages > LETTER_MAX_PAGES):
         return sections
     # The REGISTRY title wins over a Sub: line scraped from the body, because
     # these letters routinely carry the letter they supersede as an attachment —
@@ -390,7 +400,7 @@ def extract(path, entry):
     # slide decks / circulars may not produce headings; fall back to per-page sections
     if len(sections) < 3 and n_pages > 3:
         sections = _per_page_sections(path, entry, repeated)
-    return _retitle_letter_sections(sections, entry), page_stats
+    return _retitle_letter_sections(sections, entry, n_pages), page_stats
 
 
 def _per_page_sections(path, entry, repeated):

@@ -1,0 +1,23 @@
+20) Procedure for Train operation while F1 coupler disconnected during running
+
+Train operation in RDM Mode will not work in case of F1 coupler removed.
+
+➢ Train should be operated in Normal (Key ON) mode only
+
+➢ High priority mode should be selected from occupied CAB .
+
+➢ TSL-2 should be selected from occupied CAB .
+
+➢ Door operation can be done by operating the Door switch from other cab .
+
+➢ Brake function will work, since By default 100% command will be considered for brake operation .
+
+➢ Min 1 VCB on and Min 1 Panto up Lamps will not glow in driver desk .
+
+➢ EBL Bypass function will not work .
+
+➢ MIN1 lamp will not glow in driver desk .
+
+➢ Signal bell function will not work .
+
+➢ PIS reset operation will not work .

@@ -1,0 +1,40 @@
+ANNEXURE 2
+8
+
+ELECTRIC LOCO SHED, VSKP
+
+| INSP | CHECK SHEET FOR VB INSPECTION (Daily) | Doc No. ELS/VSKP/INSP/VB/Daily Rev'O |
+| :--- | :--- | :--- |
+| Daily | | Dt. 12-07-2023 |
+| | | Date: 8/3/24 | Train No: 20833 | Page 1 of 2 |
+| | | Time: 04:45 | | |
+
+Daily inspection check points
+
+| Task No | Equipment | Maintenance Actions | Result (OK/FAILED) | Remarks |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| | | | BU 1 | BU 2 | BU 5 | BU 6 | |
+| 1 | Cab Facilities | Read Driver Display Unit for any active fault and note down. Check general appearance of all buttons, indicators, switches, toggles. | ✓ | ✓ | ✓ | ✓ | |
+| | | Check the functioning of all buttons by pressing lamp test button. | ✓ | ✓ | ✓ | ✓ | |
+| | | Check console Light, Cab Light, Fire Extinguisher, Function of Horn etc. | ✓ | ✓ | ✓ | ✓ | |
+| | | Check the condition of DDU, MMI & CCTV screen. | ✓ | ✓ | ✓ | ✓ | |
+| | | Check the functioning of BAL, ISO, Single unit operation, EOL bypass, EBL bypass, UVISO, ADCR bypass selector switches in normal position and EMY off switch in release position. | ✓ | ✓ | ✓ | ✓ | |
+| 2 | Driver Desk | Check operation & function of all switches & push buttons with their indications on Driver Desk and their stencilling. | ✓ | ✓ | ✓ | ✓ | |
+| | | Check master controller in each driving cab. | ✓ | ✓ | ✓ | ✓ | |
+| | | Check the operations from both the driver's cab and working of cab occupation functionality. | ✓ | ✓ | ✓ | ✓ | |
+| 3 | Pantograph | Visually inspect the upper and lower arm and their components for any abnormality. | ✓ | ✓ | ✓ | ✓ | |
+| | | Visually inspect carbon strips for break and wear. | ✓ | ✓ | ✓ | ✓ | |
+| | | Check physically for any damage & loose fasteners. | ✓ | ✓ | ✓ | ✓ | |
+| | | Check the Pantograph raising and lowering function. | ✓ | ✓ | ✓ | ✓ | |
+| 4 | HV Potential Transformer | Check insulator surface for any sign of damage, crack or chipping/grazing. | ✓ | ✓ | ✓ | ✓ | |
+| | | Check the earth cable for damage and loose connection. | ✓ | ✓ | ✓ | ✓ | |
+| 5 | Lightning Arrester | Visually inspect the Insulator surface for any sign of damage, crack/punctures or chipping/grazing. | ✓ | ✓ | ✓ | ✓ | |
+| | | Make sure that the line and ground terminals remain tight. | ✓ | ✓ | ✓ | ✓ | |
+| | | Visually inspect and check the earth cable for any damage and ensure it is connected properly. | ✓ | ✓ | ✓ | ✓ | |
+
+| Name Of Staff & Token No. | Signature Of Staff | Name & Signature Of Supervisor With Remarks If Any | Signature of Section In charge for sample checking | Signature of officer for sample checking |
+| :--- | :--- | :--- | :--- | :--- |
+| ① Manoj Tak-3 1103 | [Signature] | D.L.W. Naidu. [Signature] SSE/E | | |
+| ② Venu 825 | [Signature] | | | |
+| ③ P. Raja Sekhar 650 | [Signature] | | | |
+| ④ K.S. Rao-4 967 | [Signature] | | | |

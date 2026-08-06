@@ -1,0 +1,14 @@
+| Step | Description | Images/Notes |
+| :--- | :--- | :--- |
+| Step 3 | Scoop to be inserted at specified locations @8 nos per coach. | Length may be trimmed to the minimum, if necessary, to address the access issue. |
+| Step 4 | Main duct branch duct connector to be reinstalled temporarily | Any damaged connector may be replaced with new one, using insulation foam and aluminium tape |
+| Step 5 | Both the RMPUs to be switched on. The velocity of airflow at the diffuser outlet and at near by the scoop fixing locations to be measured. | Check for improvement is airflow near to IC door on either ends |
+| Step-6 | After verifying the velocity, if air velocity found satisfactory, the scoop arrangement to be riveted properly by pop riveting , with minimum 3 rivets per scoop. Then the duct connector fitment may be carried out . Further the roof ceiling panels may be fitted back | Any damaged connector may be replaced with new one, using insulation foam and aluminium tape. Ensure that electrical connections are provided properly. |
+
+**Labels within images:**
+*   SCOOPS
+*   POP RIVETS
+*   POP RIVETS
+*   DIRECTION OF AIR FLOW
+
+2

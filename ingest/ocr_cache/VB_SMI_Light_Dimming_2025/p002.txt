@@ -1,0 +1,49 @@
+**Instructions for dimming of lights in passenger compartment**
+
+**Operation of DL & IDL from Drivers Desk:**
+
+1. If the dimming of light is required during early hours/late hours of the day, 50% can be selected from driver desk by train manager in the rear CAB so that only indirect lights will be ON in passenger compartments.
+
+*   **Panel Components:**
+    *   CAB ON - Blue indicator
+    *   LAMP TEST - Blue indicator
+    *   SPOT LIGHT - Black rotary switch (OFF/ON)
+    *   AIR BRAKE - Red indicator
+    *   MICROPHONE - Black button
+    *   LIGHTS ON - Black rotary switch (50% / 100% / OFF) [Circled in red]
+    *   MARKER LIGHT RED - Black button
+    *   MARKER LIGHT WHITE - Black button
+    *   SIGNAL BELL - Yellow indicator
+    *   IPAS - Yellow indicator
+    *   FLASHER - Yellow indicator
+    *   VCD LAMP - Yellow indicator
+    *   SIGNAL EXCHANGE LIGHT GREEN - Green indicator
+    *   SIGNAL EXCHANGE LIGHT RED - Yellow indicator
+    *   HORN HI TONE - Yellow button
+    *   HORN LOW TONE - Yellow button
+    *   VCD ACK - Red button
+
+*   **Caption:** Only IDL is ON in compartment
+
+2. If more light is required, train manager can switch ON both Direct lights and Indirect lights by selecting 100% lights from driver desk.
+
+*   **Panel Components:**
+    *   CAB ON - Blue indicator
+    *   LAMP TEST - Blue indicator
+    *   SPOT LIGHT - Black rotary switch (OFF/ON)
+    *   AIR BRAKE - Red indicator
+    *   MICROPHONE - Black button
+    *   LIGHTS ON - Black rotary switch (50% / 100% / OFF) [Circled in red]
+    *   MARKER LIGHT RED - Black button
+    *   MARKER LIGHT WHITE - Black button
+    *   SIGNAL BELL - Yellow indicator
+    *   IPAS - Yellow indicator
+    *   FLASHER - Yellow indicator
+    *   VCD LAMP - Yellow indicator
+    *   SIGNAL EXCHANGE LIGHT GREEN - Green indicator
+    *   SIGNAL EXCHANGE LIGHT RED - Yellow indicator
+    *   HORN HI TONE - Yellow button
+    *   HORN LOW TONE - Yellow button
+    *   VCD ACK - Red button
+
+*   **Caption:** Both IDL and DL are ON in compartment

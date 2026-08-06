@@ -1,0 +1,55 @@
+Annexure-A
+
+STEP 2 : UNIT SELECTION
+25.00 N-m
+Pre-setting Unit: N-m
+Press (U/S)
+221.2 in-lb
+Unit Selection: in-lb
+Press (U/S)
+18.43 ft-lb
+Unit Selection: ft-lb
+Press (U/S)
+255.1 kg-cm
+Unit Selection: -kg-cm
+
+STEP 3 : SET TARGET TORQUE
+25.00 N-m
+Pre-setting Target Torque
+Press (^)
+30.00 N-m
+Increase Torque Value
+Press (v)
+28.00 N-m
+Decrease Torque Value
+
+Note:
+1. The "Unit Selection" is in cyclic.
+
+10
+
+STEP 4 : PEAK HOLD / TRACK MODE SELECTION
+25.00 N-m
+Track Mode
+Long Press (U/S)
+ñodE
+Set Peak/Track mode
+Press (^) (v) for Selection
+ñodE
+Set Peak/Track mode
+Press (U/S)
+n005 *Note 1
+Record No.
+Press (U/S)
+CL-A *Note 1
+Clear Record
+Press (U/S)
+25.00 N-m
+Peak Hold Mode
+
+Note:
+1. Please skip this procedure and continue to the next step.
+
+11
+
+7

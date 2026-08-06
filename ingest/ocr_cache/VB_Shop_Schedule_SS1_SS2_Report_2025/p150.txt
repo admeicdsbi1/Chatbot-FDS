@@ -1,0 +1,27 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+| S.No. | Description | Unit | Qty. | Total | Remarks |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 41 | Aux Converter | Nos. | 2 | 4 | • Quantity is modified from 02 per set to Total 4 Nos. <br> • Item to be centrally kept at 4 zones (SR, CR, NR and ER). |
+| 42 | Battery charger | Nos. | 2 | 2 | - |
+| 43 | Earthing switches | Nos. | 2 | 2 | - |
+| 44 | Surge arrestors (complete) | Nos. | 4 | 4 | - |
+| 45 | PIS (complete) | Coach set | 4 | 1 | Each set consisting of 10 items. (As indicated in ICF letter under ref (iii) above. |
+| 46 | Emergency Talkback unit (ETBU) | Coach set | 4 | | |
+| 47 | Bogie Frame VB TS MC (PL No. 31030488) | Nos. | 1 | 1 | - |
+| 48 | Bogie Frame VB TS TC/NDTC/DTC (PL No. 31030490) | Nos. | 1 | 1 | - |
+| 49 | Solid Forged Wheel Disc -TC (PL No. 31020914) | Nos. | 4 | 4 | - |
+| 50 | Solid Forged Wheel Disc-MC (PL No. 31020902) | Nos. | 4 | 4 | - |
+| 51 | Axle for Vande Bharat-MC (PL No. 31020926) | Nos. | 2 | 2 | - |
+| 52 | Axle for Vande Bharat-TC (PL No. 31020938) | Nos. | 2 | 2 | - |
+| 53 | One Coach Set of Metal Bonded Rubber Items for VB/TS Coaches consist of 09 items (PL No. 31001385) | Coach Set | 2 | 0 | Covered in Sl.No.5 |
+| 54 | Set of Control Arm with Bottom Cover for VB/TS consist of 02 items (PL No. 31020940) | Set | 16 | 16 | - |
+| 55 | Control Arm Bush Machined for VB/TS (PL No. 31001403) | Nos. | 16 | 16 | - |
+| 56 | Detail Items kit for TS consist of 10 Items (PL No. 31001439) | Set | 2 | 2 | - |
+| 57 | Stabilizer Assemblies (PL No. 31000411) | Nos. | 6 | 0 | Covered in Sl.No.5 |
+| 58 | Set of Axle End Cover - ERCU (PL No. 31020963) | Set | 1 | 1 | - |
+| 59 | Axle Box Cover (LH) one sensor (PL No. 31020987) | Set | 1 | 1 | - |
+| 60 | CTRB Bearing for VB/TS (PL No. 31020951) | Nos. | 16 | 16 | - |
+| 61 | 01 rake set of FS ALL Steel Lock Nut (PL No. 73120017) | Set | 1 | 1 | - |
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 148 of 359

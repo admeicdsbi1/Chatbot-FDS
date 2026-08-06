@@ -1,0 +1,41 @@
+Doc. No. | CPA- MAE675UV2 -126 | Page: 4 of 4 | MEDHA
+--- | --- | --- | ---
+Product Code | MAE675UV2 & MAE675SL | Rev. No.: | 
+
+Title: CPA FOR REMOVAL OF VCD FOOT OPERATED SWITCH
+
+| Prepared By | Checked By | Approved By | Initiated Date |
+| :--- | :--- | :--- | :--- |
+| P DURGA BHAVANI | PRAMOD KUMAR D | RANJEET SINGH | 10.03.2025 |
+
+Instruction plate should be sticked on Plate as shown in below figure.
+
+**Panel Layout Components:**
+
+*   **EMR BRAKE (D)** - Emergency Brake (Red circular button)
+*   **FOOT OPERATED VCD SWITCH DE-ACTIVATED** - (Yellow label)
+*   **FAULT RESET** - (Red circular button)
+*   **EMR OFF** - (Red circular button)
+*   **VCD RESET** - (Red circular button)
+*   **ATO ENABLE** - (Green circular button)
+*   **PANTO** - (Switch: UP / DOWN)
+*   **SIGNAL BELL (D)** - (Yellow circular button)
+*   **FLASHER (D)** - (Yellow circular button)
+*   **PANTO MODE** - (Switch: ON / OFF / POS.1 / POS.2 / POS.3)
+*   **HORN HIGH TONE (D)** - (Yellow circular button)
+*   **SIGNAL EXCHANGE LIGHT RED (D)** - (Red circular button)
+*   **HORN LOW TONE (D)** - (Yellow circular button)
+*   **SIGNAL EXCHANGE LIGHT GREEN (D)** - (Green circular button)
+*   **PAS ACK** - (Yellow circular button)
+*   **VCD LAMP (D)** - (Red circular button)
+*   **CRUISE CONTROL** - (Green circular button)
+*   **ENS** - (Yellow circular button)
+*   **VCD ACK (D)** - (Red circular button)
+
+Note: 2 of 2 page is only if required (for Annexure)
+
+| REV. NO. | DATE | ECR NO. | DESCRIPTION OF REVISION |
+| :--- | :--- | :--- | :--- |
+| 00 | 10/03/25 | | Initial Release |
+
+Reference Template number SF-0967 (17) 1/1

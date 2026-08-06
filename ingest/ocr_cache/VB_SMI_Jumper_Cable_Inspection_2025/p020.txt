@@ -1,0 +1,32 @@
+5375 (08/13)
+411-103066
+Installation and Maintenance Manual
+TE
+connectivity
+
+CLASS 2 - CONFIDENTIAL
+
+7.4.2. Remove any excess mastic from the termination end with a hard, non-metallic tool, for example a wooden spatula or a plastic scraper. Thoroughly clean the taper section of the termination end with a lint free cloth moistened with IPA to remove any particles, grease or dirt from the surface. Refer to Figure 20.
+
+Remove excess mastic
+Clean this surface with a lint free cloth moistened with IPA
+
+Figure 20
+
+7.4.3. Thoroughly clean the contact surfaces of the termination and the jumper lug with a lint free cloth moistened with IPA to remove any particles, grease or dirt from the surface.
+
+WARNING
+Do not allow IPA to enter underneath the HVJL insulation.
+
+Clean these surfaces with IPA
+
+Figure 21
+
+©2021 TE Connectivity Ltd
+family of companies
+All Rights Reserved
+TE Proprietary & Confidential Information
+Class II Data Classification - See Policy TEC-02-04
+18 of 26
+Rev J
+01 June 2022

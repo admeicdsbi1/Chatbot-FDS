@@ -1,0 +1,9 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 30. | Traction Center CP Bush Ejection Fixture | SPMAET18BOGIE1148 Ref: Jigs & Fixture List by Medha Bogie Private Limited | |
+| 31. | Traction Center Assembly Fixture | SPMAET18BOGIE1137 Ref: Jigs & Fixture List by Medha Bogie Private Limited | |
+| 32. | Load deflection test machine | | Testing of coil springs |
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 115 of 359

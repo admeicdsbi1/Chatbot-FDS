@@ -1,0 +1,25 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+| SN | System/Sub System/Component | Proposed Maintenance during Warranty Period | Proposed Maintenance post Warranty Period | Proposed related actions |
+| :--- | :--- | :--- | :--- | :--- |
+| **vii.** | **Inter-vehicular Couplers** | | | |
+| 1. | Jumper Couplers (Power Couplers) and related items | In-house Maintenance with adequate UTEX | In-house Maintenance with adequate UTEX | Consolidated Rate contract for supply of the item/items to be done by ICF |
+| 2. | Power Coupler Junction Box and related items | | | |
+| 3. | Inter Vehicular (IV) Coupler and related items | | | |
+| **viii.** | **Train Lighting** | | | |
+| 1. | Head Lights (LED) | In-house Maintenance with adequate UTEX | In-house Maintenance with adequate UTEX | Consolidated Rate contract for supply of the item/items to be done by ICF |
+| 2. | LED Marker Lights | | | |
+| 3. | LED Flasher Lights | | | |
+| 4. | Saloon & Gangway Lights | | | |
+| **ix.** | **High Voltage System** | | | |
+| 1. | Pantograph and related system | Preventive Maintenance Contracts | Comprehensive Annual Maintenance Contracts | Consolidated contract for PMC and CAMC to be done by ICF |
+| 2. | Vacuum Circuit Breaker and related system | | | |
+| 3. | AC Surge Arrester and related items | In-house Maintenance with adequate UTEX | In-house Maintenance with adequate UTEX | Consolidated Rate contract for supply of the item/items to be done by ZR |
+| 4. | Potential Transformer and related items | | | |
+| 5. | Primary CT (Current transformer), Roof CT and Return CT and related items | | | |
+| 6. | HT cable and related items | | | |
+| 7. | Main Transformer and related items | Preventive Maintenance Contracts | Comprehensive Annual Maintenance Contracts | Consolidated contract for PMC and CAMC to be done by ICF |
+
+Page 8 of 10
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 142 of 359

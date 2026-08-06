@@ -1,0 +1,21 @@
+4
+
+c) Log in to the maintenance mode
+
+[Image: A screen showing "Maintenance Mode" with a menu of 8 options: 1. Test Modes, 2. Detailed View, 3. Date and Time, 4. Software Versions, 5. DIO Screens, 6. Network Screens, 7. TCMS Comm. Screens, 8. Train Settings. A red circle highlights the "Login" button at the top right.]
+
+Login
+
+d) Enter user ID and press “Back”
+
+[Image: A screen showing "Login User ID". A table shows User ID Entry: ******, Valid: Sudheer. Train ID Actual: 912345, New: [blank]. Below is a numeric keypad (1-9, 0, Back space, Enter). A red circle highlights the "Back" button at the top right.]
+
+| User ID | Entry | ****** |
+| :--- | :--- | :--- |
+| | Valid | Sudheer |
+
+| Train ID | Actual | 912345 |
+| :--- | :--- | :--- |
+| | New | |
+
+Back

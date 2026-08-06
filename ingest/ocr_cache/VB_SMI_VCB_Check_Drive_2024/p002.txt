@@ -1,0 +1,29 @@
+Page 1 of 8
+
+**Joint Report of Detention of Train No. 20833/34 Vande Bharat Exp dt 08.03.2024 in VSKP Coaching Depot, ECoR**
+
+**Officials present:**
+1. Sri K P Yadav, CRSE/Chg./ECoR
+2. Shri Suratha Jani, CEE/PLG/BBS
+3. Sri R B Parashar, Dy. CEE/ICF
+4. Sri P Bharath Krishna, CDO/VSKP
+5. Sri D C Jena, ADEE/Chg./VSKP
+6. Sri D Narsimha Naidu SSE/ELS/WAT
+7. Sri B Ravi Sekhar Patnaik Asst. Manager, M/S Medha
+8. Sri T Anil M/S Medha Service Engineer/VSKP
+
+| | |
+| :--- | :--- |
+| **Train No.** | 20833/34 VSKP-SC Exp. (VB Rake No. 6 of IR) |
+| **Basic Unit and Coach details:** | Coach No. C7 in BU-2 & Coach No. C8 in BU-5 <br> C7: IR 235007 (MC-2) and C8: IR 235006 (MC-2) |
+| **Coach Types:** | C7 & C8 are motor coaches |
+| **Primary Mtc. depot:** | VSKP |
+| **Date of commissioning:** | 15.01.23 |
+| **PRO particulars:** | SS-1 due on 15.07.24 |
+| **Examination details:** | Last safety examination done on 07.03.24 <br> Last trip schedule done on 03.03.24 |
+| **Cause of failure:** | VCB not closing due to line contactor stuck in BU 2 and BU5 |
+| **Time of fault detection** | 04:40 hrs |
+| **Action taken:** | 1. The fault was identified in REMLOT and cab display unit at 04:40 hrs and the cause of failure was identified at 0730 hrs. <br><br> 2. Alternate rake with the composition LACCNE:13, LACCW: 2, LS:2 & LWLRRM: 2 was arranged for the passengers and departed from VSKP at 07:42 hrs. <br><br> 3. M/S Medha identified that VCB could be closed after isolating LTC-2 OF C-7 in BU-5 and similarly LTC-2 of C-8 in BU-2. On further testing, it was identified that the contactor in LTC-2 of C-7 in BU-5 was malfunctioning and it was subsequently replaced at 14:15 hrs. A train line wire connection between BU2 and BU5 resulted in fault display in C-8 of BU2. |
+| **Remarks:** | 1. LTC unit contactors are not checked during daily examination as it is not recommended. <br> 2. The LTC unit is checked only for visual damages during trip schedule i.e. weekly maintenance schedule. |
+| **Responsibility:** | OEM M/S Medha as the contactor is under warranty |
+| **Future Action plan:** | 1. All contactors to be checked by M/S Medha for proper functioning. <br><br> 2. The train line connection to be reviewed by ICF in all VB rakes to avoid faults displayed in the system. <br><br> 3. It is to be reviewed as to why VCB of BU2 was not functioning if the train line connection led to faulty display in DDU. The contactor in MC2 (C8) was initially isolated after which VCB |

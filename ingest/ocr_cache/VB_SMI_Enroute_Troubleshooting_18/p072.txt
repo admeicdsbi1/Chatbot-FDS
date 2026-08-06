@@ -1,0 +1,26 @@
+Train: 4567
+01/01/37
+07:15:45
+Rake
+
+Emergency brake triggered
+
+3. EMY brake applied through ariver MCH.
+4. EB valve triggered in any coach.
+
+****************************************************************************************************
+***************************************ISOLATION PROCEDURE******************************************
+****************************************************************************************************
+
+1. Go to the EBL Loops Screen and verify EBL 1&2 status.
+2. Identify the reason for emergency brake applicaiton.
+3. Release the emergency brake, if it is applied intentionally.
+4. If not check the emergency brake status in rake screen.
+5. Identify the basic unit/coach in which the emergency brake is tripped.
+6. Check the EBL MCB status in that particular coach.
+7. If the MCB is OK, isolate the EP isolation cock in that particular coach
+   physically, to release the emergency brake.
+
+EBL Loops
+
+Page 67 of 85

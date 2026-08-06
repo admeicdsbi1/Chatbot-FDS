@@ -1,0 +1,24 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+**Annexure-I**
+
+| SN | Equipment (for each non interchangeable type) | Unit | Qty as per RB letter dated 08-02-24 | Revised Qty | Remarks |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | MC bogies complete (including all items such as TMs with MSUs, Spring system, brake system etc.) | Set | 8 | 12 | - |
+| 2 | MC wheel sets (with MSUs, gear drive & Brake discs) | Set | 8 | 12 | - |
+| 3 | TC bogies complete (including all items such as Spring system, brake system etc.) | Set | 8 | 12 | - |
+| 4 | TC Wheel sets | Nos. | 8 | 12 | - |
+| 5 | Set of Spring & suspension equipment on bogie (complete set of primary springs, secondary suspension and dampers ) | Set | 11 | 11 | - |
+| 6 | Brake equipment on End Basic Unit (Controllers, cards with accessories etc.) | EBU | 2 Coach set | 1 EBU | • 1 EBU (4 coach set consisting of DTC-1, MC-2, TC-1) including Main compressor and Auxiliary compressor (S.No.12) • 15 EBU sets of Knorr Bremse and 15 EBU sets of Faiveley will need to be supplied |
+| 7 | Brake equipment on Middle Basic Unit (Controllers, cards with accessories etc.) | EBU | 2 Coach set | 1 EBU | |
+| 8 | Main compressor with air dryer | Set | 2 | 2 | - |
+| 9 | Traction Motors | Set | 8 Nos. | 2 | - |
+| 10 | Gear Drives complete | Set | 8 Nos. | 2 | - |
+| 11 | Traction Transformer | Nos. | 2 | Total 4 | • Quantity is modified from 02 per set to Total 4 Nos. • Item to be centrally kept at 4 zones (SR, CR, NR and ER). |
+| 12 | Aux compressor with air dryer | Set | 2 | 1 | Other than Covered in Sl.No.6 |
+| 13 | Pantograph (complete) | Set | 2 | 2 | Out of total (2x30) 60 nos., 10 nos. should be High Rise Pantograph (to be supplied to NWR, WR and NR) |
+| 14 | VCBs | Nos. | 4 | 4 | - |
+| 15 | RMPU | Nos. | 4 | 2 | - |
+| 16 | Batteries | Coach set | 4 | Total 4 | • Quantity is modified from 02 per set to Total 4 Nos. • Item to be centrally kept at 4 zones (SR, CR, NR and ER) initially. ICF to do life assessment of batteries. |
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 146 of 359

@@ -1,0 +1,4 @@
+| | | |
+| :--- | :--- | :--- |
+| **6** | DTC (DTC 19) 235082 C1 | Observed Date: 06 January 2024<br><br>Pressure: Air Spring pressure reduces by 1.4 kg/cm2 in 3 hours.<br><br>Fault found: Air pressure leakage from mean Valve.<br><br>Action taken: Provided new mean pressure valve between two surge tanks. | ![Image](https://files.oaiusercontent.com/file-51234567890) |
+| **7** | DTC (DTC 19) 235082 C1 | Observed Date: 30 May 2024<br><br>Pressure: Air Spring pressure reduces by 2.5 kg/cm2 in 3 hours.<br><br>Fault found: Pipeline connecting air spring reservoir.<br><br>Action taken: New SS pipe fitted with new ferrule set. | ![Image](https://files.oaiusercontent.com/file-51234567890) |

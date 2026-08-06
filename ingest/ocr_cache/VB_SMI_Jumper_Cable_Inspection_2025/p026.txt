@@ -1,0 +1,32 @@
+5375 (08/13)
+411-103066
+Installation and Maintenance Manual
+TE
+connectivity
+
+CLASS 2 - CONFIDENTIAL
+
+8. EXAMPLES OF INSTALLED CONFIGURATIONS
+
+8.1. Upward Position between cable terminations
+See Figure 32.
+
+Figure 32
+NOTE: Configuration not suitable for installing jumper boots
+
+8.2. Downward Position between cable terminations
+See Figure 33.
+
+Figure 33
+
+8.3. Downward position between insulators
+See Figure 34 (next page)
+
+©2021 TE Connectivity Ltd
+family of companies
+All Rights Reserved
+Rev J
+TE Proprietary & Confidential Information
+Class II Data Classification - See Policy TEC-02-04
+24 of 26
+01 June 2022

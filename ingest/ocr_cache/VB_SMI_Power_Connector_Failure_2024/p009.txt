@@ -1,0 +1,35 @@
+File No.RDSO-PE0TLAC(RMPU)/5/2024-PED/PSEMU/RDSO
+
+| | | |
+| :--- | :--- | :--- |
+| 4. | In all above coaches' male pins of Harting connectors (A1, A2, A3) found carbonized and also dust found inside the female parts of the Harting connector. | [Image of connector pins] |
+| 5. | In A1 Harting connector on female side hole of 12nos. spare pins are unplugged. | [Diagram of RMPU ROOF - POWER connector layout] |
+
+**RMPU ROOF - POWER**
+(Diagram labels: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32)
+(Labels below pins: COMP, 1-PH FAN, HEATER, CHOKE L1, CHOKE L2, UV, SPARE)
+
+6. Fault data also downloaded by M/S MEDHA for above coaches (from 29/05/2024 to 04/06/2024) (Found nothing abnormal in data).
+Note: - From observations mentioned in SN 2, 3&5 the purpose of IP65 gets deviated.
+
+**Cause: -**
+1) As per OEM M/S Harting India Pvt. Ltd. Conduit glands used of make M/S MV are not recommended with Harting connector.
+2) As given in point no.3 of observation, it may cause entering of dust inside the connector through conduit pipe.
+3) Dirt, dust or carbonized on the connector impede proper electrical contacts, increasing resistance and causing heat buildup.
+4) Hole of spare pins of female Harting connector found without pin and unplugged which leads ingress of moist air and dust in contact area.
+5) Sulphation on pin are clear indication of ingress of moist air, which can increase the current of electrical circuit leading overheating and sorting.
+[Image of connector pins]
+6) The probable cause of the short may be due to poor crimping in the male connector pins, and the greenish discoloration on the pins may be caused by inadequate silver coating on the copper pins. (Forthis we have informed M/S Harting for full details of same as soon as possible).
+7) Loose connection between the male and female parts of the Harting connector during installation in the ICF may also be the reason behind the short of pins.
+
+**Annexure: -**
+1) RMPUs Fault data of above given coaches (From 29/05/2024 to 04/06/2024) as given by M/S MEDHA.
+
+Medha will discuss with R&D and then we will give our feedback on above points
+
+M/S refusal to sign.
+Satishkumar HARTING.
+Aloy 8/6/24
+Pushkar Singh 8/6/24
+SSE/AC/BSB 08.06.24
+उ.रेल्वे

@@ -1,0 +1,26 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+Data analysis of SS1 schedule (Ver.2 rakes) - Rubber Metal Bonded Component (Traction Rod)
+
+| Workshop | All | CB | LLH | MTN | PER | RCNK | TPTY |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Defective Traction Rod | 2 | 0 | 13 | 75 | 13 | 24 | 15 |
+| Unit Replaced | 2 | 0 | 13 | 75 | 13 | 24 | 15 |
+| % Defective | 1.56 | 0 | 5.08 | 21.3 | 5.8 | 25 | 6.69 |
+
+Defective Traction Rod & Unit Replaced
+[Legend: Blue = Defective, Red = Unit Replaced]
+[X-axis: All, CB, LLH, MTN, PER, RCNK, TPTY]
+[Y-axis: Units]
+
+% Defective Traction Rod
+[X-axis: All, CB, LLH, MTN, PER, RCNK, TPTY]
+[Y-axis: Percent]
+
+Note:
+* Twisting of Silent block and detachment of rubber and metal bond defects observed by workshops.
+
+Observation in Ver.1 Rakes
+* No major defects observed during SS2 schedule of Ver. 1 rakes.
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 20 of 359

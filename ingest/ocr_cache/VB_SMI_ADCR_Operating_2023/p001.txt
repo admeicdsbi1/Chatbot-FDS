@@ -1,0 +1,35 @@
+VB/SMI/E/01 Dated : 07.07.2023
+
+INTEGRAL COACH FACTORY, CHENNAI: 38
+
+Mail: cdeeicf@gmail.com
+Mobile: 9003141302
+
+No. MD/D/Train Set/RB Contract/186G
+Office of the CDE/Elec,
+Dt. 07.07.2023.
+
+PCMEs of all Zonal Railways
+PCEEs of all Zonal Railways,
+PCOMs of all Zonal Railways
+
+Sub: Operating procedure/instructions for ADCR in Vande Bharat Train Set rakes
+
+Due to observance of repeated cases of driving the VB Train sets with ADCR in by-passed condition by many zonal railways, the following procedural operating instructions are attached as Annexure 'A' for strict compliance by the Loco Pilots and Train managers of Train set for operating the door and very restrictive use of ADCR By-pass switch.
+
+Further, the electrical schematic with explanation of door proving loop with ADCR is attached as Annexure 'B' for educational information of CDOs of concerned Railways.
+
+Encl: as above.
+
+(P.K CHAUHAN)
+CDE/Elect.
+
+Copy to:
+OSD/EE(G)/Railway Board/New Delhi : for kind inf.
+PED/PS & EMU/RDSO,Lucknow : for kind inf.
+Secy. to GM/ICF : for kind information of GM
+PCME/ICF PCEE/ICF : for kind inf.
+CME/QA, CEE/QA, CDE/M, CWE/Fur : for inf
+M/s Medha Servo Drives Pvt.Ltd. : for inf.and n/a
+M/s Knorr Bremse : for inf.and n/a
+M/s Faiveley : for inf.and n/a

@@ -1,0 +1,25 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+Data analysis of SS1 schedule (Ver.2 rakes) - Air Spring
+
+| Workshop | All | CB | LLH | MTN | PER | RCNK | TPTY |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Defective Air Spring** | 0 | 7 | 16 | 64 | 5 | 16 | 0 |
+| **Unit Replaced** | 0 | 7 | 16 | 64 | 5 | 16 | 0 |
+| **% Defective** | 0 | 3.1 | 6.25 | 18.1 | 2.2 | 16.6 | 0 |
+
+Defective Air Spring & Unit Replaced
+(Legend: Blue = Defective, Red = Units Replaced)
+[Chart shows values: All=0, CB=7, LLH=16, MTN=64, PER=5, RCNK=16, TPTY=0]
+
+% Defective Air Spring
+[Chart shows values: All=0, CB=3.1, LLH=6.25, MTN=18.1, PER=2.2, RCNK=16.6, TPTY=0]
+
+Note:
+* Lower side trunnion stuck with hole of bogie frame during dismantling observed at CB workshop (approx 15 %). It is suggested to increase the clearance of bogie frame hole and trunnion.
+* Common defects observed by workshops are air leakage beyond permissible limit and crack on the emergency spring near the bottom plate.
+
+Observation in Ver.1 Rakes
+Approx. 5 no’s air springs (4 % defective) were replaced in SS2 Schedule of Ver.1 Rakes.
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 26 of 359

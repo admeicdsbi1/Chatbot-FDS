@@ -1,0 +1,39 @@
+6
+
+g) To Isolate the BU in which VCB tripped due to “Transformer primary over current fault” Select Isolate under Respective faulty BU and then press Exit
+
+| Train: | Basic Unit Isolation | 00/00/00 | 00:00:00 |
+| :--- | :--- | :--- | :--- |
+| | | Exit | |
+
+| Basic Unit Isolation | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Basic Unit 1 | Basic Unit 2 | Basic Unit 3 | Basic Unit 4 | Basic Unit 5 | Basic Unit 6 |
+| Isolate | Isolate | Isolate | Isolate | Isolate | Isolate |
+| Activate | Activate | Activate | Activate | Activate | Activate |
+
+Exit
+Isolate
+
+h) To logout select “Login”
+
+| Train: 90000620 | Train Control settings | 28/11/19 | 17:44:14 |
+| :--- | :--- | :--- | :--- |
+| | Login | PRE | RAKE |
+
+Train Control
+
+1. Panto VCB Settings
+2. Bogie Cutout
+3. BU Isolation
+4. Compressor Control
+5. EP Brake Isolation
+6. Parking Brake Override
+7. Airspring Override Settings
+8. BP Override Settings
+9. RMPU Control
+10. DCU Control Settings
+11. Route Selection
+12. Line Isolator Control
+
+Login

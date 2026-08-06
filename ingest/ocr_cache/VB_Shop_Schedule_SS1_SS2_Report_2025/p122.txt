@@ -1,0 +1,22 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 50. | Pantograph Test Bench | Automated test cycles, IEC EN 50206-1 compliant, report generation, visual/audible alerts | Automated pantograph testing (mechanical & electrical) |
+| 51. | Transformer oil filtration plant | 1000-1500 LPH capacity | For Main Transformer Oil Filtration |
+
+TRANSFORMER OIL FILTER MACHINE
+CAPACITY 4000 LPH
+Mfg By-
+AYON ENERGY PVT.LTD.
+INDIA
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 52. | Fully Automatic Oil BDV Tester | Capacity up to 100 kV | For main Transformer Oil BDV measurement |
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 53. | DGA oil Analysis equipment | Three column gas chromatograph latest model available in the market as per IS:10593:2023 & 9434:2019 and other associated equipment as per RDSO/ELRS/SMI/138, Rev.1.-2024 | for transformer oil DGA analysis |
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 120 of 359

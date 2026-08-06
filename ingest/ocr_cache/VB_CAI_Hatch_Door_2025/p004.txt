@@ -1,0 +1,41 @@
+This document is a distribution list for an Indian Railways circular. It does not contain technical specifications, part numbers, or maintenance parameters.
+
+### Distribution List: Railway Zones
+| Item | Railway Zone | Location | Postal Code |
+| :--- | :--- | :--- | :--- |
+| 11 | East Central Railway | Hajipur | 844 101 |
+| 12 | North Central Railway | Allahabad | 211 001 |
+| 13 | North West Railway | Jaipur | 302 001 |
+| 14 | East Coast Railway | Bhubaneswar | 751 016 |
+| 15 | South East Central Railway | Bilaspur | 495 004 |
+| 16 | South Western Railway | Hubli | 580 023 |
+
+### Copy to: Administrative Offices
+| Item | Designation | Location | Postal Code |
+| :--- | :--- | :--- | :--- |
+| I | EDME (Coaching), Railway Board | New Delhi | 110 001 |
+| II | EDME (W), Railway Board | New Delhi | 110 001 |
+| III | Director General/ Carriage, RDSO | Manak Nagar, Lucknow | 226 011 |
+| IV | The General Manager (Mech.), Rail Coach Factory | Kapurthala | 144 602 |
+
+### Distribution List: Chief Workshop Managers (Carriage & Wagon Workshop)
+| Item | Workshop Location | Railway Zone | Postal Code |
+| :--- | :--- | :--- | :--- |
+| 1 | Matunga | Central Railway, Mumbai | 400 019 |
+| 2 | Bhopal | West Central Railway, Nishatpura, M.P. | 462 001 |
+| 3 | Lilluah | Eastern Railway, Howrah | 711 204 |
+| 4 | Gorakhpur | North Eastern Railway | 273 001 |
+| 5 | New Bongaigaon | North East Frontier Railway | 783 381 |
+| 6 | Perambur | Southern Railway, Chennai | 600 023 |
+| 7 | Golden Rock | Tiruchirapalli | 620 004 |
+| 8 | Ashokapuram | South Western Railway, Mysore South | 570 008 |
+| 9 | Tirupati | South Central Railway | 517 506 |
+| 10 | Hubli | South Western Railway | 580 020 |
+| 11 | Mancheswar | East Coast Railway, Bhubaneswar | 751 017 |
+| 12 | Kharagpur | South Eastern Railway | 721 301 |
+| 13 | Lower Parel | Western Railway, N.M.Joshi Marg, Mumbai | 400 013 |
+| 14 | Jagadhari | Northern Railway | 135 003 |
+| 15 | Alambagh | Northern Railway, Lucknow | 226 005 |
+| 16 | Lallaguda | South Central Railway, Secunderabad | 500 017 |
+| 17 | Western Railway | Ajmer, Rajasthan | - |
+| 18 | North East Frontier Railway | Dibrugarh, Assam | 786 001 |

@@ -1,0 +1,42 @@
+VB/SMI/E/05 Dated :29.10.2024
+
+INTEGRAL COACH FACTORY, CHENNAI - 600 038
+
+Mobile no.9003141310
+Mail id: dyceedicf@gmail.com
+Office of CDE/Elec.
+Dt :29.10.2024
+
+No. MD/D/Trainset/RB Contract/186G
+
+M/s.Medha servo Drives Pvt Ltd
+P-4/5B, Industrial Park, Nacharam,
+Hyderabad -500 076
+
+Sub: Modification in Shielding Connections of HT Cable for Train Set.
+Ref : (i) M/s.Medha lt .no.MAE675UV2: ICF :5790:24 dt.29.10.2024
+With reference to M/s.Medha letter under reference, the following are reiterated
+
+1. "During review made with reference to the protection scheme implemented for Transformer secondary short circuit in Vande bharat Trains which are in operation, there is a marginal difference observed in the CT Values read by the system between the primary and secondary side of the Transformer.
+2. Detailed analysis was made along with TE Connectivity and root cause for the same has been observed to be the shielding scheme followed for the HT Cable assemblies both roof and Transformer side.
+3. The issue has been observed to be resolved when one side of the HT cable shield is kept open. A clear confirmation has been taken regarding the safety and functionality of HT Cable from the design team of TE connectivity when earthing cable/connection of shield is connected only on one side.
+4. The details of proposed modification are enclosed along with this letter.
+5. The Loose cable which not be earthed on other end shall be secured with a cable tie along with the cable."
+
+In this regard a CPA document no.CPA-MAE675UV2-027 Rev.01 has been issued by M/s.Medha to the customer support team of M/s.Medha to implement in rake in service and as well as in manufacturing at ICF and further advised ICF to review and permit for implementation of the same and to issue a clear instruction to all the user railways to permit us for the implementation.
+
+Since, the subject item being a safety related item, it is hereby advised to M/s.Medha to implement the issued CPA utilizing the customer support team of M/s.MEDHA at relevant sheds maintaining Vande Bharat rakes. The completion joint report from the relevant shed shall be submitted to ICF. A google sheet shall be generated and same shall be circulated to ICF for necessary follow up with the completion status.
+
+Regards
+(Signature)
+29/10/24
+(BACHU RAMESH)
+Dy.CEE/DII
+
+Copy to:
+Secy to GM : for kind inf of GM pls
+PCMEs of all Zonal railways : For kind information pls
+PCEEs of all Zonal railways : For kind information pls
+ED/EMU/RDSO : for kind inf please and review of M/s.Medha modification for any changes.
+CDE/E: CEE/QA : for kind inf please
+Dy.CEE/F1 , Dy.CEE/QA : for kind inf

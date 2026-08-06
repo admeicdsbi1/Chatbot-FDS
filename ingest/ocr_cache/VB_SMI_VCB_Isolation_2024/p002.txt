@@ -1,0 +1,29 @@
+1
+
+ANNEXURE
+
+1. It is a general practice to reclose VCB by LP whenever “not all VCB closed” indication is noticed
+2. Anyways, Repeated Reclosing of VCB by LP in case of tripping occurred by “Transformer primary over current fault” lead to repeated arcing at fault location and subsequent fire safety related issues . It is therefore instructed to LP/ALP to restrain from reclosing the VCB in case of “ VCB tripping by – transformer primary over current fault” and follow the procedure B to isolate the BU in this particular case.
+3. The procedure for checking the fault on which the VCB is tripped is explained in procedure A.
+
+Procedure A : Confirmation of “Transformer primary over current fault”.
+
+a) Check if “NOT ALL VCB CLOSED” Indication is ON in Indication Panel,
+
+Panel Components:
+- PANTO 1,4 UP (Yellow)
+- NOT ALL VCB CLOSED (Yellow)
+- EMR BRAKE (Red)
+- EMR OFF (Red)
+- MIN 1 PB APPLIED (Red)
+- MIN 1 AS FAILED (Blue)
+- MIN 1 BR APPLIED (Red)
+- MIN 1 DOOR OPENED (Red)
+- AC FAULT (Red)
+- PANTO 2,3 UP (Red)
+- MIN 1 VCB CLOSED (Blue)
+- RDM (Blue)
+- OHE AVAILABLE (Green)
+- ALL DOORS CLOSED (Green)
+- SINGLE UNIT OPERATION (Yellow)
+- TCN FAILURE (Red)

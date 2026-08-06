@@ -1,0 +1,41 @@
+File No.RDSO-PE0TLAC(RMPU)/5/2024-PED/PSEMU/RDSO
+
+g. Re-orientation and phase- segregation of connector module in both male & female connector side to be done by Respective OEMs of RMPU wherever applicable. The positions of pins for different connections at connector module level to be standardised as under:
+
+A1
+1 - BLR - R PH
+2 - COMP-1 - R PH
+3 - COMP-2 - R PH
+4 - COMP-1 - Y PH
+5 - COMP-2 - Y PH
+6 - BLR - Y PH
+7 - COND-2 - B PH
+8 - COND-1 - B PH
+9 - BLR - B PH
+10 - UV LAMP - 230V PH
+11 - R PH - HEATER
+12 - R PH - COND-1
+13 - R PH - COND-2
+14 - Y PH - COND-1
+15 - Y PH - COND-2
+16 - Y PH - HEATER
+17 - B PH - HEATER
+18 - B PH - COND-2
+19 - B PH - COND-1
+20 - NEUTRAL - UV LAMP
+
+h. The cable glands between female hood of M/s Harting type of connectors and flexible poly-amide conduit to be ensured for proper tightening and securing with silicon sealant.
+
+To be ensured with tightening and proper sealing with silicon sealant
+
+ii. Modification in Vande Bharat rakes for future supply:
+
+a. Proper sealing of dust and moisture entry points in all RMPU connectors, its flexible polyamide conduit from roof through box (ECC box), cable glands and the connectors to be carried out and sealed through silicon sealant.
+
+Unsealed Cable Glands
+Sealed Cable Glands
+
+a. All the female connectors are to be provided with dummy pins (Part no. 09 33 000 9954 of M/s Harting or equivalent approved) in the spare sockets to prevent dust and moisture entry.
+
+Holes of spare pins are unplugged
+Dummy Pin

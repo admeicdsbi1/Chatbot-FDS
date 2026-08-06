@@ -1,0 +1,44 @@
+VB/SMI/E/15 Dated:26.03.2025
+
+INTEGRAL COACH FACTORY, CHENNAI - 600 038
+
+Mobile no.9003141302
+Mail id: cdeeicf@gmail.com
+Office of CDE/Elec.
+Dt :26.03.2025
+
+No.MD/D/TrainSet/168/RBContract/186G
+
+EDME/Chg.
+Railway Board
+
+Sub: Instruction on Summer preparedness drive for Vande Bharat train sets rakes
+
+These instructions are being issued for undertaking essential precautions and special drive to check all Vande Bharat trains prior to the commencement of summer season, so that typical failures attributed to high temperature do not occur and the desired level of reliability is maintained.
+
+A. Ventilation for Passenger and Crew:
+
+1. Working of Cab AC in both driving and non-driving cabs and all RMPUs to be ensured before allowing the rake for service.
+2. The bellows on RMPU connecting the shell structure with RMPU shall be checked for any sealant cracks, openings and shall be attended
+3. Drain arrangement inside RMPU to be checked for any blockage for proper draining of condensate water
+4. To ensure cleaning of HVAC filter at scheduled interval.
+5. Inside the saloon, probable areas of sweating on the Air conditioning ducts shall be checked for any insulation damages. Loose clamping of west flex on flexible ducts shall be attended to avoid any leakage of conditioned air and subsequent condensation. Implementation of all the ICF CAI for sealing of unwanted openings shall be ensured.
+6. Operation of RMPU with manual mode shall be avoided, to avoid excess cooling and subsequent condensation.
+7. Run the plant for half an hour and then Check the three-phase operating current with help of clamp tester (tongue tester) as per schedule
+
+| S.N. | Description | Normal operating currents |
+| :--- | :--- | :--- |
+| 1 | Package unit in cooling mode | 23-28 Amps |
+| 2 | Compressor currents | 8-12 Amps |
+| 3 | Condenser fan motor | 1.5-2.1 Amps |
+| 4 | Blower motor | 1.5 – 2.5 Amps |
+| 5 | Package unit in heating mode | 13 – 15 Amps |
+
+8. Ensure tightness of electrical connections, proper clamping of wires, and dust free temperature probes of RAT, FAT and SAT sensors.
+9. Ensure proper function of CCMS display for the Centralised control of RMPU.
+10. Proper working of IC doors shall be strictly ensured.
+
+B. Fire Safety items:
+
+1. Driving cabs and all cubicle doors should be properly closed.
+2. Availability of adequate fire extinguishers in working order n all coaches of Vande Bharat. No fire extinguisher should be overdue for maintenance

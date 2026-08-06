@@ -1,0 +1,40 @@
+ICF/MDM/F/006
+
+INTEGRAL COACH FACTORY, CHENNAI-600 038
+
+No. ICF/QMS/MDM/File/F015
+Office of the GM/ Mech. Designs
+Date: 28-09-2023
+
+**Coach Alteration Instruction**
+
+| | | |
+| :--- | :--- | :--- |
+| 1 | CAI No. | : B-2023/11 |
+| 2 | Group | : 6-3 |
+| 3 | Description | : Closing of holes around plumbing pipeline in Underframe for modular toilet and pantry equipments |
+| 4 | Drawing No. | : 32963290 & 32963291 |
+| 5 | Modification | : listed in Annexure-I |
+| 6 | Reason for Modification | : To avoid ingress of dust, cockroaches and rodents |
+| 7 | Coaches concerned | : All coaches of Trainset |
+| 8 | Implementation stage | : Modification shall be implemented immediately. |
+
+9 Category of CAI : 
+| A | B |
+|---|---|
+| | ✓ |
+
+Tick A or B as applicable
+
+A- Modifications shall be implemented :
+immediately by user Rlys.
+
+B- Modifications shall be implemented : During Scheduled Maintenance
+by user Rlys as and when convenient
+
+Instruction to be followed for closing of holes in underframe as per Annexure-I
+
+(टी. दिलीप कुमार)/(T. DILIP KUMAR)
+उप मुयाइं/अभिकल्प-II Dy. CME/Design-II
+
+Copy to: Annexure-2 enclosed

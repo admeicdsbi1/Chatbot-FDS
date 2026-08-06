@@ -1,0 +1,50 @@
+### Engineering Document Index
+
+**Document Identification**
+*   **Drawing Number:** AAB63721
+*   **Date of Latest Alteration:** 25-02-2023
+*   **Organization:** Indian Railway Standards, Integral Coach Factory, Chennai - 600038
+*   **Group:** 6-3 Lavatory and Fittings
+
+**Component Information**
+*   **Item Name:** PLATE
+*   **Material Specification:** AISI 304
+*   **Weight/Unit:** 0.34 KGS
+*   **Dimensions:** 209X70X3
+*   **Scale:** 1:2
+
+**Technical Specifications & Dimensions**
+*   **Overall Length:** 209 mm
+*   **Overall Width:** 70 mm
+*   **Thickness:** 3 mm
+*   **Hole Diameters:** Ø9 (four corner holes), Ø20 (center hole)
+*   **Corner Radius:** R5
+*   **Chamfer:** 2 X 45°
+*   **Spacing/Offsets:**
+    *   12 mm (edge to hole center)
+    *   46 mm (distance between hole centers)
+    *   185 mm (distance between top and bottom hole centers)
+    *   20 mm (offset from center line to side holes)
+    *   35 mm (distance between side hole centers)
+    *   80 mm (vertical distance between center hole and side holes)
+    *   68 mm (vertical distance between chamfer start points)
+    *   117 mm (vertical distance between chamfer end points)
+
+**Notes**
+1.  BOTH SURFACE OF PLATE SHALL BE MIRROR FINISHED.
+2.  ALL SHARP EDGES SHALL BE ROUNDED OFF.
+
+**Revision/Process Table**
+| Symbol | Description |
+| :--- | :--- |
+| ▽ | ROUGH MACHINED |
+| ▽▽ | FINISH MACHINED |
+| ▽▽▽ | FINE FINISH MACHINED |
+| 01 | ROUGH CLEANED |
+| 01b | BURRS REMOVED |
+| 18 | CHAMFERED |
+
+**Drawing Table**
+| QTY | DESCRIPTION | DIMENSIONS | ITEM NO. | MATL.SPEC. | WT/UNIT IN KGS | REMARKS |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | PLATE | 209X70X3 | 1 | AISI 304 | 0.34 | 2B-FINISH |

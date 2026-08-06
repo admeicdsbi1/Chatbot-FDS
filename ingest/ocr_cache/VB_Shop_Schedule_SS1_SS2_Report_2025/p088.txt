@@ -1,0 +1,22 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+| Main Assy. | Sub-Assembly / Component | Schedule | Remarks |
+| :--- | :--- | :---: | :---: | :---: | :--- |
+| | | SS 1 | SS 2 | SS 3 | |
+| | | | | | 12 Years (2nd SS3) |
+| | i. Gangway Components | -- | ✓ | ✓ | Components replacement: <br> M/s Dellner <br> • 3 Years (SS-2) <br> • 6 Years (SS-3) <br> • 7.5 Years (3rd SS-1) <br><br> M/s Lince <br> • 6 Years (SS-3) <br><br> M/s Ultimate Transportation Equipment <br> • 3 Years (SS-2) <br> • 6 Years (SS-3) <br><br> (M/s CRI) <br> • 6 Years (SS-3) |
+| | II. Passenger Seats | | | | |
+| | i. Seat Upholstery | -- | ✓ | ✓ | |
+| | III. Window | | | | |
+| | i. Lower Trim Rubber Gasket | -- | ✓ | ✓ | |
+| Doors | I. IC Door | | | | |
+| | i. IC Door Components | ✓ | ✓ | ✓ | M/s Prag Polymers: <br> • 18 Months (SS-1) <br> • 3 Years (SS-2) <br> • 6 Years (SS-3) |
+| | II. Plug Doors | | | | |
+| | i. Plug Door Components | -- | -- | -- | Components replacement: <br> M/s Knorr Bremse: <br> • 4.5 Years (2nd SS-1) <br> • 9 Years ( 2nd SS-2) <br><br> M/s Faiveley Transport: <br> • 9 Years (2nd SS-2) <br> • 15 Years (3rd SS-2) |
+| Water tank and Supply/ Drain pipelines | I. Rubber hoses and rubber/flexible pipes | -- | ✓ | ✓ | |
+| Vacuum Bio-Toilet System | I. Vacuum Evacuation System | | | | |
+| | i. Lavatory pan/bowl (Indian squatting/Western design) & underfloor fitted components | | | | |
+| | a) Water Inlet / Rinsing valve | -- | ✓ | ✓ | |
+| | b) Vacuum Pump | -- | ✓ | ✓ | |
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 86 of 359

@@ -1,0 +1,32 @@
+5375 (08/13)
+411-103066
+Installation and Maintenance Manual
+CLASS 2 - CONFIDENTIAL
+
+7.2.4. Fit the conical spring washer as shown in Figure 4. The washer to protrude away from the lug.
+
+WARNING Spring washers are recommended for single use only.
+Use a new spring washer at every installation.
+
+Figure 4
+
+7.2.5. Fit the half nut as per Figure 5 – hold the termination flat with a suitable tool and tighten the nut with a torque as per below table (not applicable in case of use of an anti-rotation washer / feature - hold the anti-rotation washer or the lug instead).
+
+Figure 5
+
+Termination flat
+
+| Thread size | Torque – half nut |
+| :--- | :--- |
+| M16 | 35Nm |
+| M20 | 45Nm |
+
+©2021 TE Connectivity Ltd
+family of companies
+All Rights Reserved
+Rev J
+
+TE Proprietary& Confidential Information
+Class II Data Classification - See Policy TEC-02-04
+11 of 26
+01 June 2022

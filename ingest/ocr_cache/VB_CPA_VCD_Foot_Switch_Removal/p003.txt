@@ -1,0 +1,39 @@
+Doc. No. | CPA- MAE675UV2 -126 | Page: 1 of 4 | MEDHA
+--- | --- | --- | ---
+Product Code | MAE675UV2 & MAE675SL | Rev. No.: | 
+Title: CPA FOR REMOVAL OF VCD FOOT OPERATED SWITCH | | | 
+Prepared By | Checked By | Approved By | Initiated Date
+P DURGA BHAVANI | PRAMOD KUMAR D | RANJEET SINGH | 10.03.2025
+
+| | |
+| :--- | :--- |
+| CPA Implementation Area (Name of the Module / Sub-Assembly) | DTC -Driver Desk |
+| Title of the applicable PCB with Version number | -- |
+| CPA related to Software(Mention the compatibility issues if any along with the Sw SD number) / Wiring (Attach Schematic with Old and New schemes) / Materials | WIRING |
+| Necessity of CPA | AS PER ICF LETTER NO. MD/D/Trainset/RB Contract/186G RDSO LETTER NO. EL/1.3.17.1/Train Set |
+| Investigation (in case of problem) | AS MENTIONED IN THE LETTER |
+| Root cause (in case of problem) | AS MENTIONED IN THE LETTER |
+| Corrective Action | Wiring to be removed for VCD Foot Operated switch & instruction plate to be placed on Driver Desk. |
+| Verification of Corrective Action | -- |
+| Date of Corrective Action decided | 20.02.2025 |
+| Date of Corrective Action Effect from | Immediate |
+| Applicable for production (Yes / No) NOTE: Add ECR Number if CPA is applicable for Production. | YES |
+| Applicable for field supplies | Warranty Yes / No | YES | AMC Yes / No | YES | Out of Warranty Yes / No | YES |
+| Applicability for exports locos (Yes / No) | NO |
+| Applicability for Field return S/As (Yes /No) | NO |
+| Priority (High/Medium/Low) | HIGH |
+
+| SI No | Material code | Description | Add/Del/Inc/ Dec/Replace | Legend/ Location | Qty |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| | | | | | |
+
+| | |
+| :--- | :--- |
+| Effected Batch / Sl.No.(From & TO) | From RAKE-1 |
+| Modification identification (Strike off / Sticker)if applicable | -- |
+| Field returned material Disposal action | -- |
+| Special instructions if required | After removal of VCD Foot Operated Switch, Plate should be fixed properly. |
+
+Note: "After Completing the CPA, Move the CPA to Completed CPA Category by Service team" in Ext Service module.
+
+Reference Template number SF-0967 (17) 1/1

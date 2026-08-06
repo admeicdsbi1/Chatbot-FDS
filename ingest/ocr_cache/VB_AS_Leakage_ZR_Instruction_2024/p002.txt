@@ -1,0 +1,8 @@
+ANNEXURE-1
+
+A. Probable source of leakages identified at RKMP Depot/WCR
+
+| SNO | COACH NO | Brief description of Leakage | Related Photograph |
+| :--- | :--- | :--- | :--- |
+| 1 | MC 1 (MC 73) 235094 C2 | Observed Date: 29 October 2023<br><br>Pressure: Air Spring pressure reduces by 2.5 kg/cm2 in 3 hours.<br><br>Fault found: Leakage from air spring in complete periphery.<br><br>Action taken: Changed Air Spring and provided new on 03 November 2023. | [Image of an air spring with a red dashed oval highlighting the perimeter] |
+| 2 | MC2 (MC 88) 235100 C11 | Observed Date: 03 May 2024<br><br>Pressure: Air Spring pressure reduces by 1.5 kg/cm2 in 3 hours.<br><br>Fault found: Leakage from ferrule fitting behind B01 Panel.<br><br>Action taken: Arrested leakage from ferrule fitting which got damage from ballast hitting. | [Image of piping and fittings with a red dashed circle highlighting a specific ferrule fitting] |

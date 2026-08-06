@@ -1,0 +1,38 @@
+### Engineering Document Data
+
+**Subject:** CLOSING SHEET
+**Drawing Number:** AAJ10033
+**Date:** 11-04-2025
+**Group:** 1-0 Body Shell
+
+#### Component Table
+| QTY | DESCRIPTION | DIMENSIONS | ITEM NO. | MATL. SPEC. | WT/UNIT IN KGS |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | CLOSING SHEET | 2.5x332x1462 | 1 | IS:737-86 31000-H2 | 2.92 |
+
+#### Technical Values & Dimensions
+*   **Angle:** 162°
+*   **Length (Overall):** 1462 mm
+*   **Length (Sectional):** 1068 mm
+*   **Thickness:** 2.5 mm
+*   **Development View A Dimensions:**
+    *   Horizontal segments: 393, 457, 613
+    *   Vertical segments: 196, 100, 29, 10, 7, 390, 471, 588, 6, 332, 188, 30
+*   **Development View B Dimensions:**
+    *   Horizontal segments: 393, 457, 245, 365
+    *   Vertical segments: 100, 29, 79, 70, 7, 390, 471, 252, 333, 6, 103, 65, 81, 30
+
+#### Surface Finish Symbols
+*   ∇: ROUGH MACHINED
+*   ∇∇: FINISH MACHINED
+*   ∇∇∇: FINE FINISH MACHINED
+*   (01): ROUGH CLEANED
+*   (01b): BURRS REMOVED
+*   (18): CHAMFERED
+
+#### Administrative Data
+*   **Organization:** INDIAN RAILWAY STANDARDS
+*   **Facility:** INTEGRAL COACH FACTORY, CHENNAI - 600038
+*   **Drawn By:** ANU C
+*   **Sheet:** 1 OF 1
+*   **Size:** A3

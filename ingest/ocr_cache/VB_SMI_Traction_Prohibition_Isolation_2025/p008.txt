@@ -1,0 +1,47 @@
+3)Isolation procedure for Parking Brake Stuck detection :
+
+➢ The System will declare the Faults of
+At-least one Parking brake Applied in rake, Traction is
+prohibited.
+
+➢ Traction will be Prohibited by the TCMS , Along with this
+Pneumatic brake Legend will be updated as
+
+➢ To get the help screen go to “LEGENDS -->HELP SCREEN” and
+select the “PB Stk Brk”
+
+(or)
+
+Select the “PB Applied” at Main Screen Bottom right .
+
+Acknowledge
+PB Applied
+
+Train: 4567
+01/01/37
+07:16:08
+Rake
+
+Atleast One Parking Brake Applied in Rake
+****************************************************************************************************
+**********************************ISOLATION PROCEDURE***********************************************
+****************************************************************************************************
+1. Ensure MR pressure is above 7.5 bar and Give parking brake release
+command from occupied cab.
+2.Check if all the parking brakes are released and fault is recovering.
+3.If fault is not recovering Go to Min1 PB train line screen, identify the coach
+in which parking brake applied feedback is coming.
+
+CASE 1:
+If the parking brake applied input is coming because of the MCB tripping then
+do the following.
+1. Normalise the MCB.
+2. Give parking brake release command.
+CASE 2:
+If the parking brake applied is genuine and we want to release then following
+should be done
+
+Min1 PB
+Applied Loop
+PB Override
+Settings

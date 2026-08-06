@@ -1,0 +1,30 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+| S.No. | Description | Unit | Qty. | Revised Qty. | Remarks |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 17 | Light fittings | Coach set | 4 | 4 | - |
+| 18 | Pantry equipment s (complete) | Coach set | 4 | 4 | - |
+| 19 | Set of IV Couplers (Complete) | Set | 2 | Total 4 | • Quantity is modified from 02 per set to Total 4 Nos. <br> • Item to be centrally kept at 4 zones (SR, CR, NR and ER) Initially. |
+| 20 | Chairs CC (complete with snack tables etc. set of 2 and 3) | Coach set | 2 | 2 | - |
+| 21 | Chairs EC (complete with snack tables etc.) | Coach set | 2 | 1 | - |
+| 22 | Glass door unit (IC door complete with sensor etc.) | Nos. | 4 | 4 | - |
+| 23 | Outside door unit (complete) | Nos. | 4 | 4 | - |
+| 24 | Toilet module TC/MC | Nos. | 3 | 0 | - |
+| 25 | Toilet module DTC | Nos. | 2 | 0 | - |
+| 26 | Vacuum toilets | Coach set | 2 | 2 | - |
+| 27 | CCTV cameras | Nos. | 6 | 6 | - |
+| 28 | Dellner Coupler | Set | 8 | 2 | - |
+| 29 | Front FRP cover | Nos. | 2 | 15 | - |
+| 30 | Front Glass | Nos. | 4 | 6 | - |
+| 31 | Gangway | Coach set | 4 | 2 | - |
+| 32 | Brake Chopper Resistance | Nos. | 2 | 2 | - |
+| 33 | High Voltage Current Transformer | Nos. | 2 | 2 | - |
+| 34 | High Voltage Potential Transformer | Nos. | 2 | 2 | - |
+| 35 | Traction Converter (Complete) | Nos. | 2 | Total 4 | • Quantity is modified from 02 per set to Total 4 Nos. (Each contains LH & RH assembly). <br> • Item to be centrally kept at 4 zones (SR, CR, NR and ER). |
+| 36 | MCBs, contactors, relays (complete for MC) | Coach set | 2 | 0 | Items have been dropped |
+| 37 | MCBs, contactors, relays (complete for TC) | Coach set | 2 | 0 | |
+| 38 | PCB cards (complete for DTC/ NDTC) | Coach set | 2 | 0 | |
+| 39 | PCB cards (complete for MC) | Coach set | 2 | 0 | |
+| 40 | PCB cards (complete for TC) | Coach set | 2 | 0 | |
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 147 of 359

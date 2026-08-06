@@ -1,0 +1,34 @@
+Step 3 – Preparation of Installation Area
+Clean mounting areas and remove residual sealant, dirt, and debris. Inspect duct supports, hangers, and brackets; replace parts that are corroded or damaged. Verify alignment points for the installation of new ducts. Remove cross brace arrangement to load modified wider AC duct as advised in ICF Drg No. (329) ICF/SK3-4-4-064.
+
+Step 4 – Installation of Modified Return Air Ducts
+Position the modified return air ducts in place of the old ones. Ensure proper fitment with the RMPU return air plenum. Secure the ducts using fasteners, rivets, and brackets, and seal all joints with silicon based sealant (Sikaflex).
+
+Step 5 – Installation of Modified Supply Air Ducts
+Position the modified uniform cross-sectional ducts as per the drawing. Align the ducts properly on the cross braces and support them temporarily with hangers. Connect branch duct connectors, ensuring a tight fit without gaps. Once alignment is verified, fix the ducts permanently using fasteners or rivets at specified intervals. Seal all joints using silicon based sealant (Sikaflex) and aluminium tape. Reinstall the flexible duct connectors between the main and branch ducts. Refit the cross brace arrangement as shown in ICF Drg No. (329) ICF/SK3-4-4-064.
+
+Step 6 – Reinstallation of Roof Panels & Electrical Connections
+Refit the roof ceiling panels securely. Restore all electrical connections that were disconnected during removal. Verify that cable routing is correct and does not foul with the ducts.
+
+Step 7 – Testing & Verification
+Switch on both RMPUs. Measure air velocity at diffuser outlets and compare with baseline values. Check airflow near IC doors and verify uniform distribution. Conduct the return air flow measurements to confirm proper circulation. Record airflow velocity readings of complete coach for documentation.
+
+6. Quality Checklist
+1. Old ducts removed and disposed of properly
+2. Modified supply air ducts installed as per drawing
+3. Modified return air ducts installed as per drawing
+4. All joints sealed with silicon based sealant
+5. Fasteners/rivets provided as specified
+6. Electrical connections restored correctly
+7. Air velocity measured and recorded at diffuser outlets
+
+16-10-2025
+ICF/Chennai
+
+B V Prasad
+SSE/Design
+
+A Subrammanian
+AME/D-I
+
+Page | 2

@@ -1,0 +1,63 @@
+➤ Then TCMS system will allow the Traction
+
+Train: 4567
+Min1 Brake Applied Loop Status Screen
+01/01/37 07:15:27
+Exit
+
+CAB 1
+Last Cab Occ
+BAL iso
+
+BASIC UNIT 1
+DTC
+MC1
+TC
+MC2
+
+BASIC UNIT 2
+NDTC
+MC1
+TC
+MC2
+
+BASIC UNIT 3
+NDTC
+MC1
+TC
+MC2
+
+BASIC UNIT 4
+NDTC
+MC1
+TC
+MC2
+
+BASIC UNIT 5
+NDTC
+MC1
+TC
+MC2
+
+BASIC UNIT 6
+DTC
+MC1
+TC
+MC2
+
+RL (x24 instances)
+
+CAB 2
+Last Cab Occ
+BAL iso
+
+Min 1 Brk TL status
+
+Min 1 Brk TL status
+
+RL → Released state
+B1 → BG1 fb active
+EP → EP fb active
+B2 → BG2 fb active
+
+Page 6 of 85

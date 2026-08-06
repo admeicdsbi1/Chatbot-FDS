@@ -1,0 +1,39 @@
+6) Isolation procedure for Train Crossed Suspension Fail Speed limit :
+
+➢ Traction will be prohibited by the TCMS in case , Train has Crossed the max speed limit , which was imposed due to air spring bellow failure .
+➢ Min1 AS FAILED will be glow in driver desk
+➢ The System will declare the Faults of
+Train Crossed Air Suspension Failed Speed Limit
+➢ To get the help screen go to “LEGENDS HELP SCREEN ” and select the “Susp Fail Spd”
+
+(or)
+
+➢ Select the “Susp Fail Spd” at Main Screen Bottom right .
+
+| | | | | | | | | Acknowledge |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| | | | | - | | | ▼ | ▲ |
+| | | | | | | | | Susp Fail Spd |
+
+| Train: 4567 | | | | | | | 01/01/37 | 07:17:39 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| | | | | | | | Rake | |
+
+**Train Crossed Suspension Fail Speed limit**
+
+**Train has crossed the max speed limit, which was imposed due to air spring bellow failure.**
+
+****************************************************************************************************
+**********************************ISOLATION PROCEDURE***********************************************
+****************************************************************************************************
+
+1. Go to the Air Spring Screen to check the air spring pressures.
+2. Verify in which coach the bellow failure has happened.
+3. Physically verify the bellow status in that particular coach.
+4. If no leakage is found then isolate the air spring monitoring for that particular coach
+5. If motor man wants to get the full speed limit, he must do the override through Air spring over ride settings screens.
+
+| Air Spring Override Settings | Air Spring |
+| :--- | :--- |
+
+➢ Go to the Air Spring Screen and verify the air spring pressure

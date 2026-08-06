@@ -1,0 +1,12 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| | | | |
+| 57. | Industrial vacuum cleaner wet and Dry Duty Cleaning | for dry and wet cleaning | |
+| | | | |
+| 58. | Digital Anemometer | B-201 or similar | for measuring air velocity at filters of LTC |
+| | | | |
+| 59. | THRC test kit (Leakage Current Meter) | For testing of Residual Life Assessment of Surge Arresters | |
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 122 of 359

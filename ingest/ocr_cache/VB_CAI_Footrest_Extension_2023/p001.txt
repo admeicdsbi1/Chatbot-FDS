@@ -1,0 +1,42 @@
+INTEGRAL COACH FACTORY, CHENNAI – 600 038.
+Tele fax No. (044) 26261872 Rly.:46804
+Email: dycmedicf@gmail.com
+
+O/o. General Manager/Mech. Design
+
+No. ICF/QMS/MDM/File/F015 Date: 30.09.2023
+
+Coach Alteration Instruction
+
+| Sl. No. | Details | Remarks |
+| :--- | :--- | :--- |
+| 1. | CAI No. | A-2023/12 |
+| 2. | Group | 6-1 |
+| 3. | Description | Modification sketch for Extension of footrest |
+| 4. | Drawing No. | 329-6-1-142 |
+| 5. | Modification | Extension plate to be fixed for easy accessibility to footrest in Executive class seat. |
+| 6. | Reason for Modification | To avoid Non accessibility of footrest for rear seat passenger. |
+| 7. | Coaches concerned | Executive class coaches.(NDTC) Coach No.223781 & 223782 (W.Rly) 224575 & 224576 (N.Rly) (Executive seats of M/s.Perfect Techno consultants(P) Ltd.(Ster)) |
+| 8. | Implementation stage | During weekly maintenance. |
+| 9. | Category of CAI | A ✓ B |
+
+Tick A or B as applicable
+A. Modifications shall be implemented immediately by user Rlys.
+B. Modifications shall be implemented by user Rlys. as and when convenient.
+
+10. Drawing No.: It is requested to ensure coach alteration as per given below new drawings:
+
+Table -1
+
+| Sl. No. | Description | Old Drg. No. & Alt | New Drg. No. & Alt |
+| :--- | :--- | :--- | :--- |
+| 1 | Modification sketch for Extension of footrest | NIL | 329-6-1-142(New) |
+
+11. Brief of Modification / changes to be done:
+
+Table -2
+
+| Sl. no | Description | Brief of modifications / changes |
+| :--- | :--- | :--- |
+
+Page | 1

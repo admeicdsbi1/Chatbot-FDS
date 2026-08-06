@@ -1,0 +1,27 @@
+INTEGRAL COACH FACTORY
+CHENNAI - 600 038.
+Telefax: 044-26261872 / Railway : 46804
+Email: dycmeicf@gmail.com
+
+No. ICF/QMS/MDM/File/F015
+
+Office of the GM/ Mech. Designs
+Date: 11.12.2024
+
+**Coach Alteration Instruction**
+
+| Sl. No. | Details | Remarks |
+| :--- | :--- | :--- |
+| 1 | CAI No. | B-2024/15 |
+| 2 | Group | 6-4 |
+| 3 | Description | SLIDING RAMP ASSEMBLY FOR WHEEL CHAIR |
+| 4 | Drawing No. | (889) TS/DTC-6-4-005, alt-a. |
+| 5 | Modification | As per Table-1 Below |
+| 6 | Reason for Modification | For easy access to Boarding and De-boarding of Passengers with Restricted mobility (PRM) |
+| 7 | Coaches concerned | DTC COACHES OF VANDE BHARAT |
+| 8 | Implementation stage | DURING MAINTENANCE (The material will be supplied by ICF) |
+| 9 | Category of CAI | A &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ✓ B |
+| | | Tick A or B as applicable |
+
+A- Modifications shall be implemented immediately by user Rlys.
+B- Modifications shall be implemented by user Rlys as and when convenient(POH/IOH)

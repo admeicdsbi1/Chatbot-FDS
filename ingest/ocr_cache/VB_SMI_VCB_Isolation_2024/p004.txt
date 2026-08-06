@@ -1,0 +1,59 @@
+3
+
+**Procedure B: Procedure for isolation of faulty Basic unit (BU)**
+
+a) Identify the BU in which VCB is tripped by Checking the “RAKE INFORMATION” screen in DDU-Drives Display Unit. The VCB pictogram will be tripped/open , as shown below.
+
+| Train: J | RAKE INFORMATION | 10/06/21 | 16:16:39 |
+| :--- | :--- | :--- | :--- |
+| Drive/Brake | Detailed View | EnrgyOver | Brake | Login | Events | Drv Msgs | Maint.Mode | Legends | Brightness | Door |
+
+| OHE Voltage | 0.0 | 30 kV | OHE Current | 0 | 500 A | VCD Count | Mode | Speed (kmph) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Train 24 kV | | | Train 100 A | | | 53 | Drive | 83 |
+
+| MR 10 Bar | | 11 Bar | BP 5 Bar | | 6 Bar | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+| | UNIT1 | UNIT2 | UNIT3 | UNIT4 | UNIT5 | UNIT6 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| | [VCB Icon] | [VCB Icon] | [VCB Icon] | [VCB Icon] | [VCB Icon] | [VCB Icon] |
+| | Loop | Loop | Loop | Loop | Loop | Loop |
+| | [Icon] | [Icon] | [Icon] | [Icon] | [Icon] | [Icon] |
+| | [Icon] | [Icon] | [Icon] | [Icon] | [Icon] | [Icon] |
+| | 8 ACC | 8 ACC | 8 ACC | 8 ACC | 8 ACC | 8 ACC |
+
+*   VCB ICON in RED
+
+| U6 | CCTV MCB Tripped | Acknowledge |
+| :--- | :--- | :--- |
+| U1 CCU | CCCR - Master controller InputsFaulty | 14267 |
+| U6 DMC | Speed Restriction Override Activatedin TC - Bogie 2 | Zero Force |
+
+b) Select maintenance mode (CAB occupied condition) in the DDU screen
+
+| Train: J | RAKE INFORMATION | 10/06/21 | 16:16:39 |
+| :--- | :--- | :--- | :--- |
+| Drive/Brake | Detailed View | EnrgyOver | Brake | Login | Events | Drv Msgs | Maint.Mode | Legends | Brightness | Door |
+
+| OHE Voltage | 0.0 | 30 kV | OHE Current | 0 | 500 A | VCD Count | Mode | Speed (kmph) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Train 24 kV | | | Train 100 A | | | 53 | Drive | 83 |
+
+| MR 10 Bar | | 11 Bar | BP 5 Bar | | 6 Bar | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+| | UNIT1 | UNIT2 | UNIT3 | UNIT4 | UNIT5 | UNIT6 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| | [VCB Icon] | [VCB Icon] | [VCB Icon] | [VCB Icon] | [VCB Icon] | [VCB Icon] |
+| | Loop | Loop | Loop | Loop | Loop | Loop |
+| | [Icon] | [Icon] | [Icon] | [Icon] | [Icon] | [Icon] |
+| | [Icon] | [Icon] | [Icon] | [Icon] | [Icon] | [Icon] |
+| | 8 ACC | 8 ACC | 8 ACC | 8 ACC | 8 ACC | 8 ACC |
+
+*   Maintenance Mode
+
+| U6 | CCTV MCB Tripped | Acknowledge |
+| :--- | :--- | :--- |
+| U1 CCU | CCCR - Master controller InputsFaulty | 14267 |
+| U6 DMC | Speed Restriction Override Activatedin TC - Bogie 2 | Zero Force |

@@ -1,0 +1,45 @@
+### Engineering Document Index
+
+**Subject:** VENT CASING
+**Drawing Number:** AAB63924
+**Date of First Issue:** 21-7-25
+**Organization:** INTEGRAL COACH FACTORY, CHENNAI - 600038 (INDIAN RAILWAY STANDARDS)
+
+---
+
+### Parts Table
+| QTY | DESCRIPTION | DIMENSIONS | ITEM NO. | MATL. SPEC. | WT/UNIT IN KGS |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | VENT CASING | - | 1 | AISI-304 | 0.47 |
+
+---
+
+### Technical Values & Dimensions
+*   **Outer Flange Diameter:** Ø80
+*   **Inner Flange Diameter:** Ø60.33
+*   **Flange Thickness:** 2
+*   **Upper Body Height:** 22
+*   **Lower Body Height (to center of outlet):** 44.7
+*   **Outlet Pipe Outer Diameter (base):** Ø33.4
+*   **Outlet Pipe Outer Diameter (tip):** Ø27.86
+*   **Outlet Pipe Length (stepped section):** 30
+*   **Outlet Pipe Outer Diameter (end):** Ø31.4
+*   **Wall Thickness (various):** 2.77
+*   **Internal Section Heights (Section B-B):** 14, 5, 5
+*   **Total Height (Section B-B):** 52
+*   **Thread Specification:** M5
+*   **Scale:** 1:1
+
+---
+
+### Revision/Process Codes
+*   **01:** ROUGH CLEANED
+*   **01b:** BURRS REMOVED
+*   **13:** CHAMFERED
+
+---
+
+### Notes
+*   **Group:** 6-3 Lavatory and Fittings
+*   **Drawing Reference:** ICF/STD-9-0-001
+*   **Standard:** ISO 2553 (Welding symbols)

@@ -1,0 +1,30 @@
+5375 (08/13)
+411-103066
+Installation and Maintenance Manual
+TE
+connectivity
+
+CLASS 2 - CONFIDENTIAL
+
+7.4.1. If the red insulation overhangs the termination connector face by more than 1 mm, use a knife blade and trim any excess of the insulation - refer to Figure 18. The termination metallic face may be protruding or flush with insulation - refer to Figure 19.
+
+Trim excess insulation flush to metal face if overhang exceeds 1 mm
+
+CHECK OVERHANG ≤ 1 mm
+Figure 18
+
+CORRECT
+Termination face flush with insulation
+Figure 19
+
+CORRECT
+Termination face protruding from insulation
+
+©2021 TE Connectivity Ltd
+family of companies
+All Rights Reserved
+Rev J
+TE Proprietary& Confidential Information
+Class II Data Classification - See Policy TEC-02-04
+17 of 26
+01 June 2022

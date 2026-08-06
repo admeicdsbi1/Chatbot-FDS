@@ -1,0 +1,32 @@
+5375 (08/13)
+411-103066
+Installation and Maintenance Manual
+TE
+connectivity
+
+CLASS 2 - CONFIDENTIAL
+
+7.4.8. Position the brass washer supplied in the boot kit at the termination end as shown in Figure 26.
+Ensure the washer and the termination metal end are clean.
+
+Figure 26
+
+Slide down the boot stem along the jumper to sufficiently clear the lug for
+fitting purposes. Apply a thin film of ENERTAL onto the lug contact surface. Avoid
+contamination the boot washer surface with ENERTAL. Fit the jumper lug onto the
+termination stud as per
+7.4.9. Figure 27
+
+Apply ENERTAL grease
+onto this surface
+
+Figure 27
+
+©2021 TE Connectivity Ltd
+family of companies
+All Rights Reserved
+Rev J
+TE Proprietary& Confidential Information
+Class II Data Classification - See Policy TEC-02-04
+21 of 26
+01 June 2022

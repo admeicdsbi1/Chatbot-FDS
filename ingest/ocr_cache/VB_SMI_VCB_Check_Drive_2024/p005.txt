@@ -1,0 +1,52 @@
+Page 4 of 8
+
+LocoNet
+Remote Monitoring and Management of Locomotives and Trains
+Fleet: Rake
+Rake: Faults - Fault Frequency
+
+| Zone | ECoR | Shed | VSKP | From Date | |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Loco Type | T18 | Loco No | 235001 | Since last | |
+
+| Faults Type | Critical | BasicUnits | BasicUnits | Category | Category | ModuleName | ModuleName |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Alert Type | Fault Code | FaultDescription | | | | | |
+| | 4125 | Power Coupler Open Between TC and MC | | | | | |
+| | 4121 | MR Drop detected in FND Basic unit | | | | | |
+| | 4095 | Traction Enable Relay is failed to Dropout | | | | | |
+| | 807 | Roof VCB Inconsist | | | | | |
+
+Date/Time: 08/03/2024 04:41:09
+Location: VSKP DIESEL SHED
+Download to Excel File | Page 1 of 1 | First Last | Go to Page 1 | Go | Prev Next
+
+In cab display unit, the same major fault code continued to be displayed.
+
+Trouble shooting:
+1. Health status of digital input cards of MCs and TCs of BU2& BU5 were checked and found to be OK.
+2. Limit switch of power couplers in BU5 between TC and MC were checked. The limit switch of MC2 (i.e. C-7) was found to be stuck. It was removed, cleaned, operated multiple times manually and re-fitted in the system. After testing, the input signal to Digital input card was found to be working normally.
+3. Since there was no issue with the components associated with VCB faults, the Service Engineer went into the fault codes in DDU. On checking the fault codes, it was identified that "Input Line Contactor Stuck at close and DCLV is below min" which is indicated below.
+
+MEDHA
+Train: 20834
+Entire Faults Archive
+08/03/24 19:11:03
+
+| Page up | Page down | ALL | BU1 | BU2 | BU3 | BU4 | BU5 | BU6 | Prev | RAKE |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| | | Auxiliary | Comfort | Propulsion | Brake | Air Spring | Other | High Voltage | PIS | |
+
+| Basic Unit | Coach | Inter Face | Category | Fault Description | Start Date Time | End Date Time | Flt Code |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| U6 | MC2 | PCU | A | EBL123 Triggered | 08/03/24 01:19:45 | 08/03/24 01:19:51 | 4113 |
+| U5 | MC2 | PCU | A | EBL123 Triggered | 08/03/24 01:19:45 | 08/03/24 01:19:51 | 4113 |
+| U2 | MC1 | DCU3 | A | DCU3 Broken wire to the door Driving motor | 08/03/24 01:19:44 | 08/03/24 01:23:42 | 31104 |
+| U5 | TC | MCU | B | OHE Below Minimum | 08/03/24 01:19:09 | 08/03/24 01:35:23 | 526 |
+| U6 | TC | MCU | B | OHE Below Minimum | 08/03/24 01:19:08 | 08/03/24 01:35:23 | 526 |
+| U5 | MC2 | LIC4 | B | Input Line Contactor Stuck at Close and DCLV is below min | 08/03/24 01:19:08 | 08/03/24 08:51:58 | 23092 |
+| U2 | TC | MCU | B | OHE Below Minimum | 08/03/24 01:19:08 | 08/03/24 01:35:24 | 526 |
+| U1 | TC | MCU | B | OHE Below Minimum | 08/03/24 01:19:08 | 08/03/24 01:35:24 | 526 |
+
+4. LTC-2 of MC2 was then isolated and then the VCB of BU5. The doors of isolated LTC unit were opened and checked for visual damages but no damages were identified.
+5. The LED pattern of BU5 was compared to that of BU2. Both were found similar to each other. Therefore, LTC2 of MC2 (C-8) was also isolated and VCB was closed.

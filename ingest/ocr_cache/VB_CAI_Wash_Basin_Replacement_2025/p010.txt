@@ -1,0 +1,32 @@
+### Engineering Document Data
+
+**Subject:** LOCK NUT
+**Drawing Number:** AAB63921
+**Material Specification:** AISI 304
+**Date of First Issue:** 18.07.25
+
+#### Surface Finish Symbols
+| Symbol | Description |
+| :--- | :--- |
+| ▽ | ROUGH MACHINED |
+| ▽▽ | FINISH MACHINED |
+| ▽▽▽ | FINE FINISH MACHINED |
+| 01 | ROUGH CLEANED |
+| 1b | BURRS REMOVED |
+| 18 | CHAMFERED |
+
+#### Part Details Table
+| QTY | DESCRIPTION | DIMENSIONS | ITEM NO. | REF. DRGS | MATL.SPEC. | WT/UNIT IN KGS | REMARKS |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | LOCKNUT | - | 1 | - | AISI 304 | - | - |
+
+#### Technical Values & Dimensions
+*   **Thread Specification:** 1 1/2" BSPP
+*   **Outer Diameter (Flange):** Ø74
+*   **Inner Diameter (Threaded section):** Ø64.4
+*   **Hexagonal Width Across Flats:** 56
+*   **Hexagonal Width (Internal/Minor):** 30.02
+*   **Flange Thickness:** 2
+*   **Total Height:** 10
+*   **Scale:** 1:1
+*   **Drawing Format:** A3

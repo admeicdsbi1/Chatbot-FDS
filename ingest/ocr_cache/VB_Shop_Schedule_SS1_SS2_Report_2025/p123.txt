@@ -1,0 +1,9 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 54. | Thermal Imaging Camera / scanner | Detection temperature anomalies, IR camera, 160 X 120 pixels or higher image storage | Hotspot detection, electrical inspection |
+| 55. | Light load run test facilities for traction motor (VVVF drive) | For run test of single motor | |
+| 56. | VVVF Drive for Bogie Run Test with Bogie Fixture for Bogie placement | 3-Phase 415 Volt, 37 kW(50HP), 72 Amp Drive | For motorized Bogie Run Test |
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 121 of 359

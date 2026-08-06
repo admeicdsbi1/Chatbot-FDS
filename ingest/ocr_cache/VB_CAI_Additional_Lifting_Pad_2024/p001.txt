@@ -1,0 +1,18 @@
+INTEGRAL COACH FACTORY, CHENNAI-600 038
+No. ICF/QMS/MDM/File/F015
+Office of the General Manager/ Mech. Designs
+Date: 24-09-2024
+
+**Coach Alteration Instruction**
+
+| S.No. | Details | Remarks |
+| :--- | :--- | :--- |
+| 1. | CAI No. | B-2024/07 |
+| 2. | Group | Underframe 1-1 |
+| 3. | Description | Part-1: Additional Lifting pad blocks (2 Nos. for each lifting pad) to be welded adjacent to the existing lifting pad in underframe. |
+| 4. | Drawing No. | Drg. No:329-1-1-314 |
+| 5. | Modification | Additional part welding : Assembling of additional LIFTING PAD BLOCKS to Drg. Nos. 329-1-1-313 & 329-1-1-314 in the Existing Coaches as per Procedure described in the Annexure-1 <br><br> Protective coating: After welding and cleaning, to be applied with Epoxy zinc Phosphate Primer as per RDSO spec. No: M&C/CPN/123/2006 to a DFT of minimum 60 microns and MDTS-094 to be followed for procedure and colour shade on complete Lifting pads. |
+| 6. | Reason for Modification | Mismatch found in VB Coaches while lifting the coaches in SYNCHRONISED JACK PIT due to variation in distance between Lifting pads vide letter No. Dy. CPM/W E&TS/NR Letter No.516-M/Train-18/Equipment Failure/ML-3 dated 15-05-2024 |
+| 7. | Coaches concerned | All Trainset Coaches (TS-18 & TS Coaches) |
+| 8. | Implementation stage | Not mandatory, to be implemented by User Rlys. As and when convenient. <br> Part-1 : Assembling of Lifting pad blocks in All VB Chair car Coaches as per Annexure-I |
+| 9. | Category of CAI | | A | B | <br> | | ✓ | <br> Tick A or B as applicable <br> a. Modifications shall be implemented: immediately by user Rlys. <br> b. Modifications shall be implemented: by user Rlys. as and when convenient. |

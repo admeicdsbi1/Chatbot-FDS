@@ -1,0 +1,40 @@
+5375 (08/13)
+411-103066
+Installation and Maintenance Manual
+CLASS 2 - CONFIDENTIAL
+
+7.4.13. Ensure the taper section of the termination end is clean. Ensure the torque mark is fully dry.
+Figure 30:
+• Note 1: Apply a thin film of EXRM-0956-45 grease evenly around the boot internal surface from the open end to just behind the washer locating rib
+• Note 2: Apply half of the remainder of the sachet around the termination tapered surface just behind the locating washer.
+
+WARNING
+Wear suitable protective gloves when applying the EXRM-0956-45 grease!
+Avoid contact with eyes!
+
+Note 2
+Note 1
+Figure 30
+
+WARNING
+Clean and reapply fresh grease each time the boot is disturbed, for example if required for visual inspection of the fasteners during routine inspection.
+
+7.4.14. Push the boot onto the termination taper end until the boot location rib engages on the boot brass washer. Wipe away any excess grease and clean the surfaces with a lint free cloth moistened with IPA. Refer to Figure 31.
+
+WARNING
+Ensure the torque marking is fully dry before pushing the boot onto the termination end.
+
+Figure 31
+
+7.4.15. Remove protective gloves and wash your hands immediately after finishing work with the EXRM-0956-45 grease application and the silicone boot installation.
+
+7.4.16. Repeat steps 7.4.1 to 7.4.15 for the other end of the jumper cable.
+
+©2021 TE Connectivity Ltd
+family of companies
+All Rights Reserved
+Rev J
+TE Proprietary & Confidential Information
+Class II Data Classification - See Policy TEC-02-04
+23 of 26
+01 June 2022

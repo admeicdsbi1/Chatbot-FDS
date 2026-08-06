@@ -1,0 +1,41 @@
+VB/SMI/E/08 Dated :20.11.2024
+
+INTEGRAL COACH FACTORY, CHENNAI - 600 038
+
+Mobile no.9003141310
+Mail id: dyceedicf@gmail.com
+Office of CDE/Elec.
+Dt :20.11.2024
+
+No. MD/D/Trainset/RB Contract/186G
+
+M/s.Medha servo Drives Pvt Ltd
+P-4/5B, Industrial Park, Nacharam,
+Hyderabad -500 076
+
+Sub: Implementation of CPA in RMPUs of VB Trainsets at User railways
+Ref : (i) M/s.Medha lt,no MAE675UV2: ICF :6025:2024 dt.13.11.2024
+(ii) CPA.no. MAE675UV2-065 Rev.00 dt.10.09.2024
+
+M/s.Medha vide letter under reference (i) has informed that based on field observation a corrective and preventive action document (CPA. no. MAE675UV2-065 Rev.00 dt.10.09.2024) has been issued to address the failures in VFD drive due to water ingress into the inverts in M/s.AMIT make RMPUs.
+
+M/s.Medha has also shared the list of failures due to water entry into the VFD enclosures in M/s.AMIT make RMPUs vide letter under reference (i)
+
+The CPA involves the corrective action of adding adapter channels to lift the inverter’s all RMPU units at the time of maintenance only.
+
+Hence in this regard, it is hereby advised to M/s.Medha to ensure the corrective action being implemented in the units supplied/under supply to ICF and also it is hereby advised to implement the corrective action at relevant sheds maintaining Vande Bharat rakes. The completion joint report from the relevant shed shall be submitted to ICF.
+A google sheet shall be generated and same shall be circulated to ICF for necessary follow up with the completion status.
+
+Regards,
+(Signature)
+(BACHU RAMESH)
+Dy.CEE/DII
+
+Copy to:
+Secy to GM/ICF : for kind information of GM please.
+EDME/Chg/RB : for kind information please.
+OSD/EE (G) RB : for kind information please.
+PED/PS & EMU/RDSO : for kind information please
+PCME/ICF , PCEE/ICF : for kind information please
+CEE/QA : for kind information please.
+SSE/9-0 : for information and necessary follow up.

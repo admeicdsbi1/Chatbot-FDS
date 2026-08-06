@@ -1,0 +1,15 @@
+21) Procedure for Train operation while F2 coupler disconnected during running
+
+Train operation in RDM Mode will not work in case of F2 coupler removed
+
+➢ Train should be operated in Normal (Key ON) mode only
+
+➢ Keep ADCR bypass switch in Bypass mode in Occupied cab .
+
+➢ PAS function will not work .
+
+➢ Shunting mode will not work .
+
+➢ If Lights functionality issue , Lights can be operated individually self coaches .
+
+➢ Min1 fire detected LED in driver desk will not glow & FDS Buzzer and hooter will not work as it us on the trail line

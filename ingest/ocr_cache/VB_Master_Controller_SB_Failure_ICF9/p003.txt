@@ -1,0 +1,15 @@
+The bottom cover of the above master controller was observed that
+
+1) There are 3 groups of snap switches, S1(4nos. switches) for Master Controller (MC) key ON purpose, S2 (2nos switches) for Forward /Reverse selection and S4 (6nos. switches) for Traction/Braking purpose.
+
+[Image labels]
+S2 snap switch assembly
+S1 snap switch assembly
+S4 snap switch assembly
+
+2) The electrical clearance between switches and cover plates are not uniform (in the above unit it was 1mm) but it is seen from the measurement in other master controllers that the electrical clearance is varying from 0.5 mm to 5mm. Since the clearance is very less, an insulation paper was found to be pasted on the cover in the affected area. It is suspected that in some units the switches might be in contact with the metallic cover once the insulation paper is damaged during maintenance.
+
+[Image labels]
+Insulation for S2
+Insulation for S1
+Insulation for S4

@@ -1,0 +1,20 @@
+### Document Information
+*   **Subject:** Exchange of seat cushion
+*   **Document Number:** 19-017 MM
+*   **Revision:** Rev. 1
+*   **Date:** 03/08/2022
+*   **Equipment/Model:** Train 18
+
+### Maintenance Procedure
+| Step | Action |
+| :--- | :--- |
+| 1 | Unscrew the four screws M6x16 |
+| 2 | Remove cushion |
+| 3 | Place the new cushion back |
+| 4 | Put thread locker on the tip of the screws (Loctite 278) |
+| 5 | Place the four washers DIN 125 6.4 |
+
+### Technical Values and Specifications
+*   **Screw size:** M6x16
+*   **Thread locker:** Loctite 278
+*   **Washer specification:** DIN 125 6.4

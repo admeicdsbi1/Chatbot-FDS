@@ -1,0 +1,25 @@
+VB/SMI/E/17 Dated:29.04.2025
+
+INTEGRAL COACH FACTORY, CHENNAI - 600 038
+
+Mobile no.9003141310
+Mail id: dyceedicf@gmail.com
+Office of CDE/Elec.
+Dt: 29.04.2025
+
+No.MD/D/TrainSet/168/RBContract/186G
+
+PCMEs of all Zonal Railways
+
+Sub:One cycle check of inspection of jumper cables provided in VB TS rakes
+Ref: (i) Failure report of Jumper cable of 22303 VB TS rake at GAYA on 28.04.2025
+
+An incident of snapping of HV curly jumper cable is reported betweenC-5 and C-6 of HWH- GAYA Vande Bharat express on 28.04.2025.
+
+On further investigation it is understood that, the jumper cable was in deformed condition since 05.06.2024 and rake was managed with provision of insulation tape over the deformed cable as shown below:
+
+DEFORMED CABLE
+
+INSULATION TAPE
+
+As per as per clause 9.1 of installation and maintenance manual (enclosed) of HV curly jumper cable submitted by M/s.TE connectivity, recommended corrective action is given below:

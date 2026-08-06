@@ -1,0 +1,13 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| | | | |
+| 75. | Hydraulic Crimping Tool | 25 to 400 sq mm | For cable lug crimping |
+| | | | |
+| 76. | Discharge Rod | FRP telescopic, 11Kv - 400 KV, clamp type, 6m+ length, 10 -20m earthing cable, IEC 1230/1235 compliant. | Safely discharging residual voltage from OHE/ equipment |
+| | | | |
+
+Note: The above list and images of M&P, tools and fixtures are only indicative. Railways may procure any other tools/equipment/M&Ps/fixtures as per requirement.
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 128 of 359

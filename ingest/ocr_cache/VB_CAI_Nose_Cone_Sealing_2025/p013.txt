@@ -1,0 +1,46 @@
+### Engineering Document Data
+
+**Subject:** CLOSING COVER LH
+**Drawing Number:** AAJ10171
+**Date:** 16-06-2025
+**Organization:** INDIAN RAILWAY STANDARDS (INTEGRAL COACH FACTORY, CHENNAI - 600038)
+
+---
+
+### Technical Values & Dimensions
+*   **Overall Length:** 630 mm
+*   **Overall Height:** 365 mm
+*   **Section A-A Width:** 365 mm
+*   **Section A-A Thickness:** 2 mm
+*   **Section A-A Offset:** 30 mm
+*   **Profile Dimensions:** 70 mm, 525 mm, 30 mm, 85 mm, 75 mm, 168 mm
+
+---
+
+### Component Designation
+*   **Item 1:** CLOSING COVER LH
+
+---
+
+### Tables
+
+**Main Parts Table**
+| QTY | DESCRIPTION | DIMENSIONS | ITEM NO. | REF. DRGS | MATL. SPEC. | WT/UNIT IN KGS | REMARKS |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | CLOSING COVER LH | 2x391x630 | 1 | | IS 740 19000 | | |
+
+**Surface Finish/Process Symbols**
+| Symbol | Description |
+| :--- | :--- |
+| ▽ | ROUGH MACHINED |
+| ▽▽ | FINISH MACHINED |
+| ▽▽▽ | FINE FINISH MACHINED |
+| 01 | ROUGH CLEANED |
+| 11b | BURRS REMOVED |
+| 18 | CHAMFERED |
+
+---
+
+### Notes
+1. ALTERNATE MATERIAL TO SS 304 SHALL ALSO BE USED.
+2. ITEM-1 IS MIRROR OF AAJ10101

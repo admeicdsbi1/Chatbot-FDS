@@ -1,0 +1,81 @@
+### Distribution List: General Manager/Mechanical, Mechanical Branch, HQ Office
+
+| S.No. | Railway Zone | Address |
+| :--- | :--- | :--- |
+| 1 | Central Railway | Mumbai CST-400 001 |
+| 2 | Western Rly. | Churchgate, Mumbai-400 020 |
+| 3 | Eastern Rly. | Fairlie Place, Kolkata-700 001 |
+| 4 | South Eastern Rly. | Garden Reach, Kolkata-700 043 |
+| 5 | Northern Rly. | Baroda House, New Delhi-110 001 |
+| 6 | North Eastern Rly. | Gorakhpur-273 001 |
+| 7 | North East Frontier Rly. | Maligaon, Guwahati-781 011 |
+| 8 | Southern Railway | Park Town, Chennai-600 003 |
+| 9 | South Central Railway | Rail Nilayam, Secunderabad-500 371 |
+| 10 | West Central Railway | Jabalpur-482 001 |
+| 11 | East Central Railway | Hajipur-844 101 |
+| 12 | North Central Railway | Allahabad-211 001 |
+| 13 | North West Railway | Jaipur-302 001 |
+| 14 | East Coast Railway | Bhubaneswar-751 016 |
+| 15 | South East Central Railway | Bilaspur-495 004 |
+| 16 | South Western Railway | Hubli-580 023 |
+
+### Copy to:
+*   EDME (Coaching), Railway Board, New Delhi-110 001
+
+Based on the provided document, here is the extracted information:
+
+### Distribution List (Railway Zones)
+| Item | Railway Zone | Location | Postal Code |
+| :--- | :--- | :--- | :--- |
+| 10 | West Central Railway | Jabalpur | 482 001 |
+| 11 | East Central Railway | Hajipur | 844 101 |
+| 12 | North Central Railway | Allahabad | 211 001 |
+| 13 | North West Railway | Jaipur | 302 001 |
+| 14 | East Coast Railway | Bhubaneswar | 751 016 |
+| 15 | South East Central Railway | Bilaspur | 495 004 |
+| 16 | South Western Railway | Hubli | 580 023 |
+
+### Copy To (Administrative & Technical Offices)
+| Ref | Designation | Location | Postal Code |
+| :--- | :--- | :--- | :--- |
+| I | EDME (Coaching), Railway Board | New Delhi | 110 001 |
+| II | EDME (W), Railway Board | New Delhi | 110 001 |
+| III | Director General/ Carriage, RDSO | Manak Nagar, Lucknow | 226 011 |
+| IV | The General Manager (Mech.), Rail Coach Factory | Kapurthala | 144 602 |
+
+### Carriage & Wagon Workshop Locations
+| Item | Workshop Name | Railway Zone | Location | Postal Code |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | Carriage & Wagon Workshop | Central Railway | Matunga, Mumbai | 400 019 |
+| 2 | Carriage & Wagon Workshop | West Central Railway | Bhopal, Nishatpura | 462 001 |
+| 3 | Carriage & Wagon Workshop | Eastern Railway | Lilluah, Howrah | 711 204 |
+| 4 | Carriage & Wagon Workshop | North Eastern Railway | Gorakhpur | 273 001 |
+| 5 | Carriage & Wagon Workshop | North East Frontier Railway | New Bongaigaon | 783 381 |
+| 6 | Carriage & Wagon Workshop | Southern Railway | Perambur, Chennai | 600 023 |
+| 7 | Carriage & Wagon Workshop | Southern Railway | Golden Rock, Tiruchirapalli | 620 004 |
+| 8 | Carriage & Wagon Workshop | South Western Railway | Ashokapuram, Mysore South | 570 008 |
+| 9 | Carriage & Wagon Workshop | South Central Railway | Tirupati | 517 506 |
+| 10 | Carriage & Wagon Workshop | South Western Railway | Hubli | 580 020 |
+| 11 | Carriage & Wagon Workshop | East Coast Railway | Mancheswar, Bhubaneswar | 751 017 |
+| 12 | Carriage & Wagon Workshop | South Eastern Railway | Kharagpur | 721 301 |
+| 13 | Carriage & Wagon Workshop | Western Railway | Lower Parel, N.M.Joshi Marg, Mumbai | 400 013 |
+| 14 | Carriage & Wagon Workshop | Northern Railway | Jagadhari | 135 003 |
+| 15 | Carriage & Wagon Workshop | Northern Railway | Alambagh, Lucknow | 226 005 |
+
+***Note:** No subject line, reference numbers, dates, or specific technical engineering values (voltages, pressures, etc.) are present in the provided image.*
+
+| S.No. | Location/Depot Details |
+| :--- | :--- |
+| 6 | Perambur, Southern Railway, Chennai-600 023 |
+| 7 | Golden Rock, Tiruchirapalli-620 004 |
+| 8 | Ashokapuram, South Western Railway, Mysore South-570 008 |
+| 9 | Tirupati, South Central Railway-517 506 |
+| 10 | Hubli, South Western Railway-580 020 |
+| 11 | Mancheswar, East Coast Railway, Bhubaneswar-751 017 |
+| 12 | Kharagpur, South Eastern Railway-721 301 |
+| 13 | Lower Parel, N.M.Joshi Marg, Western Railway, Mumbai-400 013 |
+| 14 | Jagadhari, Northern Railway-135 003 |
+| 15 | Alambagh, Northern Railway, Lucknow-226 005 |
+| 16 | Lallaguda, South Central Railway, Secunderabad-500 017 |
+| 17 | Western Railway, Ajmer, Rajasthan |
+| 18 | North East Frontier Railway, Dibrugarh, Assam-786 001 |

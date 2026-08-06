@@ -1,0 +1,27 @@
+Train: 4567
+MR Override Settings
+01/01/37
+08:01:29
+
+| BU-1 | BU-2 | BU-3 | BU-4 | BU-5 | BU-6 | | | | Exit | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+DTC
+OVERRIDE
+ACTIVATE
+
+MC1
+OVERRIDE
+ACTIVATE
+
+TC
+OVERRIDE
+ACTIVATE
+
+MC2
+OVERRIDE
+ACTIVATE
+
+➤ If no leakage is found, Directly Isolate the MR monitoring for that particular Basic Unit (DTC/NDTC) through MR Override settings .
+
+➤ Then TCMS system will allow the Traction .

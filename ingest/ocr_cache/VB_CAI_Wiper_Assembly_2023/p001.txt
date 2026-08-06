@@ -1,0 +1,30 @@
+INTEGRAL COACH FACTORY, CHENNAI – 600 038.
+Tele fax No. (044) 26261872 Rly.:46804
+Email: dycmedicf@gmail.com
+
+No. ICF/QMS/MDM/File/F015
+O/o. General Manager/Mech.Design
+Date: 10.11.2023
+
+Coach Alteration Instruction
+
+| Sl. No. | Details | Remarks |
+| :--- | :--- | :--- |
+| 1. | CAI No. | A-2023/16 |
+| 2. | Group | 1-0 |
+| 3. | Description | To avoid issues with Wiper assembly on Vande Bharat Trainsets |
+| 4. | Drawing No. | 1. 329-1-0-213 2. 329-1-0-225 |
+| 5. | Modification | As per Table-1 below |
+| 6. | Reason for Modification | To avoid rubbing of wiper with FRP Nosecone in Vande bharat |
+| 7. | Coaches concerned | All DTC coaches of Vande bharat |
+| 8. | Implementation stage | Modifications shall be implemented immediately. |
+| 9. | Category of CAI | A ✓ B Tick A or B as applicable |
+
+A. Modifications shall be implemented immediately by user Rlys.
+B. Modifications shall be implemented by user Rlys. as and when convenient.
+
+There are cases of Wiper assembly rubbing with Wiper cover or the Main FRP Nose cone On Vande Bharat Trainsets.
+
+Areas of Infringement of Nose cone with Wiper
+
+Page | 1 of 3

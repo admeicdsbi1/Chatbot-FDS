@@ -1,0 +1,26 @@
+INTEGRAL COACH FACTORY
+CHENNAI - 600 038.
+Telefax: 044-26261872 / Railway : 46804
+Email: dycdeicf@gmail.com
+
+No. ICF/QMS/MDM/File/F015
+Office of the GM/ Mech. Designs
+Date: 27.03.2024
+
+**Coach Alteration Instruction**
+
+| Sl. No. | Details | Remarks |
+| :--- | :--- | :--- |
+| 1 | CAI No. | A-2024/02 |
+| 2 | Group | 6-4 |
+| 3 | Description | Inclusion of pre filter in Vande Bharat Pantry |
+| 4 | Drawing No. | 890-6-4-002, Alt ‘e’ |
+| 5 | Modification | Pre-Filter added to the hot water boiler |
+| 6 | Reason for Modification | To prevent scale formation in the boiler and also to ensure clear water from the boiler. |
+| 7 | Coaches concerned | ALL COACHES OF VANDE BHARAT |
+| 8 | Implementation stage | MODIFICATION SHALL BE IMPLEMENTED IMMEDIATELY |
+| 9 | Category of CAI | ✓ A | B |
+| | | Tick A or B as applicable |
+
+A- Modifications shall be implemented immediately by user Rlys.
+B- Modifications shall be implemented by user Rlys as and when convenient

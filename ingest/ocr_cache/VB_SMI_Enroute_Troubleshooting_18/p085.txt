@@ -1,0 +1,18 @@
+Train: 235753
+MCH Validation Test
+28/01/25
+14:50:23
+Exit
+MCH Validation Test
+
+| MCH Position | CCC1 | CCC2 |
+| :--- | :--- | :--- |
+| Drive | Drive | Drive |
+| Coast | Coast | Coast |
+| Brake | Brake | Brake |
+
+Current Instruction : MCH Validation Test Completed, Press EXIT Acknowledge
+
+➤ After MCH validation Test Completed Press “ Exit ”.
+
+Page 80 of 85

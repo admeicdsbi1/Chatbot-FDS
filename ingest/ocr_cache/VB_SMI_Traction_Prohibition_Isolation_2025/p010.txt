@@ -1,0 +1,29 @@
+➤ If Parking brake applied input is coming because of the PB MCB tripping , then normalise the PB MCB .
+➤ Give parking brake release from occupied Cab .
+➤ If fault is not recovered .
+➤ Mechanically release the respective coach parking brake and Isolate the respective Parking brake isolation cock .
+➤ Then override the respective coach parking brake through DDU
+➤ Go to “PB Override Setting” Screen and override the respective coach parking brake .
+
+| Train: 4567 | Parking Brake | 01/01/37 | 07:16:25 |
+| :--- | :--- | :--- | :--- |
+| BU-1 | BU-2 | BU-3 | BU-4 | BU-5 | BU-6 | | Exit | |
+
+**DTC**
+Parking Brake Override
+Parking Brake Normal
+
+**MC1**
+Parking Brake Override
+Parking Brake Normal
+
+**TC**
+Parking Brake Override
+Parking Brake Normal
+
+**MC2**
+Parking Brake Override
+Parking Brake Normal
+
+➤ After override , Parking brake Legend will be updated in Display ,
+➤ Then TCMS system will allow the Traction .

@@ -1,0 +1,41 @@
+ANNEXURE TRAINSET- AK
+
+WORK INSTRUCTION FOR REPLACEMENT OF EXISTING AIR DUCTS WITH MODIFIED WIDER AC DUCTS HAVING UNIFORM CROSS SECTION FOR VANDE BHARAT TRAINSET
+
+1. Purpose & Scope
+This procedure defines the method to remove existing non-uniform cross sectional air ducts and replace them with modified ducts of uniform cross section, along with modified return air ducts, in Vande Bharat trainsets. The objective is to improve airflow distribution, enhance cooling efficiency, and reduce airflow imbalance issues.
+
+2. Applicability
+This procedure applies to all coaches of Vande Bharat trainsets requiring air duct modification as per revised design.
+
+3. Safety & Preparations
+1. Isolate electrical supply to RMPUs and related controls before beginning the work.
+2. Wear required PPE: safety shoes, gloves, safety goggles, and dust masks/respirators, as applicable.
+3. Seats are to be covered adequately with plastic sheets/cloths to avoid damage
+4. Use ladders with fall protection when working on roof ceiling.
+5. Provide adequate ventilation in the coach during duct replacement.
+
+4. Tools, Equipment & Materials
+1. Tools/Equipment:
+a. Power screwdrivers, spanners, torque wrench
+b. Rivet gun/pop riveting tools
+c. Sealant applicator gun
+d. Measuring tape, spirit level, laser level
+e. Duct lifting/handling equipment
+f. Vacuum cleaner/air blower for duct cleaning
+
+2. Materials:
+a. Modified supply air ducts (uniform cross section) as per ICF drawing
+b. Modified return air ducts
+c. Flexible duct connectors, clamps, insulation material, aluminium tape etc
+d. Silicon based sealant (Sikaflex)
+e. Fasteners, rivets, and brackets as per drawing
+
+5. Procedure
+Step 1 – Documentation
+Record coach details, RMPU serial numbers, and duct identification. Photograph and document electrical connections, panels position with proper identification and duct routing for reference during installation.
+
+Step 2 – Removal of old supply and return air ducts
+Disconnect electrical connections in roof panels. Remove diffusers bottom profile and roof centre ceiling panels at duct locations. Disconnect the flexible connectors between the main duct and branch ducts. Remove diffuser top profile which comes with branch ducts. Dismantle the existing main ducts systematically, starting from the RMPU side to the centre duct. Remove the existing return air ducts as well. Collect and segregate all removed materials for disposal in line with depot procedures.
+
+Page | 1

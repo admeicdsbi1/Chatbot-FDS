@@ -1,0 +1,23 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+12. ANY OTHER ITEM OF IMPORTANCE FOR IMPROVING OPERATIONS OF THESE RAKES WITH FOCUS ON SAFETY, PASSENGER AMENITIES, AESTHETICS ETC.
+
+I. Provision of Onboard Pantograph Monitoring System
+A pantograph monitoring camera is essential for ensuring the safe and efficient operation. The pantograph is responsible for maintaining contact with the overhead power lines, providing electricity to the train. Any misalignment, wear, or damage can lead to power disruptions, increased maintenance costs, and even safety hazards such as sparking or wire breakage. The monitoring camera allows for real-time observation, helping detect issues like
+● Improper contact
+● Excessive wear
+● Mechanical faults
+
+Committee Remarks: A pantograph monitoring camera should be installed along with the pantograph to enable real-time observation and minimize failures.
+
+RDSO may issue guidelines for installing the Onboard Pantograph Monitoring System in the existing operational rakes.
+
+II. Air Circulation Issue in TC coaches.
+The TC coach is equipped with a pantograph assembly on its roof, which results in a lowered ceiling section inside the passenger cabin. Air conditioning ducts are absent in that area, leading to circulation issues and frequent complaints reported on Rail Madad.
+
+Committee Remarks: ICF should incorporate design modifications to resolve the above-mentioned issue. For rakes operating without these updates, RDSO/ICF should propose retrofit solutions or other adjustments that can be implemented by Zonal Railways in workshops or depots.
+
+III. Provision of Roof Water Leakage Testing Facility.
+A significant number of Rail-Madad complaints related to roof leakage are reported during the monsoon season. To address this issue effectively, dedicated facilities should be established at workshops and depots for the systematic inspection of roof and window leakages. Implementing such measures will enhance passenger comfort, prevent water-related damage to coach interiors, and ensure reliable operations even in adverse weather. conditions.
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 129 of 359

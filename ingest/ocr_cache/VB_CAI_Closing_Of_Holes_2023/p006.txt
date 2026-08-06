@@ -1,0 +1,45 @@
+### Engineering Document Information
+*   **Drawing Number:** 32963291
+*   **Subject:** LOCATION OF PLUMBING HOLES IN UNDERFRAME OF TRAIN SET DTC COACHES
+*   **Group:** 6-3 Lavatory and fittings
+*   **Date:** 29-09-2023
+*   **Scale:** 1:100 (General), 1:25 (Details)
+*   **Drawing Revision:** A2
+*   **Organization:** INTEGRAL COACH FACTORY, CHENNAI - 600038 (INDIAN RAILWAY STANDARDS)
+
+### Component Designations and Descriptions
+*   **Pantry:** Hole P1 - 2 NOS
+*   **Lavatory:** Hole L1 - 2 NOS, Hole L2 - 1 NO
+
+### Technical Values and Dimensions
+*   **Hole P1 (Detail A):**
+    *   Diameter: 60 mm
+    *   Offset: 80 mm
+    *   Vertical distance: 230 mm
+*   **Hole L1 (Detail B):**
+    *   Diameter: 100 mm
+    *   Vertical distance from edge: 1287 mm
+    *   Horizontal distance from edge: 450 mm
+*   **Hole L2 (Detail B):**
+    *   Diameter: 100 mm
+    *   Vertical distance from edge: 342 mm
+    *   Horizontal distance from edge: 150 mm
+*   **General Dimensions:**
+    *   Distance between P1 holes: 5060 mm
+    *   Distance between L1/L2 section and end: 2745 mm
+    *   Total width of Lavatory section: 3205 mm
+
+### Surface Finish Symbols Table
+| Symbol | Description |
+| :--- | :--- |
+| ▽ | ROUGH MACHINED |
+| ▽▽ | FINISH MACHINED |
+| ▽▽▽ | FINE FINISH MACHINED |
+| Ⓞ | ROUGH CLEANED |
+| Ⓢ | BURRS REMOVED |
+| Ⓑ | CHAMFERED |
+
+### Revision Table
+| ALT. | ZONE | DESCRIPTION | APPROVED & DATE |
+| :--- | :--- | :--- | :--- |
+| - | - | - | - |

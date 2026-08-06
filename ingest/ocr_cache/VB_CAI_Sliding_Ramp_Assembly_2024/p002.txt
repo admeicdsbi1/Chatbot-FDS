@@ -1,0 +1,14 @@
+Table-1
+
+| Sl No | ICF Drawing No | Changes for provision of Foldable Sliding Ramp |
+| :--- | :--- | :--- |
+| 01 | 889-6-4-005, Alt – a. | **Steps to be followed:**<br>1. Mark the location for fixing locator bush assembly as per Detail at X- view in 889-6-4-005, Alt – a.<br>2. Make holes for bush (Ø16.5x20mmx2 holes) and M4 CSK Screws (Ø4.2x38mmX6 holes) as per Locator Bush Assy view in 889-6-4-005, Alt – a.<br>3. Clean the floor and stick the Locator Bush Assy by using Weldon/Plexus.<br>4. Secure the Locator Bush Assy on floor rigidly to fix the ramp without any shake.<br>5. Follow the steps 1-4 for both the doorway.<br>6. The ramp shall be secured with the Belt & Buckle as per the note-6 of 889-6-4-005, Alt – a. |
+
+Encls: Drawings
+
+For General Manager (Mech.)/Design
+12/12/24
+
+Copy to:
+The General Manager/Mechanical,
+Mechanical Branch, HQ Office.

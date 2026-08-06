@@ -1,0 +1,30 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+Data analysis of SS1 schedule (Ver.2 rakes) - Exterior Paint
+
+| Workshop | All | CB | LLH | RCNK | TPTY |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Defective Exterior Paint | 2 | 56 | 16 | 16 | 24 |
+| Coaches Repainted | 2 | 56 | 16 | 16 | 24 |
+| % Defective | 12.5 | 100 | 100 | 100 | 100 |
+
+% Exterior Repainting
+100
+75
+50
+25
+0
+All (12.5)
+CB (100)
+LLH (100)
+RCNK (100)
+TPTY (100)
+Workshop
+
+Note:
+● Most of the workshops have repainted the entire rake exterior surface based on condition during SS1 schedule.
+
+Observation in Ver.1 Rakes
+Entire rake exterior surface is repainted in Ver.1 Rakes during SS2 schedule.
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 47 of 359

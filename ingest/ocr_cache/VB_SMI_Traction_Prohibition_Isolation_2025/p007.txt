@@ -1,0 +1,32 @@
+➤ In case after releasing the holding brake, if all pressure is becoming Zero, then go to Min1 brake applied loop screen.
+
+| Train: 4567 | Min1 Brake Applied Loop Status Screen | 01/01/37 | 07:20:31 |
+| :--- | :--- | :--- | :--- |
+| | | | Exit |
+
+**CAB 1** | **CAB 2**
+--- | ---
+Last Cab Occ | Last Cab Occ
+BAL iso | BAL iso
+
+| BASIC UNIT 1 | BASIC UNIT 2 | BASIC UNIT 3 | BASIC UNIT 4 | BASIC UNIT 5 | BASIC UNIT 6 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| DTC MC1 TC MC2 | NDTC MC1 TC MC2 | NDTC MC1 TC MC2 | NDTC MC1 TC MC2 | NDTC MC1 TC MC2 | DTC MC1 TC MC2 |
+| RL RL RL RL | RL RL RL RL | RL RL RL RL | RL RL RL RL | RL RL RL RL | RL RL RL RL |
+
+Min 1 Brk TL status | Min 1 Brk TL status
+
+**RL — Released state**
+**B1 — BG1 fb active**
+**EP — EP fb active**
+**B2 — BG2 Fb active**
+
+➤ In this screen, we can see the BC pressure switch status of all coaches.
+➤ If any BC pressure switch is not showing as released, then it is an indication that brake is applied.
+➤ Then “EP Brake Stuck Detected” due to BC pressure switch .
+➤ Verify physically whether Brakes were released in all coaches .
+➤ If any coach BC pressure switch not released .
+➤ Manually release and Isolate “BIC” cock in Corresponding coach .
+➤ Still traction prohibited , “BAL ISO” switch in CRW Panel should be Keep in “Isolate” position from Occupied CAB
+➤ Once again release the holding brake and verify BC pressures should “0” in all coaches , Pneumatic Brake Legend will be updated display as [Icon of a blue circle with four arrows pointing inward]
+➤ Then TCMS system will allow the Traction .

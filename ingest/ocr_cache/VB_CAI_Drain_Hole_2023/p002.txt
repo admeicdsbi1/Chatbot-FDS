@@ -1,0 +1,6 @@
+The procedure for making a hole in the sidewall of the flat roof area of the Vande Bharat Coaches -
+1. The RMPU seating area of Vande Bharat Trainsets is having a slope towards the sidewall side. There is no slope towards the endwall. During normal to heavy rains this arrangement will not result in any problem. But during very heavy rains there are cases where the water level near the RMPU bellow joint is getting built up to the level of bottom of the bellow.
+
+2. To address this issues ICF has implemented provision of drain channel near the joint of flat roof with the curved roof as show below -
+
+3. As this cannot be implemented in the Zonal Railways a 40 dia drain pipe arrangement has been planned.

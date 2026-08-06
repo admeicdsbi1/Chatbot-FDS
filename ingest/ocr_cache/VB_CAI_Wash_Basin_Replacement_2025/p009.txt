@@ -1,0 +1,36 @@
+### Engineering Document Information
+*   **Subject:** TOP PART
+*   **Drawing Number:** AAB63920
+*   **Date of First Issue:** 18-07-25
+*   **Organization:** INDIAN RAILWAY STANDARDS, INTEGRAL COACH FACTORY, CHENNAI - 600038
+
+### Technical Values & Dimensions
+*   **Material Specification:** AISI-304
+*   **Thickness (Top Plate):** 0.8 mm
+*   **Total Height:** 40 mm
+*   **Plate Thickness (at edge):** 1.6 mm
+*   **Chamfer:** 0.5 X 45°
+*   **Radii:** R2.5, R1
+*   **Diameters:**
+    *   Ø 74 mm
+    *   Ø 42 mm
+    *   Ø 33 mm
+    *   Ø 15 mm
+    *   Ø 13 mm
+    *   Ø 3 mm
+*   **Angular Spacing:** 19°
+*   **Scale:** 1:1 (Drawing), 2:1 (Detail A)
+
+### Component Table
+| QTY | DESCRIPTION | DIMENSIONS | ITEM NO. | REF. DRGS | MATL.SPEC. | WT/UNIT IN KGS | REMARKS |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | TOP PART | | 1 | | AISI-304 | | |
+
+### Process Symbols
+*   **01:** ROUGH CLEANED
+*   **11b:** BURRS REMOVED
+*   **18:** CHAMFERED
+*   **Surface Finish Symbols:**
+    *   ▽: ROUGH MACHINED
+    *   ▽▽: FINISH MACHINED
+    *   ▽▽▽: FINE FINISH MACHINED

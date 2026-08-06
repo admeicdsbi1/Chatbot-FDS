@@ -1,0 +1,33 @@
+11. Detail procedure for the modifications:
+
+1. Objective:
+To facilitate access to the VCB equipment for periodic maintenance by installing VCB Hatch Doors in coaches where pre-cut openings in the FRP ceiling panel are not available. This instruction mandates cut-away operations followed by fixing of hatch door as per the reference drawings.
+
+2. Material/Consumables required
+As per the drawings in table-1.
+
+3. Tools required
+1. Measuring tape and marking tools.
+2. Spirit Level- To ensure proper alignment of door frame.
+3. Portable Hand Drill / Drill Machine(preferably battery operated, if power supply/pneumatic supply is not available nearby)- For drilling holes for fixing hatch frame
+4. Center Punch & Hammer- For precise hole marking before drilling.
+5. Pop riveting gun (preferably battery operated, if power supply/pneumatic supply is not available nearby).
+6. Torque Wrench / Nut Driver Set- For tightening fasteners to specified torque.
+7. Disc cutter (preferably battery operated, if power supply/pneumatic supply is not available nearby) - For cutting FRP panel as per required cut-out.
+8. Deburring Tool / File Set- To smoothen cut edges of FRP after cutting
+9. Silicone Gun / Sealant Applicator- For applying gasket/sealant around hatch frame
+10. Tool kit- for removal/ installation of roof ceiling panel
+11. PPE kit
+
+4. Safety precautions to be observed
+1. Ensure that OHE is down, rake is in de-energized condition
+2. Wear Personal Protective Equipments.
+
+5. Steps to be followed.
+
+| Step No | Instruction | Remarks |
+| :--- | :--- | :--- |
+| Step 1 | Mark the cut-away location for VCB doors on FRP ceiling panels as per Drg. No. 891-4-4-017 | Ensure door cut-away location matches with the VCB equipment accessing area. |
+| Step 2 | Remove the FRP ceiling panels at the end wall and pantry area. | Remove all the electrical connections properly, if any. Keep the panel at a safe location with suitable identification marks |
+
+Page | 2

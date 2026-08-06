@@ -1,0 +1,32 @@
+INTEGRAL COACH FACTORY
+CHENNAI - 600 038.
+Telefax: 044-26261872 / Railway : 46804
+Email: dycdeicf@gmail.com
+No. ICF/QMS/MDM/File/F015
+Office of the GM/ Mech. Designs
+Date: 06.06.2024
+
+**Coach Alteration Instruction**
+
+| Sl. No. | Details | Remarks |
+| :--- | :--- | :--- |
+| 1 | CAI No. | B-2024/05 |
+| 2 | Group | 6-4 |
+| 3 | Description | Change of fixed polycarbonate glass to Hinged glass door for Fire extinguisher. |
+| 4 | Drawing No. | 890-6-4-004, Alt ‘b’ 890-6-4-025, Alt ‘a’ |
+| 5 | Modification | Change of fixed polycarbonate glass to Hinged glass door for Fire extinguisher. |
+| 6 | Reason for Modification | To avoid the breakage of the polycarbonate glass during maintenance, fixed door is changed to hinged door for better maintainability of Fire extinguisher. |
+| 7 | Coaches concerned | All coaches of First Nine VANDE BHARAT Rakes |
+| 8 | Implementation stage | MODIFICATION SHALL BE IMPLEMENTED IMMEDIATELY |
+| 9 | Category of CAI | A [✓] B <br> Tick A or B as applicable |
+
+A- Modifications shall be implemented immediately by user Rlys.
+B- Modifications shall be implemented by user Rlys as and when convenient.
+
+EXISTING LAYOUT
+VIEW FROM-Y
+MODIFIED LAYOUT
+FLOOR LEVEL
+1
+2
+3

@@ -1,0 +1,51 @@
+This document is an annexure listing the addresses of various Indian Railways zonal headquarters and carriage & wagon workshops. It does not contain technical specifications, part numbers, or maintenance parameters.
+
+### Zonal Headquarters (Mechanical Branch)
+
+| No. | Railway Zone | Location |
+| :--- | :--- | :--- |
+| 1 | Central Railway | Mumbai CST-400 001 |
+| 2 | Western Rly. | Churchgate, Mumbai-400 020 |
+| 3 | Eastern Rly. | Fairlie Place, Kolkata-700 001 |
+| 4 | South Eastern Rly. | Garden Reach, Kolkata-700 043 |
+| 5 | Northern Rly. | Baroda House, New Delhi-110 001 |
+| 6 | North Eastern Rly. | Gorakhpur-273 001 |
+| 7 | North East Frontier Rly. | Maligaon, Guwahati-781 011 |
+| 8 | Southern Railway | Park Town, Chennai-600 003 |
+| 9 | South Central Railway | Rail Nilayam, Secunderabad-500 371 |
+| 10 | West Central Railway | Jabalpur-482 001 |
+| 11 | East Central Railway | Hajipur-844 101 |
+| 12 | North Central Railway | Allahabad-211 001 |
+| 13 | North West Railway | Jaipur-302 001 |
+| 14 | East Coast Railway | Bhubaneswar-751 016 |
+| 15 | South East Central Railway | Bilaspur-495 004 |
+| 16 | South Western Railway | Hubli-580 023 |
+
+### Carriage & Wagon Workshops (Chief Workshop Manager)
+
+| No. | Workshop Location | Railway Zone |
+| :--- | :--- | :--- |
+| 1 | Matunga | Central Railway, Mumbai-400 019 |
+| 2 | Bhopal | West Central Railway, Nishatpura, M.P.-462 001 |
+| 3 | Lilluah | Eastern Railway, Howrah-711 204 |
+| 4 | Gorakhpur | North Eastern Railway-273 001 |
+| 5 | New Bongaigaon | North East Frontier Railway-783 381 |
+| 6 | Perambur | Southern Railway, Chennai-600 023 |
+| 7 | Golden Rock | Tiruchirapalli-620 004 |
+| 8 | Ashokapuram | South Western Railway, Mysore South-570 008 |
+| 9 | Tirupati | South Central Railway-517 506 |
+| 10 | Hubli | South Western Railway-580 020 |
+| 11 | Mancheswar | East Coast Railway, Bhubaneswar-751 017 |
+| 12 | Kharagpur | South Eastern Railway-721 301 |
+| 13 | Lower Parel | N.M.Joshi Marg, Western Railway, Mumbai-400 013 |
+| 14 | Jagadhari | Northern Railway-135 003 |
+| 15 | Alambagh | Northern Railway, Lucknow-226 005 |
+| 16 | Lallaguda | South Central Railway, Secunderabad-500 017 |
+| 17 | Ajmer | Western Railway, Rajasthan |
+
+### Copy To (Administrative Offices)
+*   **I.** EDME (Coaching), Railway Board, New Delhi-110 001
+*   **II.** EDME (W), Railway Board, New Delhi-110 001
+*   **III.** Director General/ Carriage, RDSO, Manak Nagar, Lucknow-226 011
+*   **IV.** The General Manager (Mech.), Rail Coach Factory, Kapurthala-144 602
+*   **V.** The General Manager (Mech.), Modern Coach Factory, Raebareli-229 120

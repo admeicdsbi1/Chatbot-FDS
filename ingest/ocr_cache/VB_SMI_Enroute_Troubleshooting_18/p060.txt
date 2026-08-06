@@ -1,0 +1,23 @@
+➤ Check the EP cock isolation status screen for additional information.
+
+| Train: 4567 | 01/01/37 | 07:19:41 | Rake |
+| :--- | :--- | :--- | :--- |
+
+**Majority EP Cock Isolation Detected**
+
+****************************************************************************************************
+****************************************FAULT REASON************************************************
+****************************************************************************************************
+
+Traction is prohibited if more than half of the coaches braking is not available due to EP cock isolation.
+
+****************************************ISOLATION PROCEDURE*****************************************
+****************************************************************************************************
+
+1. EP cocks should be healthy more than half of the coaches.
+For Example: If the total coaches available are 16, at least 9 coaches braking should be in healthy condition.
+2. Check the EP cock isolation status screen for additional information.
+
+EP Cock Isolation
+
+Page 55 of 85

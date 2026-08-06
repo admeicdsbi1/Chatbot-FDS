@@ -1,0 +1,41 @@
+Train: 4567
+
+Min1 PB Loop Status Screen
+
+01/01/37 07:16:17
+
+Exit
+
+CAB 1
+Last Cab Occ
+Min 1 PB Iso
+
+BASIC UNIT 1
+DTC MC1 TC MC2
+
+BASIC UNIT 2
+NDTC MC1 TC MC2
+
+BASIC UNIT 3
+NDTC MC1 TC MC2
+
+BASIC UNIT 4
+NDTC MC1 TC MC2
+
+BASIC UNIT 5
+NDTC MC1 TC MC2
+
+BASIC UNIT 6
+DTC MC1 TC MC2
+
+PB APPLIED HRFB
+
+CAB 2
+Last Cab Occ
+Min 1 PB Iso
+
+Min 1 PB TI status
+
+Min 1 PB TI status
+
+Page 16 of 85

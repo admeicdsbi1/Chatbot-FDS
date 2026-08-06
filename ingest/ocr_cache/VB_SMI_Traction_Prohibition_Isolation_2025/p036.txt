@@ -1,0 +1,31 @@
+18) Isolation Procedure for Drive, brake, coast inconsistency :
+
+➢ The System will declare the below Fault’s and traction will be prohibited .
+
+DIP12 (DRIVE) inconsistent with other CCC
+DIP13 (BRAKE) inconsistent with other CCC
+DIP14 (COAST) inconsistent with other CCC
+
+DIP10 (DRIVE_TL) inconsistent with other CC
+DIP11 (L_BRAKE_TL) inconsistent with other CC
+DIP12 (COAST_TL) inconsistent with other CC
+
+MCH Validation Procedure:
+
+➢ In Display unit go to the Maintenance mode-->Test Modes-->MCH Validation Test.
+
+➢ Below Screen will be appeared
+
+| Train: 235753 | MCH Validation Test | 28/01/25 | 14:49:58 |
+| :--- | :--- | :--- | :--- |
+| | | | Exit |
+
+| MCH Validation Test | | |
+| :--- | :--- | :--- |
+| **MCH Position** | **CCC1** | **CCC2** |
+| **Drive** | Test Pending | Test Pending |
+| **Coast** | Test Pending | Test Pending |
+| **Brake** | Test Pending | Test Pending |
+
+| Current Instruction : Move the Master controller into Drive and Press ACK | Acknowledge |
+| :--- | :--- |

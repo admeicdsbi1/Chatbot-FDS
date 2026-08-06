@@ -1,0 +1,39 @@
+13)Isolation procedure Majority MR DROP Detection:
+➢ Traction will be prohibited by the TCMS if MR Pressure is less than 6.5 bar
+➢ The System will declare the Fault of
+MR Too Low For Operations, Traction Prohibited
+
+➢ To get the help screen go to “LEGENDS HELP SCREEN” and select the “ MAJ MR DROP ”
+(or)
+Select the “ MAJ MR DROP ” at Main Screen Bottom right
+
+| | | | | | | | | Acknowledge |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| | | | - | | | | ▼ | ▲ |
+| | | | | | | | | Maj MR Drop |
+
+| Train: 4567 | | | | | | | | 01/01/37 | 07:56:52 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| | | | | | | | | Rake | |
+
+Majority MR Drop detected
+****************************************************************************************************
+**********************************ISOLATION PROCEDURE***********************************************
+****************************************************************************************************
+1. Verify weither the Auxillary supply is ok and Main air compressor is running.
+2. If the Main air compressor are not running, press start all compressor
+switch to turn on MAC and wait for few minutes.
+3. If the MR pressure is building then the fault will recover automatically at
+7.5 Bar.
+4. If the MR pressure is not increasing, then Verify the MR pressure switch
+input status(Channel 24) in DIO screen of TC and DTC coaches.
+5. Idenfity, in which basic unit MR pressure is low.
+6. Check for any leakages in MR line in that particular BU.
+7. If any leakage is there,then isolate the MR cocks physically and isolate the
+MR monitoring for that paticular BU DTC/TC coach through
+MR override settings.
+8. If no leakage is found,then directly isolate the MR monitoring for that
+paticular BU DTC/TC coach through MR override settings.
+
+| MR Override Settings | Air Spring | DIO Screens |
+| :--- | :--- | :--- |

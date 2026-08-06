@@ -1,0 +1,26 @@
+Train: 4567
+01/01/37
+07:16:14
+Rake
+
+Atleast One Parking Brake Applied in Rake
+
+2. Check if all the parking brakes are released and fault is recovering.
+3. If fault is not recovering Go to Min1 PB train line screen, identify the coach in which parking brake applied feedback is coming.
+
+CASE 1:
+If the parking brake applied input is coming because of the MCB tripping then do the following.
+1. Normalise the MCB.
+2. Give parking brake release command.
+
+CASE 2:
+If the parking brake applied is genuine and we want to release then following should be done.
+1. Mechanically release the respective coach parking brake and
+2. Isolate respective coach parking brake through isolation cock and
+3. Isolate PB applied loop through PB isolation switch and
+4. Isolate respective coach parking brake through DDU PB override settings.
+
+Min1 PB Applied Loop
+PB Override Settings
+
+Page 14 of 85

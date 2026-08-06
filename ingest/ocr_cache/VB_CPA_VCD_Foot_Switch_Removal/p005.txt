@@ -1,0 +1,39 @@
+Doc. No. | CPA- MAE675UV2 -126 | Page: 3 of 4 | MEDHA
+--- | --- | --- | ---
+Product Code | MAE675UV2 & MAE675SL | Rev. No.: | 
+Title: CPA FOR REMOVAL OF VCD FOOT OPERATED SWITCH | | | 
+Prepared By | Checked By | Approved By | Initiated Date
+P DURGA BHAVANI | PRAMOD KUMAR D | RANJEET SINGH | 10.03.2025
+
+NEW SCHEME: (DTC)
+
+**Wiring Diagram Labels:**
+*   110V DC 20
+*   110V DC 36
+*   110V DC 27
+*   061003_083 1.0_750V_Grey
+*   061003_077 1.0_750V_Grey
+*   061003_075 1.0_750V_Grey
+*   061005_069 1.0_750V_Grey
+*   RESET
+*   VCD ACK D =092-S04 +111.10
+*   13, 14
+*   092039.001 1.0_750V_Grey
+*   092040.001 1.0_750V_Grey
+*   +111.20 =70-X01
+*   +111.20 =70-X01
+*   VCD ACK D =092-S04 +111.10
+*   23, 24
+*   VCD =092 +111.
+*   092040.011 1.0_750V_Grey
+
+**Panel Layout Labels:**
+*   ELECTRONIC HOOTER ON
+*   FAULT BUZZER
+*   ELECTRONIC HOOTER ON
+*   PA BUZZER
+
+NOTE: After removal of VCD Foot Operated Switch, Plate should be fixed Properly.
+The Plate should be fixed as mentioned in below figure:
+
+Reference Template number SF-0967 (17) 1/1

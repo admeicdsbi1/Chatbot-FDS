@@ -1,0 +1,33 @@
+BEFORE
+
+AFTER
+
+Change of Fire Extinguisher Glass to Hinged door
+ICF Drawing No. 890-6-4-004, Alt – ‘b’
+1. Item – 1 to 9, No Change
+ICF Drawing No. 890-6-4-025, Alt – ‘a’
+Item-1 to 4 to be procured.
+Objective:
+To avoid the breakage of the polycarbonate glass during maintenance, fixed door is changed to hinged door (Acrylic sheet) for better maintainability of Fire extinguisher.
+Tools required:
+1. Pneumatic Drilling machine
+2. Screw driver
+Items required:
+1. Hinged door (Acrylic sheet) as per dimensions (Item-1)
+2. Knob (Item-2)
+3. Hinge (Item-3)
+4. Magnetic Catch
+Steps to be followed:
+1. Remove the front glass of the fire extinguisher without damaging the FRP panel.
+2. Clean the area with proper cleaners
+3. Assemble the Hinges and glass door as per drawing no. 890-6-4-025 alt ‘a’
+Encl.: TS/MC-6-4-004 alt. ’b’
+TS/MC-6-4-025 alt. ’a’
+
+A P Tirunaaga Senthil Kumar
+Dy. CME/Design-I
+10/06/24
+
+Copy to:
+The General Manager/Mechanical,
+Mechanical Branch, HQ Office.

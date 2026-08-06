@@ -1,0 +1,22 @@
+Page 79 of 85
+
+Train: 235753
+MCH Validation Test
+28/01/25
+14:50:17
+
+Exit
+
+MCH Validation Test
+
+| MCH Position | CCC1 | CCC2 |
+| :--- | :--- | :--- |
+| Drive | Drive | Drive |
+| Coast | Coast | Coast |
+| Brake | Test Pending | Test Pending |
+
+Current Instruction : Move the Master controller into Brake and Press ACK
+
+➤ Keep the MCH in Brake position and press the Acknowledge ,Brake mode status will be updated in DDU as per next screen
+
+Acknowledge

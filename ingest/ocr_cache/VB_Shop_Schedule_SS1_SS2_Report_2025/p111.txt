@@ -1,0 +1,9 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 9. | Set of (4+1) synchronized lifting jacks (25 t) | COFMOW Comp. 2023-24 item sl.no. 262 | Lifting of coaches |
+| 10. | Complete Bogie Assembly Fixture | SPMAET18BOGIE1141 Ref: Jigs & Fixture List by Medha Bogie Private Limited | Including Axles Positioning and Coil Spring Centering & Bogie Lowering |
+| 11. | Bogie Subassembly in Inverted Position Fixture | SPMAET18BOGIE1139 Ref: Jigs & Fixture List by Medha Bogie Private Limited | Traction Center, ARB etc. |
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 109 of 359

@@ -1,0 +1,31 @@
+No. ICF/QMS/MDM/File/F015
+
+ANNEXURE-I
+
+**Procedure for Welding additional Lifting Pads**
+**In Vande Bharat Coaches.**
+
+**(Underframe frame work to drg. Nos. DTC/TRAIN18-1-1-002, Alt.’b’,**
+**TRAIN18/MC/AC-1-1-002, Alt.’c’, TS/DTC-1-1-002, Alt.’e’ &**
+**TS/MC-1-1-002, Alt.’d’)**
+
+The sequence of operation for welding additional Lifting Pads are as under:
+
+1. Lift the coach body and place it on lifting pad locations over rigid supports with provision to weld additional Lifting pads on the sides of the existing Lifting pads in the Underframe.
+
+2. Pneumatic pipeline and electrical cables passing near the lifting pads needs to be removed.
+
+3. Assemble additional LIFTING pads to drg. no. ICF/SK3-1-1-313 and weld the same as per drg no: ICF/SK3-1-1-314 as per WPS.
+
+4. Replace the items (removed at step-2 above)
+
+5. All weld spatters are to be removed.
+
+6. Apply high performance anticorrosive paint to Spec. RDSO/M&C/PCN/123/2006 on the lifting pads after completion of welding and cleaning the surface.
+
+(Signature) 24/9/24
+(A.P.TIRUNAAGA SENTIL KUMAR)
+Dy.CME/D-I
+For General Manager (Mech.)/Design
+
+Copy to: Annexure-II enclosed.

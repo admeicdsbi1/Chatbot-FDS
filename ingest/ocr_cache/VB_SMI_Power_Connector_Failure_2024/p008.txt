@@ -1,0 +1,42 @@
+File No.RDSO-PE0TLAC(RMPU)/5/2024-PED/PSEMU/RDSO
+
+ANNEXURE-A
+
+JOINT NOTE
+
+Date: -08.06.2024
+
+Regarding checking of A1, A2, A3 Harting connector of RMPU-1 & 2 of coaches of Train no.22415/16(VBE)(Rake-8)
+
+Regarding above, undernoted coaches RMPU-1&2 Harting connectors A1 (415V/220V), A2 (110V/24V), A3 (24V) have been checked at washing line/BSB/NR during maintenance.
+
+Both RMPUs of Undernoted coaches Harting connector have been checked: -
+
+1) 233002/DTC(C14)
+2) 233006/MC(C13)
+3) 233014/TC(C12)
+4) 233005/NDTC(E1)
+5) 233013/MC(C4)
+6) 233003/DTC(C1)
+
+Following observations have been found during check:
+
+| Sr.No. | Observations | Photo |
+| :--- | :--- | :--- |
+| 1. | In all above coaches' conduit glands used in A1, A2 & A3 connectors are of make M/S MV. | [Image] |
+| 2. | In all above coaches' conduit glands not properly tighten. | [Image] |
+| 3. | The RMPU cable assembly in between ECC panel to Harting connector, fabricated plate assembly used which is not covered fully from Bottom. | [Image] |
+
+[Signatures and stamps]
+M/S
+Sanyal
+Refy SE
+to som.
+Satishkumar
+(HARTING)
+SSE/C&W/BSB
+Pushkar Singh
+8/6/24
+SSE/AC/BSB
+08.06.24
+उ.रे.वा.वे

@@ -1,0 +1,9 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 33. | Damper Testing Machine | | Testing of dampers |
+| 34. | Industrial Acoustic Imager | | To identify leaks in the pneumatic system. |
+| 35. | Borescope Camera | | Inspection of restricted access locations. |
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 116 of 359

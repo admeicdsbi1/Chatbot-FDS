@@ -1,0 +1,9 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 27. | Control Arm Bush Ejection Fixture | SPMAET18BOGIE1147 Ref: Jigs & Fixture List by Medha Bogie Private Limited | |
+| 28. | Control Arm Assembly Fixture | SPMAET18BOGIE1136 Ref: Jigs & Fixture List by Medha Bogie Private Limited | |
+| 29. | Traction Center Assembly Fixture | SPMAET18BOGIE1143 Ref: Jigs & Fixture List by Medha Bogie Private Limited | |
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 114 of 359

@@ -39,7 +39,8 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 SUBSYSTEMS = [
     ("bearings", r"\bCTRB\b|\bbearing|\bSKF\b|\baxle\s*box|refurbish|\bgrease\b"),
     ("wheels", r"\bwheel|re-?profil|\btyre\b|\bdiameter\b|marking|stamping|\bflange\b|\bKLW\b"),
-    ("bogie", r"\bbogie\b|\bspring|suspension|\bdamper\b|central\s+sleeve|vibration"),
+    ("air suspension", r"\bair\s*spring|\bair\s*suspension\b|\bASDIS\b|\blevelling\s+valve\b"),
+    ("bogie", r"\bbogie\b|\bspring|\bdamper\b|central\s+sleeve|vibration"),
     ("HVAC", r"\bRMPU\b|\bHVAC\b|air\s*condition|\bCPA\b|\bscoop\b|\bduct\b|pre-?filter|\blouvre\b"),
     ("doors", r"\bdoor\b|hatch|\bramp\b|wheel\s*chair|door\s*handle"),
     ("brakes", r"\bbrake|\bWSP\b|wheel\s*slide|leakage\s*test|\bASDIS\b|\bAS\s+leakage"),

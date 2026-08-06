@@ -1,0 +1,36 @@
+### Engineering Document Data
+
+**Subject:** BOTTOM FIXING ANGLE
+**Drawing Number:** AAJ10174
+**Date:** 16-06-2025
+
+#### Technical Values
+*   **Length:** 1371 mm
+*   **Angle Dimensions:** 30 mm x 30 mm
+*   **Thickness:** 2 mm
+*   **Radius:** R2
+*   **Weight per Unit:** 0.42 kg
+*   **Material Specification:** IS 740 19000
+*   **Scale:** 1:10
+
+#### Component Table
+| QTY | DESCRIPTION | DIMENSIONS | ITEM NO. | REF. DRGS | MATL.SPEC. | WT/UNIT IN Kgs | REMARKS |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | BOTTOM FIXING ANGLE | 2x56x1371 | 1 | | IS 740 19000 | 0.42 | |
+
+#### Surface Finish Symbols
+*   **∇:** ROUGH MACHINED
+*   **∇∇:** FINISH MACHINED
+*   **∇∇∇:** FINE FINISH MACHINED
+*   **01:** ROUGH CLEANED
+*   **11b:** BURRS REMOVED
+*   **18:** CHAMFERED
+
+#### Notes
+1. ALTERNATE MATERIAL TO SS 304 SHALL ALSO BE USED.
+
+#### Administrative Information
+*   **Group:** 1-0 Body Shell
+*   **Organization:** INDIAN RAILWAY STANDARDS / INTEGRAL COACH FACTORY, CHENNAI - 600038
+*   **Sheet:** 1 OF 1
+*   **Drawn By:** ANU C

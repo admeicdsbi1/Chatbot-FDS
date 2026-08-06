@@ -1,0 +1,56 @@
+Train: 4567
+
+Brake Screen
+
+01/01/37 07:20:25
+
+RAKE
+
+BC Pressure [in Bar]
+
+| Unit1 | Coach | DTC | MC1 | TC | MC2 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| | Bogie1 | 2.5 | 2.5 | 2.5 | 2.5 |
+| | Bogie2 | 2.5 | 2.5 | 2.5 | 2.5 |
+
+| Unit2 | Coach | MC1 | TC | MC2 | NDTC |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| | Bogie1 | 0.0 | 0.0 | 0.0 | 0.0 |
+| | Bogie2 | 0.0 | 0.0 | 0.0 | 0.0 |
+
+| Unit3 | Coach | MC1 | TC | MC2 | NDTC |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| | Bogie1 | 0.0 | 0.0 | 0.0 | 0.0 |
+| | Bogie2 | 0.0 | 0.0 | 0.0 | 0.0 |
+
+| Unit4 | Coach | MC1 | TC | MC2 | NDTC |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| | Bogie1 | 0.0 | 0.0 | 0.0 | 0.0 |
+| | Bogie2 | 0.0 | 0.0 | 0.0 | 0.0 |
+
+| Unit5 | Coach | NDTC | MC2 | TC | MC1 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| | Bogie1 | 0.0 | 0.0 | 0.0 | 0.0 |
+| | Bogie2 | 0.0 | 0.0 | 0.0 | 0.0 |
+
+| Unit6 | Coach | MC2 | TC | MC1 | DTC |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| | Bogie1 | 0.0 | 0.0 | 0.0 | 0.0 |
+| | Bogie2 | 0.0 | 0.0 | 0.0 | 0.0 |
+
+CAB1 BP
+4.9
+
+CAB2 BP
+X
+
+Holding Brake Command
+
+Activate Hold Brake
+
+Release Hold Brake
+
+Note Ensure parking brake is applied in this state for safety
+In case after releasing the holding brake, if all pressure is becoming Zero, then go to Min1 brake applied loop screen.
+
+Page 9 of 85

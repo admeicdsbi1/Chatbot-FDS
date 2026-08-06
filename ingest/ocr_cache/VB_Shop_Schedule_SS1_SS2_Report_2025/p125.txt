@@ -1,0 +1,31 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 60. | LCR meter | for precise measurement of winding resistance, capacitors and inductors. | |
+| 61. | Digital Insulation Tester | 250V(Min), 5000V(Max) | For various Meggering of electrical equipment like TM, PT, etc. |
+| 62. | Pressure jet cleaner | For cleaning of air filters, radiators etc. | |
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 123 of 359
+
+**Labels visible on images:**
+
+**Item 60 (LCR Meter):**
+*   BK PRECISION 891 LCR Meter 100 kHz
+*   Cs 13.49 µF
+*   D 0.190
+*   FREQ 1.000kHz
+*   RANGE AUTO
+*   LEVEL 1 Vrms
+*   SPEED FAST
+*   MEAS FUNC BIN SWEEP DISP SYSTEM
+*   LCR L POT HPOT HCUR
+
+**Item 61 (Digital Insulation Tester):**
+*   GUARD
+*   5105
+*   10
+*   01
+*   TEST
+*   Megger. MIT525
+*   INSULATION TESTER

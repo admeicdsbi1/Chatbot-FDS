@@ -1,0 +1,16 @@
+| Doc. No. | CPA-MAE675UV2-065 | Page: 7 of 8 | MEDHA |
+| :--- | :--- | :--- | :--- |
+| **Product Code** | **MAE675UV2** | **Rev. No.: 00** | |
+| **Title: ADDING BASE CHANNEL TO VFD INVERTER'S _ RMPU_675UV2** | | | |
+| **Prepared By** | **Checked By** | **Approved By** | **Initiated Date** |
+| KARTHIK.K | RAMESH.A | RAMA RAJU | 10.09.2024 |
+
+IMAGE-7
+FIXING THE INVERTER’S ON THE ADAPTER CHANNEL WITH SAME HARDWARE
+REMOVE BAFFLE’S FOR BOTH VFD’S
+
+IMAGE-8 –
+TIGHTENING THE TOP COVER MOUNTING HARDWARE ALONG WITH SUPPORT
+MEMBER (B-A675UV2-161377) AS EARLIER
+
+Reference Template number: SSF-9967 (16) 1/1

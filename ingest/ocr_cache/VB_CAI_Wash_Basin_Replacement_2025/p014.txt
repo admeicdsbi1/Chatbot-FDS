@@ -1,0 +1,24 @@
+### Engineering Document Details
+*   **Drawing Number:** AAB63925
+*   **Subject:** RUBBER
+*   **Group:** 6-3 Lavatory and Fittings
+*   **Date of First Issue:** 21-7-25
+*   **Drawn By:** Mathankumar J
+*   **Scale:** 1:1
+*   **Sheet:** 1 OF 1
+
+### Technical Values
+*   **Outer Diameter:** Ø80 mm
+*   **Inner Diameter:** Ø55 mm
+*   **Thickness:** 10 mm
+*   **Weight per Unit:** 0.03 Kgs
+
+### Component Table
+| QTY | DESCRIPTION | DIMENSIONS | ITEM NO. | MATL. SPEC. | WT/UNIT IN KGS |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | RUBBER | Ø80 X 10 MM THICK | 1 | NATURAL RUBBER | 0.03 |
+
+### Surface Finish Symbols
+*   **01:** ROUGH CLEANED
+*   **0b:** BURRS REMOVED
+*   **18:** CHAMFERED

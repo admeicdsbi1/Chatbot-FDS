@@ -1,0 +1,46 @@
+14)Isolation procedure Emergency Brake Loop Triggered
+Detection :
+
+➢ Emergency Brake will be triggered in below conditions
+
+1)VCD time out (or)
+2) Emergency brake switch may be operated from
+Driver / Guard / other cab (or)
+3)Emergency brake applied though Master controller
+4)Emergency Valve triggered in any Coach
+➢ The System will declare the Faults of
+➢ EBL 1 Triggered
+EBL 2 Triggered
+EBL 3 Triggered
+EBL123 Triggered
+➢ To get the help screen go to “LEGENDS HELPSCREEN” and select
+the “EBL Triggrd ”
+(or)
+Select the “ EBL Triggrd ” at Main Screen Bottom right .
+
+| | | | | | | | | Acknowledge |
+|---|---|---|---|---|---|---|---|---|
+| | | | | - | | | | ▼ ▲ |
+| | | | | | | | | EBL Triggrd |
+
+Train: 4567 | 01/01/37 | 07:15:45
+Rake
+
+Emergency brake triggered
+3. EMY brake applied through driver MCH.
+4. EB valve triggered in any coach.
+****************************************************************************************************
+**********************************ISOLATION PROCEDURE***********************************************
+****************************************************************************************************
+
+1. Go to the EBL Loops Screen and verify EBL 1&2 status.
+2. Identify the reason for emergency brake applicaiton.
+3. Release the emergency brake,If it is applied intentionally.
+4. If not check the emergency brake status in rake screen.
+5. Identify the basic unit/coach in which the emergency brake is applied.
+6. Check the EBL MCB status in that particular coach. If the MCB is tripped
+normalize the MCB.
+7. If the MCB is OK,isolate the EP isolation cock in that particular coach
+physically, to release the emergency brake.
+
+EBL Loops

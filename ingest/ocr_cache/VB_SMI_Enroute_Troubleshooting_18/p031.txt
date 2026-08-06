@@ -1,0 +1,26 @@
+Train: 4567
+BP Override Settings
+01/01/37
+07:16:52
+
+| | | | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| BU-1 | BU-2 | BU-3 | BU-4 | BU-5 | BU-6 | | Exit |
+
+DTC
+OVERRIDE
+ACTIVATE
+
+MC1
+OVERRIDE
+ACTIVATE
+
+TC
+OVERRIDE
+ACTIVATE
+
+MC2
+OVERRIDE
+ACTIVATE
+
+Page 26 of 85

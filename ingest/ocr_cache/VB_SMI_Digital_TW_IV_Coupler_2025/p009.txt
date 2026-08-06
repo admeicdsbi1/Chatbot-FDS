@@ -1,0 +1,73 @@
+Annexure-A
+
+TRACK MODE OPERATION
+START
+(C) (System initial)
+*Note 1
+25.00 Nm
+Setting Target Torque
+Apply Torque
+18.00 Nm
+Current Torque Value
+Reach 90% of Target Torque
+20.00 Nm
+Current Torque Value
+*Note 2
+(((...(... ■■■ ...)...)) ((...(... 🟢 ...)...))
+Buzzer
+Green LED
+Reach 90% of Target Torque
+Reach Target Torque
+25.00 Nm
+*Note 3
+(((((((( ■■■ )))))))) ((((((( 🔴 )))))))
+Buzzer
+Red LED
+Approached Target Torque
+
+Note:
+1. If Er0 is appeared, that means this wrench has ever been applied more than 110% of torque of the spec.
+2. When 90% of the target torque is reached, the green LED will begin to flash and the alarm tone will beep intermittently.
+3. When 99.5% of the target torque has been reached, the alarm will change to a steady tone and the green LED will stop flashing and stay on. The red LED will also illuminate.
+
+12
+
+PEAK HOLD MODE OPERATION
+START
+(C) (System initial)
+*Note 1
+22.50 Nm
+Setting Target Torque
+*Note 2 rEC
+Recording
+Apply Torque
+(M)
+18.00 Nm -- Released -- 18.00 Nm
+Apply Torque
+Current Max. Value
+(Peak Hold)
+Flashing
+Reach 90% of Target Torque
+20.00 Nm
+*Note 3
+((...(... ■■■ ...)...)) ((...(... 🟢 ...)...))
+Buzzer
+Green LED
+Reach 90% of Target Torque
+Reach Target Torque
+25.00 Nm
+*Note 4
+(((((((( ■■■ )))))))) ((((((( 🔴 )))))))
+Buzzer
+Red LED
+Approached Target Torque
+
+Note:
+1. If Er0 is appeared, that means this wrench has ever been applied more than 110% of torque of the spec.
+2. If Full is appeared, that means the wrench's memory is full and the next value record can not be written in. Please refer the "Peak Hold Mode Recorded Value Review" section to clear the memory records.
+3. When 90% of the target torque is reached, the green LED will begin to flash and the alarm tone will beep intermittently.
+4. When 99.5% of the target torque has been reached, the alarm will change to a steady tone and the green LED will stop flashing and stay on. The red LED will also illuminate.
+
+13
+
+8

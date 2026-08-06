@@ -1,0 +1,18 @@
+Train: 4567
+01/01/37
+07:17:22
+Rake
+
+BP Low pressure Detected
+
+********************************ISOLATION PROCEDURE********************************
+************************************************************************************
+
+1. Ensure that auto brake handle is in "Charge" position and MR is healthy in the rake (>7.5Bar)
+2. If the auto brake handle is in "Charge" position, Go to the air spring screen and identify in which cab BP is low.
+3. Check for any leakages in BP line, in that coach.
+4. If the BP is leaking, Isolate the BP for the coach through isolation cocks and release the EP brake using isolation cocks
+5. Go to BP override settings screen and do the BP override in that particular coach.
+6. If no leakage is found, then directly Go to BP override settings screen and do the BP override in that particular coach.
+
+Page 24 of 85

@@ -1,0 +1,36 @@
+VB/SMI/E/06 Dated :06.11.2024
+
+INTEGRAL COACH FACTORY, CHENNAI - 600 038
+
+Mobile no.9003141310
+Mail id:dyceedicf@gmail.com
+Office of CDE/Elec.
+No.MD/D/Trainset/RB Contract/186G
+Dt :06.11.2024
+
+PCEEs & PCMEs of all Zonal railways.
+
+Sub: Instruction procedure to isolate VCB in Vande Bharat Trainset
+Ref: Detention of T.No 22436 NDLS-BSB Version-1 VBE in
+PRYJ division on 09.09.24 on account of HT cable flashing.
+
+Multiple attempts to close VCB with Transformer primary over current fault, may lead to flashing in Transformer and its associated parts. To avoid that, an instruction procedure has been prepared and enclosed as an ANNEXURE (enclosed).
+
+It is requested that, these instructions may please be circulated to all the LPs/ALPs along with their LIs and to all the on board technicians for strict compliance.
+
+DA: as above
+
+(Signature)
+06/11/24
+BACHU RAMESH
+Dy.CEE/DII /ICF
+(for CDE/Elec/ICF)
+
+Copy to:
+Secy to GM/ICF : For kind information of GM please.
+EDME/Chg/RB : For information please
+OSD/EE (G) RB : For information please
+PED/PS & EMU/RDSO : For kind information.
+PCME/ICF , PCEE/ICF : For kind information.
+CEE/QA, CME/QA : For information please
+M/s.Medha Servo Drives Pvt Ltd : For information.

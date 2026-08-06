@@ -1,0 +1,23 @@
+Instructions for DOOR operation, isolation and restricted use of ADCR Bypass switch Annexure A1/3
+
+Things to be ensured before start of train:
+1. LP/ALP should ensure that “ADCR Bypass switch” which is available in CRW panel as shown in pic should in be“AUTO”position, Similiarly Guard shall ensure the same for Rear cab.
+2. Then the Guard shall open the Door overview screenpic-A in the DDU and Check whether all doors in open condition.i.e., door pictogram will be in White icons as seen in pic below.
+3. If any door/s is in closed and isolated condition (Door overview will be in black as seen in pic-A below) Check the log book to verify the previous status of the isolated door/s which are already noted in the log book . If so, proceed further or make a fresh log book entry for the door.
+
+Procedure to ensure closure of all the doors or isolate the defective doors:
+1. Press the “Door warning Bell” Push Buttonin Driver Desk.Then, Door close announcement will happen.
+2. Press the door close push button located in the Driver Desk To close all door
+3. Now all healthy doors will start closing and DOOR summary screen will pop up in the DDU located in Driver Desk. All the doors that are closed NORMALLY will be seen as BLUE pictogram seen in pic-A below and .in drivers desk, “all door closed indication” will glow and “ Minimum one door opened” indication will extinguish
+4. If the above indication not met, guard should read the the door summary screen pictogram area and act as per the table below for any particular door malfunction(refer pic-B).
+
+| Si.no | Pictogram symbol | meaning | Action by Guards | Action by Technician |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | RED | Obstruction | Please see CCTV view and decide to reclose if free of obstruction. If not cleared inform to Technician to attend | Check any obstruction on the closing path and clear the obstruction. And inform to the guard for reclose. |
+| | | | Still door not closed inform to Technician to isolate the door It should be noted in log book | Technician shall isolate door as per isolation procedure at annexure A And inform to the guard |
+| 2 | GRAY | Communication failure | Inform to Technicianto isolate the Door and note it in log book | Technician shall isolate door,as per isolation procedure at annexure A And inform to the guard |
+| 3 | Black | Critical failure in the DCU | Inform to Technician to attend. | Check if emergency device is operated, and normliase the same using the “ emergency normalization procedure” at annexure B if not resolved then isolate the door. |
+| 4 | Black | Door Isolated | Check the log book to verify the previous status of the isolated door which are already noted in the log book . If not, make log entry and proceed. | - |
+| 5 | White | Door in open | Guard to press the door close push button again If not solved, inform Technician to isolate the door It should be noted in log book | Technician shall isolate door as per isolation procedure at annexure A andAnd inform to the guard |
+| 6. | BLUE | Door is healthy and closed | Proceed | |
+| 7. | | All doors are in closed(BLUE) / Isolated (Black), but still “All door closed I” Lamp is not glowing | Open the DOOR summary Screen(pic-c) and check the status, if any door Summary relay/s has not picked up (as shown in white/RED colour below), Inform Technician, make LOG entry. If not resolved still, then LP/ALP may operate the ADCR BYPASS switch to ON position (pic-D) and make entry in log book. With this, “All DOORS CLOSED” lamp indication will glow. | Technician shall isolate the respective doors left/right as per isolation procedure at annexure A and |

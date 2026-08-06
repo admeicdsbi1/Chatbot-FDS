@@ -1,0 +1,37 @@
+5375 (08/13)
+411-103066
+Installation and Maintenance Manual
+TE
+connectivity
+
+CLASS 2 - CONFIDENTIAL
+
+7.3.6. Add a torque marking on the bolt thread, the nuts, the washers, the busbar and the lug as shown in Figure 14.
+
+WARNING
+Do not leave any torque mark residue on the jumper insulating materials.
+
+Figure 14
+
+7.3.7. Follow steps 7.3.1 – 7.3.6 for the other end of the jumper cable.
+
+7.4. Installation of Jumper Boot
+
+Applicable to downward orientated jumper lead only (30° max from vertical either side).
+Do not install boots with jumper lead in the upward orientation installation configuration!
+
+Boot insulating surface
+Figure 15 – EXRM-0956-45 grease (supplied)
+
+Boot stem
+Figure 16 – jumper boot
+Figure 17 – boot washer (supplied)
+
+©2021 TE Connectivity Ltd
+family of companies
+All Rights Reserved
+TE Proprietary & Confidential Information
+Class II Data Classification - See Policy TEC-02-04
+16 of 26
+Rev J
+01 June 2022

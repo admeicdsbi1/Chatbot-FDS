@@ -1,0 +1,25 @@
+Train: 4567
+Air Spring Override
+01/01/37
+07:18:21
+
+| BU-1 | BU-2 | BU-3 | BU-4 | BU-5 | BU-6 | Exit |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+DTC
+Speed Restriction Override
+Speed Restriction Activate
+
+MC1
+Speed Restriction Override
+Speed Restriction Activate
+
+TC
+Speed Restriction Override
+Speed Restriction Activate
+
+MC2
+Speed Restriction Override
+Speed Restriction Activate
+
+Page 32 of 85

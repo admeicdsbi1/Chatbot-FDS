@@ -1,0 +1,15 @@
+Doc. No. | CPA- MAE675UV2-027 | Page: 3 of 3 | MEDHA
+--- | --- | --- | ---
+Product Code | MAE675UV2 | Rev. No.: 01 | 
+Title: CPA FOR HT CABLE SHIELDING MODIFICATION | | | 
+Prepared By | Checked By | Approved By | Initiated Date
+P DURGA BHAVANI | PRAMOD KUMAR D | RANJEET SINGH | 29/10/2024
+
+Note: 2 of 2 page is only if required (for Annexure)
+
+| REV. NO. | DATE | ECR NO. | DESCRIPTION OF REVISION |
+| :--- | :--- | :--- | :--- |
+| 01 | 29/10/24 | ECR NO - 1024 - 055852 - E | Shielding modified to Transformer side in TC Coach and drawing modified accordingly. |
+| 00 | 24/03/2023 | ECR-0323-048269-E | Initial Release |
+
+Reference Template number SF-0967 (16) 1/1

@@ -1,0 +1,17 @@
+Annexure - 1
+
+| Description of Process | Installation of Mortise handle with lock in lavatory door of Train set coaches | Rev: 0 |
+| :--- | :--- | :--- |
+| | | Date: 25.02.2023 |
+
+**Pre Requisites**
+1. Lavatory door mortise handle with lock shall be fixed with back piece of SS 304.
+2. Approved makes of handles shall be used (Latch Lock Article no : 209A 51200173 & Handle Article no : 51200173 Make: M/s Dormakaba ) or (Latch Lock Article no : 9228149 & Handle Article no : 9228099 Make: M/s Hettich )
+3. AAB 6-3-720 or AAB 6-3-721 – 2 no's per Lavatory door.
+4. M5 x 35 mm flat head counter screws & M5 hexagonal head flange nut – 4 No's each per lavatory door.
+5. M/s Henkal Sealant of PU 8590 Sealant can be used along with PU 8550 Cleaner and PU 8517H Primer or equivalent of M/s Sika make.
+
+| Step no/ Process no | Instruction | Photo | Remarks |
+| :--- | :--- | :--- | :--- |
+| 1 | Ensure all prerequisite has been done | | |
+| 2 | 1. Slot shall be properly made in lavatory door. 2. Slot dimension shall be equal to the lock body size. | | |

@@ -1,0 +1,38 @@
+2)Isolation procedure for EP Stuck detection Brake detection due to BC Pressure switch :
+
+➢ The System will declare the Faults of
+EP Stuck Brake Detected in rake through BC presser switch
+False stuck brake detection through BC presser switch
+
+➢ To get the help screen go to “LEGENDS HELP SCREEN” and select the “ Stuck Brake BC Prs”
+(or)
+
+Select the “ Stuck Brake BC Prs ” at Main Screen Bottom right .
+
+| | | | | | | | | Acknowledge |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| | | | - | | | | | ▼ | ▲ |
+| | | | | | | | | StckBrkeBCPrs |
+
+Train: 4567 | | 01/01/37 | 07:20:21
+--- | --- | --- | ---
+| | | | | | | Rake |
+
+Stuck Brake Detected through Min1 brake TL
+****************************************************************************************************
+************************************FAULT REASON****************************************************
+****************************************************************************************************
+EP stuck brake through TL, will be detected because of the following
+conditions
+1. Train speed is greater than 10 kmph.
+2. MCH is in Coast or Motoring.
+3. Min 1 brake applied TL feedback is high.
+****************************************************************************************************
+************************************ISOLATION PROCEDURE*********************************************
+****************************************************************************************************
+1. Go to brake screen, release the holding brake(Ensure parking brake is
+applied in this state for safety)
+2. In case After releasing the holding brake, if all pressure is becoming 0.
+then go to Min1 brake applied loop screen.
+
+Brake | Min1 Brake Applied Loop

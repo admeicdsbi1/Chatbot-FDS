@@ -1,0 +1,15 @@
+Train: 4567
+LEGENDS HELP SCREEN
+01/01/37
+07:15:08
+RAKE
+Exit
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| Stuck Brake | EBL Triggrd | EOL Triggrd | PB Stk Brk |
+| MAJ BP Drop | BP Low Pr Sen | Susp Fail Spd | MR Low |
+| DOOR_OPEN | MAJ EP COCK ISO | AdcrMismatchSw | Stuck Brake BC Prs |
+| AdcrMismatchHw | AXEL LOCK DET | MAJ MR DROP | |
+
+Page 3 of 85

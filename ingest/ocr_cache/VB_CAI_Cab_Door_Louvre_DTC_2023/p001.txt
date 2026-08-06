@@ -1,0 +1,31 @@
+ICF/MDM/F/006
+INTEGRAL COACH FACTORY, CHENNAI-600 038
+
+No. ICF/QMS/MDM/File/F015
+Office of the GM/ Mech. Designs
+Date: 12.07.2023
+
+**Coach Alteration Instruction**
+
+| | | |
+| :--- | :--- | :--- |
+| 1 | CAI No. | :A-2023/08 |
+| 2 | Group | :1-0 |
+| 3 | Description | : Closing of louvre of cab door in DTC of Vande Bharat, to prevent entry of outside air |
+| 4 | Drawing No. | : ICF/SK3-1-0-216 (Closing sheet for louvre arrgt of Train set cab door) |
+| 5 | Modification | : 1. It has been observed that noise and dust is entering inside driver cab through the perforations provided in the louver arrgt of Cab door window in Vande Bharat Train set. <br> 2. Hence it is decided to close the perforations provided on the said louver arrgt. <br> 3. A separate closing sheet of similar size and profile shall be cut and the same shall be secured to the existing louvre arrgt, inside the door, by riveting as per Drg No ICF/SK3-1-0-216. |
+| 6 | Reason for Modification | : To prevent entry of outside air in to the driver cabin |
+| 7 | Coaches concerned | : DTC coaches of Vande Bharat |
+| 8 | Implementation stage | : Immediately |
+| 9 | Category of CAI | : [√] A [ ] B <br> Tick A or B as applicable |
+
+A- Modifications shall be implemented :
+Immediately by user Rlys.
+
+B- Modifications shall be implemented :
+by user Rlys as and when convenient
+
+(Signature)
+T. Dilip Kumar 12/7
+Dy CME/DII
+For General Manager (Mech.)/ Design

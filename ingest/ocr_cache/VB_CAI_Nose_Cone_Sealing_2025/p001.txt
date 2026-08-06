@@ -1,0 +1,43 @@
+ICF/MDM/F/006
+
+INTEGRAL COACH FACTORY, CHENNAI-600 038
+
+No. ICF/QMS/MDM/File/F015
+
+Office of the GM/ Mech. Designs
+Date: 21.06.2025
+
+Coach Alteration Instruction
+
+| | | |
+| :--- | :--- | :--- |
+| 1 | CAI No. | : A-2025/03 |
+| 2 | Group | : 10 Group |
+| 3 | Description | : Nosecone sealing work in DTC of Vande Bharat |
+| 4 | Drawing No. | : 329- 10- 252 |
+| 5 | Modification | : Sealing introduced for nosecone front side of DTC to prevent air ingress/egress, as per Annexure A attached |
+| 6 | Reason for Modification | : To address cooling issues, by improving sealing of the coach |
+| 7 | Coaches concerned | : DTC coaches of Vande Bharat |
+| 8 | Implementation stage | : With immediate effect |
+
+9 Category of CAI : 
+| A | B |
+| :--- | :--- |
+| ✓ | |
+
+Tick A or B as applicable
+
+A- Modifications shall be implemented : immediately by user Rlys.
+
+B- Modifications shall be implemented : by user Rlys as and when convenient
+
+(Signature) 21/6/25
+For General Manager (Mech.)/ Design
+
+Copy to: Annexure A enclosed.
+
+Revision Status: 01
+January, 2007
+
+Format Approved by: Dy.CME/D
+Date: 02.01.2007

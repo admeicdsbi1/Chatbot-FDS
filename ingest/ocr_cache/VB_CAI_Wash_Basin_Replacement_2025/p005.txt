@@ -1,0 +1,26 @@
+### Document Information
+*   **Subject:** WASHBASIN DRAIN ASSY
+*   **Drawing Number:** 32963365
+*   **Date of First Issue:** 21-7-25
+*   **Scale:** 1:5
+*   **Sheet:** 1 OF 1
+*   **Organization:** INDIAN RAILWAY STANDARDS, INTEGRAL COACH FACTORY, CHENNAI - 600038
+
+### Parts List Table
+| QTY | DESCRIPTION | DIMENSIONS | ITEM NO. | REF.DRGS. | MATL | WT/UNIT IN KGS | REMARKS |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | RUBBER HOSE 31.5 BORE 5 PLY | | 3 | IS:3549-2017, TYPE-2 | EPDM | | L= 1000 MM ( APPROX ) |
+| 1 | HOSE CLIP | 50 | 2 | IS:4762-2002, TAB-1 | AISI- 304 | | |
+| 1 | VENT CASING ASSEMBLY FOR WASH BASIN | | 1 | 32963366 | | | * |
+
+### Technical Notes
+1.  RUBBER HOSE SHALL BE RIGIDLY CLAMPED (MINIMUM 2 PLACES) WITH SUITABLE CLAMP
+2.  ALTERNATIVELY DRG NO- 32963367 MAY ALSO BE USED FOR VENT CASING ASSEMBLY.
+
+### Surface Finish Symbols
+*   **Rough Machined:** ▽
+*   **Finish Machined:** ▽▽
+*   **Fine Finish Machined:** ▽▽▽
+*   **Rough Cleaned:** 01
+*   **Burrs Removed:** 01b
+*   **Chamfered:** 18

@@ -1,0 +1,36 @@
+5375 (08/13)
+411-103066
+Installation and Maintenance Manual
+TE
+connectivity
+
+CLASS 2 - CONFIDENTIAL
+
+7.3. Installation to insulator bracket
+
+Applicable to both upward and downward installation.
+
+TE recommends the ‘half nut then full nut’ arrangement; this is more effective than a ‘full nut then half nut’ arrangement.
+
+Full nut
+Half nut
+Conical washer
+Chamfered flat washer
+Chamfered flat washer
+Bolt
+
+Figure 8
+
+7.3.1. Fit a cable lug as shown in Figure 9.
+
+Figure 9
+
+©2021 TE Connectivity Ltd
+family of companies
+All Rights Reserved
+Rev J
+
+TE Proprietary& Confidential Information
+Class II Data Classification - See Policy TEC-02-04
+13 of 26
+01 June 2022

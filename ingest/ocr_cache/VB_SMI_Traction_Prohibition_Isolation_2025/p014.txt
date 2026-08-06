@@ -1,0 +1,41 @@
+Train: 4567 | Air spring / EP Overview Screen | 01/01/37 | 07:17:30
+BU-1Susp | BU-2Susp | BU-3Susp | BU-4Susp | BU-5Susp | BU-6Susp | | | RAKE
+
+Basic Unit 1
+
+| DTC | MC1 | TC | MC2 |
+| :--- | :--- | :--- | :--- |
+| Airspr Bogie 1A: 4.1 | Airspr Bogie 1A: 9.5 | Airspr Bogie 1A: X | Airspr Bogie 1A: X |
+| Airspr Bogie 1B: 2.9 | Airspr Bogie 1B: 3.2 | Airspr Bogie 1B: X | Airspr Bogie 1B: X |
+| Airspr Bogie 2A: 5.2 | Airspr Bogie 2A: 2.3 | Airspr Bogie 2A: X | Airspr Bogie 2A: X |
+| Airspr Bogie 2B: 5.2 | Airspr Bogie 2B: X | Airspr Bogie 2B: X | Airspr Bogie 2B: X |
+| MR Press: 7.8 | SPARE | SPARE | SPARE |
+| BP Press: 4.9 | SPARE | SPARE | SPARE |
+
+U5 | Transformer Oil Level Low - Warning | Acknowledge
+U5 | TC | MCU | Transformer Oil Level Low - Warning | 1115 | ▼ | ▲
+U1 | CCU | CCCR - Active Slave | TR_FAIL_NO:32
+
+➤ If the BP leakage observed in any coach , Isolate the BP for the coach through isolation cock and release the EP brake using isolation cocks. And “BP override Setting” Screen and do the BP override in that particular coach .
+➤ If BP leakage is not found , then directly Go to BP override setting screen and do the BP override in that particular coach .
+
+Train: 4567 | BP Override Settings | 01/01/37 | 07:16:52
+BU-1 | BU-2 | BU-3 | BU-4 | BU-5 | BU-6 | | | Exit
+
+DTC
+OVERRIDE
+ACTIVATE
+
+MC1
+OVERRIDE
+ACTIVATE
+
+TC
+OVERRIDE
+ACTIVATE
+
+MC2
+OVERRIDE
+ACTIVATE
+
+➤ Then TCMS system will allow the Traction .

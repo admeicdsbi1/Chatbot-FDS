@@ -1,0 +1,28 @@
+➤ Verify whether the Auxiliary converter is healthy
+
+➤ And Main air compressor is running .
+
+➤ If the Main Air Compressor are not running, press start all compressor switch to turn on MAC and wait for few minutes.
+
+➤ If the MR pressure is building then the fault will recover automatically at >7.5 Bar.
+
+➤ If the MR Pressure is not increasing, then Go to the air spring screen to check the MR Pressure in each basic unit.
+
+| Train: 4567 | Air spring / EP Overview Screen | 01/01/37 | 07:17:30 |
+| :--- | :--- | :--- | :--- |
+| BU-1Susp | BU-2Susp | BU-3Susp | BU-4Susp | BU-5Susp | BU-6Susp | | | RAKE | |
+
+| | Basic Unit 1 | | |
+| :--- | :--- | :--- | :--- |
+| **DTC** | **MC1** | **TC** | **MC2** |
+| Airspr Bogie 1A: 4.1 | Airspr Bogie 1B: 2.9 | Airspr Bogie 2A: 5.2 | Airspr Bogie 1A: 9.5 | Airspr Bogie 1B: 3.2 | Airspr Bogie 2A: 2.3 | Airspr Bogie 1A: X | Airspr Bogie 1B: X | Airspr Bogie 2A: X | Airspr Bogie 1A: X | Airspr Bogie 1B: X | Airspr Bogie 2A: X |
+| Airspr Bogie 2B: 5.2 | MR Press: 7.8 | BP Press: 4.9 | Airspr Bogie 2B: X | SPARE | SPARE | Airspr Bogie 2B: X | SPARE | SPARE | Airspr Bogie 2B: X | SPARE | SPARE |
+
+| U5 | Transformer Oil Level Low - Warning | Acknowledge |
+| :--- | :--- | :--- |
+| U5 | TC | MCU | Transformer Oil Level Low - Warning | 1115 | ▼ | ▲ |
+| U1 | CCU | CCCR - Active Slave | TR_FAIL_NO:32 |
+
+➤ Verify in which basic unit MR pressure is low.
+
+➤ Check for any leakages in MR line in that particular BU

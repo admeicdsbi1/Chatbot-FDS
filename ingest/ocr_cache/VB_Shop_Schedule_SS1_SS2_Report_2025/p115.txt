@@ -1,0 +1,10 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 23. | Anti-Roll Bar Assembly Fixture | SPMAET18BOGIE1138 Ref: Jigs & Fixture List by Medha Bogie Private Limited | |
+| 24. | Anti-Roll Bar Bearing Ejection Fixture | SPMAET18BOGIE1149 Ref: Jigs & Fixture List by Medha Bogie Private Limited | |
+| 25. | Control Arm Bearing Bush ejection Fixture | SPMAET18BOGIE1146 Ref: Jigs & Fixture List by Medha Bogie Private Limited | |
+| 26. | Bogie Disassembly Fixture | SPMAET18BOGIE1144 Ref: Jigs & Fixture List by Medha Bogie Private Limited | Control Arm Disassembly From Bogie |
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 113 of 359

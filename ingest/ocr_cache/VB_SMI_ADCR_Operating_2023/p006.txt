@@ -1,0 +1,65 @@
+DOOR CLOSE CIRCUIT
+
+Annexure 2/B
+
+**Power Supply Inputs:**
+*   1.50 mm² Black FSC
+*   110V DC BN.41 082001.035
+*   1.50 mm² Black FSC
+*   0V DC BN.41 082002.038
+
+**DCU LEFT =121-F01 MCB-8A**
+*   121002.001 FSC 1.50 mm² Black (Terminal 2)
+*   121001.001 1.50 mm² Black (Terminal 4)
+
+**DCU RIGHT =121-F02 MCB-8A**
+*   082002.038 FSC 1.50 mm² Black (Terminal 1)
+*   082001.039 FSC 1.50 mm² Black (Terminal 3)
+*   121057.001 1.50 mm² Black (Terminal 4)
+*   121058.001FSC Black 1.50 mm²
+
+**DCU L1 =121-T01**
+*   121001.704 1.50 mm² Black FSC (X11-11)
+*   121003.700 FSC 1.50 mm² Black (X11-12)
+*   S5, S1, S3, S4, S8, SR
+*   S1 - DOOR CLOSED AND LOCKED
+*   S3 - EMERGENCY OPERATION OUTSIDE
+*   S4 - EMERGENCY OPERATION INSIDE
+*   S5 - DOOR OUT OF SERVICE
+*   S8 - DOOR 98% CLOSED
+*   SR - SAFETY RELAY
+
+**DCU L2 =121-T02**
+*   DCU
+*   S5, S1, S3, S4, S8, SR
+*   X11-12
+*   121124.700 FSC 1.50 mm² Black (=71-X25)
+*   121124.001 FSC 1.50 mm² Black
+*   LDSRL =121-K01
+
+**DCU R1 =121-T03**
+*   121057.704 1.50 mm² Black FSC (X11-11)
+*   121074.700 1.50 mm² Black (X11-12)
+*   S5, S1, S3, S4, S8, SR
+*   S1 - DOOR CLOSED AND LOCKED
+*   S3 - EMERGENCY OPERATION OUTSIDE
+*   S4 - EMERGENCY OPERATION INSIDE
+*   S5 - DOOR OUT OF SERVICE
+*   S8 - DOOR 98% CLOSED
+*   SR - SAFETY RELAY
+
+**DCU R2 =121-T04**
+*   DCU
+*   S5, S1, S3, S4, S8, SR
+*   X11-11
+*   X11-12
+*   121125.700 FSC 1.50 mm² Black (=71-X25 +115)
+*   121125.001 FSC 1.50 mm² Black 14/64
+*   LDSRR =121-K02
+*   121058.003 1.50 mm² Black FSC
+
+**Other Labels:**
+*   DCUL 0V.2 1.50 mm² Black FSC 121002.004
+*   DCUR 0V.4 1.50 mm² Black FSC 121058.003
+*   110V DC BN.42
+*   0V DC BN.42

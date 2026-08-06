@@ -1,0 +1,33 @@
+File No.RDSO-PE0TLAC(RMPU)/5/2024-PED/PSEMU/RDSO
+
+Han® B,
+Panel feed through housing,
+Top entry,
+Han-Easy Lock®,
+IP65
+1x M32
+1x M40
+19 30 016 1131
+19 30 016 1132
+Panel cut out
+
+iii. Maintenance regarding M/s Harting Type connectors used for RMPU of Vande Bharat Rakes:
+a. Carbonized Connector pins to be cleaned by wiping with cotton swab dipped with Iso-Propyl Alcohol. Damaged Pins to be replaced.
+Carbonised pins of M/s Harting type of connector
+b. To prevent oxidation of contacts due to extended exposure of silver contacts provision of cover to be ensured.
+c. Connector should not be frequently mated /unmated (connect/disconnect) until unless there is a need for RMPU rework / replacement.
+d. Visual inspection to be done for proper closure of connector locking levers and check if there are any damage to connector gaskets and on additional sealing applied around the gaskets.
+e. Further, M/s Harting has suggested that, wire termination shall be done with one of the below HARTING recommended tools and the same applies for removal/replacement of contacts.
+
+| Part no. | Description | Type of Tool |
+| :--- | :--- | :--- |
+| 09 99 000 0888 | Double-Indent Crimping Tool | Wire crimping tool |
+| 09 99 000 0110 | Han Hand crimp tool | Wire crimping tool |
+| 09 99 000 0001 | Four-Indent Crimping tool | Wire crimping tool |
+| 09 99 000 0319 | Removal Tool Han E | Contact removal tool |
+
+Further, M/s Harting also suggested checks and maintenance to ensure tool has long service life. The checks are listed below:
+*   **Cleaning/Observing:- 100Cycles**
+    Visual check can be carried out by eye view or by support of a magnifier. Check parts for obviously abrasion (broken shiny surface inside), cracks or scuffs. If it is necessary parts must be cleaned with a brush or a dry-cleaning rag.
+*   **Crimp Check:-1000 Cycles.**
+    Beside the visual check the Crimp check procedure should contain sample Crimps to measure pull-out forces with cable samples, which are currently in use with these tools and to check the crimp dies of the dedicated tools. Additional cross

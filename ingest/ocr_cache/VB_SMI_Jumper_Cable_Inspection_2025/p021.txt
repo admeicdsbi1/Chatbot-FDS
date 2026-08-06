@@ -1,0 +1,34 @@
+5375 (08/13)
+411-103066
+Installation and Maintenance Manual
+TE
+connectivity
+
+CLASS 2 - CONFIDENTIAL
+
+7.4.4. Using a cloth moistened with IPA clean the half of the first HVJL coil.
+
+Clean the insulation
+between these 2 points
+
+Figure 22
+
+7.4.5. Open the sachet of EXRM-0956-45 grease supplied in the boot kit. Apply a thin film of EXRM-0956-45 around the inside of the boot stem and around the first 10cm of HVJL insulation (from the lug) to assist with the fitment.
+Note: excessive amount of grease may prevent moisture draining through the boot stem.
+
+WARNING
+Wear suitable protective gloves when applying the fluoro-silicone grease! Avoid contact with eyes!
+
+Apply a thin film of EXRM-0956-45 onto these surfaces
+on to the two boots and both ends of the jumper lead.
+
+Figure 23
+
+©2021 TE Connectivity Ltd
+family of companies
+All Rights Reserved
+Rev J
+TE Proprietary & Confidential Information
+Class II Data Classification - See Policy TEC-02-04
+19 of 26
+01 June 2022

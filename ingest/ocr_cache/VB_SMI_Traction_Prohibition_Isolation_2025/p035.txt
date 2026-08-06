@@ -1,0 +1,36 @@
+16) Isolation Procedure for Low priority loop failure:
+
+➢ The System will declare the Fault “ Cab Occupy Regular circuit failed ”
+
+➢ Traction will be Prohibited by the TCMS ,
+CAB Occupy Legend will be updated in display as
+[Cab]
+
+➢ In Display unit “ No Cab Occ ” at Main Screen Bottom right
+[Acknowledge]
+[No Cab Occ]
+
+➢ Keep the CAB SELECTOR Switch in HPT mode at
+CRW Panel.
+[LPT] [HPT]
+[CAB SELECTOR]
+
+➢ Then High Priority mode activated , Legend will be
+updated in display as
+[H Cab]
+
+➢ Then TCMS system will allow the Traction
+
+17) Isolation Procedure for TSL loop1 failure:
+
+➢ Traction will be Prohibited by the TCMS and brake
+will be applied by TCMS till the train speed reaches
+zero kmph , Legend will be updated in display as
+[TSL1]
+
+➢ Select “ TRACTION SELECTION” Switch to
+“LOOP2” at CRW panel .
+[LOOP1] [LOOP2]
+[TRACTION SELECTION]
+
+➢ Then TCMS system will allow the Traction .

@@ -1,0 +1,29 @@
+5375 (08/13)
+411-103066
+Installation and Maintenance Manual
+TE
+connectivity
+
+CLASS 2 - CONFIDENTIAL
+
+7.3.2. Fit the flat washer and the bolt as shown in Figures 10.1 and 10.2. The chamfered side of the washer to be on the lug side.
+
+Figure 10.1
+Figure 10.2
+
+7.3.3. Fit the second flat washer and the spring washer as shown in Figures 11.1 and 11.2. The chamfered side of the flat washer to be on the bracket side. The conical washer to protrude away from the bracket.
+
+WARNING Spring washers are recommended for single use only.
+Use a new spring washer at every installation.
+
+Figure 11.1
+Figure 11.2
+
+©2021 TE Connectivity Ltd
+family of companies
+All Rights Reserved
+TE Proprietary & Confidential Information
+Class II Data Classification - See Policy TEC-02-04
+14 of 26
+Rev J
+01 June 2022

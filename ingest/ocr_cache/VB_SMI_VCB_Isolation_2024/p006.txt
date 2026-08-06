@@ -1,0 +1,35 @@
+5
+
+e) Select train setting
+
+[Image: A screen titled "Maintenance Mode" with a list of options:
+1. Test Modes
+2. Detailed View
+3. Date and Time
+4. Software Versions
+5. DIO Screens
+6. Network Screens
+7. TCMS Comm. Screens
+8. Train Settings (circled in red)]
+
+f) Select BU isolation
+
+[Image: A screen titled "Train Control" with a list of options:
+1. Panto VCB Settings
+2. Bogie Cutout
+3. BU Isolation (circled in red)
+4. Compressor Control
+5. EP Brake Isolation
+6. Parking Brake Override
+7. Airspring Override Settings
+8. BP Override Settings
+9. RMPU Control
+10. DCU Control Settings
+11. Route Selection
+12. Line Isolator Control]
+
+Top bar text (both images):
+Train: 912345 (top) / 90000620 (bottom)
+Maintenance Mode (top) / Train Control settings (bottom)
+02/01/20 15:12:30 (top) / 28/11/19 17:44:14 (bottom)
+Login PREV RAKE

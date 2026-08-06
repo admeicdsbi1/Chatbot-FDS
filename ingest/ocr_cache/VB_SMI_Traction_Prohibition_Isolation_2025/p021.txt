@@ -1,0 +1,35 @@
+➤ Verify All door status in Door over view ,
+➤ All doors should be Closed
+
+➤ And also Verify Physically whether all doors closed
+
+| Train: 4567 | Door Overview | 01/01/37 | 07:19:11 |
+| :--- | :--- | :--- | :--- |
+| | | Door Summary | RAKE |
+
+**UNIT1**
+DTC, MC1, TC, MC2
+
+**UNIT2**
+NDTC, MC2, TC, MC1
+
+**UNIT3**
+MC1, TC, MC2, NDTC
+
+**UNIT4**
+MC1, TC, MC2, NDTC
+
+**UNIT5**
+NDTC, MC2, TC, MC1
+
+**UNIT6**
+MC2, TC, MC1, DTC
+
+| U5 | Transformer Oil Level Low - Warning | Acknowledge |
+| :--- | :--- | :--- |
+| U5 | TC | MCU | Transformer Oil Level Low - Warning | 1115 | ▲ |
+| U1 | CCU | CCCR - Active Slave | TR_FAIL_NO:32 |
+
+➤ After physical verification of the each door , the Motor man can do the ADCR Bypass from Occupied CAB
+
+➤ Then TCMS system will allow the Traction .

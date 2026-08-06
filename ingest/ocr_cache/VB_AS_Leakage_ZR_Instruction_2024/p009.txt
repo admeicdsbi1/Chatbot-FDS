@@ -1,0 +1,26 @@
+Annexure-I
+
+**For Air Springs of Vande Bharat Trains having unusual pressure variation (more than +/- 0.4 bar)**
+
+| Rly | Date of investigation | Train No | Rake Id | Coach No | Coach Type (TC/ MC/ NDTC/ DTC) | Bogie no | Air spring having unusual pressure variation (more than +/- 0.4 bar) location in coach in terms of coach end (PP/NPP end) | Air Suspension Pressure number in REMMLOT having unusual pressure variation (more than +/- 0.4 bar) | Actual pressure variation before and after stabling | Identified cause for unusual pressure variation in the air spring& corrective action taken | Remarks for any other issue identified in this air suspension system in past |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| | | | | | | | | | In air spring pressure | In installation height | | |
+| | | | | | | | | | | | | |
+| | | | | | | | | | | | | |
+| | | | | | | | | | | | | |
+| | | | | | | | | | | | | |
+| | | | | | | | | | | | | |
+| | | | | | | | | | | | | |
+| | | | | | | | | | | | | |
+| | | | | | | | | | | | | |
+| | | | | | | | | | | | | |
+| | | | | | | | | | | | | |
+| | | | | | | | | | | | | |
+| | | | | | | | | | | | | |
+| | | | | | | | | | | | | |
+| | | | | | | | | | | | | |
+| | | | | | | | | | | | | |
+| | | | | | | | | | | | | |
+| | | | | | | | | | | | | |
+| | | | | | | | | | | | | |
+| | | | | | | | | | | | | |

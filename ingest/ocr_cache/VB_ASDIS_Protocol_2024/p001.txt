@@ -1,0 +1,55 @@
+भारत सरकार - रेल मंत्रालय
+अनुसंधान अभिकल्प और मानक संगठन
+लखनऊ - 226 011
+EPBX (0522) 2451200
+Fax (0522) 2458500
+
+Government of India - Ministry of Railways
+Research Designs & Standards Organisation
+Lucknow - 226 011
+DID (0522) 2450115
+DID (0522) 2465310
+
+No. SV.AS.VB
+Dated: 07.08.2024
+
+Principal Chief Mechanical Engineer
+1. NR, HQ office Baroda House, New Delhi-1
+2. WR, HQ office, Churchgate, Mumbai-20
+3. CR, HQ office, CSTM, Mumbai - 1
+4. ER, HQ office, Fairly Place, Kolkata- 1
+5. SR, HQ office, Park Town, Chennai -3
+6. NFR HQ office Maligaon, Guwahati- 11.
+7. NER, HQ office, Gorakhpur-273 001.
+8. SER, HQ office, Garden Reach, Kolkata-43.
+9. SCR, HQ office, Secunderabad-71.
+10. WCR, HQ office, Jabalpur- 1.
+11. SECR, HQ office, Bilaspur- 4.
+12. SWR, HQ office, Hubli- 23.
+13. ECoR, HQ office, Bhubaneshwar- 23.
+14. ECR, HQ office, Hazipur-01.
+15. NWR, HQ office, Jaipur-06.
+16. NCR, HQ office, Allahabad-1.
+17. KRCL, Corp.office, Navi Mumbai – 14
+18. Integral Coach Factory, Chennai- 38.
+19. Rail Coach Factory, Kapurthala –02
+20. Modern Coach Factory, Rae Bareli-20.
+
+Sub: Air spring Deflation Indication System in Vande Bharat coaches.
+
+Vande Bharat coaches fitted with pneumatic suspension have been cleared for operation upto 160 kmph speed in inflated condition. However, in case of air spring deflation in any VB coach due to any unforeseen reason, maximum speed of the train is required to be limited upto 60 kmph. In view of this, Air spring Deflation Indication System has been provided in the VB coaches to indicate the air spring failure to the crew and to limit the train speed automatically upto predetermined speed of 60 kmph in case of air spring failure.
+
+Redundancy at the bogie level has been utilized, even if a sensor in bogie fails but sensor on the other air spring of the bogie is working, to ensure minimum possible disruption in service.
+
+In few of the recent cases, it has been observed that Air Spring Deflation Indication System (ASDIS) was slightly off mark from the protocol prepared by the RDSO. In view of that operation protocol of Air Spring Deflation Indication System is enclosed herewith for their checking in all rakes of Vande Bharat trains with competent representative of M/s Medha. Moreover, checking of Air Spring Deflation Indication System as per enclosed protocol shall also be done as part of 9 monthly schedule.
+
+DA: As above.
+
+(Shobhit Pratap Singh)
+Director/VDG/Carriage
+for Director General/Carriage
+
+Copy to/- For kind information
+1. EDME/ Coaching, Railway Board New Delhi-
+2. ED/PS&EMU, RDSO-Lucknow
+3. ED/CAMTECH- Gwalior

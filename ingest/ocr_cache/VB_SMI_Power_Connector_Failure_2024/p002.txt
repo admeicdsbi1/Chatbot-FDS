@@ -1,0 +1,20 @@
+File No.RDSO-PE0TLAC(RMPU)/5/2024-PED/PSEMU/RDSO
+
+c. In some of the cases, the pins of connectors were found to be damaged or bent. In order to avoid damage of pins during mating/unmating of connectors, Harting connectors of all the existing rakes to be provided with guide pins based on rake availability.
+
+Connectors with guide pins.
+Connectors without guide pins (blocked by screws)
+
+d. In some of the cases, the cable junction box of RMPU were found to be full of dust. To avoid this, open points through the cable entry grommets of cable junction box inside the evaporator section of the RMPU to be properly sealed using silicon sealant.
+
+Unsealed Cable Glands
+Sealed Cable Glands
+
+e. Further, the cover of cable junction box inside the evaporator section of the RMPU to be properly sealed with gasket.
+
+No provision of gasket (M/s Sidwal)
+Provision of gasket (M/s Amit)
+
+f. Fresh air filter cassette arrangement to be provided with rubber beading / EPDM gasket (HL-2 compliant) for rigid fitment and effective fresh air filtering to avoid dust entry through gaps into the mixing chamber.
+
+Fresh air filter cassette arrangement

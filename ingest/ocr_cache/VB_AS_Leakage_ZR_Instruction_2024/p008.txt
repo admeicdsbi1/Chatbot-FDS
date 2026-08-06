@@ -1,0 +1,39 @@
+भारत सरकार - रेल मंत्रालय
+अनुसंधान अभिकल्प और मानक संगठन
+लखनऊ - 226 011
+EPBX (0522) 2451200
+Fax (0522) 2458500
+
+Government of India - Ministry of Railways
+Research Designs & Standards Organisation
+Lucknow - 226 011
+DID (0522) 2450115
+DID (0522) 2465310
+
+No. MC/TS/BD
+Date: 27.12.2023
+
+Principal Chief Mechanical Engineer,
+All Railways & Production Units.
+
+Sub: Air Suspension System of Vande Bharat Trains
+
+Detailed discussion regarding maintenance practices for Vande Bharat trains was held at Vande Bharat Maintenance Depot/Shakoorbasti/NR. Shakoorbasti depot informed that REMMLOT is being extensively used for identification of faults & corrective actions. During examination of available Vande Bharat train in yard, it was also discussed that health of air suspension system of coaches can also be monitored through REMMLOT. Good health of air suspension system of coaches ensures desired dynamic behaviour of related suspension system and good riding during run.
+
+In view of above, it is advised to implement following measures, till further experience is gained:
+
+i) PUs shall check air suspension systems of Vande Bharat rakes before turning out & ensure no leakage/anomaly in air suspension systems. For this purpose, dispatch rakes shall be charged with air in air suspension system and kept stabled in empty condition without air supply in MR pipe/line for approx. 12 hours without any movement of the rake. Dropping of pressure of each air spring over the stabling period to be recorded for identification of any unusual depletion of pressure in any air spring. For any unusual depletion of pressure in any air spring (more than +/- 0.4 bar), corrective action to be taken before dispatch of the rake and identified cause for each case shall be communicated to RDSO in enclosed format as Annexure-I.
+
+ii) All primary depots of Vande Bharat trains also to check for any unusual dropping of pressure in any air spring during stabling in yard/pitline/platform of approximately 12 hrs without air supply in MR pipe/line & without any movement. Such unusual depletion can also be correlated with change in installation height of air springs before & after such stabling of approx. 12 hours. Longer lie-over periods during weekly off of Vande Bharat Train services may be utilized for the purpose. Corrective action for air suspension system having unusual depletion of air pressure (more than +/- 0.4 bar) in any spring to be taken in planned manner and identified cause for each case shall be communicated to RDSO in enclosed format as Annexure-I.
+
+The above instructions shall be further reviewed after feedbacks/observations from PUs & Zonal Railways.
+
+DA: As mentioned above
+
+(A.K. Singh)
+Executive Director (Standards)/Carriage
+edcar.rdso@gmail.com
+
+Copy to:
+EDME/Coaching/Railway Board/New Delhi: for kind information
+PED/PS&EMU, RDSO, Lucknow: for kind information

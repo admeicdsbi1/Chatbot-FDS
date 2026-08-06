@@ -1,0 +1,25 @@
+| Doc. No. | CPA-MAE675UV2-065 | Page: 2 of 8 | MEDHA |
+| :--- | :--- | :--- | :--- |
+| **Product Code** | **MAE675UV2** | **Rev. No.: 00** | |
+
+| Title: ADDING BASE CHANNEL TO VFD INVERTER’S _ RMPU_675UV2 | |
+| :--- | :--- |
+| **Prepared By** | **Checked By** | **Approved By** | **Initiated Date** |
+| KARTHIK.K | RAMESH.A | RAMA RAJU | 10.09.2024 |
+
+<u>Annexure – 1</u>
+
+**NOTE:** THE BELOW ASSEMBLY OF ADAPTER CHANNELS TO LIFT THE HEIGHT OF THE INVERTERS SHOULD BE DONE AT THE TIME OF MAINTENANCE.
+
+<u>**Procedure to Assemble Adapter channel under the inverter units :-**</u>
+
+* Make sure that the rake should be in discharged condition (VCB should be opened, Panto should be down) and follow the safety procedure.
+* Climb onto the roof of the coach to access the RMPU unit by following all safety precautions.
+* Open the Evaporator middle door by unscrewing the hardware from the RMPU unit and place aside.
+* Clean the condensed water droplets on the inverter units.
+* Unscrew the Inverter’s mounting hardware (M6 x 06no’s each) with Ratchet tool.
+* Lift the inverter unit upwards and place the Adapter channel(**A-A675UV2-179338 , image-5**) on both sides as shown below , then fix it with same M6 x 12lg hardware with Ratchet tool.
+* Then after place the Inverter units on the fixed channels using same M6 hardware ( tightening to be done using Ratchet tool).
+* After fixing the Inverter’s hardware , close the top cover of the RMPU’S evaporator mid zone.
+
+Reference Template number SF-0967 (16) 1/1

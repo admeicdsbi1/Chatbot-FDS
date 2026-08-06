@@ -1,0 +1,39 @@
+VB/SMI/E/12 Dated:08.02.2025
+
+INTEGRAL COACH FACTORY, CHENNAI: 38
+
+Mail : cdecicf@gmail.com
+Mobile: 9003141302
+
+No. MD/D/Train Set/RB Contract/186G
+Office of the CDE/Elec.,
+Dt. 08.02.2025
+
+PCME/E.Rly
+
+Sub : Operating procedure/Instructions for Dimming of light in Vande Bharat Train Set rakes
+Ref: (i) Inspection of Train no. 22435 BSB-NDLS Vande Bharat express from CNB to NDLS on 03.02.2024 and issue of Inspection notes no 2024/EDME/Chg/Inspection notes/2 dt.06.02.2024
+
+Based on inspection note in sl.12 of EDME/Chg vide letter under reference (i) ,Facility to dim the coach lights for better passenger comfort during early hours/late hours of the day in the VB train, is introduced in Rake-75 on trial basis which is running between Howrah and Baghalpur, which involves following modifications
+
+1. Direct lighting (DL) & Indirect lighting (IDL) in compartment are segregated such that both DL circuits connected in BN lights circuit and both IDL circuits connected to BD lights circuit.
+2. All IDL in compartment and all doorway lights &gangway lights will be ON when 50 % light is selected and all (DL+IDL) compartment will be ON when 100% light is selected in driver desk.
+3. Dimming of light in passenger compartment (IDL only) can be done by selecting ‘50% light mode from driver desk
+4. A local switch is provided in each coach to switch ON DL locally within the coach at the face of need during 50% light mode operated by driver.
+
+To ensure sufficient light for pantry staff to serve food during 50% light mode (dimming light mode), DL can be switched ON in any of the coaches by switching the local control switch for DL provided near ECC panel in each coach and behind CRW panel in DTC.
+
+The following operating Instructions are attached as Annexure A for dimming of lights in passenger compartment by Loco pilots/Train Crews.
+
+Zonal Railway can decide the operational requirement of DL & IDL as per the passenger feedback and issue necessary guidelines to train manager for dimming of lights in trainsets for the required period (early/late hours of the day) during the run.
+
+Encl : as above.
+
+(P.K.CHAUHAN)
+CDE/Elect.
+
+Copy to :
+Secy. To GM/ICF : for kind information of GM
+PCME/ICF PCEE/ICF : for kind inf.
+CME/QA, CEE/QA, CDE/M, CWE/Fur : for inf
+M/s Medha Servo Drives Pvt. Ltd : for inf. and n/a.

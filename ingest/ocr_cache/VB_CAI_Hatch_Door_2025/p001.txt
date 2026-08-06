@@ -1,0 +1,39 @@
+INTEGRAL COACH FACTORY, CHENNAI – 600 038.
+Tele fax No. (044) 26261872 Rly.:46804
+Email: dycmedicf@gmail.com
+
+No. ICF/QMS/MDM/File/F015
+O/o. General Manager/Mech.Design
+Date: 25.07.2025
+
+Coach Alteration Instruction
+
+| Si. No. | Details | Remarks |
+| :--- | :--- | :--- |
+| 1. | CAI No. | B-2025/07 |
+| 2. | Group | 4-4 |
+| 3. | Description | Provision of hatch door for VCB periodical maintenance. |
+| 4. | Drawing No. | ICF Drawings as per table-1 |
+| 5. | Modification | Cut-way to be made on FRP ceiling panels and a hatch door to be installed in trainset TC coaches where VCB equipment is available but a hatch door is not provided. |
+| 6. | Reason for Modification | To ensure maintainability and safe access to VCB equipment in Vande Bharat TC coaches. |
+| 7. | Coaches concerned | TC coaches in Vande Bharat Rakes. |
+| 8. | Implementation stage | Modifications shall be implemented by user railways as and when convenient |
+| 9. | Category of CAI | A [ ] B [✓] |
+
+Tick A or B as applicable
+A. Modifications shall be implemented immediately by user Rlys.
+B. Modifications shall be implemented by user Rlys. As and when convenient.
+
+10. Drawing No.: It is requested to ensure coach alteration as per given below new drawings:
+
+Table -1
+
+| S. No. | Drawing No. | Description |
+| :--- | :--- | :--- |
+| 1. | TS/TC-4-4-016 alt-a | Fixing Arrangement for VCB Hatch Door |
+| 2. | TS/TC-4-4-017 | Cut-Away Location in FRP Ceiling for VCB Hatch door |
+| 3. | TS/TC-4-4-015 alt- a | VCB Hatch Door-1 near Pantry |
+| 4. | TS/TC-4-4-014 alt-a | VCB Hatch Door-2 near End Wall |
+| 5. | TS/TC-4-4-018 alt-a | Details of VCB Hatch Door Components |
+
+Page | 1

@@ -1,0 +1,53 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+(M/s Faiveley Transport)
+2nd SS-2 (9 Years)
+i. Operator - Driving screw assembly
+ii. Operator - Coordinate bar bearing
+iii. Operator - Rod bearing
+iv. Operator - Roller kit
+v. Operator - Open end stop
+vi. Operator - Close end stop
+vii. Operator - Extremity bearing
+viii. Operator - Synchronous belt
+ix. Operator - Flexible chain assembly
+x. Door leaf- Peripheral seal
+xi. Door leaf - Retention roller
+xii. Lower swing arm - Rollers
+xiii. Front rubber seal assembly - Female front seal
+
+3rd SS-2 (15 Years)
+i. Operator - EDCU
+ii. Operator - Motor
+iii. Operator - Loudspeaker
+iv. Master lock device - Unlocking cylinder
+v. Master lock device - Locking cylinder
+vi. Master lock device - Fork spring
+vii. Master lock device - Latch spring
+viii. Master lock device - Emergency spring
+ix. Master lock device - Electro-magnet
+x. Master lock device - EMS
+xi. Master lock device - DLS1 wire layout
+xii. Master lock device - DLS2 wire layout
+xiii. Master lock device - EDS wire layout
+xiv. Master lock device - DCS wire layout
+xv. Door leaf - Push button wiring
+xvi. Lockout switch assembly - LOS wire layout
+xvii. PCU assembly - PCU
+xviii. PCU assembly - EAD
+xix. PCU assembly - Bowden cable (EAD)
+xx. EED
+xxi. Bowden cable (EED)
+xxii. Push button kit (opening)
+xxiii. Push button kit (closing)
+xxiv. Indication lamp (external)
+xxv. Indication lamp (internal)
+
+FSDS AND FDSS
+
+1. Aerosol Fire Detection & Suppression System
+i. Complete Unit (M/s PYROGEN) - 2nd SS-2 (9 Years)
+ii. Complete Unit (M/s STAT-X) - 3rd SS-2 (15 Years)
+iii. Complete Unit (M/s FIREPRO) - 3rd SS-2 (15 Years)
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 100 of 359

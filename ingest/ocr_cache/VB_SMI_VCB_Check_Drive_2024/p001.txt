@@ -1,0 +1,35 @@
+VB/SMI/E/02 Dated : 12.03.2024
+
+INTEGRAL COACH FACTORY, CHENNAI: 38
+
+Mail: cdeeicf@gmail.com
+Mobile: 9003141302
+
+No. MD/D/Train Set/RB Contract/186G
+Office of the CDE/Elec,
+Dt.12.03.2024.
+
+PCMEs of all Zonal Railways
+
+Sub: Special Drive to Check VCB TRIP Train Line (Basic Unit Level) for Vande Bharat Train Set
+Ref: Joint report for failure of Train No. 20833/34 Vande Bharat Exp. on 08/03/24(ECoR)
+
+There has been an incidence of VCB not closing in BU2 and BU5 of Train No. 20833/34 Vande Bharat (16 car rake) on 8.3.24 in VSKP Coaching Depot, ECoR. On investigation, it has been observed that VCB open command was available in BU5 due to LTC (Line and Traction Converter) contactor stuck. However, VCB of BU2 also was not able to close due to the train line socket wire (VCB TRIP I/P) found erroneously connected between BU2 & BU5.
+
+Hence, it is requested to carry out one round of special check to ensure the following:
+
+a. MC coaches: VCB TRIP I/P Train Line in Cubicle End (CE) End Wall Panel (EWP) P4A, TB No.70-X33 block No. 45 cable no. 032050.098 at socket end is not connected. If it is connected in Terminal Block, it shall be disconnected, isolated and secured preferably on a cage clamp. Ref ICF Drawing No. TS/MC-7-0-005.
+
+b. MC2 coaches: VCB TRIP I/P TL in Non-Cubicle End (NCE), EWP P3A, TB no. 70-X34, Block No. 45, cable no. 032050.099 at socket end is not connected. If it is connected in TB, it shall be disconnected, isolated and secured preferably on a cage clamp. Ref ICF Drawing No. TS/MC-7-0-004.
+
+Encl: (1) Joint Inspection Report
+(2) ICF drawing no. TS/MC-7-0-004 and TS/MC-7-0-005
+(3) The layout formations (16 & 8 car) attached as Annexure-A
+
+(P.K.Chauhan)
+Chief Design Engr./Elect.
+
+Copy to:
+EDME/Coaching/RB : for kind inf.
+Secy to GM/ICF : for kind inf. of GM
+PCME, PCEE : for kind inf.

@@ -1,0 +1,22 @@
+19) Procedure for Shunting Operation through Redundant master controller while Main MCH failure:
+
+* Traction will be Prohibited by the TCMS in case of Main Master controller failure
+* CAB should be de-occupy from main Master controller
+
+* Keep the Mode Selector switch in Shunting mode in shunting operation panel at Driver desk, Legend will be updated in display as [Sh Cab]
+* Keep the Direction selection switch in Forward/Reverse as per direction required
+* TE/BE Switch available for generating the Tractive (or) braking effort .
+* For TRACTION : Keep TE/BE Switch in 33% initially and press the Drive Push button for traction , after based on the requirement select 67% & 100% along with the drive push button for increasing tractive effort .
+* For BRAKING : Keep TE/BE Switch in 33% initially and press the BRAKE Push button for Braking , after based on the requirement select 67% & 100% along with the Brake push button for increasing Braking effort .
+
+* Speed limit push button Use for shunting mode operation only , while pressing this Speed limit push button speed will be limited to 15 KMPH.
+
+**Panel Component Labels:**
+
+* NORMAL - SHUNTING (Mode Selector switch position)
+* 33% - 67% - 100% (TE/BE switch positions)
+* FWD - REV (Direction selection switch positions)
+* SPEED LIMIT (Yellow button)
+* BRAKE (Red button)
+* DRIVE (Green button)
+* SHUNTING OPERATION (Panel title)

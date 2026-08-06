@@ -1,0 +1,37 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+High speed
+Wheel side
+Vibration (A,H,V in mm/sec)
+
+High speed
+Wheel side
+temperature
+
+High speed
+Motor side
+temperature
+
+Coupling temp
+Gear side
+temperature
+
+Coupling temp
+Motor side
+temperature
+
+Low speed
+Wheel side
+Vibration (A,H,V in mm/sec)
+
+Low speed
+Wheel side
+temperature
+
+Low speed
+Motor side
+temperature
+
+Oil temp
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 230 of 359

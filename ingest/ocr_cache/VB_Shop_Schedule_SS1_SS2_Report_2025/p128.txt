@@ -1,0 +1,9 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 69. | Digital Lux Meter | 400 k Lux with Data Logger | For Electrical Train Lighting work |
+| 70. | Sound Level Meter | 30 to 130 dB with Data Logger | For noise measurement |
+| 71. | Digital tachometer with totalizer/counter | 2 to 99,999 RPM, 5-digit LCD display sampling time 0.5 sec | For RPM measurement during the drive run test of TM |
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 126 of 359

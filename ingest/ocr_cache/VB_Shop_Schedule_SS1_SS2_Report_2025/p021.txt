@@ -1,0 +1,26 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+Data analysis of SS1 schedule (Ver.2 rakes) - Rubber Metal Bonded Component (Rubber Spring Pad)
+
+| Workshop | All | CB | LLH | MTN | PER | RCNK | TPTY |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Defective Rubber Spring Pad | 35 | 424 | 410 | 85 | 266 | 37 | 32 |
+| Unit Replaced | 35 | 424 | 410 | 85 | 266 | 37 | 32 |
+| % Defective | 13.67 | 95 | 80 | 12 | 59.3 | 19.2 | 7.1 |
+
+Defective Spring Pad & Unit Replaced
+(Chart labels: All, CB, LLH, MTN, PER, RCNK, TPTY)
+(Legend: Blue = Defective, Red = Unit Replaced)
+
+% Defective Rubber Spring Pad
+(Chart labels: All, CB, LLH, MTN, PER, RCNK, TPTY)
+
+Note:
+* Rubbing/biting marks observed on inner spring - top coil because of hitting with ring of upper spring pad.
+* RDSO and M/s Medha has changed the design of the pad.
+* Workshops also observed welding crack and rubber metal debonding defects.
+
+Observation in Ver.1 Rakes
+* About 120 defects in Rubber Spring Pad (approx 40 % defective) were observed in SS2 schedule of Ver.1 rakes.
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 19 of 359

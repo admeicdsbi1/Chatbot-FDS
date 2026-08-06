@@ -1,0 +1,36 @@
+Working with ADCR BYPASS ON and warning
+to NOTE and acknowledge:
+
+1. After ADCR is bypassed, when the master controller is moved to traction "ADCR Feedback detected open" message will POP UP on DDU
+2. LP should acknowledge the above message and bring the throttle to coast position and bring back for traction. Train will start moving if all doors are properly closed.
+3. If any door is still open, then "DCU software Feedback detected open" message will POP UP in DDU, then LP should confirm the message and open the DOOR overview screen to check and ensure that all doors are either closed or isolated, if not inform technician to check and isolate the malfunctioning door before resuming further traction.
+
+Annexure A-2/3
+
+[Image Text 1]
+Train No: 12345 Active Faults 04/07/23 22:44:08
+Active Faults
+FAULT CODE: 12803 Basic Unit U1
+ADCR Feedback detected open. To continue the traction, Acknowledge this fault, Operate ADCR bypass switch and ensure that all Doors are closed.
+
+[Image Text 2]
+Train: 835002 Active Faults 07/04/23 01:26:21
+Active Faults
+FAULT CODE: 12802 Basic Unit U1
+DCU Software Feedback detected open. To continue the traction, Acknowledge this fault and ensure that all Doors are closed.
+
+ANNUXERE-A
+
+ISOLATION PROCESS
+
+1. Operate the emergency device inside /outside i.e turn the knob to unlock position so that door will be free for manual movement,
+
+| Internal Emergency Device(EED) | External Emergency Device(EAD) |
+| :--- | :--- |
+| Located in inside side coach body | Located in out side coach body |
+
+Now shut the door with little force to close the door and then operate the isolation lever towards RED point. The lever position towards red point indicates that door in isolated position.
+
+| Internel Isolation Device | Externel isolation Device |
+| :--- | :--- |
+| Located in inside door leaf | Located in outside side door leaf |

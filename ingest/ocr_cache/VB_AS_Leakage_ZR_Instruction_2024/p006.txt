@@ -1,0 +1,18 @@
+B. Probable source of leakages identified at MMCT Depot/WR
+
+Summary of leakages
+| S. No. | Name of leakage components | Quantity |
+| :--- | :--- | :--- |
+| 1 | Levelling valve | 13 |
+| 2 | 50-liter drain valve & connector pipe | 4 |
+| 3 | Mean pressure valve | 1 |
+| 4 | Duplex check valve | 2 |
+| 5 | Air suspension pipe line leakage | 1 |
+| 6 | Air suspension test point fitting leakage | 1 |
+
+Leveling valve connector leakage Check-nut
+50 liters AR drain valve & pipe leakage
+Mean pressure valve leaky
+Drain valve leaky
+Outlet pipe going through 50 liters check-nut leaky
+Test point leakage

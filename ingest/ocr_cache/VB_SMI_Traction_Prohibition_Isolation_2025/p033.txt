@@ -1,0 +1,34 @@
+➤ Go to the EBL Loops Screen and verify EBL1&2 status.
+➤ Identify the reason for emergency brake application.
+➤ Release the emergency brake, If it is applied intentionally.
+➤ If not check the emergency brake status in rake screen
+➤ identify the basic unit/coach in which the emergency brake is applied.
+➤ Check the EBL MCB status in that particular coach. If the MCB is tripped normalise the MCB
+➤ If the MCB is ok, Isolate the EP isolation cock in that particular coach physically, to release the emergency brake.
+
+| Train: 4567 | EBL Loop1 Screen | 01/01/37 | 07:15:48 |
+| :--- | :--- | :--- | :--- |
+| EBL1 | EBL2 | | Exit |
+
+**EBL Loop1 Screen**
+
+**Basic Unit 1** | **Basic Unit 6**
+--- | ---
+EBL1 SUPPLY | EBL2 SUPPLY
+VCD2/ Local EBL1 | VCD2/ Local EBL2
+LOCAL EBL1 Relay | LOCAL EBL2 RELAY
+TPWS EMY Relay | VCD1 Relay
+TPWS Bypass Sw | VCD By pass Sw
+VCD1 Relay | Cab Occupy (M)
+VCD By pass Sw | Cab Occupy (R)
+Cab Occupy (M) | EBL1 Supply TL
+Cab Occupy (R) | EBL1 Status TL
+Single Unit Sw | EB Switch Driver
+EB Switch Driver | EB Switch Guard
+EB Switch Guard | EMY Stop
+EB By pass Sw | Local EB2
+EMY Stop |
+Local EB1 |
+EBL2 |
+
+➤ Then TCMS system will allow the Traction .

@@ -1,0 +1,19 @@
+| Parts | Inspection activity | Corrective action |
+| :--- | :--- | :--- |
+| Coils | Inspect the coils for signs of underlying physical deformation (kinks etc) | Replace the jumper if any deformation observed. |
+
+As per the above recommendation, the curly jumper should have been replaced at the earliest occasion to avoid flashing and subsequent damages.
+
+To avoid similar occurrence, it is recommended to conduct one round of inspection of all the curly jumper cables provided in the VB rakes available in the respective depots and take corrective action as per maintenance manual. Priority may be given to the rakes undergone SS-1 schedule.
+
+B. 
+BACHU RAMESH
+Dy.CEE/DII
+29/01/2025
+
+Copy to:
+Secy to GM/ICF : for kind information of GM please.
+EDME/Chg/RB : for kind information please.
+PED/PS & EMU/RDSO : for kind information please
+PCME/ICF, PCEE/ICF : for kind information please
+CDE/Elec, CME/QA, CEE/QA: for kind information please

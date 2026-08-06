@@ -1,0 +1,37 @@
+Train: 4567 | Air spring / EP Overview Screen | 01/01/37 | 07:17:30
+--- | --- | --- | ---
+BU-1Susp | BU-2Susp | BU-3Susp | BU-4Susp | BU-5Susp | BU-6Susp | | | RAKE
+
+Basic Unit 1
+
+| DTC | MC1 | TC | MC2 |
+| :--- | :--- | :--- | :--- |
+| Airspr Bogie 1A: 4.1 | Airspr Bogie 1A: 9.5 | Airspr Bogie 1A: X | Airspr Bogie 1A: X |
+| Airspr Bogie 1B: 2.9 | Airspr Bogie 1B: 3.2 | Airspr Bogie 1B: X | Airspr Bogie 1B: X |
+| Airspr Bogie 2A: 5.2 | Airspr Bogie 2A: 2.3 | Airspr Bogie 2A: X | Airspr Bogie 2A: X |
+| Airspr Bogie 2B: 5.2 | Airspr Bogie 2B: X | Airspr Bogie 2B: X | Airspr Bogie 2B: X |
+| MR Press: 7.8 | SPARE | SPARE | SPARE |
+| BP Press: 4.9 | SPARE | SPARE | SPARE |
+| | SPARE | SPARE | SPARE |
+| | SPARE | SPARE | SPARE |
+
+U5 | Transformer Oil Level Low - Warning | Acknowledge
+--- | --- | ---
+U5 | TC | MCU | Transformer Oil Level Low - Warning | 1115 | | |
+U1 | CCU | CCCR - Active Slave | TR_FAIL_NO:32
+
+➤ If bellow failure observed in any coach , Verify Physically in that coach .
+➤ If no leakage is found then isolate the air spring for that particular coach .
+➤ If motor man wants to get the full speed limit , particular coach air spring should be override through “Air Spring Override Settings” Screen .
+➤ Note : For Air Spring Override Settings Entry Conditions , Maintenance Login is required
+
+Train: 4567 | Air Spring Override | 01/01/37 | 07:18:21
+--- | --- | --- | ---
+BU-1 | BU-2 | BU-3 | BU-4 | BU-5 | BU-6 | | Exit
+
+DTC | MC1 | TC | MC2
+--- | --- | --- | ---
+Speed Restriction Override | Speed Restriction Override | Speed Restriction Override | Speed Restriction Override
+Speed Restriction Activate | Speed Restriction Activate | Speed Restriction Activate | Speed Restriction Activate
+
+➤ Then TCMS system will allow the Traction .

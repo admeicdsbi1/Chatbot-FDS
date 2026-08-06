@@ -1,0 +1,5 @@
+| | | | |
+| :--- | :--- | :--- | :--- |
+| **3** | MC1 (MC 76) 235101 C13 | Observed Date: 08 June 2024<br><br>Pressure: Air Spring pressure reduces by 1.2 kg/cm2 in 3 hours.<br><br>Fault found: Leakage from ferrule fitting of surge tank of air spring.<br><br>Action taken: Arrested leakage from ferrule fitting. | [Image] |
+| **4** | TC (TC 37) 235114 C3 | Observed Date:03 January 2024<br><br>Pressure: Air Spring pressure reduces by 1.6 kg/cm2 in 3 hours.<br><br>Fault found: Quick Release Valve(QRV) of Surge tank defective due to spring got broken.<br><br>Action taken: Provided new QRV. | [Image] |
+| **5** | TC (TC 37) 235114 C3 | Observed Date: 28 October 2023<br><br>Pressure: Air Spring pressure reduces by 1.9 kg/cm2 in 3 hours.<br><br>Fault found: Leakage from ferrule fitting of pipeline connecting surge tank of air spring and pneumatic skid junction.<br><br>Action taken: Arrested leakage from ferrule fitting by providing new SS pipe and ferrule connection. | [Image] |

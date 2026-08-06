@@ -1,0 +1,20 @@
+Doc. No. CPA-MAE675UV2-065 Page: 4 of 8
+Product Code MAE675UV2 Rev. No.: 00
+Title: ADDING BASE CHANNEL TO VFD INVERTER’S _ RMPU_675UV2
+
+| Prepared By | Checked By | Approved By | Initiated Date |
+| :--- | :--- | :--- | :--- |
+| KARTHIK.K | RAMESH.A | RAMA RAJU | 10.09.2024 |
+
+COMPRESSOR INVERTER
+BLOWER INVERTER
+
+IMAGE-3
+INVERTER’S POSITION IN RMPU UNIT
+
+BLOWER INVERTER
+COMPRESSOR INVERTER
+
+IMAGE-4
+
+Reference Template number: SF-0967 (16) 1/1

@@ -1,0 +1,40 @@
+INTEGRAL COACH FACTORY, CHENNAI – 600 038.
+Tele fax No. (044) 26261872 Rly.:46804
+Email: dycmedicf@gmail.com
+
+No. ICF/QMS/MDM/File/F015
+O/o. General Manager/Mech.Design
+Date: 16.10.2025
+
+**Coach Alteration Instruction**
+
+| Sl. No. | Details | Remarks |
+| :--- | :--- | :--- |
+| 1. | CAI No. | B-2025/14 |
+| 2. | Group | 4-4 |
+| 3. | Description | Replacement of existing air duct with modified uniform cross sectional wider AC duct assembly, for TS coaches. |
+| 4. | Drawing No. | TS/DTC-4-4-100, TS/MC-4-4-100 & TS/TC-4-4-100 |
+| 5. | Modification | Provision of uniform cross section duct along with modified return air duct. |
+| 6. | Reason for Modification | To improve conditioned airflow and to reduce condensation issues in VB coaches |
+| 7. | Coaches concerned | DTC, MC, TC & NDTC of VB coaches, applicable for rake no up to 80. |
+| 8. | Implementation stage | Modifications shall be implemented by user Railways, as and when convenient. |
+| 9. | Category of CAI | A [ ] B [✓] Tick A or B as applicable |
+
+A. Modifications shall be implemented immediately by user Rlys.
+B. Modifications shall be implemented by user Rlys. as and when convenient.
+10. Drawing No.: It is requested to ensure coach alteration as per given below
+
+Table -1
+
+| Sl. No. | Description | Old Drg. No. & Alt | New Drg. No. & Alt |
+| :--- | :--- | :--- | :--- |
+| 1 | Modified uniform cross sectional wider AC duct assembly for TS coaches | 1. 726-4-4-001 Alt-c & 889-4-4-001 Alt-b 2. 727-4-4-003 Alt-c 3. 728-4-4-003 Alt-c (Normal Panto) & 891-4-4-001(High-Rise Panto) (New) | 1. 889-4-4-100 (New) 2. 890-4-4-100 (New) 3. 891-4-4-100 (New) |
+
+1. Brief of Modification / changes to be done: Pl refer Annexure Trainset- AK attached herewith.
+Encls: As above
+
+(A.P. TIRUNAAGA SENTILKUMAR)
+Dy.CME/D-I
+For GM/Mech. Design
+
+Page | 1

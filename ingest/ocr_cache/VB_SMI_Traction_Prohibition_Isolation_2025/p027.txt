@@ -1,0 +1,22 @@
+Train: 4567
+EP Cock Isolation Status Screen
+01/01/37
+07:19:43
+
+| BU-1 | BU-2 | BU-3 | BU-4 | BU-5 | BU-6 | | | Rake | Exit | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+Basic Unit 1
+
+| | DTC | MC1 | TC | MC2 |
+| :--- | :--- | :--- | :--- | :--- |
+| Direct Brake-Bg1 | Normal | Normal | Normal | Normal |
+| Direct Brake-Bg2 | Normal | Normal | Normal | Normal |
+| Direct Brake-Car | Normal | Normal | Normal | Normal |
+| BIC-Bg1 | Normal | Normal | Normal | Normal |
+| BIC-Bg2 | Normal | Normal | Normal | Normal |
+| PB-IC | Normal | Normal | Normal | Normal |
+
+➤ EP cocks should be Normal (healthy) more than half of the coaches.
+
+➤ Check the EP cock isolation status screen for additional information.

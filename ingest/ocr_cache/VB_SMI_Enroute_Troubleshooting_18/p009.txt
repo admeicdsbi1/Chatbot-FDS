@@ -1,0 +1,27 @@
+Following screen will be displayed
+
+Train: 4567
+01/01/37
+07:15:16
+Rake
+
+EP Stuck brake Detected
+
+EP stuck brake will be detected Because of the following Conditions
+1. Train Speed is greater than 10 kmph.
+2. MCH is in Coast or Motoring.
+3. EP brake applied feedback through communication,is high in atleast one coach.
+
+****************************************************************************************************
+************************************************ISOLATION PROCEDURE*********************************
+****************************************************************************************************
+
+1. Go to brake screen, release the holding brake(Ensure parking brake is applied in this state for safety)
+2. After releasing the holding brake, If any of the pressure is not becoming 0, then it is an indication that brake is applied.
+3. Isolate the EP brake in that bogie/coach manually using EP isolation cock.
+
+Brake
+Min1 Brake
+Applied Loop
+
+Page 4 of 85

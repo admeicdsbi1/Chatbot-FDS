@@ -1,0 +1,43 @@
+3. Provision of “No smoking” stickers in each coach
+4. Coaches should be free from inflammable items. Drying sweeping of coaches to be carried out before stabling at yard. Random checks to be carried out to ensure no inflammable items are present
+5. Functioning of smoke/fire detection with alarm system to be ensured.
+
+**C. Traction motor:**
+
+1. Temperature checking of axle box, TM bearing through infrared temperature gun.
+2. Traction motor air inlet filter should be intact and cleaned at scheduled intervals.
+3. Ensure no leakage in TM gear case. TM gear case oil level to be ensured.
+
+**D. Auxiliary converter unit-TC**
+
+1. Check the inlet air velocity at multiple locations on the air inlet doors & ensure the air flow average values should be ≥ 4 m/s
+2. Check the exit air velocity at multiple locations on the air outlet doors & ensure the air flow average values should be ≥2.8 m/s.
+
+**E. Line & Traction converter**
+
+1. Check the level of fluid in the expansion tank. Low levels indicate fluid leakage
+2. Ensure pH range of coolant from running circuit in the range of 7.1-8.9
+
+**F. Transformer:**
+
+1. Check for any oil leakage from transformer and oil pumps and ensure appropriate oil level in oil level indicator in accordance with ambient. Oil levels tend to rise in summers and may cross max level making it difficult to identify oil level.
+2. Check proper functioning and monitoring through oil flow indicator.
+3. Check healthiness and working of transformer oil temperature sensors.
+4. Ensure healthy condition of silica gel.
+5. Ensuring proper cleaning of Top and bottom cooler grid with a vacuum cleaner as per schedule
+
+**G. Battery and battery boxes:**
+
+1. Ensure healthiness of battery charger and Battery management system in DDU screen on regular basis.
+
+**H. Pantry:**
+
+Working of Deep freezer cum bottle cooler to be ensured in all the coaches.
+
+**I. Water raising apparatus (Mono-block pump set)**
+
+1. Ensure that the main tanks are filled with water
+2. Ensure that pump selector switch of pump controller is on ‘Auto’ mode
+3. Ensure that the outlet valve of main tank to pump is in open condition
+4. Ensure that motor rotates in the correct direction as painted/embossed.
+5. Check the availability of the water in toilets and wash basins

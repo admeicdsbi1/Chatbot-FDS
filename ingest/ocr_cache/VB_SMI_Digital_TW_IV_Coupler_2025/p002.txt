@@ -1,0 +1,26 @@
+Annexure-A
+
+POINTS TO BE NOTED DURING DE-COUPLING AND COUPLING OF IV COUPLER
+
+[Image Labels]
+- M6 mm Screw 4Nm
+- Nylon Washer
+- Hood Fixing Points
+- Hood Fastening (Captive)
+- Module Receptical
+- F1
+- F2
+- COMS 1
+- COMS 2
+
+Fig.1: IV couplers mounting arrangement in End-wall
+
+1. While connecting or disconnecting the jumper cable assembly, make sure that the mounting screws (M6) are uniformly removed /tightened from the socket. (i.e. both Top and Bottom fixing screws shall be tightened gradually together). It should not happen that one screw is fully tightened, while the other one is kept loose.
+2. While plugging or unplugging the jumper cable assembly (Hood and socket), apply even force on HOOD.
+3. Use proper tools for mating and de-mating of IV couplers.
+4. During the recommended maintenance schedule and after every decoupling and coupling, check the condition of the Nylon washer, M6 screw on hood side and gasket/rubber O-Ring condition at base panel side. If any damage/abnormality is observed, replace the Nylon Washer/M6 Screw/gaskets/Rubber O-Rings immediately to avoid slackness and subsequent electrical failure.
+5. Tightness of the screws to 4Nm torque shall be ensured.
+6. Once IV coupler assemblies are disconnected from the coach, secure the jumper cable assemblies properly to avoid damage to the cables. It shall also be ensured that water does not enter the socket and hood by using Dummy covers/polythene covers or any other suitable method.
+7. Digital torque wrench tried to ensure tightness of the screws of jumper cable to 4Nm torque. The details of the digital torque wrench with its part wise detailed description are shown below for reference.
+
+1

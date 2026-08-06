@@ -1,0 +1,14 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 12. | Lift and Turn device (Bogie Frame Manipulator) | | Holding and rotating bogie frame for various shop schedule activities |
+| 13. | Surface Table | | Bogie frame trammeling |
+| 14. | Portable wheel profile measurement device | Rly Board letter no. 2023/M(C)/60/1 dated. 4.12.2024 | |
+| 15. | Height Control Device (T9) | | Height adjustment of traction gearbox after installing to bogie |
+
+CALIPRI PRIME
+
+T9
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 110 of 359

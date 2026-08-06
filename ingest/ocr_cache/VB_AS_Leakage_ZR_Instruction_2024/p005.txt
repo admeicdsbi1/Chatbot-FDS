@@ -1,0 +1,3 @@
+| | | | |
+| :--- | :--- | :--- | :--- |
+| 8 | MC2 (MC2 88) 235100 C11 | Observed Date: 10 October 2023<br><br>Pressure: Air Spring pressure reduces by 1.5 kg/cm2 in 2 hours.<br><br>Fault found: Installation lever damaged due to which pressure leakage from levelling valve.<br><br>Action taken: New Installation Lever provided. | ![Image](https://files.oaiusercontent.com/file-51234567890) |

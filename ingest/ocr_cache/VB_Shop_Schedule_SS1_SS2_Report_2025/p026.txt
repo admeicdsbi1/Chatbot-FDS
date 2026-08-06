@@ -1,0 +1,27 @@
+REPORT ON SHOP SCHEDULE ACTIVITIES FOR VANDE BHARAT TRAINSET (Ver. 2)
+
+Data analysis of SS1 schedule (Ver.2 rakes) - Primary Suspension Coil Spring
+
+| Workshop | All | CB | LLH | MTN | PER | RCNK | TPTY |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Defective Primary Suspension Spring | 0 | 44 | 78 | 19 | 47 | 0 | 24 |
+| Unit Replaced | 0 | 44 | 78 | 19 | 47 | 0 | 24 |
+| % Defective | 0 | 11 | 15.2 | 2.6 | 10.5 | 0 | 5.3 |
+
+Defective Primary Suspension Spring & Unit Replaced
+[Chart Legend: Blue = Defective, Red = Units Replaced]
+[X-axis: All, CB, LLH, MTN, PER, RCNK, TPTY]
+[Y-axis: Units]
+
+% Defective Primary Suspension Spring
+[X-axis: All, CB, LLH, MTN, PER, RCNK, TPTY]
+[Y-axis: Percent]
+
+Note:
+* No individual serial number punched on coil springs due to which traceability of individual spring is very difficult & copper band showing bowing direction found missing reported by CB workshop.
+* Inner & Outer both spring failure observed by all workshops.
+
+Observation in Ver.1 Rakes
+Frequent cases of breakage of coil springs of GB SPRINGS Dehradun, replacement done with FRONTIER make springs (during SS1 schedule).
+
+IRCAMTECH/GWL/MECH/2025-26/TRAINSET/SHOP SCHEDULE/REPORT Page 24 of 359

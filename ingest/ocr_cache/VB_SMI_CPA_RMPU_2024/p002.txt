@@ -1,0 +1,41 @@
+Doc. No. | CPA-MAE675UV2-065 | Page: 1 of 8 | MEDHA
+--- | --- | --- | ---
+Product Code | MAE675UV2 | Rev. No.: 00 | 
+Title: ADDING BASE CHANNEL TO VFD INVERTER’S _ RMPU_675UV2 | | | 
+Prepared By | Checked By | Approved By | Initiated Date
+KARTHIK.K | RAMESH.A | RAMA RAJU | 10.09.2024
+
+| | |
+| :--- | :--- |
+| CPA Implementation Area (Name of the Module / Sub-Assembly) | ALL COACHES / RMPU |
+| Title of the applicable PCB with Version number | NA |
+| CPA related to Software(Mention the compatibility issues if any along with the Sw SD number) / Wiring (Attach Schematic with Old and New schemes) / Materials | NA |
+| Necessity of CPA | DRAIN ISSUE INSIDE THE RMPU LEADS TO WATER INGRESS INTO INVERTERS. SINCE WATER STAGNATING IN BLOWER AREA. |
+| Investigation (in case of problem) | DUE TO WATER STAGNATION , WATER ENTRY INTO INVERTER’S |
+| Root cause (in case of problem) | DUE TO IMPROPER DRAIN ,WATER STAGNATION IN RMPU |
+| Corrective Action | ADDING ADAPTER CHANNELS TO LIFT THE INVERTER’S |
+| Verification of Corrective Action | ADDING ADAPTER CHANNELS TO LIFT THE INVERTER’S ALL RMPU UNITS AT THE TIME OF MAINTAINENCE ONLY |
+| Date of Corrective Action decided | |
+| Date of Corrective Action Effect from | |
+| Applicable for production (Yes / No) | YES |
+| Applicable for field supplies | Warranty Yes / No | AMC Yes / No | Out of Warranty Yes / No |
+| Applicability for exports locos (Yes / No) | NO |
+| Applicability for Field return S/As (Yes /No) | YES |
+| Priority (High/Medium/Low) | HIGH |
+
+| SI No | Material code | Description | Add/Del/ Inc/Dec/ Replace | Legend/ Location | Qty |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| --- | As per Annexure - 2 | | | | |
+
+| | |
+| :--- | :--- |
+| Effected Batch / Sl.No.(From & TO) | To be implemented in all RMPU inverters of T18 HVAC. |
+| Modification identification (Strike off / Sticker)if applicable | NA |
+| Field returned material Disposal action | NO |
+| Special instructions if required | ---- |
+
+Note: "After Completing the CPA, Move the CPA to Completed CPA Category by Service team" in Ext Service module.
+
+Note: 2 of 2 page is only if required (for Annexure)
+
+Reference Template number SF-0967 (16) 1/1

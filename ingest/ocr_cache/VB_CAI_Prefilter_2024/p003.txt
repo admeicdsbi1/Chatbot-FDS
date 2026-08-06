@@ -1,0 +1,39 @@
+Instructions for provision of pre-filter for hot water boiler.
+
+ICF Drawing No. 890-6-4-002, Alt – ‘e’
+
+1. Item – 1 to 12, No Change
+2. Item – 13 (10 inch high density spun pre-filter (5 Micron PP Spun) with housing compatible for all water purifiers size 3/8” pack of 1 of reputed make such as Eureka Forbes Aqua Guard or similar) to be procured
+
+Objective:
+To prevent scale formation in the boiler and also to ensure clear water from the boiler.
+
+Tools required:
+1. Pneumatic Drilling machine
+2. Screw driver
+3. Plumbing tools
+
+Items required:
+1. Suitable Reducers
+2. Hose pipe
+3. Teflon tape
+4. Isolation cock
+
+Steps to be followed:
+1. Remove the front cover of the sink module.
+2. Connect the isolation cock outlet and pre filter inlet using suitable reducers.
+3. Use Teflon tapes for all joints to avoid leakage.
+4. Mount the pre-filter isolation cock assembly below the sink on the two channels with fasteners supplied along with the filter.
+5. Disconnect the pipe from the inlet of the hot water boiler and connect the same to the isolation cock inlet.
+6. Take a new hose with reducer and connect one end to the pre filter outlet and the other end to the hot water boiler inlet.
+7. Mount the front cover of the sink module.
+
+Encl.: TS/MC-6-4-002 alt. ‘e’
+
+[Signature] 27/3/24.
+A P Tirunaaga Senthil Kumar
+Dy. CME/Design-I
+
+Copy to:
+The General Manager/Mechanical,
+Mechanical Branch, HQ Office.

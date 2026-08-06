@@ -1,0 +1,31 @@
+Doc. No. | CPA-MAE675UV2-065 | Page: 8 of 8 | MEDHA
+--- | --- | --- | ---
+Product Code | MAE675UV2 | Rev. No.: 00 | 
+Title: ADDING BASE CHANNEL TO VFD INVERTER’S _ RMPU_675UV2 | | | 
+Prepared By | Checked By | Approved By | Initiated Date
+KARTHIK.K | RAMESH.A | RAMA RAJU | 10.09.2024
+
+**NOTE :**
+
+1. BAFFLE_VFD_BLOW. (R) - A-A675UV2-153446 **TO BE REMOVED.**
+2. BAFFLE_7.6KVA (R) - A-A675UV2-156574 **TO BE REMOVED.**
+
+**Both the baffle’s along with their mounting hardware to be handed over to respective sheds.**
+
+3. Remove the cable gland’s braided sleeve from the glands if any observed.
+
+**Annexure -2**
+
+Tools required :
+
+| Sl.No | Description | Drawing Number/Code | Remarks |
+| :--- | :--- | :--- | :--- |
+| 1 | RATCHET BOX | A-A675UV2-161380 | |
+| 2 | BOX SPANNER | | FOR M6 BOLT |
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| 00 | 10.09.2024 | 0924-055256-M | ADDING ADAPTER CHANNEL TO LIFT THE INVERTER UNITS UPWARDS IN RMPU_675UV2 |
+| **REV. NO.** | **DATE** | **ECR NO.** | **DESCRIPTION OF REVISION** |
+
+Reference Template number SF-0967 (16) 1/1
