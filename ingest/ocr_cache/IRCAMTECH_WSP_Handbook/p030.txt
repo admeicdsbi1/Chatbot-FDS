@@ -1,0 +1,17 @@
+No.IRCAMTECH/2011/Mech/WSP/1.0 25
+
+| Axle | Code | Description |
+| :--- | :--- | :--- |
+| | 72 | WSP disturbance, one axle |
+| | 73 | WSP disturbance, several axles |
+| | HF | Global hardware failure |
+| | Pr | Processor |
+| | EP | EPROM |
+| | EE | EEPROM |
+| | Hd | Hardware watchdog |
+| | 8888 | Segment test |
+| | 89 | Test run |
+| | 95 | Intermittent fault |
+| | 99 | Good indication |
+
+Handbook on WSP System CAMTECH/GWL

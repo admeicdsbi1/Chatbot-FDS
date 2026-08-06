@@ -1,0 +1,34 @@
+Annexure - II
+
+Joint Inspection Note
+
+Date: 04.07.2024
+
+Ref: RDSO letter No. TS/BD dated 01.07.2024.
+
+With reference to above, the wheelsets of C12 Coach of Vande Bharat express were jointly inspected by the representatives of M/s Medha, M/s SMH, Western Railway & RDSO on 03.07.2024 to 04.07.2024 at Parel Workshop, Western Railway. The observations are tabulated as below:
+
+| Sr. No. | Axle No. | Wheel Disc No. | Brg. No. | MEP | Wheel Dia | Flange Thickness | Wheel gauge | Axial/ Radial Run-out | Unbalance (g-m) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | 22N-3387 | 028 | 100400 | 150µ | 928.0 | 29.4 | 1600.4, 1600.4 | 0.400/ 0.400 | 58.6 |
+| | | 121 | 100443 | 120µ | 928.0 | 29.4 | 1600.4 | 0.450/ 0.700 | 55.5 |
+| 2 | 22N-2019 | 150 | 100347 | 100µ | 928.5 | 29.4 | 1601.1, 1601.0 | 0.490/ 0.620 | 186.5 |
+| | | 006 | 100353 | 100µ | 928.5 | 29.4 | 1601.0 | 0.520/ 0.810 | 218.9 |
+| 3 | 22N-2020 | 160 | 100302 | 80µ | 929.0 | 29.4 | 1601.0, 1601.0 | 0.590/ 0.450 | 216.3 |
+| | | 122 | 100382 | 90µ | 929.0 | 29.4 | 1601.0 | 0.520/ 0.510 | 175.0 |
+| 4 | 22N-1984 | 165 | 100334 | 140µ | 929.0 | 29.4 | 1601.0, 1601.0 | 0.610/ 0.780 | 239.6 |
+| | | 185 | 100343 | 80µ | 929.2 | 29.4 | 1601.0 | 0.580/ 0.600 | 164.5 |
+
+1. From the above table, it is seen that the unbalance of wheels are found beyond the permissible limit for wheelsets running up to 160 kmph i.e. 75g-m as per EN 13260:2020.
+2. Radial/Axial runout of wheels of above Wheelsets is found beyond permissible limit i.e. 0.300mm for radial & 0.500mm for Axial.
+3. It is also identified that the center hole of the axle is 60 degree for first two rakes whereas the tyre turning in SS-I schedule was done on surface wheel lathe having 90 degree center. Surface wheel lathe with 60 degree center is not available at Lower Parel Workshop. Hence, tyre turning is not done on above wheels.
+4. In view of the above, following course of action suggested by M/s SMH & M/s Medha:
+    i. Axles having a center hole of 60 degree should be turned on the surface lathe having 60 degree centers. Similar process will be followed for the 90 degrees axle center hole.
+    ii. Above mentioned wheelsets will be turned on surface wheel lathe having 60 degree center and then verify the dynamic imbalance after tyre turning.
+    iii. M/s SMH will provide a procedure for correction of the above wheelsets including rest of 124 wheelsets with 60 degree axle center hole by the next week i.e. 11.07.2024.
+
+[Signatures]
+G. Ravikumar, SMH, 04/07/2024
+Kuldeep Malviya, Medha, 04-07-2024
+[Signature], JE/D/Coaching/RDSO/LKO, 04/07/2024
+SHAKTI SAMEL, SSE/WHEEL & RB/PL, 04/07/2024

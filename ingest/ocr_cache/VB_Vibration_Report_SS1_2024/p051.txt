@@ -1,0 +1,6 @@
+C11: No significant vibrations
+
+| | | |
+| :--- | :--- | :--- |
+| **C11**<br>**Rear Bogie** | | --VA1 [col = 2]<br>ID00041 km: 41.0<br>DFT amplitude -><br>frequency (Hz) -> |
+| **C11**<br>**Coach**<br>**Centre** | | --VA1 [col = 2]<br>ID00042 km: 42.0<br>DFT amplitude -><br>frequency (Hz) -> |

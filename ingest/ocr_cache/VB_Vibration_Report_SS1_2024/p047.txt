@@ -1,0 +1,4 @@
+| Location | Frequency Spectrum Plot |
+| :--- | :--- |
+| **C9**<br>Rear Bogie | **C9: Earlier no vibrations. Now significant vibrations**<br>--VA1 [col = 2]<br>ID00031 km: 31.0<br>DFT amplitude -><br>frequency (Hz) -> |
+| **C9**<br>Between<br>rear Bogie<br>& Coach<br>Centre | --VA1 [col = 2]<br>ID00032 km: 32.0<br>DFT amplitude -><br>frequency (Hz) -> |

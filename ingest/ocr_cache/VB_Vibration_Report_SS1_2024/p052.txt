@@ -1,0 +1,5 @@
+| | | |
+| :--- | :--- | :--- |
+| **C11 Front Bogie** | | --VA1 [col = 2]<br>ID00043 km: 43.0<br>DFT amplitude -><br>frequency (Hz) -> |
+| **C12: No significant vibrations** | | |
+| **C12 Rear Bogie** | --VA1 [col = 2]<br>ID00022 km: 22.0<br>DFT amplitude -><br>frequency (Hz) -> | --VA1 [col = 2]<br>ID00044 km: 44.0<br>DFT amplitude -><br>frequency (Hz) -> |

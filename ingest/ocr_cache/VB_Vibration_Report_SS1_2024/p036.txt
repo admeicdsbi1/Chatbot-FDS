@@ -1,0 +1,8 @@
+| Location | Plot |
+| :--- | :--- |
+| C4 Coach Centre | --VA1 [col = 2] ID00010 km: 10.0 |
+| C4 Front Bogie | --VA1 [col = 2] ID00011 km: 11.0 |
+
+**Axis Labels:**
+DFT amplitude ->
+frequency (Hz) ->

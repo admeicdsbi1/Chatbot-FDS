@@ -1,0 +1,5 @@
+| | | |
+| :--- | :--- | :--- |
+| **C1 Front Bogie** | --VA1 [col = 2] <br> ID00002 km: 2.0 <br> DFT amplitude -> <br> frequency (Hz) -> | --VA1 [col = 2] <br> ID00002 km: 2.0 <br> DFT amplitude -> <br> frequency (Hz) -> |
+| **C2: No significant vibrations** | | |
+| **C2 Rear Bogie** | --VA1 [col = 2] <br> ID00003 km: 3.0 <br> DFT amplitude -> <br> frequency (Hz) -> | --VA1 [col = 2] <br> ID00003 km: 3.0 <br> DFT amplitude -> <br> frequency (Hz) -> |

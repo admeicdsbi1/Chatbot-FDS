@@ -1,0 +1,13 @@
+| Location | Graph ID | Color |
+| :--- | :--- | :--- |
+| C8 Between Coach Centre & Front Bogie | ID00020 km: 20.0 | Red |
+| C8 Between Coach Centre & Front Bogie | ID00029 km: 29.0 | Blue |
+| C8 Front Bogie | ID00021 km: 21.0 | Red |
+| C8 Front Bogie | ID00030 km: 30.0 | Blue |
+
+**Axis Labels:**
+*   Vertical axis: DFT amplitude ->
+*   Horizontal axis: frequency (Hz) ->
+
+**Chart Headers:**
+*   --VA1 [col = 2]

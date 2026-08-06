@@ -1,0 +1,6 @@
+| | | |
+| :--- | :--- | :--- |
+| **C14 Coach Centre** | --VA1 [col = 2] <br> ID00026 km: 26.0 <br> DFT amplitude -> <br> frequency (Hz) -> | --VA1 [col = 2] <br> ID00051 km: 51.0 <br> DFT amplitude -> <br> frequency (Hz) -> |
+| **C14 Front Bogie** | --VA1 [col = 2] <br> ID00027 km: 27.0 <br> DFT amplitude -> <br> frequency (Hz) -> | --VA1 [col = 2] <br> ID00052 km: 52.0 <br> DFT amplitude -> <br> frequency (Hz) -> |
+
+-X-X-

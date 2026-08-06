@@ -1,0 +1,6 @@
+C7: No significant vibrations
+
+| Location | DFT Amplitude vs Frequency Plot |
+| :--- | :--- |
+| C7<br>Rear Bogie | --VA1 [col = 2]<br>ID00018 km: 18.0<br>DFT amplitude -><br>frequency (Hz) -> |
+| C7<br>Coach<br>Centre | --VA1 [col = 2]<br>ID00019 km: 19.0<br>DFT amplitude -><br>frequency (Hz) -> |

@@ -1,0 +1,31 @@
+WSP GUI APPLICATION
+Escorts Kubota Limited
+
+Fault Code Table
+
+| Fault code | Fault Cause | Fault code | Fault Cause |
+| :--- | :--- | :--- | :--- |
+| 1.0 | Failure of relay disconnector – Axle 1 | 3.0 | Failure of relay disconnector - Axle 3 |
+| 1.1 | Speed sensor1 (TG1 ) NO signal / short/ open/ broken | 3.1 | Speed sensor3 (TG3 ) NO signal / short/ open/ broken |
+| 1.2 | Exhaust Valve axle 1 (EX1) short | 3.2 | Exhaust Valve axle 3 (EX3) short |
+| 1.3 | Exhaust-Valve axle 1 (EX1) broken/Open | 3.3 | Exhaust-Valve axle 3 (EX3) broken/Open |
+| 1.4 | Failure of Exhaust Valve Switch axle 1 (EX1) | 3.4 | Failure of Exhaust Valve Switch axle 3 (EX3) |
+| 1.5 | Cut-off Valve axle1 (CU1) short | 3.5 | Cut-off Valve axle3 (CU3) short |
+| 1.6 | Cut-off Valve axle 1 (CU1) broken/ Open | 3.6 | Cut-off Valve axle 3 (CU3) broken/ Open |
+| 1.7 | Failure of Cut-Off Valve Switch axle 1 (CU1) | 3.7 | Failure of Cut-Off Valve Switch axle 3 (CU3) |
+| 2.0 | Failure of relay disconnector - Axle 2 | 4.0 | Failure of relay disconnector - Axle 4 |
+| 2.1 | Speed sensor2 (TG2 ) NO signal / short/ open/ broken | 4.1 | Speed sensor4 (TG4) NO signal / short/ open/ broken |
+| 2.2 | Exhaust Valve axle 2 (EX2) short | 4.2 | Exhaust Valve axle 4 (EX4) short |
+| 2.3 | Exhaust-Valve axle 2 (EX2) broken/Open | 4.3 | Exhaust-Valve axle 4 (EX4) broken/Open |
+| 2.4 | Failure of Exhaust Valve Switch axle 2 (EX2) | 4.4 | Failure of Exhaust Valve Switch axle 4 (EX4) |
+| 2.5 | Cut-off Valve axle2 (CU2) short | 4.5 | Cut-off Valve axle4 (CU4) short |
+| 2.6 | Cut-off Valve axle 2 (CU2) broken/ Open | 4.6 | Cut-off Valve axle 4 (CU4) broken/ Open |
+| 2.7 | Failure of Cut-Off Valve Switch axle 2 (CU2) | 4.7 | Failure of Cut-Off Valve Switch axle 2 (CU2) |
+| 7.0 | Mismatch of parameter record in the memory or a discharged battery. | 7.3 | MgBr Relay output Failure (Aux MgBr) |
+| 7.1 | Failure of the kilometre counter | 7.4 | Door Relay output Failure (Aux Door ) |
+| 7.2 | DPB Relay output Failure (Aux Slip) | 7.5 | KOMP Relay output Failure (Aux User) |
+| 9.0 | Failure of saved configuration parameters of vehicle (mismatch, loaded value out of range). | 9.5 | Failure or earlier failure recorded in memory |
+
+Classification | ESCORTS-CONFIDENTIAL
+Classification | ESCORTS KUBOTA-CONFIDENTIAL
+14

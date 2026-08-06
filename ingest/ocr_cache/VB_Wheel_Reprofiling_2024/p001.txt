@@ -1,0 +1,60 @@
+भारत सरकार - रेल मंत्रालय
+Government of India - Ministry of Railways
+अनुसंधान अभिकल्प और मानक संगठन
+Research Designs & Standards Organisation
+लखनऊ - 226 011
+Lucknow - 226 011
+EPBX (0522) 2451200
+DID (0522) 2450115
+Fax (0522) 2458500
+DID (0522) 2465310
+
+MC/TS/BD
+Date: 11.01.2024
+Through e-mail
+
+Principal Chief Mechanical Engineer,
+
+| | |
+| :--- | :--- |
+| 1. Northern Railway, Baroda House, New Delhi - 110 001 | 10. South East Central Railway, Bilaspur - 495 004. |
+| 2. Western Railway, Churchgate, Mumbai - 400020 | 11. West Central Railway, Jabalpur-482 001. |
+| 3. Central Railway, CSMT, Mumbai - 400 001. | 12. South Western Railway, Hubli - 580023. |
+| 4. Eastern Railway, Fairly Place, Kolkata - 700 001 | 13. East Coast Railway, Railway Complex, Bhubaneshwar - 751 023. |
+| 5. Southern Railway, Park Town, Chennai - 600 003. | 14. East Central Railway, Hajipur - 844 101. |
+| 6. North Frontier Railway, Maligaon, Guwahati - 781 001. | 15. South Eastern Railway, Garden Reach, Kolkata - 700 043. |
+| 7. North Eastern Railway, Gorakhpur - 273 001. | 16. North Central Railway, Allahabad - 211 001. |
+| 8. North Western Railway, Jaipur - 302 006. | 17. Konkan Railway Corpo. Ltd., Corporate Office, Belapur Bhawan, Navi Mumbai - 400 614. |
+| 9. South Central Railway, Secunderabad - 500 071. | |
+
+Sub: Re-profiling of wheels of Vande Bharat Coaches.
+Ref: (i). Railway Board letter No. 2022/M(C)/137/4Trainset_Misc dated 09.01.2024.
+(ii). This office letter of even No. dated 01.01.2024.
+(iii). This office letter No. MC/EMU/WTA dated 29.12.2023.
+
+Performance of Vande Bharat trains is being regularly monitored & it has been observed that peak wheel impact loads at wheel level increase over the period of time since last wheel profiling. Also, international maintenance practices recommend for wheel re-profiling after approx. 200000 kms in service.
+
+RDSO vide letter under reference (ii) had proposed to Railway Board for re-profiling of wheels of Vande Bharat Coaches at maintenance depots of Zonal Railways and the same has been approved by the Railway Board vide letter under reference (i) above and Railway Board has advised to issue necessary instructions and guidelines regarding re-profiling of wheels in Vande Bharat Trainsets.
+
+Accordingly, following instructions are to be ensured for compliance: -
+
+i) Wheel tread condition of Vande Bharat Trains to be monitored closely be depots after 6 months from last shop schedule/commissioning, preferably with help of en-route WCMs of OMRSs. Based on monitoring, re-profiling of wheelsets shall be done, if necessary. Further, re-profiling of wheelsets of coaches shall be done in case of any WCM critical alert or repeated maintenance alerts (alerts in terms of peak wheel impact load as well as ILF both to be considered) since last shop schedule/commissioning.
+
+ii) In follow-up of above monitoring, Re-profiling of wheel sets of all Vande Bharat coaches shall be ensured after 9 months (+30 days/-0 days) from last shop schedule/commissioning at depots.
+
+iii) Above mentioned wheel re-profiling at depots should preferably be done on underfloor wheel lathe with minimum possible depth of cut in compliance of instructions for implementation of intermediate worn wheel profiles for wheels of VB trains issued vide letter under reference (iii).
+
+iv) During execution of re-profiling of wheels of Vande Bharat trains, priority should be given to wheels of such coaches, which have been involved in WCM (OMRS) alerts or any other unusual in primary suspension. Moreover, general priority should be given Motor Coaches (MCs) followed by Trailer Coaches (TCs), Drive Trailer Coaches (DTCs) & Non-Drive Trailer Coaches (NDTCs).
+
+Zonal Railways are also requested to maintain & fill data for each coach in format enclosed as Annexure-I for comparing of performance before and after re-profiling.
+
+DA: Nil.
+
+(Anil Kumar Singh)
+Executive Director (Stds.)/Carriage
+11.1.2024
+
+Copy to: for kind information please.
+1. PED/CAMTECH, Maharajpur, Gwalior - 474 005
+2. EDME (Chg.), Railway Board, New Delhi - 110 001
+3. GM/CRIS/CMM - For kind information and implementation of system for enabling & monitoring of execution of above instructions.

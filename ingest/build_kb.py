@@ -44,6 +44,10 @@ SYSTEM_HARD_CANARIES = {
         "timer relay": re.compile(r"\btimer\s+relay\b", re.I),
         "dump/anti-skid valve": re.compile(r"\bdump\s+valve\b|\banti[- ]?skid\b", re.I),
     },
+    "VB": {
+        "CTRB": re.compile(r"\bCTRB\b", re.I),
+        "Vande Bharat": re.compile(r"\bvande\s*bharat\b", re.I),
+    },
 }
 # Soft canaries only warn. "K05"/"off delay" are soft: verified absent from all
 # source PDFs (text AND OCR'd diagrams) — K-designations come from wiring
@@ -52,7 +56,7 @@ SOFT_CANARIES = {
     "K05": re.compile(r"\bK[\s\-]?05\b", re.I),
     "off delay": re.compile(r"\boff[\s\-]?delay\b", re.I),
 }
-MIN_TOTAL_CHUNKS = 600
+MIN_TOTAL_CHUNKS = 1000   # 1045 after VB Wave 1 (wheels/bearings/CTRB)
 
 
 def main():
@@ -84,16 +88,23 @@ def main():
         all_chunks.extend(chunks)
 
         chars = sum(c["char_count"] for c in chunks)
-        need = [s["page"] for s in page_stats if s["needs_ocr"]]
         weak_unocr = [s["page"] for s in page_stats
                       if s["chars"] < 300 and s["big_images"] and not s["ocr_merged"]]
+        # Scanner-OCR / mojibake pages not yet OCR'd are the dangerous ones:
+        # unlike a blank scan they contribute text, so they land in the KB
+        # looking perfectly valid.
+        suspect_unocr = [s["page"] for s in page_stats
+                         if s.get("suspect_layer") and not s["ocr_merged"]]
         merged = sum(1 for s in page_stats if s["ocr_merged"])
-        if weak_unocr:
-            ocr_pending[entry["doc_id"]] = weak_unocr
+        pending = sorted(set(weak_unocr) | set(suspect_unocr))
+        if pending:
+            ocr_pending[entry["doc_id"]] = pending
         print(f"{entry['doc_id']}: {len(chunks)} chunks, {chars} chars, "
               f"{len(sections)} sections, OCR merged on {merged} pages")
-        if weak_unocr:
-            print(f"    pages needing OCR (run ingest/ocr_gemini.py): {weak_unocr}")
+        if pending:
+            print(f"    pages needing OCR (run ingest/ocr_gemini.py): {pending}")
+        if suspect_unocr:
+            print(f"    !! untrusted text layer (scan/mojibake), still in KB: {suspect_unocr}")
 
     print("=" * 72)
     print(f"TOTAL: {len(all_chunks)} chunks "

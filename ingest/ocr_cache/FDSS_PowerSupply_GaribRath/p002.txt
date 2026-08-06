@@ -1,0 +1,27 @@
+File NO.RDSO-PE0TLAC(STS)/3/2021-ED/PSEMU/RDSO
+
+POWER SUPPLY AND EMU DIRECTORATE
+
+No. EL/6.8.21                                                                                                Dated As signed
+
+Sub: Regarding Electrical wiring in ICF type AC 3-Tier Garib Rath coaches for installation of Stand Alone Aspiration Type Automatic Smoke/Fire Detection with Alarm and with Brake application system for AC coaches (LHB/ICF).
+Ref: (i) Carriage dte Note No. MC/ACF/Fire Detection/AC dt. 19.08.2024 & 17.09.2024.
+(ii) Lower Parel Workshop/WR letter no. CW/PO/RSP/03 of 2022 dt. 17.08.2024.
+
+1. Carriage Directorate vide notes under ref (i) above, have forwarded Carriage Workshop/Lower Parel/ Western Railway letter under ref(ii) above requesting to issue Standard Practices for electrical wiring and power supply for AC 3-Tier GaribRath Coaches to FSDS system.
+2. The GaribRath type EOG AC coaches are at having 24V DC supply arrangement through 120AH battery. Further, as per maximum electrical load of FSDS @24V DC i.e. 150W, current taken by FSDS system comes out to be 6.25A and next available standard MCB size is of 10A.
+3. In view of the above, as per the design requirements, following guidelines to be followed :
+a) Power Supply arrangement for FSDS system fitted with internal battery of 24V, 7AH to be taken from dedicated 10A, 2P, C-curve DC MCB between T60 & T63 terminals after 25A DC fuses as shown in RCF drawing no. AE70305. The MCB to be placed in The Power Panel besides other DC MCBs. New 10A MCB provided to be marked as FSDS. The indicated drawing is attached as ANNEXURE.
+b) In addition to above, a DC-DC converter suitable for 24V DC to 110V DC to be provided. This arrangement has already been fitted and tested at ANVT coaching Depot/NR.
+c) The E-beam cable of 2.5 sq. mm size as per RDSO specification no. ELRS/SPEC/ELC/0019, (Rev-4) to be used for wiring.
+d) Code of Practice for Prevention of fire in AC coaches as per RDSO specification no. RDSO/PE/O/0008-2005 (Rev.0) or latest needs to be followed.
+4. WR may be advised accordingly.
+
+This is for information and necessary action please.
+
+DA: As above
+
+(Manjay Kumar) 18-09-24
+DSE (TL-AC System Design)
+
+Director/VDG2/Carriage

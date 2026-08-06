@@ -1,0 +1,17 @@
+C12: Rear
+Bogie
+
+Vertical Accln (Z Axis)
+
+DFT amplitude (g) ->
+
+frequency (Hz) ->
+
+C12: Coach
+Centre
+
+Vertical Accln (Z Axis)
+
+DFT amplitude (g) ->
+
+frequency (Hz) ->

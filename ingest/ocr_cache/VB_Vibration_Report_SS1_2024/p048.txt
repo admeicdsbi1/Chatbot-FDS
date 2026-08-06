@@ -1,0 +1,4 @@
+| Location | Frequency Spectrum Plot |
+| :--- | :--- |
+| C9 Coach Centre | --VA1 [col = 2] <br> ID00033 km: 33.0 <br> DFT amplitude -> <br> frequency (Hz) -> |
+| C9 Between Coach Centre & Front Bogie | --VA1 [col = 2] <br> ID00034 km: 34.0 <br> DFT amplitude -> <br> frequency (Hz) -> |

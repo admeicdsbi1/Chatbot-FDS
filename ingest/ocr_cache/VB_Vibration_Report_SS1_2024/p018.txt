@@ -1,0 +1,17 @@
+C2: Between
+Coach Centre
+& Front Bogie
+
+Vertical Accln (Z Axis)
+
+DFT amplitude (g) ->
+
+frequency (Hz) ->
+
+C2: Front Bogie
+
+Vertical Accln (Z Axis)
+
+DFT amplitude (g) ->
+
+frequency (Hz) ->

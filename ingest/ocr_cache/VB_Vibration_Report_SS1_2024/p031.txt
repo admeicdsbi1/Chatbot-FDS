@@ -1,0 +1,9 @@
+Annexure - V
+
+DFT of Vertical Acceleration Channel (Z Axis - 50 Hz Bandwidth): Train 20902 VB
+
+| | VA (05-Jul-2024) GNC -> MMCT | VA (21-Jul-2024) ST -> VR |
+| :--- | :--- | :--- |
+| **C1: No significant vibration from Bogies. Some Coach Centre vibration expected due to being end coach.** | | |
+| **C1 Rear Bogie** | --VA1 [col = 2] <br> ID00000 km: 0.0 <br> DFT amplitude -> <br> frequency (Hz) -> | --VA1 [col = 2] <br> ID00000 km: 0.0 <br> DFT amplitude -> <br> frequency (Hz) -> |
+| **C1 Coach Centre** | --VA1 [col = 2] <br> ID00001 km: 1.0 <br> DFT amplitude -> <br> frequency (Hz) -> | --VA1 [col = 2] <br> ID00001 km: 1.0 <br> DFT amplitude -> <br> frequency (Hz) -> |

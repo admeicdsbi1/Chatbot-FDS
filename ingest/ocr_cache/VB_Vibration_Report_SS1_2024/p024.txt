@@ -1,0 +1,18 @@
+C8: Between
+Rear Bogie &
+Coach Centre
+
+Vertical Accln (Z Axis)
+
+DFT amplitude (g) ->
+
+frequency (Hz) ->
+
+C8: Coach
+Centre
+
+Vertical Accln (Z Axis)
+
+DFT amplitude (g) ->
+
+frequency (Hz) ->

@@ -1,0 +1,10 @@
+E2: Rear Bogie
+Vertical Accln (Z Axis)
+frequency (Hz) ->
+DFT amplitude (g) ->
+
+E2: Coach
+Centre
+Vertical Accln (Z Axis)
+frequency (Hz) ->
+DFT amplitude (g) ->

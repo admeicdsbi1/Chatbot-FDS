@@ -1,0 +1,12 @@
+| | | | |
+| :--- | :--- | :--- | :--- |
+| **C3** | --VA1 [col = 2] ID00006 km: 6.0 | --VA1 [col = 2] ID00007 km: 7.0 | --VA1 [col = 2] ID00008 km: 8.0 |
+| **C4** | --VA1 [col = 2] ID00009 km: 9.0 | --VA1 [col = 2] ID00010 km: 10.0 | --VA1 [col = 2] ID00011 km: 11.0 |
+
+**Axis Labels (repeated on all plots):**
+*   Y-axis: PSD amplitude (g²/Hz) ->
+*   X-axis: frequency (Hz) ->
+
+**Scale Values (repeated on all plots):**
+*   Y-axis: 1.0E-02, 1.0E-03, 1.0E-04, 1.0E-05, 1.0E-06, 1.0E-07, 1.0E-08
+*   X-axis: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50

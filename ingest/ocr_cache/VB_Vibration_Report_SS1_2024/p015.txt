@@ -1,0 +1,16 @@
+Annexure - III
+
+DFT of Vertical Acceleration Channel (Z Axis) with 50 Hz Bandwidth
+Train 20902, GNC – MMCT on 05-Jul-2024
+All graphs to same scale
+
+C1: Rear Bogie
+Vertical Accln (Z Axis)
+DFT amplitude (g) ->
+frequency (Hz) ->
+
+C1: Coach
+Centre
+Vertical Accln (Z Axis)
+DFT amplitude (g) ->
+frequency (Hz) ->

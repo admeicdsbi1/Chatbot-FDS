@@ -27,7 +27,8 @@ import fitz
 import requests
 
 from doc_registry import REGISTRY, pdf_path
-from parse_pdf import OCR_CACHE_DIR, WEAK_TEXT_CHARS, BIG_IMAGE_WH
+from parse_pdf import (OCR_CACHE_DIR, WEAK_TEXT_CHARS, BIG_IMAGE_WH,
+                       is_garbled, is_scanned_page)
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
@@ -82,9 +83,13 @@ BAND_OVERLAP = 0.08
 
 def qualifying_pages(entry):
     """Pages worth OCR: weak/moderate native text with a big embedded image
-    (scanned circulars, slides), or several big images regardless of text
-    (wiring-diagram pages whose captions extract fine but whose component
-    labels — e.g. relay K05 — live inside the images)."""
+    (scanned circulars, slides), several big images regardless of text (wiring-
+    diagram pages whose captions extract fine but whose component labels — e.g.
+    relay K05 — live inside the images), or a page that IS a full-page scan.
+
+    The scan case is not covered by any character-count rule: those pages extract
+    950-1800 characters, they are simply the scanner's own OCR of them, so
+    without this test a lossy scanner-OCR cover page is never queued at all."""
     doc = fitz.open(pdf_path(entry))
     # force_ocr docs (corrupted native text) get every page OCR'd
     if entry.get("force_ocr"):
@@ -94,10 +99,12 @@ def qualifying_pages(entry):
     out = []
     for pno in range(len(doc)):
         page = doc[pno]
-        chars = len(page.get_text().strip())
+        text = page.get_text().strip()
+        chars = len(text)
         big = sum(1 for img in page.get_images()
                   if img[2] >= BIG_IMAGE_WH[0] and img[3] >= BIG_IMAGE_WH[1])
-        if (big >= 1 and chars < 800) or big >= 2:
+        if (big >= 1 and chars < 800) or big >= 2 or is_scanned_page(page) \
+                or is_garbled(text):
             out.append(pno + 1)
     doc.close()
     return out

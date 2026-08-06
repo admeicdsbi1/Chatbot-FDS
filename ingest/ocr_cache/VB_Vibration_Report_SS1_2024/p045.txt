@@ -1,0 +1,4 @@
+| | | |
+| :--- | :--- | :--- |
+| **C8**<br>Between<br>Rear Bogie<br>& Coach<br>Centre | --VA1 [col = 2]<br>ID00018 km: 18.0<br>DFT amplitude -><br>frequency (Hz) -> | --VA1 [col = 2]<br>ID00027 km: 27.0<br>DFT amplitude -><br>frequency (Hz) -> |
+| **C8**<br>Coach<br>Centre | --VA1 [col = 2]<br>ID00019 km: 19.0<br>DFT amplitude -><br>frequency (Hz) -> | --VA1 [col = 2]<br>ID00028 km: 28.0<br>DFT amplitude -><br>frequency (Hz) -> |

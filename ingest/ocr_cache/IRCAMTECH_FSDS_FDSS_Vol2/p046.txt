@@ -1,0 +1,39 @@
+### Engineering Maintenance Document Index
+
+**Subject:** Pantry Coaches: Fire Detection and Suppression System (FSDS and FDSS)
+**Document Reference:** IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+**Page Number:** 46 of 64
+
+---
+
+#### Component Designations
+| Designation | Description |
+| :--- | :--- |
+| **SD** | Smoke Detector |
+| **HD** | Heat Detector |
+
+---
+
+#### System Components and Layout
+*   **Pantry Car System Components:**
+    *   02 nos. point type Heat Detectors (located in hot buffet / pantry area)
+    *   Linear Heat Detector (LHD) cable (located on the ceiling of hot buffet / pantry area)
+    *   Point type Smoke Detectors (located in manager room, pantry staff room, store room)
+    *   Sounder Beacon (located in manager cabin)
+
+---
+
+#### Technical Operational Notes
+*   **LHB Hot Buffet/Pantry Car:**
+    *   Pre-alarm (smoke detection) and manual activation are available via an activation switch on the control panel.
+    *   Upon receiving a Fire alarm signal (via Heat Detectors), the system performs two actions:
+        1.  Cuts off power supply to the Electric Hob.
+        2.  Initiates automatic fire Suppression system.
+*   **ICF Pantry Cars:**
+    *   Automatic FDSS operates in manual mode until flame-based cooking is modified to flame-free cooking.
+
+---
+
+#### Equipment Identification
+*   **System Name:** Fire Detection System
+*   **Display Panel Text:** FIRE DET. SYSTEM G-SPHROK ENT. A

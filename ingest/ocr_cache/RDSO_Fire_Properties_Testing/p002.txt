@@ -1,0 +1,47 @@
+A. Integral Coach Factory, Chennai
+| S.N | Parameters | Standards as per EN 45545 |
+| :--- | :--- | :--- |
+| 1 | Heat Release Rate (MARHE) | ISO 5660-1 |
+| 2 | Smoke Density (Ds ,VOF₄) | ISO 5659-2 |
+| 3 | Smoke Toxicity (CITg) & (CITNLP) | ISO 5659-2 & NFX70-100-1&2 |
+| 4 | Lateral Spread of flame (CFE) | ISO 5658-2 |
+| 5 | Radiant Panel (CHF) | ISO 9239-1 |
+| 6 | Oxygen Index (OI) | ISO 4589-2 |
+| 7 | Single-Flame Source Test | ISO 11925-2 |
+| 8 | Vertical Flame Test | ISO 60695-11-10 |
+
+B. M/s Ignito Labs Pvt. Ltd., Domkan, Anangpur, Fridabad, Haryana
+| S.N | Parameters | Standards as per EN 45545 |
+| :--- | :--- | :--- |
+| 1 | Heat Release Rate (MARHE) | ISO 5660-1 |
+| 2 | Smoke Density (Ds ,VOF₄) | ISO 5659-2 |
+| 3 | Smoke Toxicity (CITg) | ISO 5659-2 |
+| 4 | Lateral Spread of flame (CFE) | ISO 5658-2 |
+| 5 | Radiant Panel (CHF) | ISO 9239-1 |
+| 6 | Oxygen Index (OI) | ISO 4589-2 |
+| 7 | Single-Flame Source Test | ISO 11925-2 |
+| 8 | Vertical Flame Test | ISO 60695-11-10 |
+
+C. M/s Spectro Analytical labs Pvt. Ltd, S-1, GNEPIP, Surajpur Industrial Area, Phase-V, Kasna, Greater Noida, Gautam Buddha Nagar, U.P-201308.
+| S.N | Parameters | Standards as per EN 45545 |
+| :--- | :--- | :--- |
+| 1 | Heat Release Rate (MARHE) | ISO 5660-1 |
+| 2 | Smoke Density (Ds ,VOF₄) | ISO 5659-2 |
+| 3 | Smoke Toxicity (CITg) | ISO 5659-2, ISO 17084 |
+| 4 | Lateral Spread of flame (CFE) | ISO 5658-2 |
+| 5 | Radiant Panel (CHF) | ISO 9239-1 |
+| 6 | Oxygen Index (OI) | ISO 4589-2 |
+
+Zonal Railways / Production Units may utilize these facilities for independent Quality audits of furnishing materials whenever required.
+
+DA: RDSO letter no. MC/Testing dated 01.04.2019 & 20.01.2022.
+
+(Samir Lohani)
+Executive Director (Standards)/Carriage
+
+Copy to:
+1. ED/QA, RITES Ltd. , 6th Floor, Plot No. 1, Sector -29, Gurgaon- 122001
+2. EDME (Chg) Railway Board, Rail Bhawan, New Delhi-110001
+3. PED/RS, RDSO, Lucknow-226011.
+4. ED/M&C, RDSO, Lucknow - 226011
+5. ED / Safety, ED / E&R Railway Board for kind inf. pl.

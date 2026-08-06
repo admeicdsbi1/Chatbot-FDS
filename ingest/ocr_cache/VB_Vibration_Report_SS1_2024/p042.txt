@@ -1,0 +1,4 @@
+| | | |
+| :--- | :--- | :--- |
+| **E1 Coach Centre** | --VA1 [col = 2] <br> ID00012 km: 12.0 <br> DFT amplitude -> <br> frequency (Hz) -> | --VA1 [col = 2] <br> ID00022 km: 22.0 <br> DFT amplitude -> <br> frequency (Hz) -> |
+| **E1 Front Bogie** | --VA1 [col = 2] <br> ID00013 km: 13.0 <br> DFT amplitude -> <br> frequency (Hz) -> | --VA1 [col = 2] <br> ID00023 km: 23.0 <br> DFT amplitude -> <br> frequency (Hz) -> |

@@ -1,0 +1,53 @@
+Fax : 91-0522-2465711
+Tel : 0522-2465738
+Telephone: 451200(Extn. 42502)
+Telegram : 'RAILMANAK', Lucknow
+E-mail : dsesystem@gmail.com
+
+भारत सरकार - रेल मंत्रालय
+अनुसंधान अभिकल्प और मानक संगठन
+लखनऊ - 226011
+Government of India - Ministry of Railways
+Research, Designs & Standards Organization,
+LUCKNOW - 226011
+
+No. EL/6.8.21
+Dated As signed
+
+PCMEs/PCEEs
+All Zonal Railways & RCF, ICF, MCF
+Sub: Guidelines for continuous power supply to fire and smoke Detection System (FSDS) shall be provided from terminal Block (TB) X1 of Switch Board Cabinet (SBC).
+Ref: (i) Carriage Directorate note no. MC/ACF/Fire Detection/AC dtd.29.04.2024.
+(ii) Carriage Directorate note no. MC/ACF/Fire Detection/AC dated 12.06.2024.
+(iii) This office letter of even no. dated 19.06.2024.
+(iv) ICF letter no. MD/D/LHB/103B AC dated 19/24.06.2024.
+(v) Southern Railway letter no. E.5/III/LHB 25.06.2024.
+(vi) NWR letter no. EL/245/2 (Spec.) dated 28.06.2024 & 10.07.2024.
+(vii) Central Railway letter no. L.326.TL.RDSO.MOD dated 10.07.2024.
+
+1. Carriage Directorate vide note under ref (i) above, have informed that, “MCB connection for FSDS electrical supply is not standard and through common MCBs in many coaches which need to be standardized”. Further, Carriage dte. RDSO vide Note under ref(ii) above have mentioned that, “As per information provided by OEM’s, maximum power consumption requirement for FSDS is 150 watts both at rated load & peak load @ 110V DC”.
+2. Based on the above, a draft guidelines was prepared and communicated to Zonal Railways/PUs vide RDSO letter under ref (iii) for comments/suggestions. Comments have been received from ICF, SR, NWR & CR.
+3. Hence, as per maximum electrical load of FSDS @110V DC, current taken by FSDS system comes out to be 1.36A and further, as per report submitted by NWR, the maximum current taken by FSDS is lower than this in deep discharge condition of internal battery (24V, 7AH).
+4. In view of the comments and suggestions received from Zonal Railways and PUs and as per the design requirements/actual current taken by the FSDS system, following guidelines to be followed :
+a) Power Supply arrangement for FSDS system fitted with internal battery of 24V, 7AH to be as under:
+
+| S. No. | Type of Coach | Place of Installation |
+| :--- | :--- | :--- |
+| i | LHB variant of AC coaches. | Supply may be taken from the place of installation of MCB S1F33 with 2A, 2P, C-curve, 110V DC MCB. The indication of MCB in sheet no. 11 of 48 of RDSO drawing no. RDSO/PE/SK/AC/0206-2019 (Rev.0) attached as ANNEXURE A |
+| ii | ICF type SG AC coaches | Dedicated 2A, 2P, C-curve 110V DC MCB to be provided after the common 40A DC MCB as shown in RCF drawing no. CC70401 (Copy enclosed). The MCB to be placed in The Power Panel besides other DC MCBs. New 2A MCB provided to be marked as FSDS. The indicated drawing is attached as ANNEXURE B |
+
+b) Code of Practice for wiring for 110V DC Self Generation Train Lighting System as per RDSO Specification no. EL/TL/48 (Rev.1)-2005 or latest needs to be followed.
+c) Code of Practice for Train Lighting Maintenance on Prevention of fires on 110V DC Self generating coaches as per RDSO Specification no. EL/TL/56-1992 or latest needs to be followed.
+d) Code of Practice for Prevention of fire in AC coaches as per RDSO specification no. RDSO/PE/O/0008-2005 (Rev.0) or latest needs to be followed.
+
+This is for information and necessary action please.
+
+(Manjay Kumar)
+DSE (TL-AC System Design)
+for Director General/PS&EMU
+15.07.24
+
+DA: As above
+
+Copy to:
+ED/Carriage-II/RDSO- For information and with request to review the rating of MCB provided inside FSDS Panel as suggested by CR vide letter under ref. (vi) and issue necessary guidelines to ZRs/Pus.

@@ -1,0 +1,14 @@
+| C13: No significant vibrations |
+| :--- |
+| **C13**<br>Rear Bogie | ![Graph showing DFT amplitude vs frequency (Hz) for ID00047 km: 47.0. The amplitude is very low across the 0-50 Hz range.](https://i.imgur.com/5111111.png) |
+| **C13**<br>Coach<br>Centre | ![Graph showing DFT amplitude vs frequency (Hz) for ID00048 km: 48.0. The amplitude is very low across the 0-50 Hz range.](https://i.imgur.com/5111111.png) |
+
+**Text within graphs:**
+--VA1 [col = 2]
+ID00047 km: 47.0
+DFT amplitude ->
+frequency (Hz) ->
+--VA1 [col = 2]
+ID00048 km: 48.0
+DFT amplitude ->
+frequency (Hz) ->

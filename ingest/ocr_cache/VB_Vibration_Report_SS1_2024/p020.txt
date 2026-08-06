@@ -1,0 +1,9 @@
+C6: Front Bogie
+Vertical Accln (Z Axis)
+DFT amplitude (g) ->
+frequency (Hz) ->
+
+E1: Rear Bogie
+Vertical Accln (Z Axis)
+DFT amplitude (g) ->
+frequency (Hz) ->

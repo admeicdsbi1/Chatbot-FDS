@@ -1,0 +1,4 @@
+| Location | Frequency Analysis Plot |
+| :--- | :--- |
+| **C10 Coach Centre** | --VA1 [col = 2] <br> ID00038 km: 38.0 <br> DFT amplitude -> <br> frequency (Hz) -> |
+| **C10 Front Bogie** | --VA1 [col = 2] <br> ID00040 km: 40.0 <br> DFT amplitude -> <br> frequency (Hz) -> |

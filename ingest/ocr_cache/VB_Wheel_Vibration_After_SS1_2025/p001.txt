@@ -1,0 +1,45 @@
+भारत सरकार - रेल मंत्रालय
+Government of India - Ministry of Railways
+अनुसंधान अभिकल्प और मानक संगठन
+Research Designs & Standards Organisation
+लखनऊ - 226 011
+Lucknow - 226 011
+EPBX (0522) 2451200
+DID (0522) 2450115
+Fax (0522) 2458500
+DID (0522) 2465310
+
+No. MC/TS/BD
+Date: 25.09.2025
+
+Principal Chief Mechanical Engineers,
+All Zonal Railways & PUs
+
+Sub: Vibration in Vande Bharat coaches after SS-1 schedule.
+Ref: (i) This office of even No. dated 05.07.2024.
+(ii) Report on vibration in MMCT-GNC Vande Bharat express/WR dated 31.07.2024
+
+1. The issue of vibration in some coaches were observed after its SS1 schedule in WR in June 2024. After detailed investigation by RDSO it was revealed that axial run out, radial run out and imbalance in these wheel-sets were beyond permissible limits. Root cause for these issues was identified were due to supply of some wheel-sets having 60° axle end centring holes in initial few Vande Bharat (Ver 2.0) rakes, against of 90° axle end centring holes as specified in drawings. Re-profiling of these wheel sets having 60° axle end centring holes on surface wheel lathe having 90° centres lead to improper centring and resulted into run-outs and imbalance in such wheel sets.
+
+2. Accordingly vide this office letter under reference (i) above, to avoid issue of use of wrong wheel centring arrangements in reprofiling during SS1 of Vande Bharat coaches in Railways, an advice was made that wheel sets shall be re-profiled on underfloor wheel lathe till further advice.
+
+3. The above instruction was issued to avoid use of mismatched 60° and 90° axle centring with 90° centring arrangement existing in surface wheel lathe. After the above corrective action, no incidence of vibrations in Vande Bharat coaches has been reported by the Railways. Above instruction was issued for taking care of different size of centring hole on axle face.
+
+4. Now, it is understood that all the wheel-sets are getting supplied with 90° centring holes in axles and accordingly re-profiling can also be done on surface wheel lathe during SS-1 schedule in the workshops with following precautions:
+i. Proper fixture for motor coach wheel should be available.
+ii. Centre (60° or 90°) on axle end face must be checked & recorded for each wheelset & matching centre on surface wheel lathe should be ensured before starting re-profiling operation.
+iii. Alignment of dead centers & degree of dead centers on both sides of surface wheel lathe must be checked, ensured & recorded before starting of every shift.
+iv. Axial & radial runouts are to be measured & recorded for each wheel after re-profiling on surface wheel lathe. Radial runout & axial runout of each wheel should be less than 0.3 mm & 0.5 mm, respectively.
+
+Railways are requested to ensure above guidelines and close monitoring of turned out rake (after SS-1 with re-profiled wheel from surface wheel lathe) to be done for any issue of vibration. Copy of the letters at ref.(i) & (ii) are enclosed herewith for reference.
+
+This is for kind information and necessary action please.
+
+DA: As above
+
+(A.K.Singh)
+Executive Director Stds./Carriage
+
+CC:
+1. EDME/Coaching, Railway Board
+2. PED/CAMTECH, Gwalior

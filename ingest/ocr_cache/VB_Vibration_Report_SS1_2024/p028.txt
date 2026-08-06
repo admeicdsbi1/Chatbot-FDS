@@ -1,0 +1,9 @@
+C14: Coach Centre
+Vertical Accln (Z Axis)
+DFT amplitude (g) ->
+frequency (Hz) ->
+
+C14: Front Bogie
+Vertical Accln (Z Axis)
+DFT amplitude (g) ->
+frequency (Hz) ->

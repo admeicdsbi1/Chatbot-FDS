@@ -1,0 +1,13 @@
+Annexure - VI
+
+PSD Values (Vertical Acceleration 50 Hz BW): Train 20902 [ST to VR] on 21-Jul-2024 @ 130 kmph
+
+| | Rear | Centre | Front |
+| :--- | :--- | :--- | :--- |
+| **C1** | [Graph: ID00000 km: 0.0] | [Graph: ID00001 km: 1.0] | [Graph: ID00002 km: 2.0] |
+| **C2** | [Graph: ID00003 km: 3.0] | [Graph: ID00004 km: 4.0] | [Graph: ID00005 km: 5.0] |
+
+**Axis Labels (All Graphs):**
+X-axis: frequency (Hz) ->
+Y-axis: PSD amplitude (g²/Hz) ->
+Legend: --VA1 [col = 2]

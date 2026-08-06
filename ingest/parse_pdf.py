@@ -29,6 +29,73 @@ BIG_IMAGE_WH = (300, 200)
 _NUMBERED_HEADING = re.compile(r"^\s*(\d+(?:\.\d+)*)[.)]?\s+(\S.{2,85})$")
 _TOC_DOTS = re.compile(r"\.{4,}\s*\d*\s*$")
 
+# ---- "is this page a scan?" -------------------------------------------------
+# A page whose text layer came from a scanner's own OCR still extracts plenty of
+# characters — they are simply wrong ("CAI No 8,-2025t16", "Date: 1614.2025",
+# "l/odifications"). The char-count triggers below cannot see that (these pages
+# hold 950-1800 chars), and a whole-document force_ocr flag cannot express it
+# either: in this corpus the damage sits on the *cover* page of an otherwise
+# born-digital document — exactly the page carrying the letter number and date.
+#
+# Text statistics do NOT separate these pages: measured over known-garbled vs
+# known-clean VB pages, stopword ratio was 0.28-0.34 vs 0.29-0.35 and
+# dirty-token ratio 0.036-0.048 vs 0.006-0.053 — fully overlapping, because the
+# page really is ~95% correct prose with a few critical tokens mangled.
+#
+# What does separate them, perfectly, is geometry: a page rendered as one image
+# covering the whole sheet IS a scan, so its text layer is scanner output by
+# definition, however clean it reads. Measured 1.00 coverage on every garbled
+# page vs 0.00-0.08 on every born-digital one.
+SCAN_COVERAGE = 0.9
+
+
+def page_image_coverage(page):
+    """Largest embedded image's area as a fraction of the page area."""
+    area = page.rect.width * page.rect.height
+    best = 0.0
+    for info in page.get_image_info():
+        r = fitz.Rect(info["bbox"])
+        best = max(best, (r.width * r.height) / max(area, 1))
+    return best
+
+
+def is_scanned_page(page):
+    return page_image_coverage(page) >= SCAN_COVERAGE
+
+
+# ---- mojibake detection (shared with ingest/eval/audit_garbled.py) -----------
+# The other failure mode: born-digital PDFs with a broken font encoding, whose
+# text is not merely lossy but nonsense. Real prose uses common English stopwords
+# constantly; mojibake has almost none. Tables and short/label-only blocks are
+# excluded, as they legitimately contain few stopwords.
+STOP = set(("the of to and a in is for be shall with on as by or that this are at "
+            "from will not it its an been being which each any all per such system "
+            "fire coach railway detection supply power supplier railways board "
+            "office letter dated ref sub no design maintenance").split())
+
+STOP_MIN = 0.08     # prose below this stopword ratio is treated as garbled
+MIN_TOKENS = 12     # too few words to judge
+
+
+def is_table_text(t):
+    return t.lstrip().startswith("Table") or (t.count("|") / max(len(t), 1) > 0.03)
+
+
+def stopword_ratio(text):
+    """Fraction of alpha tokens that are common stopwords, or None when the text
+    is a table / too short to judge."""
+    if is_table_text(text):
+        return None
+    toks = re.findall(r"[A-Za-z]{2,}", text)
+    if len(toks) < MIN_TOKENS:
+        return None
+    return sum(1 for t in toks if t.lower() in STOP) / len(toks)
+
+
+def is_garbled(text):
+    r = stopword_ratio(text)
+    return r is not None and r < STOP_MIN
+
 
 def _line_text(line):
     return "".join(s.get("text", "") for s in line.get("spans", [])).strip()
@@ -106,6 +173,42 @@ def _ocr_section_title(text, entry, page_no):
     return first or f"Page {page_no}"
 
 
+# Documents that are letters, not manuals: a letterhead, a Sub: line and numbered
+# paragraphs, with no headings anywhere.
+LETTER_DOC_TYPES = {"circular", "instruction_letter",
+                    "special_maintenance_instruction",
+                    "coach_alteration_instruction"}
+
+
+def _retitle_letter_sections(sections, entry):
+    """Give every section of a letter-shaped document its subject line as title.
+
+    Heading detection has nothing real to latch onto in these documents, so it
+    picks up address blocks ("All Zonal Railways & PUs"), signature fragments
+    ("approval)") and date lines ("Date: As signed"). That is not just an ugly
+    citation: rag.py multiplies a chunk's score by the overlap between its section
+    title and the query (~1.15-1.6x), so boilerplate titles quietly deny these
+    documents the boost a manual's "Speed sensors" heading receives. For a letter
+    the Sub: line IS the section title — which is what the force-OCR path already
+    assumes; this extends the same rule to born-digital letters.
+    """
+    if entry.get("doc_type") not in LETTER_DOC_TYPES or not sections:
+        return sections
+    # The REGISTRY title wins over a Sub: line scraped from the body, because
+    # these letters routinely carry the letter they supersede as an attachment —
+    # and that attachment's Sub: line is indistinguishable from the document's
+    # own. Scraping gave VB_CTRB_SKF_Replacement_SS2_2025 the subject of the 2025
+    # withholding letter reproduced on its page 3. The registry title is
+    # human-verified, so it is the more trustworthy of the two.
+    title = (entry.get("title") or "").strip()
+    if not title:
+        body = " ".join(b["text"] for s in sections for b in s["blocks"])
+        title = _ocr_section_title(body, entry, sections[0]["page_start"])
+    for s in sections:
+        s["section"] = title
+    return sections
+
+
 def _ocr_only(path, entry):
     """Force-OCR path: for PDFs whose native text is corrupted (bad font
     encoding) or is a lossy scanner-OCR layer, ignore the native text and build
@@ -124,7 +227,7 @@ def _ocr_only(path, entry):
                              "blocks": [{"type": "text", "text": text, "page": page_no}]})
         page_stats.append({"page": page_no, "chars": len(text), "tables": 0,
                            "big_images": 0, "needs_ocr": not used_ocr and not text,
-                           "ocr_merged": used_ocr})
+                           "ocr_merged": used_ocr, "suspect_layer": True})
     doc.close()
     return sections, page_stats
 
@@ -203,7 +306,19 @@ def extract(path, entry):
                     big_images += 1
             except Exception:
                 pass
-        needs_ocr = page_chars < NEEDS_OCR_CHARS and bool(page.get_images())
+        # A scanned or mojibake text layer is worse than no text layer: it looks
+        # extractable, so it needs OCR just as much as a blank scan does.
+        suspect = is_scanned_page(page) or is_garbled(" ".join(l["text"] for l in line_items))
+        needs_ocr = (page_chars < NEEDS_OCR_CHARS and bool(page.get_images())) or suspect
+
+        # Once such a page HAS been OCR'd, drop its native text entirely rather
+        # than appending the OCR to it: keeping both would leave "Date: 1614.2025"
+        # in the same chunk as the correct "16.04.2025", and two conflicting dates
+        # in one chunk is worse than either alone. Headings go with it — a heading
+        # read off a scanner layer is itself suspect, and section titles feed a
+        # 1.15-1.6x retrieval multiplier in rag.py.
+        page_ocr = _ocr_text_for(doc_id, page_no)
+        use_native = not (suspect and page_ocr)
 
         # emit lines, opening a new section at each heading
         buf = []
@@ -214,7 +329,7 @@ def extract(path, entry):
                                           "page": page_no})
                 buf.clear()
 
-        for li in line_items:
+        for li in (line_items if use_native else []):
             t = li["text"]
             if _TOC_DOTS.search(t):
                 continue
@@ -244,17 +359,29 @@ def extract(path, entry):
             current["blocks"].append({"type": "table", "text": tb["text"], "page": page_no})
 
         # merge cached OCR text whenever it exists — on weak pages it IS the
-        # content; on diagram pages it adds labels the native text lacks
+        # content; on diagram pages it adds labels the native text lacks; on
+        # scanned/mojibake pages it REPLACES the native text (use_native above)
         ocr_merged = False
-        ocr = _ocr_text_for(doc_id, page_no)
-        if ocr:
-            current["blocks"].append({"type": "text", "text": ocr, "page": page_no})
+        if page_ocr:
+            if not use_native:
+                # Suppressing the native lines also suppressed this page's heading
+                # events, so its OCR text would otherwise be filed under whatever
+                # section was last open — usually the default "Introduction". That
+                # is the boilerplate-title trap that costs a document rag.py's
+                # section-title multiplier, so title the page the way the force-OCR
+                # path does: from the letter's own Sub: line, then the registry title.
+                flush_buf()
+                if current["blocks"]:
+                    sections.append(current)
+                current = {"section": _ocr_section_title(page_ocr, entry, page_no),
+                           "section_num": "", "page_start": page_no, "blocks": []}
+            current["blocks"].append({"type": "text", "text": page_ocr, "page": page_no})
             ocr_merged = True
 
         page_stats.append({"page": page_no, "chars": page_chars,
                            "tables": len(table_blocks), "big_images": big_images,
                            "needs_ocr": needs_ocr and not ocr_merged,
-                           "ocr_merged": ocr_merged})
+                           "ocr_merged": ocr_merged, "suspect_layer": suspect})
 
     if current["blocks"]:
         sections.append(current)
@@ -263,7 +390,7 @@ def extract(path, entry):
     # slide decks / circulars may not produce headings; fall back to per-page sections
     if len(sections) < 3 and n_pages > 3:
         sections = _per_page_sections(path, entry, repeated)
-    return sections, page_stats
+    return _retitle_letter_sections(sections, entry), page_stats
 
 
 def _per_page_sections(path, entry, repeated):
@@ -274,12 +401,17 @@ def _per_page_sections(path, entry, repeated):
         page_no = pno + 1
         lines = [l.strip() for l in doc[pno].get_text().splitlines()
                  if l.strip() and l.strip() not in repeated]
-        title = next((l for l in lines if 3 <= len(l) <= 80), f"Page {page_no}")
         text = " ".join(lines)
+        ocr = _ocr_text_for(entry["doc_id"], page_no)
+        # same rule as extract(): OCR replaces a scanner/mojibake text layer,
+        # and merely supplements a weak-but-trustworthy one
+        if ocr and (is_scanned_page(doc[pno]) or is_garbled(text)):
+            text, lines = "", []
+        title = next((l for l in lines if 3 <= len(l) <= 80), None) \
+            or _ocr_section_title(ocr or "", entry, page_no)
         blocks = []
         if text:
             blocks.append({"type": "text", "text": text, "page": page_no})
-        ocr = _ocr_text_for(entry["doc_id"], page_no)
         if ocr and len(text) < WEAK_TEXT_CHARS:
             blocks.append({"type": "text", "text": ocr, "page": page_no})
         if blocks:

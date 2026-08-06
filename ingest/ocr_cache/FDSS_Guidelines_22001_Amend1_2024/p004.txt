@@ -1,0 +1,55 @@
+### Technical Specifications Table
+
+| Standard | Description |
+| :--- | :--- |
+| BS EN 45545-6:2013 | Railway applications – Fire protection on railway vehicles – Part 6: Fire control and management systems |
+| NFPA 750 | Standard on Water Mist Fire Protection Systems |
+| IS/ISO 7240-5 or EN 54-5 | Point - type heat detectors |
+| IS/ISO 7240-7 or EN 54-7 | Point-type smoke detectors using scattered light, transmitted light or ionization |
+| BS EN 50200:2015 | Method of test for resistance to fire of unprotected small cables for use in emergency circuits. |
+
+### Technical Requirements and Procedures
+
+**Maintenance and Training Requirements:**
+*   **Training:** Field staff & maintenance team for filling of cylinder by PESO approved agents towards taking out as well as re-installation of Nitrogen cylinder.
+*   **Documentation:** Written guidelines for the above to be provided for ready reference of Zonal Railways.
+
+**Detailed Scope of Work:**
+*   **Cable Routing:**
+    *   Approval required from: Engineer in charge (Sr. DME of concerned maintenance depot).
+    *   Securing: Cables must be secured properly with cable tie.
+    *   Protection: Additional sleeves to be provided wherever routed near sharp edges.
+    *   Electrical Safety: Suitable arrangements for segregating of positive and negative wires of **110 V DC** supply shall be ensured.
+*   **Installation:**
+    *   Slot cutting: Location to be selected in consultation with Zonal Railways.
+    *   Scope: All components/hardware/software required for complete installation, testing & commissioning as well as the smooth operation & maintenance of the system to be provided by the contractor.
+    *   Compliance: All components must comply with contractual requirements under Design/General requirements and relevant specifications.
+
+Based on the document provided, here is the extracted technical information:
+
+### Technical Specifications and Requirements
+
+| Category | Specification / Requirement |
+| :--- | :--- |
+| **Voltage Supply** | 110 V DC |
+| **Compliance Standard** | EN50155 (for EMI/EMC requirements) |
+
+### Engineering Requirements and Procedures
+
+*   **Cable Routing:**
+    *   Approval required from Engineer in charge (Sr. DME of concerned maintenance depot).
+    *   Cables must be secured with cable ties.
+    *   Additional sleeves must be provided at sharp edges.
+    *   Positive and negative wires of 110 V DC supply must be segregated.
+*   **Scope of Supply:** Contractor is responsible for all components, hardware, and software for installation, testing, commissioning, operation, and maintenance.
+*   **System Components:**
+    *   **FDSS System (Upgraded):** Control panel and power panel must meet EN50155 standards.
+*   **Warranty and Support:**
+    *   Contractor must furnish a list of warranty spares to be maintained at the site in their technical offer.
+*   **Training:**
+    *   Contractor must provide training for operation and maintenance to concerned staff at the site.
+    *   Training aids and materials become the property of the Railway upon completion of training.
+
+***
+
+**Note:** No specific reference numbers, dates, or subject lines are present on this page. The document is identified as "Page 3 of 4".

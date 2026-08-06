@@ -1,0 +1,4 @@
+| C3: No significant vibrations |
+| :--- |
+| **C3**<br>Rear Bogie | --VA1 [col = 2]<br>ID00006 km: 6.0<br>DFT amplitude -><br>frequency (Hz) -> |
+| **C3**<br>Coach<br>Centre | --VA1 [col = 2]<br>ID00007 km: 7.0<br>DFT amplitude -><br>frequency (Hz) -> |

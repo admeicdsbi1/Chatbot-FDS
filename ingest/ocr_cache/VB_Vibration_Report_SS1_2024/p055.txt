@@ -1,0 +1,22 @@
+C13
+Front Bogie
+
+--VA1 [col = 2]
+ID00049 km: 49.0
+DFT amplitude ->
+frequency (Hz) ->
+
+C14: Vibrations issue resolved after attention
+
+C14
+Rear Bogie
+
+--VA1 [col = 2]
+ID00025 km: 25.0
+DFT amplitude ->
+frequency (Hz) ->
+
+--VA1 [col = 2]
+ID00050 km: 50.0
+DFT amplitude ->
+frequency (Hz) ->

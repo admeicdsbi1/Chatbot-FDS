@@ -1,0 +1,35 @@
+WSP GUI APPLICATION
+Escorts Kubota Limited
+
+WSP Fault Code Trouble Shooting
+
+| Fault | Troubleshooting |
+| :--- | :--- |
+| **Short circuit of cut-off valve (CU) / wires short** | |
+| 1.5 | For Axle 1 | ❖ Check if the Dump Valve Holding coil is shorted. If it is, replace the Dump Valve. |
+| 2.5 | For Axle 2 | ❖ If the coil is fine, look for any shorted wire and fix it. |
+| 3.5 | For Axle 3 | ❖ If the coil and wiring are okay, re-check the system if problem persists, replace the respective JOP Card. |
+| 4.5 | For Axle 4 | |
+| **Open circuit of cut-off valve (CU) / wires broken** | |
+| 1.6 | For Axle 1 | ❖ Check if the Dump Valve Holding coil is open. If it is, replace the Dump Valve. |
+| 2.6 | For Axle 2 | ❖ If the coil is fine, look for any open wire and fix it. |
+| 3.6 | For Axle 3 | ❖ If the coil and wiring are okay, re-check the system if problem persists, replace the respective JOP Card. |
+| 4.6 | For Axle 4 | |
+| **Failure of cut-off valve (CU) switch** | |
+| 1.7 | For Axle 1 | ❖ JOP card can be faulty. |
+| 2.7 | For Axle 2 | ❖ Replace the respective JOP card and restart the system. |
+| 3.7 | For Axle 3 | |
+| 4.7 | For Axle 4 | |
+| 7.0 | Mismatch of parameter record in the memory or a discharged back-up battery. | ❖ CPU Card can be faulty. ❖ Replace the CPU card and restart the system. |
+| 7.1 | Failure of the kilometre counter | ❖ CPU Card can be faulty. ❖ Replace the CPU card and restart the system. |
+| 7.2 | Failure of DPB relay output– electro-dynamic brake OFF | ❖ JIO Card can be faulty ❖ Replace the JIO card and restart the system. |
+| 7.3 | Failure of MGB relay output – magnetic brake | ❖ JIO Card can be faulty ❖ Replace the JIO card and restart the system. |
+| 7.4 | Failure of DVR relay output – door blocking. | ❖ JIO Card can be faulty ❖ Replace the JIO card and restart the system. |
+| 7.5 | Failure of KOMP relay output – user speed comparator | ❖ JIO Card can be faulty ❖ Replace the JIO card and restart the system. |
+| 9.0 | Failure of saved configuration parameters of vehicle (mismatch, loaded value out of range). | ❖ Configuration not updated in CPU Card ❖ Upload configuration in CPU Card and restart the system. |
+| 9.5 | Failure or earlier failure recorded in memory | ❖ This shows system is healthy but, transient fault is stored in the memory. |
+| 9.9 | WSP System Healthy | ❖ WSP is in healthy condition. No fault (current or earlier). |
+
+Classification | ESCORTS-CONFIDENTIAL
+Classification | ESCORTS KUBOTA-CONFIDENTIAL
+16

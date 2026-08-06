@@ -1,0 +1,8 @@
+| | | | |
+| :--- | :--- | :--- | :--- |
+| **C11** | ![Plot 1](https://i.imgur.com/5111111.png) --VA1 [col = 2] ID00041 km: 41.0 | ![Plot 2](https://i.imgur.com/5111111.png) --VA1 [col = 2] ID00042 km: 42.0 | ![Plot 3](https://i.imgur.com/5111111.png) --VA1 [col = 2] ID00043 km: 43.0 |
+| **C12** | ![Plot 4](https://i.imgur.com/5111111.png) --VA1 [col = 2] ID00044 km: 44.0 | ![Plot 5](https://i.imgur.com/5111111.png) --VA1 [col = 2] ID00045 km: 45.0 | ![Plot 6](https://i.imgur.com/5111111.png) --VA1 [col = 2] ID00046 km: 46.0 |
+
+**Axis Labels (for all plots):**
+*   Y-axis: PSD amplitude (g²/Hz) ->
+*   X-axis: frequency (Hz) ->

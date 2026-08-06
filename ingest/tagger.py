@@ -53,6 +53,16 @@ _RULES = [
     ("components",      re.compile(r"\bcomponents?\b.{0,40}\b(list|description)|\bmajor\s+components\b", re.I), None),
     ("Vande Bharat",    re.compile(r"\bvande\s*bharat\b|\bamrit\s*bharat\b", re.I), None),
     ("LHB coaches",     re.compile(r"\bLHB\b", re.I), None),
+    # Vande Bharat trainset vocabulary — every tag is indexed as a keyword, so
+    # these are what let a depot's own wording ("CTRB", "SS-2", "RMPU") hit the
+    # keyword arm of retrieval as well as the semantic one.
+    ("CTRB",            re.compile(r"\bCTRB\b|cartridge\s+tapered\s+roller", re.I), None),
+    ("bearing",         re.compile(r"\bbearing[s]?\b|\baxle\s*box\b", re.I), None),
+    ("wheel profile",   re.compile(r"re-?profil|\bwheel\s+(diameter|turning|profile)\b|\btyre\s+defect", re.I), None),
+    ("shop schedule",   re.compile(r"\bSS-?[12]\b|\bIOH\b|\bPOH\b|shop\s+schedule|\btrip\s+schedule\b", re.I), None),
+    ("trainset",        re.compile(r"\btrainset\b|\brake\b\s+(of|no)|\bDTC\b|\bMC\s*car\b", re.I), None),
+    ("RMPU",            re.compile(r"\bRMPU\b|\bCPA\b|roof\s+mounted", re.I), None),
+    ("VCB",             re.compile(r"\bVCB\b|vacuum\s+circuit\s+breaker", re.I), None),
 ]
 
 # OEM detection — query-side patterns mirror backend/rag.py detect_query_oem
@@ -60,6 +70,17 @@ _WSP_OEMS = [
     ("FAIVELEY",       re.compile(r"\bfaiveley\b|\bwabtec\b|\bAEF\b|\bSWKP\b|\bDV12\b|\bWBI\b", re.I)),
     ("KNORR BREMSE",   re.compile(r"\bknorr\b|\bbremse\b|\bMGS2\b|\bESRA\b|\bMB04\b|\bPB03\b|\bEB01\b", re.I)),
     ("ESCORTS KUBOTA", re.compile(r"\bescorts?\b|\bkubota\b|\bEKL\b", re.I)),
+]
+# Vande Bharat component makes. Without these every VB chunk carries oem=None, so
+# rag.py's x1.8 OEM boost / x0.3 mismatch demotion never fires on a query naming a
+# bearing or wheel maker — and "SKF CTRB" vs "Timken CTRB" is a real distinction in
+# these letters (SKF bearings are withheld; Timken ones are not).
+_VB_OEMS = [
+    ("SKF",    re.compile(r"\bSKF\b", re.I)),
+    ("TIMKEN", re.compile(r"\btimken\b", re.I)),
+    ("NEI",    re.compile(r"\bNEI\b|\bnational\s+engineering\b", re.I)),
+    ("KLW",    re.compile(r"\bKLW\b", re.I)),
+    ("MEDHA",  re.compile(r"\bmedha\b", re.I)),
 ]
 _FDSS_OEMS = [
     ("HOCHIKI",  re.compile(r"\bhochiki\b", re.I)),
@@ -86,7 +107,11 @@ def tag_chunk(text, section, entry):
             break
 
     system = entry.get("system")
-    if system == "WSP" and "WSP" not in tags:
+    if system == "VB":
+        for t in ("Vande Bharat", "VB"):
+            if t not in tags:
+                tags.insert(0, t)
+    elif system == "WSP" and "WSP" not in tags:
         tags.insert(0, "WSP")
     elif system == "FSDS":
         for t in ("FSDS", "FDSS"):
@@ -95,7 +120,7 @@ def tag_chunk(text, section, entry):
         if "FSDS" not in tags and "FDSS" not in tags:
             tags.insert(0, "FSDS")
 
-    oem_rules = _WSP_OEMS if system == "WSP" else _FDSS_OEMS
+    oem_rules = {"WSP": _WSP_OEMS, "VB": _VB_OEMS}.get(system, _FDSS_OEMS)
     best, best_hits = None, 0
     for name, pat in oem_rules:
         hits = len(pat.findall(text))

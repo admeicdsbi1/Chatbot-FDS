@@ -1,0 +1,5 @@
+| | | |
+| :--- | :--- | :--- |
+| **C5**<br>**Front Bogie** | | --VA1 [col = 2]<br>ID00014 km: 14.0<br>DFT amplitude -><br>frequency (Hz) -> |
+| **C6: Vibrations issue reduced after attention** | | |
+| **C6**<br>**Rear Bogie** | --VA1 [col = 2]<br>ID00008 km: 8.0<br>DFT amplitude -><br>frequency (Hz) -> | --VA1 [col = 2]<br>ID00015 km: 15.0<br>DFT amplitude -><br>frequency (Hz) -> |

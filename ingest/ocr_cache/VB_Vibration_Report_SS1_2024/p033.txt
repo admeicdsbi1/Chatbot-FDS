@@ -1,0 +1,4 @@
+| | | |
+| :--- | :--- | :--- |
+| **C2 Coach Centre** | --VA1 [col = 2] <br> ID00005 km: 5.0 <br> DFT amplitude -> <br> frequency (Hz) -> | --VA1 [col = 2] <br> ID00004 km: 4.0 <br> DFT amplitude -> <br> frequency (Hz) -> |
+| **C2 Front Bogie** | --VA1 [col = 2] <br> ID00007 km: 7.0 <br> DFT amplitude -> <br> frequency (Hz) -> | --VA1 [col = 2] <br> ID00005 km: 5.0 <br> DFT amplitude -> <br> frequency (Hz) -> |

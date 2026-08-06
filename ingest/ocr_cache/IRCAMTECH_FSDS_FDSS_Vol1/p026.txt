@@ -1,0 +1,111 @@
+### Document Information
+*   **Subject:** 4.1.1.9. Mounting Details for Control Panel
+*   **Document Title:** Maintenance Manual for FSDS and FDSS (Volume – 1)
+*   **Drawing Title:** NS-HOCHIKI-CONTROL PANEL
+*   **Drawing Number:** NSSPT/ASD/CONTROL PANEL/006
+*   **Date:** 23/11/2021
+*   **Revision:** TRAIN18
+*   **Sheet:** 1/4
+
+### Technical Specifications
+*   **Material Thickness:** 1.5mm
+*   **Mounting Bracket:** (SS304) - 3mm Thick
+*   **Material Finish:** MATT Finish
+*   **Material:** 304 ss steel
+*   **Sampling Pipe:** Ø27mm (for inlet and outlet)
+*   **Gland Details:** 06-LABLES
+*   **Gland Sizes:** 
+    *   0.5 STAINLESS STEEL GLANDS AS FOLLOWS
+    *   1x2.5sqmm and 8x1.5sqmm
+    *   2x0.75 SCR
+    *   2x1.5sqmm
+    *   2x1.5sqmm
+    *   SPARE
+
+### Drawing Dimensions
+*   **Radius:** R10, R5.5
+*   **Linear Dimensions:** 3, 25, 50, H3
+
+### Drawing Metadata Table
+| DATE | SIZE | DRAWING NUMBER | REV |
+| :--- | :--- | :--- | :--- |
+| 23/11/2021 | A3 | NSSPT/ASD/CONTROL PANEL/006 | TRAIN18 |
+
+| DATE | SCALE | WEIGHT (kg) | SHEET |
+| :--- | :--- | :--- | :--- |
+| 23/11/2021 | 1:5 | - | 1/4 |
+
+### Engineering Document Details
+
+*   **Drawing Title:** N&S SO
+*   **Drawing Number:** NS-HOCHIKI-C
+*   **Date:** 23/11/2021
+*   **Drawn By:** JAGADISH (23/11/2021)
+*   **Checked By:** SELVI (23/11/2021)
+*   **Approved By:** KSSK (23/11/2021)
+*   **Scale:** 1:5
+
+### Technical Notes
+
+1.  **Material Thickness:** 1.5mm
+2.  **Mounting Bracket:** (SS304) - 3mm
+3.  **Finish:** MATT FINISH
+4.  **Material:** 304 ss steel
+5.  **Boss hinges:** used for front door
+6.  **PG 29:** Stainless steel gland used for the sampling pipe (sampling pipe)
+7.  **Cam lock:** is used for locking
+8.  **Legend lables:** refer drawing number PANEL/006-LABLES
+9.  **PG 13.5 STAINLESS STEEL GLANDS:**
+    *   1) 1x2.5sqmm and 8x1.5sqmm
+    *   2) 1x2.5sqmm
+    *   3) 2x0.75 SCR
+    *   4) 2x1.5sqmm
+    *   5) 2x1.5sqmm
+    *   6) SPARE
+
+### Technical Dimensions & Specifications
+
+| Feature | Value |
+| :--- | :--- |
+| Material Thickness | 1.5mm |
+| Mounting Bracket Thickness | 3mm |
+| Sampling Pipe Gland | PG 29 |
+| Stainless Steel Glands | PG 13.5 |
+| Drawing Scale | 1:5 |
+| Specified Dimension | 300 |
+| Specified Dimension | 155 |
+| Specified Dimension | 50 |
+| Specified Dimension | 25 |
+| Specified Dimension | 3 |
+| Specified Dimension | 31.5 |
+| Specified Dimension | 20x6 |
+| Specified Dimension | 1.5 |
+
+### Engineering Technical Data
+
+**Document Reference:**
+*   **Reference:** IRCAMTECH/GWL/M/FSDS/FDSS/1.0
+*   **Page:** 26 of 87
+
+**Technical Values & Specifications:**
+*   **Hole/Fastener Size:** M10x25
+*   **Hole/Fastener Size:** 20 x 6
+*   **Dimension (Vertical):** 380
+*   **Dimension (Vertical):** 240
+*   **Dimension (Horizontal):** 300
+*   **Dimension (Horizontal):** 190
+*   **Dimension (Horizontal):** 120
+*   **Dimension (Horizontal):** 50
+*   **Dimension (Horizontal):** 45
+*   **Dimension (Vertical):** 55
+*   **Dimension (Vertical):** 50
+*   **Dimension (Vertical):** 31.5
+*   **Dimension (Vertical):** 1.5
+
+**Component Designations:**
+*   **POWER LAMP:** Indicator light component
+*   **LOCK:** Locking mechanism
+*   **STANDARD HINGES:** Door/panel hinge assembly
+*   **1:** Hinge/Mounting point reference
+*   **2:** Power lamp/Indicator reference
+*   **3 S:** Weld/Assembly specification (Typical)

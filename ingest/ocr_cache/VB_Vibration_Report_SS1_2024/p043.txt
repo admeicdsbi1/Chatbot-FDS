@@ -1,0 +1,6 @@
+E2: Vibrations issue resolved after attention
+
+| | | |
+| :--- | :--- | :--- |
+| **E2 Rear Bogie** | --VA1 [col = 2] <br> ID00014 km: 14.0 <br> DFT amplitude -> <br> frequency (Hz) -> | --VA1 [col = 2] <br> ID00023 km: 23.0 <br> DFT amplitude -> <br> frequency (Hz) -> |
+| **E2 Coach Centre** | --VA1 [col = 2] <br> ID00015 km: 15.0 <br> DFT amplitude -> <br> frequency (Hz) -> | --VA1 [col = 2] <br> ID00024 km: 24.0 <br> DFT amplitude -> <br> frequency (Hz) -> |

@@ -1,0 +1,58 @@
+भारत सरकार - रेल मंत्रालय
+Government of India - Ministry of Railways
+अनुसंधान अभिकल्प और मानक संगठन
+Research Designs & Standards Organisation
+लखनऊ - 226 011
+Lucknow - 226 011
+EPBX (0552) 2451200
+DID (0552) 2450115
+Fax (0552) 2458500
+DID (0552) 2465310
+आज़ादी का अमृत महोत्सव
+G20
+भारत 2023 INDIA
+No.: MC/EMU/WTA
+Date: 29.01.2025
+Through e-mail
+
+Principal Chief Mechanical Engineer,
+All Zonal Railways
+
+Sub: Difference in wheel diameter for Vande Bharat Trains.
+Ref: This office letter of even No. dated 12.03.2024.
+
+1. RDSO vide letter under ref. issued maintenance details of Wheels and Axles for Chair-Car Vande Bharat Trainset Ver.2 to CAMTECH/GWL. As per S.No. 7 of Annexure-18 of Maintenance Manual for Vande Bharat Version-2, difference in wheel diameter on the same axle (0.5 mm max.) shall be checked in SS-1, SS-2 & SS-3 maintenance schedule. However, difference in wheel diameter on the same bogie and two bogies of the same coach are not mentioned.
+
+2. References from various zonal Railways were received for applicable limits for difference in wheel diameters on the same bogie and two bogies of the same coach for Vande Bharat Trains. It was also highlighted that the limits of wheel diameters on the same axle, same bogie and two bogies of the same coach of various BG coaching stocks are as under:
+
+| Coaching Stock | Same axle | Same bogie | Same coach | Reference |
+| :--- | :--- | :--- | :--- | :--- |
+| ICF Design | ≤ 0.5 mm | ≤ 5 mm | ≤ 13 mm | IRCA Part-IV (Rule 2.8.3) |
+| LHB Design | ≤ 0.5 mm | ≤ 5 mm | ≤ 13 mm | |
+| Self-propelled | ≤ 0.5 mm | ≤ 5 mm | ≤ 13 mm | |
+| EMU | ≤ 0.5 mm | ≤ 5 mm | ≤ 13 mm | RDSO letter No. EL/4.2.14 dt. 09.08.2018 |
+
+3. The issue of implementation of difference in wheel diameter on the same bogie and two bogies of the same coach for Vande Bharat Trains has been examined in consultation with M/s Medha being a designer of Vande Bharat trainsets and following limits are recommended for Vande Bharat Trains:
+
+| Coaching stock | Same axle | Same bogie | Different Bogies of Same coach | Reference |
+| :--- | :--- | :--- | :--- | :--- |
+| Vande Bharat Coaching Stock | ≤ 0.5 mm | ≤ 5 mm | ≤ 10 mm | M/s Medha letter No. MAE675UV2:RDSO:0242:2025 dated 20.01.2025 |
+
+4. In this regard, CAMTECH is requested to amend/revise the S.No.7 of Annexure-18 of Maintenance Manual for Vande Bharat Version-2 as below:
+
+| S.No | Activities | Schedule |
+| :--- | :--- | :--- |
+| | | Daily | Trip | Monthly | Quarterly | 9 Monthly | SS1 | SS2 | SS3 |
+| 7 | Checking of difference in wheel diameter of the same axle (0.5 mm max.), same bogie (5 mm max.) and different bogies of same coach (10 mm max.) | - | - | - | - | ✓ | ✓ | ✓ | ✓ |
+
+In view of the above, zonal Railways are requested to implement the limits of diameter differences specified in Para-3 above for Vande Bharat Coaching Trains.
+
+DA: Nil
+
+(A.K. Singh)
+Executive Director Stds./Carriage
+29.01.2025
+
+Copy to:
+1. PED/CAMTECH, Gwalior - 474005 - for kind information and necessary action please.
+2. EDME/Coaching, Railway Board, New Delhi - 110 001 : for kind information please.

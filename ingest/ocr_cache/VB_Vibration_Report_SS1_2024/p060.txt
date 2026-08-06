@@ -1,0 +1,8 @@
+| | | | |
+| :--- | :--- | :--- | :--- |
+| **C7** | --VA1 [col = 2] ID00018 km: 18.0 | --VA1 [col = 2] ID00019 km: 19.0 | --VA1 [col = 2] ID00020 km: 20.0 |
+| **E1** | --VA1 [col = 2] ID00021 km: 21.0 | --VA1 [col = 2] ID00022 km: 22.0 | --VA1 [col = 2] ID00023 km: 23.0 |
+
+**Axis Labels (repeated on all plots):**
+*   **Y-axis:** PSD amplitude (g²/Hz) ->
+*   **X-axis:** frequency (Hz) ->

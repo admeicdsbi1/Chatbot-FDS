@@ -1,0 +1,25 @@
+No.IRCAMTECH/2011/Mech/WSP/1.0 24
+
+_Table of Failure Codes:_
+
+| Axle | Code | Description |
+| :--- | :--- | :--- |
+| 1 | 10 | Safety shut - down MV (Dump Valve) |
+| | 11 | Short circuit / interruption GE (Speed Sensor) |
+| | 13 | Short circuit MV (Dump Valve) |
+| | 14 | Interruption MV (Dump Valve) |
+| 2 | 20 | Safety shut - down MV (Dump Valve) |
+| | 21 | Short circuit / interruption GE (Speed Sensor) |
+| | 23 | Short circuit MV (Dump Valve) |
+| | 24 | Interruption MV (Dump Valve) |
+| 3 | 30 | Safety shut - down MV (Dump Valve) |
+| | 31 | Short circuit / interruption GE (Speed Sensor) |
+| | 33 | Short circuit MV (Dump Valve) |
+| | 34 | Interruption MV (Dump Valve) |
+| 4 | 40 | Safety shut - down MV (Dump Valve) |
+| | 41 | Short circuit / interruption GE (Speed Sensor) |
+| | 43 | Short circuit MV (Dump Valve) |
+| | 44 | Interruption MV (Dump Valve) |
+| | 70/71 | Failure in electronic card RE (relay output) |
+
+Handbook on WSP System CAMTECH/GWL

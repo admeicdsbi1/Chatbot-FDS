@@ -227,6 +227,56 @@ def detect_query_system(query):
     return None
 
 
+# Once one coach type dominates the corpus, `system` (FSDS vs WSP) stops being the
+# separator that matters and `subsystem` becomes it: a door query must not surface
+# HVAC chunks. Signals are deliberately narrow phrases, not bare nouns — "wheel"
+# alone appears throughout the wheel-slide-protection manuals, so matching on it
+# would demote the WSP corpus on half the queries it is meant to answer.
+_SUBSYSTEM_QUERY_SIGNALS = {
+    "bearings": [r'\bctrb\b', r'\bbearing', r'\baxle\s*box\b', r'\bskf\b', r'\btimken\b',
+                 r'\brefurbish', r'\bmounted\s+end\s+play\b', r'\bmep\b', r'\bhot\s+axle\b',
+                 r'\bcentral\s+sleeve', r'\bgrease\b'],
+    "wheels": [r're-?profil', r'\bwheel\s+diameter\b', r'\bwheel\s+turning\b',
+               r'\bwheel\s+profile\b', r'\bmarking\b.{0,20}\bwheel', r'\bstamping\b',
+               r'\btyre\s+defect', r'\blast\s+shop\s+issue\b', r'\bklw\b'],
+    "bogie": [r'\bbogie\b', r'\bcoil\s+spring', r'\bsuspension\b', r'\bdamper\b',
+              r'\bvibration\b'],
+    "HVAC": [r'\brmpu\b', r'\bhvac\b', r'\bair\s*condition', r'\bcpa\b', r'\bscoop\b',
+             r'\bpre-?filter\b', r'\blouvre\b'],
+    "doors": [r'\bdoor\b', r'\bhatch\b', r'\bramp\b', r'\bwheel\s*chair\b'],
+    "electrical": [r'\bvcb\b', r'\bbattery\b', r'\bconnector\b', r'\bjumper\b',
+                   r'\bshielding\b', r'\badcr\b', r'\bvcd\b', r'\bmaster\s+controller\b',
+                   r'\btraction\b', r'\bdimming\b', r'\bcoupler\b'],
+    "interior fittings": [r'\btrim\s+panel', r'\bfrp\b', r'\bwash\s*basin\b', r'\bfootrest\b',
+                          r'\bwiper\b', r'\bpolycarbonate\b', r'\bnose\s*cone\b',
+                          r'\bdrain\s*hole\b', r'\blifting\s*pad\b', r'\bisolating\s*cock\b'],
+    "maintenance schedule": [r'\bss-?[12]\b', r'\bshop\s+schedule\b', r'\biwwp\b',
+                             r'\bpreparedness\b'],
+}
+
+
+def detect_query_subsystem(query):
+    """The one subsystem a query unambiguously targets, else None. Two matches
+    means stay neutral rather than mis-route (same rule as detect_query_system)."""
+    ql = query.lower()
+    hits = [name for name, pats in _SUBSYSTEM_QUERY_SIGNALS.items()
+            if any(re.search(p, ql) for p in pats)]
+    return hits[0] if len(hits) == 1 else None
+
+
+def _subsystem_factor(ch, query_subsystem):
+    """Demote a chunk from a different subsystem. Demote-only, like
+    _system_factor: it cannot reorder chunks within the right subsystem, nor
+    disturb subsystem-neutral ones, so a wrong guess costs recall but never
+    invents a false ranking."""
+    if not query_subsystem:
+        return 1.0
+    sub = ch.get("subsystem") or ""
+    if sub and sub != query_subsystem:
+        return 0.5
+    return 1.0
+
+
 def _chunk_system(ch):
     """The safety system a chunk belongs to (FSDS / WSP / None), from its
     registry-stamped subsystem, falling back to tags."""
@@ -367,14 +417,20 @@ def _diversify(res, k, cap=PER_DOC_CAP):
 
 
 def _pool_is_ambiguous(cands):
-    """True when the top candidates span >1 coach type, OEM, or subsystem — the
-    case where a rerank most helps separate the right manual from lookalikes."""
+    """True when the top candidates span >1 coach type or OEM, or >=3 subsystems —
+    the case where a rerank most helps separate the right manual from lookalikes.
+
+    The subsystem threshold is 3, not 2: with a dozen subsystems in the corpus,
+    two of them appearing in a 15-chunk pool is the normal state of affairs, and
+    gating on that would run the flash-lite rerank on essentially every query —
+    latency on Render's free tier plus a per-query draw on a shared free quota.
+    Coach/OEM spread stays at 2, where it is genuinely a signal."""
     top = [c for _, c in cands[:15]]
     coaches = {ct for c in top for ct in (c.get("coach_type") or [])
                if ct and ct != "common"}
     oems = {c.get("oem") for c in top if c.get("oem")}
     subs = {c.get("subsystem") for c in top if c.get("subsystem")}
-    return len(coaches) >= 2 or len(oems) >= 2 or len(subs) >= 2
+    return len(coaches) >= 2 or len(oems) >= 2 or len(subs) >= 3
 
 
 def _coach_factor(ch, query_coach):
@@ -400,6 +456,10 @@ def retrieve(query, k=TOP_K_FINAL):
     query_oem = detect_query_oem(query)
     query_coach = detect_query_coach(query)
     query_system = detect_query_system(query)
+    # Subsystem routing defers to system routing: a query that already names FSDS
+    # or WSP has been routed, and "FSDS battery voltage" would otherwise match the
+    # electrical subsystem and demote the very fire-detection chunks it wants.
+    query_subsystem = detect_query_subsystem(query) if not query_system else None
     qv = embed_query(full_exp) if emb_matrix is not None else None
     if qv is None:
         qterms = set(re.findall(r'\b[a-zA-Z]{2,}\b', full_exp.lower()))
@@ -424,6 +484,7 @@ def retrieve(query, k=TOP_K_FINAL):
                     score *= 0.3
             score *= _coach_factor(ch, query_coach)
             score *= _system_factor(ch, query_system)
+            score *= _subsystem_factor(ch, query_subsystem)
             score *= _recency_factor(ch)
             results.append((score, ch))
         results.sort(key=lambda x: -x[0])
@@ -475,6 +536,7 @@ def retrieve(query, k=TOP_K_FINAL):
                 score *= 0.3
         score *= _coach_factor(ch, query_coach)
         score *= _system_factor(ch, query_system)
+        score *= _subsystem_factor(ch, query_subsystem)
         score *= _recency_factor(ch)
         res.append((score, ch))
     res.sort(key=lambda x: -x[0])

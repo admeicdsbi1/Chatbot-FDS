@@ -1,0 +1,5 @@
+| | |
+| :--- | :--- |
+| **C7 Front Bogie** | --VA1 [col = 2]<br>ID00020 km: 20.0<br>DFT amplitude -><br>frequency (Hz) -> |
+| **E1: Vibrations issue resolved after attention** | |
+| **E1 Rear Bogie** | --VA1 [col = 2]<br>ID00011 km: 11.0<br>DFT amplitude -><br>frequency (Hz) -> | --VA1 [col = 2]<br>ID00021 km: 21.0<br>DFT amplitude -><br>frequency (Hz) -> |

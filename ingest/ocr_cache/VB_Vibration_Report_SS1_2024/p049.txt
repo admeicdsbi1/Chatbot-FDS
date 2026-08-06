@@ -1,0 +1,8 @@
+| Component | Description |
+| :--- | :--- |
+| C9 Front Bogie | --VA1 [col = 2] ID00035 km: 35.0 |
+| C10 Rear Bogie | C10: No significant vibrations --VA1 [col = 2] ID00036 km: 36.0 |
+
+**Axis Labels:**
+*   DFT amplitude ->
+*   frequency (Hz) ->

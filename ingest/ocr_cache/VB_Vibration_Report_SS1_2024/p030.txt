@@ -1,0 +1,11 @@
+3. Surface Wheel Lathe having 60° Dead Center & Axle having 60° Center-
+
+Surface Wheel Lathe having Dead Center 60°
+Axle having 60°center
+Surface Contact
+
+4. Surface Wheel Lathe having 60° Dead Center & Axle having 90° Center-
+
+Surface Wheel Lathe having Dead Center 60°
+Axle having 90°center
+Line Contact

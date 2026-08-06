@@ -1,0 +1,6 @@
+| | | | |
+| :--- | :--- | :--- | :--- |
+| **C13** | --VA1 [col = 2] <br> ID00047 km: 47.0 <br> PSD amplitude (g²/Hz)-> <br> frequency (Hz) -> | --VA1 [col = 2] <br> ID00048 km: 48.0 <br> PSD amplitude (g²/Hz)-> <br> frequency (Hz) -> | --VA1 [col = 2] <br> ID00049 km: 49.0 <br> PSD amplitude (g²/Hz)-> <br> frequency (Hz) -> |
+| **C14** | --VA1 [col = 2] <br> ID00050 km: 50.0 <br> PSD amplitude (g²/Hz)-> <br> frequency (Hz) -> | --VA1 [col = 2] <br> ID00051 km: 51.0 <br> PSD amplitude (g²/Hz)-> <br> frequency (Hz) -> | --VA1 [col = 2] <br> ID00052 km: 52.0 <br> PSD amplitude (g²/Hz)-> <br> frequency (Hz) -> |
+
+- X - X -

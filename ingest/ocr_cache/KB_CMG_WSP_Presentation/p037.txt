@@ -1,0 +1,13 @@
+WSP system for LHB coaches
+
+WSP Fault Codes
+
+| | Axle 1 | Axle 2 | Axle 3 | Axle 4 |
+| :--- | :---: | :---: | :---: | :---: |
+| Speed Sensor Open / Short Circuit | 11 | 21 | 31 | 41 |
+| Speed Sensor Error | 12 | 22 | 32 | 42 |
+| Anti Skid Valve Short Circuit | 13 | 23 | 33 | 43 |
+| Anti Skid Valve Open Circuit | 14 | 24 | 34 | 44 |
+
+Knorr-Bremse Group
+Dateiname hier eintragen | 37
