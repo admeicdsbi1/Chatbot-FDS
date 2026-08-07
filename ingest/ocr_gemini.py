@@ -80,6 +80,13 @@ Report all values exactly as printed — they are safety-critical. Do not add co
 BAND_COUNT = 3
 BAND_OVERLAP = 0.08
 
+# Once the daily vision cap is reached, every remaining page costs the full
+# retry ladder (~3.5 min of backoff) and still fails. Stop the run instead of
+# grinding through hundreds of pages discovering the same wall one at a time —
+# nothing is lost, because a failed page writes no cache entry and is retried on
+# the next run.
+QUOTA_GIVE_UP_AFTER = 3
+
 
 def qualifying_pages(entry):
     """Pages worth OCR: weak/moderate native text with a big embedded image
@@ -239,6 +246,7 @@ def main():
 
     entries = [e for e in REGISTRY if not args.doc or e["doc_id"] == args.doc]
     total_done = total_skipped = 0
+    consecutive_failures = 0
     for entry in entries:
         pages = qualifying_pages(entry)
         if not pages:
@@ -257,6 +265,7 @@ def main():
                 with open(out_path, "w", encoding="utf-8") as f:
                     f.write(text)
                 total_done += 1
+                consecutive_failures = 0
                 print(f"    -> {len(text)} chars")
             elif text == "[UNREADABLE]":
                 # the model saw the page and found nothing — cache the empty
@@ -268,6 +277,17 @@ def main():
                 # API failure (404/429/exhausted retries): write NOTHING so the
                 # next run retries this page instead of skipping a poisoned cache
                 print("    -> FAILED (no cache written; rerun to retry)")
+                consecutive_failures += 1
+                if consecutive_failures >= QUOTA_GIVE_UP_AFTER:
+                    print(f"\n{consecutive_failures} pages failed in a row after the "
+                          f"full retry ladder — the daily vision quota is spent. "
+                          f"Stopping here rather than burning ~3.5 min of backoff per "
+                          f"remaining page.")
+                    print(f"OCR stopped: {total_done} new pages this run, "
+                          f"{total_skipped} already cached.")
+                    print("The free tier resets at midnight Pacific; rerun then and "
+                          "it picks up exactly where this left off.")
+                    raise SystemExit(2)
             time.sleep(SLEEP)
     print(f"OCR complete: {total_done} new pages, {total_skipped} already cached.")
 

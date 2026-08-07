@@ -93,7 +93,15 @@ def embed_query(text, task_type="RETRIEVAL_QUERY"):
     """Embed one query string → normalized (D,) float32 vector, or None."""
     if not GEMINI_API_KEY or not text:
         return None
-    model = _resolve_model()
+    return _embed_one(_resolve_model(), text, task_type)[0]
+
+
+def _embed_one(model, text, task_type):
+    """-> (vector|None, http_status|None).
+
+    The status is what lets embed_documents tell "free-tier cap reached" from
+    "something is broken"; embed_query drops it, because at serving time every
+    failure has the same handling (fall back to keyword retrieval)."""
     payload = {
         "model": f"models/{model}",
         "content": {"parts": [{"text": text}]},
@@ -106,12 +114,22 @@ def embed_query(text, task_type="RETRIEVAL_QUERY"):
                           params={"key": GEMINI_API_KEY}, json=payload, timeout=30)
         if r.status_code != 200:
             print(f"embedContent {r.status_code}: {r.text[:160]}")
-            return None
+            return None, r.status_code
         vals = r.json().get("embedding", {}).get("values")
-        return _normalize(vals) if vals else None
+        return (_normalize(vals) if vals else None), 200
     except Exception as e:
         print(f"Embed query error: {e}")
-        return None
+        return None, None
+
+
+class QuotaExhausted(RuntimeError):
+    """Gemini's free-tier cap is hit: retrying in this process cannot help.
+
+    Distinguished from a generic failure because the response is identical to a
+    real error but the remedy is completely different — wait for the daily reset
+    (midnight Pacific) rather than debug. Twice during the Vande Bharat ingest a
+    bare RuntimeError sent us looking for a bug that wasn't there.
+    """
 
 
 def _embed_batch_request(model, batch, task_type):
@@ -143,9 +161,17 @@ def _embed_batch_request(model, batch, task_type):
             time.sleep(wait)
             continue
         raise RuntimeError(f"batchEmbed {r.status_code}: {r.text[:200]}")
-    # Persistent throttling on the batch endpoint → let caller fall back to sequential.
-    _batch_supported = False
-    return None
+    # Still 429 after ~108s of backoff. This is the daily cap, not a burst limit,
+    # so do NOT disable the batch endpoint and fall through to per-item calls:
+    # that was the old behaviour and it spent another BATCH_SIZE requests per batch
+    # discovering the same wall, one 429 at a time.
+    raise QuotaExhausted(
+        "Gemini embedding quota exhausted (batchEmbedContents returned 429 after "
+        "7 retries). The free tier resets at midnight Pacific. Progress is cached, "
+        "so rerunning after the reset resumes where this stopped. If you believe "
+        "this is a per-minute burst limit rather than the daily cap, raise "
+        "GEMINI_EMBED_SLEEP (currently "
+        f"{INTER_BATCH_SLEEP}s) and retry.")
 
 
 def embed_documents(texts, task_type="RETRIEVAL_DOCUMENT"):
@@ -161,9 +187,17 @@ def embed_documents(texts, task_type="RETRIEVAL_DOCUMENT"):
         if vecs is None:  # batch unsupported/throttled → sequential per item
             vecs = []
             for t in batch:
-                v = embed_query(t, task_type=task_type)
+                v, status = _embed_one(model, t, task_type)
                 if v is None:
-                    raise RuntimeError("embedContent failed during document embedding")
+                    if status == 429:
+                        raise QuotaExhausted(
+                            "Gemini embedding quota exhausted (embedContent 429). "
+                            "The free tier resets at midnight Pacific; progress is "
+                            "cached, so rerunning after the reset resumes here.")
+                    raise RuntimeError(
+                        f"embedContent failed during document embedding "
+                        f"(HTTP {status}) — this is not a quota wall; check the "
+                        f"error above.")
                 vecs.append(v)
                 time.sleep(0.2)
         out.extend(vecs)

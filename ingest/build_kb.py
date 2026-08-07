@@ -56,7 +56,7 @@ SOFT_CANARIES = {
     "K05": re.compile(r"\bK[\s\-]?05\b", re.I),
     "off delay": re.compile(r"\boff[\s\-]?delay\b", re.I),
 }
-MIN_TOTAL_CHUNKS = 1000   # 1045 after VB Wave 1 (wheels/bearings/CTRB)
+MIN_TOTAL_CHUNKS = 2400   # ~2545 after VB waves 1-3 (wheels/bearings, schedules/SMI, CAI)
 
 
 def main():

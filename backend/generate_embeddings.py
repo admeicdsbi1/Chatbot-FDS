@@ -137,11 +137,24 @@ def main():
 
     # Embed the missing texts in throttled batches; the cache is the checkpoint.
     B = embed.BATCH_SIZE
+    done = 0
     for bi, start in enumerate(range(0, len(missing), B), 1):
         batch = missing[start:start + B]
-        vecs = embed.embed_documents([t for _, t in batch], task_type=TASK)
+        try:
+            vecs = embed.embed_documents([t for _, t in batch], task_type=TASK)
+        except embed.QuotaExhausted as e:
+            # Flush before exiting: the periodic checkpoint below can be up to
+            # SAVE_EVERY batches stale, and those vectors cost real quota.
+            _save_cache(cache)
+            print(f"\n{e}")
+            print(f"Cached {len(cache)} vectors ({done} embedded this run); "
+                  f"{len(missing) - done} still to do.")
+            print("embeddings.npy was NOT written — it must stay in step with "
+                  "chunks_merged.jsonl. Rerun this script after the quota resets.")
+            raise SystemExit(2)
         for (k, _), v in zip(batch, vecs):
             cache[k] = v.astype(np.float16)
+        done += len(batch)
         print(f"progress: {min(start + B, len(missing))}/{len(missing)} new")
         if bi % SAVE_EVERY == 0:
             _save_cache(cache)
