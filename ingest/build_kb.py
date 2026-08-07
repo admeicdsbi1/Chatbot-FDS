@@ -93,8 +93,12 @@ def main():
         # Scanner-OCR / mojibake pages not yet OCR'd are the dangerous ones:
         # unlike a blank scan they contribute text, so they land in the KB
         # looking perfectly valid.
+        # Only pages OCR has never seen are actionable. A page OCR examined and
+        # declared [UNREADABLE] (photo/drawing, no text) has nothing better
+        # available, so re-reporting it every build is noise that hides real gaps.
         suspect_unocr = [s["page"] for s in page_stats
-                         if s.get("suspect_layer") and not s["ocr_merged"]]
+                         if s.get("suspect_layer") and not s["ocr_merged"]
+                         and not s.get("ocr_attempted")]
         merged = sum(1 for s in page_stats if s["ocr_merged"])
         pending = sorted(set(weak_unocr) | set(suspect_unocr))
         if pending:

@@ -1,0 +1,38 @@
+6.5 Visible Fibres
+
+[Image of visible fibers]
+
+Individual fiber or bundle of fibers not covered with resin, on or above the surface.
+
+6.5.1 Repair Procedure
+a) Step-1: At identified affected areas sanding operation to be done by 320grit emery till the affected surface is removed.
+b) Step-2: Apply fire retardant resin at the affected area, with proper coverage, and wait for curing.
+c) Step-3: After curing, sanding operation to be done using the 320 grit & 600 grit emery
+d) Step-4: After complete curing cycle is over, inspection to be carried out
+
+6.6 Cracks
+Definition: Slit through the thickness of the part, forming an incipient break.
+
+[Image of Gel coat crack] [Image of Laminated crack]
+Gel coat crack                Laminated crack
+
+6.6.1 Repair Procedure
+Step-1: Identified defected area in the surface to be buffed using the 320 grits emery, till the affected surface is removed. Subsequently, the procedure at step 6.1.1.1 above can be followed
+
+7. Documentation and Records
+a. Record all products used (name, batch no., expiry date).
+b. Take photos of “Before” and, “After” for quality verification.
+c. QC Inspector must approve completion before panel release.
+
+Date: 16.10.2025
+Place: ICF Chennai
+
+[Signature]
+Jothimani
+SSE
+
+[Signature]
+A Subrammanian
+AME/D
+
+Page | 4

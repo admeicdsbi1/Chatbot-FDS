@@ -83,25 +83,65 @@ def _pack_text(blocks):
     return pieces
 
 
+def _split_row(row, budget):
+    """A single row too large for `budget` -> pieces split on cell boundaries.
+
+    Row-boundary splitting alone is not enough: a PDF table whose cells hold whole
+    paragraphs can produce one row of ~9,000 chars, and four of those became a
+    single 36,494-char chunk. That chunk broke three things at once — it made the
+    embedding request oversized (persistent 429s), it exceeded rag.CTX_CHUNK_CHARS
+    so ~93% of it could never reach the LLM even when retrieved, and one vector
+    spanning 36k chars matches weakly on everything and precisely on nothing.
+    Splitting mid-row loses column alignment for that row, which is the lesser
+    evil against content that is unreachable by construction."""
+    cells = row.split("|")
+    pieces, cur = [], []
+    cur_len = 0
+    for c in cells:
+        if cur_len + len(c) + 1 > budget and cur:
+            pieces.append("|".join(cur))
+            cur, cur_len = [], 0
+        # a single cell over budget still has to be cut somewhere
+        while len(c) > budget:
+            pieces.append(c[:budget])
+            c = c[budget:]
+        cur.append(c)
+        cur_len += len(c) + 1
+    if cur:
+        pieces.append("|".join(cur))
+    return [p for p in pieces if p.strip(" |")]
+
+
 def _split_table(md, section):
-    """Table -> one or more chunk texts, header repeated, never mid-row."""
+    """Table -> one or more chunk texts, header repeated, never mid-row unless a
+    single row exceeds TABLE_MAX on its own."""
     lead = f"Table — {section}:\n"
     if len(md) + len(lead) <= TABLE_MAX:
         return [lead + md]
     lines = md.splitlines()
     header = lines[:2] if len(lines) >= 2 and set(lines[1]) <= set("|-: ") else lines[:1]
+    head_len = sum(len(l) + 1 for l in header) + len(lead)
     body = lines[len(header):]
     pieces, cur = [], list(header)
-    cur_len = sum(len(l) + 1 for l in cur) + len(lead)
-    for row in body:
-        if cur_len + len(row) + 1 > TABLE_MAX and len(cur) > len(header):
+    cur_len = head_len
+
+    def flush():
+        nonlocal cur, cur_len
+        if len(cur) > len(header):
             pieces.append(lead + "\n".join(cur))
-            cur = list(header)
-            cur_len = sum(len(l) + 1 for l in cur) + len(lead)
+        cur, cur_len = list(header), head_len
+
+    for row in body:
+        if head_len + len(row) + 1 > TABLE_MAX:
+            flush()                                   # oversized row stands alone
+            for frag in _split_row(row, TABLE_MAX - head_len):
+                pieces.append(lead + "\n".join(header + [frag]))
+            continue
+        if cur_len + len(row) + 1 > TABLE_MAX and len(cur) > len(header):
+            flush()
         cur.append(row)
         cur_len += len(row) + 1
-    if len(cur) > len(header):
-        pieces.append(lead + "\n".join(cur))
+    flush()
     return pieces
 
 

@@ -1,0 +1,39 @@
+INTEGRAL COACH FACTORY, CHENNAI – 600 038.
+Tele fax No. (044) 26261872 Rly.:46804
+Email: dycmedicf@gmail.com
+
+No. ICF/QMS/MDM/File/F015
+O/o. General Manager/Mech.Design
+Date: 16.10.2025
+
+**Coach Alteration Instruction**
+
+| Sl. No. | Details | Remarks |
+| :--- | :--- | :--- |
+| 1. | CAI No. | B-2025/16 |
+| 2. | Group | 4-2 |
+| 3. | Description | Replacement of upper trim panels in VB coaches |
+| 4. | Drawing No. | TS/DTC-4-2-008, TS/MC-4-2-003 |
+| 5. | Modification | To replace the FRP upper trim panels with Aluminium upper trim panels with suitable fixing arrangement |
+| 6. | Reason for Modification | During service maintenance of the roller blind arrangement, it is necessary to remove and refit the upper trim panels. To facilitate easier handling and improve maintainability, these panels have been replaced with lightweight aluminium panels. |
+| 7. | Coaches concerned | DTC, MC, TC & NDTC of VB coaches- applicable for all rakes. |
+| 8. | Implementation stage | Modifications shall be implemented by user Railways, as and when convenient. |
+| 9. | Category of CAI | A [ ] B [✓] Tick A or B as applicable |
+
+A. Modifications shall be implemented immediately by user Rlys.
+B. Modifications shall be implemented by user Rlys. as and when convenient.
+10. Drawing No.: It is requested to ensure coach alteration as per below drgs.
+
+Table-1
+| Sl. No. | Description | Old Drg. No. & Alt | New Drg. No. & Alt |
+| :--- | :--- | :--- | :--- |
+| 1. | FRP Upper Trim panel | 1.TS/MC-4-2-003 Alt-‘a’ | 1.TS/MC-4-2-003 Alt-‘b’ |
+| 2. | Compartment Sidewall panels for Trainset coaches | 2.TS/MC-4-2-008 Alt-Nil | 2.TS/MC-4-2-008 Alt-‘a’ |
+
+11. Brief of Modification / changes to be done: Pl refer Trainset Annexure-AN attached herewith
+Encls: As above
+
+(A.P. TIRUNAAGA SENTILKUMAR)
+Dy.CME/D-I
+For GM/Mech. Design
+Page | 1

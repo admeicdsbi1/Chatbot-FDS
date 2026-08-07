@@ -1,0 +1,40 @@
+INTEGRAL COACH FACTORY, CHENNAI – 600 038.
+Tele fax No. (044) 26261872 Rly.:46804
+Email: dycmedicf@gmail.com
+
+No. ICF/QMS/MDM/File/F015
+O/o. General Manager/Mech.Design
+Date: 16.10.2025
+
+**Coach Alteration Instruction**
+
+| Sl. No. | Details | Remarks |
+| :--- | :--- | :--- |
+| 1. | CAI No. | B-2025/17 |
+| 2. | Group | 4-2 |
+| 3. | Description | FRP panel rectification |
+| 4. | Drawing No. | TS/DTC-4-2- 001, TS/MC-4-2-001, TS/TC-4-2-001 |
+| 5. | Modification | To rectify the damages and to attend the discoloration of FRP interior panels in Vande Bharat chair car coaches |
+| 6. | Reason for Modification | To attend the discoloration and damages of FRP interior panels, to improve aesthetic appearance |
+| 7. | Coaches concerned | DTC, MC, TC & NDTC of VB coaches. Applicable for all rakes. |
+| 8. | Implementation stage | Modifications shall be implemented by user Railways, as and when convenient. |
+| 9. | Category of CAI | A | B ✓ |
+| | | Tick A or B as applicable |
+
+A. Modifications shall be implemented immediately by user Rlys.
+B. Modifications shall be implemented by user Rlys. as and when convenient.
+10. Drawing No.: It is requested to ensure coach alteration as per below drgs.
+
+| Sl. No. | Description | New Drg. No. & Alt |
+| :--- | :--- | :--- |
+| 1. | FRP Upper Trim panel | 1.TS/DTC-4-2-001 Alt-Nil |
+| 2. | Compartment Sidewall panels for Trainset coaches | 2.TS/MC-4-2-001 Alt-Nil 3. TS/TC-4-2-001 Alt Nil |
+
+11. Brief of Modification / changes to be done: Pl refer Trainset Annexure AF attached herewith
+Encls: As above
+
+(A.P. TIRUNAAGA SENTILKUMAR)
+Dy.CME/D-I
+For GM/Mech. Design
+
+Page | 1

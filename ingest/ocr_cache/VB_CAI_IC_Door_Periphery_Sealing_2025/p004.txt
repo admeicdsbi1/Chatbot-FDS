@@ -1,0 +1,16 @@
+| Step | Description | Details |
+| :--- | :--- | :--- |
+| Step 6 | Holes to be made by drilling on the bristle as well as aluminum extrusion together at top, bottom and middle of the aluminum extrusion. Screws are to be provided on the same | Drilling to be done after curing of adhesive |
+| Step 7 | Bristles shall not come in contact with moving part surface of IC door. Bristle edges to be trimmed accordingly | The gap between bristle edge and IC door body should be kept minimum, to the level of 1-2 mm |
+| Step 8 | Installation of Thermal insulation, partition panels, Black-jet panel and Ceiling panel. Electrical clearance to be obtained. | All the items removed previously to facilitate bristle fitment to be installed back in the reverse sequence, properly. |
+
+Date: 16.10.2025
+Place: ICF
+
+[Signature]
+SSE/D
+
+[Signature]
+AME/D-I
+
+Page | 5

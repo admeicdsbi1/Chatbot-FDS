@@ -1,0 +1,35 @@
+TRAINSET ANNEXURE-AN
+WORK INSTRUCTION FOR REPLACEMENT OF UPPER TRIM PANEL IN VANDE BHARAT CHAIR CAR COACHES
+
+1. Objective:
+The objective of this work instruction is to describe the procedure to be followed for replacing the existing FRP upper trim panel with Aluminium upper trim panel in Vande Bharat chair car coaches to improve reliability and easy maintenance.
+
+2. Material/Consumables required
+The following material/ consumables are required for carrying out replacement of upper trim panel.
+1. Aluminium upper trim panel with hardware, as per ICF Drg No TS/MC-4-2-003 Alt ‘b’ and TS/MC-4-2-008 Alt ‘a’, as per the required quantity
+
+3. Tools required
+1. Tool kit- for removal/ installation of FRP panel
+
+4. Safety precautions to be observed
+1. Wear Personal Protective Equipments
+
+5. Steps to be followed
+
+| Step No | Instruction | Remarks |
+| :--- | :--- | :--- |
+| Step 1 | Remove the upper trim panel | Care should be taken not to damage the nearby seats, roller blinds and panels |
+| Step 2 | Install the new Aluminium upper trim panel ensuring that the top flange is inserted in the groove of the luggage rack properly | Ensure proper alignment with surrounding panels. Also ensure that panel is secured properly |
+| Step 3 | Secure the upper trim panel to the car body by providing screws at the specified locations, as per drawing. | The screw holes to be closed with rubber plug. The color of the rubber plug should match with that of the surrounding panel |
+| Step 4 | Continue the same procedure for next upper trim panel | Ensure that roller blinds are functioning properly. Old FRP panels may be disposed suitably. |
+
+Date: 16.10.2025
+Place: ICF
+
+V.BilliBabe
+SSE/D
+
+Sh
+AME/D-I
+
+Page | 3

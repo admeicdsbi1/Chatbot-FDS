@@ -123,12 +123,18 @@ def _embed_one(model, text, task_type):
 
 
 class QuotaExhausted(RuntimeError):
-    """Gemini's free-tier cap is hit: retrying in this process cannot help.
+    """A Gemini free-tier limit is hit; retrying at the current pace cannot help.
 
-    Distinguished from a generic failure because the response is identical to a
-    real error but the remedy is completely different — wait for the daily reset
-    (midnight Pacific) rather than debug. Twice during the Vande Bharat ingest a
-    bare RuntimeError sent us looking for a bug that wasn't there.
+    Distinguished from a generic failure because the HTTP response looks identical
+    to a real error while the remedy is completely different — slow down, or wait
+    for the daily reset — and during the Vande Bharat ingest a bare RuntimeError
+    repeatedly sent us hunting a bug that did not exist.
+
+    Note the two limits are easy to confuse and were confused here more than once:
+    a requests-per-minute limit looks exactly like a daily cap once the retry
+    ladder is saturating it. A probe only distinguishes them if it uses REAL batch
+    sizes at REAL pacing — a couple of short strings will succeed against an
+    otherwise-throttled key and prove nothing.
     """
 
 
@@ -166,12 +172,19 @@ def _embed_batch_request(model, batch, task_type):
     # that was the old behaviour and it spent another BATCH_SIZE requests per batch
     # discovering the same wall, one 429 at a time.
     raise QuotaExhausted(
-        "Gemini embedding quota exhausted (batchEmbedContents returned 429 after "
-        "7 retries). The free tier resets at midnight Pacific. Progress is cached, "
-        "so rerunning after the reset resumes where this stopped. If you believe "
-        "this is a per-minute burst limit rather than the daily cap, raise "
-        "GEMINI_EMBED_SLEEP (currently "
-        f"{INTER_BATCH_SLEEP}s) and retry.")
+        f"Gemini embedding rate limit hit: batchEmbedContents returned 429 through "
+        f"all 7 retries at GEMINI_EMBED_SLEEP={INTER_BATCH_SLEEP}s.\n"
+        f"  Most likely a REQUESTS-PER-MINUTE limit, not a daily cap. Measured on "
+        f"the free tier: 20s between batches (3 req/min) sustains fine, while 3s "
+        f"and 10s both 429 within the first batch — and once throttled the retry "
+        f"ladder keeps it throttled, because every retry is another request.\n"
+        f"  Try:  GEMINI_EMBED_SLEEP=20 python backend/generate_embeddings.py\n"
+        f"  Progress is cached, so rerunning resumes where this stopped — but WAIT "
+        f"~2 MINUTES FIRST. The retry ladder above just spent 7 requests saturating "
+        f"the window, so an immediate rerun 429s on its very first batch and looks "
+        f"like a hard daily cap when it is only the previous run's backwash. Only "
+        f"if it still fails after a genuine pause is this the daily cap, which "
+        f"resets at midnight Pacific.")
 
 
 def embed_documents(texts, task_type="RETRIEVAL_DOCUMENT"):

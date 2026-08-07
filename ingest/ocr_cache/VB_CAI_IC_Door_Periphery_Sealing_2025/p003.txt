@@ -1,0 +1,8 @@
+| Step | Action | Image / Diagram | Notes |
+| :--- | :--- | :--- | :--- |
+| Step 2 | Remove the black-jet panel with proper care. Proper tools to be used | (Before) (After) | It shall be done only inside the passenger saloon area. Access is available for the other side from the passenger saloon area itself. |
+| Step 3 | Clean the Aluminum extrusion inner side with emery paper as shown in TS/MC-4-3-014. | [Diagram showing cross-section of aluminum extrusion with dimensions: 50, 70, 20, 2, 20.5, R22] | Proper cleaning shall be ensured. |
+| Step 4 | Adhesive shall be applied on the surface of aluminum extrusion, with Brush | | Care to be taken to prevent falling of drops of adhesive during application of adhesive. |
+| Step 5 | Suitable length of the bristles to be chosen and to be trimmed to the correct dimension as per the drawing | [Image of brush bristles] | Bristle to be trimmed to match with that of Aluminum profile, using metal cutter |
+
+Page | 2

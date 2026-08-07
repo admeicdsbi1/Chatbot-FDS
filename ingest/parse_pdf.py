@@ -123,8 +123,21 @@ def _in_any_rect(bbox, rects):
     return any(r[0] <= cx <= r[2] and r[1] <= cy <= r[3] for r in rects)
 
 
+def _ocr_cache_path(doc_id, page_no):
+    return os.path.join(OCR_CACHE_DIR, doc_id, f"p{page_no:03d}.txt")
+
+
+def _ocr_attempted(doc_id, page_no):
+    """True once ocr_gemini has processed this page — including when it came back
+    [UNREADABLE] and cached an empty marker. Distinct from _ocr_text_for returning
+    None, which conflates 'never OCR'd' with 'OCR found nothing readable'; without
+    the distinction a photo-only page is reported as a missing-OCR gap on every
+    build, forever."""
+    return os.path.exists(_ocr_cache_path(doc_id, page_no))
+
+
 def _ocr_text_for(doc_id, page_no):
-    path = os.path.join(OCR_CACHE_DIR, doc_id, f"p{page_no:03d}.txt")
+    path = _ocr_cache_path(doc_id, page_no)
     if os.path.exists(path):
         with open(path, encoding="utf-8") as f:
             t = f.read().strip()
@@ -237,7 +250,8 @@ def _ocr_only(path, entry):
                              "blocks": [{"type": "text", "text": text, "page": page_no}]})
         page_stats.append({"page": page_no, "chars": len(text), "tables": 0,
                            "big_images": 0, "needs_ocr": not used_ocr and not text,
-                           "ocr_merged": used_ocr, "suspect_layer": True})
+                           "ocr_merged": used_ocr, "suspect_layer": True,
+                           "ocr_attempted": _ocr_attempted(entry["doc_id"], page_no)})
     doc.close()
     return sections, page_stats
 
@@ -391,7 +405,8 @@ def extract(path, entry):
         page_stats.append({"page": page_no, "chars": page_chars,
                            "tables": len(table_blocks), "big_images": big_images,
                            "needs_ocr": needs_ocr and not ocr_merged,
-                           "ocr_merged": ocr_merged, "suspect_layer": suspect})
+                           "ocr_merged": ocr_merged, "suspect_layer": suspect,
+                           "ocr_attempted": _ocr_attempted(doc_id, page_no)})
 
     if current["blocks"]:
         sections.append(current)
