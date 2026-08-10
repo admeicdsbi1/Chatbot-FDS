@@ -574,6 +574,41 @@ def _doc_label(c):
     return f"[**{text}**]({href})"
 
 
+def build_sources_list(excerpts):
+    """The same citations as build_sources(), as structured rows.
+
+    Returned alongside — never instead of — the markdown string, so an older
+    client keeps rendering exactly what it does today. Purely a projection of
+    chunk metadata; it does not touch retrieval or scoring.
+    """
+    rows, seen = [], set()
+    for _, c in excerpts:
+        doc = c.get("title", c.get("doc_id", ""))
+        sec = c.get("section", "")[:50]
+        clause = c.get("section_num", "")
+        pg = c.get("page_num", "")
+        key = f"{doc}|{clause}|{sec}"
+        if key in seen:
+            continue
+        seen.add(key)
+        url = c.get("download_url", "")
+        rows.append({
+            "doc_id": c.get("doc_id", ""),
+            "title": doc,
+            "section": sec,
+            "clause": clause,
+            "page": pg,
+            "letter_no": c.get("letter_no", ""),
+            "issue_date": c.get("issue_date", ""),
+            "date_label": _fmt_date(c.get("issue_date", "")),
+            "ref": _cite_ref(c),
+            "coach_type": c.get("coach_type") or [],
+            "oem": c.get("oem", ""),
+            "url": (f"{url}#page={pg}" if url and pg else url),
+        })
+    return rows
+
+
 def build_sources(excerpts):
     parts, seen = [], set()
     for _, c in excerpts:

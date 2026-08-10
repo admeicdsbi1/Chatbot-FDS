@@ -3,9 +3,12 @@ main.py — FastAPI backend for the Maintenance Assistant.
 
 Endpoints:
   GET  /api/health           keep-alive / readiness
-  POST /api/chat             {question, history[]} -> {answer, sources, retrieval_count, lang}
+  GET  /api/systems          maintenance areas + live chunk/doc counts (nav)
+  GET  /api/documents        the reference shelf — one row per source PDF
+  POST /api/chat             {question, history[], coach?} -> {answer, sources, ...}
   POST /api/transcribe       multipart audio       -> {text, lang, confidence, alternatives[]}
   POST /api/tts              {text, lang}           -> audio/mpeg (only if browser TTS off)
+  POST /api/feedback         {message_id, rating, question?, note?} -> logged to stdout
 
 The RAG brain lives in rag.py / voice_text.py (ported from the original Gradio
 app). I/O edges (LLM, STT, TTS) are reliable free providers — see llm.py / stt.py.
@@ -22,6 +25,7 @@ from fastapi.responses import FileResponse, JSONResponse
 from pydantic import BaseModel
 
 import rag
+import catalog
 import llm
 import stt
 import tts
@@ -69,11 +73,22 @@ class Turn(BaseModel):
 class ChatRequest(BaseModel):
     question: str
     history: list[Turn] = []
+    # Optional coach scope set in the UI ("LHB" / "ICF" / "Vande Bharat" /
+    # "Amrit Bharat"). Absent or empty means today's exact behaviour.
+    coach: str | None = None
 
 
 class TTSRequest(BaseModel):
     text: str
     lang: str = "en"
+
+
+class FeedbackRequest(BaseModel):
+    message_id: str
+    rating: str            # "up" | "down"
+    question: str = ""
+    answer_preview: str = ""
+    note: str = ""
 
 
 # ================================================================
@@ -89,12 +104,51 @@ def health():
         "embedding_shape": rag.embedding_shape(),
         "embedding_model": embed.current_model() if embed.available() else None,
         "gemini_model": llm.GEMINI_MODEL,
+        "documents": len({c.get("doc_id") for c in rag.chunks}),
     }
+
+
+@app.get("/api/systems")
+def systems():
+    """Maintenance areas with live counts — drives the nav and the empty state.
+    Derived from the loaded KB, so an ingest updates it with no code change."""
+    return {"systems": catalog.systems()}
+
+
+@app.get("/api/documents")
+def documents():
+    """The reference shelf: every source document with its R2 PDF link."""
+    docs = catalog.documents()
+    return {"count": len(docs), "documents": docs}
 
 
 # Marker that the previous assistant turn was our clarification prompt (see
 # rag.clarification_needed) — used to detect a coach/OEM follow-up answer.
 _CLARIFY_MARKER = "please tell me the"
+
+
+def _apply_coach_scope(query, coach):
+    """Fold the UI's coach-scope selection into the retrieval query.
+
+    The scope chip exists so a technician working on a Vande Bharat rake does
+    not have to answer 'which coach type?' on every vague symptom query — each
+    of those clarifications costs a full round trip on Render's free tier.
+
+    Naming the coach in the query is all that is needed: rag.detect_query_coach
+    picks it up and _coach_factor boosts that coach's chunks while leaving
+    IR-wide ('common') documents at 1.0. An explicit coach in the question
+    always wins, so the chip can never override what the user actually typed.
+    """
+    if not coach:
+        return query
+    coach = coach.strip()
+    if not coach or coach.lower() in ("all", "any"):
+        return query
+    if rag.detect_query_coach(query):
+        return query
+    if not rag.detect_query_coach(coach):
+        return query          # unrecognised value — ignore rather than pollute
+    return f"{coach} {query}"
 
 
 def _retrieval_query(question, history):
@@ -130,13 +184,14 @@ def chat(req: ChatRequest):
         return JSONResponse({"error": "empty question"}, status_code=400)
 
     lang = detect_language(question)
-    rquery = _retrieval_query(question, req.history)
+    rquery = _apply_coach_scope(_retrieval_query(question, req.history), req.coach)
     excerpts = rag.retrieve(rquery)
     if not excerpts:
-        log_usage(type="chat", question=question, retrieval_count=0, lang=lang)
+        log_usage(type="chat", question=question, retrieval_count=0, lang=lang,
+                  coach=req.coach or None)
         return {
             "answer": "No relevant content found. Rephrase or consult supervisor.",
-            "sources": "", "retrieval_count": 0, "lang": lang,
+            "sources": "", "sources_list": [], "retrieval_count": 0, "lang": lang,
             "retrieval_mode": rag.retrieval_mode(),
         }
 
@@ -149,6 +204,7 @@ def chat(req: ChatRequest):
         return {
             "answer": clarify,
             "sources": rag.build_sources(excerpts),
+            "sources_list": rag.build_sources_list(excerpts),
             "retrieval_count": len(excerpts),
             "lang": lang,
             "retrieval_mode": rag.retrieval_mode(),
@@ -165,15 +221,22 @@ def chat(req: ChatRequest):
 
     log_usage(type="chat", question=question,
               retrieval_count=len(excerpts), lang=lang,
+              coach=req.coach or None,
               response_length=len(answer),
               values_suppressed=len(suppressed),
               suppressed=[t for _, t in suppressed] or None)
     return {
         "answer": answer,
         "sources": sources,
+        "sources_list": rag.build_sources_list(excerpts),
         "retrieval_count": len(excerpts),
         "lang": lang,
         "retrieval_mode": rag.retrieval_mode(),
+        # The guard withheld these values because they were not present verbatim
+        # in the retrieved source. Surfaced so the user knows something was held
+        # back rather than silently absent — a maintenance user needs to know to
+        # go and check the manual.
+        "values_suppressed": len(suppressed),
     }
 
 
@@ -185,6 +248,20 @@ async def transcribe(audio: UploadFile = File(...)):
     log_usage(type="transcribe", text=result.get("text", ""),
               confidence=result.get("confidence"), lang=result.get("lang"))
     return result
+
+
+@app.post("/api/feedback")
+def feedback(req: FeedbackRequest):
+    """Thumbs up/down on an answer, logged to stdout alongside usage.
+
+    Render's disk is ephemeral, so there is deliberately no store — with ~20-30
+    users the log stream is enough, and it is the only channel that will surface
+    a wrong answer that the numeric guard could not catch."""
+    rating = req.rating if req.rating in ("up", "down") else "unknown"
+    log_usage(type="feedback", rating=rating, message_id=req.message_id,
+              question=req.question[:300], answer_preview=req.answer_preview[:300],
+              note=req.note[:500] or None)
+    return {"ok": True}
 
 
 @app.post("/api/tts")
