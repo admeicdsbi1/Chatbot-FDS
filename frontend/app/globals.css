@@ -2,8 +2,118 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================================
+   Theme tokens
+   Values are space-separated RGB triplets so Tailwind's
+   `rgb(var(--x) / <alpha-value>)` opacity modifiers work
+   (border-line/15, bg-accent/10, …).
+
+   Light is the base. Dark applies when the OS asks for it and the
+   user has not explicitly chosen light, or when the user picks dark.
+   Every colour is defined here in the light block — nothing gets its
+   only definition inside a media query.
+   ============================================================ */
 :root {
+  color-scheme: light;
+
+  --bg-base: 244 246 250;
+  --bg-panel: 255 255 255;
+  --bg-card: 255 255 255;
+  --bg-elevated: 233 238 245;
+  --bg-sunken: 241 245 249;
+
+  --ink: 13 23 38;
+  --ink-dim: 67 83 107;
+  --ink-faint: 93 109 132;
+
+  --accent: 14 116 144;
+  --accent-glow: 3 105 161;
+  --accent-violet: 109 40 217;
+  --accent-green: 4 120 87;
+  /* amber-800, not amber-700: the safety callout must clear 4.5:1 on the
+     sunken and elevated surfaces too, not just on a card. */
+  --accent-amber: 133 77 14;
+  --accent-red: 185 28 28;
+
+  /* Hairlines and shadows are tinted with the ink colour in light and
+     with white in dark, so one token name works in both. */
+  --line: 13 23 38;
+  --line-alpha: 0.14;
+  --shadow-rgb: 13 23 38;
+
+  /* Ambient background wash */
+  --wash-1: 14 116 144;
+  --wash-2: 109 40 217;
+  --wash-alpha-1: 0.07;
+  --wash-alpha-2: 0.05;
+  --grid-alpha: 0.035;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --bg-base: 7 11 20;
+    --bg-panel: 13 20 36;
+    --bg-card: 17 26 46;
+    --bg-elevated: 22 33 58;
+    --bg-sunken: 8 13 24;
+
+    --ink: 230 237 247;
+    --ink-dim: 159 176 200;
+    /* was #5f708a — 3.44:1 on bg-card, below the 4.5:1 minimum.
+       #8496b0 measures 5.76:1 on card, 6.53:1 on base. */
+    --ink-faint: 132 150 176;
+
+    --accent: 34 211 238;
+    --accent-glow: 56 189 248;
+    --accent-violet: 167 139 250;
+    --accent-green: 52 211 153;
+    --accent-amber: 251 191 36;
+    --accent-red: 248 113 113;
+
+    --line: 255 255 255;
+    --line-alpha: 0.1;
+    --shadow-rgb: 0 0 0;
+
+    --wash-1: 34 211 238;
+    --wash-2: 139 92 246;
+    --wash-alpha-1: 0.1;
+    --wash-alpha-2: 0.08;
+    --grid-alpha: 0.02;
+  }
+}
+
+/* Explicit user choice wins over the OS setting, in both directions. */
+:root[data-theme="dark"] {
   color-scheme: dark;
+
+  --bg-base: 7 11 20;
+  --bg-panel: 13 20 36;
+  --bg-card: 17 26 46;
+  --bg-elevated: 22 33 58;
+  --bg-sunken: 8 13 24;
+
+  --ink: 230 237 247;
+  --ink-dim: 159 176 200;
+  --ink-faint: 132 150 176;
+
+  --accent: 34 211 238;
+  --accent-glow: 56 189 248;
+  --accent-violet: 167 139 250;
+  --accent-green: 52 211 153;
+  --accent-amber: 251 191 36;
+  --accent-red: 248 113 113;
+
+  --line: 255 255 255;
+  --line-alpha: 0.1;
+  --shadow-rgb: 0 0 0;
+
+  --wash-1: 34 211 238;
+  --wash-2: 139 92 246;
+  --wash-alpha-1: 0.1;
+  --wash-alpha-2: 0.08;
+  --grid-alpha: 0.02;
 }
 
 html,
@@ -12,50 +122,84 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Futuristic ambient background: subtle grid + radial glow */
+/* The page itself must never scroll sideways — wide content scrolls
+   inside its own container (see .md-table-wrap). */
 body {
+  overflow-x: hidden;
+  background-color: rgb(var(--bg-base));
   background-image:
-    radial-gradient(1200px 600px at 50% -10%, rgba(34, 211, 238, 0.10), transparent 60%),
-    radial-gradient(900px 500px at 90% 10%, rgba(139, 92, 246, 0.08), transparent 55%),
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    radial-gradient(1200px 600px at 50% -10%, rgb(var(--wash-1) / var(--wash-alpha-1)), transparent 60%),
+    radial-gradient(900px 500px at 90% 10%, rgb(var(--wash-2) / var(--wash-alpha-2)), transparent 55%),
+    linear-gradient(rgb(var(--line) / var(--grid-alpha)) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(var(--line) / var(--grid-alpha)) 1px, transparent 1px);
   background-size: auto, auto, 40px 40px, 40px 40px;
   background-attachment: fixed;
 }
 
 /* Glassmorphism helper */
 .glass {
-  background: rgba(17, 26, 46, 0.6);
+  background: rgb(var(--bg-panel) / 0.78);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid rgb(var(--line) / var(--line-alpha));
 }
 
 /* Thin custom scrollbar */
 .scroll-area {
   scrollbar-width: thin;
-  scrollbar-color: rgba(34, 211, 238, 0.35) transparent;
+  scrollbar-color: rgb(var(--accent) / 0.4) transparent;
 }
 .scroll-area::-webkit-scrollbar {
   width: 6px;
+  height: 6px;
 }
 .scroll-area::-webkit-scrollbar-thumb {
-  background: rgba(34, 211, 238, 0.35);
+  background: rgb(var(--accent) / 0.4);
   border-radius: 999px;
 }
 
-/* Markdown answer styling */
+/* Visible keyboard focus everywhere — the app is used with gloves and
+   with keyboards in the depot office. */
+:where(a, button, textarea, input, select, [tabindex]):focus-visible {
+  outline: 2px solid rgb(var(--accent));
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* ============================================================
+   Markdown answer styling
+   ============================================================ */
 .answer-md {
-  font-size: 0.95rem;
+  font-size: 0.95rem; /* 15.2px — the readability floor for body text */
   line-height: 1.65;
+  color: rgb(var(--ink));
+}
+.answer-md > :first-child {
+  margin-top: 0;
+}
+.answer-md > :last-child {
+  margin-bottom: 0;
 }
 .answer-md strong {
-  color: #e6edf7;
+  color: rgb(var(--ink));
   font-weight: 700;
 }
 .answer-md p {
   margin: 0.35rem 0;
 }
+.answer-md h1,
+.answer-md h2,
+.answer-md h3,
+.answer-md h4 {
+  margin: 0.9rem 0 0.35rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: rgb(var(--ink));
+}
+.answer-md h1 { font-size: 1.15rem; }
+.answer-md h2 { font-size: 1.05rem; }
+.answer-md h3 { font-size: 0.98rem; }
+.answer-md h4 { font-size: 0.93rem; }
 .answer-md ol,
 .answer-md ul {
   margin: 0.4rem 0 0.4rem 1.1rem;
@@ -65,17 +209,143 @@ body {
   margin: 0.2rem 0;
 }
 .answer-md a {
-  color: #38bdf8;
+  color: rgb(var(--accent-glow));
   text-decoration: underline;
+  text-underline-offset: 2px;
+  /* Long R2 URLs and letter numbers must not widen the bubble. */
+  overflow-wrap: anywhere;
 }
 .answer-md code {
-  background: rgba(34, 211, 238, 0.12);
+  background: rgb(var(--accent) / 0.14);
+  color: rgb(var(--ink));
   padding: 0.05rem 0.3rem;
   border-radius: 4px;
   font-size: 0.85em;
+  overflow-wrap: anywhere;
+}
+.answer-md pre {
+  margin: 0.5rem 0;
+  padding: 0.7rem 0.85rem;
+  border-radius: 10px;
+  background: rgb(var(--bg-sunken));
+  border: 1px solid rgb(var(--line) / var(--line-alpha));
+  overflow-x: auto;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+.answer-md pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+}
+.answer-md blockquote {
+  margin: 0.5rem 0;
+  padding: 0.15rem 0 0.15rem 0.75rem;
+  border-left: 3px solid rgb(var(--accent) / 0.5);
+  color: rgb(var(--ink-dim));
+}
+.answer-md hr {
+  margin: 0.85rem 0;
+  border: 0;
+  border-top: 1px solid rgb(var(--line) / var(--line-alpha));
+}
+
+/* ------------------------------------------------------------
+   Tables. 64% of KB chunks are markdown tables, so answers quote
+   them constantly. Before this they rendered as unstyled default
+   HTML and pushed the whole page into horizontal scroll.
+
+   The table scrolls inside .md-table-wrap; the page never does.
+   The first column sticks so a wide schedule stays readable, and a
+   right-edge shadow (background-attachment: scroll, auto-hiding at
+   the end via the `local` cover layer) signals there is more to see.
+   ------------------------------------------------------------ */
+.md-table-wrap {
+  margin: 0.6rem 0;
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid rgb(var(--line) / var(--line-alpha));
+  border-radius: 10px;
+  background:
+    linear-gradient(to left, rgb(var(--bg-card)), rgb(var(--bg-card) / 0))
+      right center / 28px 100% no-repeat local,
+    linear-gradient(to left, rgb(var(--shadow-rgb) / 0.16), rgb(var(--shadow-rgb) / 0))
+      right center / 16px 100% no-repeat scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.answer-md table {
+  width: max-content;
+  min-width: 100%;
+  border-collapse: collapse;
+  font-size: 0.83rem;
+  line-height: 1.45;
+}
+.answer-md th,
+.answer-md td {
+  padding: 0.45rem 0.65rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid rgb(var(--line) / var(--line-alpha));
+  border-right: 1px solid rgb(var(--line) / var(--line-alpha));
+  /* Keep a cell readable but stop one long cell dictating the width. */
+  min-width: 5.5rem;
+  max-width: 22rem;
+  overflow-wrap: anywhere;
+}
+.answer-md th:last-child,
+.answer-md td:last-child {
+  border-right: 0;
+}
+.answer-md tbody tr:last-child td {
+  border-bottom: 0;
+}
+.answer-md thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: rgb(var(--bg-elevated));
+  color: rgb(var(--ink));
+  font-weight: 700;
+  white-space: nowrap;
+}
+.answer-md tbody tr:nth-child(even) td {
+  background: rgb(var(--line) / 0.035);
+}
+/* Sticky row header: the item/description column stays put while the
+   value columns scroll. Needs an opaque background of its own. */
+.answer-md th:first-child,
+.answer-md td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: rgb(var(--bg-card));
+  box-shadow: 1px 0 0 rgb(var(--line) / var(--line-alpha));
+}
+.answer-md thead th:first-child {
+  z-index: 3;
+  background: rgb(var(--bg-elevated));
+}
+/* Numeric cells read better right-aligned; opt in from the renderer. */
+.answer-md td.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 /* Safe-area aware bottom padding for mobile */
 .pb-safe {
   padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0.5rem);
+}
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

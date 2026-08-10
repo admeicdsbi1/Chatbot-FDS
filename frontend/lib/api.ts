@@ -1,4 +1,12 @@
-import type { ChatResponse, Message, TranscribeResponse } from "./types";
+import type {
+  ChatResponse,
+  CoachScope,
+  DocumentInfo,
+  HealthResponse,
+  Message,
+  SystemInfo,
+  TranscribeResponse,
+} from "./types";
 
 const API_BASE =
   process.env.NEXT_PUBLIC_API_BASE?.replace(/\/$/, "") ||
@@ -58,10 +66,13 @@ function checkStatus(res: Response, what: string) {
   throw new ApiError(kind, `${what} failed: ${res.status}`, res.status);
 }
 
-/** Send a question plus recent history; returns the structured answer. */
+/** Send a question plus recent history; returns the structured answer.
+ *  `coach` is the UI scope chip — omitted when "all coaches", so the request is
+ *  byte-identical to the previous version's in the default case. */
 export async function sendChat(
   question: string,
   history: Message[],
+  coach: CoachScope = "",
   signal?: AbortSignal
 ): Promise<ChatResponse> {
   const trimmed = history
@@ -74,13 +85,78 @@ export async function sendChat(
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ question, history: trimmed }),
+      body: JSON.stringify(
+        coach ? { question, history: trimmed, coach } : { question, history: trimmed }
+      ),
     },
     CHAT_TIMEOUT_MS,
     signal
   );
   checkStatus(res, "chat");
   return res.json();
+}
+
+// Reference data is small (9 systems, 97 documents) and only changes on an
+// ingest, so fetch it once per page load and reuse the promise.
+let _systems: Promise<SystemInfo[]> | null = null;
+let _documents: Promise<DocumentInfo[]> | null = null;
+
+/** Maintenance areas with live counts. Empty array if the backend is asleep —
+ *  the caller falls back to a static list rather than showing an error. */
+export function fetchSystems(): Promise<SystemInfo[]> {
+  if (!_systems) {
+    _systems = fetchWithTimeout(`${API_BASE}/api/systems`, {}, 20_000)
+      .then((r) => (r.ok ? r.json() : { systems: [] }))
+      .then((d) => (Array.isArray(d.systems) ? d.systems : []))
+      .catch(() => {
+        _systems = null; // let a later attempt retry after a cold start
+        return [];
+      });
+  }
+  return _systems;
+}
+
+/** The reference shelf. */
+export function fetchDocuments(): Promise<DocumentInfo[]> {
+  if (!_documents) {
+    _documents = fetchWithTimeout(`${API_BASE}/api/documents`, {}, 30_000)
+      .then((r) => (r.ok ? r.json() : { documents: [] }))
+      .then((d) => (Array.isArray(d.documents) ? d.documents : []))
+      .catch(() => {
+        _documents = null;
+        return [];
+      });
+  }
+  return _documents;
+}
+
+export async function fetchHealth(): Promise<HealthResponse | null> {
+  try {
+    const r = await fetchWithTimeout(`${API_BASE}/api/health`, {}, 20_000);
+    return r.ok ? await r.json() : null;
+  } catch {
+    return null;
+  }
+}
+
+/** Thumbs up/down. Fire-and-forget: a failed rating must never surface as an
+ *  error to someone who is trying to read an answer. */
+export function sendFeedback(payload: {
+  message_id: string;
+  rating: "up" | "down";
+  question?: string;
+  answer_preview?: string;
+  note?: string;
+}): void {
+  fetchWithTimeout(
+    `${API_BASE}/api/feedback`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    },
+    15_000
+  ).catch(() => {});
 }
 
 /** Upload recorded audio for transcription + confidence + alternatives. */

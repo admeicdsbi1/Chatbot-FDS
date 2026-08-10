@@ -1,13 +1,12 @@
 {
-  "name": "Maintenance Assistant · ICD-SBI",
-  "short_name": "Maint Bot",
-  "description": "AI maintenance assistant for FSDS, FDSS & WSP systems — voice + text, Hindi & English.",
+  "name": "Coach Maintenance Assistant · ICD Sabarmati",
+  "short_name": "Coach Maint",
+  "description": "Maintenance knowledge for LHB, ICF, Vande Bharat and Amrit Bharat coaches — fire safety, brakes, running gear, electrical, HVAC, interiors and shop schedules. Voice and text, Hindi and English.",
   "start_url": "/",
   "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#070b14",
-  "theme_color": "#070b14",
-  "categories": ["productivity", "utilities"],
+  "background_color": "#f4f6fa",
+  "theme_color": "#f4f6fa",
+  "categories": ["productivity", "utilities", "education"],
   "icons": [
     {
       "src": "/icons/icon-192.png",

@@ -1,6 +1,8 @@
 /* Minimal offline app-shell service worker.
    Caches the shell so the PWA opens offline; API calls are always network-first. */
-const CACHE = "maint-bot-v1";
+/* Bump on every shell change — `activate` deletes every other cache, so an
+   installed PWA picks up the new app shell instead of serving the old one. */
+const CACHE = "coach-maint-v2";
 const SHELL = ["/", "/manifest.json"];
 
 self.addEventListener("install", (event) => {

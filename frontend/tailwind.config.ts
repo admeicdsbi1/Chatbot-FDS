@@ -1,5 +1,11 @@
 import type { Config } from "tailwindcss";
 
+/** Every colour resolves to a CSS custom property defined in globals.css, in
+ *  the `rgb(var(--x) / <alpha-value>)` form so opacity modifiers still work
+ *  (`border-line/20`, `bg-accent/10`). Swapping the theme swaps the tokens —
+ *  no component needs a `dark:` variant. */
+const token = (name: string) => `rgb(var(--${name}) / <alpha-value>)`;
+
 const config: Config = {
   content: [
     "./app/**/*.{ts,tsx}",
@@ -9,30 +15,41 @@ const config: Config = {
     extend: {
       colors: {
         bg: {
-          base: "#070b14",
-          panel: "#0d1424",
-          card: "#111a2e",
-          elevated: "#16213a",
+          base: token("bg-base"),
+          panel: token("bg-panel"),
+          card: token("bg-card"),
+          elevated: token("bg-elevated"),
+          sunken: token("bg-sunken"),
         },
         accent: {
-          DEFAULT: "#22d3ee",   // cyan
-          glow: "#38bdf8",      // sky
-          violet: "#8b5cf6",
-          green: "#34d399",
-          amber: "#fbbf24",
+          DEFAULT: token("accent"),
+          glow: token("accent-glow"),
+          violet: token("accent-violet"),
+          green: token("accent-green"),
+          amber: token("accent-amber"),
+          red: token("accent-red"),
         },
         ink: {
-          DEFAULT: "#e6edf7",
-          dim: "#9fb0c8",
-          faint: "#5f708a",
+          DEFAULT: token("ink"),
+          dim: token("ink-dim"),
+          faint: token("ink-faint"),
         },
+        // Hairline colour: white in dark, ink in light. Always use with an
+        // opacity modifier, e.g. `border-line/15`.
+        line: token("line"),
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        glow: "0 0 0 1px rgba(34,211,238,0.25), 0 8px 30px rgba(34,211,238,0.12)",
-        card: "0 10px 30px rgba(0,0,0,0.35)",
+        glow: "0 0 0 1px rgb(var(--accent) / 0.25), 0 8px 30px rgb(var(--accent) / 0.12)",
+        card: "0 10px 30px rgb(var(--shadow-rgb) / 0.12)",
+        rail: "0 0 40px rgb(var(--shadow-rgb) / 0.25)",
+      },
+      maxWidth: {
+        // The reading measure for technical prose. 672px (max-w-2xl) was tight
+        // for the tables that make up most of this corpus.
+        reading: "48rem",
       },
       keyframes: {
         sweep: {

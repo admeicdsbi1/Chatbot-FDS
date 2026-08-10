@@ -87,12 +87,12 @@ export default function VoiceRecorder({
       aria-label={recording ? "Stop recording" : "Record voice"}
       className={`relative grid h-12 w-12 shrink-0 place-items-center rounded-full transition active:scale-95 disabled:opacity-50 ${
         recording
-          ? "bg-red-500 text-white shadow-[0_0_0_4px_rgba(239,68,68,0.25)]"
+          ? "bg-accent-red text-bg-base ring-4 ring-accent-red/25"
           : "bg-bg-elevated text-accent ring-1 ring-accent/30 hover:ring-accent/60"
       }`}
     >
       {recording && (
-        <span className="absolute inset-0 animate-ping rounded-full bg-red-500/40" />
+        <span className="absolute inset-0 animate-ping rounded-full bg-accent-red/40" />
       )}
       {processing ? (
         <Loader2 size={20} className="animate-spin" />
@@ -104,7 +104,7 @@ export default function VoiceRecorder({
         <Mic size={20} />
       )}
       {recording && (
-        <span className="absolute -bottom-5 text-[0.6rem] font-semibold text-red-400">
+        <span className="absolute -bottom-5 text-[0.68rem] font-semibold text-accent-red">
           {elapsed}s
         </span>
       )}
