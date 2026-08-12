@@ -36,7 +36,9 @@ ABBREVIATIONS = {
     "tcms": "train control management system display driver",
     "mcp": "master control panel driver desk",
     "ecc": "electrical control cabinet panel",
-    "rmpu": "relay module power unit panel",
+    # Corpus-verified: the VB abbreviation tables define RMPU as the roof AC
+    # unit ("RMPU | Roof Mounted AC Package Unit"), not a relay module.
+    "rmpu": "roof mounted AC package unit air conditioning HVAC",
     "crw": "cab rear wall panel",
     "dtc": "driving trailer coach",
     "ndtc": "non driving trailer coach",
@@ -72,6 +74,20 @@ ABBREVIATIONS = {
     "jfp": "escorts kubota JFP card speed sensor input board",
     "jio": "escorts kubota JIO card relay output board",
     "gui": "graphical user interface WSP diagnostic application",
+    # Vande Bharat-era abbreviations (KB waves of Aug 2026). Expansions are
+    # taken from the documents' own abbreviation tables / letter subjects, not
+    # guessed — a wrong expansion pollutes every query that contains the term.
+    # NOTE: no "ctrb" entry, deliberately. CTRB appears verbatim in 40 chunks,
+    # so the bare acronym is already a highly selective keyword; expanding it
+    # to "...bearing axle box" diluted the query with generic terms and turned
+    # both CTRB eval cases from rank 2-3 hits into misses (measured 2026-08-12,
+    # recall 0.98 -> 0.95). Same reasoning applies to CPA (50 verbatim chunks).
+    "vcb": "vacuum circuit breaker roof propulsion",
+    "vcd": "vigilance control device foot operated switch driver desk",
+    "cai": "coach alteration instruction ICF modification",
+    "smi": "special maintenance instruction",
+    "frp": "fibre reinforced plastic panel",
+    "asdis": "air spring deflation indication system",
 }
 
 PROCEDURAL_SIGNALS = [
@@ -89,6 +105,12 @@ PROCEDURAL_SIGNALS = [
     "error code", "fault code", "defect code", "display code",
     "wsp test", "brake test", "s1 button", "s2 button", "s3 button",
     "checking procedure", "spare parts",
+    # VB-era procedural signals. Phrase-level only: the single words
+    # "isolation"/"isolate" were tried and removed — "which terminal do I
+    # disconnect to isolate the FSDS" is a lookup on an instruction letter, not
+    # a procedure query, and the boost dropped its document from rank 2 to 5
+    # (measured 2026-08-12).
+    "cycle check", "en-route", "enroute",
 ]
 
 # ================================================================
@@ -132,6 +154,14 @@ KNOWN_DOMAIN_TERMS = [
     "speed threshold", "standby mode",
     "wsp error code", "wsp fault code", "display 99", "display 95",
     "code 7201", "code 7301", "code 8888", "code 89",
+    # VB-era domain terms (all corpus-verified)
+    "ctrb", "vcb", "vcd", "cpa", "asdis", "cai", "frp",
+    "trainset", "pantograph", "jumper cable", "iv coupler",
+    "inter-vehicle coupler", "air spring", "stabilizer", "nosecone",
+    "master controller", "parking brake", "axle box",
+    "re-profiling", "wheel shelling", "central sleeve", "lifting pad",
+    "drain hole", "torque wrench", "shop schedule", "rust preventive",
+    "molykote", "medha", "skf", "timken",
     "wsp kaise test kare", "dump valve kaise check kare",
     "speed sensor change karna", "air gap kitna hona chahiye",
     "wsp fault aa raha hai", "wsp kaam nahi kar raha",
@@ -210,6 +240,20 @@ HINDI_CORRECTIONS = {
     "kaise kam": "kaise kaam",
     "eror code": "error code",
     "folt code": "fault code",
+    # VB-era spelled-out acronyms and Whisper mishearings
+    "c t r b": "ctrb", "c.t.r.b": "ctrb",
+    "v c b": "vcb", "v.c.b": "vcb",
+    "v c d": "vcd", "v.c.d": "vcd",
+    "c p a": "cpa", "c a i": "cai", "s m i": "smi",
+    "f r p": "frp", "f.r.p": "frp",
+    "train set": "trainset",
+    "meda": "medha", "madha": "medha", "medha make": "medha",
+    "nose cone": "nosecone", "nose con": "nosecone",
+    "airspring": "air spring", "air sprig": "air spring",
+    "pentograph": "pantograph", "pantograf": "pantograph",
+    "pento graph": "pantograph",
+    "jumper keble": "jumper cable", "jumper kabel": "jumper cable",
+    "excel box": "axle box", "axel box": "axle box",
 }
 
 WHISPER_HALLUCINATIONS = [
