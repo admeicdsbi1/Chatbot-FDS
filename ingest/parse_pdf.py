@@ -97,8 +97,38 @@ def is_garbled(text):
     return r is not None and r < STOP_MIN
 
 
+# Symbol fonts (Wingdings, Symbol, Webdings) encode their glyphs in the Unicode
+# Private Use Area, so a tick drawn in Wingdings extracts as U+F0FC, not U+2713.
+# That is invisible three times over: the embedding model sees an unknown
+# codepoint, rag's keyword index only takes [a-zA-Z]{3,}, and the LLM is handed
+# a character with no meaning. The shop-schedule report marks SS-1/SS-2/SS-3
+# applicability with exactly these ticks — 19,520 of them across the corpus —
+# so for every electrical item the answer to "is this done in SS-2?" was present
+# in the file and unreadable at every stage of the pipeline.
+_PUA_MAP = {
+    "": "✓", "": "✓", "": "✗", "": "➤",
+    "": "•", "": "•", "": "•", "": "▼",
+    "": "▼", "": "→", "": "←", "": "↔",
+    "": "→", "": "°", "": "µ", "": "Ω",
+    "": "±", "": "×", "": "□", "": "●",
+    "": "∞", "": "∈", "": " ", "": "-",
+}
+_PUA_RE = re.compile(r"[-]")
+
+
+def normalize_symbols(text):
+    """Map private-use symbol-font codepoints onto real characters.
+
+    Anything unmapped is dropped rather than kept: an unknown PUA codepoint
+    carries no information downstream and only pollutes the vector."""
+    if not text or not _PUA_RE.search(text):
+        return text
+    return _PUA_RE.sub(lambda m: _PUA_MAP.get(m.group(0), ""), text)
+
+
 def _line_text(line):
-    return "".join(s.get("text", "") for s in line.get("spans", [])).strip()
+    return normalize_symbols(
+        "".join(s.get("text", "") for s in line.get("spans", []))).strip()
 
 
 def _line_size(line):
@@ -115,6 +145,50 @@ def _is_allcaps_heading(text):
         return False
     letters = [c for c in text if c.isalpha()]
     return len(letters) >= 3 and all(c.isupper() for c in letters)
+
+
+# Table strategies, tried in order of how much structure they preserve. The
+# default ("lines") shatters a table whose rules are drawn per-cell: on the
+# shop-schedule report's electrical pages it produced THIRTY columns with the
+# header split mid-token ("**  S**|**  S1**|**   S**|**   S**|**   2**"), so the
+# SS-1/SS-2/SS-3 column identity was destroyed on 412 chunks. "lines_strict"
+# reads the same page as 14 columns with the labels intact. Which one wins is a
+# property of the individual page, so choose per table rather than globally.
+_TABLE_STRATEGIES = ("lines_strict", "lines", "text")
+
+_COLN_RE = re.compile(r"\|Col\d+\|")
+
+
+def _table_penalty(tb):
+    """Lower is better: count the unnamed ColN placeholders in the header row.
+
+    PyMuPDF emits ColN wherever it cannot name a column — which is exactly where
+    a merged or mis-split header cell has lost the real label. Ties break on
+    column count, since a shattered header inflates it."""
+    try:
+        md = tb.to_markdown()
+    except Exception:
+        return (10_000, 10_000)
+    header = md.splitlines()[0] if md else ""
+    return (len(_COLN_RE.findall("|" + header + "|")), tb.col_count)
+
+
+def _find_tables(page):
+    """Tables on `page`, extracted with whichever strategy keeps most structure."""
+    best, best_score = [], None
+    for strategy in _TABLE_STRATEGIES:
+        try:
+            tables = list(page.find_tables(strategy=strategy).tables)
+        except Exception:
+            continue
+        if not tables:
+            continue
+        score = tuple(map(sum, zip(*(_table_penalty(t) for t in tables))))
+        if best_score is None or score < best_score:
+            best, best_score = tables, score
+        if score[0] == 0:
+            break                      # every column named — nothing to improve
+    return best
 
 
 def _in_any_rect(bbox, rects):
@@ -294,16 +368,12 @@ def extract(path, entry):
         d = page_dicts[pno]
 
         table_rects, table_blocks = [], []
-        try:
-            tf = page.find_tables()
-            for tb in tf.tables:
-                md = tb.to_markdown().strip()
-                if md and md.count("|") >= 4:
-                    table_rects.append(tuple(tb.bbox))
-                    table_blocks.append({"type": "table", "text": md, "page": page_no,
-                                         "y": tb.bbox[1]})
-        except Exception:
-            pass
+        for tb in _find_tables(page):
+            md = normalize_symbols(tb.to_markdown().strip())
+            if md and md.count("|") >= 4:
+                table_rects.append(tuple(tb.bbox))
+                table_blocks.append({"type": "table", "text": md, "page": page_no,
+                                     "y": tb.bbox[1]})
 
         # text lines outside table regions, in reading order
         line_items = []
