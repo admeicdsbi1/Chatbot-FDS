@@ -4,7 +4,7 @@ API (no local model → fits Render's 512MB free tier), and runs the hybrid
 semantic+keyword retrieval ported from the original app.py. Semantic search is a
 plain NumPy cosine over 257 normalized vectors — FAISS/torch are not needed.
 """
-import os, json, re, threading
+import math, os, json, re, threading
 from collections import Counter
 import numpy as np
 
@@ -31,6 +31,7 @@ RERANK_POOL = int(os.environ.get("RERANK_POOL", "30"))
 chunks = []
 emb_matrix = None          # (N, D) normalized float32, or None if unavailable
 keyword_index = {}
+doc_chunk_counts = Counter()   # doc_id -> how many chunks it owns (drives _doc_cap)
 
 
 def _normalize_rows(m):
@@ -63,7 +64,7 @@ def init_kb():
     matches the current embedding dimension; otherwise build it via the Gemini API
     in a BACKGROUND thread so startup is instant and serving begins immediately
     (keyword-only until embeddings are ready)."""
-    global chunks, emb_matrix, keyword_index
+    global chunks, emb_matrix, keyword_index, doc_chunk_counts
 
     print("Loading knowledge base...")
     try:
@@ -100,6 +101,8 @@ def init_kb():
     else:
         emb_matrix = None
         print("No GEMINI_API_KEY and no usable cache — keyword-only retrieval.")
+
+    doc_chunk_counts = Counter(c.get("doc_id") for c in chunks)
 
     for i, c in enumerate(chunks):
         for tag in c.get("tags", []):
@@ -352,10 +355,29 @@ def _recency_factor(ch):
 PER_DOC_CAP = 3
 
 
-def _diversify(res, k, cap=PER_DOC_CAP):
+def _doc_cap(doc_id, base=PER_DOC_CAP):
+    """How many of the final slots one document may occupy — sublinear in its size.
+
+    A flat cap of 3 was right when the biggest document was the 116-chunk Faiveley
+    manual. It is wrong against the 826-chunk shop-schedule report, which is 31% of
+    the corpus: for "what activities are covered in SS2?" that report supplied 134
+    of the 160 candidates and the cap admitted 3, handing slots 4-8 to unrelated
+    wheel-diameter letters. The chunk it discarded at rank 4 was p83 'SS-2
+    SCHEDULE.' — the literal answer.
+
+    sqrt//4 keeps the original behaviour everywhere the original reasoning applies
+    (116 -> 3, 55 -> 3, a 2-chunk RDSO letter -> 3) and only opens up for documents
+    an order of magnitude larger (826 -> 7, 358 -> 4). A document 7x bigger earns
+    ~2.4x more slots, not 7x, so chunk count still cannot buy representation.
+    """
+    return max(base, math.isqrt(doc_chunk_counts.get(doc_id, 0)) // 4)
+
+
+def _diversify(res, k, cap=None):
     """Take the top-k in score order, but let no single document occupy more than
-    `cap` slots; the rest of that document's chunks are held back and used only to
-    backfill if there aren't enough other candidates.
+    its `_doc_cap` slots; the rest of that document's chunks are held back and used
+    only to backfill if there aren't enough other candidates. Pass `cap` to force a
+    flat cap (used by A/B measurement).
 
     Without this, chunk-count decides representation: the bulky OEM manuals
     (Faiveley 116 chunks, Knorr presentation 53, WSP handbook 55) repeat a topic's
@@ -369,7 +391,8 @@ def _diversify(res, k, cap=PER_DOC_CAP):
     kept, overflow, seen = [], [], Counter()
     for item in res:
         doc = item[1].get("doc_id")
-        if seen[doc] < cap:
+        limit = cap if cap is not None else _doc_cap(doc)
+        if seen[doc] < limit:
             seen[doc] += 1
             kept.append(item)
             if len(kept) == k:
@@ -411,7 +434,14 @@ def _coach_factor(ch, query_coach):
     return 1.0
 
 
-def retrieve(query, k=TOP_K_FINAL):
+def retrieve(query, k=TOP_K_FINAL, trace=None):
+    """Retrieve the top-k (score, chunk) excerpts for `query`.
+
+    Pass a dict as `trace` to have the routing decisions recorded into it —
+    /api/chat logs this so a wrong answer can be explained afterwards from the
+    log stream alone. Retrieval was previously a black box in production: the
+    only recorded field was how MANY chunks came back, never which ones.
+    """
     if not chunks:
         return []
     exp = expand_query(query)
@@ -423,6 +453,12 @@ def retrieve(query, k=TOP_K_FINAL):
     query_system = detect_query_system(query)
     # electrical subsystem and demote the very fire-detection chunks it wants.
     qv = embed_query(full_exp) if emb_matrix is not None else None
+    if trace is not None:
+        trace.update(coach=query_coach, oem=query_oem, system=query_system,
+                     procedural=proc, rerank_fired=False,
+                     # a starved query embedding silently degrades retrieval to
+                     # keyword-only; without this, that reads as a bad answer.
+                     mode="keyword-only" if qv is None else retrieval_mode())
     if qv is None:
         qterms = set(re.findall(r'\b[a-zA-Z]{2,}\b', full_exp.lower()))
         hits = Counter()
@@ -500,10 +536,14 @@ def retrieve(query, k=TOP_K_FINAL):
         score *= _recency_factor(ch)
         res.append((score, ch))
     res.sort(key=lambda x: -x[0])
+    if trace is not None:
+        trace["pool"] = len(res)
     # Optional flash-lite rerank, only when the pool spans several manuals (gated
     # by RERANK_ENABLED; fail-safe to hybrid order otherwise).
     if rerank.enabled() and _pool_is_ambiguous(res):
         res = rerank.rerank(query, res, pool=RERANK_POOL)
+        if trace is not None:
+            trace["rerank_fired"] = True
     return _diversify(res, k)
 
 

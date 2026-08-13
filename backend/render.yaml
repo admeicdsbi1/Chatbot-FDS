@@ -20,5 +20,11 @@ services:
       - key: GEMINI_EMBED_DIM
         value: "768"  # MUST match the committed embeddings.npy or the server
                       # rebuilds embeddings on every cold start (see embed.py)
+      - key: RERANK_ENABLED
+        value: "1"    # declared here, not only in the dashboard: it changes
+                      # ranking, and two sources of truth for it meant local and
+                      # prod could rank differently with nothing to show for it
+      - key: PDF_BUCKET_BASE
+        sync: false   # R2 public base URL; build-time only, but kept visible
       - key: PYTHON_VERSION
         value: "3.11.9"

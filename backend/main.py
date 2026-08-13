@@ -15,7 +15,7 @@ app). I/O edges (LLM, STT, TTS) are reliable free providers — see llm.py / stt
 """
 import load_env  # noqa: F401  — must precede the imports below (env read at import time)
 
-import os, json
+import os, json, re
 from datetime import datetime
 from contextlib import asynccontextmanager
 
@@ -126,6 +126,46 @@ def documents():
 # rag.clarification_needed) — used to detect a coach/OEM follow-up answer.
 _CLARIFY_MARKER = "please tell me the"
 
+# The answer LLM sometimes formats a unit as LaTeX ("DFT of $125\,\mu m$"). The
+# frontend renders markdown with remark-gfm and no math plugin, so the delimiters
+# and control sequences reach the technician verbatim. Unwrap inline math and drop
+# the backslash commands rather than leave "$125\" on screen.
+_LATEX_INLINE = re.compile(r"\$\$?(?P<inner>[^$\n]{1,120}?)\$\$?")
+# \text{Nm} / \mathrm{V} — unwrap to the braced content
+_LATEX_WRAP = re.compile(r"\\(?:text|mathrm|mathit|mathbf|mathsf)\s*\{([^}]*)\}")
+# whatever is left: spacing commands, sub/superscript markers, stray braces
+_LATEX_RESIDUE = re.compile(r"\\[,;:!> ]|\\[a-zA-Z]+|[\^_{}]")
+_GREEK = {"mu": "µ", "Omega": "Ω", "omega": "ω", "deg": "°", "circ": "°",
+          "times": "×", "cdot": "·", "pm": "±", "approx": "≈",
+          "leq": "≤", "geq": "≥", "le": "≤", "ge": "≥"}
+
+
+def _strip_latex(text):
+    """Turn inline LaTeX math into the plain text a maintenance answer should use.
+
+    The model occasionally formats a unit as math ("DFT of $125\\,\\mu m$"); the
+    frontend renders markdown with remark-gfm and no math plugin, so a technician
+    saw the literal "$125\\". Three ordered passes — order matters, because each
+    one would otherwise consume what the next needs."""
+    if not text or "$" not in text:
+        return text
+
+    def _unwrap(m):
+        inner = m.group("inner")
+        # Only treat this as math if it carries a control sequence or is a bare
+        # token — otherwise two currency amounts ("$5 and $10") read as one span.
+        if "\\" not in inner and " " in inner:
+            return m.group(0)
+        inner = _LATEX_WRAP.sub(lambda g: g.group(1), inner)     # 1. \text{Nm} -> Nm
+        inner = re.sub(r"\\([a-zA-Z]+)",                         # 2. \mu -> µ
+                       lambda g: _GREEK.get(g.group(1), "\\" + g.group(1)), inner)
+        inner = _LATEX_RESIDUE.sub("", inner)                    # 3. \, ^ _ { }
+        inner = re.sub(r"\s+", " ", inner).strip()
+        # a removed control sequence leaves "125µ m" — close the gap it made
+        return re.sub(r"(?<=[µΩ°×·±])\s+(?=[A-Za-z])", "", inner)
+
+    return _LATEX_INLINE.sub(_unwrap, text)
+
 
 def _apply_coach_scope(query, coach):
     """Fold the UI's coach-scope selection into the retrieval query.
@@ -149,6 +189,31 @@ def _apply_coach_scope(query, coach):
     if not rag.detect_query_coach(coach):
         return query          # unrecognised value — ignore rather than pollute
     return f"{coach} {query}"
+
+
+def _retrieval_trace(rquery, question, excerpts, trace, provider=None):
+    """The retrieval decisions behind one answer, for the usage log.
+
+    Without this an answer cannot be explained after the fact: the log recorded
+    how many chunks came back but never which ones, so diagnosing a wrong answer
+    meant re-running retrieval locally and hoping the KB and flags matched prod.
+    Kept compact — 8 short rows per query at ~30 users."""
+    entry = {
+        "retrieved": [
+            {"c": c.get("chunk_id"), "d": c.get("doc_id"),
+             "p": c.get("page_num"), "s": round(float(s), 4)}
+            for s, c in excerpts
+        ],
+        "llm_provider": provider,
+    }
+    if rquery != question:          # coach scope or clarify-refold rewrote it
+        entry["rquery"] = rquery
+    # Drop unset routing signals (coach/oem/system are None when not detected),
+    # but keep rerank_fired even when False — "the rerank did not run" is the
+    # answer to half the ranking questions this log exists to settle.
+    entry.update({k: v for k, v in trace.items()
+                  if v or k == "rerank_fired"})
+    return entry
 
 
 def _retrieval_query(question, history):
@@ -185,7 +250,8 @@ def chat(req: ChatRequest):
 
     lang = detect_language(question)
     rquery = _apply_coach_scope(_retrieval_query(question, req.history), req.coach)
-    excerpts = rag.retrieve(rquery)
+    trace = {}
+    excerpts = rag.retrieve(rquery, trace=trace)
     if not excerpts:
         log_usage(type="chat", question=question, retrieval_count=0, lang=lang,
                   coach=req.coach or None)
@@ -200,7 +266,8 @@ def chat(req: ChatRequest):
     clarify = rag.clarification_needed(rquery, excerpts)
     if clarify:
         log_usage(type="chat", question=question,
-                  retrieval_count=len(excerpts), lang=lang, clarify=True)
+                  retrieval_count=len(excerpts), lang=lang, clarify=True,
+                  **_retrieval_trace(rquery, question, excerpts, trace))
         return {
             "answer": clarify,
             "sources": rag.build_sources(excerpts),
@@ -213,7 +280,8 @@ def chat(req: ChatRequest):
 
     ctx = rag.build_context(excerpts)
     history = [t.model_dump() for t in req.history]
-    answer = llm.generate_answer(question, ctx, lang, history)
+    answer, provider = llm.generate_answer(question, ctx, lang, history)
+    answer = _strip_latex(answer)
     # Numeric-fidelity hard guard: suppress any technical value the answer states
     # that is not present verbatim in the retrieved source (fail closed).
     answer, suppressed = verify.guard_answer(answer, ctx)
@@ -224,7 +292,8 @@ def chat(req: ChatRequest):
               coach=req.coach or None,
               response_length=len(answer),
               values_suppressed=len(suppressed),
-              suppressed=[t for _, t in suppressed] or None)
+              suppressed=[t for _, t in suppressed] or None,
+              **_retrieval_trace(rquery, question, excerpts, trace, provider))
     return {
         "answer": answer,
         "sources": sources,

@@ -78,6 +78,18 @@ _PART_RE = re.compile(
     r"(?=[A-Za-z0-9/\-]*\d)[A-Za-z0-9]+(?:[/\-][A-Za-z0-9]+)*\b"
 )
 
+# Schedule, examination and interval names are shaped exactly like part numbers
+# (letters + digits + a hyphen) but designate a maintenance occasion, not a
+# component. Guarding them was a live defect: the corpus writes "SS 1" / "SS-II"
+# / "2 pack" and an answer writing "SS-1" / "SS-2" / "2-pack" had the token
+# replaced by the placeholder MID-SENTENCE, so a correct answer read as a
+# withheld value. They carry no safety-critical magnitude, so exclude them.
+_SCHEDULE_TOKENS = re.compile(
+    r"^(?:ss[-\s]?(?:1|2|3|i{1,3})|poh|ioh|aoh|toh|d[-\s]?[123](?:[-\s]?d?[123])?"
+    r"|\d{1,2}[-\s]?m(?:onthly)?|ss\d?/\d+m?)$",
+    re.IGNORECASE,
+)
+
 # Where the citation block starts; everything from here on is not guarded.
 _REF_SPLIT = re.compile(r"\*\*\s*reference\s*:?\s*\*\*|(?:^|\n)\s*reference\s*:",
                         re.IGNORECASE)
@@ -92,6 +104,16 @@ def _compact(s):
     s = re.sub(r"(?<=\d),(?=\d)", ".", s)   # 3,8 -> 3.8
     s = re.sub(r"\s+", "", s)
     return s
+
+
+def _compact_sep(s):
+    """_compact, plus separators dropped — for part/model designations only.
+
+    A designation's separators are formatting, not identity: the same part is
+    written FT0027800-003 / FT0027800/003 / "FT0027800 003" across manuals, and
+    _compact removes the spacing but NOT the hyphen, so the three forms did not
+    match each other. Never used for values or ranges, where '-' means 'to'."""
+    return _compact(s).replace("-", "").replace("/", "")
 
 
 def _value_targets(val):
@@ -119,8 +141,10 @@ def _spans(answer):
                       {_compact(m.group("code"))}))
     for m in _PART_RE.finditer(answer):
         tok = m.group(0)
-        # skip pure-year-like or obviously non-part tokens already covered
-        found.append((m.start(), m.end(), "part-number", {_compact(tok)}))
+        if _SCHEDULE_TOKENS.match(tok):
+            continue                     # SS-2 / POH / 9M name an occasion, not a part
+        # matched against the separator-stripped context (see _compact_sep)
+        found.append((m.start(), m.end(), "part-number", {_compact_sep(tok)}))
 
     found.sort(key=lambda s: (s[0], -(s[1] - s[0])))
     out, last_end = [], -1
@@ -143,10 +167,12 @@ def guard_answer(answer, context):
     body, tail = answer[:body_end], answer[body_end:]
 
     ctx = _compact(context)
+    ctx_sep = _compact_sep(context)      # part/model designations only
     stripped = []
     pieces, cursor = [], 0
     for start, end, kind, targets in _spans(body):
-        if any(t and t in ctx for t in targets):
+        haystack = ctx_sep if kind == "part-number" else ctx
+        if any(t and t in haystack for t in targets):
             continue                     # confirmed verbatim in source
         pieces.append(body[cursor:start])
         pieces.append(PLACEHOLDER)

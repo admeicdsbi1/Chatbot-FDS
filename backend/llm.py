@@ -88,6 +88,7 @@ WHEN THE QUESTION IS ABOUT:
 - EN-ROUTE trouble: lead with the immediate safe action, then the isolation procedure, then what to record for the depot.
 
 FORMAT:
+Write plain text and markdown only. NEVER use LaTeX or $...$ math — write "125 microns", "4.7 kOhm", "68 °C" directly.
 **Direct Answer:** [Clear 2-3 sentence summary a beginner can understand]
 **Step-by-step Action:** [Numbered steps with exact values, control names, expected readings]
 **Safety Caution:** [Always include if any safety info exists in context]
@@ -192,19 +193,26 @@ def _openai_chat(cfg, question, context, lang_code, history):
 
 def generate_answer(question, context, lang_code="en", history=None):
     """Generate an answer. Tries Gemini first, then each configured OpenAI-
-    compatible fallback provider (Groq → OpenRouter → Cerebras) in turn."""
+    compatible fallback provider (Groq → OpenRouter → Cerebras) in turn.
+
+    Returns (answer, provider_name). The provider matters for diagnosis: a Gemini
+    quota blip silently drops the whole chain down to an 8b model, and an answer
+    that reads as a reasoning failure is often just a weaker model — previously
+    that was visible only as a stray print() in the log stream."""
     if not GEMINI_API_KEY and not any(p["key"] for p in _OPENAI_PROVIDERS):
         return ("⚠️ No LLM configured. Set GEMINI_API_KEY or a fallback provider "
-                "key (GROQ_API_KEY / OPENROUTER_API_KEY / CEREBRAS_API_KEY).")
+                "key (GROQ_API_KEY / OPENROUTER_API_KEY / CEREBRAS_API_KEY).",
+                "none")
 
     ans = _gemini(question, context, lang_code, history)
     if ans:
-        return ans
+        return ans, GEMINI_MODEL
     for cfg in _OPENAI_PROVIDERS:
         if not cfg["key"]:
             continue
         print(f"Gemini unavailable — falling back to {cfg['name']}")
         ans = _openai_chat(cfg, question, context, lang_code, history)
         if ans:
-            return ans
-    return "⚠️ AI summary unavailable right now. Please rely on the source text below."
+            return ans, cfg["name"]
+    return ("⚠️ AI summary unavailable right now. Please rely on the source text "
+            "below.", "none")

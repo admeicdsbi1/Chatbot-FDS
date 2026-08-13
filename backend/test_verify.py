@@ -85,6 +85,44 @@ def test_hallucinated_part_number_stripped():
           and any(k == "part-number" for k, _ in stripped))
 
 
+# --- separators are formatting, not identity (live false-suppression bug) -----
+SCHED_CTX = (
+    "Apply primer high performance anti corrosion epoxy coating (2 pack) having "
+    "color green with DFT of 125 +20/0 microns as per RDSO spec no. "
+    "M&C/PCN/123/2018. These activities are carried out during SS 1 and SS 2 "
+    "schedules, and again at the 2nd POH. Replace connector N62148-10000."
+)
+
+
+def test_schedule_names_not_treated_as_parts():
+    ans = ("These items are replaced in SS-1 and SS-2, and inspected at POH. "
+           "The D1-D3 examinations are unaffected.")
+    clean, stripped = guard_answer(ans, SCHED_CTX)
+    check("SS-1/SS-2/POH/D1-D3 not suppressed",
+          clean == ans and stripped == [])
+
+
+def test_hyphenated_designation_matches_spaced_source():
+    # source says "(2 pack)"; the model wrote "2-pack" and the whole token was
+    # being replaced by the placeholder mid-sentence.
+    ans = "Apply the anti-corrosion epoxy coating (2-pack) in green."
+    clean, stripped = guard_answer(ans, SCHED_CTX)
+    check("2-pack confirmed against '2 pack'", PLACEHOLDER not in clean)
+
+
+def test_part_separator_variant_confirms():
+    ans = "Replace connector N62148/10000."      # source has N62148-10000
+    clean, stripped = guard_answer(ans, SCHED_CTX)
+    check("part number separator variant confirmed", stripped == [])
+
+
+def test_fake_part_still_stripped_with_separators():
+    ans = "Replace connector N99999/00001."
+    clean, stripped = guard_answer(ans, SCHED_CTX)
+    check("separator-insensitive matching still fails closed",
+          PLACEHOLDER in clean)
+
+
 # --- things that must NOT be touched -----------------------------------------
 def test_step_numbers_untouched():
     ans = ("Follow these steps: 1. Isolate power. 2. Remove the cover. "
