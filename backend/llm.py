@@ -48,6 +48,9 @@ _OPENAI_PROVIDERS = [
 ]
 
 MAX_TOKENS = int(os.environ.get("LLM_MAX_TOKENS", "1500"))
+# "List all activities under SS-2" is a genuinely long answer; 1500 tokens
+# truncates it mid-list, which reads as the bot not knowing the rest.
+MAX_TOKENS_ENUMERATE = int(os.environ.get("LLM_MAX_TOKENS_ENUMERATE", "3000"))
 TEMPERATURE = 0.1
 HISTORY_TURNS = 4  # how many prior turns to feed back for context
 
@@ -80,6 +83,9 @@ STRICT RULES:
 10. Always mention SAFETY warnings: "Remove fuse before card removal", "Power OFF before disconnecting", isolation and lock-out steps, working-at-height and hot-work precautions — whenever the context contains them.
 11. CITE PRECISELY. Use the clause number, page, and — for a circular / instruction letter / SMI / CAI — the exact letter no. and date shown in that source's "Ref:" tag. Do not paraphrase or invent a reference.
 12. SUPERSESSION: if two sources give different values for the same thing, the NEWEST instruction letter / circular / SMI / CAI (latest "Ref:" date) governs. State that value, and explicitly note it supersedes the older manual, citing BOTH dates.
+13. COUNTS. If CONTEXT opens with a "[Corpus facts…]" block, that count is authoritative — it is computed from the document register, not read off a page. Use its number and its list. Say the count is what THIS knowledge base holds ("27 CAIs for Vande Bharat are available here"), NEVER that it is the total ever issued. If a page in CONTEXT gives a different figure (an annexure list may be older, or may mix CAIs with other letters), give the corpus-facts number first and note what the page says and why it differs. Do NOT cite the corpus-facts block as if it were a document — cite the individual letters it names.
+14. CROSS-REFERENCES. Schedule tables often define one schedule by pointing at another: "All activities of SS1 schedule", "Activities of 9-Monthly schedule and …". The chain runs 9-Monthly → SS-1 → SS-2 → SS-3, so SS-2 INCLUDES everything in SS-1, which includes everything in 9-Monthly. Never answer with the pointer text itself. Resolve what you can from CONTEXT, list the inherited activities and the additional ones separately, and say plainly which referenced list is not in CONTEXT rather than implying the answer is complete.
+15. COMPLETENESS. CONTEXT is an extract, not the whole document. For a "list all / which activities / what items" question, answer from every source given, group by equipment or assembly, and end with one line stating what you covered and that more may exist in the full document — e.g. "Covered: bogie, brakes, doors and electrical items from pages 30-102. The complete matrix runs to p.224." Never present a partial list as exhaustive.
 
 WHEN THE QUESTION IS ABOUT:
 - a SCHEDULE (SS-1/SS-2/POH/IOH/daily exam): state which schedule the activity belongs to, its periodicity, and the acceptance/condemning limit where the context gives one.
@@ -106,7 +112,7 @@ def _recent_history(history):
     return cleaned[-(HISTORY_TURNS * 2):]
 
 
-def _gemini(question, context, lang_code, history):
+def _gemini(question, context, lang_code, history, max_tokens=None):
     if not GEMINI_API_KEY:
         return None
     contents = []
@@ -122,7 +128,7 @@ def _gemini(question, context, lang_code, history):
         "contents": contents,
         "generationConfig": {
             "temperature": TEMPERATURE,
-            "maxOutputTokens": MAX_TOKENS,
+            "maxOutputTokens": max_tokens or MAX_TOKENS,
             # 2.5 models spend the output budget on thinking tokens by default,
             # which can consume ALL of MAX_TOKENS and return an empty candidate
             # (silently degrading every request to the Groq fallback).
@@ -152,7 +158,7 @@ def _gemini(question, context, lang_code, history):
         return None
 
 
-def _openai_chat(cfg, question, context, lang_code, history):
+def _openai_chat(cfg, question, context, lang_code, history, max_tokens=None):
     """Call any OpenAI-compatible chat endpoint (Groq / OpenRouter / Cerebras)."""
     if not cfg["key"]:
         return None
@@ -166,7 +172,7 @@ def _openai_chat(cfg, question, context, lang_code, history):
     payload = {
         "model": cfg["model"],
         "messages": messages,
-        "max_tokens": MAX_TOKENS,
+        "max_tokens": max_tokens or MAX_TOKENS,
         "temperature": TEMPERATURE,
         "stream": False,
     }
@@ -191,7 +197,8 @@ def _openai_chat(cfg, question, context, lang_code, history):
         return None
 
 
-def generate_answer(question, context, lang_code="en", history=None):
+def generate_answer(question, context, lang_code="en", history=None,
+                    max_tokens=None):
     """Generate an answer. Tries Gemini first, then each configured OpenAI-
     compatible fallback provider (Groq → OpenRouter → Cerebras) in turn.
 
@@ -204,14 +211,14 @@ def generate_answer(question, context, lang_code="en", history=None):
                 "key (GROQ_API_KEY / OPENROUTER_API_KEY / CEREBRAS_API_KEY).",
                 "none")
 
-    ans = _gemini(question, context, lang_code, history)
+    ans = _gemini(question, context, lang_code, history, max_tokens)
     if ans:
         return ans, GEMINI_MODEL
     for cfg in _OPENAI_PROVIDERS:
         if not cfg["key"]:
             continue
         print(f"Gemini unavailable — falling back to {cfg['name']}")
-        ans = _openai_chat(cfg, question, context, lang_code, history)
+        ans = _openai_chat(cfg, question, context, lang_code, history, max_tokens)
         if ans:
             return ans, cfg["name"]
     return ("⚠️ AI summary unavailable right now. Please rely on the source text "

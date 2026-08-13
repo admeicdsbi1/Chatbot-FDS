@@ -180,3 +180,61 @@ def guard_answer(answer, context):
         cursor = end
     pieces.append(body[cursor:])
     return "".join(pieces) + tail, stripped
+
+
+# The noun each countable doc_type is referred to by in an answer. Only the
+# family the corpus-facts block actually answered is guarded — a count of
+# anything else in the same answer is left alone.
+_COUNT_NOUNS = {
+    "coach_alteration_instruction": r"cai'?s?|coach\s+alteration\s+instructions?",
+    "special_maintenance_instruction": r"smi'?s?|special\s+maintenance\s+instructions?",
+    "instruction_letter": r"instruction\s+letters?|rdso\s+letters?",
+    "circular": r"circulars?",
+    "maintenance_manual": r"manuals?",
+    "report": r"reports?",
+    "oem_manual": r"oem\s+manuals?",
+    None: r"documents?|references?",
+}
+
+
+def guard_counts(answer, facts, context):
+    """Hold a stated document count to the registry figure.
+
+    _VALUE_RE only matches numbers carrying a unit, so a bare count was neither
+    verified nor suppressed — "there are 3 CAIs" passed the guard untouched while
+    being wrong by 24.
+
+    Deliberately narrow, because over-suppression mangles a correct answer
+    mid-sentence: it runs only when a corpus-facts block was supplied, only
+    against the one noun family that block counted, and it accepts any figure
+    that either matches the register or appears verbatim in the retrieved pages
+    (the shop-schedule annexure legitimately states a different, older total).
+    """
+    if not answer or not facts:
+        return answer, []
+    noun = _COUNT_NOUNS.get(facts.get("doc_type"))
+    if not noun:
+        return answer, []
+
+    split = _REF_SPLIT.search(answer)
+    body_end = split.start() if split else len(answer)
+    body, tail = answer[:body_end], answer[body_end:]
+
+    claim = re.compile(r"\b(?P<n>\d{1,4})\s+(?:\w+[\s-]+){0,3}?(?:" + noun + r")\b",
+                       re.IGNORECASE)
+    allowed = {str(facts.get("count"))}
+    ctx = context or ""
+    stripped, pieces, cursor = [], [], 0
+    for m in claim.finditer(body):
+        n = m.group("n")
+        if n in allowed or re.search(rf"(?<![\d.]){re.escape(n)}(?![\d.])", ctx):
+            continue                     # register agrees, or a page states it
+        s, e = m.start("n"), m.end("n")
+        pieces.append(body[cursor:s])
+        pieces.append(PLACEHOLDER)
+        stripped.append(("count", body[s:e]))
+        cursor = e
+    if not stripped:
+        return answer, []
+    pieces.append(body[cursor:])
+    return "".join(pieces) + tail, stripped

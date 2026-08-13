@@ -24,6 +24,28 @@ EMB_CACHE = os.path.join(_DATA_DIR, "embeddings.npy")
 # 0.92 (worse — the extra candidates are noise the keyword arm then amplifies).
 TOP_K_SEMANTIC = int(os.environ.get("TOP_K_SEMANTIC", "60"))
 TOP_K_FINAL = int(os.environ.get("TOP_K_FINAL", "8"))
+
+# An exhaustive question ("list all activities under SS-2") needs a different
+# evidence budget from a value lookup ("stabilizer torque?"). 8 chunks is right
+# for the second and structurally too few for the first: the SS-2 activity set
+# spans dozens of chunks of one report. Widening is deliberately the ONLY thing
+# this classifier can do — a misfire then costs latency and tokens, never an
+# answer, unlike the query->subsystem router removed below whose failure mode
+# was demotion.
+TOP_K_ENUMERATE = int(os.environ.get("TOP_K_ENUMERATE", "20"))
+_ENUMERATE_Q = re.compile(
+    r"\blist\s+(?:all|the|out|down)\b|\ball\s+(?:the\s+)?activit|\bwhat\s+activit"
+    r"|\bwhich\s+activit|\bwhat\s+items\b|\bwhich\s+items\b|\bwhat\s+all\b"
+    r"|\bcomplete\s+list\b|\bfull\s+list\b|\benumerate\b|\bactivities\s+covered\b"
+    r"|\bactivities\s+(?:to\s+be\s+)?(?:covered|performed|carried)\b"
+    r"|\bmust\s+change\s+items\b|\bkya\s+kya\b|\bsaari\b|\bsabhi\b",
+    re.IGNORECASE,
+)
+
+
+def is_enumeration(q):
+    """True when the question asks for a complete set rather than one value."""
+    return bool(_ENUMERATE_Q.search(q or ""))
 CTX_CHUNK_CHARS = int(os.environ.get("CTX_CHUNK_CHARS", "2500"))
 RERANK_POOL = int(os.environ.get("RERANK_POOL", "30"))
 
@@ -355,7 +377,7 @@ def _recency_factor(ch):
 PER_DOC_CAP = 3
 
 
-def _doc_cap(doc_id, base=PER_DOC_CAP):
+def _doc_cap(doc_id, k=TOP_K_FINAL, base=PER_DOC_CAP):
     """How many of the final slots one document may occupy — sublinear in its size.
 
     A flat cap of 3 was right when the biggest document was the 116-chunk Faiveley
@@ -369,8 +391,14 @@ def _doc_cap(doc_id, base=PER_DOC_CAP):
     (116 -> 3, 55 -> 3, a 2-chunk RDSO letter -> 3) and only opens up for documents
     an order of magnitude larger (826 -> 7, 358 -> 4). A document 7x bigger earns
     ~2.4x more slots, not 7x, so chunk count still cannot buy representation.
+
+    The cap scales with `k` because it is a share of the budget, not an absolute:
+    widening an enumeration query to 20 slots while holding the cap at 7 would
+    spend the extra 13 on unrelated documents, which is the opposite of what an
+    exhaustive question needs.
     """
-    return max(base, math.isqrt(doc_chunk_counts.get(doc_id, 0)) // 4)
+    share = max(1, k // TOP_K_FINAL)
+    return max(base, math.isqrt(doc_chunk_counts.get(doc_id, 0)) // 4) * share
 
 
 def _diversify(res, k, cap=None):
@@ -391,7 +419,7 @@ def _diversify(res, k, cap=None):
     kept, overflow, seen = [], [], Counter()
     for item in res:
         doc = item[1].get("doc_id")
-        limit = cap if cap is not None else _doc_cap(doc)
+        limit = cap if cap is not None else _doc_cap(doc, k)
         if seen[doc] < limit:
             seen[doc] += 1
             kept.append(item)
@@ -454,7 +482,9 @@ def retrieve(query, k=TOP_K_FINAL, trace=None):
     # electrical subsystem and demote the very fire-detection chunks it wants.
     qv = embed_query(full_exp) if emb_matrix is not None else None
     if trace is not None:
-        trace.update(coach=query_coach, oem=query_oem, system=query_system,
+        # q_ prefix: these are signals DETECTED IN THE QUERY, distinct from the
+        # UI's coach-scope chip that log_usage records as `coach`.
+        trace.update(q_coach=query_coach, q_oem=query_oem, q_system=query_system,
                      procedural=proc, rerank_fired=False,
                      # a starved query embedding silently degrades retrieval to
                      # keyword-only; without this, that reads as a bad answer.

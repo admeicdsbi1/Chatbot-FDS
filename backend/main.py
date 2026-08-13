@@ -191,6 +191,12 @@ def _apply_coach_scope(query, coach):
     return f"{coach} {query}"
 
 
+_LOG_RESERVED = frozenset({
+    "type", "question", "retrieval_count", "lang", "coach", "clarify",
+    "response_length", "values_suppressed", "suppressed", "timestamp",
+})
+
+
 def _retrieval_trace(rquery, question, excerpts, trace, provider=None):
     """The retrieval decisions behind one answer, for the usage log.
 
@@ -213,7 +219,9 @@ def _retrieval_trace(rquery, question, excerpts, trace, provider=None):
     # answer to half the ranking questions this log exists to settle.
     entry.update({k: v for k, v in trace.items()
                   if v or k == "rerank_fired"})
-    return entry
+    # Never let a trace key collide with a log_usage argument: that raised
+    # TypeError and 500'd the request for the sake of a log field.
+    return {k: v for k, v in entry.items() if k not in _LOG_RESERVED}
 
 
 def _retrieval_query(question, history):
@@ -250,8 +258,12 @@ def chat(req: ChatRequest):
 
     lang = detect_language(question)
     rquery = _apply_coach_scope(_retrieval_query(question, req.history), req.coach)
-    trace = {}
-    excerpts = rag.retrieve(rquery, trace=trace)
+    # An exhaustive question needs more evidence and more room to write it out
+    # than a value lookup does; see rag.is_enumeration.
+    enumerating = rag.is_enumeration(question)
+    k = rag.TOP_K_ENUMERATE if enumerating else rag.TOP_K_FINAL
+    trace = {"enumerate": enumerating}
+    excerpts = rag.retrieve(rquery, k=k, trace=trace)
     if not excerpts:
         log_usage(type="chat", question=question, retrieval_count=0, lang=lang,
                   coach=req.coach or None)
@@ -279,12 +291,25 @@ def chat(req: ChatRequest):
         }
 
     ctx = rag.build_context(excerpts)
+    # "How many CAIs?" is a cardinality of the registry, present in no passage —
+    # top-k retrieval cannot put 27 documents in front of the model. Count it
+    # here and prepend it as a labelled facts block, alongside the passages.
+    facts = catalog.corpus_facts(rquery, req.coach)
+    counts = None
+    if facts:
+        ctx = facts[0] + "\n\n" + ctx
+        counts = facts[1]
     history = [t.model_dump() for t in req.history]
-    answer, provider = llm.generate_answer(question, ctx, lang, history)
+    answer, provider = llm.generate_answer(
+        question, ctx, lang, history,
+        max_tokens=llm.MAX_TOKENS_ENUMERATE if enumerating else llm.MAX_TOKENS)
     answer = _strip_latex(answer)
     # Numeric-fidelity hard guard: suppress any technical value the answer states
     # that is not present verbatim in the retrieved source (fail closed).
     answer, suppressed = verify.guard_answer(answer, ctx)
+    if counts:
+        answer, bad_counts = verify.guard_counts(answer, counts, ctx)
+        suppressed += bad_counts
     sources = rag.build_sources(excerpts)
 
     log_usage(type="chat", question=question,

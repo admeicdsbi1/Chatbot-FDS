@@ -6,7 +6,7 @@ import sys
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 import verify
-from verify import guard_answer, PLACEHOLDER
+from verify import guard_answer, guard_counts, PLACEHOLDER
 
 _fails = []
 
@@ -137,6 +137,45 @@ def test_reference_block_untouched():
     clean, stripped = guard_answer(ans, CTX)
     check("reference block preserved", "Clause 4.3.2, p.27" in clean
           and "01.10.2024" in clean and stripped == [])
+
+
+# --- corpus-count guard (only active on an aggregate query) ------------------
+CAI_FACTS = {"count": 27, "doc_type": "coach_alteration_instruction",
+             "label": "Coach Alteration Instruction documents",
+             "coach": "Vande Bharat"}
+CAI_CTX = ("[Corpus facts] Coach Alteration Instruction documents for Vande "
+           "Bharat held in this knowledge base: 27\n"
+           "Annexure-I lists 42 CAIs and technical instructions issued by ICF.")
+
+
+def test_registry_count_kept():
+    ans = "There are 27 CAIs for Vande Bharat in this knowledge base."
+    clean, stripped = guard_counts(ans, CAI_FACTS, CAI_CTX)
+    check("registry count kept", clean == ans and stripped == [])
+
+
+def test_undercount_stripped():
+    ans = "Based on the context there are 3 CAIs issued for Vande Bharat."
+    clean, stripped = guard_counts(ans, CAI_FACTS, "no numbers here")
+    check("wrong CAI count stripped", PLACEHOLDER in clean
+          and any(k == "count" for k, _ in stripped))
+
+
+def test_count_stated_on_a_page_kept():
+    ans = "Annexure-I of the report lists 42 CAIs and technical instructions."
+    clean, stripped = guard_counts(ans, CAI_FACTS, CAI_CTX)
+    check("page-stated count kept", stripped == [])
+
+
+def test_other_nouns_untouched():
+    ans = "Replace 4 dampers and 12 bolts; there are 27 CAIs."
+    clean, stripped = guard_counts(ans, CAI_FACTS, CAI_CTX)
+    check("non-document counts untouched", clean == ans and stripped == [])
+
+
+def test_count_guard_inert_without_facts():
+    ans = "There are 3 CAIs."
+    check("inert with no facts block", guard_counts(ans, None, CAI_CTX) == (ans, []))
 
 
 def test_empty_inputs():
