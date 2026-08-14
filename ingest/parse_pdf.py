@@ -156,25 +156,175 @@ def _is_allcaps_heading(text):
 # property of the individual page, so choose per table rather than globally.
 _TABLE_STRATEGIES = ("lines_strict", "lines", "text")
 
-_COLN_RE = re.compile(r"\|Col\d+\|")
+# `\|Col\d+\|` cannot count adjacent placeholders: the closing pipe of one match
+# is the opening pipe of the next, so "|Col6|Col7|Col8|" scored 2, not 3. Every
+# strategy was under-counted, but not by the same factor.
+_COLN_RE = re.compile(r"\|Col\d+(?=\|)")
+_COLN_CELL = re.compile(r"^Col\d+$")
 
 
-def _table_penalty(tb):
-    """Lower is better: count the unnamed ColN placeholders in the header row.
+def _cells(row):
+    return [c.strip() for c in row.strip().strip("|").split("|")]
 
-    PyMuPDF emits ColN wherever it cannot name a column — which is exactly where
-    a merged or mis-split header cell has lost the real label. Ties break on
-    column count, since a shattered header inflates it."""
+
+def _plain(cell):
+    return re.sub(r"\*+", "", cell).strip()
+
+
+def _flat(s):
+    return re.sub(r"[\s|*_`]+", "", s).lower()
+
+
+def _named(cell):
+    """True when a header cell holds content PyMuPDF managed to attribute."""
+    c = _plain(cell)
+    return bool(c) and not _COLN_CELL.match(c)
+
+
+def _looks_like_label(cell):
+    """True when a header cell reads like a column label rather than prose.
+
+    Being non-empty is not enough. The "text" strategy will lay a grid over an
+    ordinary prose page and report the first line of the paragraph as the header,
+    split mid-word: "|Axle speed of|rotation is|measured and|evaluated se|parately
+    within|a sp|ee|". Every one of those cells is "named", so a naive count rates
+    that page-grid as highly as a real "|Connector|Board type|Function|" header.
+    Labels are short and start with a capital or a digit; prose fragments carved
+    out of the middle of a sentence do not.
+    """
+    c = _plain(cell)
+    if not c or _COLN_CELL.match(c) or len(c) > 40:
+        return False
+    return c[0].isupper() or c[0].isdigit()
+
+
+def _page_lines(d):
+    """(bbox, text) for every text line on the page."""
+    out = []
+    for block in d.get("blocks", []):
+        if block.get("type", 0) != 0:
+            continue
+        for line in block.get("lines", []):
+            t = _line_text(line)
+            if t:
+                out.append((line.get("bbox", block.get("bbox")), t))
+    return out
+
+
+def _clipped(bbox, lines, repeated):
+    """Text lines this box cuts off: vertically inside it, horizontally outside.
+
+    This is the signal that a strategy has mis-bounded the table, and it is the
+    one that matters most, because a clipped column is data leaving the table
+    altogether. On the shop-schedule report's electrical pages the "text"
+    strategy boxes the table at x>=190, so the S.No. and Equipment/Sub-Assy.
+    columns fall outside it — and heading detection then re-reads those bold
+    labels as section titles, which is how 68 chunks came to be filed under
+    "Equipment/" and 67 under "S.No".
+    """
+    x0, y0, x1, y1 = bbox
+    n = 0
+    for (bx0, by0, bx1, by1), t in lines:
+        if t in repeated:
+            continue
+        if y0 <= (by0 + by1) / 2 <= y1 and not x0 <= (bx0 + bx1) / 2 <= x1:
+            n += 1
+    return n
+
+
+def _swallowed(bbox, lines, repeated):
+    """Running header/footer lines this box has absorbed as table rows.
+
+    A table whose first row is the page's running title has no column labels at
+    all — "|ON SH|OP S|CHEDULE ACTI|VI|TIES FOR|VANDE BHA|RAT TRAINSET|" is what
+    _split_table then repeats at the top of every piece of that table.
+    """
+    x0, y0, x1, y1 = bbox
+    n = 0
+    for (bx0, by0, bx1, by1), t in lines:
+        if t not in repeated:
+            continue
+        if y0 <= (by0 + by1) / 2 <= y1 and x0 <= (bx0 + bx1) / 2 <= x1:
+            n += 1
+    return n
+
+
+def _covered(bbox, lines, repeated):
+    """Content lines this box actually contains."""
+    x0, y0, x1, y1 = bbox
+    return sum(1 for (bx0, by0, bx1, by1), t in lines
+               if t not in repeated
+               and y0 <= (by0 + by1) / 2 <= y1 and x0 <= (bx0 + bx1) / 2 <= x1)
+
+
+def _table_measure(tb, lines, repeated):
+    """(labelled_coverage, clipped, swallowed, unnamed, columns) for a candidate.
+
+    Three ways a table can look better-extracted than it is, all found by
+    measuring rather than reasoning, and all the same mistake — treating an
+    ABSENCE of evidence as evidence of quality:
+
+    1. The real labels of a two-level head sit in the first BODY row, so a
+       candidate judged on its header row alone is judged on group names full of
+       holes. That row is admitted as a header candidate — but only when it reads
+       as labels, or any data row free of ColN would certify the table as named.
+    2. Scoring the fewer-ColN of the two candidates let an EMPTY row
+       ("||||||||||||" — no ColN because no content) certify a table as perfect.
+       That is how p243's page-title-as-header extraction outscored the one
+       holding the real SS-1/SS-2/SS-3 labels. Score the better-LABELLED instead.
+    3. A header with no labels at all likewise scores zero ColN and looks
+       flawless, which is how "text" won on Vol1's Foreword, Preface and Contents
+       and turned prose and a dotted table of contents into table chunks. It gets
+       an explicit penalty.
+
+    ColN count otherwise stays the measure of unnamed columns. Counting every
+    unlabelled cell instead was measured corpus-wide and came out worse (ColN
+    1548 -> 1721): _repair_header legitimately leaves holes empty once it has
+    filled what it can, so that rule punished the repaired headers hardest.
+
+    Coverage is weighted by header quality, because content captured under
+    columns that name nothing is barely captured at all.
+    """
     try:
         md = tb.to_markdown()
     except Exception:
-        return (10_000, 10_000)
-    header = md.splitlines()[0] if md else ""
-    return (len(_COLN_RE.findall("|" + header + "|")), tb.col_count)
+        return (0, 10_000, 10_000, 10_000, 10_000)
+    rows = md.splitlines()
+    head = [rows[0] if rows else ""]
+    if len(rows) > 2 and (_is_label_row(rows[2]) or _header_quality(rows[2]) >= 0.6):
+        head.append(rows[2])            # rows[1] is the |---| separator
+    best = max(head, key=_header_quality)
+    quality = _header_quality(best)
+    unnamed = (len(_COLN_RE.findall(best + "|"))
+               + (len(_cells(best)) if quality == 0 else 0))
+    return (_covered(tb.bbox, lines, repeated) * quality,
+            _clipped(tb.bbox, lines, repeated),
+            _swallowed(tb.bbox, lines, repeated),
+            unnamed, tb.col_count)
 
 
-def _find_tables(page):
-    """Tables on `page`, extracted with whichever strategy keeps most structure."""
+def _find_tables(page, lines, repeated):
+    """Tables on `page`, extracted with whichever strategy keeps most structure.
+
+    Scored on content kept minus damage done, rather than on unnamed ColN header
+    cells alone. The old rule picked the wrong strategy on exactly the pages that
+    matter: on p243 "text" scores fewer ColN than "lines_strict" and yet loses
+    two whole columns off the left edge and makes the page's running title its
+    header row.
+
+    Order arrived at by measurement, not taste. Column naming stays the PRIMARY
+    criterion, as it always was; the new geometric signals are tie-breakers.
+    Ranking clipping above naming was measured across all 97 documents and made
+    95 of them worse (ColN +39, unusable headers +60) while helping only the
+    report it was designed for — because "text" will lay a grid over an entire
+    prose page, clip nothing, and so beat a correctly-read
+    "|Connector|Board type|Function|".
+
+    What actually fixed p243 was not a new criterion but two defects in the old
+    one: _COLN_RE could not count adjacent placeholders, and the first body row
+    was never considered even though PyMuPDF puts the real labels there. With
+    those corrected the original rule picks the right strategy on its own.
+    """
     best, best_score = [], None
     for strategy in _TABLE_STRATEGIES:
         try:
@@ -183,12 +333,202 @@ def _find_tables(page):
             continue
         if not tables:
             continue
-        score = tuple(map(sum, zip(*(_table_penalty(t) for t in tables))))
+        cov, clip, swal, unnamed, cols = (
+            sum(m) for m in zip(*(_table_measure(t, lines, repeated) for t in tables)))
+        score = (unnamed, clip, swal, -cov, cols)
         if best_score is None or score < best_score:
             best, best_score = tables, score
-        if score[0] == 0:
-            break                      # every column named — nothing to improve
+        if clip == swal == unnamed == 0:
+            break                      # nothing clipped or swallowed, all named
     return best
+
+
+# ---- header repair ----------------------------------------------------------
+def _is_label_row(row):
+    """A row of column labels rather than data: short cells, mostly bold."""
+    cells = [c for c in _cells(row) if _plain(c)]
+    if not cells or max(len(_plain(c)) for c in cells) > 60:
+        return False
+    bold = sum(1 for c in cells if c.startswith("**"))
+    return bold >= max(1, len(cells) // 2)
+
+
+def _is_running_row(row, repeated):
+    """A row that is a running header/footer shattered across the columns."""
+    named = [_plain(c) for c in _cells(row) if _named(c)]
+    joined = _flat("".join(named))
+    if len(joined) < 12:
+        return False
+    return any(len(_flat(t)) >= 12 and (joined in _flat(t) or _flat(t) in joined)
+               for t in repeated)
+
+
+def _header_quality(row):
+    """Fraction of a header row's cells that read as column labels."""
+    cells = _cells(row) if row else []
+    return sum(map(_looks_like_label, cells)) / len(cells) if cells else 0.0
+
+
+def _dup(a, b):
+    """True when `b` is `a`'s label repeated rather than a second, distinct label.
+
+    Length-guarded, because the single-letter schedule columns T/M/Q are
+    substrings of almost anything: an unguarded test found "T" inside
+    "Maintenance Periodicity" and deleted the T column's label, leaving every
+    tick in that column filed under the group heading instead. On this table a
+    mislabelled column is a wrong periodicity, so the guard is load-bearing.
+    """
+    fa, fb = _flat(a), _flat(b)
+    return bool(fa) and len(fb) >= 3 and fb in fa
+
+
+# A merged, full-width row is rendered by PyMuPDF as its value repeated in every
+# column. Collapsed rows are marked so chunker._split_table can recognise them;
+# the marker is a character normalize_symbols never emits.
+GROUP_MARK = "▸"
+
+
+def _group_label(row):
+    """The label of a full-width spanning row, or "".
+
+    "1. Line & Traction Converter (MEDHA)- MC1,2" arrives twelve times over, once
+    per column. That row is a heading INSIDE the table — the equipment whose
+    activities the rows beneath it list — and across the report's ~100 electrical
+    pages it is the only place that equipment is named: pages 239-245 are all
+    activities of item 1, with the name printed once on page 238.
+    """
+    cells = [_plain(c) for c in _cells(row)]
+    vals = {c for c in cells if c}
+    if len(cells) < 2 or len(vals) != 1:
+        return ""
+    v = re.sub(r"\s+", " ", re.sub(r"\s*<br>\s*", " ", vals.pop())).strip()
+    return v if 3 <= len(v) <= 140 and sum(c.isalpha() for c in v) >= 3 else ""
+
+
+def _marked_label(row):
+    """The label of a row already collapsed by _table_markdown."""
+    return row[3:].split("|")[0].strip() if row.startswith(f"|{GROUP_MARK} ") else ""
+
+
+def _labels(header):
+    return {_flat(c) for c in _cells(header) if _named(c)} - {""}
+
+
+def _same_table(h1, h2):
+    """Whether two pages' header rows describe the same continuing table.
+
+    Exact equality is too strict — PyMuPDF reads the SAME matrix as 12 columns on
+    p238, 16 on p240 and 14 on p244, because a row with more wrapped cells splits
+    differently. Shared column labels are the stable part. This gate is what lets
+    a group heading carry onto continuation pages without letting it leak onto an
+    unrelated table that merely happens to follow.
+    """
+    a, b = _labels(h1), _labels(h2)
+    if not a or not b:
+        return False
+    return len(a & b) >= 3 or len(a & b) >= 0.5 * min(len(a), len(b))
+
+
+def _repair_header(header, body):
+    """Give the table one header row that names its own columns.
+
+    PyMuPDF reports a two-level head as two rows: the group names ("Maintenance
+    Periodicity") on the header row with ColN holes beneath them, and the leaf
+    labels ("T | M | Q | 9 M | SS1 | SS2 | SS3") as the FIRST BODY ROW. Left
+    alone, the SS-1/SS-2/SS-3 identity sits in a row that chunker._split_table
+    treats as data — so it is not repeated on the continuation pieces of a long
+    table, and every piece after the first loses the column meaning entirely.
+    That is the same information the Wingdings ticks encode, lost one stage later.
+    """
+    if not body or not _is_label_row(body[0]):
+        return header, body
+    fc = _cells(body[0])
+    hc = _cells(header) if header else [""] * len(fc)
+    # Only merge when the header is visibly the poorer of the two, so a table
+    # whose first data row merely happens to be bold keeps its real header.
+    if len(hc) != len(fc) or sum(map(_named, fc)) <= sum(map(_named, hc)):
+        return header, body
+    merged = []
+    for h, f in zip(hc, fc):
+        h, f = _plain(h), _plain(f)
+        if not _named(h) or _dup(f, h):
+            merged.append(f)
+        elif not f or _dup(h, f):
+            merged.append(h)
+        else:
+            merged.append(f"{h} {f}")
+    return "|" + "|".join(merged) + "|", body[1:]
+
+
+def _table_markdown(tb, repeated, carried, page_no, groups):
+    """Table -> markdown with a usable header row and its group headings marked.
+
+    `carried` maps column count -> (header, page) for the last well-named header
+    seen, so the continuation pages of a table that runs for 47 pages keep the
+    labels printed once on its first page. `groups` holds the equivalent state
+    for the in-table equipment heading. Both are restricted to the immediately
+    preceding page: that is what makes it a continuation rather than a guess.
+    """
+    try:
+        md = normalize_symbols(tb.to_markdown().strip())
+    except Exception:
+        return ""
+    rows = md.splitlines()
+    if len(rows) < 3:
+        return md
+    sep = rows[1]
+    header = "" if _is_running_row(rows[0], repeated) else rows[0]
+    body = [r for r in rows[2:] if not _is_running_row(r, repeated)]
+    header, body = _repair_header(header, body)
+    if not body:
+        return ""
+
+    ncols = len(_cells(header or body[0]))
+    if _header_quality(header) >= 0.5:
+        carried[ncols] = (header, page_no)
+    else:
+        prev, prev_page = carried.get(ncols, ("", -9))
+        if prev and page_no - prev_page <= 1:
+            header = prev
+            carried[ncols] = (prev, page_no)
+
+    # collapse spanning rows: twelve copies of an equipment name cost chunk
+    # budget and read as data; one marked row reads as the heading it is
+    def mark(label):
+        return f"|{GROUP_MARK} {label}|" + "|" * (ncols - 1)
+
+    body = [mark(g) if (g := _group_label(r)) else r for r in body]
+
+    # A table continuing onto the next page inherits the group heading in force,
+    # gated on the header describing the same table: the equipment is named once
+    # on p238 and its activities run to p245, so without this every page but the
+    # first is an unattributed list of checks.
+    prev_label, prev_page, prev_header = groups.get("state", ("", -9, ""))
+    if prev_label and page_no - prev_page <= 1 and not _marked_label(body[0]) \
+            and _same_table(header, prev_header):
+        body.insert(0, mark(prev_label))
+    last = next((lbl for r in reversed(body) if (lbl := _marked_label(r))), "")
+    if last:
+        groups["state"] = (last, page_no, header)
+    return "\n".join(([header, sep] if header else []) + body)
+
+
+# Column labels are not section headings. They are bold and short, so the
+# bold-line heading rule reads them as headings on any page whose table box has
+# clipped them — which is how "Equipment/", "S.No" and "Maintenance Periodicity"
+# became the three most common section titles in a 359-page report. The bounding
+# fix above removes the cause; this keeps one bad page from inventing a section.
+# Repeated, so a slash-joined pair of labels ("Remark/ Reference") is recognised
+# as readily as either half — that pair alone titled 45 chunks.
+_COLUMN_LABEL = re.compile(
+    r"^(?:(?:s\.?\s*no|sr\.?\s*no|equipment|sub-?\s*assy|activit(?:y|ies)|"
+    r"maintenance\s+periodicity|periodicity|remarks?|references?|ref\.?|"
+    r"description|specifications?|[tmq]|9\s*m|ss-?[1-4]|col\d+)[\s./:-]*)+$", re.I)
+
+# Page footers vary per page ("Page 241 of 359"), so _collect_repeated_lines can
+# never match them verbatim — they were surviving as the first text block of
+# most sections in this report.
+_PAGE_FOOTER = re.compile(r"^\s*(page\s+)?\d+\s*(of|/)\s*\d+\s*$", re.I)
 
 
 def _in_any_rect(bbox, rects):
@@ -361,19 +701,22 @@ def extract(path, entry):
     sections = []
     current = {"section": "Introduction", "section_num": "", "page_start": 1, "blocks": []}
     page_stats = []
+    carried = {}                      # column count -> (header row, page) for continuations
+    groups = {}                       # last in-table group heading -> (label, page, header)
 
     for pno in range(n_pages):
         page = doc[pno]
         page_no = pno + 1
         d = page_dicts[pno]
 
+        raw_lines = _page_lines(d)
         table_rects, table_blocks = [], []
-        for tb in _find_tables(page):
-            md = normalize_symbols(tb.to_markdown().strip())
+        for t_idx, tb in enumerate(_find_tables(page, raw_lines, repeated)):
+            md = _table_markdown(tb, repeated, carried, page_no, groups)
             if md and md.count("|") >= 4:
                 table_rects.append(tuple(tb.bbox))
                 table_blocks.append({"type": "table", "text": md, "page": page_no,
-                                     "y": tb.bbox[1]})
+                                     "y": tb.bbox[1], "table_index": t_idx})
 
         # text lines outside table regions, in reading order
         line_items = []
@@ -382,7 +725,7 @@ def extract(path, entry):
                 continue
             for line in block.get("lines", []):
                 t = _line_text(line)
-                if not t or t in repeated:
+                if not t or t in repeated or _PAGE_FOOTER.match(t):
                     continue
                 if _in_any_rect(line.get("bbox", block.get("bbox")), table_rects):
                     continue
@@ -423,7 +766,23 @@ def extract(path, entry):
                                           "page": page_no})
                 buf.clear()
 
-        for li in (line_items if use_native else []):
+        # Lines and tables are walked together in page order so that a table
+        # lands in the section whose heading stands ABOVE it. Appending tables
+        # after the loop instead bound every table to whichever heading happened
+        # to be open at the END of the page — which on a page that opens a new
+        # section below its table filed that table under the wrong equipment.
+        events = [(round(li["y"], 1), 0, li) for li in (line_items if use_native else [])]
+        events += [(round(tb["y"], 1), 1, tb) for tb in table_blocks]
+        events.sort(key=lambda e: (e[0], e[1]))
+
+        for _y, kind, item in events:
+            if kind == 1:
+                flush_buf()
+                current["blocks"].append({"type": "table", "text": item["text"],
+                                          "page": page_no,
+                                          "table_index": item["table_index"]})
+                continue
+            li = item
             t = li["text"]
             if _TOC_DOTS.search(t):
                 continue
@@ -438,6 +797,8 @@ def extract(path, entry):
             elif (li["size"] >= body_size + 1.5 or li["bold"]) and len(t) <= 85 \
                     and not t[-1:] in ".:," and len(t.split()) <= 12 and any(c.isalpha() for c in t):
                 is_heading, title = True, t
+            if is_heading and _COLUMN_LABEL.match(title):
+                is_heading = False     # a clipped column label, not a section
             if is_heading:
                 flush_buf()
                 if current["blocks"]:
@@ -447,10 +808,6 @@ def extract(path, entry):
             else:
                 buf.append(t)
         flush_buf()
-
-        # tables belong to the section active at end of page
-        for tb in sorted(table_blocks, key=lambda b: b["y"]):
-            current["blocks"].append({"type": "table", "text": tb["text"], "page": page_no})
 
         # merge cached OCR text whenever it exists — on weak pages it IS the
         # content; on diagram pages it adds labels the native text lacks; on
@@ -489,13 +846,33 @@ def extract(path, entry):
 
 
 def _per_page_sections(path, entry, repeated):
-    """Fallback: one section per page, titled by the page's first short line."""
+    """Fallback: one section per page, titled by the page's first short line.
+
+    Tables are extracted here too. This path is reached whenever heading
+    detection finds fewer than three sections, and it used to emit text blocks
+    only — so a document that tripped the fallback lost EVERY table it had,
+    silently. VB_SMI_CPA_RMPU_2024 lost all 12 the moment the column-label guard
+    stopped a handful of table labels from being miscounted as headings: the
+    document did not change, the number of spurious headings did.
+    """
     doc = fitz.open(path)
     sections = []
+    carried, groups = {}, {}
     for pno in range(len(doc)):
         page_no = pno + 1
-        lines = [l.strip() for l in doc[pno].get_text().splitlines()
-                 if l.strip() and l.strip() not in repeated]
+        page = doc[pno]
+        raw_lines = _page_lines(page.get_text("dict"))
+        table_rects, table_blocks = [], []
+        for t_idx, tb in enumerate(_find_tables(page, raw_lines, repeated)):
+            md = _table_markdown(tb, repeated, carried, page_no, groups)
+            if md and md.count("|") >= 4:
+                table_rects.append(tuple(tb.bbox))
+                table_blocks.append({"type": "table", "text": md, "page": page_no,
+                                     "table_index": t_idx})
+        lines = [t.strip() for bbox, t in raw_lines
+                 if t.strip() and t.strip() not in repeated
+                 and not _PAGE_FOOTER.match(t.strip())
+                 and not _in_any_rect(bbox, table_rects)]
         text = " ".join(lines)
         ocr = _ocr_text_for(entry["doc_id"], page_no)
         # same rule as extract(): OCR replaces a scanner/mojibake text layer,
@@ -507,6 +884,7 @@ def _per_page_sections(path, entry, repeated):
         blocks = []
         if text:
             blocks.append({"type": "text", "text": text, "page": page_no})
+        blocks.extend(table_blocks)
         if ocr and len(text) < WEAK_TEXT_CHARS:
             blocks.append({"type": "text", "text": ocr, "page": page_no})
         if blocks:
