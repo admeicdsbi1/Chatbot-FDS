@@ -24,6 +24,7 @@ import argparse
 import json
 import os
 import sys
+import time
 
 # Import the deployed backend brain (backend/ has flat, top-level module names).
 _BACKEND = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", "..", "backend"))
@@ -75,7 +76,16 @@ def main():
     val_total = val_ok = 0
     guard_total = guard_ok = 0
 
-    for c in cases:
+    # Pacing. With RERANK_ENABLED=1 the free flash-lite tier throttles a
+    # back-to-back 60-case run: a first attempt logged `rerank(gemini) 429` on 31
+    # of 60 queries, and with no Groq key those queries silently fell back to
+    # plain hybrid order — a MIXED condition that reports a rerank-on figure it
+    # never measured. Space the cases out so a rerank-on run is really one.
+    sleep_s = float(os.environ.get("EVAL_SLEEP", "0"))
+
+    for i, c in enumerate(cases):
+        if sleep_s and i:
+            time.sleep(sleep_s)
         q = c["question"]
         expect = c.get("expect_doc")
         results = rag.retrieve(q, k=args.k)
