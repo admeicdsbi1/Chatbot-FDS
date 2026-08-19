@@ -35,6 +35,50 @@ and after every ingestion batch and compare the numbers.
 python ingest/eval/run_eval.py --k 8
 ```
 
+## The commit gate
+
+**Gate on rerank-ON `value-retrieved`. Use rerank-off only as an unchanged-control.**
+
+Production runs `RERANK_ENABLED=1`, so a rerank-off score describes a
+configuration we do not ship. The older bar — rerank-off `recall@8` >= 0.98 — was
+retired on 2026-08-19 after it was shown to be measuring the wrong thing:
+`recall@8` scores whether `expect_doc` appears, not whether the answer does, so a
+case can pass on a chunk that does not contain its `gold_value`. Two of the three
+misses that blocked that rebuild were **hollow HITs** whose value was `MISSING`
+in *both* the old and new KB — an unreachable bar for any corpus, punishing a
+build for cases that never delivered an answer.
+
+Run, in this order:
+
+1. **Control**, `RERANK_ENABLED=0` — must reproduce the previous run's four
+   numbers *exactly*. Any movement means a rerank-path change leaked.
+2. **Gate**, `RERANK_ENABLED=1 EVAL_SLEEP=6` — `value-retrieved` must not
+   regress. This is the production figure.
+3. **Named regressions** — probe any specific value you are protecting **3x**,
+   not once. Listwise LLM reranking is non-deterministic: 12 of 60 cases moved
+   between two runs of *identical* code.
+
+Always `PYTHONHASHSEED=0` — one case oscillates on the rank-8/9 boundary under
+keyword-index tie-breaks, so differences smaller than that are not results.
+
+### Discard a run that logged either 429
+
+```
+grep -c 'rerank(gemini) 429\|rerank(groq)' eval.log     # must be 0
+grep -c 'embedContent 429\|Embed query error' eval.log  # must be 0
+```
+
+Both are silent: a throttled **rerank** falls back to plain hybrid order (there
+is no Groq key locally), and a starved **query embedding** degrades that query to
+keyword-only. Either way the run reports a number for a condition it never
+measured. Two runs were discarded this way on 2026-08-19 — one with 31 of 60
+rerank 429s, one with 5 of 60 embedding 429s — which is why `EVAL_SLEEP` exists.
+`rag.retrieve(..., trace=t)` sets `t["mode"] == "keyword-only"` for a starved
+query if you want to assert it in code.
+
+Also note `value-retrieved` is a substring test on the assembled context, so a
+number found under the **wrong column** still scores a pass.
+
 ## Workflow for a new manual family
 1. Ingest the manual (registry → OCR → build_kb → generate_embeddings).
 2. `python ingest/eval/seed_eval.py --doc <doc_id> --n 5`
