@@ -162,9 +162,45 @@ _TABLE_STRATEGIES = ("lines_strict", "lines", "text")
 _COLN_RE = re.compile(r"\|Col\d+(?=\|)")
 _COLN_CELL = re.compile(r"^Col\d+$")
 
+# A cell boundary that cuts a word in half: "12 Lakh kilom|eter". Real tables
+# almost never do this — across the 2,659 committed chunks the rate per cell
+# boundary is 0 at the 90th percentile and 0.068 at the 99th — while a grid laid
+# over a prose page does it constantly (90th percentile 0.58). The two
+# populations do not overlap, so unlike the garble statistics this one separates.
+_WORD_SPLIT_RE = re.compile(r"[a-z]\|[a-z]")
+
+# Above this share of boundaries the candidate is prose that has been gridded,
+# not a table. Set between the two measured distributions: ~2x the known-good
+# 99th percentile, and far below the shattered mass.
+SHATTER_MAX = 0.12
+
+# ...but a rate alone convicts a small table on a single accident. A legitimate
+# 3-row table on VB_ASDIS_Protocol_2024 p5 scored 0.167 on ONE boundary,
+# "Connect back sensor wire|a) Observe ...", where a complete word simply meets a
+# list marker. Genuine shattering is never that thrifty — the gridded prose on
+# the same page produces dozens — so require a count as well as a rate.
+SHATTER_MIN_HITS = 3
+
 
 def _cells(row):
     return [c.strip() for c in row.strip().strip("|").split("|")]
+
+
+def _md_cells(row):
+    """Cells of a markdown row with their positions intact.
+
+    _cells strips EVERY leading pipe, so "|||4|Check the fasteners" reads as
+    ['4', 'Check the fasteners'] and the two empty cells in front of it vanish.
+    That is harmless wherever only the SET of values matters (a full-width banner
+    row), but a vertically merged column is identified BY its empty cells, so the
+    column-group pass needs true indices.
+    """
+    r = row.strip()
+    if r.startswith("|"):
+        r = r[1:]
+    if r.endswith("|"):
+        r = r[:-1]
+    return [c.strip() for c in r.split("|")]
 
 
 def _plain(cell):
@@ -257,6 +293,44 @@ def _covered(bbox, lines, repeated):
                and y0 <= (by0 + by1) / 2 <= y1 and x0 <= (bx0 + bx1) / 2 <= x1)
 
 
+def _shatter_rate(md):
+    """Share of this table's cell boundaries that cut a word in half.
+
+    A rate, not a count, because a long table would otherwise look worse than a
+    short one purely for having more rows.
+    """
+    rows = [r for r in md.splitlines() if r.strip().startswith("|")]
+    boundaries = sum(max(0, len(_cells(r)) - 1) for r in rows)
+    if boundaries < 4:
+        return 0.0
+    return len(_WORD_SPLIT_RE.findall(md)) / boundaries
+
+
+def _is_shattered(tb):
+    """True when this candidate is a grid laid over prose rather than a table.
+
+    _find_tables only ever compares strategies against EACH OTHER, so it has no
+    way to reject a page that is not tabular at all: where "lines_strict" and
+    "lines" find nothing they simply `continue`, and "text" wins by default. On a
+    5-document sample "text" was the only candidate on 129 pages and 103 of those
+    were shattered prose — an RDSO letter's "refurbishment schedule (36+3|months
+    or| / |12 Lakh kilom|eter" among them, which cost that value its eval case.
+
+    Every other criterion here rewards this failure: a prose grid clips nothing,
+    swallows nothing, and its header cells are all "named", so it scores a
+    flawless zero on the primary term. Word-splitting is the one signal a
+    strategy cannot earn by finding LESS, which is what sank the clipping and
+    coverage criteria when they were tried as primaries.
+    """
+    try:
+        md = tb.to_markdown()
+    except Exception:
+        return False
+    if len(_WORD_SPLIT_RE.findall(md)) < SHATTER_MIN_HITS:
+        return False
+    return _shatter_rate(md) >= SHATTER_MAX
+
+
 def _table_measure(tb, lines, repeated):
     """(labelled_coverage, clipped, swallowed, unnamed, columns) for a candidate.
 
@@ -331,6 +405,7 @@ def _find_tables(page, lines, repeated):
             tables = list(page.find_tables(strategy=strategy).tables)
         except Exception:
             continue
+        tables = [t for t in tables if not _is_shattered(t)]
         if not tables:
             continue
         cov, clip, swal, unnamed, cols = (
@@ -403,6 +478,76 @@ def _group_label(row):
         return ""
     v = re.sub(r"\s+", " ", re.sub(r"\s*<br>\s*", " ", vals.pop())).strip()
     return v if 3 <= len(v) <= 140 and sum(c.isalpha() for c in v) >= 3 else ""
+
+
+_EQUIP_COL = re.compile(r"equipment|sub-?\s*assy|sub-?assembly", re.I)
+
+
+def _column_group_index(header):
+    """Index of the column naming the equipment a run of rows describes, or None."""
+    if not header:
+        return None
+    for i, c in enumerate(_md_cells(header)):
+        if _EQUIP_COL.search(re.sub(r"\s*<br>\s*", " ", _plain(c))):
+            return i
+    return None
+
+
+def _group_value(cell):
+    """The equipment name held in a group-carrying cell, or "".
+
+    Stricter than a non-empty test on purpose: the same column also receives
+    wrapped prose ("_Note:_ _For replacement criteria, instruction..._"), and on a
+    page whose header was clipped it receives the column label itself.
+    """
+    v = re.sub(r"\s+", " ", re.sub(r"\s*<br>\s*", " ", _plain(cell))).strip()
+    if not (3 <= len(v) <= 140) or sum(c.isalpha() for c in v) < 3:
+        return ""
+    if v.startswith("_") or v.lower().startswith("note") or len(v.split()) > 10:
+        return ""
+    if _EQUIP_COL.search(v) and len(v.split()) <= 4:
+        return ""          # the header row repeated as data
+    return v
+
+
+def _mark_column_groups(header, body, mark):
+    """Mark the runs of a vertically merged equipment column as group headings.
+
+    _group_label already handles the electrical tables, which name their
+    equipment in a full-width banner row. The mechanical schedule instead names
+    it in the "Equipment / Sub-Assy." column, merged vertically across every
+    activity of that equipment: printed once on whichever page the run starts and
+    blank on every row after. Measured over this corpus, 80 of the 195 chunks
+    carrying that column hold NO equipment value at all, so they fall back to the
+    page heading — which is why all 67 chunks of the mechanical schedule are
+    titled "MAINTENANCE SCHEDULE ACTIVITIES FOR MECHANICAL EQUIPMENT". That title
+    shares no word with "stabilizer link fastener torque", so rag.py's
+    title-overlap multiplier can never fire for a query naming a component.
+
+    Emitting the run's name as a group row lets the existing machinery do the
+    rest: _table_markdown carries it onto continuation pages and chunker
+    restates it atop every piece and titles the chunk with it.
+    """
+    idx = _column_group_index(header)
+    if idx is None:
+        return body
+    out, active, emitted = [], "", 0
+    for row in body:
+        if _marked_label(row):
+            active = ""          # a full-width banner supersedes the column
+            out.append(row)
+            continue
+        cells = _md_cells(row)
+        val = _group_value(cells[idx]) if idx < len(cells) else ""
+        if val and val != active:
+            active = val
+            out.append(mark(val))
+            emitted += 1
+        out.append(row)
+    # A column naming something fresh on most of its rows is data, not a
+    # grouping — emitting a heading per row would retitle every chunk after
+    # whichever row it happened to begin on. Fall back rather than guess.
+    return out if emitted <= max(1, len(body) // 3) else body
 
 
 def _marked_label(row):
@@ -498,6 +643,7 @@ def _table_markdown(tb, repeated, carried, page_no, groups):
         return f"|{GROUP_MARK} {label}|" + "|" * (ncols - 1)
 
     body = [mark(g) if (g := _group_label(r)) else r for r in body]
+    body = _mark_column_groups(header, body, mark)
 
     # A table continuing onto the next page inherits the group heading in force,
     # gated on the header describing the same table: the equipment is named once
