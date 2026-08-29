@@ -599,6 +599,33 @@ def _cite_ref(c):
     return letter or (f"dt. {dt}" if dt else "")
 
 
+#: Characters this module's own source header treats as structure. `|` is the
+#: field separator in "[Source i: doc | sec | p.N …]" AND the markdown table
+#: delimiter in the chunk body below it, on a corpus that is 64% tables — so a
+#: section title carrying a `|` silently adds a field to the header. `]` closes
+#: the header; newlines end it. Strip exactly these, per the rule that you
+#: escape your own delimiters rather than "dangerous characters" in the
+#: abstract. _doc_label() below already does this for its markdown link; this is
+#: the same defence for the field that feeds it.
+_HEADER_STRUCTURE = str.maketrans({"|": "/", "]": ")", "[": "(", "\n": " ", "\r": " ", "\t": " "})
+
+
+def _safe(v, limit=None):
+    """One header field, stripped of this template's structural characters.
+
+    Escaping only — `limit` stays None for every registry-authored field so this
+    changes no legitimate header. An earlier version capped titles at 120 chars
+    and silently shortened "… (Pantry Cars & Generator-cum-Brake Vans, ICF &
+    LHB)" to "… ICF & ", dropping the coach type from 13 chunks of a corpus
+    where coach type decides the answer. Only `section` is truncated, at the
+    same 70 chars it always was.
+    """
+    if not v:
+        return ""
+    out = str(v).translate(_HEADER_STRUCTURE).strip()
+    return out[:limit] if limit else out
+
+
 def build_context(excerpts):
     lines = []
     for i, (sc, c) in enumerate(excerpts, 1):
@@ -616,14 +643,14 @@ def build_context(excerpts):
             txt = re.sub(r"\s+", " ", raw)
         if len(txt) > CTX_CHUNK_CHARS:
             txt = txt[:CTX_CHUNK_CHARS] + " …"
-        h = f"[Source {i}: {doc}"
-        sec_label = (f"Clause {clause} " if clause else "") + sec
+        h = f"[Source {i}: {_safe(doc)}"
+        sec_label = (f"Clause {_safe(clause)} " if clause else "") + _safe(sec)
         if sec_label.strip(): h += f" | {sec_label.strip()[:70]}"
-        if pg: h += f" | p.{pg}"
-        if coach: h += f" | Coach: {', '.join(coach)}"
-        if oem: h += f" | OEM: {oem}"
+        if pg: h += f" | p.{_safe(pg)}"
+        if coach: h += f" | Coach: {_safe(', '.join(str(x) for x in coach))}"
+        if oem: h += f" | OEM: {_safe(oem)}"
         ref = _cite_ref(c)
-        if ref: h += f" | Ref: {ref}"
+        if ref: h += f" | Ref: {_safe(ref)}"
         h += "]"
         lines.append(f"{h}\n{txt}")
     return "\n\n".join(lines)

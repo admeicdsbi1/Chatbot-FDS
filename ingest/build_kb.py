@@ -56,7 +56,16 @@ SOFT_CANARIES = {
     "K05": re.compile(r"\bK[\s\-]?05\b", re.I),
     "off delay": re.compile(r"\boff[\s\-]?delay\b", re.I),
 }
-MIN_TOTAL_CHUNKS = 2400   # ~2545 after VB waves 1-3 (wheels/bearings, schedules/SMI, CAI)
+# Retired 2026-08-28: MIN_TOTAL_CHUNKS was an absolute constant (2400) carrying a
+# snapshot of a 2,659-chunk corpus, left with 14 chunks of margin against a 2,414
+# build. Rejecting gridded prose legitimately *removes* chunks, so it was close
+# enough to fail a good build, and too coarse to notice a single document
+# vanishing. Replaced by two measured properties that need no re-tuning:
+#   1. every registered document must produce at least one chunk;
+#   2. the corpus must not shrink more than MAX_CORPUS_DROP against the KB that
+#      is currently committed - a moving baseline instead of a hard-coded one.
+MAX_CORPUS_DROP = 0.10          # fraction of the committed chunk count
+MAX_DOC_DROP = 0.50             # per-document, against its committed count
 
 
 def main():
@@ -133,8 +142,36 @@ def main():
     for name, pat in SOFT_CANARIES.items():
         n = len(pat.findall(joined))
         print(f"canary '{name}' (soft): {n} hits" + (" — WARNING" if n == 0 else ""))
-    if full_build and len(all_chunks) < MIN_TOTAL_CHUNKS:
-        failures.append(f"total chunks {len(all_chunks)} < {MIN_TOTAL_CHUNKS}")
+    if full_build:
+        # 1. Per-document floor. A document that parses to nothing is the failure
+        #    an aggregate count cannot see: it is one row of noise in the total.
+        built = Counter(c["doc_id"] for c in all_chunks)
+        empty = [e["doc_id"] for e in entries if built.get(e["doc_id"], 0) == 0]
+        if empty:
+            failures.append(f"{len(empty)} registered document(s) produced no chunks: {empty}")
+
+        # 2. Corpus and per-document regression against the COMMITTED KB, which is
+        #    a baseline that moves with the project instead of a constant that has
+        #    to be remembered and re-justified.
+        prev = Counter()
+        try:
+            with open(DEFAULT_OUT, encoding="utf-8") as f:
+                for line in f:
+                    if line.strip():
+                        prev[json.loads(line)["doc_id"]] += 1
+        except FileNotFoundError:
+            print("no committed KB to compare against - skipping regression check")
+        if prev:
+            before, after = sum(prev.values()), len(all_chunks)
+            drop = (before - after) / before
+            print(f"corpus: {before} -> {after} chunks ({drop:+.1%})")
+            if drop > MAX_CORPUS_DROP:
+                failures.append(f"corpus shrank {drop:.1%} vs committed "
+                                f"({before} -> {after}), limit {MAX_CORPUS_DROP:.0%}")
+            shrunk = [(d, prev[d], built.get(d, 0)) for d in prev
+                      if prev[d] >= 4 and built.get(d, 0) < prev[d] * (1 - MAX_DOC_DROP)]
+            for d, b, a in sorted(shrunk, key=lambda x: x[1] - x[2], reverse=True):
+                failures.append(f"{d} lost {b - a} of {b} chunks")
 
     if full_build or args.out != DEFAULT_OUT:
         os.makedirs(os.path.dirname(args.out), exist_ok=True)

@@ -197,6 +197,84 @@ _COUNT_NOUNS = {
 }
 
 
+# ---- exhaustive / absence claims -------------------------------------------
+# An answer can assert two very different things, and they cost different
+# amounts of evidence: "here is a value" needs one passage; "there is no such
+# requirement" or "these are all of them" needs a search of everywhere it could
+# have been. Only the enumeration budget (TOP_K_ENUMERATE) pays for the second,
+# and nothing stopped an answer making it off the 8-chunk value-lookup budget.
+#
+# Deliberately narrow, because the system prompt *instructs* two kinds of
+# absence statement that must survive untouched:
+#   rule 14 - "say plainly which referenced list is not in CONTEXT"
+#   rule 15 - "end with one line stating what you covered and that more may exist"
+# Both scope themselves to the retrieved extract. What gets suppressed is the
+# UNSCOPED, absolute claim about the world or the corpus.
+EXHAUSTIVE_PLACEHOLDER = ("[completeness not verified against the full document "
+                          "— refer to the manual/supervisor]")
+
+# A sentence carrying any of these has scoped itself and is left alone.
+_SCOPED = re.compile(
+    r"\b(?:in|from|within)\s+(?:the\s+)?(?:provided\s+|retrieved\s+|given\s+|above\s+)?"
+    r"(?:context|extract|excerpt|passage|sources?|documents?\s+provided|knowledge\s+base)\b"
+    r"|\bnot\s+in\s+context\b|\bmay\s+exist\b|\bmay\s+be\s+(?:present|available)\b"
+    r"|\bavailable\s+here\b|\bthis\s+knowledge\s+base\b|\bfull\s+document\b"
+    r"|\bcomplete\s+matrix\b|\bcovered\s*:", re.I)
+
+# Unscoped absolute claims: absence, or exhaustiveness presented as complete.
+_EXHAUSTIVE = re.compile(
+    r"\bthere\s+(?:is|are)\s+no\b"
+    r"|\bno\s+\w+(?:\s+\w+){0,3}\s+(?:exists?|is\s+specified|is\s+mentioned|is\s+defined|is\s+required|is\s+prescribed)\b"
+    r"|\b(?:is|are)\s+not\s+specified\s+anywhere\b"
+    r"|\bthese\s+are\s+all\s+(?:the|of)\b"
+    r"|\bthat\s+is\s+the\s+(?:complete|full|entire)\s+list\b"
+    r"|\bthe\s+(?:complete|full|entire)\s+list\s+(?:is|are)\b"
+    r"|\bno\s+such\s+(?:procedure|requirement|instruction|value|activity)\b",
+    re.I)
+
+_SENT_SPLIT = re.compile(r"(?<=[.!?])\s+|\n+")
+
+
+def guard_exhaustive(answer, enumerating, context=None):
+    """Suppress unscoped absence/exhaustiveness claims made on the cheap budget.
+
+    Returns (answer, stripped) exactly like guard_answer/guard_counts, so it
+    slots into the same chain. Inert when `enumerating` is True: that question
+    was routed to TOP_K_ENUMERATE and the wider evidence was actually gathered,
+    so the claim is licensed.
+
+    The claim is not merely discouraged, it is unsupportable — there is no
+    20-chunk sweep in the transcript it could have come from. That is the whole
+    point of binding the claim to the budget rather than to a prompt line.
+    """
+    if not answer or enumerating:
+        return answer, []
+    split = _REF_SPLIT.search(answer)
+    body_end = split.start() if split else len(answer)
+    body, tail = answer[:body_end], answer[body_end:]
+
+    out, stripped, cursor = [], [], 0
+    for m in _SENT_SPLIT.finditer(body + " "):
+        sent = body[cursor:m.start()]
+        if sent.strip() and _EXHAUSTIVE.search(sent) and not _SCOPED.search(sent):
+            out.append(EXHAUSTIVE_PLACEHOLDER)
+            stripped.append(("exhaustive", sent.strip()))
+        else:
+            out.append(sent)
+        out.append(body[m.start():m.end()])
+        cursor = m.end()
+    rest = body[cursor:]
+    if rest.strip() and _EXHAUSTIVE.search(rest) and not _SCOPED.search(rest):
+        out.append(EXHAUSTIVE_PLACEHOLDER)
+        stripped.append(("exhaustive", rest.strip()))
+    else:
+        out.append(rest)
+
+    if not stripped:
+        return answer, []
+    return "".join(out) + tail, stripped
+
+
 def guard_counts(answer, facts, context):
     """Hold a stated document count to the registry figure.
 
