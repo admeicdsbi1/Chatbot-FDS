@@ -310,6 +310,11 @@ def chat(req: ChatRequest):
     if counts:
         answer, bad_counts = verify.guard_counts(answer, counts, ctx)
         suppressed += bad_counts
+    # Bind the claim to the budget that was actually spent: "there is no such
+    # procedure" / "these are all of them" needs the TOP_K_ENUMERATE sweep, not
+    # the 8-chunk value-lookup budget. Inert when `enumerating` is True.
+    answer, bad_claims = verify.guard_exhaustive(answer, enumerating, ctx)
+    suppressed += bad_claims
     sources = rag.build_sources(excerpts)
 
     log_usage(type="chat", question=question,
