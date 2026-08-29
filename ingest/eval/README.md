@@ -19,6 +19,7 @@ and after every ingestion batch and compare the numbers.
 | `expect_clause` / `expect_page` | where the answer lives (citation check) |
 | `gold_value` | the exact value the answer must contain, verbatim (or `null`) |
 | `planted_wrong` | a wrong value the numeric guard must strip (or `null`) |
+| `expect_absent` | `true` for an absence case: no right document, no gold value, and `planted_wrong` must be stripped |
 | `notes` | provenance / TODO |
 
 ## Metrics (`run_eval.py`)
@@ -29,6 +30,29 @@ and after every ingestion batch and compare the numbers.
 - **guard-suppress** — with a synthetic answer holding both `gold_value` and
   `planted_wrong`, does `verify.guard_answer` keep the right one and strip the
   wrong one? End-to-end test of the numeric hard guard.
+- **absence-suppress** — for a case marked `expect_absent`, the KB holds no
+  answer, so a plausible value is fed in alone and the guard must **strip** it.
+  Added 2026-08-28: every other metric assumes a value exists, so the one path
+  none of them could reach was the one where the honest answer is "not in these
+  97 documents".
+
+  Absence cases set `expect_doc: null` and `gold_value: null` and carry only a
+  `planted_wrong`. **They take no part in recall@k or MRR** — those denominators
+  are the number of cases naming an `expect_doc`, not `len(cases)`, so adding
+  absence cases cannot move the four older metrics or break comparability with
+  any figure recorded before them.
+
+  On this corpus the metric does double duty. `guard_answer` compacts all
+  retrieved chunks into a single haystack, so a value confirms if it appears
+  *anywhere*. With 1,775 Vande Bharat chunks against 192 Amrit Bharat, an Amrit
+  Bharat question retrieves mostly VB material — so a leak here is **cross-coach
+  contamination caught in the act**. `absent-amrit-bharat-torque` does exactly
+  that and currently **FAILS**: the real VB stabilizer figure `85 Nm` confirms an
+  Amrit Bharat claim, sourced from a `coach_type: ['Vande Bharat']` chunk
+  (`VB_Shop_Schedule_SS1_SS2_Report_2025` p.172) among 8 retrieved chunks of
+  which **none** is Amrit-Bharat-only. That is the open proposal on
+  `require-evidence-in-the-schema-not-the-prompt`, now demonstrated rather than
+  argued.
 
 ```
 # optional GEMINI_API_KEY enables semantic retrieval; otherwise keyword-only
@@ -55,8 +79,32 @@ Run, in this order:
 2. **Gate**, `RERANK_ENABLED=1 EVAL_SLEEP=6` — `value-retrieved` must not
    regress. This is the production figure.
 3. **Named regressions** — probe any specific value you are protecting **3x**,
-   not once. Listwise LLM reranking is non-deterministic: 12 of 60 cases moved
-   between two runs of *identical* code.
+   not once. Not because the reranker samples — `rerank._ask_gemini` sends
+   `temperature: 0.0` with `thinkingBudget: 0`, so it decodes greedily. The 3x
+   probe guards against **drift in a hosted model**, which no local setting
+   controls.
+
+**Measured 2026-08-28: the gate is exactly reproducible, and that is what the
+zero-tolerance rule in step 2 rests on.** Five consecutive clean runs
+(`PYTHONHASHSEED=0 EVAL_SLEEP=6 RERANK_ENABLED=1`, rerank confirmed firing on a
+pool of 130–167, zero 429s) produced **byte-identical logs**:
+
+```
+recall@8 57/60 | MRR 0.778 | value-retrieved 27/35 | guard-suppress 11/16
+mean context 10,077 chars/query | spread 0 on every metric, 5/5 runs
+always missing: knorr-brakepipe, vb-fork-gap, wsp-maintenance-drive (no churn)
+```
+
+Those are the figures recorded for this KB on 2026-08-19, reproduced nine days
+later. Diff against them.
+
+**On the "12 of 60" this file used to attribute to the reranker.** It happened
+and it stays on the record, but the cause was most likely **429 contamination,
+not model sampling**. Two runs were discarded that day, one with 31 of 60 rerank
+429s; a run where half the queries silently fell back to plain hybrid order,
+diffed against one where a different subset did, differs in roughly a fifth of
+its cases. Unproven — whether those two particular runs were 429-clean was never
+recorded — but greedy decoding leaves little else to blame.
 
 Always `PYTHONHASHSEED=0` — one case oscillates on the rank-8/9 boundary under
 keyword-index tie-breaks, so differences smaller than that are not results.
@@ -75,6 +123,12 @@ measured. Two runs were discarded this way on 2026-08-19 — one with 31 of 60
 rerank 429s, one with 5 of 60 embedding 429s — which is why `EVAL_SLEEP` exists.
 `rag.retrieve(..., trace=t)` sets `t["mode"] == "keyword-only"` for a starved
 query if you want to assert it in code.
+
+**This is not hygiene — it is the precondition the gate depends on.** With 429s
+excluded the four numbers reproduce byte-for-byte across five runs; with them
+admitted the suite swings by roughly a fifth of its cases. A run that skips this
+check is not a slightly worse measurement, it is a measurement of a different
+configuration.
 
 Also note `value-retrieved` is a substring test on the assembled context, so a
 number found under the **wrong column** still scores a pass.
