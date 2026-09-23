@@ -15,6 +15,15 @@ services:
         sync: false
       - key: GROQ_API_KEY
         sync: false
+      # Further answer-fallback pools, each a separate free quota (llm.py).
+      # Unset = skipped; with only Gemini + Groq the chain runs dry under load
+      # and answers read "AI summary unavailable".
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: CEREBRAS_API_KEY
+        sync: false
+      - key: FEEDBACK_WEBHOOK_URL
+        sync: false   # Apps Script web app URL (ingest/eval/feedback_sheet.gs)
       - key: ALLOWED_ORIGINS
         sync: false   # set to your Vercel URL, e.g. https://your-app.vercel.app
       - key: GEMINI_EMBED_DIM

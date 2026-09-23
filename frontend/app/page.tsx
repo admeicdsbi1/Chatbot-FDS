@@ -62,6 +62,9 @@ export default function Page() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [stage, setStage] = useState<Stage>("idle");
+  // Set when an answer is taking far longer than usual, so a slow request
+  // reads as "still working" rather than as a frozen app.
+  const [slow, setSlow] = useState(false);
   const [voiceOn, setVoiceOn] = useState(isTTSSupported());
   const [disamb, setDisamb] = useState<Disamb | null>(null);
 
@@ -150,10 +153,20 @@ export default function Page() {
 
       const ctrl = new AbortController();
       abortRef.current = ctrl;
+      // The request is one round trip, so the server cannot report its stage.
+      // Advance the strip on the typical timings (retrieval is a few seconds,
+      // then the model writes) so the wait shows progress.
+      const timers = [
+        setTimeout(() => setStage((s) => (s === "searching" ? "reading" : s)), 3000),
+        setTimeout(() => setStage((s) => (s === "reading" ? "generating" : s)), 6000),
+        setTimeout(() => setSlow(true), 20000),
+      ];
       try {
         const history = messagesRef.current; // prior turns for context
         setStage("searching");
         const res = await sendChat(question, history, scope, ctrl.signal);
+        timers.forEach(clearTimeout);
+        setSlow(false);
         setStage("generating");
 
         const botMsg: Message = {
@@ -167,6 +180,8 @@ export default function Page() {
           retrievalMode: res.retrieval_mode,
           valuesSuppressed: res.values_suppressed,
           clarify: res.clarify,
+          requestId: res.request_id,
+          provider: res.provider,
           ts: Date.now(),
         };
         setMessages((m) => [...m, botMsg]);
@@ -187,12 +202,37 @@ export default function Page() {
           },
         ]);
       } finally {
+        timers.forEach(clearTimeout);
+        setSlow(false);
         abortRef.current = null;
         setStage("idle");
       }
     },
     [busy, voiceOn, scope]
   );
+
+  // Drop the failed answer and the question it answered, then ask again —
+  // otherwise the ⚠️ text would go back to the model as conversation history.
+  const retry = useCallback(
+    (failed: Message, question: string) => {
+      if (busy) return;
+      const cur = messagesRef.current;
+      const i = cur.findIndex((m) => m.id === failed.id);
+      const next =
+        i > 0 && cur[i - 1].role === "user"
+          ? [...cur.slice(0, i - 1), ...cur.slice(i + 1)]
+          : cur.filter((m) => m.id !== failed.id);
+      messagesRef.current = next;
+      setMessages(next);
+      ask(question);
+    },
+    [busy, ask]
+  );
+
+  // Keep the rating on the message so it is saved with the thread.
+  const rate = useCallback((m: Message, rating: "up" | "down") => {
+    setMessages((prev) => prev.map((x) => (x.id === m.id ? { ...x, rating } : x)));
+  }, []);
 
   const handleAudio = useCallback(async (blob: Blob) => {
     setDisamb(null);
@@ -379,11 +419,13 @@ export default function Page() {
         onReplay={replay}
         onPickQuestion={(q) => ask(q)}
         onToggleSave={toggleSave}
+        onRate={rate}
+        onRetry={retry}
         isSaved={isSaved}
       />
 
       <div className="flex flex-col gap-2">
-        <ThinkingPipeline stage={stage} />
+        <ThinkingPipeline stage={stage} slow={slow} />
 
         {disamb && (
           <Disambiguation

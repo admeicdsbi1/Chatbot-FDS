@@ -8,24 +8,26 @@ Endpoints:
   POST /api/chat             {question, history[], coach?} -> {answer, sources, ...}
   POST /api/transcribe       multipart audio       -> {text, lang, confidence, alternatives[]}
   POST /api/tts              {text, lang}           -> audio/mpeg (only if browser TTS off)
-  POST /api/feedback         {message_id, rating, question?, note?} -> logged to stdout
+  POST /api/feedback         {message_id, rating, reasons?, note?, ...} -> stdout + Sheet webhook
 
 The RAG brain lives in rag.py / voice_text.py (ported from the original Gradio
 app). I/O edges (LLM, STT, TTS) are reliable free providers — see llm.py / stt.py.
 """
 import load_env  # noqa: F401  — must precede the imports below (env read at import time)
 
-import os, json, re
+import os, json, re, time, uuid
 from datetime import datetime
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI, UploadFile, File, Form
+import requests
+from fastapi import BackgroundTasks, FastAPI, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from pydantic import BaseModel
 
 import rag
 import catalog
+import cooldown
 import llm
 import stt
 import tts
@@ -89,6 +91,19 @@ class FeedbackRequest(BaseModel):
     question: str = ""
     answer_preview: str = ""
     note: str = ""
+    # All optional so an older cached client's payload still validates.
+    request_id: str = ""   # joins the rating to the answer's USAGE/trace line
+    reasons: list[str] = []
+    correction: str = ""   # "the right value / reference is …"
+    answer: str = ""       # full text — a 300-char preview cannot show the error
+    provider: str = ""
+    sources: list[str] = []  # "doc_id p.N", as cited under the answer
+    values_suppressed: int = 0
+
+
+# Google Apps Script web app that appends one row per rating to a Sheet (script
+# in ingest/eval/feedback_sheet.gs). Unset => stdout only, as before.
+FEEDBACK_WEBHOOK_URL = os.environ.get("FEEDBACK_WEBHOOK_URL", "").strip()
 
 
 # ================================================================
@@ -105,6 +120,9 @@ def health():
         "embedding_model": embed.current_model() if embed.available() else None,
         "gemini_model": llm.GEMINI_MODEL,
         "documents": len({c.get("doc_id") for c in rag.chunks}),
+        # Provider pools currently skipped after a 429 / auth error — the first
+        # thing to check when answers read "AI summary unavailable".
+        "llm_cooldown": cooldown.status(),
     }
 
 
@@ -194,6 +212,7 @@ def _apply_coach_scope(query, coach):
 _LOG_RESERVED = frozenset({
     "type", "question", "retrieval_count", "lang", "coach", "clarify",
     "response_length", "values_suppressed", "suppressed", "timestamp",
+    "request_id",
 })
 
 
@@ -256,6 +275,9 @@ def chat(req: ChatRequest):
     if not question:
         return JSONResponse({"error": "empty question"}, status_code=400)
 
+    t_start = time.monotonic()
+    # Joins this answer's USAGE line to any feedback given on it later.
+    request_id = uuid.uuid4().hex
     lang = detect_language(question)
     rquery = _apply_coach_scope(_retrieval_query(question, req.history), req.coach)
     # An exhaustive question needs more evidence and more room to write it out
@@ -265,19 +287,19 @@ def chat(req: ChatRequest):
     trace = {"enumerate": enumerating}
     excerpts = rag.retrieve(rquery, k=k, trace=trace)
     if not excerpts:
-        log_usage(type="chat", question=question, retrieval_count=0, lang=lang,
-                  coach=req.coach or None)
+        log_usage(type="chat", request_id=request_id, question=question,
+                  retrieval_count=0, lang=lang, coach=req.coach or None)
         return {
             "answer": "No relevant content found. Rephrase or consult supervisor.",
             "sources": "", "sources_list": [], "retrieval_count": 0, "lang": lang,
-            "retrieval_mode": rag.retrieval_mode(),
+            "retrieval_mode": rag.retrieval_mode(), "request_id": request_id,
         }
 
     # Symptoms-only query that would blend specs across coaches/OEMs → ask first.
     # Use the refolded query so a just-answered clarify isn't asked again.
     clarify = rag.clarification_needed(rquery, excerpts)
     if clarify:
-        log_usage(type="chat", question=question,
+        log_usage(type="chat", request_id=request_id, question=question,
                   retrieval_count=len(excerpts), lang=lang, clarify=True,
                   **_retrieval_trace(rquery, question, excerpts, trace))
         return {
@@ -288,6 +310,7 @@ def chat(req: ChatRequest):
             "lang": lang,
             "retrieval_mode": rag.retrieval_mode(),
             "clarify": True,
+            "request_id": request_id,
         }
 
     ctx = rag.build_context(excerpts)
@@ -300,9 +323,16 @@ def chat(req: ChatRequest):
         ctx = facts[0] + "\n\n" + ctx
         counts = facts[1]
     history = [t.model_dump() for t in req.history]
+    attempts = []
+    t_llm = time.monotonic()
     answer, provider = llm.generate_answer(
         question, ctx, lang, history,
-        max_tokens=llm.MAX_TOKENS_ENUMERATE if enumerating else llm.MAX_TOKENS)
+        max_tokens=llm.MAX_TOKENS_ENUMERATE if enumerating else llm.MAX_TOKENS,
+        attempts=attempts)
+    trace["t_llm"] = int((time.monotonic() - t_llm) * 1000)
+    # Every provider tried, with status and time — says which pool failed and
+    # where the seconds went when an answer was slow or fell through.
+    trace["llm_attempts"] = attempts
     answer = _strip_latex(answer)
     # Numeric-fidelity hard guard: suppress any technical value the answer states
     # that is not present verbatim in the retrieved source (fail closed).
@@ -317,7 +347,8 @@ def chat(req: ChatRequest):
     suppressed += bad_claims
     sources = rag.build_sources(excerpts)
 
-    log_usage(type="chat", question=question,
+    trace["t_total"] = int((time.monotonic() - t_start) * 1000)
+    log_usage(type="chat", request_id=request_id, question=question,
               retrieval_count=len(excerpts), lang=lang,
               coach=req.coach or None,
               response_length=len(answer),
@@ -336,6 +367,9 @@ def chat(req: ChatRequest):
         # back rather than silently absent — a maintenance user needs to know to
         # go and check the manual.
         "values_suppressed": len(suppressed),
+        "request_id": request_id,
+        # Echoed back with feedback, so a rating says which model wrote it.
+        "provider": provider,
     }
 
 
@@ -349,17 +383,52 @@ async def transcribe(audio: UploadFile = File(...)):
     return result
 
 
-@app.post("/api/feedback")
-def feedback(req: FeedbackRequest):
-    """Thumbs up/down on an answer, logged to stdout alongside usage.
+def _post_feedback_row(row):
+    """Append a rating to the feedback Sheet. Runs after the response is sent;
+    a failure is logged and never reaches the user."""
+    try:
+        # Apps Script answers a POST with a 302 to the script's output; the row
+        # is already written by then, so the redirect is not followed.
+        r = requests.post(FEEDBACK_WEBHOOK_URL, json=row, timeout=10,
+                          allow_redirects=False)
+        if r.status_code >= 400:
+            print(f"feedback webhook {r.status_code}: {r.text[:200]}")
+    except Exception as e:
+        print(f"feedback webhook error: {e}")
 
-    Render's disk is ephemeral, so there is deliberately no store — with ~20-30
-    users the log stream is enough, and it is the only channel that will surface
-    a wrong answer that the numeric guard could not catch."""
+
+@app.post("/api/feedback")
+def feedback(req: FeedbackRequest, background: BackgroundTasks):
+    """Thumbs up/down on an answer — the only channel that surfaces a wrong
+    answer the numeric guard could not catch.
+
+    Render's disk is ephemeral and its log stream is short-lived, so the stdout
+    line alone was a rating nobody would ever read. It is kept (it joins the
+    chat trace by request_id), and each rating is also appended to a Google
+    Sheet the depot can review — see ingest/eval/README.md "Feedback triage"."""
     rating = req.rating if req.rating in ("up", "down") else "unknown"
+    reasons = [r[:40] for r in req.reasons[:8]]
     log_usage(type="feedback", rating=rating, message_id=req.message_id,
+              request_id=req.request_id or None,
               question=req.question[:300], answer_preview=req.answer_preview[:300],
-              note=req.note[:500] or None)
+              reasons=reasons or None, note=req.note[:500] or None,
+              correction=req.correction[:500] or None,
+              provider=req.provider or None)
+    if FEEDBACK_WEBHOOK_URL:
+        background.add_task(_post_feedback_row, {
+            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "request_id": req.request_id,
+            "message_id": req.message_id,
+            "rating": rating,
+            "reasons": ", ".join(reasons),
+            "note": req.note[:1000],
+            "correction": req.correction[:1000],
+            "question": req.question[:1000],
+            "answer": (req.answer or req.answer_preview)[:4000],
+            "provider": req.provider[:60],
+            "sources": "; ".join(s[:120] for s in req.sources[:20]),
+            "values_suppressed": req.values_suppressed,
+        })
     return {"ok": True}
 
 

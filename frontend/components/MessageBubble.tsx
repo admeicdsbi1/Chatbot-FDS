@@ -6,6 +6,7 @@ import {
   Check,
   ChevronDown,
   Copy,
+  RotateCcw,
   ShieldAlert,
   Star,
   ThumbsDown,
@@ -47,23 +48,45 @@ function IconAction({
   );
 }
 
+// What a 👎 can say was wrong. Each maps to a different fix — see
+// ingest/eval/README.md "Feedback triage" — so they are worth the extra tap.
+const DOWN_REASONS = [
+  "Wrong value",
+  "Wrong coach/OEM",
+  "Incomplete",
+  "Outdated (newer letter exists)",
+  "Not found but should be",
+  "Other",
+];
+
 export default function MessageBubble({
   msg,
   onReplay,
   onToggleSave,
+  onRate,
+  onRetry,
   saved,
   question,
 }: {
   msg: Message;
   onReplay?: (m: Message) => void;
   onToggleSave?: (m: Message) => void;
+  /** Persist the rating on the message, so it survives a reload. */
+  onRate?: (m: Message, rating: "up" | "down") => void;
+  /** Re-ask the question — offered on a failed (⚠️) answer. */
+  onRetry?: () => void;
   saved?: boolean;
   /** The user turn this answer responds to — sent with feedback for context. */
   question?: string;
 }) {
   const [showSources, setShowSources] = useState(true);
   const [copied, setCopied] = useState(false);
-  const [rating, setRating] = useState<"up" | "down" | null>(null);
+  const [downOpen, setDownOpen] = useState(false);
+  const [reasons, setReasons] = useState<string[]>([]);
+  const [note, setNote] = useState("");
+  const [correction, setCorrection] = useState("");
+  const [thanks, setThanks] = useState(false);
+  const rating = msg.rating ?? null;
   const isUser = msg.role === "user";
 
   if (isUser) {
@@ -95,17 +118,43 @@ export default function MessageBubble({
     );
   }
 
-  function rate(value: "up" | "down") {
-    const next = rating === value ? null : value;
-    setRating(next);
-    if (next) {
-      sendFeedback({
-        message_id: msg.id,
-        rating: next,
-        question: question || "",
-        answer_preview: msg.content.slice(0, 300),
-      });
-    }
+  function submit(
+    value: "up" | "down",
+    extra?: { reasons: string[]; note: string; correction: string }
+  ) {
+    sendFeedback({
+      message_id: msg.id,
+      rating: value,
+      question: question || "",
+      answer_preview: msg.content.slice(0, 300),
+      answer: msg.content.slice(0, 4000),
+      request_id: msg.requestId,
+      provider: msg.provider,
+      values_suppressed: msg.valuesSuppressed ?? 0,
+      sources: (msg.sourcesList ?? []).map(
+        (s) => `${s.doc_id}${s.page ? ` p.${s.page}` : ""}`
+      ),
+      ...extra,
+    });
+    onRate?.(msg, value);
+    setDownOpen(false);
+    setThanks(true);
+    setTimeout(() => setThanks(false), 2500);
+  }
+
+  function rateUp() {
+    if (rating !== "up") submit("up");
+  }
+
+  function rateDown() {
+    // A 👎 is only actionable with a reason, so ask before sending.
+    setDownOpen((o) => !o);
+  }
+
+  function toggleReason(r: string) {
+    setReasons((prev) =>
+      prev.includes(r) ? prev.filter((x) => x !== r) : [...prev, r]
+    );
   }
 
   return (
@@ -175,25 +224,98 @@ export default function MessageBubble({
               />
             </IconAction>
           )}
-          {!isError && (
-            <div className="ml-auto flex items-center gap-0.5">
-              <IconAction
-                onClick={() => rate("up")}
-                label="This answer was helpful"
-                active={rating === "up"}
-              >
-                <ThumbsUp size={14} aria-hidden />
-              </IconAction>
-              <IconAction
-                onClick={() => rate("down")}
-                label="This answer was wrong or unhelpful"
-                active={rating === "down"}
-              >
-                <ThumbsDown size={14} aria-hidden />
-              </IconAction>
-            </div>
+          {isError && onRetry && (
+            <IconAction onClick={onRetry} label="Ask this question again">
+              <RotateCcw size={14} aria-hidden /> Try again
+            </IconAction>
           )}
+          {/* Shown on failed answers too: "it failed" is feedback worth having. */}
+          <div className="ml-auto flex items-center gap-0.5">
+            {thanks && (
+              <span className="mr-1 text-[0.72rem] text-accent-green" role="status">
+                Thanks — sent
+              </span>
+            )}
+            <IconAction
+              onClick={rateUp}
+              label="This answer was helpful"
+              active={rating === "up"}
+            >
+              <ThumbsUp size={14} aria-hidden />
+            </IconAction>
+            <IconAction
+              onClick={rateDown}
+              label="This answer was wrong or unhelpful"
+              active={rating === "down" || downOpen}
+            >
+              <ThumbsDown size={14} aria-hidden />
+            </IconAction>
+          </div>
         </div>
+
+        {downOpen && (
+          <div className="mt-2 rounded-xl border border-line/12 px-3 py-2.5 text-[0.8rem]">
+            <p className="mb-2 font-medium text-ink">What was wrong?</p>
+            <div className="mb-2 flex flex-wrap gap-1.5">
+              {DOWN_REASONS.map((r) => {
+                const on = reasons.includes(r);
+                return (
+                  <button
+                    key={r}
+                    type="button"
+                    aria-pressed={on}
+                    onClick={() => toggleReason(r)}
+                    className={`min-h-[32px] rounded-full border px-2.5 py-1 text-[0.72rem] font-medium transition ${
+                      on
+                        ? "border-accent bg-accent/15 text-accent"
+                        : "border-line/15 text-ink-dim hover:text-accent"
+                    }`}
+                  >
+                    {r}
+                  </button>
+                );
+              })}
+            </div>
+            <textarea
+              value={correction}
+              onChange={(e) => setCorrection(e.target.value)}
+              rows={2}
+              aria-label="Correct value or reference"
+              placeholder="Correct value / reference, if you know it (optional)"
+              className="mb-1.5 w-full resize-y rounded-lg border border-line/15 bg-bg-card px-2.5 py-1.5 text-[0.8rem] text-ink placeholder:text-ink-faint"
+            />
+            <textarea
+              value={note}
+              onChange={(e) => setNote(e.target.value)}
+              rows={1}
+              aria-label="Other comments"
+              placeholder="Anything else (optional)"
+              className="mb-2 w-full resize-y rounded-lg border border-line/15 bg-bg-card px-2.5 py-1.5 text-[0.8rem] text-ink placeholder:text-ink-faint"
+            />
+            <div className="flex justify-end gap-2">
+              <button
+                type="button"
+                onClick={() => setDownOpen(false)}
+                className="min-h-[32px] rounded-lg px-3 py-1.5 text-[0.75rem] font-medium text-ink-dim hover:text-ink"
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                onClick={() =>
+                  submit("down", {
+                    reasons,
+                    note: note.trim(),
+                    correction: correction.trim(),
+                  })
+                }
+                className="min-h-[32px] rounded-lg bg-accent/15 px-3 py-1.5 text-[0.75rem] font-semibold text-accent ring-1 ring-accent/30 hover:bg-accent/25"
+              >
+                Send feedback
+              </button>
+            </div>
+          </div>
+        )}
 
         {showSources && (
           <SourceList sources={msg.sources} sourcesList={msg.sourcesList} />

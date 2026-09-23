@@ -4,7 +4,7 @@ API (no local model → fits Render's 512MB free tier), and runs the hybrid
 semantic+keyword retrieval ported from the original app.py. Semantic search is a
 plain NumPy cosine over 257 normalized vectors — FAISS/torch are not needed.
 """
-import math, os, json, re, threading
+import math, os, json, re, threading, time
 from collections import Counter
 import numpy as np
 
@@ -480,8 +480,10 @@ def retrieve(query, k=TOP_K_FINAL, trace=None):
     query_coach = detect_query_coach(query)
     query_system = detect_query_system(query)
     # electrical subsystem and demote the very fire-detection chunks it wants.
+    t0 = time.monotonic()
     qv = embed_query(full_exp) if emb_matrix is not None else None
     if trace is not None:
+        trace["t_embed"] = int((time.monotonic() - t0) * 1000)
         # q_ prefix: these are signals DETECTED IN THE QUERY, distinct from the
         # UI's coach-scope chip that log_usage records as `coach`.
         trace.update(q_coach=query_coach, q_oem=query_oem, q_system=query_system,
@@ -571,9 +573,11 @@ def retrieve(query, k=TOP_K_FINAL, trace=None):
     # Optional flash-lite rerank, only when the pool spans several manuals (gated
     # by RERANK_ENABLED; fail-safe to hybrid order otherwise).
     if rerank.enabled() and _pool_is_ambiguous(res):
+        t0 = time.monotonic()
         res = rerank.rerank(query, res, pool=RERANK_POOL)
         if trace is not None:
             trace["rerank_fired"] = True
+            trace["t_rerank"] = int((time.monotonic() - t0) * 1000)
     return _diversify(res, k)
 
 

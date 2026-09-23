@@ -39,7 +39,16 @@ const STATUS: Partial<Record<Stage, string>> = {
   speaking: "Reading the answer aloud…",
 };
 
-export default function ThinkingPipeline({ stage }: { stage: Stage }) {
+const SLOW_NOTE =
+  "Taking longer than usual — the server may be waking up, or a backup model is answering.";
+
+export default function ThinkingPipeline({
+  stage,
+  slow = false,
+}: {
+  stage: Stage;
+  slow?: boolean;
+}) {
   const visible = stage !== "idle";
   const currentIdx = ORDER.indexOf(stage);
   const status = STATUS[stage] || "Working…";
@@ -109,6 +118,11 @@ export default function ThinkingPipeline({ stage }: { stage: Stage }) {
                   })}
                 </div>
               </>
+            )}
+            {slow && (
+              <p className="border-t border-line/10 px-4 py-1.5 text-[0.72rem] text-ink-dim">
+                {SLOW_NOTE}
+              </p>
             )}
           </div>
         </motion.div>

@@ -33,6 +33,12 @@ export interface Message {
   clarify?: boolean;
   /** Epoch ms — used for history ordering and persistence. */
   ts?: number;
+  /** Backend id of the answer — joins a rating to its server-side trace. */
+  requestId?: string;
+  /** Model that wrote the answer, sent with feedback. */
+  provider?: string;
+  /** The rating the user has sent for this answer; persisted with the thread. */
+  rating?: "up" | "down";
 }
 
 export type Stage =
@@ -53,6 +59,8 @@ export interface ChatResponse {
   retrieval_mode?: string;
   values_suppressed?: number;
   clarify?: boolean;
+  request_id?: string;
+  provider?: string;
 }
 
 export interface TranscribeResponse {

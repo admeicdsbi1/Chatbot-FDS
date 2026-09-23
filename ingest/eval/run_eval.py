@@ -175,7 +175,11 @@ def main():
             continue
 
         retr_total += 1
-        rank = doc_ids.index(expect) + 1 if expect in doc_ids else 0
+        # A list accepts any of several documents: a correction slip restates
+        # its predecessor's values, so either one retrieved is a correct hit.
+        expects = expect if isinstance(expect, list) else [expect]
+        ranks = [doc_ids.index(e) + 1 for e in expects if e in doc_ids]
+        rank = min(ranks) if ranks else 0
         hit = rank > 0
         hits += hit
         mrr += (1.0 / rank) if rank else 0.0

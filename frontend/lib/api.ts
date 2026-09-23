@@ -147,6 +147,13 @@ export function sendFeedback(payload: {
   question?: string;
   answer_preview?: string;
   note?: string;
+  request_id?: string;
+  reasons?: string[];
+  correction?: string;
+  answer?: string;
+  provider?: string;
+  sources?: string[];
+  values_suppressed?: number;
 }): void {
   fetchWithTimeout(
     `${API_BASE}/api/feedback`,
