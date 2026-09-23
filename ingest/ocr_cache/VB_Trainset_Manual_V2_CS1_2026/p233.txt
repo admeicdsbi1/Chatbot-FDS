@@ -1,0 +1,10 @@
+Maintenance Manual of VBE Trainset (V2.0)                                                              Correction Slip - 1
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 72. | Variable Speed Heat Gun | 2000 Watt , 90-600 C | For cable sleeve work |
+| 73. | Arm Extractor Tool | | Wiper arm extraction |
+| 74. | Air Blower | 500-1000W | for cleaning purpose |
+| 75. | Hydraulic Crimping Tool | 25 to 400 sq mm | For cable lug crimping |
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0                                                              Page 232 of 233

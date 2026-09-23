@@ -1,0 +1,27 @@
+Maintenance Manual of VBE Trainset (V2.0)                                                                Correction Slip - 1
+
+| Main Assy. | Sub-Assembly / Component | Schedule | Remarks |
+| :--- | :--- | :---: | :---: | :---: | :--- |
+| | | SS 1 | SS2 | SS3 | |
+| | I. Main Air Compressor (Main Air Supply) | | | | |
+| | i. Air Filter | ✓ | ✓ | ✓ | |
+| | ii. Resilient Mounting & Restrainers | -- | ✓ | ✓ | |
+| | II. Micromesh Filter | | | | |
+| | i. Filter Element | ✓ | ✓ | ✓ | |
+| | III. Final Filter | | | | |
+| | i. Filter Element | ✓ | ✓ | ✓ | |
+| | IV. Auxiliary Air Compressor (Pantograph Control) | | | | |
+| | i. Air Filter | ✓ | ✓ | ✓ | |
+| | V. Safety Valves | -- | -- | ✓ | |
+| Electro - Pneumatic Brake System | VI. Pneumatic Horn/Tyfon (Low tone / High tone) | -- | ✓ | ✓ | |
+| | VII. Drain Valves / Drain Cocks | -- | ✓ | ✓ | |
+| | VIII. Ballcocks/Isolating cocks/Cutoff angle cocks (with or without switch module or exhaust/vented) | -- | ✓ | ✓ | |
+| | IX. Pressure Governors / Pressure Switches | -- | -- | ✓ | |
+| | X. Air Filters | ✓ | ✓ | ✓ | |
+| | XI. Rubber Hose Connections, Hose Pipes & Hose Coupling | -- | ✓ | ✓ | |
+| | XII. Dual/Duplex Pressure Gauge-MR/BP, Dual/Duplex Pressure Gauge-BC/AR, BP Gauge | -- | -- | ✓ | |
+| | XIII. Brake Pad | -- | ✓ | ✓ | |
+| Shell and Under-Frame | I. Exterior Paint | -- | ✓ | ✓ | |
+| Interior and Furnishing Items | I. Gangway | | | | Complete Gangway System Replacement: ● M/s Hubner: 12 Years (2nd SS3) ● M/s Dellner: 15 Years (3rd SS-2) ● M/s Lince: 12 Years (2nd SS3) ● M/s Ultimate Transportation Equipment: 12 Years (2nd SS3) ● M/s CRI: 12 Years (2nd SS3) |
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0                                                                         Page 192 of 233

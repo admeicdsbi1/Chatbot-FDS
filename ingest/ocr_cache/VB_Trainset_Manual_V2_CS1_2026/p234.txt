@@ -1,0 +1,11 @@
+Maintenance Manual of VBE Trainset (V2.0)                                          Correction Slip - 1
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 76. | Discharge Rod | FRP telescopic, 11Kv - 400 KV, clamp type, 6m+ length, 10 -20m earthing cable, IEC 1230/1235 compliant. | Safely discharging residual voltage from OHE/ equipment |
+
+Note: The above list and images of M&P, tools and fixtures are only indicative. Railways may procure any other tools/equipment/M&Ps/fixtures as per requirement.
+
+*****
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0                                          Page 233 of 233

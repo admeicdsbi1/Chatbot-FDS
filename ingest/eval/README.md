@@ -114,7 +114,12 @@ keyword-index tie-breaks, so differences smaller than that are not results.
 ```
 grep -c 'rerank(gemini) 429\|rerank(groq)' eval.log     # must be 0
 grep -c 'embedContent 429\|Embed query error' eval.log  # must be 0
+grep -c 'rerank(gemini) error\|rerank(gemini) 503' eval.log  # must be 0
 ```
+
+The third line was added 2026-09-23: a rerank **timeout** or **503** falls back
+to hybrid order exactly as a 429 does, and a run with four of them was
+discarded that day.
 
 Both are silent: a throttled **rerank** falls back to plain hybrid order (there
 is no Groq key locally), and a starved **query embedding** degrades that query to

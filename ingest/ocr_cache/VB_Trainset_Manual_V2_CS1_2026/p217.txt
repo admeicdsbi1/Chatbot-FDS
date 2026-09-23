@@ -1,0 +1,16 @@
+Maintenance Manual of VBE Trainset (V2.0) | Correction Slip - 1
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 12. | Lift and Turn device (Bogie Frame Manipulator) | | Holding and rotating bogie frame for various shop schedule activities |
+| 13. | Surface Table | | Bogie frame trammeling |
+| 14. | Portable wheel profile measurement device | Rly Board letter no. 2023/M(C)/60/1 dated. 4.12.2024 | |
+| 15. | Height Control Device (T9) | | Height adjustment of traction gearbox after installing to bogie |
+| 16. | Spectro Analyser | | Traction gearbox oil analysis |
+| 17. | Portable Digital Ultrasonic Flaw Detector | | |
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0 | Page 216 of 233
+
+**Labels in images:**
+*   CALIPRI PRIME
+*   T9

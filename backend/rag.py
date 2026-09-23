@@ -54,6 +54,16 @@ chunks = []
 emb_matrix = None          # (N, D) normalized float32, or None if unavailable
 keyword_index = {}
 doc_chunk_counts = Counter()   # doc_id -> how many chunks it owns (drives _doc_cap)
+# doc_id -> the newest chunk of the document that supersedes it (see
+# _supersession_factor). Built from the chunks' `supersedes` field at load time,
+# so declaring a supersession in the registry is all a new correction slip needs.
+superseded_by = {}
+
+# A correction slip restates most of what it revises, so the two documents
+# compete for the same query with near-identical text. This demotes the older
+# one enough that the newer wins on shared content, while leaving the older
+# document's content that the slip does not restate reachable. Tuned by eval.
+SUPERSEDED_PENALTY = float(os.environ.get("SUPERSEDED_PENALTY", "0.85"))
 
 
 def _normalize_rows(m):
@@ -86,7 +96,7 @@ def init_kb():
     matches the current embedding dimension; otherwise build it via the Gemini API
     in a BACKGROUND thread so startup is instant and serving begins immediately
     (keyword-only until embeddings are ready)."""
-    global chunks, emb_matrix, keyword_index, doc_chunk_counts
+    global chunks, emb_matrix, keyword_index, doc_chunk_counts, superseded_by
 
     print("Loading knowledge base...")
     try:
@@ -125,6 +135,13 @@ def init_kb():
         print("No GEMINI_API_KEY and no usable cache — keyword-only retrieval.")
 
     doc_chunk_counts = Counter(c.get("doc_id") for c in chunks)
+    superseded_by = _build_superseded_by(chunks)
+    for c in chunks:
+        newer = superseded_by.get(c.get("doc_id"))
+        if newer:
+            c["_superseded_by"] = _supersession_label(newer)
+    if superseded_by:
+        print(f"Superseded documents: {sorted(superseded_by)}")
 
     for i, c in enumerate(chunks):
         for tag in c.get("tags", []):
@@ -358,6 +375,27 @@ def clarification_needed(query, excerpts):
             + " and ".join(parts) + " for your equipment.")
 
 
+def _build_superseded_by(chs):
+    """{old doc_id: a chunk of the newest document that supersedes it}."""
+    out = {}
+    for c in chs:
+        for old in c.get("supersedes") or []:
+            cur = out.get(old)
+            if cur is None or (c.get("issue_date") or "") > (cur.get("issue_date") or ""):
+                out[old] = c
+    return out
+
+
+def _supersession_label(newer):
+    """'IRCAMTECH/…/2.0, dt. 09.04.2026' — how the context names the newer doc."""
+    return _cite_ref(newer) or newer.get("title", newer.get("doc_id", ""))
+
+
+def _supersession_factor(ch):
+    """Demote a document that a newer one declares it supersedes."""
+    return SUPERSEDED_PENALTY if ch.get("doc_id") in superseded_by else 1.0
+
+
 def _recency_factor(ch):
     """Gentle boost so a newer instruction letter edges ahead of an older manual
     on otherwise-similar matches (supersession: latest governs). Circulars/SMIs
@@ -369,7 +407,7 @@ def _recency_factor(ch):
     year = int(d[:4])
     factor = 1.0 + max(0, min(year - 2010, 20)) * 0.004
     dt = ch.get("doc_type", "") or ""
-    if "circular" in dt or "instruction" in dt:
+    if "circular" in dt or "instruction" in dt or dt == "correction_slip":
         factor += 0.03
     return factor
 
@@ -515,6 +553,7 @@ def retrieve(query, k=TOP_K_FINAL, trace=None):
             score *= _coach_factor(ch, query_coach)
             score *= _system_factor(ch, query_system)
             score *= _recency_factor(ch)
+            score *= _supersession_factor(ch)
             results.append((score, ch))
         results.sort(key=lambda x: -x[0])
         return _diversify(results, k)
@@ -566,6 +605,7 @@ def retrieve(query, k=TOP_K_FINAL, trace=None):
         score *= _coach_factor(ch, query_coach)
         score *= _system_factor(ch, query_system)
         score *= _recency_factor(ch)
+        score *= _supersession_factor(ch)
         res.append((score, ch))
     res.sort(key=lambda x: -x[0])
     if trace is not None:
@@ -655,6 +695,10 @@ def build_context(excerpts):
         if oem: h += f" | OEM: {_safe(oem)}"
         ref = _cite_ref(c)
         if ref: h += f" | Ref: {_safe(ref)}"
+        # Prompt rule 12 (newest governs) needs to know which of two agreeing-
+        # looking sources is the older one; the dates alone leave it inferring.
+        if c.get("_superseded_by"):
+            h += f" | SUPERSEDED by {_safe(c['_superseded_by'])}"
         h += "]"
         lines.append(f"{h}\n{txt}")
     return "\n\n".join(lines)

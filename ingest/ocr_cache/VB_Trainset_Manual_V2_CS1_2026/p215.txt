@@ -1,0 +1,11 @@
+Maintenance Manual of VBE Trainset (V2.0) | Correction Slip - 1
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 4. | Forklift | 15 tons | |
+| 5. | Battery-Operated Scissor Lift Table | | |
+| 6. | Battery-operated Lister (Platform Trucks) | 4-wheeler, 3 ton | |
+| 7. | Bogie Load Testing Machine | 50 T | |
+| 8. | Synchronized Pit Jack System | Inverter/VFD/VVF incorporated (for smooth operations and energy saving) | Min. 4-car Synchronized Pit Jack System with flexibility to cater to varying lifting pad locations of different coaches should be preferred. |
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0 | Page 214 of 233

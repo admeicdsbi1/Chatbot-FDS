@@ -286,6 +286,9 @@ def chunk_document(sections, entry, tagger):
                 "issue_date": entry.get("issue_date", ""),
                 "revision": entry.get("revision", ""),
                 "letter_no": entry.get("letter_no", ""),
+                # doc_ids this document overrides — rag.py demotes their chunks
+                # so the newer value wins; metadata only, not embedded
+                "supersedes": entry.get("supersedes", []),
                 # link to the source PDF (empty when no bucket configured) — used
                 # by rag.build_sources to render clickable, page-deep citations
                 "download_url": entry.get("download_url", ""),

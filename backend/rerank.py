@@ -32,8 +32,10 @@ GROQ_MODEL = os.environ.get("RERANK_GROQ_MODEL", "llama-3.3-70b-versatile")
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 # The rerank runs BEFORE the answer is generated, so its wait is added to every
 # answer's latency. It was 30s per provider (60s worst case, most of the
-# frontend's 75s); a 200-token listwise ranking returns in 1-3s when healthy.
-TIMEOUT_S = float(os.environ.get("RERANK_TIMEOUT_S", "12"))
+# frontend's 75s). 12s was tried and measured too tight: on 2026-09-23 four of
+# 62 eval queries timed out at 12s while flash-lite was also returning 503s,
+# each silently dropping that query to plain hybrid order.
+TIMEOUT_S = float(os.environ.get("RERANK_TIMEOUT_S", "20"))
 
 
 def enabled():
@@ -158,6 +160,8 @@ def rerank(query, candidates, pool=30):
     listing = []
     for i, (_, ch) in enumerate(head):
         doc = ch.get("title", ch.get("doc_id", ""))
+        if ch.get("_superseded_by"):     # set by rag.init_kb
+            doc += " [superseded by a newer document]"
         sec = ch.get("section", "")
         listing.append(f"[{i}] ({doc} — {sec}) {_snippet(ch, query)}")
     prompt = (

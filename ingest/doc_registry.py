@@ -831,6 +831,28 @@ REGISTRY = [
         "letter_no": "Railway Board E-Office No. 3450123",
     },
     {
+        # Supersession is explicit in the document: its covering letter (p.1)
+        # says Chapter 3 is revised "incorporating the committee recommendations
+        # {reference (ii)}" — the 20.08.2025 Railway Board approval of the report
+        # above — "and RDSO suggestions/comments {reference (iii)}" (16.03.2026).
+        # The two share ~99% of their vocabulary, so without `supersedes` they
+        # would compete as equals and an answer could quote the pre-RDSO value.
+        "doc_id": "VB_Trainset_Manual_V2_CS1_2026",
+        "path": os.path.join("Vande Bharat",
+                             "Correction Slip-1 VBE Trainset Manual V2.0 Vol-II (09.04.2026).pdf"),
+        "doc_type": "correction_slip",
+        "title": "IRCAMTECH Correction Slip-1: VBE Trainset (V2.0) Maintenance Manual Vol-II — Ch.3 Maintenance Schedule & Ch.4 Tools",
+        "source": "IRCAMTECH/GWL/MECH/Train-set/Manual/2.0, 09.04.2026",
+        "system": "VB",
+        "default_oem": None,
+        "coach_type": ["Vande Bharat"],
+        "subsystem": "maintenance schedule",
+        "issue_date": "2026-04-09",
+        "revision": "Correction Slip-1",
+        "letter_no": "IRCAMTECH/GWL/MECH/Train-set/Manual/2.0",
+        "supersedes": ["VB_Shop_Schedule_SS1_SS2_Report_2025"],
+    },
+    {
         # Subsystem deliberately left empty: this manual spans every subsystem, so
         # a label would let _subsystem_factor demote it on most queries.
         "doc_id": "VB_SMI_Enroute_Troubleshooting_18",
