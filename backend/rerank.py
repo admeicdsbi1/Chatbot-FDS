@@ -28,7 +28,7 @@ URL = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generate
 # alive here instead of silently dropping to plain hybrid order — so retrieval
 # precision does NOT degrade under Gemini quota pressure.
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
-GROQ_MODEL = os.environ.get("RERANK_GROQ_MODEL", "llama-3.3-70b-versatile")
+GROQ_MODEL = os.environ.get("RERANK_GROQ_MODEL", "openai/gpt-oss-120b")
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 # The rerank runs BEFORE the answer is generated, so its wait is added to every
 # answer's latency. It was 30s per provider (60s worst case, most of the
@@ -228,7 +228,10 @@ def _ask_groq(prompt, n):
     payload = {
         "model": GROQ_MODEL,
         "messages": [{"role": "user", "content": prompt}],
-        "max_tokens": 200, "temperature": 0.0, "stream": False,
+        # gpt-oss reasons first, from the same token budget: 200 would leave
+        # no room for the order itself.
+        "max_tokens": 1024, "temperature": 0.0, "stream": False,
+        **({"reasoning_effort": "low"} if "gpt-oss" in GROQ_MODEL else {}),
     }
     try:
         r = requests.post(GROQ_URL, headers={

@@ -56,13 +56,13 @@ def run(**kw):
 # -- Gemini daily 429 -> falls to Groq, and the next request skips Gemini ------
 cooldown.reset()
 fake([("generativelanguage", Resp(429, "GenerateRequestsPerDayPerProjectPerModel-FreeTier")),
-      ("llama-3.3", Resp(200, text="groq answer"))])
+      ("gpt-oss-120b", Resp(200, text="groq answer"))])
 ans, prov, att = run()
 check("429 falls through to Groq", ans == "groq answer" and prov == "Groq")
 check("Gemini put in cooldown", cooldown.cooling(f"gemini:{llm.GEMINI_MODEL}"))
 check("daily 429 cools for an hour",
       cooldown.status()[f"gemini:{llm.GEMINI_MODEL}"]["seconds_left"] > 3000)
-fake([("llama-3.3", Resp(200, text="groq again"))])
+fake([("gpt-oss-120b", Resp(200, text="groq again"))])
 ans, prov, att = run()
 check("cooled Gemini skipped, no call made", att[0] == {"p": "Gemini", "st": "cool", "ms": 0}
       and ans == "groq again")
@@ -103,14 +103,17 @@ cooldown.reset()
 big = "\n\n".join(f"[Source {i}: d]\n" + "x" * 3000 for i in range(1, 9))
 sent = []
 fake([("generativelanguage", Resp(429, "PerDay")),
-      ("llama-3.3", Resp(429, "tokens per day (TPD)")),
-      ("8b-instant", Resp(200, text="small"))], sent)
+      ("gpt-oss-120b", Resp(429, "tokens per day (TPD)")),
+      ("gpt-oss-20b", Resp(200, text="small"))], sent)
 hist = [{"role": "user", "content": "earlier"}, {"role": "assistant", "content": "a" * 5000}]
 ans, prov = llm.generate_answer("q", big, "en", hist, max_tokens=3000)
 body = sent[-1][1]
 check("8b answered", prov == "Groq-8b" and ans == "small")
 check("8b gets no history", len(body["messages"]) == 2)
 check("8b output capped", body["max_tokens"] == 1024)
+check("gpt-oss reasoning kept short", body.get("reasoning_effort") == "low")
+check("non-gpt-oss model gets no reasoning param",
+      llm._reasoning_opts("google/gemma-4-31b-it:free") == {})
 user = body["messages"][-1]["content"]
 check("8b context trimmed at a source boundary",
       len(user) < 7000 + 200 and user.count("[Source ") == 2)

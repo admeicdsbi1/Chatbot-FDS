@@ -2,7 +2,7 @@
 llm.py — Answer generation with conversation memory.
 
 Primary:  Google Gemini Flash (free tier — see GEMINI_MODEL)
-Fallback: Groq Llama-3.3-70B → Groq 8b-instant → OpenRouter → Cerebras (each a
+Fallback: Groq gpt-oss-120b → Groq gpt-oss-20b → OpenRouter → Cerebras (each a
           separate free-quota pool; all env-gated)
 
 Both called over plain REST (requests) — no SDK version churn, consistent with
@@ -34,7 +34,9 @@ GEMINI_URL = (
 _OPENAI_PROVIDERS = [
     {"name": "Groq", "key": os.environ.get("GROQ_API_KEY"),
      "url": "https://api.groq.com/openai/v1/chat/completions",
-     "model": os.environ.get("GROQ_MODEL", "llama-3.3-70b-versatile")},
+     # The Llama models were retired for free-tier keys on 2026-08-16 (both
+     # tiers 404'd); these are Groq's named replacements.
+     "model": os.environ.get("GROQ_MODEL", "openai/gpt-oss-120b")},
     # Same Groq key, smaller model — its per-day token limit is far higher
     # (~500k vs the 70b's 100k TPD) and is a SEPARATE per-model pool, so it keeps
     # answering after the 70b pool 429s. Lower quality, but a good last resort.
@@ -44,16 +46,16 @@ _OPENAI_PROVIDERS = [
     # ctx_chars / no history / out_cap keep one request inside the cap.
     {"name": "Groq-8b", "key": os.environ.get("GROQ_API_KEY"),
      "url": "https://api.groq.com/openai/v1/chat/completions",
-     "model": os.environ.get("GROQ_FALLBACK_MODEL", "llama-3.1-8b-instant"),
+     "model": os.environ.get("GROQ_FALLBACK_MODEL", "openai/gpt-oss-20b"),
      "ctx_chars": int(os.environ.get("GROQ_FALLBACK_CTX_CHARS", "7000")),
      "history": False, "out_cap": 1024},
     {"name": "OpenRouter", "key": os.environ.get("OPENROUTER_API_KEY"),
      "url": "https://openrouter.ai/api/v1/chat/completions",
      "model": os.environ.get("OPENROUTER_MODEL",
-                             "meta-llama/llama-3.3-70b-instruct:free")},
+                             "google/gemma-4-31b-it:free")},
     {"name": "Cerebras", "key": os.environ.get("CEREBRAS_API_KEY"),
      "url": "https://api.cerebras.ai/v1/chat/completions",
-     "model": os.environ.get("CEREBRAS_MODEL", "llama-3.3-70b")},
+     "model": os.environ.get("CEREBRAS_MODEL", "gpt-oss-120b")},
 ]
 
 MAX_TOKENS = int(os.environ.get("LLM_MAX_TOKENS", "1500"))
@@ -242,6 +244,7 @@ def _openai_chat(cfg, question, context, lang_code, history, max_tokens=None,
         "max_tokens": out,
         "temperature": TEMPERATURE,
         "stream": False,
+        **_reasoning_opts(cfg["model"]),
     }
     try:
         r = requests.post(
@@ -264,6 +267,13 @@ def _openai_chat(cfg, question, context, lang_code, history, max_tokens=None,
     except Exception as e:
         print(f"{cfg['name']} error: {e}")
         return None, "error"
+
+
+def _reasoning_opts(model):
+    """gpt-oss models reason before answering, and that reasoning is spent from
+    the same max_tokens — the trap thinkingBudget:0 closes for Gemini. Keep it
+    short so the answer is not squeezed out (Groq and Cerebras both accept it)."""
+    return {"reasoning_effort": "low"} if "gpt-oss" in model else {}
 
 
 def _pool(cfg):
