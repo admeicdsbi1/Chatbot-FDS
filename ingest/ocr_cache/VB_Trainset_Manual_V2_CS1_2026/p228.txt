@@ -1,0 +1,9 @@
+Maintenance Manual of VBE Trainset (V2.0)                                                                    Correction Slip - 1
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 56. | VVVF Drive for Bogie Run Test with Bogie Fixture for Bogie placement | 3-Phase 415 Volt, 37 kW(50HP), 72 Amp Drive | For motorized Bogie Run Test |
+| 57. | Industrial vacuum cleaner wet and Dry Duty Cleaning | for dry and wet cleaning | |
+| 58. | Digital Anemometer | B-201 or similar | for measuring air velocity at filters of LTC |
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0                                                                         Page 227 of 233

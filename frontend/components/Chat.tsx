@@ -9,12 +9,17 @@ export default function Chat({
   onReplay,
   onPickQuestion,
   onToggleSave,
+  onRate,
+  onRetry,
   isSaved,
 }: {
   messages: Message[];
   onReplay: (m: Message) => void;
   onPickQuestion: (q: string) => void;
   onToggleSave: (m: Message, question: string) => void;
+  onRate: (m: Message, rating: "up" | "down") => void;
+  /** Re-ask `question`, replacing the failed answer `m`. */
+  onRetry: (m: Message, question: string) => void;
   isSaved: (id: string) => boolean;
 }) {
   const endRef = useRef<HTMLDivElement>(null);
@@ -55,6 +60,12 @@ export default function Chat({
               onReplay={m.role === "assistant" ? onReplay : undefined}
               onToggleSave={
                 m.role === "assistant" ? (msg) => onToggleSave(msg, question) : undefined
+              }
+              onRate={m.role === "assistant" ? onRate : undefined}
+              onRetry={
+                m.role === "assistant" && question
+                  ? () => onRetry(m, question)
+                  : undefined
               }
               saved={isSaved(m.id)}
             />

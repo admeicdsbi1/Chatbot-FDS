@@ -1,0 +1,24 @@
+Maintenance Manual of VBE Trainset (V2.0) | Correction Slip - 1
+
+| Main Assy. | Sub-Assembly / Component | Schedule | Remarks |
+| :--- | :--- | :---: | :---: | :---: | :--- |
+| | | **SS 1** | **SS 2** | **SS 3** | |
+| | i. Gangway Components | -- | ✓ | ✓ | Components replacement:<br><u>M/s Dellner</u><br>3 Years (SS-2)<br>6 Years (SS-3)<br>7.5 Years (3rd SS-1)<br><br><u>M/s Lince</u><br>6 Years (SS-3)<br><br><u>M/s Ultimate Transportation Equipment</u><br>3 Years (SS-2)<br>6 Years (SS-3)<br><br><u>(M/s CRI)</u><br>6 Years (SS-3) |
+| | **II. Passenger Seats** | | | | |
+| | i. Seat Upholstery | -- | ✓ | ✓ | |
+| | **III. Window** | | | | |
+| | i. Lower Trim Rubber Gasket | -- | ✓ | ✓ | |
+| **Doors** | **I. IC Door** | | | | |
+| | i. IC Door Components | ✓ | ✓ | ✓ | <u>M/s Prag Polymers:</u><br>18 Months (SS-1)<br>3 Years (SS-2)<br>6 Years (SS-3) |
+| | **II. Plug Doors** | | | | |
+| | i. Plug Door Components | -- | -- | -- | Components replacement:<br><u>M/s Knorr Bremse:</u><br>4.5 Years (2nd SS-1)<br>9 Years ( 2nd SS-2)<br><br><u>M/s Faiveley Transport:</u><br>• 9 Years ( 2nd SS-2)<br>15 Years (3rd SS-2) |
+| **Water tank and Supply/ Drain pipelines** | **I. Rubber hoses and rubber/flexible pipes** | -- | ✓ | ✓ | |
+| **Vacuum Bio-Toilet System** | **I. Vacuum Evacuation System** | | | | |
+| | i. Lavatory pan/bowl (Indian squatting/Western design) & underfloor fitted components | | | | |
+| | a) Water Inlet / Rinsing valve | -- | ✓ | ✓ | |
+| | b) Vacuum Pump | -- | ✓ | ✓ | |
+| | c) Ejector | -- | -- | ✓ | |
+| | ii. Pressurized flushing arrangement | | | | |
+| | a) Water Inlet valve | -- | ✓ | ✓ | |
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0 | Page 193 of 233

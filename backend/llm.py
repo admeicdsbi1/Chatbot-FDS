@@ -10,7 +10,10 @@ the rest of the backend. Conversation history is included so follow-up questions
 stay coherent (fixes the original "loss of clarity after multiple questions").
 """
 import os
+import time
 import requests
+
+import cooldown
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 
@@ -35,9 +38,15 @@ _OPENAI_PROVIDERS = [
     # Same Groq key, smaller model — its per-day token limit is far higher
     # (~500k vs the 70b's 100k TPD) and is a SEPARATE per-model pool, so it keeps
     # answering after the 70b pool 429s. Lower quality, but a good last resort.
+    # Its free tier also caps tokens PER MINUTE at ~6k, and that cap counts the
+    # whole request: a full 8-source context plus four turns of history is well
+    # over it, so the tier 413'd on exactly the requests it existed to rescue.
+    # ctx_chars / no history / out_cap keep one request inside the cap.
     {"name": "Groq-8b", "key": os.environ.get("GROQ_API_KEY"),
      "url": "https://api.groq.com/openai/v1/chat/completions",
-     "model": os.environ.get("GROQ_FALLBACK_MODEL", "llama-3.1-8b-instant")},
+     "model": os.environ.get("GROQ_FALLBACK_MODEL", "llama-3.1-8b-instant"),
+     "ctx_chars": int(os.environ.get("GROQ_FALLBACK_CTX_CHARS", "7000")),
+     "history": False, "out_cap": 1024},
     {"name": "OpenRouter", "key": os.environ.get("OPENROUTER_API_KEY"),
      "url": "https://openrouter.ai/api/v1/chat/completions",
      "model": os.environ.get("OPENROUTER_MODEL",
@@ -53,6 +62,17 @@ MAX_TOKENS = int(os.environ.get("LLM_MAX_TOKENS", "1500"))
 MAX_TOKENS_ENUMERATE = int(os.environ.get("LLM_MAX_TOKENS_ENUMERATE", "3000"))
 TEMPERATURE = 0.1
 HISTORY_TURNS = 4  # how many prior turns to feed back for context
+
+# One budget for the whole chain. Each provider used to get its own 60s, so a
+# hung Gemini call spent a minute before the first fallback was even tried, and
+# the frontend (75s) gave up while the chain was still walking. The chain now
+# stops starting providers once the budget is spent, and no single call may
+# outlive it. Retrieval + rerank run before this and take a few seconds.
+LLM_DEADLINE_S = float(os.environ.get("LLM_DEADLINE_S", "45"))
+GEMINI_TIMEOUT_S = float(os.environ.get("GEMINI_TIMEOUT_S", "25"))
+PROVIDER_TIMEOUT_S = float(os.environ.get("LLM_PROVIDER_TIMEOUT_S", "20"))
+# Below this much remaining budget a call cannot usefully complete.
+_MIN_CALL_S = 4.0
 
 
 def _system_prompt(lang_code):
@@ -112,9 +132,10 @@ def _recent_history(history):
     return cleaned[-(HISTORY_TURNS * 2):]
 
 
-def _gemini(question, context, lang_code, history, max_tokens=None):
-    if not GEMINI_API_KEY:
-        return None
+def _gemini(question, context, lang_code, history, max_tokens=None,
+            timeout=GEMINI_TIMEOUT_S):
+    """Returns (text or None, status) — status is the HTTP code, or "error" /
+    "empty", so the caller can decide on cooldown and retry."""
     contents = []
     for m in _recent_history(history):
         role = "user" if m["role"] == "user" else "model"
@@ -138,24 +159,25 @@ def _gemini(question, context, lang_code, history, max_tokens=None):
     try:
         r = requests.post(
             GEMINI_URL, params={"key": GEMINI_API_KEY},
-            json=payload, timeout=60,
+            json=payload, timeout=timeout,
         )
         if r.status_code != 200:
             print(f"Gemini {r.status_code}: {r.text[:200]}")
-            return None
+            cooldown.record(f"gemini:{GEMINI_MODEL}", r.status_code, r.text[:500])
+            return None, r.status_code
         data = r.json()
         cands = data.get("candidates", [])
         if not cands:
-            return None
+            return None, "empty"
         parts = cands[0].get("content", {}).get("parts", [])
         text = "".join(p.get("text", "") for p in parts).strip()
         if not text and cands[0].get("finishReason") == "MAX_TOKENS":
             print("Gemini returned empty text with finishReason=MAX_TOKENS "
                   "(thinking consumed the budget?) — falling back")
-        return text or None
+        return (text, 200) if text else (None, "empty")
     except Exception as e:
         print(f"Gemini error: {e}")
-        return None
+        return None, "error"
 
 
 def _user_turn(context, question):
@@ -176,21 +198,48 @@ def _user_turn(context, question):
     )
 
 
-def _openai_chat(cfg, question, context, lang_code, history, max_tokens=None):
-    """Call any OpenAI-compatible chat endpoint (Groq / OpenRouter / Cerebras)."""
-    if not cfg["key"]:
-        return None
+def _trim_context(context, max_chars):
+    """Keep whole leading sources while they fit in `max_chars`.
+
+    Sources are joined by blank lines and each opens with "[Source N:", in rank
+    order, so cutting at a source boundary drops the lowest-ranked evidence and
+    never leaves half a table. A corpus-facts block ahead of the sources is kept
+    — it is short and it is the only place a count lives. At least one source
+    always survives, cut to fit."""
+    if not max_chars or len(context) <= max_chars:
+        return context
+    sep = "\n\n[Source "
+    parts = context.split(sep)
+    out = parts[0]
+    for i, p in enumerate(parts[1:]):
+        nxt = out + sep + p
+        # the first source is kept even when it has to be cut
+        if len(nxt) > max_chars and (i > 0 or out.startswith("[Source ")):
+            break
+        out = nxt
+    return out[:max_chars]
+
+
+def _openai_chat(cfg, question, context, lang_code, history, max_tokens=None,
+                 timeout=PROVIDER_TIMEOUT_S):
+    """Call any OpenAI-compatible chat endpoint (Groq / OpenRouter / Cerebras).
+    Returns (text or None, status), as _gemini does."""
+    context = _trim_context(context, cfg.get("ctx_chars"))
     messages = [{"role": "system", "content": _system_prompt(lang_code)}]
-    for m in _recent_history(history):
-        messages.append({"role": m["role"], "content": m["content"]})
+    if cfg.get("history", True):
+        for m in _recent_history(history):
+            messages.append({"role": m["role"], "content": m["content"]})
     messages.append({
         "role": "user",
         "content": _user_turn(context, question),
     })
+    out = max_tokens or MAX_TOKENS
+    if cfg.get("out_cap"):
+        out = min(out, cfg["out_cap"])
     payload = {
         "model": cfg["model"],
         "messages": messages,
-        "max_tokens": max_tokens or MAX_TOKENS,
+        "max_tokens": out,
         "temperature": TEMPERATURE,
         "stream": False,
     }
@@ -201,43 +250,85 @@ def _openai_chat(cfg, question, context, lang_code, history, max_tokens=None):
                 "Authorization": f"Bearer {cfg['key']}",
                 "Content-Type": "application/json",
             },
-            json=payload, timeout=60,
+            json=payload, timeout=timeout,
         )
         if r.status_code != 200:
             print(f"{cfg['name']} {r.status_code}: {r.text[:200]}")
-            return None
+            cooldown.record(_pool(cfg), r.status_code, r.text[:500])
+            return None, r.status_code
         choices = r.json().get("choices", [])
         if not choices:
-            return None
-        return choices[0]["message"]["content"].strip() or None
+            return None, "empty"
+        text = (choices[0]["message"]["content"] or "").strip()
+        return (text, 200) if text else (None, "empty")
     except Exception as e:
         print(f"{cfg['name']} error: {e}")
-        return None
+        return None, "error"
+
+
+def _pool(cfg):
+    """Cooldown key: quota is per model, so two models on one key are two pools."""
+    return f"{cfg['name']}:{cfg['model']}"
 
 
 def generate_answer(question, context, lang_code="en", history=None,
-                    max_tokens=None):
+                    max_tokens=None, attempts=None):
     """Generate an answer. Tries Gemini first, then each configured OpenAI-
     compatible fallback provider (Groq → OpenRouter → Cerebras) in turn.
 
     Returns (answer, provider_name). The provider matters for diagnosis: a Gemini
     quota blip silently drops the whole chain down to an 8b model, and an answer
     that reads as a reasoning failure is often just a weaker model — previously
-    that was visible only as a stray print() in the log stream."""
+    that was visible only as a stray print() in the log stream.
+
+    Pass a list as `attempts` to have every provider tried recorded into it as
+    {"p": name, "st": status, "ms": elapsed} — status "cool" means skipped
+    because the pool recently refused, "late" that the budget was spent."""
     if not GEMINI_API_KEY and not any(p["key"] for p in _OPENAI_PROVIDERS):
         return ("⚠️ No LLM configured. Set GEMINI_API_KEY or a fallback provider "
                 "key (GROQ_API_KEY / OPENROUTER_API_KEY / CEREBRAS_API_KEY).",
                 "none")
+    if attempts is None:
+        attempts = []
+    deadline = time.monotonic() + LLM_DEADLINE_S
 
-    ans = _gemini(question, context, lang_code, history, max_tokens)
-    if ans:
-        return ans, GEMINI_MODEL
+    def _try(name, pool, call, cap):
+        if cooldown.cooling(pool):
+            attempts.append({"p": name, "st": "cool", "ms": 0})
+            return None, "cool"
+        left = deadline - time.monotonic()
+        if left < _MIN_CALL_S:
+            attempts.append({"p": name, "st": "late", "ms": 0})
+            return None, "late"
+        t0 = time.monotonic()
+        ans, st = call(min(cap, left))
+        attempts.append({"p": name, "st": st,
+                         "ms": int((time.monotonic() - t0) * 1000)})
+        return ans, st
+
+    if GEMINI_API_KEY:
+        def gem(t):
+            return _gemini(question, context, lang_code, history, max_tokens, t)
+        pool = f"gemini:{GEMINI_MODEL}"
+        ans, st = _try("Gemini", pool, gem, GEMINI_TIMEOUT_S)
+        # 503 "model overloaded" is momentary and usually clears within
+        # seconds; one quick retry is cheaper than dropping to a weaker model.
+        if not ans and st == 503:
+            time.sleep(1.5)
+            ans, st = _try("Gemini", pool, gem, GEMINI_TIMEOUT_S)
+        if ans:
+            return ans, GEMINI_MODEL
     for cfg in _OPENAI_PROVIDERS:
         if not cfg["key"]:
             continue
         print(f"Gemini unavailable — falling back to {cfg['name']}")
-        ans = _openai_chat(cfg, question, context, lang_code, history, max_tokens)
+        ans, _ = _try(cfg["name"], _pool(cfg),
+                      lambda t, cfg=cfg: _openai_chat(cfg, question, context,
+                                                      lang_code, history,
+                                                      max_tokens, t),
+                      PROVIDER_TIMEOUT_S)
         if ans:
             return ans, cfg["name"]
+    print(f"LLM chain exhausted: {attempts}")
     return ("⚠️ AI summary unavailable right now. Please rely on the source text "
             "below.", "none")

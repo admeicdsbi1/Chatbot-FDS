@@ -1,0 +1,47 @@
+Maintenance Manual of VBE Trainset (V2.0) Correction Slip - 1
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 70. | Sound Level Meter | 30 to 130 dB with Data Logger | For noise measurement |
+| 71. | Digital tachometer with totalizer/counter | 2 to 99,999 RPM, 5-digit LCD display sampling time 0.5 sec | For RPM measurement during the drive run test of TM |
+
+**Text visible on images:**
+
+*   **Image 1 (Top):**
+    *   HTC LX-104 DATA LOGGING
+    *   Disable APO
+    *   EXTECH Light Meter LT300
+    *   39.99 Fc
+    *   RANGE
+    *   RESET
+    *   Lux Fc
+    *   CE
+
+*   **Image 2 (Middle):**
+    *   SL-1352 SOUND LEVEL METER
+    *   HTC
+    *   SET
+    *   IEC61672-1CLASS2
+    *   CE
+    *   1128 19
+    *   55.5
+    *   FAST SLOW
+    *   A/C
+    *   HOLD
+    *   LEVEL
+    *   IEC 61672-1 CLASS 2
+
+*   **Image 3 (Bottom):**
+    *   MEM
+    *   MEAS
+    *   MODE
+    *   Winmet Technologies Pvt. Ltd.
+    *   210813697
+    *   08-04-25
+    *   12-04-26
+    *   CALIBRATED
+    *   METRAVI
+    *   NCTM-1000
+    *   TACHOMETER
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0 Page 231 of 233

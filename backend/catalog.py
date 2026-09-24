@@ -196,6 +196,7 @@ _DOC_TYPE_LABELS = {
     "oem_manual": "OEM Manual",
     "oem_presentation": "OEM Presentation",
     "report": "Report",
+    "correction_slip": "Correction Slip",
 }
 
 

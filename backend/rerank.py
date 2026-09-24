@@ -15,6 +15,8 @@ import re
 
 import requests
 
+import cooldown
+
 API_KEY = os.environ.get("GEMINI_API_KEY")
 MODEL = os.environ.get("RERANK_MODEL", "gemini-3.1-flash-lite")
 _ENABLED = os.environ.get("RERANK_ENABLED", "0") == "1"
@@ -28,6 +30,12 @@ URL = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generate
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 GROQ_MODEL = os.environ.get("RERANK_GROQ_MODEL", "llama-3.3-70b-versatile")
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
+# The rerank runs BEFORE the answer is generated, so its wait is added to every
+# answer's latency. It was 30s per provider (60s worst case, most of the
+# frontend's 75s). 12s was tried and measured too tight: on 2026-09-23 four of
+# 62 eval queries timed out at 12s while flash-lite was also returning 503s,
+# each silently dropping that query to plain hybrid order.
+TIMEOUT_S = float(os.environ.get("RERANK_TIMEOUT_S", "20"))
 
 
 def enabled():
@@ -152,6 +160,8 @@ def rerank(query, candidates, pool=30):
     listing = []
     for i, (_, ch) in enumerate(head):
         doc = ch.get("title", ch.get("doc_id", ""))
+        if ch.get("_superseded_by"):     # set by rag.init_kb
+            doc += " [superseded by a newer document]"
         sec = ch.get("section", "")
         listing.append(f"[{i}] ({doc} — {sec}) {_snippet(ch, query)}")
     prompt = (
@@ -185,7 +195,8 @@ def _parse_order(txt, n):
 
 
 def _ask_gemini(prompt, n):
-    if not API_KEY:
+    pool = f"gemini:{MODEL}"
+    if not API_KEY or cooldown.cooling(pool):
         return None
     payload = {
         "contents": [{"role": "user", "parts": [{"text": prompt}]}],
@@ -193,9 +204,11 @@ def _ask_gemini(prompt, n):
                              "thinkingConfig": {"thinkingBudget": 0}},
     }
     try:
-        r = requests.post(URL, params={"key": API_KEY}, json=payload, timeout=30)
+        r = requests.post(URL, params={"key": API_KEY}, json=payload,
+                          timeout=TIMEOUT_S)
         if r.status_code != 200:
             print(f"rerank(gemini) {r.status_code}: {r.text[:120]}")
+            cooldown.record(pool, r.status_code, r.text[:500])
             return None
         cands = r.json().get("candidates", [])
         txt = "".join(p.get("text", "")
@@ -207,7 +220,10 @@ def _ask_gemini(prompt, n):
 
 
 def _ask_groq(prompt, n):
-    if not GROQ_API_KEY:
+    # Same key AND model as the answer chain's Groq tier, so the same pool:
+    # a cooldown the answer path recorded applies here, and vice versa.
+    pool = f"Groq:{GROQ_MODEL}"
+    if not GROQ_API_KEY or cooldown.cooling(pool):
         return None
     payload = {
         "model": GROQ_MODEL,
@@ -217,9 +233,10 @@ def _ask_groq(prompt, n):
     try:
         r = requests.post(GROQ_URL, headers={
             "Authorization": f"Bearer {GROQ_API_KEY}",
-            "Content-Type": "application/json"}, json=payload, timeout=30)
+            "Content-Type": "application/json"}, json=payload, timeout=TIMEOUT_S)
         if r.status_code != 200:
             print(f"rerank(groq) {r.status_code}: {r.text[:120]}")
+            cooldown.record(pool, r.status_code, r.text[:500])
             return None
         choices = r.json().get("choices", [])
         txt = choices[0]["message"]["content"] if choices else ""

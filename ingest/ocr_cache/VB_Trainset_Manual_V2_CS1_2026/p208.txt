@@ -1,0 +1,50 @@
+Maintenance Manual of VBE Trainset (V2.0)                                          Correction Slip - 1
+vii. Master lock device - Latch spring
+viii. Master lock device - Emergency spring
+ix. Master lock device - Electro-magnet
+x. Master lock device - EMS
+xi. Master lock device - DLS1 wire layout
+xii. Master lock device - DLS2 wire layout
+xiii. Master lock device - EDS wire layout
+xiv. Master lock device - DCS wire layout
+xv. Door leaf - Push button wiring
+xvi. Lockout switch assembly - LOS wire layout
+xvii. PCU assembly - PCU
+xviii. PCU assembly - EAD
+xix. PCU assembly - Bowden cable (EAD)
+xx. EED
+xxi. Bowden cable (EED)
+xxii. Push button kit (opening)
+xxiii. Push button kit (closing)
+xxiv. Indication lamp (external)
+xxv. Indication lamp (internal)
+
+FSDS AND FDSS
+
+1. Aerosol Fire Detection & Suppression System
+   i. Complete Unit (M/s PYROGEN) - 2nd SS-2 (9 Years)
+   ii. Complete Unit (M/s STAT-X) - 3rd SS-2 (15 Years)
+   iii. Complete Unit (M/s FIREPRO) - 3rd SS-2 (15 Years)
+
+II. SCHEDULE WISE LIST OF MUST CHANGE ITEMS: ELECTRICAL
+
+| Sch. | SS1 | SS2 | 2nd SS1 | SS3 | 3rd SS1 | 2nd SS2 | 4th SS1 | 2nd SS3 | 5th SS1 | 3rd SS2 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Months** | 18 | 36 | 54 | 72 | 90 | 108 | 126 | 144 | 162 | 180 |
+| **Years** | 1.5 | 3 | 4.5 | 6 | 7.5 | 9 | 10.5 | 12 | 13.5 | 15 |
+
+A. LIST OF MUST CHANGE ITEMS FOR SHOP SCHEDULE - 1
+1. Line and Traction Converter (LTC)
+   i. Silica gel
+2. Auxiliary Converter Unit (ACU)
+   i. Silica gel
+3. Battery box unit (BBU)
+   i. Silica gel
+4. Pantograph (Schunk Bahn)
+   i. All Shunts
+   ii. Sliding (carbon) strips
+5. Pantograph (Faiveley-LX 3600)
+   i. Sliding (carbon) strips
+   ii. Flexible connections (shunts)
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0                                          Page 207 of 233

@@ -1,0 +1,14 @@
+Maintenance Manual of VBE Trainset (V2.0) | Correction Slip - 1
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 38. | Flowmeter/Anemometer | | Flow rate measurement for FSDS |
+| 39. | Handheld programmer | | For checking point-type smoke detector |
+| | **Handheld Programmer** | | |
+| 40. | Sensor Removal Tool | | For replacement of smoke chamber in point-type smoke detector. |
+| | **Sensor Removal Tool** | | |
+| 41. | All-in-one tester (smoke & heat) | | Smoke & Heat testing |
+| 42. | Functional Tester—Aspiration Smoke | | Smoke testing in aspiration smoke detector |
+| | **Smoke Detector Electronic Tester** | | |
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0 | Page 223 of 233

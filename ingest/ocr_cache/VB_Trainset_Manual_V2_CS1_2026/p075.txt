@@ -1,0 +1,41 @@
+Maintenance Manual of VBE Trainset (V2.0)
+
+Correction Slip - 1
+
+High speed
+Wheel side
+Vibration (A,H,V in mm/sec)
+
+High speed
+Wheel side
+temperature
+
+High speed
+Motor side
+temperature
+
+Coupling temp
+Gear side
+temperature
+
+Coupling temp
+Motor side
+temperature
+
+Low speed
+Wheel side
+Vibration (A,H,V in mm/sec)
+
+Low speed
+Wheel side
+temperature
+
+Oil temp
+
+Low speed
+Motor side
+temperature
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+
+Page 74 of 233

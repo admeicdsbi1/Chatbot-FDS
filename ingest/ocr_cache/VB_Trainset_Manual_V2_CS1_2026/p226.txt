@@ -1,0 +1,17 @@
+Maintenance Manual of VBE Trainset (V2.0)                                                              Correction Slip - 1
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| | **Electrical** | | |
+| 49. | HV Test Bench | 0 - 100 KV output, leakage current measurement | High - voltage testing for VCBs |
+| 50. | Pantograph Test Bench | Automated test cycles, IEC EN 50206-1 compliant, report generation, visual/audible alerts | Automated pantograph testing (mechanical & electrical) |
+| 51. | Transformer oil filtration plant | 1000-1500 LPH capacity | For Main Transformer Oil Filtration |
+| 52. | Fully Automatic Oil BDV Tester | Capacity up to 100 kV | For main Transformer Oil BDV measurement |
+
+TRANSFORMER OIL FILTER MACHINE
+CAPACITY 4000 LPH
+Mfg By
+AYON ENERGY PVT. LTD.
+INDIA
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0                                                              Page 225 of 233

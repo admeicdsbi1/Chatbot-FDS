@@ -114,7 +114,12 @@ keyword-index tie-breaks, so differences smaller than that are not results.
 ```
 grep -c 'rerank(gemini) 429\|rerank(groq)' eval.log     # must be 0
 grep -c 'embedContent 429\|Embed query error' eval.log  # must be 0
+grep -c 'rerank(gemini) error\|rerank(gemini) 503' eval.log  # must be 0
 ```
+
+The third line was added 2026-09-23: a rerank **timeout** or **503** falls back
+to hybrid order exactly as a 429 does, and a run with four of them was
+discarded that day.
 
 Both are silent: a throttled **rerank** falls back to plain hybrid order (there
 is no Groq key locally), and a starved **query embedding** degrades that query to
@@ -141,3 +146,33 @@ number found under the **wrong column** still scores a pass.
    `eval_set.jsonl`.
 4. `python ingest/eval/run_eval.py` — confirm existing cases did not regress and
    the new cases pass.
+
+## Feedback triage (👍 / 👎 from the app)
+Every rating is appended to the feedback Google Sheet (`feedback_sheet.gs`, set
+up via `FEEDBACK_WEBHOOK_URL` on Render) and logged to stdout with the answer's
+`request_id`, which is also on that answer's `type: chat` log line (retrieved
+chunks, rerank, `llm_attempts`, timings).
+
+Ratings are **reviewed, not auto-applied**: at 20–30 users the votes are too few
+and too noisy to retune ranking from, and a wrong value here is a safety issue.
+The loop that makes answers more reliable over time:
+
+1. Export the Sheet as CSV → `python ingest/eval/feedback_to_eval.py feedback.csv`
+   (add `--up` to also draft 👍 rows as recall checks).
+2. For each 👎 in `feedback_candidates.jsonl`, check the answer against the PDF
+   and fix by reason:
+   | reason | usually means | fix |
+   |---|---|---|
+   | Wrong value | right doc, wrong row / blended coaches | retrieval or prompt; check `retrieved` |
+   | Wrong coach/OEM | routing | `rag.py` coach/OEM factors, clarify flow |
+   | Outdated | a newer letter supersedes it | ingest it; set `supersedes` in the registry |
+   | Not found but should be | KB gap or retrieval miss | ingest, or a retrieval fix |
+   | Incomplete | enumeration budget | `TOP_K_ENUMERATE`, rule 15 |
+   | provider ≠ gemini | the fallback model, not retrieval | provider pools / cooldown |
+3. Fill `expect_doc` / `expect_page` / `gold_value` (and a `planted_wrong`) from
+   the manual and move the case into `eval_set.jsonl`. **Every confirmed 👎
+   becomes a permanent regression test** under the gate above.
+
+`expect_doc` may be a list when more than one document legitimately holds the
+answer (e.g. a correction slip and the report it revises); the earliest-ranked
+match counts.

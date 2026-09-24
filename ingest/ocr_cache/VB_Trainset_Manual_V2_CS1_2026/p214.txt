@@ -1,0 +1,13 @@
+Maintenance Manual of VBE Trainset (V2.0)
+Correction Slip - 1
+4. LIST OF M&Ps, TOOLS, JIGS & FIXTURES REQUIRED FOR SHOP SCHEDULES
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| | **Mechanical** | | |
+| 1. | Rail-cum-Road Shunter | | For Rake/BU/Coach shunting |
+| 2. | CBC to Semi-Permanent Coupler Attachment | | For Rake/BU/Coach shunting throughout the shops |
+| 3. | Mobile Painting Equipment (Sky Trotter) | | Painting of coaches |
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+Page 213 of 233

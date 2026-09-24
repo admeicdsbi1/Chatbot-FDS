@@ -1,0 +1,9 @@
+Maintenance Manual of VBE Trainset (V2.0)                                                                 Correction Slip - 1
+
+| S.N | M&Ps, Tools, Jigs & Fixtures | Specifications | Remarks |
+| :--- | :--- | :--- | :--- |
+| 53. | DGA oil Analysis equipment | Three column gas chromatograph latest model available in the market as per IS:10593:2023 & 9434:2019 and other associated equipment as per RDSO/ELRS/SMI/138, Rev.1.-2024 | for transformer oil DGA analysis |
+| 54. | Thermal Imaging Camera / scanner | Detection temperature anomalies, IR camera, 160 X 120 pixels or higher image storage | Hotspot detection, electrical inspection |
+| 55. | Light load run test facilities for traction motor (VVVF drive) | For run test of single motor | |
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0                                                                         Page 226 of 233
