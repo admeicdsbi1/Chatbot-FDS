@@ -1,0 +1,53 @@
+### Technical Index: Maintenance Manual of VBE Trainset (V2.0)
+
+**Document Reference:**
+*   **Document Title:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance - Seats
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page:** 17 of 19
+
+---
+
+### Component Designations and Descriptions
+
+| Component ID | Description |
+| :--- | :--- |
+| 310998 | Rotating lock |
+| 310999 | Lock body |
+| 214746 | Spring |
+| 311023 | Washer |
+| 410011 | Screw |
+| 4.2x19 DIN 7982 | Screw |
+| M8x25 DIN 7984 | Bolt/Screw |
+| DIN 125 A8.4 | Washer |
+| Nut M8 DIN 985 | Nut |
+
+---
+
+### Technical Values and Specifications
+
+**Tray Lock Assembly:**
+*   **Screw Specification:** 4.2x19 DIN 7982
+
+**Footrest (Executive Class) Assembly:**
+*   **Bolt Specification:** M8x25 DIN 7984
+*   **Washer Specification:** DIN 125 A8.4
+*   **Nut Specification:** Nut M8 DIN 985
+*   **Consumable:** Medium thread locker (to be applied on tip of screws)
+
+---
+
+### Maintenance Procedures
+
+**Tray Lock:**
+1. Remove the 3 screws screw 4.2x19 Inox DIN 7982
+2. Remove old lock
+3. Assemble the lock together: 310998 (rotating lock), 310999 (lock body), 214746 (spring), 311023 (washer) and 410011 (screw)
+4. Position the lock onto the back of the seat
+5. Tighten the 3 screws 4.2x19 Inox DIN 7982
+
+**Exchange of the footrest (Executive Class):**
+1. Remove bolts M8x25 DIN 7984
+2. Exchange footrest
+3. Add medium thread locker on tip of screws
+4. Tighten the 4 screws M8x25 DIN 7984 with washer DIN 125 and nut M8 DIN 985

@@ -1,0 +1,28 @@
+### Technical Index: VBE Trainset Maintenance
+
+**Document Reference:**
+*   **Title:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance - Seats
+*   **Document ID:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page:** 4 of 19
+
+**Component Designations & Specifications:**
+*   **WAGO 770-223:** Socket (electricity connector)
+*   **WAGO 770-233:** Plug (electricity connector)
+*   **M5x10:** Screw size for trap door
+*   **M10:** Screw size for leg and wall fixation
+
+**Technical Values & Dimensions:**
+*   **Screw quantity:** 4 (for trap door)
+*   **Hole diameter (side panel):** 11 mm
+*   **Hole diameter (wall connector):** 10 mm
+*   **Dimension (width):** 260 ± 1 mm
+*   **Dimension (vertical spacing):** 150 ± 1 mm
+
+**Maintenance Instructions:**
+*   **Electrical Connection:** Connect electricity connector (one from rotation mechanism, one from ground) using WAGO 770-223 (socket) and 770-233 (plug).
+*   **Trap Door:** Close trap door and tighten 4 x M5x10 screws; apply medium strength thread locker to the tip of each screw.
+*   **Seat Assembly:** Position the leg and the wall connector; tighten fixation screws (leg and wall) with M10 screws.
+
+**Safety Cautions:**
+*   **CAUTION:** Screw type, torque, and use of medium strength thread locker for the fixation of the carrier to the tram structure must be defined by the vehicle manufacturer.

@@ -1,0 +1,31 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance
+
+### Technical Specifications
+*   **Pressure relief device rating:** 0.7 bar (dry contact)
+
+### Component Designations and Descriptions
+*   **Pressure relief device:** Protects the transformer from accidental overpressure.
+*   **Valve opening indicator:** Red pushbutton, directly mounted on the pressure relief device cover.
+
+### Section References
+*   **5.7.12:** Traction Motor
+
+### Technical Index: Traction Motor
+
+**Subject:** 5.7.12 Traction Motor
+
+**Technical Specifications & Descriptions:**
+
+*   **Component:** Traction Motor (TM)
+*   **Design Type:** Fully suspended
+*   **Motor Type:** 3 phase asynchronous Traction Motor
+*   **Application:** Modern bolster-less design bogies
+*   **Configuration:** Motor coach is a powered vehicle with four axles, each equipped with one Traction Motor.
+*   **Engineering Benefit:** Traction motor weight is not loaded on the wheel directly, reducing un-sprung mass and resulting in better ride comfort.
+
+- **Subject:** Motor Coach Bogie with Traction Motor and Gear Box Assembly
+- **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+- **Page Number:** 56 of 123
+- **Component Designation:** Motor Bogie

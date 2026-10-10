@@ -1,0 +1,36 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Bogie
+
+New 130x230x160
+
+55Kg
+
+[Technical Drawing Annotations]
+- 21.5
+- 60
+- 50
+- 28
+- 3X M20-6H
+- Ø10
+- 45.6
+- Ø130 -0.068 -0.240 Journal
+- Ø130 -0.025 Bearing
+- Ø84
+- (217)
+- 117 +0.275 -0.240
+- 150 +0.35 -0.12
+- 89.3 +0.275 -0.240
+- Ø130 +0.04 0 Distance ring
+- Ø150+0.2 Distance ring
+- Ø165-0.25 Distance ring
+- Ø198 0
+- Ø230 0 -0.9 After seals assembly
+- 15.35±0.5
+- 8±0.8
+- 160±0.051
+- (192.8)
+
+[Image Annotations]
+- Both sides open drain of 24mm
+- New – 15mm depth
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0 Page 5 of 23

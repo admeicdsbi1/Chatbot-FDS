@@ -1,0 +1,19 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Maintenance - Seats
+M. Exchange of the footrest ( Chair-Car Class)
+Nut M8
+210 099
+8x Washer
+DIN 125 A8
+4x M8x25
+2x M8x30
+
+* Remove 4x bolts M8x25 and 2x bolts M8x30 DIN 7984
+* Exchange footrest
+* Add medium thread locker on tip of screws
+* Tighten the 4boltsM8x25 DIN 7984 and 2 bolts M8x30 DIN 7984 with washer DIN 125 and nut M8 DIN 985 (torque 25 Nm)
+
+N. Exchange of the magazine net
+Cap 311019
+3.9x25
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0 Page 18 of 19

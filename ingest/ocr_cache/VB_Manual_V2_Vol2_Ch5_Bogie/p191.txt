@@ -1,0 +1,19 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Bogie
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page Number:** Page 2 of 23
+
+### Component Designations and Descriptions
+
+| Component | Description |
+| :--- | :--- |
+| **Trailer Bogie** | Attached with Trailer Coach. Does not have provision of suspended Traction Motor & Gear Box. Non-powered bogie. |
+| **Motor Bogie** | Attached with Motor Coach. Traction Motors are suspended from bogies & gear boxes are mounted on the axle. Powered bogie. |
+
+### Technical Values and Statistics
+
+*   **Total bogies in a rake:** 32
+*   **Total Trailer Bogies in a rake:** 16
+*   **Total Motor Bogies in a rake:** 16
+*   **Trainset power configuration:** 50% powered

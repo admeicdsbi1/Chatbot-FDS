@@ -1,0 +1,32 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance – Automatic Doors
+*   **Document Reference:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page Number:** Page 11 of 13
+
+### Technical Values (Torque Specifications)
+| Component | Torque Value |
+| :--- | :--- |
+| Clamping screws | 10 Nm |
+| Counter nut | 14 Nm |
+
+### Component Designations
+*   **Fix holder:** Component used to anchor one end of the belt.
+*   **Moveable holder:** Component used to adjust and secure the belt tension.
+*   **Tensioning screw:** Screw used to adjust the belt tension.
+*   **Counter nut:** Nut used to lock the tensioning device in place after adjustment.
+*   **Clamping screws:** Screws used to secure the belt within the holders.
+*   **Clamp:** Mechanical interface for gripping the belt teeth.
+*   **Fixing screws:** Screws used to mount the holder assembly to the carriage.
+
+### Installation Procedure
+1.  Mount the fix belt holder to one end of the belt.
+2.  Place the belt holder onto the carriage and screw it on.
+3.  Guide the belt around the deflection pulleys and the motor deflection insert it into the moveable belt holder and fix it with the clamping screws.
+4.  Fasten the moveable holder to the fix holder with the tensioning screw (pretension the belt as much as possible).
+5.  Pretension the belt using the tensioning device.
+6.  Adjust the correct belt tension and secure the tensioning device using the counter nut.
+7.  Cut overlapping ends leaving one tooth.
+8.  Functional check.
+
+**Note:** The position of the deflection pulleys remains unchanged when replacing the belt.

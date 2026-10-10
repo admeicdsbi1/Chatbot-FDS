@@ -1,0 +1,21 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** 86 of 123
+
+### Component Designations and Descriptions
+*   **Head Light:** (Refer to Figure 76)
+*   **Flasher Light:** (Refer to Figure 77)
+*   **Marker Light/Tail Lamp:** (Refer to Figure 78)
+
+### Technical Content
+*   **5.7.19.2 Flasher Light:**
+    *   Type: LED
+    *   Location: Provided at both the DTC (Driving Trailer Coach).
+    *   Control: Control box is provided in the driver's cab.
+    *   Function: Attracts the attention of the driver of an approaching train on the adjacent track to indicate caution and to stop the train in the event of unsafe track conditions.
+
+*   **5.7.19.3 Marker Light/Tail Lamp:**
+    *   Type: LED
+    *   Location: Provided at both the DTC.

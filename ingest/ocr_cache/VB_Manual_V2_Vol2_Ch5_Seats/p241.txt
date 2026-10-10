@@ -1,0 +1,27 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance - Seats
+*   **Document Reference:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page:** 11 of 19
+
+### Technical Values
+*   **Screw (Front):** M6x20 10.9 A2J ISO 7380
+*   **Screw (Back):** M6x60 10.9 A2J ISO 7380
+*   **Bolt (Gas spring fixation):** M6x20 8.8 DIN 912
+*   **Bolt (Rear fixation):** M8x25 8.8 DIN 7984
+
+### Component Designations
+*   **Bush 310008:** Gas spring fixation bush
+*   **Rearbush - 310003:** Rear fixation bush
+*   **Front bush - 310007:** Front fixation bush
+*   **Bolt 210038:** Gas spring assembly bolt
+
+### Maintenance Procedures
+
+**E. Exchange of the gas spring**
+1.  Remove cushion according to section 8.3.
+2.  Remove the bolt M6x20 8.8 DIN 912 and gas spring fixation bush 310008.
+3.  Remove the gas spring lever.
+4.  Remove bolt M8x25 8.8 DIN 7984 and rear fixation bush 310003.
+5.  Remove gas spring assembly bolt 210038 and front fixation bush 310007.
+6.  Replace gas spring.

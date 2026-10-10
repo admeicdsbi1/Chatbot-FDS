@@ -1,0 +1,21 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance
+*   **Document Reference:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** 23 of 123
+
+### Component Designations and Descriptions
+*   **BMS module:** Battery Management System module (as indicated in Figure 16).
+*   **Battery charger module:** Module responsible for charging the battery (as indicated in Figure 16).
+*   **LFP (Lithium Iron Phosphate) batteries:** Battery type used in the battery module.
+*   **Brake chopper Resistor:** Component used to limit the DC Link voltage during dynamic conditions, dissipate partial braking load during blended braking, dissipate full braking load during braking operation between stations, and discharge high voltage DC Link capacitors after Panto down.
+
+### Technical Specifications and References
+*   **Battery Chemistry:** LFP (Lithium Iron Phosphate)
+*   **Cathode Material:** Lithium iron phosphate
+*   **Anode Material:** Graphitic carbon electrode
+*   **External Reference Link:** https://rdso.indianrailways.gov.in/view_section.jsp?lang=0&id=0,2,17,5129,5130
+
+### Figures
+*   **Figure 16:** BBU Front View without door
+*   **Figure 17:** LFP Battery Module

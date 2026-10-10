@@ -93,7 +93,8 @@ def main():
             print(f"!! MISSING PDF: {path}")
             continue
         sections, page_stats = extract(path, entry)
-        chunks = chunk_document(sections, entry, tag_chunk)
+        printed = {s["page"]: s["printed"] for s in page_stats if s.get("printed")}
+        chunks = chunk_document(sections, entry, tag_chunk, printed)
         all_chunks.extend(chunks)
 
         chars = sum(c["char_count"] for c in chunks)

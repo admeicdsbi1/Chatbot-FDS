@@ -1,0 +1,49 @@
+### Technical Index: VBE Trainset Seat Maintenance
+
+**Document Information**
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0) - Section 5: Maintenance - Seats
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page Number:** 13 of 19
+
+---
+
+### Technical Specifications & Values
+
+| Component/Action | Specification/Value |
+| :--- | :--- |
+| Bolt Type (Side armrest) | M6x16 8.8 A2J ISO 4762 |
+| Bolt Quantity (Side armrest) | 5 (4 on the side, 1 at the bottom) |
+| Tightening Torque | 11 Nm |
+| Bolt Type (Gas spring lever) | M6x20 8.8 DIN 912 |
+| Bolt Type (Middle armrest) | M6x16 ISO 4762 |
+| Bolt Quantity (Middle armrest) | X4 |
+| Bush Part Number | 310008 |
+
+---
+
+### Component Designations
+*   **Bush 310008:** Bushing component for gas spring lever assembly.
+*   **M6x20:** Bolt for gas spring lever.
+*   **Lever:** Gas spring activation lever.
+*   **Top arm:** Upper section of the armrest assembly.
+*   **Bottomarm:** Lower section of the armrest assembly.
+*   **M6x16 ISO 4762:** Fastening bolts for armrest modules.
+
+---
+
+### Maintenance Procedures Summary
+
+**G. Exchange of Side armrest module with button**
+1.  Remove gas spring lever (Remove bolt M6x20 8.8 DIN 912 and sleeve).
+2.  Replace armrest panel.
+3.  Verify part number.
+4.  Position lever: long arm in contact with roll under button; short arm inside armrest.
+5.  Install bush and tighten bolt M6x20 8.8 DIN 912.
+
+**H. Exchange of Middle armrest module without button**
+1.  Decline seat backrest to neutral position.
+2.  Remove bolts M6x16 8.8 A2J ISO 4762.
+3.  Replace armrest panel.
+4.  Verify part number (refer to section 8.8.1).
+5.  Apply medium thread locker to bolt threads.
+6.  Tighten five bolts (M6x16 8.8 A2J ISO 4762) to 11 Nm.

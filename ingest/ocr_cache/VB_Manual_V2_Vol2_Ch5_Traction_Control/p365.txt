@@ -1,0 +1,32 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** 85 of 123
+
+### Technical Content
+*   **Section 5.7.19:** Light (Headlight & Marker Flasher)
+*   **Section 5.7.19.1:** Head Light
+
+### Component Designations (from diagrams)
+The following components are identified in the electrical panel diagrams:
+
+**Upper Panel (Relay/Contactor Panel):**
+*   **PCB:** Printed Circuit Board
+*   **AUX CONTACTORS:** Auxiliary Contactors
+*   **RELAYS:** Relay bank
+*   **CONTACTORS:** Contactor bank
+
+**Lower Panel (Circuit Breaker Panel):**
+*   **CIRCUIT BREAKERS:** Miniature Circuit Breaker (MCB) distribution panel
+
+**Circuit Breaker Labels (Top to Bottom, Left to Right):**
+*   **Row 1:** TC SUPPLY, EPCU SUPPLY, ECN1 SUPPLY, ECN2 SUPPLY, ETB, EBCU1 SUPPLY, EBCU2 SUPPLY
+*   **Row 2:** DCU LEFT SUPPLY, DCU RIGHT SUPPLY, ACU, LINE ISOLATOR SUPPLY, PANTOGRAPH SUPPLY, PB SUPPLY, EMT BRAKE SUPPLY, PAS SUPPLY
+*   **Row 3:** PIS SUPPLY, ICD CB, DBDS CB, CCTV MCB, ILL1 SUPPLY, ILL2 SUPPLY, ILL3 SUPPLY, ILL4 SUPPLY
+*   **Row 4:** AAC SUPPLY, HLD, ACU/2
+
+### Technical Description
+*   **Component:** Twin LED type headlights
+*   **Location:** Provided at both the DTC (Driving Trailer Car)
+*   **Function:** Illuminates front track ahead at night time or during daytime when passing through dark places (e.g., tunnels). Facilitates visibility for the train pilot to identify obstructions or track abnormalities.

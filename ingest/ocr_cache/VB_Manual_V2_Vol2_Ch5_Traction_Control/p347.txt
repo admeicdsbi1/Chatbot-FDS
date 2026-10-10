@@ -1,0 +1,20 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Maintenance
+
+5.7.14 Jumper Couplers
+
+Jumper coupler (Power coupler) is used for transmission of power supply from one coach to the other coach. The Unit is mounted directly to under-frame of MC and TC coaches. Power coupler assembly consists of three sub assemblies:
+• Junction box
+• Harting connector plate
+• Cable holding plate
+
+Overview of the Location of Jumper coupler in Loco
+
+Figure 47: Overview of the Location of Jumper coupler in Loco
+
+Mounting location of power coupler assembly on under-frame-motor coach and Trailer coach is shown in below figure
+
+Figure 48: Mounting location of power coupler assembly on under-frame-motor coach
+
+Figure 49: Mounting location of power coupler assembly on under-frame in Trailer coach
+
+IRCAMTECH/GWL/2022-23/T-18/EL/2.0 Page 67 of 123

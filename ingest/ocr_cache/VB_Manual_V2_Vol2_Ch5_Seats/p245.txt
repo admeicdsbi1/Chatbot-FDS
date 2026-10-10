@@ -1,0 +1,41 @@
+### Technical Index: VBE Trainset Maintenance Manual
+
+**Document Reference**
+*   **Manual Title:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance - Seats
+*   **Document ID:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page:** 15 of 19
+
+---
+
+### Component Designations and Descriptions
+*   **Gas spring lever bolt:** M6x20 8.8 DIN912
+*   **Armrest pad:** Central console armrest component
+*   **M6x12 DIN7991:** Screws for central console armrest pad
+*   **Table Assembly:** Chair Car table mechanism
+*   **Upper fixationholes:** Mounting points for the table on the seat frame
+
+---
+
+### Technical Values and Specifications
+
+| Component | Specification / Value |
+| :--- | :--- |
+| Gas spring lever bolt | M6x20 8.8 DIN912 |
+| Armrest pad screws | M6x12 10,9 DIN7991 |
+| Thread locker | Medium |
+
+---
+
+### Maintenance Procedures Summary
+
+**J. Exchange of the central console armrest pad**
+1. Open the armrest on the central console.
+2. Remove the 2 screws M6x12 10,9 DIN7991.
+3. Exchange the insert.
+4. Add medium thread locker on tip of screws.
+5. Tighten the screws M6x12.
+
+**K. Exchange of table (Chair Car)**
+1. Remove backrest.
+2. Table is attached on the upper fixation holes of the seat frame.

@@ -1,0 +1,25 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Maintenance
+
+Table 4: Parameters of Brake Chopper Resistor
+
+| Sr.No. | Description | Value |
+| :--- | :--- | :--- |
+| 1. | Resistance (nominal) | 3.6 Ω |
+| 2. | Resistance (minimum) | 3.42 Ω |
+| 3. | Resistance (Maximum) | 3.85 Ω |
+| 4. | Power Rating | 719 kW for 2.5 sec |
+| 5. | Energy Rating | 1.8 MW-sec |
+
+Figure 19: Brake Chopper Resistor
+
+5.7.4.1 Brake Chopper Description
+
+There are two sets of resistor branches connected in series (their equivalent resistances are R1 and R2) between DC link terminals. R1 and R2 are different resistances each of values 66 kΩ and 20.4 kΩ respectively.
+
+* Brake Chopper unit is mounted directly to under frame.
+* Unit outline dimensions are 884 mm(L) x 648 mm (W) x 475 mm (H).
+* Unit Max. weight is 100 Kgs.
+
+Figure 20: Brake Chopper Unit without Covers
+
+IRCAMTECH/GWL/2022-23/T-18/EL/2.0 Page 25 of 123

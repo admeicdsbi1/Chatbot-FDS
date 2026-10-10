@@ -1,0 +1,30 @@
+Maintenance Manual of VBE Trainset (V2.0)
+Maintenance - Gangway
+5.3. GANGWAY (HUBNER)
+5.3.1 CONSTRUCTION
+The gangway consists of the following main parts:
+
+7 1 6
+(6)
+2
+3
+4 5
+
+| No | Component |
+| :--- | :--- |
+| 1 | Corrugated bellows, assy., mounted |
+| 2 | Linking ceiling, assy. |
+| 3 | Side wall, assy. inner covering |
+| 4 | Covering brush, assy. |
+| 5 | Combination bridge, assy. |
+| 6 | Screw-on frame |
+| 7 | Folding wall, assy. |
+
+5.3.2 MOUNTING COMPONENTS/ASSEMBLY GROUPS
+Mounting the loose parts – Overview
+Both wagon-interfaces have to have the hole pattern to receive:
+• the screw-on frames of the “corrugated bellows, assy. final mounted”
+• the folding wall
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+Page 2 of 13

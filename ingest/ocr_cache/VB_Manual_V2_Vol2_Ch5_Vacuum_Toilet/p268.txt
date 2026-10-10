@@ -1,0 +1,26 @@
+### Document Information
+*   **Subject:** Maintenance – Vacuum Bio toilet
+*   **Document Title:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page Number:** Page 6 of 18
+
+### Component List
+| Item | Description |
+| :--- | :--- |
+| 1 | Pressure Guard Module |
+| 2 | Pinch Valve |
+| 3 | Outlet Nozzle Ø 48 mm |
+| 4 | Connection Plate |
+| 5 | Hexagon Nut M4 (4x) |
+| 6 | Detent Edge Washer Ø 4 mm (4x) |
+| 7 | Gaskets (2x) |
+
+### Technical Specifications and Values
+*   **Outlet Nozzle Diameter:** Ø 48 mm
+*   **Hexagon Nut Size:** M4
+*   **Hexagon Nut Quantity:** 4x
+*   **Detent Edge Washer Diameter:** Ø 4 mm
+*   **Detent Edge Washer Quantity:** 4x
+*   **Gasket Quantity:** 2x
+*   **Tightening Torque:** 300 Ncm
+*   **Tightening Sequence:** Crosswise sequence

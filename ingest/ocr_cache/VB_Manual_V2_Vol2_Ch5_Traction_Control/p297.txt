@@ -1,0 +1,53 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** 17 of 123
+
+---
+
+### ACU Modules/Sections
+The Auxiliary Converter Unit (ACU) consists of the following modules/sections:
+*   Input section
+*   Line converter
+*   3-phase inverter section
+*   3-phase sine filter
+*   DC converter
+*   Output section
+*   Shed supply section
+*   Controller Module
+*   Cooling system
+
+---
+
+### Component Designations (from Figure 10 & Figure 11)
+*   **AC OUTPUT TERMINALS**
+*   **3-ph SHED SUPPLY CONNECTOR**
+*   **AC1 MODULE**
+*   **AC2 MODULE**
+*   **INPUT TERMINALS**
+*   **DCDC OUTPUT INDUCTOR**
+*   **AC OUTPUT CONTACTORS**
+*   **INPUT CONTACTORS**
+*   **INPUT FUSES**
+*   **BLOWER**
+*   **DC OUTPUT TERMINALS**
+*   **HARTING CONNECTORS**
+*   **DCDC MODULE**
+*   **DCLC ASSEMBLY AC2**
+*   **DCLC ASSEMBLY AC1**
+*   **LOAD SHARING INDUCTORS**
+*   **IO CARDS**
+*   **DCDC TRANSFORMER**
+*   **BD OP MODULE**
+*   **DC OUTPUT CONTACTOR**
+*   **SFC ASSEMBLY**
+*   **SINE FILTER INDUCTORS**
+
+---
+
+### Input Section Technical Details
+*   **Source:** Input is taken from the independent auxiliary secondary windings of the main transformer.
+*   **Components:** Consists of input fuse and input isolation contactor.
+*   **Input Fuse Purpose:** To protect the converter from over current.
+*   **Input Isolation Contactor Purpose:** Used to isolate the Converter from Input in case of any failure occurred inside the converter.
+*   **Pre-charging Circuit:** Used to charge the DC link capacitors during initial start-up condition.

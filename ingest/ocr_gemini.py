@@ -28,7 +28,7 @@ import requests
 
 from doc_registry import REGISTRY, pdf_path
 from parse_pdf import (OCR_CACHE_DIR, WEAK_TEXT_CHARS, BIG_IMAGE_WH,
-                       is_garbled, is_scanned_page)
+                       is_garbled, is_scanned_page, page_span)
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
@@ -97,14 +97,18 @@ def qualifying_pages(entry):
     The scan case is not covered by any character-count rule: those pages extract
     950-1800 characters, they are simply the scanner's own OCR of them, so
     without this test a lossy scanner-OCR cover page is never queued at all."""
+    # a drawing index is built from bookmarks and the index list, never OCR'd
+    if entry.get("drawing_groups"):
+        return []
     doc = fitz.open(pdf_path(entry))
+    first, last = page_span(entry, len(doc))
     # force_ocr docs (corrupted native text) get every page OCR'd
     if entry.get("force_ocr"):
-        pages = list(range(1, len(doc) + 1))
+        pages = list(range(first, last + 1))
         doc.close()
         return pages
     out = []
-    for pno in range(len(doc)):
+    for pno in range(first - 1, last):
         page = doc[pno]
         text = page.get_text().strip()
         chars = len(text)

@@ -1,0 +1,23 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5.BOGIE
+*   **Document Reference:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page Number:** 19 of 23
+
+### Torque Tables
+| Designation | Figure | Torque |
+| :--- | :--- | :--- |
+| Tightening Bogie / vehicle body | Figure 7, Item 5,6 | 174Nm, 242Nm |
+| Tightening Bogie / vehicle body | Figure 6, Item 4 | 192Nm |
+| Tightening dampers | Figure 6, Item 2,3 | 192Nm, 80Nm |
+
+### Technical Values and Specifications
+*   **Brake mounting face height from rail level:** 701 mm (under tare load condition)
+*   **Distance between brake mtg. face & primary damper mtg. face at axle box inside:** 195 mm (under tare load condition)
+
+### Component Designations
+*   **Brake Mtg. Face:** Mounting surface for the brake assembly.
+*   **Brake calliper:** Braking mechanism component.
+*   **Rail Level:** Reference plane for height measurements.
+*   **Primary Damper:** Suspension damping component.
+*   **Axle Box:** Housing for the axle bearings.

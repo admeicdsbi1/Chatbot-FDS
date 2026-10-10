@@ -1,0 +1,25 @@
+### Technical Index: VBE Trainset Maintenance
+
+**Document Reference:**
+*   **Document Title:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Document ID:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** 88 of 123
+
+---
+
+### Component Specifications
+
+| Component | Description |
+| :--- | :--- |
+| **Wiper Arm Assembly** | Manufactured from stainless steel with brass castings, polyester powder coated. Mounts directly onto spindles protruding through the cab structure. Secured with nuts and washers. |
+| **Wiper Blade** | Secured to the arm assembly using a blade clip arrangement with a blade retaining screw and Nylock nut. |
+| **Wash Tank/Pump Assembly** | 9.6L stainless steel tank. Mounted via four slotted brackets. Includes a 24v DC powered pump mounted inside the tank. |
+
+---
+
+### Technical Values
+
+*   **Wiper Arm Length:** 930 ± 2 mm
+*   **Wiper Arm Secondary Dimension:** 106 mm
+*   **Wash Tank Capacity:** 9.6 L
+*   **Wash Pump Voltage:** 24v DC

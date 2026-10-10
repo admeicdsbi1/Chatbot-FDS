@@ -1,0 +1,36 @@
+### Technical Index: VBE Trainset Maintenance
+
+**Document Reference:**
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Document ID:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page:** 13 of 23
+
+---
+
+### 5.1.8.2 Pneumatic Pipe Disconnection
+*   **Action:** Disconnect all pneumatic hose connections to brake caliper units & parking brake units.
+*   **Instruction:** Pull manual release & ensure release of all PB units.
+
+---
+
+### 5.1.8.3 Mechanical Disconnecting
+**Mechanical Links and Joints:**
+
+| Item | Component Designation | Quantity |
+| :--- | :--- | :--- |
+| a | Centre pivot pin bottom cover | 1 no. |
+| b | Safety wire rope | 2 nos. |
+| c | Air Spring | 2 nos. |
+| d | Secondary vertical damper | 2 nos. |
+| e | Yaw Damper | 2 nos. |
+| f | Stabiliser Link | 2 nos. |
+
+---
+
+### Component Identification (from Figure)
+*   **1:** Safety wire rope
+*   **2:** Air Spring / Secondary vertical damper
+*   **3:** Yaw Damper
+*   **4:** Air Spring
+*   **5:** Centre pivot pin bottom cover
+*   **6:** Stabiliser Link

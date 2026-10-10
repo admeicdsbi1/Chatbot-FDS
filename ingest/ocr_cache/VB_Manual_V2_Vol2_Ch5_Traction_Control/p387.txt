@@ -1,0 +1,49 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance
+*   **Figure:** 95: TCAS
+
+### Technical Content
+*   **System Name:** TCAS (Train Collision Avoidance System)
+*   **Manufacturer:** MEDHA
+*   **Display Information (from screen):**
+    *   **Date:** 22-Dec-2015
+    *   **Time:** 14:49:15
+    *   **Location:** 61.86 Km
+    *   **Target Distance:** 0560 m
+    *   **Speedometer Range:** 0 to 200 km/h
+    *   **Mode:** Limited Supervision
+    *   **Signal Aspect:** Up LL Starter L1
+
+*   **Hardware Components (Visible on Rack):**
+    *   **Memory Card:** Slot/Module present
+    *   **LTPS-E:** Power supply/module designation
+    *   **Connectors:** Multiple circular multi-pin connectors located at the base of the rack (labeled for SPEED SENSOR, RFID-1 COM, RFID-2 COM, etc.)
+
+*   **Technical Values:**
+    *   **0560 m:** Target distance
+    *   **61.86 Km:** Location
+    *   **22-Dec-2015:** Date
+    *   **14:49:15:** Time
+    *   **V2.0:** Manual Version
+
+### Technical Index: TCAS System
+
+**Subject:** TCAS (Train Collision Avoidance System)
+
+**System Overview**
+*   **Function:** Supporting system to loco pilot; intervenes only when the loco pilot is unable to react to unsafe situations.
+*   **Operational Responsibility:** Loco pilot remains responsible for running the train and must continue to follow existing operational procedures, general and subsidiary rules of the Railway, including obeying line-side signals and all temporary/permanent speed restrictions.
+
+**Salient Features of TCAS System**
+*   **Speed Supervision:** Monitors current speed against Maximum Permitted Speed (MPS).
+*   **Warning System:** Provides automatic visual and audio warnings during over-speed conditions.
+*   **Brake Application Threshold:** Automatic brake application occurs if current speed exceeds the MPS by more than 5 kmph.
+*   **Rollaway/Rollback Protection:** If the train rolls back in reverse direction in normal mode for more than a configurable small distance, brakes are applied to stop the train and released once the train is stopped.
+*   **Collision/Incident Prevention:**
+    *   Prevention of Signal Passing at Danger (SPAD).
+    *   Prevention of side collision in block section.
+    *   Prevention of head-on and rear-end collisions.
+
+**Technical Values**
+*   **Brake Application Threshold:** > 5 kmph over MPS

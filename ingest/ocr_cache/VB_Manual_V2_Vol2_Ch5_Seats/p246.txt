@@ -1,0 +1,37 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance - Seats
+*   **Document Reference:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page:** 16 of 19
+
+### Technical Values & Specifications
+| Component | Specification / Part Number | Torque / Notes |
+| :--- | :--- | :--- |
+| Screws | M5x12 8.8 ISO 10642 | 6.5 Nm |
+| Screw | M6x16 10.9 ISO 7380-2 | 16.5 Nm |
+| Set screw | M8x20 45H ISO 4026 | - |
+| Armbushing | 11144-0001-16-03-01 | - |
+| Washer | 00026-0100-05-03-01 | - |
+| Thread lock | Loctite 242 | Medium strength |
+
+### Component Designations
+*   **Protectiveplate:** Protective plate covering the arm assembly.
+*   **Armbushing:** Bushing component for the table arm (Part No: 11144-0001-16-03-01).
+*   **Washer:** Washer for the assembly (Part No: 00026-0100-05-03-01).
+*   **Regulationscrew:** Screw used to adjust the table to a horizontal position.
+
+### Maintenance Procedure Summary
+1.  **Disassembly:**
+    *   Unfasten 2 x M5x12 8.8 ISO 10642 screws.
+    *   Unfasten M6x16 10.9 ISO 7380-2 screw.
+    *   Remove protective plate.
+    *   Exchange table and position arms back in front of frame holes.
+2.  **Assembly:**
+    *   Add 2x washers (00026-0100-05-03-01).
+    *   Place protective plate.
+    *   Apply medium thread lock (Loctite 242) to all screw tips.
+    *   Tighten M8x20 45H ISO 4026 set screw.
+    *   Tighten M6x16 10.9 ISO 7380-2 screw with arm bushing to 16.5 Nm.
+    *   Tighten 2 x M5x12 8.8 ISO 10642 screws to 6.5 Nm.
+    *   Repeat for the second arm.
+    *   Adjust regulation screw using a level to ensure the table is horizontal.

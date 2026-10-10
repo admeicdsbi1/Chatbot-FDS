@@ -1,0 +1,30 @@
+### Document Information
+*   **Subject:** Maintenance – Automatic Doors
+*   **Document Title:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page Number:** Page 6 of 13
+
+### Technical Values
+*   **Torque:** 13 Nm
+*   **Nuts:** M8 (2 units)
+*   **Connector:** X7
+
+### Component Designations
+*   **Eccentric bolt:** Adjustment component for the threaded pin and eccentric axis.
+*   **Allen Key in threaded pin:** Tool interface for adjusting the threaded pin.
+*   **Actuator:** The smallest replaceable unit for the automatic door system.
+*   **Toothed belt:** Component requiring tension adjustment on the carriage.
+*   **Motor:** Component mounted on the guide tube.
+*   **Control unit:** Electrical interface for the motor connector.
+
+### Maintenance Procedures
+
+#### Disassembly
+1.  Open the control unit and remove the motor connector X7.
+2.  Loosen the belt tension on the carriage until the toothed belt can be removed from the motor.
+3.  Unscrew the motor on the guide tube (2 Nuts M8).
+
+#### Installation
+1.  Assembly takes place in reverse order, cutting the motor cable to the required length.
+2.  Place sleeves on the cable ends and fasten the cable to the motor using cable ties.
+3.  Readjust the belt tension after mounting and perform a functional test.

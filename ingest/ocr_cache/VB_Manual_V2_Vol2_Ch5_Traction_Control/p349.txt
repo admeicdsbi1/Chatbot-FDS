@@ -1,0 +1,27 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** 69 of 123
+*   **Section:** 5. Maintenance
+*   **Figure Title:** Figure 52: Dimensions of Master Controller
+
+### Technical Values (Dimensions)
+| Dimension Description | Value |
+| :--- | :--- |
+| Width (Internal) | 354 ±0.1 |
+| Width (Total) | 368 |
+| Depth (Internal) | 228 ±0.1 |
+| Depth (Total) | 242 |
+
+### Component Designations and Descriptions
+*   **Key switch:** Used for system activation/deactivation.
+*   **Reverser:** Handle for selecting direction (RDM, 0, FWD, REV).
+*   **Main handle:** Used for controlling traction and braking (E Brake, FS Brake, COAST, Min Power, Max Power).
+
+### Operational Angles (Main Handle)
+*   **E Brake:** 45°
+*   **FS Brake:** 36°
+*   **Min Brake:** 11°
+*   **COAST:** 0°
+*   **Min Power:** 11°
+*   **Max Power:** 45°

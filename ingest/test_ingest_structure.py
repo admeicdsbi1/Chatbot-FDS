@@ -210,3 +210,89 @@ def test_columns_of_reads_the_header_not_the_group_row():
 
 def test_columns_of_text_chunk_is_empty():
     assert _columns_of("Plain prose with no table at all.") == []
+
+
+# ---- VB manuals ingest (2026-10-08) ------------------------------------------
+from chunker import _section_path, _table_intros, chunk_document, INTRO_MAX
+from parse_pdf import _PRINTED_PAGE, page_span
+
+TABLE = "|Schedule|Periodicity|\n|---|---|\n|Shop Schedule-1|18 months ± 45 days|"
+INTRO = "The Railway Board has issued the maintenance interval periodicity."
+
+
+def _chunks(blocks, **entry):
+    e = {"doc_id": "D", "doc_type": "maintenance_manual", "title": "T", "source": "S", **entry}
+    sec = {"section": "MAINTENANCE INTERVAL", "section_num": "", "page_start": 9, "blocks": blocks}
+    return chunk_document([sec], e, lambda t, s, en: ([], ""))
+
+
+def test_short_intro_travels_with_its_table():
+    """Regression: the intro was packed alone and reranked first for "SS1
+    periodicity" while the table holding the value sat at rank 42."""
+    pad = "Earlier prose on another subject. " * 9          # keeps the section non-tiny
+    out = _chunks([{"type": "text", "text": pad, "page": 8},
+                   {"type": "text", "text": INTRO, "page": 9},
+                   {"type": "table", "text": TABLE, "page": 9}])
+    table = [c for c in out if c["chunk_type"] == "table"]
+    assert len(table) == 1 and INTRO in table[0]["text"] and "18 months" in table[0]["text"]
+    assert not any(INTRO in c["text"] for c in out if c["chunk_type"] == "text")
+
+
+def test_long_text_or_other_page_is_not_an_intro():
+    long = {"type": "text", "text": "x" * (INTRO_MAX + 1), "page": 9}
+    other_page = {"type": "text", "text": INTRO, "page": 8}
+    tb = {"type": "table", "text": TABLE, "page": 9}
+    assert _table_intros([long, tb]) == {}
+    assert _table_intros([other_page, tb]) == {}
+
+
+def test_intro_opens_only_the_first_piece_of_a_long_table():
+    rows = "\n".join(f"|row {i}|{'v' * 60}|" for i in range(60))
+    pieces = _split_table("|A|B|\n|---|---|\n" + rows, "S", INTRO)
+    assert len(pieces) > 1 and INTRO in pieces[0][0]
+    assert all(INTRO not in p for p, _ in pieces[1:])
+    assert all(len(p) <= TABLE_MAX for p, _ in pieces)
+
+
+def test_section_path_nests_numbered_headings():
+    seen = {}
+    _section_path({"section": "Maintenance", "section_num": "5"}, seen)
+    _section_path({"section": "Traction and Control", "section_num": "5.7"}, seen)
+    path = _section_path({"section": "Line and Traction Converter", "section_num": "5.7.1"}, seen)
+    assert path == "5 Maintenance › 5.7 Traction and Control › 5.7.1 Line and Traction Converter"
+    assert _section_path({"section": "Cooling System", "section_num": ""}, seen) == path + " › Cooling System"
+    assert _section_path({"section": "Foreword", "section_num": ""}, {}) == ""   # nothing open yet
+
+
+def test_context_header_opens_every_chunk_only_when_registered():
+    blocks = [{"type": "text", "text": INTRO * 6, "page": 9},
+              {"type": "table", "text": TABLE, "page": 10}]
+    with_h = _chunks(blocks, context_header="Vol II › Ch.3 Schedule")
+    assert all(c["text"].startswith(("Vol II › Ch.3 Schedule", "Table — Vol II › Ch.3 Schedule"))
+               for c in with_h)
+    assert not any("Vol II" in c["text"] for c in _chunks(blocks))
+
+
+def test_printed_page_pattern():
+    assert _PRINTED_PAGE.match("Page 16 of 124").group(1) == "16"
+    assert _PRINTED_PAGE.match("Page 1").group(1) == "1"
+    assert not _PRINTED_PAGE.match("Page 16 of 124 Maintenance")
+
+
+def test_page_span_defaults_to_whole_file_and_clamps():
+    assert page_span({}, 28) == (1, 28)
+    assert page_span({"page_range": (49, 172)}, 571) == (49, 172)
+    assert page_span({"page_range": (0, 900)}, 571) == (1, 571)
+
+
+def test_running_header_matches_across_spacing_variants():
+    """Regression: the slip's header differs only in padding and "Slip - 1" vs
+    "Slip -1"; verbatim counting never reached 60% and 186 tables got it as an
+    intro."""
+    from parse_pdf import _collect_repeated_lines
+    a = "Maintenance Manual of VBE Trainset (V2.0)" + " " * 37 + "Correction Slip - 1"
+    b = "Maintenance Manual of VBE Trainset (V2.0)" + " " * 118 + "Correction Slip -1"
+    pages = [[a, f"body {i}"] for i in range(4)] + [[b, f"body x{i}"] for i in range(4)]
+    running = _collect_repeated_lines(pages, len(pages))
+    assert a in running and b in running
+    assert "body 1" not in running

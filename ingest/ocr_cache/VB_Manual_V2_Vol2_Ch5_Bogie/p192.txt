@@ -1,0 +1,36 @@
+### Maintenance Manual of VBE Trainset (V2.0)
+**Section:** 5. Bogie
+
+#### 5.1.1 FEATURES:
+*   **Bolster less bogie:** Carboy rests on air spring – less components.
+*   **Speed suitability:** 160kmph.
+*   **Max. Axle load:** 17 t.
+*   **CTRB:** (Cartridge Tapered Roller Bearing)
+*   **Primary suspension:** Helical springs & damper.
+*   **Secondary suspension:** Air springs.
+*   **Dampers (Secondary):** Vertical, lateral & yaw.
+*   **Stabilisers:** Anti roll bar.
+*   **Braking:** Wheel mounted disc brakes.
+*   **Bogie frame:** Common (basic) for both MC (Motor Coach) & TC (Trailer Coach).
+*   **Traction motors:** Fully suspended – less unsprung mass.
+
+#### Additional features compared with existing T-18 bogie:
+*   **TPWS (Train Protection & Warning System) / TCAS (Train Collision Avoidance System):** Provision on DTC (Driving Trailer Coach) bogie.
+*   **APC receiver:** Provision on DTC bogie.
+
+***
+
+*Note: The table mentioned in section 5.1.2 is cut off at the bottom of the provided image and contains no data.*
+
+| Description | Weight |
+| :--- | :--- |
+| Old | 129 Kg |
+
+**Document Reference:**
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+
+**Page Number:**
+Page 3 of 23
+
+**Technical Notes:**
+*   SEE NOTE-1

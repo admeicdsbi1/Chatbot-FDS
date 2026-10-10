@@ -1,0 +1,22 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** 31 of 123
+*   **Section:** 5. Maintenance
+
+### Component Designations and Descriptions
+
+| Component | Description |
+| :--- | :--- |
+| **Coupling Rod** | Connection made of a stainless-steel round-tube and two bearing houses (equipped with grooved ball bearings) with left-hand-thread and right-hand-thread. Used to adjust the geometry of the pantograph. |
+| **Parallel Guide Bar** | Prevents the pan head from distorting while the pantograph is raised or lowered. Turning capacity is adjusted by screwing-in and screwing-out the rod end. Anodized for protection. |
+| **Pan Head** | Mounted onto a shaft inside the cross tube of the upper frame. Uses leaf springs in rocker boxes to carry sliding strips. Includes channels for monitoring compressed air to trigger the valve unit ADD (Automatic Dropping Device) if forces exceed a defined value. |
+| **Damper** | Oscillating damper between base frame and lower frame to ensure contact between carbon strips and overhead wire. |
+| **Shunts** | Copper wire (2) with tubular lugs (1) on both sides, lubricated with contact grease (3). Bypasses bearing locations to prevent current flow through bearings. |
+| **Base- and Upper frame bearing** | Maintenance-free, greased-for-life bearings. Each bearing consists of two ball bearings arranged on an axle at a certain distance; the gap is filled to avoid condensation. |
+
+### Technical Values
+*   **Shunt components:**
+    *   (1) Tubular lug
+    *   (2) Copper wire
+    *   (3) Contact grease

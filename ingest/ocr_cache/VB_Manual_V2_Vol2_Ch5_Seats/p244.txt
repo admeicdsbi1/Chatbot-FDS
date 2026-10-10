@@ -1,0 +1,32 @@
+### Technical Index: VBE Trainset Maintenance
+
+**Document Reference:**
+*   **Title:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance - Seats
+*   **Document ID:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page:** 14 of 19
+
+**Technical Values & Specifications:**
+*   **Bolt (Armrest):** M6x16 8.8 A2J ISO 4762
+*   **Torque Specification:** 11 Nm
+*   **Bolt (Gas spring lever):** M6x20 8.8 DIN 912
+
+**Component Designations:**
+*   **Top arm:** Upper section of the armrest assembly.
+*   **Bottomarm:** Lower section of the armrest assembly.
+*   **Gas spring lever:** Lever mechanism for seat adjustment.
+*   **Sleeve (bush):** Component used in conjunction with the M6x20 bolt for the lever assembly.
+*   **Armrest panel:** Replaceable panel component of the armrest module.
+
+**Maintenance Procedures:**
+*   **Armrest Replacement:**
+    1. Remove cushion (ref: section 8.3).
+    2. Decline seat backrest to neutral position.
+    3. Remove four M6x16 8.8 A2J ISO 4762 bolts.
+    4. Remove armrest.
+    5. Install new armrest (verify part number per section 8.8.1).
+    6. Apply medium thread locker to bolt threads.
+    7. Tighten four M6x16 8.8 A2J ISO 4762 bolts to 11 Nm.
+*   **Middle Armrest Module Exchange:**
+    1. Remove gas spring lever (remove M6x20 8.8 DIN 912 bolt and sleeve).
+    2. Replace armrest panel (verify part number).

@@ -1,0 +1,32 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Maintenance
+
+Other assemblies are control panel and Switch board unit. Auxiliary supply 415 Volts AC 50 Hz 3 phase and 110 Volts AC single phases are available for the power and control supply feeding to air-conditioning unit. The roof mounted cab heating and air conditioning units can be controlled by driver with the help of the rotary switches mounted in the switch gear panel. Unit can be run in to 3 modes based on the selection
+using rotary switch.
+
+Figure 99: Control Panel
+
+| Position | Modes | | What is ON/OFF |
+| :--- | :--- | :--- | :--- |
+| 1. | Auto | AUTO COOLING | Blower Motor + Condenser Fan Motors + Compressor will be ON according to Room Temperature. |
+| | | AUTO HEATING | Blower Motor + Heater will be ON according to Room Temperature |
+| 2. | OFF | AC OFF | |
+| 3. | MANUAL COOLING | Blower Motor + Condenser Fan Motors + Compressor will be ON without any Temperature control. |
+
+Figure 100: Switch board Panel
+
+Labels visible on Figure 100 (Switch board Panel):
+- AUTO
+- OFF
+- MANUAL COOLING
+- MAIN ON
+- BLR ON
+- COMP ON
+- HTR ON
+- COOL TRIP
+- HP TRIP
+- LP TRIP
+- OLP TRIP
+- COMP TRIP
+- ATAC ENGINEERS
+
+IRCAMTECH/GWL/2022-23/T-18/EL/2.0 Page 122 of 123

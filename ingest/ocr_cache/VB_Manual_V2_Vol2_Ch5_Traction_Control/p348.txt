@@ -1,0 +1,24 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance
+*   **Document Reference:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** 68 of 123
+
+---
+
+### 5.7.15 Pantry/ Isolation Transformer
+*   **Description:** 20 kVA, 415V/230V/110V AC, 3 phase, dry type and air cooled power distribution transformer for the Pantry Car, Toilets, Infotainment, Charging Sockets load.
+*   **Technical Specifications:**
+    *   **Total Capacity:** 20 kVA
+    *   **Input Voltage:** 415V AC
+    *   **Output Voltage 1:** 230V AC (15.0 kVA, 3 x single phase winding)
+    *   **Output Voltage 2:** 110V AC (4.1 kVA, 3 x single phase winding)
+*   **Figure 50:** Isometric View of Isolation Transformer
+
+---
+
+### 5.7.16 Master Controller
+*   **Model Designation:** S334 H32
+*   **Manufacturer:** SCHALTBAU
+*   **Mounting Location:** Table plate of the Driver’s console
+*   **Figure 51:** Master Controller

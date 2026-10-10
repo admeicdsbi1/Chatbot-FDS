@@ -1,0 +1,14 @@
+### Document Metadata
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page Number:** 16 of 33
+
+### Component Designations and Descriptions
+*   **1.2.5.9. SLIDING DOORS (TRANSIT DOORS):** Interior sliding doors that separate the boarding area from the seating area.
+*   **1.2.5.10. GANGWAYS:** The flexible part of the train allowing relative movement between coaches and providing a secure/comfortable passageway.
+
+### Technical Specifications and Operational Details
+*   **Sliding Door Operation:**
+    *   Controlled by radar signal (upon approach) or by pressing a button on the door.
+    *   **Power Failure Mode:** Freely movable manually.
+    *   **Emergency Mode:** Door is disconnected from power supply when the emergency button is pressed; becomes freely movable manually.

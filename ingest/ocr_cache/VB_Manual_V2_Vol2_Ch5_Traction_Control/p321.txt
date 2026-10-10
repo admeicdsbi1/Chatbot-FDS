@@ -1,0 +1,28 @@
+### Technical Index: VBE Trainset Maintenance
+
+**Document Information**
+*   **Subject:** 5.7.8.3 Operation of VCB
+*   **Document Title:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** 41 of 123
+
+**Technical Values (Pressures)**
+*   **VCB Air Regulation Pressure:** 5.7 - 5.8 kg/cm²
+*   **VCB Automatic Opening Pressure:** 3.85 - 4.0 kg/cm²
+*   **VCB Closing Pressure:** 4.60 - 4.75 kg/cm²
+
+**Component Designations**
+*   **(15):** Auxiliary Contacts
+*   **(16):** Magnet Valve
+*   **(17):** Pressure Switch
+*   **(18):** Pressure Regulator
+*   **(22):** Air Filter
+*   **(24):** Relay Valve
+*   **(34):** Air Reservoir
+*   **(49):** Cylinder
+*   **(60):** Electrical Connector
+
+**System Components (Descriptive)**
+*   **Vacuum Interrupter:** Connected to Pantograph and Cylinder (49)
+*   **Solenoid:** Connected to Magnet Valve (16)
+*   **Mechanical Interlock:** Connected to Electrical Connector (60) and Magnet Valve (16)

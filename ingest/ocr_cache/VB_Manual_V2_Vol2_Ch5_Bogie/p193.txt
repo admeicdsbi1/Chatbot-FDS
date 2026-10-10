@@ -1,0 +1,10 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Bogie
+
+| Design | Assembly/ Sub-Assembly Name | Remark |
+| :--- | :--- | :--- |
+| **New** | **Traction centre** | Weight approx - 70kg |
+| **Old** | **Traction centre** | Weight approx - 78kg |
+| **Design** | **Assembly/Sub-Assembly Name** | **Remark** |
+| | **CTRB and components** | |
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0 Page 4 of 23

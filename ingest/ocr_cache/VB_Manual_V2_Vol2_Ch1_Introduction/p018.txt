@@ -1,0 +1,21 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page Number:** 18 of 33
+
+### Technical Content
+
+**1.2.7.2. INTERIOR PANELLING**
+*   **Component:** Side walls and ceilings
+*   **Material:** Modular FRP (Fiber Reinforced Plastic)
+*   **Feature:** Corrugated FRP roof panel (for aesthetics)
+*   **Floor Material:** Sound absorbing multiplex plates
+*   **Floor Mounting:** Special noise damping rubber profiles
+
+**1.2.8. LIGHTING**
+*   **Type:** Indirect LED lighting
+
+**1.2.9. PASSENGER SAFETY EQUIPMENT**
+*   **1.2.9.1. EMERGENCY OPERATABLE PUSH BUTTON (EOPB)**
+    *   **Component:** Emergency Operatable Push Button (EOPB)
+    *   **Description:** Safety device for emergency operation (as shown in the image with a red push button and associated signage).

@@ -1,0 +1,47 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Maintenance
+
+Driver Display and CCTV cum Guard Display Unit (Separate)
+
+[Image: Medha logo]
+Figure 57: Driver Display Panel
+
+Speed Recorder
+
+[Image: Speedometer gauge and keypad]
+Figure 58: Speed Recorder
+
+Indications Cum MCP Panel
+
+[Image: Control panel with various indicator lights and a screen]
+
+Labels on Indications Cum MCP Panel:
+
+*   PANTO 1,4 UP (Yellow)
+*   NOT ALL VCB CLOSED (Yellow)
+*   EMR BRAKE (Red)
+*   EMR OFF (Red)
+*   MIN 1 PANTO UP (Blue)
+*   SPARE (White)
+*   SPARE (White)
+*   SPARE (White)
+*   MCP (Label near switch)
+*   G_DDU (Label near switch)
+*   MCP SELECTION (Switch label)
+*   MIN 1 PB APPLIED (Red)
+*   MIN 1 AS FAILED (Yellow)
+*   MIN 1 BR APPLIED (Red)
+*   MIN 1 DOOR OPENED (Red)
+*   AC FAULT (Yellow)
+*   PANTO 2,3 UP (Yellow)
+*   MIN 1 VCB CLOSED (Blue)
+*   RDM (Blue)
+*   OHE AVAILABLE (Green)
+*   ALL DOORS CLOSED (Green)
+*   SINGLE UNIT OPERATION (Green)
+*   TCN FAILURE (Red)
+*   USB (Label near port)
+*   SPEAKER (Label near speaker grille)
+
+Figure 59: Indications Cum MCP panel
+
+IRCAMTECH/GWL/2022-23/T-18/EL/2.0 Page 72 of 123

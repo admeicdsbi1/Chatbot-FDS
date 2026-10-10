@@ -1,0 +1,17 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Maintenance – Vacuum Bio toilet
+
+5.6.6. Replacement – Water Inlet Valve
+
+* Disconnect water connection.
+* Unscrew male elbow Ø 12 mm.
+
+| 1 | Male Elbow Ø 12 mm | 2 | Water Inlet Valve |
+
+* Replace water inlet valve.
+* Align to squatting toilet.
+* Fix it with male elbow Ø 12 mm and liquid sealing.
+* Reconnect water connection.
+
+5.6.7. Replacement – Pressure Guard Module
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0 Page 8 of 18

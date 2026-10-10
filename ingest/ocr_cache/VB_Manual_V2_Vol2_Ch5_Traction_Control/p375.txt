@@ -1,0 +1,38 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance
+*   **Document Reference:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** 95 of 123
+
+---
+
+### Refrigerating Unit (Figure 89)
+*   **Cabinet Material:** Stainless Steel
+*   **System:** Automatic Defrost System
+*   **Features:** Night Mode Set back option
+*   **Temperature Range (Bottle Cooler):** 2 C to 12 C
+*   **Temperature Range (Deep Freezer):** -8 C to -18 C
+*   **Shelves:** 4 Nos.
+*   **Refrigerant Gas:** R134a
+*   **Power:** 600 W / 230V
+*   **Dimension:** W 1250 X D 585 X h 1000 MM
+*   **Weight:** 150 KGS
+
+---
+
+### Water Boiler (Figure 90)
+*   **Material:** Tank and lid made of stainless steel
+*   **Features:** 
+    *   Filling level indicator
+    *   Double wall anti bum
+    *   Anti-drip system
+    *   Safety thermostat with reset button
+*   **Capacity:** 30 Liters
+*   **Thermostat:** Ad ustable thermostat 30 to 100 C
+
+---
+
+### Washing Module Sink
+*   **Material:** 1.0 mm thick stainless steel sheet
+*   **Configuration:** Fitted right bottom corner of the modular pantry compartment; stainless steel work surface with a surrounding raised edge and a drawn type sink; sink positioned in the centre covered by a sink panel.
+*   **Reference Link:** https://rdso.indianrailways.gov.in/view_section.jsp?lang=0&id=0,2,17,5129,5130

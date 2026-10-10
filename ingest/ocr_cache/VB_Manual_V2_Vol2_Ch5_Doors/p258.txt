@@ -1,0 +1,26 @@
+- **Document Title:** Maintenance Manual of VBE Trainset (V2.0)
+- **Section:** 5. Maintenance – Automatic Doors
+- **Component Designation:**
+    - **carrier:** The structural assembly indicated by the leader line pointing to the grey rectangular component within the yellow rail assembly.
+- **Assembly Designation:** Basis of carriage 1
+
+### Technical Index Data
+
+**Document Reference:**
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page Number:** 9 of 13
+
+**Subject:**
+*   End stop (Installation)
+
+**Technical Values:**
+*   **Torque:** 14 Nm
+
+**Component Designations & Descriptions:**
+*   **Marking:** Reference point for alignment on the pulley/shaft assembly.
+*   **Loosen:** Indicates the fastener (bolt/nut) to be loosened for adjustment or removal.
+
+**Maintenance Instructions:**
+*   Assembly takes place in reverse order.
+*   Readjust the correct belt tension.
+*   Perform a functional test.

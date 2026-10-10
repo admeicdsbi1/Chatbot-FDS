@@ -1,0 +1,14 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Maintenance – Vacuum Bio toilet
+
+| 1 | Ejector | 2 | Detent Edge Washer (2x) |
+| :--- | :--- | :--- | :--- |
+| 3 | Hexagon Socket Head Cap Screw - M4 x 40 mm (2x) | | |
+
+* Replace ejector.
+* Adjust new ejector to the bracket.
+* Reconnect electrical connections.
+* Reconnect pneumatic piping.
+
+For further details and documents related to other OEMs kindly refer to Volume –3 Part- 3
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0 Page 18 of 18

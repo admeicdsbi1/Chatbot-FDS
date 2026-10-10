@@ -1,0 +1,25 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** 50 of 123
+
+---
+
+### Technical Components and Descriptions
+
+**Air Dryer**
+*   **Function:** Dehumidifies air entering or leaving the transformer's oil expansion tank to prevent over or under pressure due to oil volume changes.
+*   **Configuration:**
+    *   First air dryer: Connected to the oil expansion tank by the air dryer pipe.
+    *   Second air dryer: Placed on the LV bushings box to dry the air inside the box.
+
+**Bushings**
+*   **High voltage plug-in bushing (1):** 25kV input.
+*   **Ceramic bushings (2):** 13 nos. total (12 low voltage outputs, 1 neutral input).
+
+---
+
+### Technical Values
+*   **Voltage:** 25kV (High voltage input)
+*   **Quantity (Bushings):** 1 no. (High voltage plug-in bushing)
+*   **Quantity (Ceramic bushings):** 13 nos. (12 low voltage outputs, 1 neutral input)

@@ -1,0 +1,20 @@
+Maintenance Manual of VBE Trainset (V2.0) 1. Introduction
+
+1.2.9.2. EMERGENCY TALK BACK UNIT (ETBU)
+
+[Image of ETBU panel containing the following text:]
+EMERGENCY
+TALK BACK UNIT (ETBU)
+MIC.
+PUSH
+TO TALK
+WAIT
+TALK
+2
+No: 1128
+
+1.2.9.3. FIRE DETECTION AND SUPRESSION SYSTEM
+
+1.2.9.4. EMERGENCY LIGHTS
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0 Page 19 of 33

@@ -1,0 +1,45 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance
+*   **Figure:** 44: Main Component of Gear Box
+
+### Component Index
+| Designation | Description |
+| :--- | :--- |
+| D | Gear box assembled |
+| 2 | Pinion |
+| 14 | [Not explicitly defined in text, but shown as component] |
+| 21 | Reaction Rod complete |
+| 610 | Main Gear |
+| W | [Not explicitly defined in text, but shown as component] |
+
+### Engineering Content Index
+
+**Subject:** Main Component of Gear Box
+
+**Component Designations and Descriptions**
+
+| Reference | Description |
+| :--- | :--- |
+| D | Gear box assembled |
+| 2 | Pinion |
+| 14 | Coupling Half gear box side |
+| 21 | Reaction Rod complete |
+| 610 | Main Gear |
+| W | Wheel set Shaft |
+
+**Technical Specifications**
+
+*   **Coupling Type:** Curved teeth coupling
+*   **Coupling Characteristics:** Torsional rigid, self-centering by the teething, consists of two halves with bolted flanges.
+
+### Technical Index Entry
+
+**Subject:** Motor Coupling
+
+**Document Reference:**
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** 64 of 123
+
+**Component Description:**
+*   **Motor Coupling:** A coupling lubricated by oil, hermetically sealed to the outside by two steel bellows to prevent leakage. It is equipped with drain plugs on both coupling halves to allow for regular oil changes without disassembling the coupling from the shafts.

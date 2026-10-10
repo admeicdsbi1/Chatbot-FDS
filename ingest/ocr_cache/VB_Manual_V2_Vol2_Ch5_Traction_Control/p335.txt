@@ -1,0 +1,16 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance
+*   **Document Reference:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** 55 of 123
+
+### Component Index
+
+| Component Designation | Description |
+| :--- | :--- |
+| **PT100 sensors** | Two sensors mounted on the tank. Signals are sent to the supervision system to regulate oil temperature via fan motor speed. |
+| **Oil flow indicator** | A paddle-type device that detects minimal oil flow to monitor oil circulation and proper functioning of the oil pump. |
+| **Pressure relief device** | Also referred to as an Overpressure valve. |
+
+### Technical Values
+*   **PT100:** Sensor type designation.

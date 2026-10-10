@@ -1,0 +1,51 @@
+Maintenance Manual of VBE Trainset (V2.0) | 5. Maintenance
+
+| | | |
+| :--- | :--- | :--- |
+| 11 | DIP-10 | Auto SW ON 1 |
+| 12 | 0V BN | Common-110 VDC |
+| 13. | DIP-11 | Spare-5 |
+| 14. | DIP-12 | Blower VFD 1 Status |
+| 15. | 0V BN | Common- 110V DC |
+| 14. | DIP-13 | Earth Leakage fault 1 |
+| 15. | DIP-14 | Blower 1 MPCB Fault |
+| 16. | DIP-15 | Condenser 1/1 MPCB Fault |
+| 17. | DIP-16 | Condenser 1/2 MPCB Fault |
+| 18. | DIP-17 | Compressor 1/1 MPCB Fault |
+| 19. | DIP-18 | Compressor 1/2 MPCB Fault |
+| 20. | 0V BN | Common- 110 VDC |
+| 21. | DIP-19 | Heater 1 MPCB Status |
+| 22. | DIP-20 | Air Pressure Switch 1 |
+| 23. | DIP-21 | Smoke Detector 1 |
+| 24. | DIP-22 | Compressor 1 VFD Status |
+| 25. | DIP-23 | AC-Off Unit |
+| 26. | DIP-24 | Manual IN (RLY)-2 |
+| 27. | 0V BN | Common- 110V DC |
+| 28 | DIP-25 | Temp Condenser Motor 2/1 OK |
+| 29 | DIP-26 | Temp Condenser Motor 2/2 OK |
+| 30 | DIP-27 | Spare-2 |
+| 31 | DIP-28 | Temp Heater 2 OK |
+| 32 | DIP-29 | Spare-4 |
+| 33 | DIP-30 | LP 2/2 OK |
+| 34 | 0V BN | Common-110V DC |
+| 35 | DIP-31 | CP 2/1 2/2 OK |
+| 36 | DIP-32 | Auto SW ON 2 |
+| 37 | DIP-33 | Spare-6 |
+| 38 | DIP-34 | Blower VFD 2 Status |
+| 39 | DIP-35 | Earth Leakage fault 2 |
+| 40 | DIP-36 | Blower 2 MPCB Fault |
+| 41 | 0V BN | Common- 110V DC |
+| 42 | DIP-37 | Condenser 2/1 MPCB Fault |
+| 43 | DIP-38 | Condenser 2/2 MPCB Fault |
+| 44 | DIP-39 | Compressor 2/1 MPCB Fault |
+| 45 | DIP-40 | Compressor 2/2 MPCB Fault |
+| 46 | DIP-41 | Heater 2 MPCB Status |
+| 47 | 0V BN | Common -110V DC |
+| 48 | DIP-42 | Air Pressure Switch 2 |
+| 49 | DIP-43 | Smoke Detector 2 |
+| 50 | DIP-44 | Compressor 2 VFD Status |
+| 51 | DIP-45 | Spare-7 |
+| 52 | DIP-46 | Spare-8 |
+| 53 | 0V BN | Common- 110V DC |
+
+IRCAMTECH/GWL/2022-23/T-18/EL/2.0 | Page 105 of 123

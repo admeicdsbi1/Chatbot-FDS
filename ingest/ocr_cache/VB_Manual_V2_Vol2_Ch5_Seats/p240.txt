@@ -1,0 +1,30 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Maintenance - Seats
+• Remove backrest and replace it with the new one
+• Place the backrest according to illustration using spare parts set: 218 085, 310 031, 410 162, 311 012, 410 160
+• Add thread locker (Loctite 278) on the tip of the screw and tighten to torque 45N
+
+C. Exchange of the handle
+
+[Illustration showing M6x30 screws being removed from the seat handle]
+
+M6x30
+
+• Remove two screws M6x30 8.8 A2J - ISO 7380
+• Replace handle
+• Add medium thread locker on tip of screws
+• Tighten the screws M6x30 8.8 A2J - ISO 7380 to 11Nm.
+
+D. Exchange of armrest pads
+
+[Illustration showing cross-section of armrest with front and back screws]
+
+Front screw M6x20
+Front cover 10865-0001-21-02-01
+Upholtered pad
+Backscrew M6x60
+Backcover 10865-0001-21-02-01
+
+• Fold up the armrest to have access to screws
+• Remove front (10865-0001-21-02-01) and back (10865-0001-21-03-01) screw covers
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0 Page 10 of 19

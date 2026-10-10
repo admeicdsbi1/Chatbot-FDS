@@ -1,0 +1,39 @@
+Maintenance Manual of VBE Trainset (V2.0) 4. Tools and Equipment
+
+4.1. AIR SPRING (GMT)
+| S.No | Instrument | Purpose | Specification |
+| :--- | :--- | :--- | :--- |
+| 1 | Torque key | For the assembly and disassembly of air spring. | Torque range 0 Nm up to 120 Nm |
+| 2 | Hexagon socket screw key | | |
+| 3 | Hammer | | 1000 g |
+| 4 | Assembling aid | | Hard wood |
+| 5 | Consumable: Cleaning wipes | | |
+| 6 | Consumable: Grease | | |
+| 7 | Consumable: Soap water | | |
+| 8 | Compressed air supply | | |
+| 9 | Press | | |
+| 10 | Mounting lever | | |
+
+Mounting Lever
+For more details refer to OEMs Documentation in Volume 3 of the manual
+
+4.2. BEARING (SKF)
+| S.No | Instrument | Purpose | Specification |
+| :--- | :--- | :--- | :--- |
+| 1 | Prussian Blue | To check the correct functionality of the journal | |
+| 2 | Thermometer | | |
+| 3 | Ruler | | |
+| 4 | Consumable: Cloth | | |
+| 5 | Stirup Gauge | | |
+| 6 | Consumable: Honing Stone / Emery Paper | | |
+
+Table with grit size recommended by OEM
+| Grit size table | | | |
+| :--- | :--- | :--- | :--- |
+| **General Grits Dimensions** | **ISO/FEPA Grit Designation** | **CAMI Grit Designation** | **Average particle diameter relative to FEPA Designation (μm)** |
+| MACROGRIT | P220 | 220 | 68.0 |
+| MICROGRIT | P320 | 240 or 320 | 46.2 |
+
+| 7 | Consumable: Tools for TBU | | OEM recommended |
+
+IRCAMTECH/GWL/2020-21/T-18/MM/2.0 Page 4 of 15

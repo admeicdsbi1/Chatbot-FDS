@@ -1,0 +1,23 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance - Seats
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page:** 2 of 19
+
+### Technical Specifications
+*   **USB Socket Output:** 1500mA
+*   **Electric Outlet Voltage:** 110V
+*   **Executive Class Seats - Reclining backrest max:** 223mm
+*   **Chair-Car Class Seats - Reclining backrest max:** 180mm
+
+### Component Designations
+| Component | Description |
+| :--- | :--- |
+| Recliningbackrest | Adjustable backrest for seating position |
+| Foldable snack table | Retractable table for passenger use |
+| Foldablearmrest | Retractable arm support |
+| Recliningbutton | Control mechanism for backrest angle adjustment |
+| Footrest | Support for passenger feet |
+| Pedal for 180deg. rotation | Mechanism to rotate the seat 180 degrees |
+| Bottleholder | Storage for beverage containers |
+| Snack table lock | Securing mechanism for the foldable snack table |

@@ -1,0 +1,55 @@
+- **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+- **Section:** 5. Maintenance - Seats
+- **Technical Values:**
+    - Rotation angle: 180 deg
+    - Initial rotation angle: 15 degrees
+- **Maintenance Instructions:**
+    - Start rotating the seat (around 15 degrees). By pushing or pulling the handle.
+    - CAUTION: The rotation is possible only in one direction. If the seat blocks when rotating, then try the other direction.
+
+### Technical Index: Seat and Footrest Mechanism
+
+**Subject:** Seat Rotation and Footrest Adjustment Procedures
+
+**Component Procedures:**
+
+*   **Seat Rotation Mechanism:**
+    *   **Initial Rotation:** Start rotating the seat (around 15 degrees) by pushing or pulling the handle.
+    *   **CAUTION:** The rotation is possible only in one direction. If the seat blocks when rotating, then try the other direction.
+    *   **Locking:** Rotate the seat to 180 degrees until the mechanism locks itself.
+
+*   **Footrest (Section E):**
+    *   **Release:** Lift the footrest.
+    *   **Adjustment:** Lift to the desired position.
+    *   **Locking Positions:** Three lock positions are available.
+
+**Technical Values:**
+*   **Rotation Angle (Initial):** 15 degrees
+*   **Rotation Angle (Locked):** 180 degrees
+*   **Footrest Lock Positions:** 3
+
+**Document References:**
+*   **Section Heading:** E. Footrest
+*   **Section Heading:** Chair-car class seat
+
+### Technical Index: Chair-Car Class Seat Maintenance
+
+**Document Reference:**
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page Number:** 7 of 19
+
+**Component Designations and Descriptions:**
+*   **Footrest:** Adjustable support with three lock positions.
+*   **Chair-car class seat:** Passenger seating unit.
+*   **Armrests:** Support structures for arms.
+*   **Snack table:** Foldable surface for food/items.
+
+**Technical Procedures and Constraints:**
+*   **Footrest Operation:**
+    *   To release: Lift the footrest.
+    *   To adjust: Lift to the desired position.
+    *   Locking positions: 3 available.
+*   **Reclining Mechanism:** Refer to "Executive class seats" documentation.
+*   **Armrest Configuration:**
+    *   General operation: Refer to "Executive class seats" documentation.
+    *   **CAUTION:** Armrests on the aisle side are blocked.

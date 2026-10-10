@@ -1,0 +1,45 @@
+Maintenance Manual of VBE Trainset (V2.0)
+
+Maintenance - Gangway
+
+Unlocked
+1 2 (pushed out)
+Upper area of Side wall
+
+Locked
+= Pre-condition for locking
+1 2 (nearly flush with guiding body)
+
+3
+Lower area of Side wall
+
+4 5 6
+a) Curve shaft in unlocked position
+
+7 4
+b) Curve shaft in locked position (i.e. ready for locking the side wall)
+
+Locking the Side wall(s) (schematic)
+
+| No | Component |
+| :--- | :--- |
+| 1 | Guiding body |
+| 2 | Locking rod |
+| 3 | Curve shaft |
+| 4 | Square end of curve shaft |
+| 5 | Place hollow square spanner onto curve shaft |
+| 6 | Direction of turning curve shaft for locking |
+| 7 | Stop (Guiding body) |
+
+1
+Hollow square spanner – Aid
+
+| No | Component |
+| :--- | :--- |
+| 1 | Hollow square spanner |
+
+Unlocking the side wall(s)
+The side walls have to be unlocked and opened prior to proceeding with unmounting maintenance tasks.
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+Page 11 of 13

@@ -1,0 +1,31 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Maintenance
+
+Gauge panel TCMS Display TCAS display Panel Speed Recorder Indication Panel MCP unit Display Panel CCTV Display BP gauge
+
+Figure 54 : Overview of components in Driver Console
+
+The different components of the driver console can be accessed through the covers.
+
+5.7.17.1 Section A
+
+Cabin Control Switches
+
+Figure 55: Cabin Control Switches
+WIPER SW
+OFF FAST SLOW
+OFF BR DIM
+BLIND PLUG
+BLIND PLUG
+HL MAIN
+
+MR-BP Duplex Gauge and BC Gauge
+
+Figure 56: MR-BP Duplex Gauge and BC Gauge
+kg/cm²
+BC-AR
+BC AR GAUGE
+kg/cm²
+MR-BP
+MR-BP GAUGE
+
+IRCAMTECH/GWL/2022-23/T-18/EL/2.0 Page 71 of 123
