@@ -1,0 +1,22 @@
+### Technical Index: VBE Trainset Maintenance
+
+**Document Reference**
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** 52 of 123
+*   **Section:** 5. Maintenance
+
+**Component Designations and Descriptions**
+*   **Coolers:** Made of aluminium plates and bars; used for cooling oil.
+*   **Motor fan sets:** Used to suck heated air and blow it out the bottom side.
+
+**Technical Values**
+*   **Voltage:** 415 V
+*   **Phases:** Three phases
+*   **Frequency:** 50Hz
+
+**Operational Process (Coolers and motor fan sets)**
+1.  Fresh air is obtained from the external side of the car body.
+2.  Air passes through coolers (made of aluminium plates and bars) to cool the oil inside.
+3.  Heated air is sucked by the motor fan and blown out the bottom side.
+4.  Motor fan sets are connected to the train via a Harting connector.

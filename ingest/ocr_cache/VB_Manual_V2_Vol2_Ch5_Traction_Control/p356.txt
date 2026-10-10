@@ -1,0 +1,36 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance
+*   **Document Reference:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** 76 of 123
+
+### Component Designations and Descriptions
+
+**Figure 69: Components of Driver Desk Section-C (External view)**
+*   **Fault Buzzer:** Audible alarm for system faults.
+*   **110 V AC charging socket:** Power outlet for auxiliary equipment.
+*   **Signal Bell:** Audible signaling device.
+*   **Foot operated VCD Switch:** Vigilance Control Device foot pedal.
+*   **PA Buzzer:** Public Address system buzzer.
+*   **VCD Buzzer:** Vigilance Control Device buzzer.
+
+**Figure 70: Components of Drivers desk Section-C (Internal view)**
+*   **Flasher Unit:** Emergency signaling light control.
+*   **FBO Control Box:** FBO (Flashing Beacon/Light) control interface.
+*   **Guard Emergency Brake Handle:** Manual emergency braking control for the guard.
+
+### Technical Specifications
+*   **Voltage:** 110 V AC (Charging socket)
+
+### System Descriptions
+**5.7.17.2 Driver Display Unit (DDU)**
+*   **Function:** Provides information for the TCMS (Train Control and Management System) to support the Loco pilot during normal operation and subsystem malfunctions.
+*   **Maintenance Utility:** Supports maintenance staff in setting basic system parameters and fault finding.
+*   **Redundancy:** In case of failure of TCMS DDU, the train can still be operated.
+*   **Installation:** One DDU installed in each DTC (Driving Trailer Car) cab.
+*   **Communication:** Communicates with TCMS.
+*   **Basic Functions:**
+    *   Provide an interface to control train functions.
+    *   Display operational status of train functions.
+    *   Display diagnostic events.
+*   **Screen Layout:** Consists of 7 sections.

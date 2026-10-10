@@ -1,0 +1,43 @@
+### Technical Index: VBE Trainset Maintenance
+
+**Document Reference**
+*   **Manual Title:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance - Seats
+*   **Subsection:** 5.4.3. REPAIR/REPLACEMENT OF SEATS
+*   **Procedure:** A. Exchange of seat cushion
+
+**Component Specifications**
+| Component Designation | Description |
+| :--- | :--- |
+| 311 007 | Seat cushion |
+| DIN 125 6.4 | Washer |
+| M6x16 Inox DIN 912 | Bolt (Socket head cap screw) |
+| Loctite 278 | Threadlocker |
+
+**Technical Values**
+*   **Bolt Size:** M6x16
+*   **Bolt Standard:** DIN 912
+*   **Bolt Material:** Inox (Stainless Steel)
+*   **Washer Standard:** DIN 125
+*   **Washer Size:** 6.4
+
+### Technical Index: Seat Assembly Maintenance
+
+**Document Reference:**
+*   **Document Number:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page Number:** 9 of 19
+
+**Component Designations & Part Numbers:**
+*   **210 085:** Bolt
+*   **310 031:** Fastener/Washer component
+*   **311 012:** Bracket/Mounting component
+*   **410 160:** Fastener/Pin component
+*   **410 162:** Fastener/Pin component
+
+**Maintenance Instructions:**
+*   Remove the cushion according to paragraph 8.3
+*   Remove the gas spring according to paragraph 8.7
+*   Untighten the bolt No 218 085 and disassemble the fasteners
+
+**Technical Notes:**
+*   **Chemical Specification:** LOCTITE 278 (indicated by the black triangle symbol)

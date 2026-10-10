@@ -1,0 +1,44 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 2. Cleaning
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page Number:** Page 6 of 15
+*   **Referenced Documents:**
+    1. Railway Board’s letter, reference no: 2016/EnHM/06/09 Dated 23/08/2018
+    2. Details from OEMs manual for equipment/component such as Vacuum bio-toilet, automatic sliding and plug doors, seats etc.
+
+---
+
+### Technical Values
+*   **Reclining backrest (Executive Class):** 180mm max
+*   **Reclining backrest (Chair Car Class):** 223mm max
+
+---
+
+### Component Designations and Descriptions
+
+#### Passenger Seat Executive Class
+*   **Recliningbackrest:** Adjustable backrest (180mm max)
+*   **Foldablearmrest:** Retractable arm support
+*   **Recliningbutton:** Control for seat recline
+*   **Footrest:** Support for feet
+*   **Bottleholder:** Storage for beverage containers
+*   **Pedal for 180deg. rotation:** Mechanism to rotate the seat 180 degrees
+
+#### Passenger Seat Chair Car Class
+*   **Recliningbackrest:** Adjustable backrest (223mm max)
+*   **Snack table lock:** Securing mechanism for the snack table
+*   **Foldable snack table:** Retractable surface for food/items
+*   **Foldablearmrest:** Retractable arm support
+*   **Recliningbutton:** Control for seat recline
+*   **Bottleholder:** Storage for beverage containers
+*   **Footrest:** Support for feet
+
+---
+
+### Cleaning Procedures (Glasses)
+| Procedure Step | Action |
+| :--- | :--- |
+| Initial Cleaning | Clean soiled, oil and contaminate surfaces with pressurized water. |
+| Surface Contaminant Removal | Use low pressure to wet glass surface. To remove surface contaminants such as grease, soil and oils from glass gently wipe with a sponge, soft brush, or cotton pad as necessary and rings with pressure washer. |
+| Deep Cleaning | Again clean with glass cleaning agent to remove deep grease and contamination. Allow for drying and it is ready for use. |

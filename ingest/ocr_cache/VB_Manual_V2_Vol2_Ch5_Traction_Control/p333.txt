@@ -1,0 +1,18 @@
+### Technical Index: VBE Trainset Maintenance
+
+**Document Information**
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** 53 of 123
+
+**Component Designations and Descriptions**
+*   **01:** Isolating valve (DN80)
+*   **02:** Isolating valve (DN80)
+*   **03:** Isolating valve (DN80)
+*   **04:** DN32 valve (Top)
+*   **05:** DN32 valve (Opposite side of the tank)
+*   **06:** [Unlabeled in text, shown in diagram]
+
+**Technical Specifications and Notes**
+*   **DN32 Valves (4 & 5):** Used for oil sampling, filling, and draining the Transformer; allows oil to be filtered through a treatment device.
+*   **DN80 Valves (1, 2, 3):** Used to isolate the cooling circuit.

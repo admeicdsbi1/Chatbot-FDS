@@ -1,0 +1,17 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Maintenance – Vacuum Bio toilet
+* Replace water tank.
+* Align new water tank into holder.
+* Reconnect pneumatic piping.
+* Reconnect electrical connector.
+* Install hexagon socket cap screws M5 x 16 mm (2x) and detent edge washers (2x) with liquid sealing; tightening torque 250 Ncm.
+
+5.6.13. Replacement – Pressure Guard
+
+* Remove cap from pressure guard.
+
+* Disconnect electrical plug connection to pressure guard.
+* Disconnect pneumatic piping.
+* Unscrew male elbow Ø 6 mm.
+* Remove pressure guard.
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0 Page 16 of 18

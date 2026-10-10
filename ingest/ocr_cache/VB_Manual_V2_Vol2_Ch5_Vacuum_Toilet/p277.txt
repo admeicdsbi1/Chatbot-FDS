@@ -1,0 +1,17 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Maintenance – Vacuum Bio toilet
+• Screw in connector (Pos. 3) with liquid sealing to the quick exhaust valve.
+• Reconnect the pneumatic piping.
+
+5.6.12. Replacement – Flush Water Tank
+
+• Mark pneumatic piping.
+• Disconnect pneumatic piping.
+• Disconnect electrical connector.
+• Unscrew hexagon socket cap screws M5 x 16 mm (2x) and detent edge washer (2x).
+• Remove flush water tank and holder.
+
+| 1 | Hexagon Socket Cap Screw M5 x 16 mm (2x) | 2 | Detent Edge Washer |
+| :--- | :--- | :--- | :--- |
+| 3 | Holder | 4 | Flush Water Tank |
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0 Page 15 of 18

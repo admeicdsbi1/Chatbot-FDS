@@ -1,0 +1,36 @@
+### Technical Index: VBE Trainset Maintenance
+
+**Document Reference**
+*   **Document Title:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance – Vacuum Bio toilet
+*   **Document ID:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page Number:** 9 of 18
+
+---
+
+### Maintenance Procedures
+
+#### Pinch Valve and Pressure Guard Module
+*   **Removal:**
+    1. Remove pinch valve.
+    2. Unscrew pressure guard module.
+*   **Installation:**
+    1. Replace pressure guard module.
+    2. Align to pinch valve.
+    3. Install pressure guard module with liquid sealing to the refurbished or new pinch valve.
+    4. Install pinch valve to squatting.
+
+#### 5.6.8. Replacement – Vacuum Pump
+*   **Procedure:** Refer to the provided diagram for the assembly orientation of the vacuum pump unit.
+
+---
+
+### Component Designations
+*   **Pinch valve:** Component removed and re-installed during pressure guard module maintenance.
+*   **Pressure guard module:** Component unscrewed from the pinch valve assembly for replacement.
+*   **Vacuum Pump:** Vertical assembly unit shown in section 5.6.8.
+
+---
+
+### Technical Values
+*   [NONE VISIBLE]

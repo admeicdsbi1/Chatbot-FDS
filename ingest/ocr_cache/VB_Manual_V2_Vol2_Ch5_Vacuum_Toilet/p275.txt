@@ -1,0 +1,20 @@
+### Document Information
+*   **Subject:** 5.6.10. Replacement – Water Inlet Valve
+*   **Document Title:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance – Vacuum Bio toilet
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page Number:** Page 13 of 18
+
+### Component Designations
+| Label | Description |
+| :--- | :--- |
+| 1 | Mal Elbow Ø 6 mm to Vacuum Pump |
+| 2 | Quick Exhaust Valve |
+| 3 | Connector Ø 8 mm Air Outlet |
+| 4 | Connector Ø 8 mm to Flush Water Tank |
+
+### Technical Values
+*   **Male coupling:** DN7.2
+*   **Mal Elbow size:** Ø 6 mm
+*   **Connector (Air Outlet) size:** Ø 8 mm
+*   **Connector (Flush Water Tank) size:** Ø 8 mm

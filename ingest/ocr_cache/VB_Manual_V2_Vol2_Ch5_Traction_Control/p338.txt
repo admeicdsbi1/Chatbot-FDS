@@ -1,0 +1,16 @@
+### Document Information
+*   **Subject:** 5.7.12.2 Constructional Details of Traction Motor
+*   **Document Title:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** Page 58 of 123
+
+### Technical Specifications
+*   **Machine Type:** 3-phase asynchronous self-ventilated machine
+*   **Stator Housing:** Casted and machined
+*   **Stator Winding Material:** Insulated rectangular profile copper wire
+*   **Insulation Standard:** TSA standard (TSADUR)
+*   **Thermal Class:** 220
+
+### Component Designations
+*   **Figure 35:** Traction Motor
+*   **Figure 36:** Stator

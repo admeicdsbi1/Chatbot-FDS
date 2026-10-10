@@ -150,10 +150,16 @@ def _snippet(ch, query="", budget=None):
     return out[:budget] if out else raw
 
 
-def rerank(query, candidates, pool=30):
+def rerank(query, candidates, pool=30, snippet_query=None):
     """candidates: list of (score, chunk). Returns a reordered list, best first.
     Only the first `pool` candidates are reranked; the remainder keep their order
-    after them. Fail-safe: returns candidates unchanged on any problem."""
+    after them. Fail-safe: returns candidates unchanged on any problem.
+
+    `snippet_query` picks each excerpt (default: `query`). Retrieval passes its
+    abbreviation-expanded query: the user writes "SS1", the tables write
+    "Shop Schedule-1 (SS-1)", and with the raw query the periodicity table's
+    excerpt stopped at the Monthly row — the reranker was never shown the SS-1
+    value it was asked to rank on."""
     if not enabled() or len(candidates) < 2:
         return candidates
     head, tail = candidates[:pool], candidates[pool:]
@@ -163,7 +169,7 @@ def rerank(query, candidates, pool=30):
         if ch.get("_superseded_by"):     # set by rag.init_kb
             doc += " [superseded by a newer document]"
         sec = ch.get("section", "")
-        listing.append(f"[{i}] ({doc} — {sec}) {_snippet(ch, query)}")
+        listing.append(f"[{i}] ({doc} — {sec}) {_snippet(ch, snippet_query or query)}")
     prompt = (
         "Rank the numbered maintenance-manual excerpts by how directly they answer "
         "the QUESTION. Return ONLY a JSON array of excerpt numbers, best first, no "

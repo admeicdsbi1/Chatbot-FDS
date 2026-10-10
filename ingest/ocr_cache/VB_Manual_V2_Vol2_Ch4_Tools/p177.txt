@@ -1,0 +1,27 @@
+Maintenance Manual of VBE Trainset (V2.0) 4. Tools and Equipment
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| | Lubricant | mounting | agents: <br>• Molikote DX <br>• Molikote G-n plus <br><br>Possible other agents: <br>• Thick mineral oil (SAE 30) <br>• Oil and molybdenum disulphide mixture (70%-30%) <br>• Anti stick-slip oil |
+| 8 | Torque wrench | | |
+| 9 | Axial Clearance Measuring Tool | | |
+| 10 | Mounting Press | | |
+
+**Pushing tube**
+**Threaded bar**
+**Mounting Press**
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| 11 | Dismounting Press | Tools for TBU dismounting | |
+| 12 | Dead Blow Hammer | | |
+
+**Dismounting press**
+**Dead-blow hammer**
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| 13 | Contrast Liquid | Tools for axlebox control | |
+| 14 | Abrasive Flap Wheel | | Grit size correspondent to sand paper with “grit size” 180-200. |
+
+IRCAMTECH/GWL/2020-21/T-18/MM/2.0 Page 5 of 15

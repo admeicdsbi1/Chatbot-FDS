@@ -1,0 +1,43 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance
+*   **Document Reference:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** 82 of 123
+*   **Section Heading:** 5.7.18.3 MC ECC, TC ECC & NDTC ECC
+
+---
+
+### Component Designations (Circuit Breakers Panel)
+
+| Row | Component Label | Reference Code |
+| :--- | :--- | :--- |
+| 1 | PCU SUPPLY | -054-F01 |
+| 1 | (PCU) SUPPLY | -064-F02 |
+| 1 | EBCU1 SUPPLY | -073-F01 |
+| 1 | EBCU2 SUPPLY | -073-F02 |
+| 1 | MAC SUPPLY | -071-F01 |
+| 1 | PD SUPPLY | -072-F02 |
+| 1 | BATT CHARGER SUPPLY | -081-F03 |
+| 1 | PIS SUPPLY | -121-F01 |
+| 1 | ICD SUPPLY | -121-F02 |
+| 2 | DRDS SUPPLY | -121-F03 |
+| 2 | DLL1 SUPPLY | -161-F01 |
+| 2 | DLL2 SUPPLY | -161-F02 |
+| 2 | IDL1 SUPPLY | -161-F03 |
+| 2 | IDL2 SUPPLY | -161-F04 |
+| 2 | CCTV LCD SUPPLY | -122-F01 |
+| 2 | CCTV1 SUPPLY | -122-F02 |
+| 2 | CCTV2 SUPPLY | -122-F03 |
+| 2 | IC DOOR SUPPLY | -051-F05 |
+| 3 | CAB AC MPCB | -812-F02 |
+| 3 | MAC MPCB | -871-F02 |
+| 4 | HLS | -881-F04 |
+| 4 | SSD SUPPLY | -121-F04 |
+
+---
+
+### Technical Description
+*   **Component:** Electrical Cubical (ECC)
+*   **Application:** Provided at driving end of MC, TC, NDTC cab.
+*   **Function:** Houses all electrical electronics components required for rake level control.
+*   **Contents:** MCUS, EBCUS, MCB, Relays, contactor for various application.

@@ -1,0 +1,43 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Maintenance
+
+BP Gauge Panel
+
+Figure 60: BP Gauge Panel
+
+Door & RMPU Controls
+
+Figure 61: Door RMPU Controls
+
+PIS Display (Operation by Assistant Driver)
+
+Figure 62: PIS Display (Operation by Assistant Driver)
+
+IRCAMTECH/GWL/2022-23/T-18/EL/2.0 Page 73 of 123
+
+---
+
+**Component Labels and Descriptions:**
+
+**Figure 60: BP Gauge Panel**
+*   BP - Brake Pipe pressure gauge (Scale 0-14 Kg/cm²)
+*   SW - Switch/Sensor indicator
+
+**Figure 61: Door & RMPU Controls**
+*   DOOR OPEN LEFT - Green indicator light
+*   DOOR OPEN LEFT - Green indicator light
+*   DOOR OPEN RIGHT - Green indicator light
+*   DOOR OPEN RIGHT - Green indicator light
+*   DOOR ENABLE SW - Rotary switch (OFF/ON)
+*   DOOR CLOSE - Blue push button
+*   RMPU ON - Yellow push button
+*   RMPU CONTROL SW - Rotary switch (OFF/ON)
+*   PIS RESET SWITCH - Rotary switch
+
+**Figure 62: PIS Display (Operation by Assistant Driver)**
+*   Blue indicator light
+*   SPARE - White indicator light
+*   SPARE - White indicator light
+*   SPARE - White indicator light
+*   MIST PS - Yellow indicator light
+*   PIS Display Screen - Central LCD unit
+*   Speaker/Microphone grill - Bottom right of display unit

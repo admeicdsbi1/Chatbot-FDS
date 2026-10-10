@@ -7,6 +7,13 @@ export interface SourceRef {
   section: string;
   clause: string;
   page: number | string | null;
+  /** Page number printed on the sheet, when it differs from the PDF page
+   *  (Vol II restarts at 1 in every chapter). Absent on older saved threads. */
+  printed_page?: string;
+  /** "draft" when the source itself is labelled a draft. */
+  status?: string;
+  /** Letter no. and date of the newer document that supersedes this one. */
+  superseded_by?: string;
   letter_no: string;
   issue_date: string;
   date_label: string;

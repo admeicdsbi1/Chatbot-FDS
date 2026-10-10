@@ -1,0 +1,26 @@
+Maintenance Manual of VBE Trainset (V2.0) 3. Schedule
+
+ANNEXURE - E
+For details refer: TSA Traction Gearbox (GKD 1-52-372C) - Operating Manual (TSA025067)
+SUMMARY OF MAINTENANCE ACTIVITIES FOR TRACTION GEAR BOX MAINTENANCE (TSA)
+
+| Intervals | Maintenance task |
+| :--- | :--- |
+| Every month or 5,000 – 25,000 km *) | Visual inspection for external damage |
+| | Checking the mechanical connecting elements |
+| | Initial oil change |
+| | Check oil level and general condition |
+| Every 6 months *) | Inspection oil stick or drain plug for wear |
+| Every year or 300,000 km *) | Oil change gearbox |
+| Every 3,000,000 km | Changing bearings |
+| | Changing barrier grease |
+| Every 4 years or 1,200,000 km | Changing elastomer of drive suspension***) ****) |
+| Every 8 years or 1,600,000 km | Grease change coupling**) |
+| | Regreasing the barrier grease*) |
+
+*) Maintenance work on the installed Traction Drive
+**) To be assured by regular lubricant analysis
+***) To be assured by regular elastomer inspection
+****) Minimum value according to specification, can be extended if load cycle is defined
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0 Page 97 of 124

@@ -1,0 +1,32 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance – Vacuum Bio toilet
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page Number:** Page 5 of 18
+
+### Technical Values
+*   **Hexagon nut:** M4 (4x)
+*   **Detent edge washers:** (4x)
+*   **Hose clamps:** (2x)
+
+### Component Designations and Descriptions
+*   **Squatting toilet:** Main sanitary unit being serviced.
+*   **Pinch valve:** Valve mechanism controlling waste flow.
+*   **Rubber elbow:** Flexible connector between the toilet bowl and the pinch valve.
+*   **Pressure guard:** Sensor/monitoring component attached to the pinch valve assembly.
+*   **Pneumatic connections:** Air supply lines for valve operation.
+*   **Electrical plug connection:** Wiring interface for the pressure guard.
+
+### Maintenance Procedures
+
+#### 5.6.4. Replacement – Pinch Valve
+**Step 1: Removal of Rubber Elbow**
+*   Loosen hose clamps from rubber elbow (2x).
+*   Remove rubber elbow.
+
+**Step 2: Removal of Pinch Valve**
+*   Disconnect pneumatic connections.
+*   Remove cap from pressure guard.
+*   Disconnect electrical plug connection to pressure guard.
+*   Loosen hexagon nut M4 (4x) and detent edge washers (4x).
+*   Remove pinch valve from squatting toilet.

@@ -1,0 +1,34 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Maintenance
+
+AUX. CONV.
+
+Figure 7: Auxiliary converter location in TC
+
+Figure 8: Auxiliary converter Unit
+
+5.7.2.1 Auxiliary Power Supply
+
+• Auxiliary converter is a PWM based IGBT converter, which converts 285VAC – 450V AC into two outputs:
+
+i. Output-1: 415 V ac (line to line), 3 phase, 50Hz
+
+ii. Output-2: DC output is isolated from input by using DC -DC isolation transformer. DC output is connected to BN Bus.
+
+415VAC, 3phase, 50Hz loads
+• RMPU
+• Ventilation Blower
+• CAB AC
+• Main compressor
+• Traction converter cooling system
+• Transformer radiator fan
+• Transformer oil pump
+• Mobile, Laptop, Pantry, luggage rack reading lights Toilet loads
+• Water pump for toilet tank
+• Aux converter cooling blower.
+
+110VDC Loads
+• Battery charging
+• Coach, vestibules and driver cabin normal lights
+• Coach and driver cabin emergency lights
+
+IRCAMTECH/GWL/2022-23/T-18/EL/2.0 Page 14 of 123

@@ -1,0 +1,11 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Maintenance
+
+Figure 84: CT on Roof of TC
+
+Potential Transformer
+
+Potential Transformer is a transducer provided at the roof of TC and it senses the OHE Voltage.
+
+Figure 85: Potential Transformer
+
+IRCAMTECH/GWL/2022-23/T-18/EL/2.0 Page 90 of 123

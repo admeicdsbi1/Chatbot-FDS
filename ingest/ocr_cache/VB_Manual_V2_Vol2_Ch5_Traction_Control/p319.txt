@@ -1,0 +1,49 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance
+*   **Document Reference:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** 39 of 123
+*   **Figure Title:** Figure-4: Cross-section Through the VCB
+
+### Technical Values
+*   **Model Designation:** V807 VG (Vacuum interrupter)
+
+### Component List
+
+| Item No. | Description |
+| :--- | :--- |
+| 1 | Upper terminal (incoming) |
+| 2 | Vacuum interrupter (V807 VG) |
+| 5 | Lower terminal (Outgoing) |
+| 7 | ‘O’ ring |
+| 8 | Top casting for 36 |
+| 12 | Actuator rod |
+| 15 | Auxiliary-contacts unit |
+| 16 | Magnet –valve assembly |
+| 17 | Pressure switch |
+| 18 | Pressure regulator |
+| 19 | Gasket |
+| 20 | Baseplate |
+| 21 | Connector mounting plate |
+| 24 | Relay – valve assembly |
+| 25 | Damper assembly |
+| 26 | Shim (steel) |
+| 27 | Packing washer |
+| 30 | Piston |
+| 31 | Piston seal ring |
+| 32 | Bottom access cover |
+| 33 | Sealing section |
+| 35 | Rating plate |
+| 36 | Bottom insulator |
+| 42 | Top insulator |
+| 44 | Tin Washer |
+| 45 | Top compression ring |
+| 57 | Air connector (supply) |
+| 66 | plug |
+| 68 | Hex. Socket C’SK head screw |
+| 79 | Hex. Socket head cap screw |
+| 86 | Hex. Socket head cap screw |
+| 87 | Pillar |
+
+### Technical Notes
+*   **Sealant Specification:** PUR.Flex OR RTV Sealant

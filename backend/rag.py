@@ -65,6 +65,33 @@ superseded_by = {}
 # document's content that the slip does not restate reachable. Tuned by eval.
 SUPERSEDED_PENALTY = float(os.environ.get("SUPERSEDED_PENALTY", "0.85"))
 
+# When a superseded chunk reaches the answer, its counterpart in the newer
+# document must come with it — otherwise the context holds only the old value,
+# labelled "SUPERSEDED", and nothing to replace it with. "Counterpart" is the
+# newer document's chunk that restates the most of the old one's words, NOT its
+# best chunk for the query: for "SS1 periodicity" that would be Correction
+# Slip-1's cover letter, while the table restating the periodicity sat at pool
+# rank 33.
+#
+# Measured by word overlap, not embeddings. Embedding similarity picked the
+# right table (0.938) until the report table gained its intro paragraph, then
+# picked "Wheels and Axles" (0.887): a vector moves with every sentence, and
+# Gemini's similarities are compressed (unrelated documents reach 0.93). The
+# slip restates the report nearly verbatim, so overlap is the sturdier signal:
+# report p.9 -> slip p.3 0.60 (runner-up 0.48), Vol II Ch.3 p.52 -> slip p.3
+# 0.64 (runner-up 0.39). Overlap alone does not separate unrelated text either
+# (a wheel letter reaches 0.59), so a counterpart must ALSO be in the retrieval
+# pool, i.e. relevant to the question, and clear AMENDMENT_MIN_OVERLAP.
+AMENDMENT_MIN_OVERLAP = float(os.environ.get("AMENDMENT_MIN_OVERLAP", "0.5"))
+_TOKEN = re.compile(r"[a-z]{2,}|\d+(?:\.\d+)?")
+
+
+def _tokens(c):
+    t = c.get("_tok")
+    if t is None:
+        t = c["_tok"] = frozenset(_TOKEN.findall(c.get("text", "").lower()))
+    return t
+
 
 def _normalize_rows(m):
     m = np.asarray(m, dtype=np.float32)
@@ -396,6 +423,46 @@ def _supersession_factor(ch):
     return SUPERSEDED_PENALTY if ch.get("doc_id") in superseded_by else 1.0
 
 
+def _with_amendments(final, pool, k, trace=None):
+    """Seat each superseded chunk's counterpart (see AMENDMENT_MIN_OVERLAP),
+    drawn from the scored retrieval `pool`, directly after it; then trim back to
+    k. Inert when nothing superseded was retrieved."""
+    present = {c.get("chunk_id") for _, c in final}
+    out, pulled, triggers = [], [], set()
+    for sc, c in final:
+        out.append((sc, c))
+        newer = superseded_by.get(c.get("doc_id"))
+        if newer is None:
+            continue
+        old = _tokens(c)
+        if not old:
+            continue
+        cands = [x for _, x in pool if x.get("doc_id") == newer.get("doc_id")
+                 and x.get("chunk_id") not in present]
+        if not cands:
+            continue
+        best = max(cands, key=lambda x: len(old & _tokens(x)))
+        if len(old & _tokens(best)) / len(old) >= AMENDMENT_MIN_OVERLAP:
+            present.add(best.get("chunk_id"))
+            out.append((sc, best))
+            pulled.append(best.get("chunk_id"))
+            triggers.add(c.get("chunk_id"))
+    if trace is not None and pulled:
+        trace["amendments_pulled"] = pulled
+    # Make room by dropping the lowest-ranked chunks that are neither a pulled
+    # counterpart nor the old chunk that pulled it — the pair is what lets the
+    # answer say "was X, now Y". Trimming the tail blindly would cut either.
+    keep = set(pulled) | triggers
+    while len(out) > k:
+        drop = next((n for n in range(len(out) - 1, -1, -1)
+                     if out[n][1].get("chunk_id") not in keep), None)
+        if drop is None:          # every slot is a pair: keep the new values
+            drop = next(n for n in range(len(out) - 1, -1, -1)
+                        if out[n][1].get("chunk_id") not in pulled)
+        out.pop(drop)
+    return out
+
+
 def _recency_factor(ch):
     """Gentle boost so a newer instruction letter edges ahead of an older manual
     on otherwise-similar matches (supersession: latest governs). Circulars/SMIs
@@ -556,7 +623,7 @@ def retrieve(query, k=TOP_K_FINAL, trace=None):
             score *= _supersession_factor(ch)
             results.append((score, ch))
         results.sort(key=lambda x: -x[0])
-        return _diversify(results, k)
+        return _with_amendments(_diversify(results, k), results, k, trace)
 
     # Semantic search: cosine == dot product (both sides normalized).
     sims = emb_matrix @ qv.astype(np.float32)
@@ -614,11 +681,11 @@ def retrieve(query, k=TOP_K_FINAL, trace=None):
     # by RERANK_ENABLED; fail-safe to hybrid order otherwise).
     if rerank.enabled() and _pool_is_ambiguous(res):
         t0 = time.monotonic()
-        res = rerank.rerank(query, res, pool=RERANK_POOL)
+        res = rerank.rerank(query, res, pool=RERANK_POOL, snippet_query=full_exp)
         if trace is not None:
             trace["rerank_fired"] = True
             trace["t_rerank"] = int((time.monotonic() - t0) * 1000)
-    return _diversify(res, k)
+    return _with_amendments(_diversify(res, k), res, k, trace)
 
 
 def _fmt_date(iso):
@@ -670,6 +737,15 @@ def _safe(v, limit=None):
     return out[:limit] if limit else out
 
 
+def _page_label(c):
+    """'p.4 (PDF p.52)' when the sheet's printed number differs from the PDF
+    index (Vol II restarts at 1 every chapter), else 'p.52'."""
+    pg, printed = c.get("page_num", ""), c.get("printed_page", "")
+    if printed and str(printed) != str(pg):
+        return f"p.{printed} (PDF p.{pg})"
+    return f"p.{pg}" if pg else ""
+
+
 def build_context(excerpts):
     lines = []
     for i, (sc, c) in enumerate(excerpts, 1):
@@ -690,7 +766,7 @@ def build_context(excerpts):
         h = f"[Source {i}: {_safe(doc)}"
         sec_label = (f"Clause {_safe(clause)} " if clause else "") + _safe(sec)
         if sec_label.strip(): h += f" | {sec_label.strip()[:70]}"
-        if pg: h += f" | p.{_safe(pg)}"
+        if pg: h += f" | {_safe(_page_label(c))}"
         if coach: h += f" | Coach: {_safe(', '.join(str(x) for x in coach))}"
         if oem: h += f" | OEM: {_safe(oem)}"
         ref = _cite_ref(c)
@@ -699,6 +775,8 @@ def build_context(excerpts):
         # looking sources is the older one; the dates alone leave it inferring.
         if c.get("_superseded_by"):
             h += f" | SUPERSEDED by {_safe(c['_superseded_by'])}"
+        if c.get("status") == "draft":
+            h += " | DRAFT (lower authority)"
         h += "]"
         lines.append(f"{h}\n{txt}")
     return "\n\n".join(lines)
@@ -743,6 +821,11 @@ def build_sources_list(excerpts):
             "section": sec,
             "clause": clause,
             "page": pg,
+            "printed_page": c.get("printed_page", ""),
+            # authority badges on the source card: "draft" content, and the
+            # newer document that supersedes this one (its letter + date)
+            "status": c.get("status", ""),
+            "superseded_by": c.get("_superseded_by", ""),
             "letter_no": c.get("letter_no", ""),
             "issue_date": c.get("issue_date", ""),
             "date_label": _fmt_date(c.get("issue_date", "")),
@@ -769,7 +852,7 @@ def build_sources(excerpts):
             if clause: loc.append(f"Clause {clause}")
             if sec: loc.append(sec)
             if loc: s += " → " + " ".join(loc)
-            if pg: s += f" (p.{pg})"
+            if pg: s += f" ({_page_label(c)})"
             ref = _cite_ref(c)
             if ref: s += f" — {ref}"
             parts.append(s)

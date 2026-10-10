@@ -1,0 +1,28 @@
+Maintenance Manual of VBE Trainset (V2.0)
+
+Maintenance - Gangway
+
+1
+
+2
+
+Mounting the linking ceiling to the shackles already mounted to the wagon interfaces
+
+| No | Component |
+| :--- | :--- |
+| 1 | Wagon-interface. |
+| 2 | Linking ceiling. |
+
+2
+
+3
+
+4
+
+Mounting the linking ceiling to the shackles already mounted to the wagoninterfaces
+
+(schematic)
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+
+Page 7 of 13

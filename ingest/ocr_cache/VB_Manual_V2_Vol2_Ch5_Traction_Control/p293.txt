@@ -1,0 +1,23 @@
+- **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+- **Section:** 5. Maintenance
+- **Figure:** Figure 5: Cooling Arrangement of LTC
+- **Component Designation:**
+    - **EXPANSION TANK:** Component provided with a coolant level indicator.
+
+Based on the provided document, here is the extracted technical information:
+
+### **Technical Components and Descriptions**
+*   **LTC:** Line Traction Converter (implied by context of "Cooling Arrangement of LTC" and "traction and line converter")
+*   **Expansion Tank:** Reservoir for coolant, equipped with a level indicator.
+*   **Coolant Level Indicator:** Visual gauge on the expansion tank to monitor coolant levels between "Max" and "Min" markings.
+*   **Coolant Filling:** Port/cap for adding coolant to the system.
+*   **Coolant Level Switch:** Sensor component located on the expansion tank for monitoring coolant status.
+
+### **Reference Information**
+*   **Subject:** Cooling Arrangement and Maintenance of Traction and Line Converter (LTC)
+*   **Reference Link:** [https://rdso.indianrailways.gov.in/view_section.jsp?lang=0&id=0,2,17,5129,5130](https://rdso.indianrailways.gov.in/view_section.jsp?lang=0&id=0,2,17,5129,5130)
+*   **Section Reference:** 5.7.2 Auxiliary Converter Unit (Auxiliary Power Supply)
+
+### **Technical Values/Labels**
+*   **Max:** Maximum coolant level mark.
+*   **Min:** Minimum coolant level mark.

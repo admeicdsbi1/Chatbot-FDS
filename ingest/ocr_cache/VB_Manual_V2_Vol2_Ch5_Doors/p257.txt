@@ -1,0 +1,26 @@
+### Technical Index: VBE Trainset Maintenance
+
+**Document Information**
+*   **Subject:** 5. Maintenance – Automatic Doors
+*   **Manual Title:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page Number:** Page 8 of 13
+
+**Component Designations**
+*   **Carrier assy:** Smallest replaceable unit for carriage 2.
+*   **Centric:** Roller type (indicated on carrier assembly).
+*   **Eccentric:** Roller type (indicated on carrier assembly).
+*   **Tensioning device:** Mechanism for adjusting belt tension.
+
+**Technical Values**
+*   **Torque:** 14 Nm
+
+**Maintenance Procedures**
+
+**Replacement of carriage 2**
+*   **Disassembly:**
+    1.  Loosen the belt tension.
+    2.  Unscrew the actuator of the guiding profile.
+    3.  Move the carrier to the free end of the guide tube and remove it through the opening of the profile.
+*   **Installation:**
+    *   Assembly takes place in reverse order.

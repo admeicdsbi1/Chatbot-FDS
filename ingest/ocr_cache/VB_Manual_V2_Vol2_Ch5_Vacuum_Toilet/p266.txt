@@ -1,0 +1,17 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Maintenance – Vacuum Bio toilet
+
+| 1 | Grounding Connection M5 | 2 | Pinch Valve to Ejector Ø 8 mm |
+| :--- | :--- | :--- | :--- |
+| 3 | Pressure Switch to Ejector Ø 6 mm | 4 | Mini Mate-N-Lok, 4 pol |
+| 5 | Water Inlet Ø 12 mm | 6 | Compressed Air Inlet Ø 6 mm |
+
+Interface – Outlet
+
+| 1 | Rubber Elbow Ø 50 mm, 90° | 2 | Outlet Nozzle Ø 48 mm, l= 54 mm |
+
+5.6.3. Removal – Squatting Toilet
+Dismount squatting toilet from cabin floor as follows:
+* Disconnect power supply.
+* Disconnect fresh water and compressed air supply.
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0 Page 4 of 18

@@ -1,0 +1,17 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Maintenance – Vacuum Bio toilet
+5.6.11. Replacement – Quick Exhaust Valve
+
+* Mark pneumatic piping.
+* Disconnect pneumatic piping.
+* Loosen male connectors.
+* Remove the quick exhaust valve.
+
+| 1 | Mal Elbow Ø 6 mm to Vacuum Pump | 2 | Quick Exhaust Valve |
+|---|---|---|---|
+| 3 | Connector Ø 8 mm Air Outlet | 4 | Connector Ø 8 mm to Flush Water Tank |
+
+* Replace quick exhaust valve.
+* Screw in the male elbow (Pos. 1) and connector (Pos. 4) with liquid sealing to the quick exhaust valve.
+* Align quick exhaust valve to water system panel.
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0 Page 14 of 18

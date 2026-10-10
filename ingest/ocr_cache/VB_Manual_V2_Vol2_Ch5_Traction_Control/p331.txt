@@ -1,0 +1,17 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** 51 of 123
+
+### Technical Specifications
+*   **Isolating Valves:** DN80
+*   **Oil Pump Flow Rate:** > 35 m³/h
+*   **Oil Pump Power Supply:** 415 V, three-phase, 50Hz
+
+### Component Designations and Descriptions
+*   **Container:** Set on the air link between air dryer and conservator tank to avoid air dryer pollution with oil.
+*   **Oil sight glass:** Placed on the container to check the presence of oil.
+*   **Cooler:** Equipped with 2 motor fans; fed with oil by oil pump.
+*   **Isolating valves (DN80):** Used to isolate the refrigeration assembly to allow for cooler replacement while limiting oil drainage.
+*   **Immersion type pump:** Ensures the flow of oil; starts as soon as the railcar is powered up.
+*   **Terminal box:** Connection point for the oil pump power supply.

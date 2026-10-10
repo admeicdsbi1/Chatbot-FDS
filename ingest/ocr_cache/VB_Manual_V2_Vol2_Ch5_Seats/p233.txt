@@ -1,0 +1,30 @@
+### Technical Index: VBE Trainset Maintenance
+
+**Document Information**
+*   **Subject:** 5.4.1. INSTALLATION OF THE SEATS - Assembly of Executive class seat
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page:** 3 of 19
+
+**Technical Values & Specifications**
+*   **Mounting Screw Size:** M10
+*   **Trap Door Screw Specification:** 4 x M5x10 A2 70- ISO 7380-2
+*   **Mounting Hole Diameter:** $\phi$ 10.5
+*   **Mounting Plate Dimensions:** 450 $\pm$ 1 mm (length) x 220 $\pm$ 1 mm (width)
+*   **Connector Reference:** WAGO WITH COVER 770 223 / 770 233
+*   **Dimension Reference (Front):** 125 mm
+*   **Dimension Reference (Intermediate):** 167.7 mm
+*   **Dimension Reference (End):** 17.5 mm
+*   **Dimension Reference (Vertical):** 45.7 mm / 28 mm
+
+**Component Designations**
+*   **Connector WAGO:** Electrical connection point located in the centre of the rotation mechanism.
+*   **Trap door:** Access panel on the rotation mechanism secured by M5x10 screws.
+*   **Rotation mechanism:** Base assembly for the executive class seat.
+
+**Maintenance Instructions (Summary)**
+1.  Position the seat carrier onto the vehicle floor with the electric connection in the centre of the rotation mechanism.
+2.  Fasten the four mounting screws (M10).
+3.  Open the trap door on the rotation mechanism (using 4 x M5x10 A2 70- ISO 7380-2 screws) and remove the trap door.
+
+**Safety Caution**
+*   **Note:** Screw type, torque, and use of medium strength thread locker for the fixation of the seat to the train structure must be defined by the train manufacturer.

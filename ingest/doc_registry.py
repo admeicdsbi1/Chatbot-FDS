@@ -46,6 +46,15 @@ _DEFAULTS = {
     # download_url: filled by build_kb via download_url(entry) so each chunk
     # carries a link to its source PDF. Empty when PDF_BUCKET_BASE is unset.
     "download_url": "",
+    # page_range: (first, last) PDF pages, inclusive, when one PDF holds several
+    # logical documents (Vol II: one entry per chapter). None = whole file.
+    "page_range": None,
+    # context_header: breadcrumb opening every chunk of a long manual, e.g.
+    # "VBE Trainset V2 Manual Vol II › Ch.5 Maintenance – Doors". Changes chunk
+    # text (so embeddings) — set only on documents ingested fresh.
+    "context_header": "",
+    # status: "draft" where the source itself labels the content a draft.
+    "status": "",
 }
 
 REGISTRY = [
@@ -850,7 +859,91 @@ REGISTRY = [
         "issue_date": "2026-04-09",
         "revision": "Correction Slip-1",
         "letter_no": "IRCAMTECH/GWL/MECH/Train-set/Manual/2.0",
-        "supersedes": ["VB_Shop_Schedule_SS1_SS2_Report_2025"],
+        # Vol II Ch.3 is "revised" by this slip (covering letter, p.1). Ch.4 is
+        # NOT superseded: the slip makes an "addition of Tools and Equipment …
+        # to the existing list", so the original list stays in force.
+        "supersedes": ["VB_Shop_Schedule_SS1_SS2_Report_2025", "VB_Manual_V2_Vol2_Ch3_Schedule"],
+    },
+    # ---- VBE Trainset (V2.0) Maintenance Manual, IRCAMTECH, September 2022 ----
+    # Vol II is eight chapter files merged into one PDF, registered here as one
+    # document per chapter (and per Ch.5 equipment file) so that supersession can
+    # be declared for Ch.3 alone and every citation names the chapter. Ranges
+    # were read off each page's running header ("3. Schedule … Page 1 of 124"),
+    # not taken from the bookmarks. PDF p.188-189 (Ch.5 cover and revision table)
+    # are deliberately unregistered: no maintenance content.
+    {
+        "doc_id": "VB_Manual_V2_Vol1_Management",
+        "path": os.path.join("Vande Bharat",
+                             "VBE_Trainset(V2)_Maintenance_Manual_Volume_I_MaintenanceManagement.pdf"),
+        "doc_type": "maintenance_manual",
+        "title": "VBE Trainset (V2.0) Maintenance Manual Vol I — Maintenance Management",
+        "source": "IRCAMTECH/GWL/2022-23/T-18/MM/2.0, September 2022",
+        "system": "VB", "default_oem": None, "coach_type": ["Vande Bharat"],
+        "subsystem": "", "issue_date": "2022-09", "revision": "Version 2.0",
+        "letter_no": "IRCAMTECH/GWL/2022-23/T-18/MM/2.0",
+        "context_header": "VBE Trainset V2 Manual Vol I (Maintenance Management)",
+    },
+    *[{
+        "doc_id": f"VB_Manual_V2_Vol2_{key}",
+        "path": os.path.join("Vande Bharat",
+                             "Trainset(V2)_Maintenance_Manual_Volume_II_System_Documentation.pdf"),
+        "doc_type": "maintenance_manual",
+        "title": f"VBE Trainset (V2.0) Maintenance Manual Vol II — {chapter}",
+        "source": f"{letter}, September 2022",
+        "system": "VB", "default_oem": None, "coach_type": ["Vande Bharat"],
+        "subsystem": subsystem, "issue_date": "2022-09", "revision": "Version 2.0",
+        "letter_no": letter, "page_range": pages,
+        "context_header": f"VBE Trainset V2 Manual Vol II › {chapter}",
+        "status": status,
+    } for key, chapter, subsystem, pages, letter, status in [
+        ("Ch1_Introduction", "Ch.1 Introduction", "", (1, 33),
+         "IRCAMTECH/GWL/2022-23/T-18/MM/2.0", ""),
+        ("Ch2_Cleaning", "Ch.2 Cleaning", "", (34, 48),
+         "IRCAMTECH/GWL/2022-23/T-18/MM/2.0", ""),
+        ("Ch3_Schedule", "Ch.3 Schedule", "maintenance schedule", (49, 172),
+         "IRCAMTECH/GWL/2022-23/T-18/MM/2.0", ""),
+        ("Ch4_Tools", "Ch.4 Tools and Equipment", "", (173, 187),
+         "IRCAMTECH/GWL/2022-23/T-18/MM/2.0", ""),
+        # The bookmark names this file "As per Alstom - Bogie Maintenance" under a
+        # "…Chapter_5_Maintenance_Draft" parent: lower tier (user, 2026-10-08).
+        ("Ch5_Bogie", "Ch.5 Maintenance – Bogie", "bogie", (190, 212),
+         "IRCAMTECH/GWL/2022-23/T-18/MM/2.0", "draft"),
+        ("Ch5_Semi_Permanent_Coupler", "Ch.5 Maintenance – Semi Permanent Coupler", "", (213, 217),
+         "IRCAMTECH/GWL/2022-23/T-18/MM/2.0", ""),
+        ("Ch5_Gangway", "Ch.5 Maintenance – Gangway", "", (218, 230),
+         "IRCAMTECH/GWL/2022-23/T-18/MM/2.0", ""),
+        ("Ch5_Seats", "Ch.5 Maintenance – Seats", "", (231, 249),
+         "IRCAMTECH/GWL/2022-23/T-18/MM/2.0", ""),
+        ("Ch5_Doors", "Ch.5 Maintenance – Automatic Doors", "doors", (250, 262),
+         "IRCAMTECH/GWL/2022-23/T-18/MM/2.0", ""),
+        ("Ch5_Vacuum_Toilet", "Ch.5 Maintenance – Vacuum Bio-toilet", "", (263, 280),
+         "IRCAMTECH/GWL/2022-23/T-18/MM/2.0", ""),
+        ("Ch5_Traction_Control", "Ch.5 Maintenance – Traction and Control", "electrical", (281, 403),
+         "IRCAMTECH/GWL/2022-23/T-18/EL/2.0", ""),
+        ("Ch7_General_Information", "Ch.7 General Information", "", (540, 546),
+         "IRCAMTECH/GWL/2022-23/T-18/MM/2.0", ""),
+        # File name "…Chapter_8_Torubleshooting_Draft": lower tier.
+        ("Ch8_Troubleshooting", "Ch.8 Trouble Shooting", "", (547, 571),
+         "IRCAMTECH/GWL/2022-23/T-18/MM/2.0", "draft"),
+    ]],
+    {
+        # Ch.6 is indexed, never parsed as content (user decision 2026-10-08):
+        # see parse_pdf._drawing_index. Group page ranges are where each group's
+        # bookmarked files begin and end; the index list itself is p.406-409.
+        "doc_id": "VB_Manual_V2_Vol2_Ch6_Drawing_Index",
+        "path": os.path.join("Vande Bharat",
+                             "Trainset(V2)_Maintenance_Manual_Volume_II_System_Documentation.pdf"),
+        "doc_type": "maintenance_manual",
+        "title": "VBE Trainset (V2.0) Maintenance Manual Vol II — Ch.6 Drawing Index",
+        "source": "IRCAMTECH/GWL/2022-23/T-18/MM/2.0, September 2022",
+        "system": "VB", "default_oem": None, "coach_type": ["Vande Bharat"],
+        "subsystem": "", "issue_date": "2022-09", "revision": "Version 2.0",
+        "letter_no": "IRCAMTECH/GWL/2022-23/T-18/MM/2.0",
+        "page_range": (404, 539),
+        "context_header": "VBE Trainset V2 Manual Vol II › Ch.6 Drawing Index",
+        "drawing_index_pages": (406, 409),
+        "drawing_groups": [("6.1", (410, 448)), ("6.2", (449, 452)), ("6.3", (453, 459)),
+                           ("6.4", (460, 469)), ("6.5", (470, 508)), ("6.6", (509, 539))],
     },
     {
         # Subsystem deliberately left empty: this manual spans every subsystem, so

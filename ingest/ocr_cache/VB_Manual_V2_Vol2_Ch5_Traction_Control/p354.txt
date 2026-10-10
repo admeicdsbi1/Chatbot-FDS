@@ -1,0 +1,41 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Maintenance
+
+Driver Desk (Section-B)
+
+[Image: Driver Desk diagram with labels]
+Brake Controller
+Master Controller
+Mic, Horn, Signal Bell and VCD Reset Switch
+Emergency brake
+Section-B
+
+Figure 63: Driver Desk (Section-B)
+
+Shunting Operation Controls
+
+[Image: Shunting Operation Controls panel]
+NORMAL SHUNTING
+MODE SELECTOR 33% 57% 100%
+TE/BE FWD 0 REV
+DIRECTION SELECTION
+SPEED LIMIT
+BRAKE
+DRIVE
+SHUNTING OPERATION
+
+Figure 64: Shunting Operation Controls
+
+Mic and Switch Controls
+
+[Image: Mic and Switch Controls panel]
+OFF ON OFF ON OFF ON
+CAB LIGHT (I) CAB FAN (I) SPOT LIGHT (I) EMERGENCY BRAKE SW
+TR 50% 100% OFF ON OFF ON
+MICROPHONE SWITCH LIGHTS ON MARKER LIGHT RED MARKER LIGHT WHITE
+MICROPHONE
+SPARE TPWS EMER BRK FLASHER VCD LAMP
+SIGNAL BELL HORN-HIGH TONE HORN-LOW TONE VCD ACK
+
+Figure 65: Mic and Switch Controls
+
+IRCAMTECH/GWL/2022-23/T-18/EL/2.0 Page 74 of 123

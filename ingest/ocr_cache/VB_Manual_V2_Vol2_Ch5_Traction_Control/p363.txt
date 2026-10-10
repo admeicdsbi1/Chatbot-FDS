@@ -1,0 +1,14 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Maintenance
+
+Equipment layouts are shown in below section. The location for ECC is same in MC, TC, NDTC.
+
+ECC
+
+Figure 74: Location of ECC in MC, TC, NDTC
+
+WEIDMULLER TB
+TERMINAL BLOCKS
+MPCB
+CONTACTORS
+
+IRCAMTECH/GWL/2022-23/T-18/EL/2.0 Page 83 of 123

@@ -1,0 +1,22 @@
+### Technical Index: VBE Trainset Maintenance
+
+**Document Information**
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance - Seats
+*   **Document Reference:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page Number:** 5 of 19
+
+**Component Designations**
+*   **WAGO 770-223 (socket):** Electrical connector (socket)
+*   **WAGO 770-233 (plug):** Electrical connector (plug)
+*   **Button (1):** Control mechanism for seat reclining
+*   **Backrest (2):** Adjustable seat component
+
+**Technical Values**
+*   **WAGO 770-223:** Part number for socket connector
+*   **WAGO 770-233:** Part number for plug connector
+
+**Operational Procedures**
+*   **Reclining the seat:**
+    *   Push button (1) and recline the backrest to the desired position (2).
+    *   To decline the backrest, push button (1) without applying pressure on the backrest. The backrest will return to neutral position automatically.

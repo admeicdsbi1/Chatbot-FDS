@@ -1,0 +1,32 @@
+### Document Information
+*   **Subject:** Mounting the side walls
+*   **Document Title:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** Maintenance - Gangway
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page Number:** Page 9 of 13
+
+### Technical Values
+*   **Spacer Size:** approx. 100 mm x 50 mm x 20 mm
+*   **Bolt Specification:** 2x M8x30
+
+### Component Designations
+*   **Bellows:** Component to be mounted as a pre-condition.
+*   **Combination bridge:** Component to be mounted as a pre-condition.
+*   **Linking ceiling:** Component to be mounted as a pre-condition.
+*   **Guiding bodies:** Components mounted to the wagon-interfaces.
+*   **Side wall:** Component with a pin to be inserted into the guiding body.
+*   **Spacer:** Mounting aid used to pre-tension the spring.
+
+### Maintenance Procedure
+1.  **Pre-condition:**
+    *   The bellows is mounted
+    *   The combination bridge is mounted
+    *   The linking ceiling is mounted
+    *   The guiding bodies are mounted to the wagon-interfaces.
+2.  **Step I:** At the guiding body screw-on side (right hand side; looking orthogonal to the longitudinal axis of the wagons) pull the guiding body downwards.
+3.  **Step II:** Place a spacer (Size: approx. 100 mm x 50 mm x 20 mm) in the upper opening at the guiding body – (The spacer will pre-tension the spring. It is suggested to secure the spacer with a tape to prevent it from falling into the inside of the gangway).
+4.  **Step III:** Insert the pin of the side wall into the hole of the guiding body screw-on side.
+5.  **Step IV:** Bolt (2x M8x30) the screw-on side of the side wall to the guiding body (screw-on side) which is already mounted to the wagon-interface
+6.  **Step V:** Repeat for opposite side wall.
+7.  **Step VI:** Remove the spacer out of the opening (guiding body).
+8.  **Step VII:** Lock the walls

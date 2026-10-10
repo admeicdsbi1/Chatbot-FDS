@@ -1,0 +1,21 @@
+Maintenance Manual of VBE Trainset (V2.0) 3. Schedule
+
+**ANNEXURE - A**
+**MAINTENANCE PLAN OF WHEEL SET (SMH Rail)**
+
+| Part | To be checked | Inspection method | 1D | 1M | 3M | 1Y | 6Y |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Wheelset | Condition of surface and its protection | visual | ✓ | ✓ | ✓ | ✓ | ✓ |
+| | Condition of wheel tread and rim face surfaces | visual | | ✓ | ✓ | ✓ | ✓ |
+| | Electrical resistance (≤ 0.01 Ω) | measurement | | | | | ✓ |
+| | Back-to-back dimension | measurement | | | | | ✓ |
+| | Diameter difference between wheels on the same axle |d1 - d2| | measurement | After reprofilin | | ✓ | ✓ | ✓ |
+| | Dimensions of wheelset wheel treads | measurement | | | ✓ | ✓ | ✓ |
+| | Front-to-front dimension | calculation | | | | | ✓ |
+| | Axial and radial run-out of both wheelset's wheels | measurement | | | | | ✓ |
+| | NDT test of axle for presence of cracks | measurement | | | | ✓ | ✓ |
+| | NDT test of wheel tyre for presence of cracks | measurement | | | | | ✓ |
+
+*Note : For details please refer to OEMs manual in Volume-3 , Part-1*
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0 Page 93 of 124

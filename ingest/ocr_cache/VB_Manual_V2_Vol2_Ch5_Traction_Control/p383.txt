@@ -1,0 +1,185 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Maintenance
+
+Figure 94: RMPU Controller
+
+MEDHA
+HVAC CONTROL UNIT - RMPU
+TYPE: MAE67SUV2 RANGE: 110V DC/AC
+SL NO: 1002 MFG: 11/21
+MEDHA SERVO DRIVES PVT. LTD.,
+P-4/5B, IDA, NACHARAM, HYDERABAD - 500 076, INDIA.
+
+USB
+
+DOP-1 CONN.
+1 (+110V)
+2 (DOP-1)
+3 (DOP-2)
+4 (DOP-3)
+5 (DOP-4)
+6 (DOP-5)
+DOP-2 CONN.
+1 (+110V)
+2 (DOP-6)
+3 (DOP-7)
+4 (DOP-8)
+5 (DOP-9)
+6 (DOP-10)
+
+CAN CONN.
+1 (CAN2-L)
+2 (CAN2-H)
+3 (CAN1-L)
+4 (CAN1-H)
+
+DIP-1 CONN.
+1 (DIP-1)
+2 (DIP-2)
+3 (DIP-3)
+4 (DIP-4)
+5 (DIP-5)
+6 (-110V)
+7 (DIP-6)
+8 (DIP-7)
+9 (DIP-8)
+10 (DIP-9)
+11 (DIP-10)
+12 (-110V)
+
+DIP-2 CONN.
+1 (DIP-11)
+2 (DIP-12)
+3 (-110V)
+
+DISP. CONN.
+1 (TX)
+2 (RX)
+3 (GND)
+4 (12V)
+
+RS485 CONN.
+1 (RX_A)
+2 (RX_B)
+3 (TX_A)
+4 (TX_B)
+5 (GND)
+
+POWER CONN.
+(110V AC/DC)
+1 (+110V)
+2 (-110V)
+
+DOP-3 CONN.
+6 (+110V)
+5 (DOP-11)
+4 (DOP-12)
+3 (DOP-13)
+DOP-5 CONN. 2 (DOP-14)
+5 (+110V) 1 (DOP-15)
+4 (DOP-21)
+3 (DOP-22) DOP-4 CONN.
+2 (DOP-23) 6 (+110V)
+1 (DOP-24) 5 (DOP-16)
+4 (DOP-17)
+3 (DOP-18)
+2 (DOP-19)
+1 (DOP-20)
+
+DIP-5 CONN.
+12 (DIP-46)
+11 (DIP-45)
+10 (DIP-44)
+9 (DIP-43)
+8 (DIP-42)
+7 (-110V)
+6 (DIP-41)
+5 (DIP-40)
+4 (DIP-39)
+3 (DIP-38)
+2 (DIP-37)
+1 (-110V)
+
+AIP PRES.CONN-2
+9 (-24V)
+8 (AIP PRES-5)
+7 (NC)
+6 (AIP PRES-6)
+5 (NC)
+4 (AIP PRES-7)
+3 (NC)
+2 (AIP PRES-8)
+1 (NC)
+
+AIP PRES.CONN-1
+9 (-24V)
+8 (AIP PRES-1)
+7 (NC)
+6 (AIP PRES-2)
+5 (NC)
+4 (AIP PRES-3)
+3 (NC)
+2 (AIP PRES-4)
+1 (NC)
+
+AIP TEMP.CONN-1
+AIP TEMP-1 (10, 9)
+AIP TEMP-2 (8, 7)
+AIP TEMP-3 (6, 5)
+AIP TEMP-4 (4, 3)
+AIP TEMP-5 (2, 1)
+
+AIP TEMP.CONN-2
+AIP TEMP-6 (10, 9)
+AIP TEMP-7 (8, 7)
+AIP TEMP-8 (6, 5)
+AIP TEMP-9 (4, 3)
+AIP TEMP-10 (2, 1)
+
+DIP-3 CONN.
+1 (DIP-13)
+2 (DIP-14)
+3 (DIP-15)
+4 (DIP-16)
+5 (DIP-17)
+6 (DIP-18)
+7 (-110V)
+8 (DIP-19)
+9 (DIP-20)
+10 (DIP-21)
+11 (DIP-22)
+12 (DIP-23)
+13 (DIP-24)
+14 (-110V)
+
+DIP-4 CONN.
+1 (DIP-25)
+2 (DIP-26)
+3 (DIP-27)
+4 (DIP-28)
+5 (DIP-29)
+6 (DIP-30)
+7 (-110V)
+8 (DIP-31)
+9 (DIP-32)
+10 (DIP-33)
+11 (DIP-34)
+12 (DIP-35)
+13 (DIP-36)
+14 (-110V)
+
+Analog Inputs (Aip) Pressure (X204)
+
+| Sl. No. | Channel | Function |
+| :--- | :--- | :--- |
+| 1 | -- | NC |
+| 2 | AIP-0 | High Pressure Sensor-1/2 |
+| 3 | -- | NC |
+| 4 | AIP-1 | High Pressure Sensor-1/1 |
+| 5 | -- | NC |
+| 6 | AIP-2 | Low Pressure Sensor-1/2 |
+| 7 | -- | NC |
+| 8 | AIP-3 | Low Pressure Sensor-1/1 |
+| 9 | -24VDC | Common -24VDC |
+| 10 | -- | NC |
+
+IRCAMTECH/GWL/2022-23/T-18/EL/2.0 Page 103 of 123

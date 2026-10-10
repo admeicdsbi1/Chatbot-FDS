@@ -1,0 +1,13 @@
+Maintenance Manual of VBE Trainset (V2.0)                               Maintenance - Gangway
+
+I. Unlocking of the side walls occurs at the lower left hand side of the side wall behind the folds of the gap covering by means of a 9 mm square spanner.
+
+II. Correct unlocking of the side wall through turning the curve shaft is achieved if the locking rod at the upper end of the guiding body is pushed out by approx. 30 mm
+
+**Unlocking of the Side wall(s)**
+
+| No | Component |
+| :--- | :--- |
+| 1 | Lower left hand side of side wall |
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0                               Page 12 of 13

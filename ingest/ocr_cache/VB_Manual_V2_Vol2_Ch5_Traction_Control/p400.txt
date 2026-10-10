@@ -1,0 +1,26 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Maintenance
+
+5.7.27.10 Saloon and Cab Loudspeakers
+➢ Speaker of 6 watts r.m.s. rating of reputed make Ahu a is provided
+➢ 50% of sharing is provided for the speakers between coaches in case of single power
+➢ amplifier failure at least half of the speakers are still operative in the coach
+➢ Speakers are distributed in equal distance diagonally for even coverage of the sound in the coach.
+
+5.7.27.11 Microphone
+➢ Microphone is a professional high quality goose neck microphone are suitable for various PA applications
+➢ Microphone is interfaced to MCP for PA, IC, ETBU operations
+➢ Driver can talk through the microphone.
+
+5.7.27.12 GPS Module
+➢ A rugged GPS module with inbuilt antenna is located on the roof of DTC
+➢ GPS module has RS485 communication with MCP unit for acquiring latitude, longitude, Date time information.
+
+5.7.28 Driver’s Cab Air Conditioner
+This is roof mounted direct expansion type packaged unit, provided for Driver’s cab in DTC.
+
+DO NOT STEP
+AMIT ENGINEERS
+AMIT ENGINEERS
+
+Figure 97: Cab Air Conditioner
+IRCAMTECH/GWL/2022-23/T-18/EL/2.0 Page 120 of 123

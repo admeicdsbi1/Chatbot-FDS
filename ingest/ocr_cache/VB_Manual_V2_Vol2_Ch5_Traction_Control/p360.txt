@@ -1,0 +1,36 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance
+*   **Subsection:** 5.7.18.2 DTC GCRW
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** 80 of 123
+
+### Component Descriptions
+*   **DTC GCRW:** Electrical Cubicle located at the guard rear side of the DTC cab.
+*   **Function:** Houses electrical and electronics components for rake level control.
+*   **Contained Components:** PCU's, EBCU's, CCTV NVRs, CCTV Ethernet Switches, MCB's, Relays, Contactors.
+
+### Panel Interface Components (Labels from Image)
+**Circuit Breakers Section:**
+*   Various MCB units (labels include: SUPPLY, DISPLAY, PANTO MC, CAB OCCUPY, EBL BYPASS, PASSENGER ALARM, BATTERY CNTROL, CAB LIGHT, SPOT LIGHT, MAIN HEAD, MARKER LIGHT, FLASHER, EMPTY CTRL, DEVICE CAB, SPEED INDICATOR, HEAD CODE, SOCKET, TPWS).
+
+**Switches Section:**
+*   **LBSR BYPASS** (Switch)
+*   **EMERGENCY BRAKE BYPASS** (Switch)
+*   **SINGLE UNIT OPERATION** (Switch)
+*   **EMERGENCY OFF BYPASS** (Switch)
+*   **TPWS ISO SW** (Switch)
+*   **CAB SELECTOR** (Switch)
+*   **BAL ISO** (Switch)
+*   **UV ISC SW** (Switch)
+*   **OWNER AUTHENTICATION** (Switch)
+*   **BATTERY SUPPLY** (Switch)
+*   **START ALL MAC** (Indicator/Button - Yellow)
+*   **PS RELEASE** (Indicator/Button - Green)
+*   **PB APPLY** (Indicator/Button - Blue)
+*   **VCD BYPASS** (Indicator/Button - Green)
+*   **DUMMY** (x6 positions)
+
+**Mechanical/Physical Features:**
+*   **Connectors:** Located on the top panel.
+*   **Glands:** Located on the bottom panel.

@@ -1,0 +1,55 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Maintenance
+
+Figure 2 : Schematic Diagram of Line and Traction Converter
+
+IRCAMTECH/GWL/2022-23/T-18/EL/2.0 Page 9 of 123
+
+[Top Left Inset]
+K4 - CONTACTOR
+K3 - CONTACTOR
+COOLANT PUMP
+BLOWER
+CT6
+CT5
+FROM EC PANEL
+
+[Top Right Inset]
+K4 - CONTACTOR
+K3 - CONTACTOR
+COOLANT PUMP
+BLOWER
+CT6
+CT5
+FROM EC PANEL
+
+[Main Schematic Components - Top Section]
+LC and BCH Module side 1
+LTC1
+Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8 - (Transistor/IGBT symbols)
+K1, K2 - (Resistor/Contactor symbols)
+PT1 LTC - (Transformer symbol)
+CT1 - (Current Transformer symbol)
+CT4 - (Current Transformer symbol)
+P6 - (Connector/Terminal)
+PT2, PT4 - (Transformer symbols)
+PT3 - (Transformer symbol)
+ESW - (Switch symbol)
+CT2, CT3 - (Current Transformer symbols)
+TM1, TM2 - (Traction Motor symbols)
+INV Module Side 2
+U-Ph, V-Ph, W-Ph - (Phase labels)
+
+[Main Schematic Components - Bottom Section]
+LC and BCH Module side 1
+Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8 - (Transistor/IGBT symbols)
+K1, K2 - (Resistor/Contactor symbols)
+PT1 LTC - (Transformer symbol)
+CT1 - (Current Transformer symbol)
+CT4 - (Current Transformer symbol)
+P6 - (Connector/Terminal)
+PT2, PT4 - (Transformer symbols)
+PT3 - (Transformer symbol)
+CT2, CT3 - (Current Transformer symbols)
+TM1, TM2 - (Traction Motor symbols)
+INV Module Side 2
+U-Ph, V-Ph, W-Ph - (Phase labels)

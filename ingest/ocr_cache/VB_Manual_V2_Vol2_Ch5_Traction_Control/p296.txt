@@ -1,0 +1,61 @@
+Maintenance Manual of VBE Trainset (V2.0)
+
+5. Maintenance
+
+5.7.2.4 Schematic description of ACU
+
+Figure 9: Auxiliary Converter Schematic Diagram
+
+[Components and Labels]
+
+AC-1 MODULE
+- LINE CONVERTER: Q1, Q2, Q3, Q4
+- DC LINK: C1-C7
+- INVERTER: Q5, Q6, Q7
+- IHES1, IHES2
+- VHES
+- CONT1, CONT2, CONT3
+- R1, R2, R3, R4
+- F1, F2
+- PH, N
+- TXFR Primary Voltage From PT
+
+AC-2 MODULE
+- LINE CONVERTER: Q1, Q2, Q3, Q4
+- DC LINK: C10-C15
+- INVERTER: Q5, Q6, Q7
+- IHES3, IHES4
+- VHES
+- CONT6, CONT7
+- R7, R8, R9, R10, R12
+- F3, F4
+- PH, N
+- TXFR Primary Voltage From PT
+
+OTHER COMPONENTS
+- BLOWER
+- CONT4 (Blower CT 1)
+- CONT9
+- CONT10
+- CONT11 (Blower CT 2)
+- ACEL01, ACEL02
+- IHES5, IHES6, IHES7
+- VHES
+- R13
+- D1, D2, D3, D4
+- C4
+- DC-DC CONVERTER
+- TXFR
+- C1-C3
+- VHES
+- FS
+- SHED SUPPLY CONNECTOR (R, Y, B)
+- 3-PH 415VAC, 50Hz (R, Y, B)
+- 3-PH 415VAC, 50Hz (L1, L2, L3 MONITORING OKT)
+- DC_O/P +VE (BD)
+- DC_O/P -VE (BD)
+- DC_O/P +VE (BN)
+- DC_O/P -VE (BN)
+
+IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+Page 16 of 123

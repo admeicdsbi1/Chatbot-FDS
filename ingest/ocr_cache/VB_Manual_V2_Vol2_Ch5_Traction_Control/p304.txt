@@ -1,0 +1,32 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** 24 of 123
+
+### Component Designations
+*   **BCH IGBT module:** Brake chopper IGBT module
+*   **BCH resistor:** Brake chopper resistor
+*   **LICC:** Line Converter Computer
+*   **Q5:** Brake chopper switching component (as shown in Figure 18)
+*   **CT4:** Current transducer/monitoring component
+*   **BCH Resistor Assy:** Brake chopper resistor assembly
+*   **P6:** Connection point for BCH Resistor Assy
+*   **P7:** Connection point for BCH Resistor Assy
+*   **M I/P:** Monitoring input/interface module
+*   **PT2:** Connection point for monitoring interface
+
+### Technical Descriptions
+*   **Brake Chopper Resistor Configuration:** Each Motor Coach has two independent Brake Chopper Resistors housed in a single cubicle.
+*   **Mounting:** Under-slung mounted.
+*   **Function:** Limits over-voltages in DC link capacitors during abnormal conditions or transients.
+*   **Over-voltage Causes:**
+    *   Non receptive OHE during regeneration.
+    *   Transient load conditions.
+*   **Operational Logic:**
+    *   LICC measures DC Link voltage.
+    *   If voltage exceeds set limit, BCH IGBT module is switched ON (fixed duty cycle).
+    *   Excess voltage is dissipated in the Brake chopper resistor.
+    *   BCH IGBT module is switched OFF only when DC link voltage returns to regular operating value.
+
+### Tables
+[NONE]

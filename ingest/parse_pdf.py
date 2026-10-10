@@ -675,6 +675,22 @@ _COLUMN_LABEL = re.compile(
 # never match them verbatim — they were surviving as the first text block of
 # most sections in this report.
 _PAGE_FOOTER = re.compile(r"^\s*(page\s+)?\d+\s*(of|/)\s*\d+\s*$", re.I)
+# The page number PRINTED on the sheet ("Page 16 of 124", or a bare "Page 1").
+# Vol II of the VB manual is eight chapter files merged into one PDF, each
+# numbered from 1, so the printed number is what a technician holding the paper
+# copy looks for, while the PDF index is what the #page= link needs. A bare
+# "Page N" also escaped _PAGE_FOOTER and landed in chunk text as noise.
+_PRINTED_PAGE = re.compile(r"^\s*page\s+(\d+)(?:\s+of\s+\d+)?\s*$", re.I)
+
+
+def page_span(entry, n_pages):
+    """1-based inclusive (first, last) PDF pages this registry entry covers.
+
+    One PDF can hold several logical documents — Vol II is registered as one
+    document per chapter, because Correction Slip-1 replaces Chapters 3 and 4
+    only, and supersession is declared per document."""
+    first, last = entry.get("page_range") or (1, n_pages)
+    return max(first, 1), min(last, n_pages)
 
 
 def _in_any_rect(bbox, rects):
@@ -705,16 +721,42 @@ def _ocr_text_for(doc_id, page_no):
     return None
 
 
+def _rkey(t):
+    return re.sub(r"\s+", "", t)
+
+
+class _Running(set):
+    """Running lines, matched ignoring whitespace. Correction Slip-1 prints its
+    header as "Correction Slip - 1" on portrait pages and "Correction Slip -1"
+    on landscape ones; compared verbatim, neither variant reached the 60% bar,
+    so the header survived as a text line above 186 tables."""
+
+    def __init__(self, lines):
+        lines = list(lines)
+        super().__init__(lines)
+        self._keys = {_rkey(t) for t in lines}
+
+    def __contains__(self, t):
+        return _rkey(t) in self._keys
+
+
 def _collect_repeated_lines(pages_lines, n_pages):
-    """Lines occurring verbatim on >=60% of pages (and >=3 pages) are running
-    headers/footers/watermarks — e.g. 'Classification | ESCORTS KUBOTA-CONFIDENTIAL'."""
-    counts = Counter()
+    """Lines occurring on >=60% of pages (and >=3 pages) are running
+    headers/footers/watermarks — e.g. 'Classification | ESCORTS KUBOTA-CONFIDENTIAL'.
+    Counted by whitespace-free key, see _Running."""
+    counts, rep = Counter(), {}
     for lines in pages_lines:
-        for t in set(lines):
-            if 3 <= len(t) <= 120:
-                counts[t] += 1
+        keys = {}
+        for t in lines:
+            k = _rkey(t)
+            # bound on the key: the slip pads its header with ~40 spaces
+            if 3 <= len(k) <= 120:
+                keys.setdefault(k, t)
+        for k, t in keys.items():
+            rep.setdefault(k, t)
+            counts[k] += 1
     threshold = max(3, int(0.6 * n_pages))
-    return {t for t, c in counts.items() if c >= threshold}
+    return _Running(rep[k] for k, c in counts.items() if c >= threshold)
 
 
 _SUBJECT_RE = re.compile(
@@ -799,7 +841,8 @@ def _ocr_only(path, entry):
     page has no OCR yet."""
     doc = fitz.open(path)
     sections, page_stats = [], []
-    for pno in range(len(doc)):
+    first, last = page_span(entry, len(doc))
+    for pno in range(first - 1, last):
         page_no = pno + 1
         ocr = _ocr_text_for(entry["doc_id"], page_no)
         used_ocr = bool(ocr)
@@ -816,20 +859,78 @@ def _ocr_only(path, entry):
     return sections, page_stats
 
 
+_INDEX_GROUP = re.compile(r"(6\.\d+)\.\s+([A-Z][A-Za-z ,&/\-–]+?)(?=\s+\d+\.\s)")
+_INDEX_ITEM = re.compile(r"(\d+)\.\s+(.+?)(?=\s+\d+\.\s|$)")
+
+
+def _drawing_index(path, entry):
+    """Vol II Chapter 6 as POINTERS to drawings, never as drawing content.
+
+    The chapter is ~130 drawing sheets. Their text layer, where one exists, is
+    dimension and title-block soup that matches weakly on everything; most are
+    scanned TIFs with none. What a technician needs is "which sheet shows X, and
+    where" — so each index group becomes a section listing its drawings, the PDF
+    page range they occupy, and the PDF bookmarks (file name -> exact page).
+
+    An index item is given its own exact page ONLY when the group's item count
+    equals its page count, i.e. the 1:1 order is provable. Otherwise the group's
+    range is stated instead: a range that holds the drawing beats a confident
+    page that may not (Bogie lists 40 drawings over 39 pages)."""
+    doc = fitz.open(path)
+    lo, hi = entry["drawing_index_pages"]
+    page_lines = [[t for _b, t in _page_lines(doc[p - 1].get_text("dict"))]
+                  for p in range(lo, hi + 1)]
+    running = set(page_lines[0]).intersection(*page_lines[1:])
+    text = " ".join(t for lines in page_lines for t in lines
+                    if t not in running and not _PRINTED_PAGE.match(t))
+    text = re.sub(r"\s+", " ", text)
+
+    parts = _INDEX_GROUP.split(text)       # [pre, gid, title, body, gid, title, body…]
+    items = {parts[i]: (parts[i + 1].strip(), _INDEX_ITEM.findall(parts[i + 2]))
+             for i in range(1, len(parts) - 2, 3)}
+    toc = doc.get_toc()
+    doc.close()
+
+    sections = []
+    for gid, (g_lo, g_hi) in entry["drawing_groups"]:
+        title, its = items.get(gid, ("", []))
+        exact = len(its) == g_hi - g_lo + 1
+        blocks = [{"type": "text", "page": g_lo, "text":
+                   f"Drawing index {gid} {title}: {len(its)} drawings in Vol II Chapter 6 "
+                   f"(Drawing Index), on PDF pages {g_lo}-{g_hi}."}]
+        for k, (num, name) in enumerate(its):
+            where = f" (PDF p.{g_lo + k})" if exact else ""
+            blocks.append({"type": "text", "page": g_lo + k if exact else g_lo,
+                           "text": f"Drawing {num}. {name.strip()}{where}."})
+        files = [(re.sub(r"\.(pdf|tif)$", "", t.strip(), flags=re.I).replace("_", " "), p)
+                 for lvl, t, p in toc if lvl >= 3 and g_lo <= p <= g_hi]
+        if files:
+            blocks.append({"type": "text", "page": g_lo, "text":
+                           "Drawing sheets in this group (file name, PDF page): "
+                           + "; ".join(f"{re.sub(r'\s+', ' ', n)}: PDF p.{p}" for n, p in files) + "."})
+        sections.append({"section": f"{title} drawings (PDF p.{g_lo}-{g_hi})",
+                         "section_num": gid, "page_start": g_lo, "blocks": blocks})
+    return sections, []
+
+
 def extract(path, entry):
     if entry.get("force_ocr"):
         return _ocr_only(path, entry)
+    if entry.get("drawing_groups"):
+        return _drawing_index(path, entry)
     doc_id = entry["doc_id"]
     doc = fitz.open(path)
-    n_pages = len(doc)
+    first, last = page_span(entry, len(doc))
+    pnos = range(first - 1, last)
+    n_pages = len(pnos)
 
     # ---- pass 1: raw lines per page (for body font size + repeated-line detection)
-    page_dicts = []
+    page_dicts = {}
     pages_line_texts = []
     all_sizes = Counter()
-    for page in doc:
-        d = page.get_text("dict")
-        page_dicts.append(d)
+    for pno in pnos:
+        d = doc[pno].get_text("dict")
+        page_dicts[pno] = d
         texts = []
         for block in d.get("blocks", []):
             for line in block.get("lines", []):
@@ -845,17 +946,19 @@ def extract(path, entry):
 
     # ---- pass 2: tables + ordered blocks + heading events
     sections = []
-    current = {"section": "Introduction", "section_num": "", "page_start": 1, "blocks": []}
+    current = {"section": "Introduction", "section_num": "", "page_start": first, "blocks": []}
     page_stats = []
     carried = {}                      # column count -> (header row, page) for continuations
     groups = {}                       # last in-table group heading -> (label, page, header)
 
-    for pno in range(n_pages):
+    for pno in pnos:
         page = doc[pno]
         page_no = pno + 1
         d = page_dicts[pno]
 
         raw_lines = _page_lines(d)
+        printed = next((m.group(1) for _b, t in raw_lines
+                        if (m := _PRINTED_PAGE.match(t))), "")
         table_rects, table_blocks = [], []
         for t_idx, tb in enumerate(_find_tables(page, raw_lines, repeated)):
             md = _table_markdown(tb, repeated, carried, page_no, groups)
@@ -871,7 +974,7 @@ def extract(path, entry):
                 continue
             for line in block.get("lines", []):
                 t = _line_text(line)
-                if not t or t in repeated or _PAGE_FOOTER.match(t):
+                if not t or t in repeated or _PAGE_FOOTER.match(t) or _PRINTED_PAGE.match(t):
                     continue
                 if _in_any_rect(line.get("bbox", block.get("bbox")), table_rects):
                     continue
@@ -975,7 +1078,7 @@ def extract(path, entry):
             current["blocks"].append({"type": "text", "text": page_ocr, "page": page_no})
             ocr_merged = True
 
-        page_stats.append({"page": page_no, "chars": page_chars,
+        page_stats.append({"page": page_no, "printed": printed, "chars": page_chars,
                            "tables": len(table_blocks), "big_images": big_images,
                            "needs_ocr": needs_ocr and not ocr_merged,
                            "ocr_merged": ocr_merged, "suspect_layer": suspect,
@@ -1004,7 +1107,8 @@ def _per_page_sections(path, entry, repeated):
     doc = fitz.open(path)
     sections = []
     carried, groups = {}, {}
-    for pno in range(len(doc)):
+    first, last = page_span(entry, len(doc))
+    for pno in range(first - 1, last):
         page_no = pno + 1
         page = doc[pno]
         raw_lines = _page_lines(page.get_text("dict"))
@@ -1017,7 +1121,7 @@ def _per_page_sections(path, entry, repeated):
                                      "table_index": t_idx})
         lines = [t.strip() for bbox, t in raw_lines
                  if t.strip() and t.strip() not in repeated
-                 and not _PAGE_FOOTER.match(t.strip())
+                 and not _PAGE_FOOTER.match(t.strip()) and not _PRINTED_PAGE.match(t.strip())
                  and not _in_any_rect(bbox, table_rects)]
         text = " ".join(lines)
         ocr = _ocr_text_for(entry["doc_id"], page_no)

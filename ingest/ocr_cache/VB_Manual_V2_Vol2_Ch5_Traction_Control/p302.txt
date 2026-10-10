@@ -1,0 +1,41 @@
+### Document Information
+*   **Subject:** Maintenance Manual of VBE Trainset (V2.0)
+*   **Section:** 5. Maintenance
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/EL/2.0
+*   **Page Number:** 22 of 123
+
+---
+
+### Input/Output Terminals and Connections
+| Connection Name | Terminal | Recommended wire |
+| :--- | :--- | :--- |
+| Battery N +Ve | BN +Ve | 70mm² |
+| Battery N -Ve | BN -Ve | 70mm² |
+| Battery D -Ve | BD -Ve | 35mm² |
+| Battery D +Ve | BD +Ve | 35mm² |
+
+---
+
+### Terminal Specifications (from Figure 14)
+*   **BN +VE:** M8 26P
+*   **BN -VE:** M8 30P
+*   **BD -VE:** M6 30P
+*   **BD +VE:** M6 23P
+
+---
+
+### Control Connectors
+*   **CON1:** Interface between TCMS and BBU with Ethernet communication.
+*   **CON2:** 110 V DC control supply and digital signals.
+
+---
+
+### Component Descriptions
+*   **BBU:** Battery Box Unit (Natural-Cooling Unit).
+*   **Battery Charging Module:** PWM based IGBT converter.
+*   **Battery Charger:** Used to charge 110 V batteries.
+
+---
+
+### Technical Notes
+*   **Battery Charging Topology:** Constant voltage constant current limit.

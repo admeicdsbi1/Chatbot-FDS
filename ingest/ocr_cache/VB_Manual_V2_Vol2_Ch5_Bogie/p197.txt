@@ -1,0 +1,44 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Bogie
+
+| Sl. No. | Description | Old | New |
+| :--- | :--- | :--- | :--- |
+| 1 | Traction motor mounting bracket on bottom side | 290±0.5 | 348±0.5 |
+| 2 | Tracion motor mounting bracket on top side | 290 ±0.5 | |
+
+**Annotations from images:**
+
+**Row 1, Old:**
+- 290±0.5
+- 702 ±0.5
+- 16.3 ±0.2
+- 290 ±0.5
+
+**Row 1, New:**
+- 348±0.5
+- 72.5 ±0.2
+- 185.0 +0.0 -0.2
+- 2 HOLES
+- Ø23.0 H13 (+0.33)
+- 348.0 ±0.5
+
+**Row 2, Old:**
+- 290 ±0.5
+- 368 ±0.5
+- 120 ±0.2
+- 150 ±0.5
+- 120 ±0.2
+
+**Row 2, New:**
+- 4 HOLES
+- Ø17.0 ±0.2
+- 120.0 ±0.2
+- 92.0 ±0.2
+- 357.0 ±0.2
+- 120.0 ±0.2
+- 2.0 ±0.5 x 45.0°
+- 2.0 ±0.5 x 45.0°
+- .0 ±0.5 x 45.0°
+- DETAIL -AC
+- SCALE 1:5
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0 Page 8 of 23

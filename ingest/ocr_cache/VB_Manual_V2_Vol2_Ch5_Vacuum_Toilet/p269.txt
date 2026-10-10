@@ -1,0 +1,10 @@
+Maintenance Manual of VBE Trainset (V2.0) 5. Maintenance – Vacuum Bio toilet
+
+* Align pinch valve to the interface on the squatting.
+* Fix hexagon nut M4 (4x) and detent edge washers (4x) with liquid sealing in a crosswise sequence, tightening torque 300 Ncm.
+
+* Reconnect pneumatic piping.
+* Reconnect electrical plug connections.
+* Fix hose clamps rubber elbow (2x), tightening torque 280 Ncm.
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0 Page 7 of 18

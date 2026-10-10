@@ -1,0 +1,13 @@
+Maintenance Manual of VBE Trainset (V2.0) 5.BOGIE
+
+5.1.12.9 VERIFICATION OF GAP BETWEEN TRACTION MOTOR & IT'S SAFETY CATCH
+
+It should be 9 mm towards motor side & 9 mm towards bogie centre under tare load condition.
+
+12
+12
+
+Safety Catch
+Gear Box
+
+IRCAMTECH/GWL/2022-23/T-18/MM/2.0 Page 23 of 23

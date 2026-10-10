@@ -1,0 +1,43 @@
+### Technical Index: VBE Trainset Maintenance
+
+**Document Information**
+*   **Subject:** Replacement of carriage 1
+*   **Section:** 5. Maintenance – Automatic Doors
+*   **Manual:** Maintenance Manual of VBE Trainset (V2.0)
+
+**Component Designations**
+*   **Carrier assy:** Smallest replaceable unit for carriage 1
+
+**Maintenance Procedures**
+
+**Disassembly**
+1.  Loosen the belt tension.
+2.  Unscrew the end stop of the guiding profile.
+3.  Unscrew the T-profile of the right and left basis.
+4.  Move the carriers to the free end of the guide tube and remove it through the opening of the profile.
+
+**Installation**
+*   Assembly takes place in reverse order.
+
+**Safety Notes**
+*   The carriage can only be replaced if the door leaf is disengaged.
+*   The end stop in door-opened position has to be disassembled.
+*   Observe the following items:
+    1) Put down the eccentric axis.
+
+### Technical Index: Maintenance Document
+
+**Document Reference:**
+*   **Reference Number:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+*   **Page Number:** 7 of 13
+
+**Component Designations & Maintenance Instructions:**
+
+| Component | Action | Torque Specification |
+| :--- | :--- | :--- |
+| End Stop | loosen | 14 Nm |
+| T-profile | loosen | 10 Nm |
+
+**Technical Values:**
+*   **End Stop Torque:** 14 Nm
+*   **T-profile Torque:** 10 Nm

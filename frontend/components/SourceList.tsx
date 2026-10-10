@@ -29,7 +29,11 @@ export default function SourceList({
           const loc = [
             s.clause ? `Clause ${s.clause}` : "",
             s.section || "",
-            s.page ? `p.${s.page}` : "",
+            s.page
+              ? s.printed_page && String(s.printed_page) !== String(s.page)
+                ? `p.${s.printed_page} (PDF p.${s.page})`
+                : `p.${s.page}`
+              : "",
           ]
             .filter(Boolean)
             .join(" · ");
@@ -77,6 +81,22 @@ export default function SourceList({
                     {s.oem && (
                       <span className="rounded border border-line/20 px-1 py-px text-[0.68rem] font-medium">
                         {s.oem}
+                      </span>
+                    )}
+                    {s.superseded_by && (
+                      <span
+                        className="rounded border border-accent-amber/45 bg-accent-amber/10 px-1 py-px text-[0.68rem] font-medium text-accent-amber"
+                        title={`Superseded by ${s.superseded_by}`}
+                      >
+                        Superseded
+                      </span>
+                    )}
+                    {s.status === "draft" && (
+                      <span
+                        className="rounded border border-accent-amber/45 bg-accent-amber/10 px-1 py-px text-[0.68rem] font-medium text-accent-amber"
+                        title="The source labels this content a draft"
+                      >
+                        Draft
                       </span>
                     )}
                   </p>

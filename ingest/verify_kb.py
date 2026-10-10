@@ -29,12 +29,17 @@ MAX_CHUNK_CHARS = 4000          # artifact ceiling; chunker.TABLE_MAX (2500) is 
                                 # so prose legitimately sits between the two.
 
 # ---- corpus-property bounds, each measured on the KB of 2026-08-19 -----------
-MAX_COLN = 1200                 # unnamed-column placeholders. Was 2,702 before the
-                                # header-repair pass, 1,554 after it, 962 today.
-MAX_WORD_SPLIT_PIPES = 400      # prose gridded into a table: a `|` between two word
-                                # characters. 300 today. This is the artifact-side
-                                # proxy for parse_pdf's SHATTER_MAX, which only
-                                # exists during the build.
+# Both were absolute counts (1,200 and 400) until 2026-10-10, when adding the VB
+# V2 manuals (+909 chunks) pushed them to 1,389 and 393 while both RATES fell —
+# a count bound is a snapshot of corpus size, the same trap MIN_TOTAL_CHUNKS was
+# retired for. Rates measured on the committed 2,750-chunk KB: 1.016 and 0.122.
+MAX_COLN_PER_TABLE = 1.15       # unnamed-column placeholders per table chunk. Was
+                                # 2,702 total before the header-repair pass, 1,554
+                                # after it, 962 on 2026-08-19.
+MAX_WORD_SPLIT_PER_CHUNK = 0.14 # prose gridded into a table: a `|` between two word
+                                # characters, per chunk. The artifact-side proxy for
+                                # parse_pdf's SHATTER_MAX, which only exists during
+                                # the build.
 MIN_REPORT_SECTIONS = 20        # canary for the column-scoped equipment groups: the
                                 # vibration report's chunks carried a generic title
                                 # until _mark_column_groups recovered the equipment
@@ -52,6 +57,7 @@ ids = set()
 n = 0
 docs = {}
 coln_total = 0
+table_chunks = 0
 pipe_total = 0
 sections_by_doc = {}
 with open(JSONL, encoding="utf-8") as f:
@@ -92,6 +98,7 @@ with open(JSONL, encoding="utf-8") as f:
         docs[doc] = docs.get(doc, 0) + 1
         sections_by_doc.setdefault(doc, set()).add(c.get("section", ""))
         coln_total += len(_COLN.findall(text))
+        table_chunks += c.get("chunk_type") == "table"
         pipe_total += len(_WORD_SPLIT_PIPE.findall(text))
         # Wingdings/Symbol glyphs extract as Private Use Area codepoints: a tick
         # becomes U+F0FC. Nothing downstream can read them — not the embedding
@@ -148,15 +155,16 @@ except Exception as e:                                  # noqa: BLE001
     print(f"  registry: SKIPPED ({e})")
 
 # 3. Structural properties bought by earlier sessions, held at their measured level.
-for label, value, bound in (
-    ("ColN placeholders", coln_total, MAX_COLN),
-    ("word-split pipes", pipe_total, MAX_WORD_SPLIT_PIPES),
+for label, value, per, bound in (
+    ("ColN placeholders per table chunk", coln_total, max(table_chunks, 1), MAX_COLN_PER_TABLE),
+    ("word-split pipes per chunk", pipe_total, max(n, 1), MAX_WORD_SPLIT_PER_CHUNK),
 ):
-    if value > bound:
-        print(f"{label.upper()}: {value} exceeds bound {bound}")
+    rate = value / per
+    if rate > bound:
+        print(f"{label.upper()}: {rate:.3f} ({value}/{per}) exceeds bound {bound}")
         errors += 1
     else:
-        print(f"  {label}: {value} (bound {bound})  ok")
+        print(f"  {label}: {rate:.3f} ({value}/{per}, bound {bound})  ok")
 
 report_sections = len(sections_by_doc.get(REPORT_CANARY, ()))
 if REPORT_CANARY in docs and report_sections < MIN_REPORT_SECTIONS:

@@ -1,0 +1,53 @@
+| Abbreviation | Description |
+| :--- | :--- |
+| ERCU | Earth Return Current Unit |
+| EWP | End Wall Panels. |
+| FDP | Fault Data Pack |
+| FGU | Frequency Generator Unit |
+| FRP | Fibre-Reinforced Plastic |
+| GCRW | Guard Cab Rear Wall (Panel) |
+| GPS | Global Positioning System |
+| HS | High Speed |
+| HSCB | High Speed Circuit Breaker |
+| HVAC | Heating, Ventilation and Air Conditioning |
+| HWTL | Hard Wired Train Line |
+| ICF | Integral Coach Factory, Chennai |
+| IGBT | Insulated Gate Bipolar Transistor |
+| IV | Inter-Vehicular |
+| LCD | Liquid Crystal Display |
+| LED | Light Emitting Diode |
+| LRMS | Locomotive Remote Monitoring System |
+| LS | Low Speed |
+| LTC | Line and Traction Converter |
+| LTCU | Line and Traction Converter Computer |
+| LTMS | Locomotive and Train Management System |
+| MAR | Media Access Router |
+| MC | Motor Coach |
+| MCB | Miniature Circuit Breaker |
+| MCP | Main Communication Panel |
+
+**Reference Number:** IRCAMTECH/GWL/2022-23/T-18/MM/2.0
+**Page Number:** 6 of 7
+
+### Component Designations and Descriptions
+
+| Abbreviation | Description |
+| :--- | :--- |
+| LTC | Line and Traction Converter |
+| LTCU | Line and Traction Converter Computer |
+| LTMS | Locomotive and Train Management System |
+| MAR | Media Access Router |
+| MC | Motor Coach |
+| MCB | Miniature Circuit Breaker |
+| MCP | Main Communication Panel |
+| MCU | Main Control Unit |
+| MCH | MCH. Master Control Handle |
+| MMI | Man Machine Interface |
+| MPCB | Motor Protection Circuit Breaker |
+| MR | Main Reservoir |
+| MS | Motor Side |
+| MVB | Multifunction Vehicle Bus |
+| NDE | Non Driving End |
+| NDTC | Non Driving Trailer Coach |
+| NVR | Network Video Recorder |
+| PA | PIS Passenger Announcement and |

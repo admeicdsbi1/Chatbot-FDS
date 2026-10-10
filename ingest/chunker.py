@@ -20,6 +20,12 @@ OVERLAP_CHARS = 150
 TABLE_MAX = 2500
 MIN_SECTION_CHARS = 250
 MAX_HEADER_CHARS = 600    # per header line, repeated on every piece of a table
+# A short paragraph standing directly above a table usually says what the table
+# IS ("The Railway Board vide letter … has issued the maintenance interval
+# periodicity for ver.2 rakes"). Packed separately, it became a value-less chunk
+# the reranker put first for "SS1 periodicity", while the table holding
+# "18 Months" sat unseen at rank 42. Up to this size it travels with its table.
+INTRO_MAX = 600
 
 _SENT_SPLIT = re.compile(r"(?<=[.!?।])\s+|\n+")
 
@@ -143,9 +149,10 @@ def _split_row(row, budget):
 _GROUP_ROW = re.compile(r"^\|\s*▸\s*([^|]{3,140}?)\s*\|")
 
 
-def _split_table(md, section):
+def _split_table(md, section, intro=""):
     """Table -> [(chunk text, group label)], header repeated, never mid-row unless
-    a single row exceeds TABLE_MAX on its own.
+    a single row exceeds TABLE_MAX on its own. `intro` (see INTRO_MAX) opens the
+    first piece only.
 
     A group row — a merged full-width cell naming the equipment whose activities
     follow, see parse_pdf._group_label — is repeated at the top of every piece the
@@ -168,10 +175,13 @@ def _split_table(md, section):
         return next((m.group(1).strip() for r in rows
                      if (m := _GROUP_ROW.match(r))), "")
 
-    if len(md) + len(lead) <= TABLE_MAX:
-        return [(lead + md, first_group(body))]
+    if intro:
+        intro += "\n"
+    if len(md) + len(lead) + len(intro) <= TABLE_MAX:
+        return [(lead + intro + md, first_group(body))]
 
     head_len = sum(len(l) + 1 for l in header) + len(lead)
+    first_extra = len(intro)          # only the first piece carries the intro
     pieces, cur = [], []
     cur_len = 0
     active = ""       # group heading in force at this point in the table
@@ -181,16 +191,19 @@ def _split_table(md, section):
         return f"|▸ {label}|"
 
     def emit():
-        nonlocal cur, cur_len, opened
+        nonlocal cur, cur_len, opened, intro, first_extra
         if any(not _GROUP_ROW.match(r) for r in cur):
             restate = [group_row(opened)] if opened and not _GROUP_ROW.match(cur[0]) else []
-            pieces.append((lead + "\n".join(header + restate + cur),
+            pieces.append((lead + intro + "\n".join(header + restate + cur),
                            opened or first_group(cur)))
+            intro, first_extra = "", 0
         cur, cur_len = [], 0
         opened = active
 
     for row in body:
-        extra = len(group_row(opened)) + 1 if opened else 0
+        extra = (len(group_row(opened)) + 1 if opened else 0) + first_extra
+        if first_extra and head_len + first_extra + len(row) + 1 > TABLE_MAX:
+            intro, first_extra = "", 0                # a row too wide to share a piece
         if head_len + len(row) + 1 > TABLE_MAX:
             emit()                                    # oversized row stands alone
             for frag in _split_row(row, TABLE_MAX - head_len):
@@ -219,21 +232,68 @@ def _columns_of(text):
     return []
 
 
-def chunk_document(sections, entry, tagger):
-    """sections -> list of chunk dicts in the backend schema."""
+def _table_intros(blocks):
+    """{id(table block): the short text block standing directly above it}."""
+    out = {}
+    for prev, b in zip(blocks, blocks[1:]):
+        if (b["type"] == "table" and prev["type"] == "text"
+                and prev["page"] == b["page"] and len(prev["text"]) <= INTRO_MAX):
+            out[id(b)] = prev
+    return out
+
+
+def _section_path(sec, open_titles):
+    """'5 Maintenance › 5.7 Traction … › 5.7.1 Line and Traction Converter' from
+    the numbered headings seen so far, so a chunk deep in a 571-page manual
+    still says which system it belongs to."""
+    num = (sec.get("section_num") or "").strip()
+    title = re.sub(r"\s+", " ", sec["section"]).strip()[:80]
+    if not re.fullmatch(r"\d+(?:\.\d+)*", num):
+        # an unnumbered sub-heading ("Cooling System") sits under the numbered
+        # heading still open ("5.7.1 Line & Traction Converter")
+        parent = open_titles.get("", "")
+        return f"{parent} › {title}" if parent else ""
+    open_titles[num] = title
+    parts = num.split(".")
+    path = " › ".join(f"{p} {open_titles[p]}" for p in
+                      (".".join(parts[:i]) for i in range(1, len(parts) + 1))
+                      if p in open_titles)
+    open_titles[""] = path
+    return path
+
+
+def chunk_document(sections, entry, tagger, printed=None):
+    """sections -> list of chunk dicts in the backend schema. `printed` maps a PDF
+    page to the page number printed on it (parse_pdf page_stats)."""
     sections = merge_tiny_sections(sections)
+    printed = printed or {}
+    # Registered for long manuals only: a breadcrumb line opening every chunk,
+    # so the embedding of "Check tightness of fasteners" knows it is the VCB in
+    # Vol II Ch.5. Opt-in per document because it changes chunk text, and every
+    # changed chunk costs a re-embed on the free tier.
+    header = entry.get("context_header", "")
+    open_titles = {}
     chunks = []
     seen_texts = set()  # repeated slides/pages produce byte-identical pieces
     for sec in sections:
         sec_title = re.sub(r"\s+", " ", sec["section"]).strip()[:120]
+        sec_path = _section_path(sec, open_titles)
+        crumb = " › ".join(x for x in (header, sec_path or sec_title) if x) if header else ""
         pieces = []  # (text, page, group, table_id)
-        text_blocks = [b for b in sec["blocks"] if b["type"] == "text"]
+        intros = _table_intros(sec["blocks"])
+        bound = {id(t) for t in intros.values()}
         table_blocks = [b for b in sec["blocks"] if b["type"] == "table"]
-        pieces.extend((t, p, "", "") for t, p in _pack_text(text_blocks))
         for tb in table_blocks:
             tid = f"{entry['doc_id']}:p{tb['page']}:t{tb.get('table_index', 0)}"
-            for t, grp in _split_table(tb["text"], sec_title):
+            intro = intros.get(id(tb), {}).get("text", "").strip()
+            split = _split_table(tb["text"], crumb or sec_title, intro)
+            if intro and not any(intro in t for t, _ in split):
+                bound.discard(id(intros[id(tb)]))     # could not fit: stays prose
+            for t, grp in split:
                 pieces.append((t, tb["page"], grp, tid))
+        text_blocks = [b for b in sec["blocks"] if b["type"] == "text" and id(b) not in bound]
+        pieces[:0] = [((f"{crumb}:\n{t}" if crumb else t), p, "", "")
+                      for t, p in _pack_text(text_blocks)]
         deduped = []
         for piece in pieces:
             key = piece[0].strip()
@@ -268,7 +328,14 @@ def chunk_document(sections, entry, tagger):
                 "source": entry["source"],
                 "section": chunk_section,
                 "section_num": sec.get("section_num", ""),
+                "section_path": sec_path,
                 "page_num": page if page is not None else sec["page_start"],
+                # the number printed on the sheet, when it differs from the PDF
+                # index (Vol II restarts at 1 in every chapter) — for citations
+                "printed_page": printed.get(page if page is not None else sec["page_start"], ""),
+                # "draft" for content the manual itself labels a draft: answered
+                # from, but flagged as lower authority (user decision 2026-10-08)
+                "status": entry.get("status", ""),
                 "chunk_index": idx,
                 "total_chunks_in_section": total,
                 "tags": tags,
